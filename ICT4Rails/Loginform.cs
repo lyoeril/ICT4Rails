@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace ICT4Rails
 {
-    public partial class Form1 : Form
+    public partial class Loginform : Form
     {
-        public Form1()
+        public Loginform()
         {
             InitializeComponent();
+            Remisesysteem remise = new Remisesysteem();
+            remise.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
