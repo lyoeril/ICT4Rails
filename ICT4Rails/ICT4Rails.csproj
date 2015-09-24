@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Beheersysteem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Beheersysteem.Designer.cs">
+      <DependentUpon>Beheersysteem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Loginform.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +78,9 @@
     <Compile Include="Schoonmaaksysteem.Designer.cs">
       <DependentUpon>Schoonmaaksysteem.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Beheersysteem.resx">
+      <DependentUpon>Beheersysteem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Loginform.resx">
       <DependentUpon>Loginform.cs</DependentUpon>
     </EmbeddedResource>
