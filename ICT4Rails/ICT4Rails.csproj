@@ -47,14 +47,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Compile Include="LoginForm.cs">
-=======
-    <Compile Include="Administratie.cs" />
-    <Compile Include="Beheersysteem.cs">
->>>>>>> origin/master
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Administratie.cs" />
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
@@ -68,25 +64,14 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
-=======
-    <Compile Include="Schoonmaaksysteem.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Schoonmaaksysteem.Designer.cs">
-      <DependentUpon>Schoonmaaksysteem.cs</DependentUpon>
-    </Compile>
+    </EmbeddedResource>
     <Compile Include="Status.cs" />
     <Compile Include="Tram.cs" />
     <Compile Include="Type.cs" />
-    <EmbeddedResource Include="Beheersysteem.resx">
-      <DependentUpon>Beheersysteem.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Loginform.resx">
       <DependentUpon>Loginform.cs</DependentUpon>
->>>>>>> origin/master
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
