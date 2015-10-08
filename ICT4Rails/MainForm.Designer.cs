@@ -1,6 +1,6 @@
 ﻿namespace ICT4Rails
 {
-    partial class Remisesysteem
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -561,7 +561,6 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // textBox128
             // 
@@ -577,7 +576,6 @@
             this.textBox128.Size = new System.Drawing.Size(50, 30);
             this.textBox128.TabIndex = 149;
             this.textBox128.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox128.TextChanged += new System.EventHandler(this.textBox128_TextChanged);
             // 
             // textBox129
             // 
@@ -592,7 +590,6 @@
             this.textBox129.Size = new System.Drawing.Size(50, 30);
             this.textBox129.TabIndex = 148;
             this.textBox129.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox129.TextChanged += new System.EventHandler(this.textBox129_TextChanged);
             // 
             // textBox130
             // 
@@ -607,7 +604,6 @@
             this.textBox130.Size = new System.Drawing.Size(50, 30);
             this.textBox130.TabIndex = 147;
             this.textBox130.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox130.TextChanged += new System.EventHandler(this.textBox130_TextChanged);
             // 
             // textBox131
             // 
@@ -624,7 +620,6 @@
             this.textBox131.TabIndex = 146;
             this.textBox131.Text = "52";
             this.textBox131.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox131.TextChanged += new System.EventHandler(this.textBox131_TextChanged);
             // 
             // textBox132
             // 
@@ -639,7 +634,6 @@
             this.textBox132.Size = new System.Drawing.Size(50, 30);
             this.textBox132.TabIndex = 145;
             this.textBox132.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox132.TextChanged += new System.EventHandler(this.textBox132_TextChanged);
             // 
             // textBox133
             // 
@@ -654,7 +648,6 @@
             this.textBox133.Size = new System.Drawing.Size(50, 30);
             this.textBox133.TabIndex = 144;
             this.textBox133.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox133.TextChanged += new System.EventHandler(this.textBox133_TextChanged);
             // 
             // textBox134
             // 
@@ -669,7 +662,6 @@
             this.textBox134.Size = new System.Drawing.Size(50, 30);
             this.textBox134.TabIndex = 143;
             this.textBox134.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox134.TextChanged += new System.EventHandler(this.textBox134_TextChanged);
             // 
             // textBox135
             // 
@@ -685,7 +677,6 @@
             this.textBox135.TabIndex = 142;
             this.textBox135.Text = "5";
             this.textBox135.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox135.TextChanged += new System.EventHandler(this.textBox135_TextChanged);
             // 
             // textBox136
             // 
@@ -701,7 +692,6 @@
             this.textBox136.Size = new System.Drawing.Size(50, 30);
             this.textBox136.TabIndex = 141;
             this.textBox136.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox136.TextChanged += new System.EventHandler(this.textBox136_TextChanged);
             // 
             // textBox137
             // 
@@ -716,7 +706,6 @@
             this.textBox137.Size = new System.Drawing.Size(50, 30);
             this.textBox137.TabIndex = 140;
             this.textBox137.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox137.TextChanged += new System.EventHandler(this.textBox137_TextChanged);
             // 
             // textBox138
             // 
@@ -731,7 +720,6 @@
             this.textBox138.Size = new System.Drawing.Size(50, 30);
             this.textBox138.TabIndex = 139;
             this.textBox138.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox138.TextChanged += new System.EventHandler(this.textBox138_TextChanged);
             // 
             // textBox139
             // 
@@ -748,7 +736,6 @@
             this.textBox139.TabIndex = 138;
             this.textBox139.Text = "53";
             this.textBox139.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox139.TextChanged += new System.EventHandler(this.textBox139_TextChanged);
             // 
             // textBox140
             // 
@@ -763,7 +750,6 @@
             this.textBox140.Size = new System.Drawing.Size(50, 30);
             this.textBox140.TabIndex = 137;
             this.textBox140.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox140.TextChanged += new System.EventHandler(this.textBox140_TextChanged);
             // 
             // textBox141
             // 
@@ -778,7 +764,6 @@
             this.textBox141.Size = new System.Drawing.Size(50, 30);
             this.textBox141.TabIndex = 136;
             this.textBox141.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox141.TextChanged += new System.EventHandler(this.textBox141_TextChanged);
             // 
             // textBox142
             // 
@@ -793,7 +778,6 @@
             this.textBox142.Size = new System.Drawing.Size(50, 30);
             this.textBox142.TabIndex = 135;
             this.textBox142.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox142.TextChanged += new System.EventHandler(this.textBox142_TextChanged);
             // 
             // textBox143
             // 
@@ -809,7 +793,6 @@
             this.textBox143.TabIndex = 134;
             this.textBox143.Text = "2";
             this.textBox143.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox143.TextChanged += new System.EventHandler(this.textBox143_TextChanged);
             // 
             // textBox119
             // 
@@ -2935,7 +2918,6 @@
             this.textBox157.TabIndex = 150;
             this.textBox157.Text = "13";
             this.textBox157.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox157.TextChanged += new System.EventHandler(this.textBox157_TextChanged);
             // 
             // textBox145
             // 
@@ -3899,7 +3881,6 @@
             this.label1.Size = new System.Drawing.Size(107, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tramnummer:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBox223
             // 
@@ -3907,7 +3888,6 @@
             this.textBox223.Name = "textBox223";
             this.textBox223.Size = new System.Drawing.Size(121, 20);
             this.textBox223.TabIndex = 1;
-            this.textBox223.TextChanged += new System.EventHandler(this.textBox223_TextChanged);
             // 
             // textBox224
             // 
@@ -3915,7 +3895,6 @@
             this.textBox224.Name = "textBox224";
             this.textBox224.Size = new System.Drawing.Size(121, 20);
             this.textBox224.TabIndex = 2;
-            this.textBox224.TextChanged += new System.EventHandler(this.textBox224_TextChanged);
             // 
             // label2
             // 
@@ -3926,7 +3905,6 @@
             this.label2.Size = new System.Drawing.Size(114, 20);
             this.label2.TabIndex = 3;
             this.label2.Text = "Spoornummer:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // button2
             // 
@@ -3936,7 +3914,6 @@
             this.button2.TabIndex = 4;
             this.button2.Text = "Bevestig";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // gB_Spoor_Reserveren
             // 

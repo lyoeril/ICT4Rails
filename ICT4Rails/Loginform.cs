@@ -10,18 +10,32 @@ using System.Windows.Forms;
 
 namespace ICT4Rails
 {
-    public partial class Loginform : Form
+    public partial class LoginForm : Form
     {
-        public Loginform()
+        public LoginForm()
         {
             InitializeComponent();
-            Remisesysteem remise = new Remisesysteem();
-            remise.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
+            if (tbxPassword.Text != "")
+            {
+                MainForm remise = new MainForm();
+                remise.FormClosing += MainForm_FormClosing;
+                remise.Show();
+                this.Hide();
+                tbxPassword.Text = "";
+            }
+            else { MessageBox.Show("Incorrect wachtwoord"); }
+        }
 
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                this.Show();
+            }
         }
     }
 }

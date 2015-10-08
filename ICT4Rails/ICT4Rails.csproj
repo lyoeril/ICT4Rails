@@ -9,9 +9,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ICT4Rails</RootNamespace>
     <AssemblyName>ICT4Rails</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -46,43 +47,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Beheersysteem.cs">
+    <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Beheersysteem.Designer.cs">
-      <DependentUpon>Beheersysteem.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Loginform.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Loginform.Designer.cs">
-      <DependentUpon>Loginform.cs</DependentUpon>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Remisesysteem.cs">
+    <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Remisesysteem.Designer.cs">
-      <DependentUpon>Remisesysteem.cs</DependentUpon>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reparatiesysteem.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Reparatiesysteem.Designer.cs">
-      <DependentUpon>Reparatiesysteem.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Schoonmaaksysteem.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Schoonmaaksysteem.Designer.cs">
-      <DependentUpon>Schoonmaaksysteem.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Beheersysteem.resx">
-      <DependentUpon>Beheersysteem.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Loginform.resx">
-      <DependentUpon>Loginform.cs</DependentUpon>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -92,15 +72,10 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Remisesysteem.resx">
-      <DependentUpon>Remisesysteem.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reparatiesysteem.resx">
-      <DependentUpon>Reparatiesysteem.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Schoonmaaksysteem.resx">
-      <DependentUpon>Schoonmaaksysteem.cs</DependentUpon>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

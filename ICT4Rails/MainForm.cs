@@ -7,19 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows;
 
 namespace ICT4Rails
 {
-    public partial class Beheersysteem : Form
+    public partial class MainForm : Form
     {
-        public Beheersysteem()
+        public MainForm()
         {
             InitializeComponent();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
