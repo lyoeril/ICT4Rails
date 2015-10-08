@@ -8,20 +8,25 @@ namespace ICT4Rails
 {
     public class Onderhoud
     {
-        public Medewerker Medewerker { get; set; }
-        public Tram Tram { get; set; }
-        public DateTime Starttijd { get; set; }
-        public DateTime Eindtijd { get; set; }
+        private Medewerker medewerker;
+        private Tram tram;
+        private DateTime starttijd;
+        private DateTime eindtijd;
+        private string soort;
 
-        public string Soort { get; }
+        public Medewerker Medewerker { get { return medewerker; } }
+        public Tram Tram { get { return tram; } }
+        public DateTime Starttijd { get { return Starttijd; } }
+        public DateTime Eindtijd { get { return eindtijd; } }
+        public string Soort { get { return soort; } }
 
         public Onderhoud(Medewerker medewerker, Tram tram, DateTime starttijd, DateTime eindtijd, string soort)
         {
-            Medewerker = medewerker;
-            Tram = tram;
-            Starttijd = starttijd;
-            Eindtijd = eindtijd;
-            Soort = soort;
+            this.medewerker = medewerker;
+            this.tram = tram;
+            this.starttijd = starttijd;
+            this.eindtijd = eindtijd;
+            this.soort = soort;
         }
 
         public override string ToString()

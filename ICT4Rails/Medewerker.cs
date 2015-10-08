@@ -8,31 +8,38 @@ namespace ICT4Rails
 {
     public class Medewerker
     {
-        private string Wachtwoord;
-        public string Naam { get; set; }
-        public string Email { get;}
-        public string Functie { get; set; }
-        public string Adres { get; set; }
-        public string Postcode { get; set; }
+        private string wachtwoord;
+        private string naam;
+        private string email;
+        private string functie;
+        private string adres;
+        private string postcode;
+
+        public string Wachtwoord { get { return wachtwoord; } }
+        public string Naam { get { return naam; } }
+        public string Email { get { return email; } }
+        public string Functie { get { return functie; } }
+        public string Adres { get { return adres; } }
+        public string Postcode { get { return postcode; } }
 
         public Medewerker(string naam, string email, string functie, string adres, string postcode, string wachtwoord)
         {
-            Naam = naam;
-            Email = email;
-            Functie = functie;
-            Adres = adres;
-            Postcode = postcode;
-            Wachtwoord = wachtwoord;
+            this.naam = naam;
+            this.email = email;
+            this.functie = functie;
+            this.adres = adres;
+            this.postcode = postcode;
+            this.wachtwoord = wachtwoord;
         }
 
         public void LogIn()
         {
-            ;
+            return;
         }
 
         public void LogOut()
         {
-            ;
+            return;
         }
     }
 }

@@ -8,15 +8,19 @@ namespace ICT4Rails
 {
     public class Administratie
     {
-        public List<Medewerker> Medewerkers { get; set; }
-        public List<Onderhoud> Onderhoudslijst { get; set; }
-        public List<Tram> Trams { get; set; }
+        private List<Medewerker> medewerkers;
+        private List<Onderhoud> onderhoudslijst;
+        private List<Tram> trams;
+
+        public List<Medewerker> Medewerkers { get { return medewerkers; } }
+        public List<Onderhoud> Onderhoudslijst { get { return onderhoudslijst; } }
+        public List<Tram> Trams { get { return trams; } }
 
         public Administratie()
         {
-            Medewerkers = new List<Medewerker>();
-            Onderhoudslijst = new List<Onderhoud>();
-            Trams = new List<Tram>();
+            this.medewerkers = new List<Medewerker>();
+            this.onderhoudslijst = new List<Onderhoud>();
+            this.trams = new List<Tram>();
         }
     }
 }

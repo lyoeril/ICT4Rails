@@ -8,15 +8,19 @@ namespace ICT4Rails
 {
     public class Type
     {
-        public string Naam { get; }
-        public string Beschrijving { get; }
-        public int Lengte { get; }
+        private string naam;
+        private string beschrijving;
+        private int lengte;
+
+        public string Naam { get { return naam; } }
+        public string Beschrijving { get { return beschrijving; } }
+        public int Lengte { get { return lengte; } }
 
         public Type(string naam, string beschrijving, int lengte)
         {
-            Naam = naam;
-            Beschrijving = beschrijving;
-            Lengte = lengte;
+            this.naam = naam;
+            this.beschrijving = beschrijving;
+            this.lengte = lengte;
         }
     }
 }

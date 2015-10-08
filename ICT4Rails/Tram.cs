@@ -8,21 +8,28 @@ namespace ICT4Rails
 {
     public class Tram
     {
-        public Type Type { get; }
-        public Status Status { get; set; }
-        public int Lijn { get; set; }
-        public int Nummer { get; }
-        public bool Beschikbaar { get; set; }
-        public DateTime Uitrijdtijd { get; set; }
+        private Type type;
+        private Status status;
+        private int lijn;
+        private int nummer;
+        private bool beschikbaar;
+        private DateTime uitrijdtijd;
+
+        public Type Type { get { return type; } }
+        public Status Status { get { return status; } }
+        public int Lijn { get { return lijn; } }
+        public int Nummer { get { return nummer; } }
+        public bool Beschikbaar { get { return beschikbaar; } }
+        public DateTime Uitrijdtijd { get { return uitrijdtijd; } }
 
         public Tram (Type type, Status status,int lijn, int nummer, bool beschikbaar, DateTime uitrijdtijd)
         {
-            Type = type;
-            Status = status;
-            Lijn = lijn;
-            Nummer = nummer;
-            Beschikbaar = beschikbaar;
-            Uitrijdtijd = uitrijdtijd;
+            this.type = type;
+            this.status = status;
+            this.lijn = lijn;
+            this.nummer = nummer;
+            this.beschikbaar = beschikbaar;
+            this.uitrijdtijd = uitrijdtijd;
         }
 
 
