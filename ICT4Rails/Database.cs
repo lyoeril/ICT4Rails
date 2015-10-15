@@ -11,45 +11,51 @@ namespace ICT4Rails
 {
     class Database
     {
-        private OracleConnection oracleConn;
-
-        private string user = "system";//Wachtwoord van de server
-        private string pw = "password";//Wachtwoord van de server
+        //username en password moeten nog worden ingevuld voor je eigen databaseinstellingen;
         private string errorMessage;
+        private string connStr = "User Id=" + "--username--" + ";Password=" + "--password--" + ";Data Source=" + "//localhost:1521/XE" + ";";
+        private string dataString;
 
-        private void Connect()
+        public List<string> SelectListFromDatabase(string query)
         {
+            List<string> dataList = new List<string>();
+
             try
             {
-                oracleConn = new OracleConnection("User Id=" + user + ";Password=" + pw + ";Data Source=" + "//localhost:1521/XE" + ";");
+                using (OracleConnection oracleConn = new OracleConnection(connStr))
+                using (OracleCommand cmd = new OracleCommand(query, oracleConn))
+                using (OracleDataReader odr = cmd.ExecuteReader())
+                {
+                    while (odr.Read())
+                    {
+                        dataList.Add(odr.ToString());
+                    }
+                }              
+                return dataList;
             }
 
-            catch (OracleException e)
+            catch(OracleException e)
             {
                 errorMessage = "Code: " + e.Data + "\n" + "Message: " + e.Message;
                 Console.WriteLine(errorMessage);
-            }            
+                return null;
+            }
         }
 
-        
-        public List<string> SelectFromDatabase(string Querry)
-        {
-            List<string> dataList = new List<string>();
+        public string SelectStringFromDatabase(string query)
+        {      
             try
             {
-                Connect();
-                OracleCommand cmd = new OracleCommand();
-                cmd.Connection = oracleConn;
-                cmd.CommandText = Querry;
-                cmd.CommandType = CommandType.Text;
-                oracleConn.Open();
-                OracleDataReader reader = cmd.ExecuteReader();
-                
-                while (reader.Read())
+                using (OracleConnection oracleConn = new OracleConnection(connStr))
+                using (OracleCommand cmd = new OracleCommand(query, oracleConn))
+                using (OracleDataReader odr = cmd.ExecuteReader())
                 {
-                    dataList.Add(reader.GetString(0));
+                    while (odr.Read())
+                    {
+                        dataString = odr.ToString();
+                    }
                 }
-                return dataList;
+                return dataString;
             }
 
             catch (OracleException e)
