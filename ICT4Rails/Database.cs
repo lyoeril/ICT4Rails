@@ -25,18 +25,14 @@ namespace ICT4Rails
                 connStr = "User Id=" + user + ";Password=" + pw + ";Data Source=" + "//localhost:1521/XE" + ";";
 
                 using (OracleConnection oracleConn = new OracleConnection(connStr))
+                using (OracleCommand cmd = new OracleCommand(query, oracleConn))
+                using (OracleDataReader odr = cmd.ExecuteReader())
                 {
-                    using (OracleCommand cmd = new OracleCommand(query, oracleConn))
+                    while (odr.Read())
                     {
-                        using (OracleDataReader odr = cmd.ExecuteReader())
-                        {
-                            while (odr.Read())
-                            {
-                                dataList.Add(odr.ToString());
-                            }
-                        }
+                        dataList.Add(odr.ToString());
                     }
-                }                
+                }              
                 return dataList;
             }
 
