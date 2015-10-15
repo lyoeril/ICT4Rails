@@ -50,7 +50,10 @@ namespace ICT4Rails
             return false;
         }
 
-
+        public void ChangeMedewerker(Medewerker medewerker)
+        {
+            // TO DO
+        }
 
         /* Hieronder vind je alles in verband met de trams*/
         public void AddTram(Tram tram)
