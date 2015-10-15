@@ -64,9 +64,6 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="LoginForm.resx">
-      <DependentUpon>LoginForm.cs</DependentUpon>
-    </EmbeddedResource>
     <Compile Include="Status.cs" />
     <Compile Include="Tram.cs" />
     <Compile Include="Type.cs" />
