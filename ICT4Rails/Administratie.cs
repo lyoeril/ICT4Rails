@@ -22,5 +22,31 @@ namespace ICT4Rails
             this.onderhoudslijst = new List<Onderhoud>();
             this.trams = new List<Tram>();
         }
+        public bool AddMedewerker(Medewerker medewerker)
+        {
+            foreach(Medewerker Selected_Medewerker in medewerkers)
+            {
+                if(medewerker == Selected_Medewerker)
+                {
+                    medewerkers.Remove(Selected_Medewerker);
+                    return true;
+                }
+            }
+            return false;
+        }
+        public bool RemoveMedewerker(Medewerker medewerker)
+        {
+            foreach (Medewerker Selected_Medewerker in medewerkers)
+            {
+                if (medewerker == Selected_Medewerker)
+                {
+                    medewerkers.Add(Selected_Medewerker);
+                    return true;
+                }
+            }
+            return false;
+        }
+
+
     }
 }
