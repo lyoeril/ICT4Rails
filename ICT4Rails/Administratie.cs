@@ -24,11 +24,24 @@ namespace ICT4Rails
             this.trams = new List<Tram>();
         }
         /* Hieronder vind je alles in verband met de medewerkers*/
-        public bool AddMedewerker(Medewerker medewerker)
+        public void AddMedewerker(Medewerker medewerker)
         {
-            foreach(Medewerker Selected_Medewerker in medewerkers)
+            // Moet veranderd worden ivm database link
+            foreach (Medewerker Selected_Medewerker in medewerkers)
             {
                 if(medewerker == Selected_Medewerker)
+                {
+                    throw new Exception("De medewerker bestaat al!");
+                }
+            }
+            medewerkers.Add(medewerker);
+        }
+        public bool RemoveMedewerker(Medewerker medewerker)
+        {
+            // Moet veranderd worden ivm database link
+            foreach (Medewerker Selected_Medewerker in medewerkers)
+            {
+                if (medewerker == Selected_Medewerker)
                 {
                     medewerkers.Remove(Selected_Medewerker);
                     return true;
@@ -36,34 +49,23 @@ namespace ICT4Rails
             }
             return false;
         }
-        public bool RemoveMedewerker(Medewerker medewerker)
-        {
-            foreach (Medewerker Selected_Medewerker in medewerkers)
-            {
-                if (medewerker == Selected_Medewerker)
-                {
-                    medewerkers.Add(Selected_Medewerker);
-                    return true;
-                }
-            }
-            return false;
-        }
 
-        /* Hieronder alles in verband met de trams*/
-        public bool AddTram(Tram tram)
+        /* Hieronder vind je alles in verband met de trams*/
+        public void AddTram(Tram tram)
         {
+            // Moet veranderd worden ivm database link
             foreach (Tram Selected_Tram in trams)
             {
                 if (tram == Selected_Tram)
                 {
-                    trams.Add(Selected_Tram);
-                    return true;
+                    throw new Exception("De tram bestaat al!");
                 }
             }
-            return false;
+            trams.Add(tram);
         }
         public bool RemoveTram(Tram tram)
         {
+            // Moet veranderd worden ivm database link
             foreach (Tram Selected_Tram in trams)
             {
                 if (tram == Selected_Tram)
@@ -73,6 +75,19 @@ namespace ICT4Rails
                 }
             }
             return false;
+        }
+        /* Hieronder ...*/
+        public void AddOnderhoud(Onderhoud onderhoud)
+        {
+            // Moet veranderd worden ivm database link
+            foreach (Onderhoud Selected_Onderhoud in onderhoudslijst)
+            {
+                if (onderhoud == Selected_Onderhoud)
+                {
+                    throw new Exception("De tram bestaat al!");
+                }
+            }
+            onderhoudslijst.Add(onderhoud);
         }
     }
 }
