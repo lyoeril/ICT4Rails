@@ -55,19 +55,19 @@ namespace ICT4Rails
 
         private void cbxRemiseBeheerTramBewerking_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbxRemiseBeheerTramBewerking.SelectedItem == "Voeg toe")
+            if (cbxRemiseBeheerTramBewerking.SelectedText == "Voeg toe")
             {
                 tbxRemiseBeheerTramNummer.Enabled = true;
                 tbxRemiseBeheerTramLijn.Enabled = true;
                 cbxRemiseBeheerTramType.Enabled = true;
             }
-            else if (cbxRemiseBeheerTramBewerking.SelectedItem == "Verwijder")
+            else if (cbxRemiseBeheerTramBewerking.SelectedText == "Verwijder")
             {
                 tbxRemiseBeheerTramNummer.Enabled = true;
                 tbxRemiseBeheerTramLijn.Enabled = false;
                 cbxRemiseBeheerTramType.Enabled = false;
             }
-            else if (cbxRemiseBeheerTramBewerking.SelectedItem == "Bewerk")
+            else if (cbxRemiseBeheerTramBewerking.SelectedText == "Bewerk")
             {
                 tbxRemiseBeheerTramNummer.Enabled = true;
                 tbxRemiseBeheerTramLijn.Enabled = true;
@@ -78,13 +78,13 @@ namespace ICT4Rails
 
         private void cbxRemiseBeheerSpoorBeheerBewerking_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cbxRemiseBeheerSpoorBeheerBewerking.SelectedItem == "Blokkeer")
+            if(cbxRemiseBeheerSpoorBeheerBewerking.SelectedText == "Blokkeer")
             {
                 tbxRemiseBeheerSpoorBeheerSpoorNummer.Enabled = true;
                 tbxRemiseBeheerSpoorBeheerSectorNummer.Enabled = false;
                 tbxRemiseBeheerSpoorBeheerTramNummer.Enabled = false;
             }
-            else if (cbxRemiseBeheerSpoorBeheerBewerking.SelectedItem == "Reserveer")
+            else if (cbxRemiseBeheerSpoorBeheerBewerking.SelectedText == "Reserveer")
             {
                 tbxRemiseBeheerSpoorBeheerSpoorNummer.Enabled = true;
                 tbxRemiseBeheerSpoorBeheerSectorNummer.Enabled = true;
