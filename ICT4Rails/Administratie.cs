@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ICT4Rails
 {
+
     public class Administratie
     {
         private List<Medewerker> medewerkers;
@@ -22,11 +23,25 @@ namespace ICT4Rails
             this.onderhoudslijst = new List<Onderhoud>();
             this.trams = new List<Tram>();
         }
-        public bool AddMedewerker(Medewerker medewerker)
+        /* Hieronder vind je alles in verband met de medewerkers*/
+        public void AddMedewerker(Medewerker medewerker)
         {
-            foreach(Medewerker Selected_Medewerker in medewerkers)
+            // Moet veranderd worden ivm database link
+            foreach (Medewerker Selected_Medewerker in medewerkers)
             {
                 if(medewerker == Selected_Medewerker)
+                {
+                    throw new Exception("De medewerker bestaat al!");
+                }
+            }
+            medewerkers.Add(medewerker);
+        }
+        public bool RemoveMedewerker(Medewerker medewerker)
+        {
+            // Moet veranderd worden ivm database link
+            foreach (Medewerker Selected_Medewerker in medewerkers)
+            {
+                if (medewerker == Selected_Medewerker)
                 {
                     medewerkers.Remove(Selected_Medewerker);
                     return true;
@@ -34,19 +49,45 @@ namespace ICT4Rails
             }
             return false;
         }
-        public bool RemoveMedewerker(Medewerker medewerker)
+
+        /* Hieronder vind je alles in verband met de trams*/
+        public void AddTram(Tram tram)
         {
-            foreach (Medewerker Selected_Medewerker in medewerkers)
+            // Moet veranderd worden ivm database link
+            foreach (Tram Selected_Tram in trams)
             {
-                if (medewerker == Selected_Medewerker)
+                if (tram == Selected_Tram)
                 {
-                    medewerkers.Add(Selected_Medewerker);
+                    throw new Exception("De tram bestaat al!");
+                }
+            }
+            trams.Add(tram);
+        }
+        public bool RemoveTram(Tram tram)
+        {
+            // Moet veranderd worden ivm database link
+            foreach (Tram Selected_Tram in trams)
+            {
+                if (tram == Selected_Tram)
+                {
+                    trams.Remove(Selected_Tram);
                     return true;
                 }
             }
             return false;
         }
-
-
+        /* Hieronder ...*/
+        public void AddOnderhoud(Onderhoud onderhoud)
+        {
+            // Moet veranderd worden ivm database link
+            foreach (Onderhoud Selected_Onderhoud in onderhoudslijst)
+            {
+                if (onderhoud == Selected_Onderhoud)
+                {
+                    throw new Exception("De tram bestaat al!");
+                }
+            }
+            onderhoudslijst.Add(onderhoud);
+        }
     }
 }
