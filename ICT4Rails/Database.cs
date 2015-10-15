@@ -15,6 +15,7 @@ namespace ICT4Rails
 
         private string user = "system";//Wachtwoord van de server
         private string pw = "password";//Wachtwoord van de server
+        private string errorMessage;
 
         private void Connect()
         {
@@ -23,11 +24,11 @@ namespace ICT4Rails
                 oracleConn = new OracleConnection("User Id=" + user + ";Password=" + pw + ";Data Source=" + "//localhost:1521/XE" + ";");
             }
 
-            catch (Exception e)
+            catch (OracleException e)
             {
-                
-            }
-            
+                errorMessage = "Code: " + e.Data + "\n" + "Message: " + e.Message;
+                Console.WriteLine(errorMessage);
+            }            
         }
 
         
@@ -51,8 +52,10 @@ namespace ICT4Rails
                 return dataList;
             }
 
-            catch (Exception e)
+            catch (OracleException e)
             {
+                errorMessage = "Code: " + e.Data + "\n" + "Message: " + e.Message;
+                Console.WriteLine(errorMessage);
                 return null;
             }
         }
