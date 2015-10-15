@@ -11,19 +11,17 @@ namespace ICT4Rails
 {
     class Database
     {
-        private string user = "system";//Wachtwoord van de server
-        private string pw = "password";//Wachtwoord van de server
+        //username en password moeten nog worden ingevuld voor je eigen databaseinstellingen;
         private string errorMessage;
-        private string connStr;
+        private string connStr = "User Id=" + "--username--" + ";Password=" + "--password--" + ";Data Source=" + "//localhost:1521/XE" + ";";
+        private string dataString;
 
-        public List<string> SelectFrommDatabase(string query)
+        public List<string> SelectListFromDatabase(string query)
         {
             List<string> dataList = new List<string>();
 
             try
             {
-                connStr = "User Id=" + user + ";Password=" + pw + ";Data Source=" + "//localhost:1521/XE" + ";";
-
                 using (OracleConnection oracleConn = new OracleConnection(connStr))
                 using (OracleCommand cmd = new OracleCommand(query, oracleConn))
                 using (OracleDataReader odr = cmd.ExecuteReader())
@@ -37,6 +35,30 @@ namespace ICT4Rails
             }
 
             catch(OracleException e)
+            {
+                errorMessage = "Code: " + e.Data + "\n" + "Message: " + e.Message;
+                Console.WriteLine(errorMessage);
+                return null;
+            }
+        }
+
+        public string SelectStringFromDatabase(string query)
+        {      
+            try
+            {
+                using (OracleConnection oracleConn = new OracleConnection(connStr))
+                using (OracleCommand cmd = new OracleCommand(query, oracleConn))
+                using (OracleDataReader odr = cmd.ExecuteReader())
+                {
+                    while (odr.Read())
+                    {
+                        dataString = odr.ToString();
+                    }
+                }
+                return dataString;
+            }
+
+            catch (OracleException e)
             {
                 errorMessage = "Code: " + e.Data + "\n" + "Message: " + e.Message;
                 Console.WriteLine(errorMessage);
