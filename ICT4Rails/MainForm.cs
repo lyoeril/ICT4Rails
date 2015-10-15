@@ -16,6 +16,7 @@ namespace ICT4Rails
         public MainForm()
         {
             InitializeComponent();
+            TabpageRemiseOverzicht.Dispose();
         }
     }
 }
