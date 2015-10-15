@@ -26,7 +26,7 @@ namespace Unittests_ICT4Rails
         public void Initialize()
         {
             reserveringDatum = new DateTime(2015, 10, 15);
-            starttijd = new DateTime(2015, 6, 1, 12, 32, 30);
+            starttijd = new DateTime(2015, 6, 2, 14, 00, 00);
             eindtijd = new DateTime(2015, 6, 2, 14, 00, 00);
             uitrijdtijd = new DateTime(2015, 10, 15, 20, 00, 00);
             
@@ -38,7 +38,7 @@ namespace Unittests_ICT4Rails
             reservering = new Reservering(tram, spoor, reserveringDatum);
             onderhoud = new Onderhoud(medewerker, tram, starttijd, eindtijd, "testopmerking", "testsoort");
         }
-
+        
         [TestMethod]
         public void TestMedewerker()
         {
@@ -51,25 +51,31 @@ namespace Unittests_ICT4Rails
             Assert.AreEqual("testwachtwoord", medewerker.Wachtwoord);
 
             //In-en uitloggen
-            //TODO
 
             //ToString
             Assert.AreEqual("Naam: testnaamEmailadres: testemailFunctie: testfunctieAdres: testadresPostcode: testpostcode", medewerker.ToString());
             medewerker = new Medewerker("", "", "", "", "", "");
             Assert.AreEqual("Naam: OnbekendEmailadres: OnbekendFunctie: OnbekendAdres: OnbekendPostcode: Onbekend", medewerker.ToString());            
         }
-
+        
         [TestMethod]
         public void TestOnderhoud()
         {
-            Assert.AreEqual(medewerker, onderhoud.Medewerker);
+            
+            Assert.AreEqual(medewerker, onderhoud.Medewerker);              
             Assert.AreEqual(tram, onderhoud.Tram);
-            Assert.AreEqual(starttijd, onderhoud.Starttijd);
-            Assert.AreEqual(eindtijd, onderhoud.Eindtijd);
             Assert.AreEqual("testopmerking", onderhoud.Opmerking);
             Assert.AreEqual("testsoort", onderhoud.Soort);
+            Assert.AreEqual(eindtijd, onderhoud.Eindtijd);
 
+            //ToString
+            /*
+            DateTime? testDate = null;
+            Assert.AreEqual("Tram: 1, Medewerker: testnaam, Soort: testsoort, Starttijd: 14:00:00, Eindtijd: 14:00:00, Opmerking: testopmerking", onderhoud.ToString());
+            onderhoud = new Onderhoud(null, null, testDate, testDate, "", "");
             Assert.AreEqual("", onderhoud.ToString());
+             * */
         }
+         
     }
 }
