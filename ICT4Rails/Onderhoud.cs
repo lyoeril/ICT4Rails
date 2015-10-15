@@ -12,20 +12,23 @@ namespace ICT4Rails
         private Tram tram;
         private DateTime starttijd;
         private DateTime eindtijd;
+        private string opmerking;
         private string soort;
 
         public Medewerker Medewerker { get { return medewerker; } }
         public Tram Tram { get { return tram; } }
         public DateTime Starttijd { get { return Starttijd; } }
         public DateTime Eindtijd { get { return eindtijd; } }
+        public string Opmerking { get { return opmerking; } }
         public string Soort { get { return soort; } }
 
-        public Onderhoud(Medewerker medewerker, Tram tram, DateTime starttijd, DateTime eindtijd, string soort)
+        public Onderhoud(Medewerker medewerker, Tram tram, DateTime starttijd, DateTime eindtijd, string opmerking, string soort)
         {
             this.medewerker = medewerker;
             this.tram = tram;
             this.starttijd = starttijd;
             this.eindtijd = eindtijd;
+            this.opmerking = opmerking;
             this.soort = soort;
         }
 
@@ -62,7 +65,7 @@ namespace ICT4Rails
                 soortstr = soort;
             }
 
-
+            
             string starttijdstr;
             if (starttijd == null)
             {
@@ -82,12 +85,14 @@ namespace ICT4Rails
             {
                 eindtijdstr = eindtijd.TimeOfDay.ToString();
             }
+            
 
             string info = "Tram: " + tramstr +
-                "Medewerker: " + medewerkerstr +
-                "Soort: " + soortstr +
-                "Starttijd: " + starttijdstr +
-                "Eindtijd: " + eindtijdstr;
+                ", Medewerker: " + medewerkerstr +
+                ", Soort: " + soortstr +
+                ", Starttijd: " + starttijdstr +
+                ", Eindtijd: " + eindtijdstr +
+                ", Opmerking: " + opmerking;
 
             return info;
         }

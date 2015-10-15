@@ -23,10 +23,9 @@ namespace ICT4Rails
             this.onderhoudslijst = new List<Onderhoud>();
             this.trams = new List<Tram>();
         }
-        /* Hieronder vind je alles in verband met de medewerkers*/
+        /* alles voor de beheerder */
         public void AddMedewerker(Medewerker medewerker)
         {
-            // Moet veranderd worden ivm database link
             foreach (Medewerker Selected_Medewerker in medewerkers)
             {
                 if(medewerker == Selected_Medewerker)
@@ -38,7 +37,6 @@ namespace ICT4Rails
         }
         public bool RemoveMedewerker(Medewerker medewerker)
         {
-            // Moet veranderd worden ivm database link
             foreach (Medewerker Selected_Medewerker in medewerkers)
             {
                 if (medewerker == Selected_Medewerker)
@@ -49,16 +47,13 @@ namespace ICT4Rails
             }
             return false;
         }
-
         public void ChangeMedewerker(Medewerker medewerker)
         {
             // TO DO
         }
-
-        /* Hieronder vind je alles in verband met de trams*/
-        public void AddTram(Tram tram)
+        public void TramToevoegen(Tram tram)
         {
-            // Moet veranderd worden ivm database link
+            // er wordt hier een tram toegevoegd uit het systeem
             foreach (Tram Selected_Tram in trams)
             {
                 if (tram == Selected_Tram)
@@ -68,9 +63,9 @@ namespace ICT4Rails
             }
             trams.Add(tram);
         }
-        public bool RemoveTram(Tram tram)
+        public bool TramVerwijderen(Tram tram)
         {
-            // Moet veranderd worden ivm database link
+            // er wordt hier een tram verwijderd uit het systeem
             foreach (Tram Selected_Tram in trams)
             {
                 if (tram == Selected_Tram)
@@ -81,10 +76,12 @@ namespace ICT4Rails
             }
             return false;
         }
+        
+        
         /* Hieronder ...*/
-        public void AddOnderhoudbeurt(Onderhoud onderhoudsbeurt)
+        public void AddOnderhoudsbeurt(Onderhoud onderhoudsbeurt)
         {
-            // Moet veranderd worden ivm database link
+            // bij deze methode wordt er een nieuwe onderhoudsbeurt toegevoegd
             foreach (Onderhoud Selected_Onderhoudsbeurt in onderhoudslijst)
             {
                 if (onderhoudsbeurt == Selected_Onderhoudsbeurt)
@@ -96,6 +93,7 @@ namespace ICT4Rails
         }
         public bool RemoveOnderhoudsbeurt(Onderhoud onderhoudsbeurt)
         {
+            // bij deze methode wordt er een nieuwe onderhoudsbeurt verwijderd
             foreach (Onderhoud Selected_Onderhoudsbeurt in onderhoudslijst)
             {
                 if (onderhoudsbeurt == Selected_Onderhoudsbeurt)
@@ -107,5 +105,27 @@ namespace ICT4Rails
             return false;
         }
 
+        public List<Onderhoud> GetOnderhoudslijst (string soort)
+        {
+            // bij deze methode wordt er een lijst geretourneerd gefiltert door een soort
+            return null;
+        }
+
+        public void OnderhoudsbeurtAfronden(DateTime starttijd, DateTime eindtijd)
+        {
+            //TO DO
+            // de onderhoudsbeurt wordt hier afgerond en de tramstatus wordt veranderd naar remise waardoor het een ander spoort krijgt toegewezen
+        }
+        public void SpoorReserveren()
+        {
+            // TO DO
+            // hierbij word een reservering geplaatst tussen een tram en een spoor.
+        }
+
+        public void SpoorStatusVeranderen()
+        {
+            // TO DO
+            // bij deze methode wordt de status van het spoor verandert naar ....
+        }
     }
 }
