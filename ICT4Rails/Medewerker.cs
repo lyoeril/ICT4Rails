@@ -41,5 +41,79 @@ namespace ICT4Rails
         {
             return;
         }
+
+        public override string ToString()
+        {
+            //override tostring methode om gegevens gemakkelijk weer te geven
+            //wachtwoord staat niet in tostring methode (voor nu)            
+
+            string wachtwoordstr;
+            if(wachtwoord == "")
+            {
+                wachtwoordstr = "Onbekend";
+            }
+            else
+            {
+                wachtwoordstr = wachtwoord;
+            }
+
+            string naamstr;
+            if(naam == "")
+            {
+                naamstr = "Onbekend";
+            }
+            else
+            {
+                naamstr = naam;
+            }
+
+            string emailstr;
+            if(email == "")
+            {
+                emailstr = "Onbekend";
+            }
+            else
+            {
+                emailstr = email;
+            }
+
+            string functiestr;
+            if(functie == "")
+            {
+                functiestr = "Onbekend";
+            }
+            else
+            {
+                functiestr = functie;
+            }
+
+            string adresstr;
+            if(adres == "")
+            {
+                adresstr = "Onbekend";
+            }
+            else
+            {
+                adresstr = adres;
+            }
+
+            string postcodestr;
+            if(postcode == "")
+            {
+                postcodestr = "Onbekend";
+            }
+            else
+            {
+                postcodestr = postcode;
+            }
+
+            string info = "Naam: " + naamstr +
+                "Emailadres: " + emailstr +
+                "Functie: " + functiestr +
+                "Adres: " + adresstr +
+                "Postcode: " + postcodestr;
+
+            return info;
+        }
     }
 }

@@ -31,7 +31,65 @@ namespace ICT4Rails
 
         public override string ToString()
         {
-            return "TO DO";
+            //override tostring methode om gegevens gemakkelijk weer te geven
+            string tramstr;
+            if (tram == null)
+            {
+                tramstr = "Onbekend";
+            }
+            else
+            {
+                tramstr = tram.Nummer.ToString();
+            }
+
+            string medewerkerstr;
+            if (medewerker == null)
+            {
+                medewerkerstr = "Onbekend";
+            }
+            else
+            {
+                medewerkerstr = medewerker.Naam.ToString();
+            }
+
+            string soortstr;
+            if (soort == "")
+            {
+                soortstr = "Onbekend";
+            }
+            else
+            {
+                soortstr = soort;
+            }
+
+
+            string starttijdstr;
+            if (starttijd == null)
+            {
+                starttijdstr = "Onbekend";
+            }
+            else
+            {
+                starttijdstr = starttijd.TimeOfDay.ToString();
+            }
+
+            string eindtijdstr;
+            if (eindtijd == null)
+            {
+                eindtijdstr = "Onbekend";
+            }
+            else
+            {
+                eindtijdstr = eindtijd.TimeOfDay.ToString();
+            }
+
+            string info = "Tram: " + tramstr +
+                "Medewerker: " + medewerkerstr +
+                "Soort: " + soortstr +
+                "Starttijd: " + starttijdstr +
+                "Eindtijd: " + eindtijdstr;
+
+            return info;
         }
 
     }

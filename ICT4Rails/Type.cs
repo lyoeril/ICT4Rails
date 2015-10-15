@@ -22,5 +22,45 @@ namespace ICT4Rails
             this.beschrijving = beschrijving;
             this.lengte = lengte;
         }
+
+        public override string ToString()
+        {
+            //override tostring methode om gegevens gemakkelijk weer te geven
+            string naamstr;
+            if (naam == "")
+            {
+                naamstr = "Onbekend";
+            }
+            else
+            {
+                naamstr = naam;
+            }
+
+            string lengtestr;
+            if (lengte == null)
+            {
+                lengtestr = "Onbekend";
+            }
+            else
+            {
+                lengtestr = lengte.ToString();
+            }
+
+            string beschrijvingstr;
+            if (beschrijving == "")
+            {
+                beschrijvingstr = "Onbekend";
+            }
+            else
+            {
+                beschrijvingstr = beschrijving;
+            }
+
+            string info = "Naam: " + naamstr +
+                "Beschrijving: " + beschrijvingstr +
+                "Lengte: " + lengtestr;
+
+            return info;
+        }
     }
 }

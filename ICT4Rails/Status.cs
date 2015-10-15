@@ -19,5 +19,34 @@ namespace ICT4Rails
             this.naam = naam;
             this.bijzonderheden = bijzonderheden;
         }
+
+        public override string ToString()
+        {
+            //override tostring methode om gegevens gemakkelijk weer te geven
+            string naamstr;
+            if (naam == "")
+            {
+                naamstr = "Onbekend";
+            }
+            else
+            {
+                naamstr = naam;
+            }
+
+            string bijzonderhedenstr;
+            if (bijzonderheden == "")
+            {
+                bijzonderhedenstr = "Onbekend";
+            }
+            else
+            {
+                bijzonderhedenstr = bijzonderheden;
+            }
+
+            string info = "Naam: " + naamstr +
+                "Bijzonderheden: " + bijzonderhedenstr;
+
+            return info;
+        }
     }
 }
