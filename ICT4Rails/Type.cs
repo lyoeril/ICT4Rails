@@ -37,7 +37,7 @@ namespace ICT4Rails
             }
 
             string lengtestr;
-            if (lengte == null)
+            if (lengte == 0)
             {
                 lengtestr = "Onbekend";
             }
