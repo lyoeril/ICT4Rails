@@ -50,6 +50,8 @@ namespace ICT4Rails
             return false;
         }
 
+        public void 
+
         /* Hieronder vind je alles in verband met de trams*/
         public void AddTram(Tram tram)
         {
@@ -77,17 +79,30 @@ namespace ICT4Rails
             return false;
         }
         /* Hieronder ...*/
-        public void AddOnderhoud(Onderhoud onderhoud)
+        public void AddOnderhoudbeurt(Onderhoud onderhoudsbeurt)
         {
             // Moet veranderd worden ivm database link
-            foreach (Onderhoud Selected_Onderhoud in onderhoudslijst)
+            foreach (Onderhoud Selected_Onderhoudsbeurt in onderhoudslijst)
             {
-                if (onderhoud == Selected_Onderhoud)
+                if (onderhoudsbeurt == Selected_Onderhoudsbeurt)
                 {
-                    throw new Exception("De tram bestaat al!");
+                    throw new Exception("De onderhoudsbeurt bestaat al!");
                 }
             }
-            onderhoudslijst.Add(onderhoud);
+            onderhoudslijst.Add(onderhoudsbeurt);
         }
+        public bool RemoveOnderhoudsbeurt(Onderhoud onderhoudsbeurt)
+        {
+            foreach (Onderhoud Selected_Onderhoudsbeurt in onderhoudslijst)
+            {
+                if (onderhoudsbeurt == Selected_Onderhoudsbeurt)
+                {
+                    onderhoudslijst.Remove(onderhoudsbeurt);
+                    return true;
+                }
+            }
+            return false;
+        }
+
     }
 }
