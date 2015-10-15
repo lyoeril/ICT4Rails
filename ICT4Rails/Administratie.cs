@@ -26,26 +26,31 @@ namespace ICT4Rails
         /* alles voor de beheerder */
         public void AddMedewerker(Medewerker medewerker)
         {
-            foreach (Medewerker Selected_Medewerker in medewerkers)
+            if(FindMedewerker(medewerker.ID) != null)
             {
-                if(medewerker == Selected_Medewerker)
-                {
-                    throw new Exception("De medewerker bestaat al!");
-                }
+                throw new Exception("De medewerker bestaat al!");
             }
             medewerkers.Add(medewerker);
         }
         public bool RemoveMedewerker(Medewerker medewerker)
         {
-            foreach (Medewerker Selected_Medewerker in medewerkers)
+            medewerkers.Remove(FindMedewerker(medewerker.ID));
+            return true;
+        }
+        public Medewerker FindMedewerker(int id)
+        {
+            if (medewerkers != null)
             {
-                if (medewerker == Selected_Medewerker)
+                foreach (Medewerker m in medewerkers)
                 {
-                    medewerkers.Remove(Selected_Medewerker);
-                    return true;
+                    if (m.ID == id)
+                    {
+                        return m;
+                    }
+                    throw new Exception("Medewerker is niet gevonden");
                 }
             }
-            return false;
+            throw new Exception("Er zijn geen medewerkers");
         }
         public void ChangeMedewerker(Medewerker medewerker)
         {

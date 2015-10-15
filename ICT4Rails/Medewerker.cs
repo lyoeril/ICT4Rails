@@ -8,6 +8,7 @@ namespace ICT4Rails
 {
     public class Medewerker
     {
+        private int id;
         private string wachtwoord;
         private string naam;
         private string email;
@@ -15,6 +16,7 @@ namespace ICT4Rails
         private string adres;
         private string postcode;
 
+        public int ID { get { return id; } }
         public string Wachtwoord { get { return wachtwoord; } }
         public string Naam { get { return naam; } }
         public string Email { get { return email; } }
