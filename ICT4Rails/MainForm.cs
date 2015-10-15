@@ -99,5 +99,11 @@ namespace ICT4Rails
             tbxRemiseBeheerSpoorBeheerSectorNummer.Text = "";
             tbxRemiseBeheerSpoorBeheerTramNummer.Text = "";
         }
+
+        private void btnBevestigTramStatus_Click(object sender, EventArgs e)
+        {
+            cbxStatusbeheerTramStatus.SelectedItem = null;
+            tbxStatusbeheerTramNummer.Text = "";
+        }
     }
 }
