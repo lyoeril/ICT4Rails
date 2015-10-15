@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ICT4Rails
 {
-    public class Type
+    public class TramType
     {
         private string naam;
         private string beschrijving;
@@ -16,7 +16,7 @@ namespace ICT4Rails
         public string Beschrijving { get { return beschrijving; } }
         public int Lengte { get { return lengte; } }
 
-        public Type(string naam, string beschrijving, int lengte)
+        public TramType(string naam, string beschrijving, int lengte)
         {
             this.naam = naam;
             this.beschrijving = beschrijving;

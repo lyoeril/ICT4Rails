@@ -70,7 +70,7 @@
     <Compile Include="Spoor.cs" />
     <Compile Include="Status.cs" />
     <Compile Include="Tram.cs" />
-    <Compile Include="Type.cs" />
+    <Compile Include="TramType.cs" />
     <EmbeddedResource Include="Loginform.resx">
       <DependentUpon>Loginform.cs</DependentUpon>
     </EmbeddedResource>
