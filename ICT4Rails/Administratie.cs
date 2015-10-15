@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ICT4Rails
 {
+
     public class Administratie
     {
         private List<Medewerker> medewerkers;
@@ -22,6 +23,7 @@ namespace ICT4Rails
             this.onderhoudslijst = new List<Onderhoud>();
             this.trams = new List<Tram>();
         }
+        /* Hieronder vind je alles in verband met de medewerkers*/
         public bool AddMedewerker(Medewerker medewerker)
         {
             foreach(Medewerker Selected_Medewerker in medewerkers)
@@ -47,6 +49,30 @@ namespace ICT4Rails
             return false;
         }
 
-
+        /* Hieronder alles in verband met de trams*/
+        public bool AddTram(Tram tram)
+        {
+            foreach (Tram Selected_Tram in trams)
+            {
+                if (tram == Selected_Tram)
+                {
+                    trams.Add(Selected_Tram);
+                    return true;
+                }
+            }
+            return false;
+        }
+        public bool RemoveTram(Tram tram)
+        {
+            foreach (Tram Selected_Tram in trams)
+            {
+                if (tram == Selected_Tram)
+                {
+                    trams.Remove(Selected_Tram);
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }
