@@ -34,12 +34,20 @@ namespace ICT4Rails
 
         public bool LogIn()
         {
+<<<<<<< HEAD
             return true;
+=======
+            Program.loggedIn = this;
+>>>>>>> 0b572daeb0355bf77937fc6283f323920c887d2f
         }
 
         public bool LogOut()
         {
+<<<<<<< HEAD
             return true;
+=======
+            Program.loggedIn = null;
+>>>>>>> 0b572daeb0355bf77937fc6283f323920c887d2f
         }
 
         public override string ToString()

@@ -13,56 +13,49 @@ namespace ICT4Rails
     {
         //username en password moeten nog worden ingevuld voor je eigen databaseinstellingen;
         private string errorMessage;
-        private string connStr = "User Id=" + "--username--" + ";Password=" + "--password--" + ";Data Source=" + "//localhost:1521/XE" + ";";
-        private string dataString;
+        private static readonly string connectionString = "User Id=" + "--username--" + ";Password=" + "--password--" + ";Data Source=" + "//localhost:1521/XE" + ";";
+        
 
-        public List<string> SelectListFromDatabase(string query)
+        public static OracleConnection Connection
         {
-            List<string> dataList = new List<string>();
-
-            try
+            get
             {
-                using (OracleConnection oracleConn = new OracleConnection(connStr))
-                using (OracleCommand cmd = new OracleCommand(query, oracleConn))
-                using (OracleDataReader odr = cmd.ExecuteReader())
-                {
-                    while (odr.Read())
-                    {
-                        dataList.Add(odr.ToString());
-                    }
-                }              
-                return dataList;
-            }
-            catch(OracleException e)
-            {
-                errorMessage = "Code: " + e.Data + "\n" + "Message: " + e.Message;
-                Console.WriteLine(errorMessage);
-                return null;
+                OracleConnection connection = new OracleConnection(connectionString);
+                connection.Open();
+                return connection;
             }
         }
 
-        public string SelectStringFromDatabase(string query)
-        {      
-            try
+        public List<Medewerker> GetAllMedewerkers()
+        {
+            List<Medewerker> Medewerkers = new List<Medewerker>();
+            using (OracleConnection connection = Connection)
             {
-                using (OracleConnection oracleConn = new OracleConnection(connStr))
-                using (OracleCommand cmd = new OracleCommand(query, oracleConn))
-                using (OracleDataReader odr = cmd.ExecuteReader())
+                string query = "SELECT * FROM ANIMAL Order by ChipRegistrationNumber";
+                using (OracleCommand command = new OracleCommand(query, connection))
                 {
-                    while (odr.Read())
+                    using (OracleDataReader reader = command.ExecuteReader())
                     {
-                        dataString = odr.ToString();
+                        while (reader.Read())
+                        {
+                            Medewerkers.Add(CreateMedewerkerFromReader(reader));
+                        }
                     }
                 }
-                return dataString;
             }
+            return null;
+        }
 
-            catch (OracleException e)
-            {
-                errorMessage = "Code: " + e.Data + "\n" + "Message: " + e.Message;
-                Console.WriteLine(errorMessage);
-                return null;
-            }
+        private Medewerker CreateMedewerkerFromReader(OracleDataReader reader)
+        {
+            return new Medewerker(
+                Convert.ToInt32(reader["Id"]),
+                Convert.ToString(reader["Naam"]),
+                Convert.ToString(reader["Email"]),
+                Convert.ToString(reader["Functie"]),
+                Convert.ToString(reader["Adres"]),
+                Convert.ToString(reader["Postcode"])
+                );
         }
     }
 }
