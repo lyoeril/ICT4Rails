@@ -24,7 +24,7 @@ namespace ICT4Rails
         {
             //override tostring methode om gegevens gemakkelijk weer te geven
             string naamstr;
-            if (naam == "")
+            if (naam == "" || naam == null)
             {
                 naamstr = "Onbekend";
             }
@@ -34,7 +34,7 @@ namespace ICT4Rails
             }
 
             string bijzonderhedenstr;
-            if (bijzonderheden == "")
+            if (bijzonderheden == "" || bijzonderheden == null)
             {
                 bijzonderhedenstr = "Onbekend";
             }
