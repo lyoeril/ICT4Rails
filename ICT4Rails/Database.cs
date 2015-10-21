@@ -49,7 +49,7 @@ namespace ICT4Rails
         private Medewerker CreateMedewerkerFromReader(OracleDataReader reader)
         {
             return new Medewerker(
-                Convert.ToInt32(reader["Id"]),
+                Convert.ToInt32(reader["ID"]),
                 Convert.ToString(reader["Naam"]),
                 Convert.ToString(reader["Email"]),
                 Convert.ToString(reader["Functie"]),
@@ -80,9 +80,9 @@ namespace ICT4Rails
 
         private Onderhoud CreateOnderhoudFromReader(OracleDataReader reader)
         {
-            int id = Convert.ToInt32(reader["Id"]);
-            int medewerker = Convert.ToInt32(reader["Medewerker"]);
-            int tram = Convert.ToInt32(reader["Tram"]);
+            int id = Convert.ToInt32(reader["ID"]);
+            int medewerker = Convert.ToInt32(reader["MedewerkerID"]);
+            int tram = Convert.ToInt32(reader["TramnummerID"]);
             DateTime starttijd = Convert.ToDateTime(reader["Starttijd"]);
             DateTime eindtijd = Convert.ToDateTime(reader["Eindtijd"]);
             string opmerking = Convert.ToString(reader["Opmerking"]);
@@ -98,7 +98,6 @@ namespace ICT4Rails
                     me = m;
                 }
             }
-
             foreach (Tram t in a.Trams)
             {
                 if (t.Nummer == tram)
