@@ -8,6 +8,7 @@ namespace ICT4Rails
 {
     public class Onderhoud
     {
+        private int id;
         private Medewerker medewerker;
         private Tram tram;
         private DateTime starttijd;
@@ -15,6 +16,7 @@ namespace ICT4Rails
         private string opmerking;
         private string soort;
 
+        public int ID { get { return id; } }
         public Medewerker Medewerker { get { return medewerker; } }
         public Tram Tram { get { return tram; } }
         public DateTime Starttijd { get { return Starttijd; } }
@@ -22,8 +24,9 @@ namespace ICT4Rails
         public string Opmerking { get { return opmerking; } }
         public string Soort { get { return soort; } }
 
-        public Onderhoud(Medewerker medewerker, Tram tram, DateTime starttijd, DateTime eindtijd, string opmerking, string soort)
+        public Onderhoud(int id, Medewerker medewerker, Tram tram, DateTime starttijd, DateTime eindtijd, string opmerking, string soort)
         {
+            this.id = id;
             this.medewerker = medewerker;
             this.tram = tram;
             this.starttijd = starttijd;
@@ -35,6 +38,16 @@ namespace ICT4Rails
         public override string ToString()
         {
             //override tostring methode om gegevens gemakkelijk weer te geven
+            string idstr;
+            if(id == 0)
+            {
+                idstr = "Onbekend";
+            }
+            else
+            {
+                idstr = id.ToString();
+            }
+
             string tramstr;
             if (tram == null)
             {
@@ -87,7 +100,8 @@ namespace ICT4Rails
             }
             
 
-            string info = "Tram: " + tramstr +
+            string info = "ID: " + idstr +
+                "Tram: " + tramstr +
                 ", Medewerker: " + medewerkerstr +
                 ", Soort: " + soortstr +
                 ", Starttijd: " + starttijdstr +
