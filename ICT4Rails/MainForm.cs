@@ -16,7 +16,7 @@ namespace ICT4Rails
         public MainForm()
         {
             InitializeComponent();
-            if (Program.loggedIn == "Bestuurder")
+            if (Program.loggedIn.ToString() == "Bestuurder")
             {
                 tabcontrolRemise.Controls.Remove(tabpageRemiseOverzicht);
                 tabcontrolRemise.Controls.Remove(tabpageRemiseBeheer);

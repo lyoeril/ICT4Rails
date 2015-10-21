@@ -33,12 +33,21 @@ namespace ICT4Rails
             if (tbxUsername.Text == "Bestuurder" || 
                 tbxUsername.Text == "asdf")
             {
-                Program.loggedIn = tbxUsername.Text;
-                MainForm remise = new MainForm();
-                remise.FormClosing += MainForm_FormClosing;
-                remise.Show();
-                this.Hide();
-                tbxPassword.Text = "";
+                Administratie administratie = new Administratie();
+                foreach (Medewerker m in administratie.Medewerkers)
+                {
+                    if (m.Naam == tbxUsername.Text)
+                    {
+                        Program.loggedIn = m;
+                        MainForm remise = new MainForm();
+                        remise.FormClosing += MainForm_FormClosing;
+                        remise.Show();
+                        this.Hide();
+                        tbxPassword.Text = "";
+                    }
+                }
+
+                
             }
             else { MessageBox.Show("Incorrecte username"); }
         }
@@ -48,7 +57,7 @@ namespace ICT4Rails
             if (e.CloseReason == CloseReason.UserClosing)
             {
                 this.Show();
-                Program.loggedIn = "";
+                Program.loggedIn = null;
             }
         }
     }

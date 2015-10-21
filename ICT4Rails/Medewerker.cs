@@ -23,23 +23,24 @@ namespace ICT4Rails
         public string Adres { get { return adres; } }
         public string Postcode { get { return postcode; } }
 
-        public Medewerker(string naam, string email, string functie, string adres, string postcode)
+        public Medewerker(int id, string naam, string email, string functie, string adres, string postcode)
         {
             this.naam = naam;
             this.email = email;
             this.functie = functie;
             this.adres = adres;
             this.postcode = postcode;
+            this.id = id;
         }
 
-        public bool LogIn()
+        public void LogIn()
         {
-            return true;
+            return;
         }
 
-        public bool LogOut()
+        public void LogOut()
         {
-            return true;
+            return;
         }
 
         public override string ToString()
@@ -97,7 +98,8 @@ namespace ICT4Rails
                 postcodestr = postcode;
             }
 
-            string info = "Naam: " + naamstr +
+            string info = "ID: " + ID.ToString() +
+                "Naam: " + naamstr +
                 "Emailadres: " + emailstr +
                 "Functie: " + functiestr +
                 "Adres: " + adresstr +
