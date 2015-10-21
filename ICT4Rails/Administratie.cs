@@ -25,13 +25,15 @@ namespace ICT4Rails
         }
 
         /* alles voor de beheerder */
-        public void AddMedewerker(Medewerker medewerker)
+        public bool AddMedewerker(Medewerker medewerker)
         {
             if(FindMedewerker(medewerker.ID) != null)
             {
                 throw new Exception("De medewerker bestaat al!");
+                return false;
             }
             medewerkers.Add(medewerker);
+            return true;
         }
 
         public bool RemoveMedewerker(Medewerker medewerker)
@@ -56,12 +58,12 @@ namespace ICT4Rails
             throw new Exception("Er zijn geen medewerkers");
         }
 
-        public void ChangeMedewerker(Medewerker medewerker)
+        public bool ChangeMedewerker(Medewerker medewerker)
         {
             // TO DO
         }
 
-        public void TramToevoegen(Tram tram)
+        public bool TramToevoegen(Tram tram)
         {
             // er wordt hier een tram toegevoegd uit het systeem
             foreach (Tram Selected_Tram in trams)
@@ -89,7 +91,7 @@ namespace ICT4Rails
         }
         
         /* Hieronder ...*/
-        public void AddOnderhoudsbeurt(Onderhoud onderhoudsbeurt)
+        public bool AddOnderhoudsbeurt(Onderhoud onderhoudsbeurt)
         {
             // bij deze methode wordt er een nieuwe onderhoudsbeurt toegevoegd
             foreach (Onderhoud Selected_Onderhoudsbeurt in onderhoudslijst)
@@ -97,9 +99,11 @@ namespace ICT4Rails
                 if (onderhoudsbeurt == Selected_Onderhoudsbeurt)
                 {
                     throw new Exception("De onderhoudsbeurt bestaat al!");
+                    return false;
                 }
             }
             onderhoudslijst.Add(onderhoudsbeurt);
+            return true;
         }
 
         public bool RemoveOnderhoudsbeurt(Onderhoud onderhoudsbeurt)
