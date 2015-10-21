@@ -32,7 +32,27 @@ namespace ICT4Rails
                 tabcontrolRemise.TabPages.Insert(3, tabpageAccountBeheer);
                 tabcontrolRemise.TabPages.Insert(4, tabPage4);
             }
-            //tabcontrolRemise.Controls.Remove(tabpageRemiseOverzicht);
+
+            //foreach (Label l in tableLayoutPanel1.Controls)
+            //{
+            //    l.Text = "";
+            //}
+
+            this.tableLayoutPanel1.CellPaint += new TableLayoutCellPaintEventHandler(tableLayoutPanel1_CellPaint);
+        }
+
+        private void tableLayoutPanel1_CellPaint(object sender, TableLayoutCellPaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            Rectangle r = e.CellBounds;
+            if (e.Row == 0)
+            {
+                g.FillRectangle(Brushes.Gray, r);
+            }
+            else if (e.Row == 1 && e.Column == 0)
+            {
+                g.FillRectangle(Brushes.LightBlue, r);
+            }
         }
 
         // Overzichttab
@@ -78,7 +98,7 @@ namespace ICT4Rails
 
         private void cbxRemiseBeheerSpoorBeheerBewerking_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cbxRemiseBeheerSpoorBeheerBewerking.SelectedText == "Blokkeer")
+            if (cbxRemiseBeheerSpoorBeheerBewerking.SelectedText == "Blokkeer")
             {
                 tbxRemiseBeheerSpoorBeheerSpoorNummer.Enabled = true;
                 tbxRemiseBeheerSpoorBeheerSectorNummer.Enabled = false;
