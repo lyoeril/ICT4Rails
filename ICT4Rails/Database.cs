@@ -57,5 +57,58 @@ namespace ICT4Rails
                 Convert.ToString(reader["Postcode"])
                 );
         }
+
+        public List<Onderhoud> GetAllOnderhoud()
+        {
+            List<Medewerker> Medewerkers = new List<Medewerker>();
+            using (OracleConnection connection = Connection)
+            {
+                string query = "SELECT * FROM ONDERHOUD Order by Id";
+                using (OracleCommand command = new OracleCommand(query, connection))
+                {
+                    using (OracleDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Medewerkers.Add(CreateMedewerkerFromReader(reader));
+                        }
+                    }
+                }
+            }
+            return null;
+        }
+
+        private Onderhoud CreateOnderhoudFromReader(OracleDataReader reader)
+        {
+            int id = Convert.ToInt32(reader["Id"]);
+            int medewerker = Convert.ToInt32(reader["Medewerker"]);
+            int tram = Convert.ToInt32(reader["Tram"]);
+            DateTime starttijd = Convert.ToDateTime(reader["Starttijd"]);
+            DateTime eindtijd = Convert.ToDateTime(reader["Eindtijd"]);
+            string opmerking = Convert.ToString(reader["Opmerking"]);
+            string soort = Convert.ToString(reader["Soort"]);
+
+            Medewerker me = null;
+            Tram tr = null;
+            Administratie a = new Administratie();
+            foreach (Medewerker m in a.Medewerkers)
+            {
+                if (m.ID == medewerker)
+                {
+                    me = m;
+                }
+            }
+
+            foreach (Tram t in a.Trams)
+            {
+                if (t.Nummer == tram)
+                {
+                    tr = t; ;
+                }
+            }
+
+            Onderhoud onderhoud = new Onderhoud(id, me, tr, starttijd, eindtijd, opmerking, soort);
+            return onderhoud;
+        }
     }
 }
