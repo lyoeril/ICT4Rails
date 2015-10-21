@@ -27,11 +27,11 @@ namespace ICT4Rails
         /* alles voor de beheerder */
         public bool AddMedewerker(Medewerker medewerker)
         {
-            if(FindMedewerker(medewerker.ID) != null)
-            {
-                throw new Exception("De medewerker bestaat al!");
-                return false;
-            }
+                if (FindMedewerker(medewerker.ID) != null)
+                {
+                    throw new Exception("De medewerker bestaat al!");
+                }              
+            
             medewerkers.Add(medewerker);
             return true;
         }
@@ -55,12 +55,13 @@ namespace ICT4Rails
                     throw new Exception("Medewerker is niet gevonden");
                 }
             }
-            throw new Exception("Er zijn geen medewerkers");
+            return null;
         }
 
         public bool ChangeMedewerker(Medewerker medewerker)
         {
             // TO DO
+            return false;
         }
 
         public bool TramToevoegen(Tram tram)
@@ -74,6 +75,7 @@ namespace ICT4Rails
                 }
             }
             trams.Add(tram);
+            return true;
         }
 
         public bool TramVerwijderen(Tram tram)
