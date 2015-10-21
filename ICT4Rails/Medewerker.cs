@@ -36,12 +36,12 @@ namespace ICT4Rails
 
         public void LogIn()
         {
-            return;
+            Program.loggedIn = this;
         }
 
         public void LogOut()
         {
-            return;
+            Program.loggedIn = null;
         }
 
         public override string ToString()
