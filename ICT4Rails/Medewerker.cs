@@ -17,47 +17,35 @@ namespace ICT4Rails
         private string postcode;
 
         public int ID { get { return id; } }
-        public string Wachtwoord { get { return wachtwoord; } }
         public string Naam { get { return naam; } }
         public string Email { get { return email; } }
         public string Functie { get { return functie; } }
         public string Adres { get { return adres; } }
         public string Postcode { get { return postcode; } }
 
-        public Medewerker(string naam, string email, string functie, string adres, string postcode, string wachtwoord)
+        public Medewerker(string naam, string email, string functie, string adres, string postcode)
         {
             this.naam = naam;
             this.email = email;
             this.functie = functie;
             this.adres = adres;
             this.postcode = postcode;
-            this.wachtwoord = wachtwoord;
         }
 
-        public void LogIn()
+        public bool LogIn()
         {
-            return;
+            return true;
         }
 
-        public void LogOut()
+        public bool LogOut()
         {
-            return;
+            return true;
         }
 
         public override string ToString()
         {
             //override tostring methode om gegevens gemakkelijk weer te geven
-            //wachtwoord staat niet in tostring methode (voor nu)            
-
-            string wachtwoordstr;
-            if(wachtwoord == "")
-            {
-                wachtwoordstr = "Onbekend";
-            }
-            else
-            {
-                wachtwoordstr = wachtwoord;
-            }
+            //wachtwoord staat niet in tostring methode (voor nu)    
 
             string naamstr;
             if(naam == "")
