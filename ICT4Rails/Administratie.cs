@@ -23,6 +23,7 @@ namespace ICT4Rails
             this.onderhoudslijst = new List<Onderhoud>();
             this.trams = new List<Tram>();
         }
+
         /* alles voor de beheerder */
         public void AddMedewerker(Medewerker medewerker)
         {
@@ -32,11 +33,13 @@ namespace ICT4Rails
             }
             medewerkers.Add(medewerker);
         }
+
         public bool RemoveMedewerker(Medewerker medewerker)
         {
             medewerkers.Remove(FindMedewerker(medewerker.ID));
             return true;
         }
+
         public Medewerker FindMedewerker(int id)
         {
             if (medewerkers != null)
@@ -52,10 +55,12 @@ namespace ICT4Rails
             }
             throw new Exception("Er zijn geen medewerkers");
         }
+
         public void ChangeMedewerker(Medewerker medewerker)
         {
             // TO DO
         }
+
         public void TramToevoegen(Tram tram)
         {
             // er wordt hier een tram toegevoegd uit het systeem
@@ -68,6 +73,7 @@ namespace ICT4Rails
             }
             trams.Add(tram);
         }
+
         public bool TramVerwijderen(Tram tram)
         {
             // er wordt hier een tram verwijderd uit het systeem
@@ -82,7 +88,6 @@ namespace ICT4Rails
             return false;
         }
         
-        
         /* Hieronder ...*/
         public void AddOnderhoudsbeurt(Onderhoud onderhoudsbeurt)
         {
@@ -96,6 +101,7 @@ namespace ICT4Rails
             }
             onderhoudslijst.Add(onderhoudsbeurt);
         }
+
         public bool RemoveOnderhoudsbeurt(Onderhoud onderhoudsbeurt)
         {
             // bij deze methode wordt er een nieuwe onderhoudsbeurt verwijderd
@@ -121,6 +127,7 @@ namespace ICT4Rails
             //TO DO
             // de onderhoudsbeurt wordt hier afgerond en de tramstatus wordt veranderd naar remise waardoor het een ander spoort krijgt toegewezen
         }
+
         public void SpoorReserveren()
         {
             // TO DO

@@ -33,7 +33,6 @@ namespace ICT4Rails
                 }              
                 return dataList;
             }
-
             catch(OracleException e)
             {
                 errorMessage = "Code: " + e.Data + "\n" + "Message: " + e.Message;
