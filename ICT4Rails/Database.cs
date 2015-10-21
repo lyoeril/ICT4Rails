@@ -31,7 +31,7 @@ namespace ICT4Rails
             List<Medewerker> Medewerkers = new List<Medewerker>();
             using (OracleConnection connection = Connection)
             {
-                string query = "SELECT * FROM ANIMAL Order by ChipRegistrationNumber";
+                string query = "SELECT * FROM MEDEWERKER Order by Id";
                 using (OracleCommand command = new OracleCommand(query, connection))
                 {
                     using (OracleDataReader reader = command.ExecuteReader())
