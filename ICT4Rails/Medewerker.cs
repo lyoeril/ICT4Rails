@@ -33,14 +33,14 @@ namespace ICT4Rails
             this.id = id;
         }
 
-        public void LogIn()
+        public bool LogIn()
         {
-            return;
+            return true;
         }
 
-        public void LogOut()
+        public bool LogOut()
         {
-            return;
+            return true;
         }
 
         public override string ToString()
