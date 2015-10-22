@@ -30,11 +30,7 @@ namespace ICT4Rails
             if(FindMedewerker(medewerker.ID) != null)
             {
                 throw new Exception("De medewerker bestaat al!");
-            }
-            if (FindMedewerker(medewerker.ID) != null)
-                {
-                    throw new Exception("De medewerker bestaat al!");
-                }              
+            }                     
             
             medewerkers.Add(medewerker);
             return true;
@@ -63,6 +59,7 @@ namespace ICT4Rails
                     }                    
                 }
             }
+            return null;
             throw new Exception("Er zijn geen medewerkers");
         }
 
