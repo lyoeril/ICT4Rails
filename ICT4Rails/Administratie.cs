@@ -73,7 +73,7 @@ namespace ICT4Rails
 
         }
 
-        public bool TramToevoegen(Tram tram)
+        public bool AddTram(Tram tram)
         {
             // er wordt hier een tram toegevoegd uit het systeem
             foreach (Tram Selected_Tram in trams)
@@ -87,7 +87,7 @@ namespace ICT4Rails
             return true;
         }
 
-        public bool TramVerwijderen(Tram tram)
+        public bool RemoveTram(Tram tram)
         {
             // er wordt hier een tram verwijderd uit het systeem
             foreach (Tram Selected_Tram in trams)
