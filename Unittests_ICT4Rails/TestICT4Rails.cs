@@ -30,7 +30,7 @@ namespace Unittests_ICT4Rails
             eindtijd = new DateTime(2015, 6, 2, 14, 00, 00);
             uitrijdtijd = new DateTime(2015, 10, 15, 20, 00, 00);
             
-            medewerker = new Medewerker("testnaam", "testemail", "testfunctie", "testadres", "testpostcode", "testwachtwoord");
+            medewerker = new Medewerker(1, "testnaam", "testemail", "testfunctie", "testadres", "testpostcode");
             spoor = new Spoor(1, 1, true);
             tramType = new TramType("testtypenaam", "testbeschrijving", 1);
             status = new Status("teststatusnaam", "testbijzonderheden");
