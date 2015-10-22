@@ -12,6 +12,7 @@ namespace ICT4Rails
         private List<Medewerker> medewerkers;
         private List<Onderhoud> onderhoudslijst;
         private List<Tram> trams;
+        
 
         public List<Medewerker> Medewerkers { get { return medewerkers; } }
         public List<Onderhoud> Onderhoudslijst { get { return onderhoudslijst; } }
@@ -19,9 +20,10 @@ namespace ICT4Rails
 
         public Administratie()
         {
-            this.medewerkers = new List<Medewerker>();
-            this.onderhoudslijst = new List<Onderhoud>();
-            this.trams = new List<Tram>();
+            Database data = new Database();
+            this.medewerkers = data.GetAllMedewerkers();
+            this.onderhoudslijst = data.GetAllOnderhoud();
+            this.trams = data.GetAllTrams();
         }
 
         /* alles voor de beheerder */
