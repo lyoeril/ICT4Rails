@@ -38,10 +38,7 @@ namespace Unittests_ICT4Rails
             tram = new Tram(tramType, status, 1, 1, true, uitrijdtijd);
             reservering = new Reservering(tram, spoor, reserveringDatum);
             onderhoud = new Onderhoud(1, medewerker, tram, starttijd, eindtijd, "testopmerking", "testsoort");
-<<<<<<< HEAD
-=======
             administratie = new Administratie();
->>>>>>> origin/master
         }
         
         [TestMethod]
@@ -53,27 +50,21 @@ namespace Unittests_ICT4Rails
             Assert.AreEqual("testfunctie", medewerker.Functie);
             Assert.AreEqual("testadres", medewerker.Adres);
             Assert.AreEqual("testpostcode", medewerker.Postcode);
-<<<<<<< HEAD
-=======
 
             
->>>>>>> origin/master
 
             //In-en uitloggen
             Assert.IsTrue(medewerker.LogIn());
             Assert.IsTrue(medewerker.LogOut());
-;
+
 
             //ToString
-<<<<<<< HEAD
             Assert.AreEqual("Naam: testnaam - Emailadres: testemail - Functie: testfunctie - Adres: testadres - Postcode: testpostcode", medewerker.ToString());
             medewerker = new Medewerker(1, "", "", "", "", "");
             Assert.AreEqual("Naam: Onbekend - Emailadres: Onbekend - Functie: Onbekend - Adres: Onbekend - Postcode: Onbekend", medewerker.ToString());            
-=======
             Assert.AreEqual("ID: 1Naam: testnaamEmailadres: testemailFunctie: testfunctieAdres: testadresPostcode: testpostcode", medewerker.ToString(), "Fout bij medewerker");
             medewerker = new Medewerker(1, "", "", "", "", "");
             Assert.AreEqual("ID: 1Naam: OnbekendEmailadres: OnbekendFunctie: OnbekendAdres: OnbekendPostcode: Onbekend", medewerker.ToString());            
->>>>>>> origin/master
         }
         
         [TestMethod]
