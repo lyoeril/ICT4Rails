@@ -32,9 +32,9 @@ namespace ICT4Rails
         {
             if(FindMedewerker(medewerker.ID) != null)
             {
-                throw new Exception("De medewerker bestaat al!");
-            }                     
-            
+                //throw new Exception("De medewerker bestaat al!"); exception kan hier niet omdat een exception de methode break't, de return false code wordt niet uitgevoerd en dan wordt er niets gereturnd
+                return false;
+            }             
             medewerkers.Add(medewerker);
             return true;
         }
@@ -46,8 +46,7 @@ namespace ICT4Rails
                 medewerkers.Remove(FindMedewerker(medewerker.ID));
                 return true;
             }
-            return false;               
-           
+            return false;
         }
 
         public Medewerker FindMedewerker(int id)
