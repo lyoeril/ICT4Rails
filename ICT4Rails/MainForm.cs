@@ -13,10 +13,11 @@ namespace ICT4Rails
 {
     public partial class MainForm : Form
     {
-        Medewerker medewerker;
+        
         public MainForm()
         {
             InitializeComponent();
+            
             if (Program.loggedIn.ToString() == "Bestuurder")
             {
                 tabcontrolRemise.Controls.Remove(tabpageRemiseOverzicht);
@@ -33,6 +34,17 @@ namespace ICT4Rails
                 tabcontrolRemise.TabPages.Insert(3, tabpageAccountBeheer);
                 tabcontrolRemise.TabPages.Insert(4, tabPage4);
             }
+
+            if(tabcontrolRemise.SelectedTab == tabcontrolRemise.TabPages["AccountBeheer"])
+            {
+                
+                
+
+                //foreach (Medewerker m in  )
+                //{
+                //    lbAccountMedewerkers.Items.Add(m);
+                //}
+            
 
             //foreach (Label l in tableLayoutPanel1.Controls)
             //{
@@ -127,12 +139,18 @@ namespace ICT4Rails
             tbxStatusbeheerTramNummer.Text = "";
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+      
 
         //AccountBeheer
+      
+
+
+
+        private void RefreshUI()
+        {
+            lbAccountMedewerkers.Text = "";
+        }
+
         private void btnAccountToevoegen_Click(object sender, EventArgs e)
         {
 

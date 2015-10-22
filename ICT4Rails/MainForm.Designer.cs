@@ -316,9 +316,13 @@
             this.lblStatusbeheerTramNummer = new System.Windows.Forms.Label();
             this.tbxStatusbeheerTramNummer = new System.Windows.Forms.TextBox();
             this.tabpageAccountBeheer = new System.Windows.Forms.TabPage();
-            this.grbAccountBeheerNieuwAccount = new System.Windows.Forms.GroupBox();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.lbAccountMedewerkers = new System.Windows.Forms.ListBox();
             this.grbAccountNMedewerker = new System.Windows.Forms.GroupBox();
+            this.lblAccontPostcode = new System.Windows.Forms.Label();
+            this.tbxAccountPostcode = new System.Windows.Forms.TextBox();
+            this.tbxAccountStrtNR = new System.Windows.Forms.TextBox();
+            this.lblAccountStrtNR = new System.Windows.Forms.Label();
+            this.lblAccountNaam = new System.Windows.Forms.Label();
             this.btnAccountToevoegen = new System.Windows.Forms.Button();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.lblAccountFunctie = new System.Windows.Forms.Label();
@@ -326,12 +330,8 @@
             this.lblAccountEmail = new System.Windows.Forms.Label();
             this.tbxAccountNaam = new System.Windows.Forms.TextBox();
             this.label239 = new System.Windows.Forms.Label();
-            this.lblAccountNaam = new System.Windows.Forms.Label();
-            this.lblAccountStrtNR = new System.Windows.Forms.Label();
-            this.tbxAccountStrtNR = new System.Windows.Forms.TextBox();
-            this.tbxAccountPostcode = new System.Windows.Forms.TextBox();
-            this.lblAccontPostcode = new System.Windows.Forms.Label();
-            this.lbAccountMedewerkers = new System.Windows.Forms.ListBox();
+            this.grbAccountBeheerNieuwAccount = new System.Windows.Forms.GroupBox();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabcontrolRemise.SuspendLayout();
             this.tabpageRemiseOverzicht.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -3530,24 +3530,14 @@
             this.tabpageAccountBeheer.Text = "Accountbeheer";
             this.tabpageAccountBeheer.UseVisualStyleBackColor = true;
             // 
-            // grbAccountBeheerNieuwAccount
+            // lbAccountMedewerkers
             // 
-            this.grbAccountBeheerNieuwAccount.Location = new System.Drawing.Point(6, 253);
-            this.grbAccountBeheerNieuwAccount.Name = "grbAccountBeheerNieuwAccount";
-            this.grbAccountBeheerNieuwAccount.Size = new System.Drawing.Size(326, 328);
-            this.grbAccountBeheerNieuwAccount.TabIndex = 0;
-            this.grbAccountBeheerNieuwAccount.TabStop = false;
-            this.grbAccountBeheerNieuwAccount.Text = "Nieuw Account";
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 25);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1884, 942);
-            this.tabPage4.TabIndex = 4;
-            this.tabPage4.Text = "tabPage4";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.lbAccountMedewerkers.FormattingEnabled = true;
+            this.lbAccountMedewerkers.ItemHeight = 16;
+            this.lbAccountMedewerkers.Location = new System.Drawing.Point(347, 17);
+            this.lbAccountMedewerkers.Name = "lbAccountMedewerkers";
+            this.lbAccountMedewerkers.Size = new System.Drawing.Size(556, 564);
+            this.lbAccountMedewerkers.TabIndex = 2;
             // 
             // grbAccountNMedewerker
             // 
@@ -3569,6 +3559,49 @@
             this.grbAccountNMedewerker.TabIndex = 1;
             this.grbAccountNMedewerker.TabStop = false;
             this.grbAccountNMedewerker.Text = "Nieuwe Medewerker";
+            // 
+            // lblAccontPostcode
+            // 
+            this.lblAccontPostcode.AutoSize = true;
+            this.lblAccontPostcode.Location = new System.Drawing.Point(9, 151);
+            this.lblAccontPostcode.Name = "lblAccontPostcode";
+            this.lblAccontPostcode.Size = new System.Drawing.Size(71, 17);
+            this.lblAccontPostcode.TabIndex = 14;
+            this.lblAccontPostcode.Text = "Postcode:";
+            // 
+            // tbxAccountPostcode
+            // 
+            this.tbxAccountPostcode.Enabled = false;
+            this.tbxAccountPostcode.Location = new System.Drawing.Point(160, 148);
+            this.tbxAccountPostcode.Name = "tbxAccountPostcode";
+            this.tbxAccountPostcode.Size = new System.Drawing.Size(153, 22);
+            this.tbxAccountPostcode.TabIndex = 13;
+            // 
+            // tbxAccountStrtNR
+            // 
+            this.tbxAccountStrtNR.Enabled = false;
+            this.tbxAccountStrtNR.Location = new System.Drawing.Point(160, 120);
+            this.tbxAccountStrtNR.Name = "tbxAccountStrtNR";
+            this.tbxAccountStrtNR.Size = new System.Drawing.Size(153, 22);
+            this.tbxAccountStrtNR.TabIndex = 11;
+            // 
+            // lblAccountStrtNR
+            // 
+            this.lblAccountStrtNR.AutoSize = true;
+            this.lblAccountStrtNR.Location = new System.Drawing.Point(9, 123);
+            this.lblAccountStrtNR.Name = "lblAccountStrtNR";
+            this.lblAccountStrtNR.Size = new System.Drawing.Size(121, 17);
+            this.lblAccountStrtNR.TabIndex = 10;
+            this.lblAccountStrtNR.Text = "Straatnaam + NR:";
+            // 
+            // lblAccountNaam
+            // 
+            this.lblAccountNaam.AutoSize = true;
+            this.lblAccountNaam.Location = new System.Drawing.Point(9, 36);
+            this.lblAccountNaam.Name = "lblAccountNaam";
+            this.lblAccountNaam.Size = new System.Drawing.Size(49, 17);
+            this.lblAccountNaam.TabIndex = 9;
+            this.lblAccountNaam.Text = "Naam:";
             // 
             // btnAccountToevoegen
             // 
@@ -3607,7 +3640,6 @@
             this.tbxAccountEmail.Name = "tbxAccountEmail";
             this.tbxAccountEmail.Size = new System.Drawing.Size(153, 22);
             this.tbxAccountEmail.TabIndex = 3;
-            this.tbxAccountEmail.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // lblAccountEmail
             // 
@@ -3634,57 +3666,24 @@
             this.label239.Size = new System.Drawing.Size(0, 17);
             this.label239.TabIndex = 0;
             // 
-            // lblAccountNaam
+            // grbAccountBeheerNieuwAccount
             // 
-            this.lblAccountNaam.AutoSize = true;
-            this.lblAccountNaam.Location = new System.Drawing.Point(9, 36);
-            this.lblAccountNaam.Name = "lblAccountNaam";
-            this.lblAccountNaam.Size = new System.Drawing.Size(49, 17);
-            this.lblAccountNaam.TabIndex = 9;
-            this.lblAccountNaam.Text = "Naam:";
+            this.grbAccountBeheerNieuwAccount.Location = new System.Drawing.Point(6, 253);
+            this.grbAccountBeheerNieuwAccount.Name = "grbAccountBeheerNieuwAccount";
+            this.grbAccountBeheerNieuwAccount.Size = new System.Drawing.Size(326, 328);
+            this.grbAccountBeheerNieuwAccount.TabIndex = 0;
+            this.grbAccountBeheerNieuwAccount.TabStop = false;
+            this.grbAccountBeheerNieuwAccount.Text = "Nieuw Account";
             // 
-            // lblAccountStrtNR
+            // tabPage4
             // 
-            this.lblAccountStrtNR.AutoSize = true;
-            this.lblAccountStrtNR.Location = new System.Drawing.Point(9, 123);
-            this.lblAccountStrtNR.Name = "lblAccountStrtNR";
-            this.lblAccountStrtNR.Size = new System.Drawing.Size(121, 17);
-            this.lblAccountStrtNR.TabIndex = 10;
-            this.lblAccountStrtNR.Text = "Straatnaam + NR:";
-            // 
-            // tbxAccountStrtNR
-            // 
-            this.tbxAccountStrtNR.Enabled = false;
-            this.tbxAccountStrtNR.Location = new System.Drawing.Point(160, 120);
-            this.tbxAccountStrtNR.Name = "tbxAccountStrtNR";
-            this.tbxAccountStrtNR.Size = new System.Drawing.Size(153, 22);
-            this.tbxAccountStrtNR.TabIndex = 11;
-            // 
-            // tbxAccountPostcode
-            // 
-            this.tbxAccountPostcode.Enabled = false;
-            this.tbxAccountPostcode.Location = new System.Drawing.Point(160, 148);
-            this.tbxAccountPostcode.Name = "tbxAccountPostcode";
-            this.tbxAccountPostcode.Size = new System.Drawing.Size(153, 22);
-            this.tbxAccountPostcode.TabIndex = 13;
-            // 
-            // lblAccontPostcode
-            // 
-            this.lblAccontPostcode.AutoSize = true;
-            this.lblAccontPostcode.Location = new System.Drawing.Point(9, 151);
-            this.lblAccontPostcode.Name = "lblAccontPostcode";
-            this.lblAccontPostcode.Size = new System.Drawing.Size(71, 17);
-            this.lblAccontPostcode.TabIndex = 14;
-            this.lblAccontPostcode.Text = "Postcode:";
-            // 
-            // lbAccountMedewerkers
-            // 
-            this.lbAccountMedewerkers.FormattingEnabled = true;
-            this.lbAccountMedewerkers.ItemHeight = 16;
-            this.lbAccountMedewerkers.Location = new System.Drawing.Point(347, 17);
-            this.lbAccountMedewerkers.Name = "lbAccountMedewerkers";
-            this.lbAccountMedewerkers.Size = new System.Drawing.Size(556, 564);
-            this.lbAccountMedewerkers.TabIndex = 2;
+            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(1884, 942);
+            this.tabPage4.TabIndex = 4;
+            this.tabPage4.Text = "tabPage4";
+            this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
