@@ -13,6 +13,7 @@ namespace ICT4Rails
 {
     public partial class MainForm : Form
     {
+        Medewerker medewerker;
         public MainForm()
         {
             InitializeComponent();
@@ -124,6 +125,17 @@ namespace ICT4Rails
         {
             cbxStatusbeheerTramStatus.SelectedItem = null;
             tbxStatusbeheerTramNummer.Text = "";
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        //AccountBeheer
+        private void btnAccountToevoegen_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

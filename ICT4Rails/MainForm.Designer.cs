@@ -318,6 +318,20 @@
             this.tabpageAccountBeheer = new System.Windows.Forms.TabPage();
             this.grbAccountBeheerNieuwAccount = new System.Windows.Forms.GroupBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.grbAccountNMedewerker = new System.Windows.Forms.GroupBox();
+            this.btnAccountToevoegen = new System.Windows.Forms.Button();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.lblAccountFunctie = new System.Windows.Forms.Label();
+            this.tbxAccountEmail = new System.Windows.Forms.TextBox();
+            this.lblAccountEmail = new System.Windows.Forms.Label();
+            this.tbxAccountNaam = new System.Windows.Forms.TextBox();
+            this.label239 = new System.Windows.Forms.Label();
+            this.lblAccountNaam = new System.Windows.Forms.Label();
+            this.lblAccountStrtNR = new System.Windows.Forms.Label();
+            this.tbxAccountStrtNR = new System.Windows.Forms.TextBox();
+            this.tbxAccountPostcode = new System.Windows.Forms.TextBox();
+            this.lblAccontPostcode = new System.Windows.Forms.Label();
+            this.lbAccountMedewerkers = new System.Windows.Forms.ListBox();
             this.tabcontrolRemise.SuspendLayout();
             this.tabpageRemiseOverzicht.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -329,6 +343,7 @@
             this.grbTramOnderhoud.SuspendLayout();
             this.grbTramStatus.SuspendLayout();
             this.tabpageAccountBeheer.SuspendLayout();
+            this.grbAccountNMedewerker.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabcontrolRemise
@@ -727,9 +742,9 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(49, 12);
+            this.label2.Location = new System.Drawing.Point(26, 12);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 17);
+            this.label2.Size = new System.Drawing.Size(46, 17);
             this.label2.TabIndex = 0;
             this.label2.Text = "label2";
             // 
@@ -737,9 +752,9 @@
             // 
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(49, 52);
+            this.label11.Location = new System.Drawing.Point(22, 52);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(0, 17);
+            this.label11.Size = new System.Drawing.Size(54, 17);
             this.label11.TabIndex = 9;
             this.label11.Text = "label11";
             // 
@@ -3504,6 +3519,8 @@
             // 
             // tabpageAccountBeheer
             // 
+            this.tabpageAccountBeheer.Controls.Add(this.lbAccountMedewerkers);
+            this.tabpageAccountBeheer.Controls.Add(this.grbAccountNMedewerker);
             this.tabpageAccountBeheer.Controls.Add(this.grbAccountBeheerNieuwAccount);
             this.tabpageAccountBeheer.Location = new System.Drawing.Point(4, 25);
             this.tabpageAccountBeheer.Name = "tabpageAccountBeheer";
@@ -3515,9 +3532,9 @@
             // 
             // grbAccountBeheerNieuwAccount
             // 
-            this.grbAccountBeheerNieuwAccount.Location = new System.Drawing.Point(6, 6);
+            this.grbAccountBeheerNieuwAccount.Location = new System.Drawing.Point(6, 253);
             this.grbAccountBeheerNieuwAccount.Name = "grbAccountBeheerNieuwAccount";
-            this.grbAccountBeheerNieuwAccount.Size = new System.Drawing.Size(248, 238);
+            this.grbAccountBeheerNieuwAccount.Size = new System.Drawing.Size(326, 328);
             this.grbAccountBeheerNieuwAccount.TabIndex = 0;
             this.grbAccountBeheerNieuwAccount.TabStop = false;
             this.grbAccountBeheerNieuwAccount.Text = "Nieuw Account";
@@ -3531,6 +3548,143 @@
             this.tabPage4.TabIndex = 4;
             this.tabPage4.Text = "tabPage4";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // grbAccountNMedewerker
+            // 
+            this.grbAccountNMedewerker.Controls.Add(this.lblAccontPostcode);
+            this.grbAccountNMedewerker.Controls.Add(this.tbxAccountPostcode);
+            this.grbAccountNMedewerker.Controls.Add(this.tbxAccountStrtNR);
+            this.grbAccountNMedewerker.Controls.Add(this.lblAccountStrtNR);
+            this.grbAccountNMedewerker.Controls.Add(this.lblAccountNaam);
+            this.grbAccountNMedewerker.Controls.Add(this.btnAccountToevoegen);
+            this.grbAccountNMedewerker.Controls.Add(this.comboBox2);
+            this.grbAccountNMedewerker.Controls.Add(this.lblAccountFunctie);
+            this.grbAccountNMedewerker.Controls.Add(this.tbxAccountEmail);
+            this.grbAccountNMedewerker.Controls.Add(this.lblAccountEmail);
+            this.grbAccountNMedewerker.Controls.Add(this.tbxAccountNaam);
+            this.grbAccountNMedewerker.Controls.Add(this.label239);
+            this.grbAccountNMedewerker.Location = new System.Drawing.Point(6, 6);
+            this.grbAccountNMedewerker.Name = "grbAccountNMedewerker";
+            this.grbAccountNMedewerker.Size = new System.Drawing.Size(326, 241);
+            this.grbAccountNMedewerker.TabIndex = 1;
+            this.grbAccountNMedewerker.TabStop = false;
+            this.grbAccountNMedewerker.Text = "Nieuwe Medewerker";
+            // 
+            // btnAccountToevoegen
+            // 
+            this.btnAccountToevoegen.Enabled = false;
+            this.btnAccountToevoegen.Location = new System.Drawing.Point(210, 191);
+            this.btnAccountToevoegen.Name = "btnAccountToevoegen";
+            this.btnAccountToevoegen.Size = new System.Drawing.Size(103, 27);
+            this.btnAccountToevoegen.TabIndex = 8;
+            this.btnAccountToevoegen.Text = "Toevoegen";
+            this.btnAccountToevoegen.UseVisualStyleBackColor = true;
+            this.btnAccountToevoegen.Click += new System.EventHandler(this.btnAccountToevoegen_Click);
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.Enabled = false;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(160, 90);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(153, 24);
+            this.comboBox2.TabIndex = 5;
+            // 
+            // lblAccountFunctie
+            // 
+            this.lblAccountFunctie.AutoSize = true;
+            this.lblAccountFunctie.Location = new System.Drawing.Point(9, 93);
+            this.lblAccountFunctie.Name = "lblAccountFunctie";
+            this.lblAccountFunctie.Size = new System.Drawing.Size(58, 17);
+            this.lblAccountFunctie.TabIndex = 4;
+            this.lblAccountFunctie.Text = "Functie:";
+            // 
+            // tbxAccountEmail
+            // 
+            this.tbxAccountEmail.Enabled = false;
+            this.tbxAccountEmail.Location = new System.Drawing.Point(160, 61);
+            this.tbxAccountEmail.Name = "tbxAccountEmail";
+            this.tbxAccountEmail.Size = new System.Drawing.Size(153, 22);
+            this.tbxAccountEmail.TabIndex = 3;
+            this.tbxAccountEmail.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // lblAccountEmail
+            // 
+            this.lblAccountEmail.AutoSize = true;
+            this.lblAccountEmail.Location = new System.Drawing.Point(9, 64);
+            this.lblAccountEmail.Name = "lblAccountEmail";
+            this.lblAccountEmail.Size = new System.Drawing.Size(46, 17);
+            this.lblAccountEmail.TabIndex = 2;
+            this.lblAccountEmail.Text = "Email:";
+            // 
+            // tbxAccountNaam
+            // 
+            this.tbxAccountNaam.Enabled = false;
+            this.tbxAccountNaam.Location = new System.Drawing.Point(160, 33);
+            this.tbxAccountNaam.Name = "tbxAccountNaam";
+            this.tbxAccountNaam.Size = new System.Drawing.Size(153, 22);
+            this.tbxAccountNaam.TabIndex = 1;
+            // 
+            // label239
+            // 
+            this.label239.AutoSize = true;
+            this.label239.Location = new System.Drawing.Point(6, 36);
+            this.label239.Name = "label239";
+            this.label239.Size = new System.Drawing.Size(0, 17);
+            this.label239.TabIndex = 0;
+            // 
+            // lblAccountNaam
+            // 
+            this.lblAccountNaam.AutoSize = true;
+            this.lblAccountNaam.Location = new System.Drawing.Point(9, 36);
+            this.lblAccountNaam.Name = "lblAccountNaam";
+            this.lblAccountNaam.Size = new System.Drawing.Size(49, 17);
+            this.lblAccountNaam.TabIndex = 9;
+            this.lblAccountNaam.Text = "Naam:";
+            // 
+            // lblAccountStrtNR
+            // 
+            this.lblAccountStrtNR.AutoSize = true;
+            this.lblAccountStrtNR.Location = new System.Drawing.Point(9, 123);
+            this.lblAccountStrtNR.Name = "lblAccountStrtNR";
+            this.lblAccountStrtNR.Size = new System.Drawing.Size(121, 17);
+            this.lblAccountStrtNR.TabIndex = 10;
+            this.lblAccountStrtNR.Text = "Straatnaam + NR:";
+            // 
+            // tbxAccountStrtNR
+            // 
+            this.tbxAccountStrtNR.Enabled = false;
+            this.tbxAccountStrtNR.Location = new System.Drawing.Point(160, 120);
+            this.tbxAccountStrtNR.Name = "tbxAccountStrtNR";
+            this.tbxAccountStrtNR.Size = new System.Drawing.Size(153, 22);
+            this.tbxAccountStrtNR.TabIndex = 11;
+            // 
+            // tbxAccountPostcode
+            // 
+            this.tbxAccountPostcode.Enabled = false;
+            this.tbxAccountPostcode.Location = new System.Drawing.Point(160, 148);
+            this.tbxAccountPostcode.Name = "tbxAccountPostcode";
+            this.tbxAccountPostcode.Size = new System.Drawing.Size(153, 22);
+            this.tbxAccountPostcode.TabIndex = 13;
+            // 
+            // lblAccontPostcode
+            // 
+            this.lblAccontPostcode.AutoSize = true;
+            this.lblAccontPostcode.Location = new System.Drawing.Point(9, 151);
+            this.lblAccontPostcode.Name = "lblAccontPostcode";
+            this.lblAccontPostcode.Size = new System.Drawing.Size(71, 17);
+            this.lblAccontPostcode.TabIndex = 14;
+            this.lblAccontPostcode.Text = "Postcode:";
+            // 
+            // lbAccountMedewerkers
+            // 
+            this.lbAccountMedewerkers.FormattingEnabled = true;
+            this.lbAccountMedewerkers.ItemHeight = 16;
+            this.lbAccountMedewerkers.Location = new System.Drawing.Point(347, 17);
+            this.lbAccountMedewerkers.Name = "lbAccountMedewerkers";
+            this.lbAccountMedewerkers.Size = new System.Drawing.Size(556, 564);
+            this.lbAccountMedewerkers.TabIndex = 2;
             // 
             // MainForm
             // 
@@ -3559,6 +3713,8 @@
             this.grbTramStatus.ResumeLayout(false);
             this.grbTramStatus.PerformLayout();
             this.tabpageAccountBeheer.ResumeLayout(false);
+            this.grbAccountNMedewerker.ResumeLayout(false);
+            this.grbAccountNMedewerker.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -3855,5 +4011,19 @@
         private System.Windows.Forms.Label label233;
         private System.Windows.Forms.Label label234;
         private System.Windows.Forms.Label label235;
+        private System.Windows.Forms.GroupBox grbAccountNMedewerker;
+        private System.Windows.Forms.Label lblAccountNaam;
+        private System.Windows.Forms.Button btnAccountToevoegen;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label lblAccountFunctie;
+        private System.Windows.Forms.TextBox tbxAccountEmail;
+        private System.Windows.Forms.Label lblAccountEmail;
+        private System.Windows.Forms.TextBox tbxAccountNaam;
+        private System.Windows.Forms.Label label239;
+        private System.Windows.Forms.Label lblAccontPostcode;
+        private System.Windows.Forms.TextBox tbxAccountPostcode;
+        private System.Windows.Forms.TextBox tbxAccountStrtNR;
+        private System.Windows.Forms.Label lblAccountStrtNR;
+        private System.Windows.Forms.ListBox lbAccountMedewerkers;
     }
 }

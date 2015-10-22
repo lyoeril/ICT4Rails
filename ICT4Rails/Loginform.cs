@@ -34,11 +34,11 @@ namespace ICT4Rails
                 tbxUsername.Text == "asdf")
             {
                 Administratie administratie = new Administratie();
-                foreach (Medewerker m in administratie.Medewerkers)
+                foreach (Gebruiker g in administratie.Gebruikers)
                 {
-                    if (m.Naam == tbxUsername.Text)
+                    if (g.GebruikersNaam == tbxUsername.Text)
                     {
-                        Program.loggedIn = m;
+                        Program.loggedIn = g;
                         MainForm remise = new MainForm();
                         remise.FormClosing += MainForm_FormClosing;
                         remise.Show();
