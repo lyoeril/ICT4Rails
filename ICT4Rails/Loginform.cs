@@ -12,31 +12,21 @@ namespace ICT4Rails
 {
     public partial class LoginForm : Form
     {
+        Administratie administratie;
         public LoginForm()
         {
             InitializeComponent();
+            administratie = new Administratie();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            //if (tbxPassword.Text != "")
-            //{
-            //    MainForm remise = new MainForm();
-            //    remise.FormClosing += MainForm_FormClosing;
-            //    remise.Show();
-            //    this.Hide();
-            //    tbxPassword.Text = "";
-            //}
-            //else { MessageBox.Show("Incorrect wachtwoord"); }
-
             // "asdf" is temp admin user because reasons
-            if (tbxUsername.Text == "Bestuurder" || 
-                tbxUsername.Text == "asdf")
+            foreach (Gebruiker g in administratie.Gebruikers)
             {
-                Administratie administratie = new Administratie();
-                foreach (Gebruiker g in administratie.Gebruikers)
+                if (g.GebruikersNaam == tbxUsername.Text)
                 {
-                    if (g.GebruikersNaam == tbxUsername.Text)
+                    if (g.LogIn(tbxPassword.Text))
                     {
                         Program.loggedIn = g;
                         MainForm remise = new MainForm();
@@ -45,11 +35,16 @@ namespace ICT4Rails
                         this.Hide();
                         tbxPassword.Text = "";
                     }
+                    else
+                    {
+                        MessageBox.Show("Ongeldig Wachtwoord");
+                    }
                 }
-
-                
+                else
+                {
+                    MessageBox.Show("Ongeldige Gebruikersnaam");
+                }
             }
-            else { MessageBox.Show("Incorrecte username"); }
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)

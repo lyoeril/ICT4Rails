@@ -33,18 +33,5 @@ namespace ICT4Rails
                 return false;
             }
         }
-
-        public bool LogOut()
-        {
-            if(Program.loggedIn == this)
-            {
-                Program.loggedIn = null;
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
     }
 }

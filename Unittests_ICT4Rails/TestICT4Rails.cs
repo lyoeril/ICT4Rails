@@ -49,17 +49,11 @@ namespace Unittests_ICT4Rails
             Assert.AreEqual("testemail", medewerker.Email);
             Assert.AreEqual("testfunctie", medewerker.Functie);
             Assert.AreEqual("testadres", medewerker.Adres);
-<<<<<<< HEAD
-            Assert.AreEqual("testpostcode", medewerker.Postcode);     
-
-            //In-en uitloggen
-            Assert.IsTrue(medewerker.LogIn());
-            Assert.IsTrue(medewerker.LogOut());
+            Assert.AreEqual("testpostcode", medewerker.Postcode);
 
             //ToString        
 
             Assert.AreEqual("ID: 1 - Naam: testnaam - Emailadres: testemail - Functie: testfunctie - Adres: testadres - Postcode: testpostcode", medewerker.ToString(), "Fout bij medewerker");
-=======
             Assert.AreEqual("testpostcode", medewerker.Postcode);
 
             //ToString
@@ -67,10 +61,8 @@ namespace Unittests_ICT4Rails
             medewerker = new Medewerker(1, "", "", "", "", "");
             Assert.AreEqual("Naam: Onbekend - Emailadres: Onbekend - Functie: Onbekend - Adres: Onbekend - Postcode: Onbekend", medewerker.ToString());            
             Assert.AreEqual("ID: 1Naam: testnaamEmailadres: testemailFunctie: testfunctieAdres: testadresPostcode: testpostcode", medewerker.ToString(), "Fout bij medewerker");
->>>>>>> origin/master
             medewerker = new Medewerker(1, "", "", "", "", "");
             Assert.AreEqual("ID: 1 - Naam: Onbekend - Emailadres: Onbekend - Functie: Onbekend - Adres: Onbekend - Postcode: Onbekend", medewerker.ToString());   
-            
         }
         
         [TestMethod]
@@ -87,7 +79,6 @@ namespace Unittests_ICT4Rails
             
             onderhoud = new Onderhoud(1, null, null, starttijd, eindtijd, "", "");
             Assert.AreEqual("Nummer: 1 - Lijn: 1 - Type: testtypenaam - Status: teststatusnaam - Beschikbaar: Ja - Uitrijdatum: 15-10-2015 00:00:00 - Uitrijtijd: 20:00:00", tram.ToString());
-                 
         }
 
         [TestMethod]
@@ -116,8 +107,7 @@ namespace Unittests_ICT4Rails
             Assert.AreEqual("Naam: Onbekend - Bijzonderheden: Onbekend", status.ToString());
             
             status = new Status("", "");
-            Assert.AreEqual("Naam: Onbekend - Bijzonderheden: Onbekend", status.ToString());            
-
+            Assert.AreEqual("Naam: Onbekend - Bijzonderheden: Onbekend", status.ToString());
         }
 
         [TestMethod]
