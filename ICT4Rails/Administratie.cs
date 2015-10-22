@@ -21,9 +21,10 @@ namespace ICT4Rails
 
         public Administratie()
         {
+            Database data = new Database();
             this.gebruikers = new List<Gebruiker>();
             gebruikers.Add(new Gebruiker(0, "asdf", ""));
-            this.medewerkers = new List<Medewerker>();
+            this.medewerkers = data.GetAllMedewerkers();
             this.onderhoudslijst = new List<Onderhoud>();
             this.trams = new List<Tram>();
         }
