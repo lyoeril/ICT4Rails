@@ -57,8 +57,8 @@ namespace ICT4Rails
             }
 
             string info = "Naam: " + naamstr +
-                "Beschrijving: " + beschrijvingstr +
-                "Lengte: " + lengtestr;
+                " - Beschrijving: " + beschrijvingstr +
+                " - Lengte: " + lengtestr;
 
             return info;
         }
