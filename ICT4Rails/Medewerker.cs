@@ -33,16 +33,6 @@ namespace ICT4Rails
             this.postcode = postcode;
         }
 
-        public bool LogIn()
-        {
-            return true;
-        }
-
-        public bool LogOut()
-        {
-            return true;
-        }
-
         public override string ToString()
         {
             //override tostring methode om gegevens gemakkelijk weer te geven
