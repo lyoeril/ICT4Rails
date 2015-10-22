@@ -43,7 +43,7 @@ namespace ICT4Rails
                     }
                 }
             }
-            return null;
+            return Medewerkers;
         }
 
         private Medewerker CreateMedewerkerFromReader(OracleDataReader reader)
@@ -75,7 +75,7 @@ namespace ICT4Rails
                     }
                 }
             }
-            return null;
+            return Onderhoudslijst;
         }
 
         private Onderhoud CreateOnderhoudFromReader(OracleDataReader reader)
