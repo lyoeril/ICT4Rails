@@ -51,17 +51,10 @@ namespace Unittests_ICT4Rails
             Assert.AreEqual("testemail", medewerker.Email);
             Assert.AreEqual("testfunctie", medewerker.Functie);
             Assert.AreEqual("testadres", medewerker.Adres);
-<<<<<<< HEAD
             Assert.AreEqual("testpostcode", medewerker.Postcode);
-=======
 
-            Assert.AreEqual("testpostcode", medewerker.Postcode);     
->>>>>>> origin/master
-
-            //ToString      
-
+            //ToString
             Assert.AreEqual("ID: 1 - Naam: testnaam - Emailadres: testemail - Functie: testfunctie - Adres: testadres - Postcode: testpostcode", medewerker.ToString(), "Fout bij medewerker");
-<<<<<<< HEAD
             Assert.AreEqual("testpostcode", medewerker.Postcode);
 
             //ToString
@@ -69,9 +62,7 @@ namespace Unittests_ICT4Rails
             medewerker = new Medewerker(1, "", "", "", "", "");
             Assert.AreEqual("Naam: Onbekend - Emailadres: Onbekend - Functie: Onbekend - Adres: Onbekend - Postcode: Onbekend", medewerker.ToString());            
             Assert.AreEqual("ID: 1Naam: testnaamEmailadres: testemailFunctie: testfunctieAdres: testadresPostcode: testpostcode", medewerker.ToString(), "Fout bij medewerker");
-=======
 
->>>>>>> origin/master
             medewerker = new Medewerker(1, "", "", "", "", "");
             Assert.AreEqual("ID: 1 - Naam: Onbekend - Emailadres: Onbekend - Functie: Onbekend - Adres: Onbekend - Postcode: Onbekend", medewerker.ToString());   
         }
