@@ -30,7 +30,6 @@ namespace ICT4Rails
             if(FindMedewerker(medewerker.ID) != null)
             {
                 throw new Exception("De medewerker bestaat al!");
-                return false;
             }
             medewerkers.Add(medewerker);
             return true;
@@ -61,6 +60,7 @@ namespace ICT4Rails
         public bool ChangeMedewerker(Medewerker medewerker)
         {
             // TO DO
+            return false;
         }
 
         public bool TramToevoegen(Tram tram)
@@ -74,6 +74,7 @@ namespace ICT4Rails
                 }
             }
             trams.Add(tram);
+            return true;
         }
 
         public bool TramVerwijderen(Tram tram)
@@ -99,7 +100,6 @@ namespace ICT4Rails
                 if (onderhoudsbeurt == Selected_Onderhoudsbeurt)
                 {
                     throw new Exception("De onderhoudsbeurt bestaat al!");
-                    return false;
                 }
             }
             onderhoudslijst.Add(onderhoudsbeurt);

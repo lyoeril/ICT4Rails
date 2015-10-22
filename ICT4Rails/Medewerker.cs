@@ -99,11 +99,11 @@ namespace ICT4Rails
             }
 
             string info = "ID: " + ID.ToString() +
-                "Naam: " + naamstr +
-                "Emailadres: " + emailstr +
-                "Functie: " + functiestr +
-                "Adres: " + adresstr +
-                "Postcode: " + postcodestr;
+                " - Naam: " + naamstr +
+                " - Emailadres: " + emailstr +
+                " - Functie: " + functiestr +
+                " - Adres: " + adresstr +
+                " - Postcode: " + postcodestr;
 
             return info;
         }
