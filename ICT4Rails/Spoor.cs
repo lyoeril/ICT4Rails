@@ -57,8 +57,8 @@ namespace ICT4Rails
             }
 
             string info = "Spoornummer: " + spoorstr +
-                "Lijn: " + lijnstr +
-                "Beschikbaar: " + beschikbaarstr;
+                " - Lijn: " + lijnstr +
+                " - Beschikbaar: " + beschikbaarstr;
 
             return info;
         }

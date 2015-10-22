@@ -106,12 +106,12 @@ namespace ICT4Rails
             }
 
             string info = "Nummer: " + nummerstr +
-                "Lijn: " + lijnstr +
-                "Type: " + typestr +
-                "Status: " + statusstr +
-                "Beschikbaar: " + beschikbaarstr +
-                "Uitrijdatum: " + uitrijdatestr +
-                "Uitrijtijd: " + uitrijtimestr;
+                " - Lijn: " + lijnstr +
+                " - Type: " + typestr +
+                " - Status: " + statusstr +
+                " - Beschikbaar: " + beschikbaarstr +
+                " - Uitrijdatum: " + uitrijdatestr +
+                " - Uitrijtijd: " + uitrijtimestr;
 
             return info;
         }

@@ -9,16 +9,19 @@ namespace ICT4Rails
 
     public class Administratie
     {
+        private List<Gebruiker> gebruikers;
         private List<Medewerker> medewerkers;
         private List<Onderhoud> onderhoudslijst;
         private List<Tram> trams;
 
+        public List<Gebruiker> Gebruikers { get { return gebruikers; } }
         public List<Medewerker> Medewerkers { get { return medewerkers; } }
         public List<Onderhoud> Onderhoudslijst { get { return onderhoudslijst; } }
         public List<Tram> Trams { get { return trams; } }
 
         public Administratie()
         {
+            this.gebruikers = new List<Gebruiker>();
             this.medewerkers = new List<Medewerker>();
             this.onderhoudslijst = new List<Onderhoud>();
             this.trams = new List<Tram>();
@@ -29,25 +32,40 @@ namespace ICT4Rails
         {
             if(FindMedewerker(medewerker.ID) != null)
             {
+<<<<<<< HEAD
                 //throw new Exception("De medewerker bestaat al!"); exception kan hier niet omdat een exception de methode break't, de return false code wordt niet uitgevoerd en dan wordt er niets gereturnd
                 return false;
             }
+=======
+                throw new Exception("De medewerker bestaat al!");
+            }                     
+            
+>>>>>>> origin/master
             medewerkers.Add(medewerker);
             return true;
         }
 
         public bool RemoveMedewerker(Medewerker medewerker)
         {
+<<<<<<< HEAD
             try
+=======
+            if (FindMedewerker(medewerker.ID) != null)
+>>>>>>> origin/master
             {
                 medewerkers.Remove(FindMedewerker(medewerker.ID));
                 return true;
             }
+<<<<<<< HEAD
             catch
             {
                 return false;
             }
             
+=======
+            return false;               
+           
+>>>>>>> origin/master
         }
 
         public Medewerker FindMedewerker(int id)
@@ -59,19 +77,21 @@ namespace ICT4Rails
                     if (m.ID == id)
                     {
                         return m;
-                    }
-                    throw new Exception("Medewerker is niet gevonden");
+                    }                    
                 }
             }
+            return null;
             throw new Exception("Er zijn geen medewerkers");
         }
 
         public bool ChangeMedewerker(Medewerker medewerker)
         {
             // TO DO
+            return false;
+
         }
 
-        public bool TramToevoegen(Tram tram)
+        public bool AddTram(Tram tram)
         {
             // er wordt hier een tram toegevoegd uit het systeem
             foreach (Tram Selected_Tram in trams)
@@ -82,9 +102,10 @@ namespace ICT4Rails
                 }
             }
             trams.Add(tram);
+            return true;
         }
 
-        public bool TramVerwijderen(Tram tram)
+        public bool RemoveTram(Tram tram)
         {
             // er wordt hier een tram verwijderd uit het systeem
             foreach (Tram Selected_Tram in trams)
@@ -107,7 +128,6 @@ namespace ICT4Rails
                 if (onderhoudsbeurt == Selected_Onderhoudsbeurt)
                 {
                     throw new Exception("De onderhoudsbeurt bestaat al!");
-                    return false;
                 }
             }
             onderhoudslijst.Add(onderhoudsbeurt);

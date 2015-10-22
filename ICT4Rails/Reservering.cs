@@ -54,8 +54,8 @@ namespace ICT4Rails
             }
 
             string info = "Tram: " + tramstr +
-                "Spoor: " + spoorstr +
-                "Datum: " + datumstr;
+                " - Spoor: " + spoorstr +
+                " - Datum: " + datumstr;
 
             return info;
         }

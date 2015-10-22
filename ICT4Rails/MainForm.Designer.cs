@@ -30,236 +30,241 @@
         {
             this.tabcontrolRemise = new System.Windows.Forms.TabControl();
             this.tabpageRemiseOverzicht = new System.Windows.Forms.TabPage();
-            this.lbxReserveringen = new System.Windows.Forms.ListBox();
-            this.gbRemiseOverzicht = new System.Windows.Forms.GroupBox();
-            this.textBox215 = new System.Windows.Forms.TextBox();
-            this.textBox221 = new System.Windows.Forms.TextBox();
-            this.textBox222 = new System.Windows.Forms.TextBox();
-            this.textBox203 = new System.Windows.Forms.TextBox();
-            this.textBox204 = new System.Windows.Forms.TextBox();
-            this.textBox214 = new System.Windows.Forms.TextBox();
-            this.textBox216 = new System.Windows.Forms.TextBox();
-            this.textBox217 = new System.Windows.Forms.TextBox();
-            this.textBox218 = new System.Windows.Forms.TextBox();
-            this.textBox219 = new System.Windows.Forms.TextBox();
-            this.textBox220 = new System.Windows.Forms.TextBox();
-            this.textBox205 = new System.Windows.Forms.TextBox();
-            this.textBox206 = new System.Windows.Forms.TextBox();
-            this.textBox207 = new System.Windows.Forms.TextBox();
-            this.textBox208 = new System.Windows.Forms.TextBox();
-            this.textBox209 = new System.Windows.Forms.TextBox();
-            this.textBox210 = new System.Windows.Forms.TextBox();
-            this.textBox211 = new System.Windows.Forms.TextBox();
-            this.textBox212 = new System.Windows.Forms.TextBox();
-            this.textBox213 = new System.Windows.Forms.TextBox();
-            this.textBox196 = new System.Windows.Forms.TextBox();
-            this.textBox197 = new System.Windows.Forms.TextBox();
-            this.textBox198 = new System.Windows.Forms.TextBox();
-            this.textBox199 = new System.Windows.Forms.TextBox();
-            this.textBox200 = new System.Windows.Forms.TextBox();
-            this.textBox201 = new System.Windows.Forms.TextBox();
-            this.textBox202 = new System.Windows.Forms.TextBox();
-            this.textBox194 = new System.Windows.Forms.TextBox();
-            this.textBox195 = new System.Windows.Forms.TextBox();
-            this.textBox191 = new System.Windows.Forms.TextBox();
-            this.textBox192 = new System.Windows.Forms.TextBox();
-            this.textBox193 = new System.Windows.Forms.TextBox();
-            this.textBox187 = new System.Windows.Forms.TextBox();
-            this.textBox188 = new System.Windows.Forms.TextBox();
-            this.textBox189 = new System.Windows.Forms.TextBox();
-            this.textBox190 = new System.Windows.Forms.TextBox();
-            this.textBox179 = new System.Windows.Forms.TextBox();
-            this.textBox180 = new System.Windows.Forms.TextBox();
-            this.textBox181 = new System.Windows.Forms.TextBox();
-            this.textBox182 = new System.Windows.Forms.TextBox();
-            this.textBox183 = new System.Windows.Forms.TextBox();
-            this.textBox184 = new System.Windows.Forms.TextBox();
-            this.textBox185 = new System.Windows.Forms.TextBox();
-            this.textBox186 = new System.Windows.Forms.TextBox();
-            this.textBox178 = new System.Windows.Forms.TextBox();
-            this.textBox167 = new System.Windows.Forms.TextBox();
-            this.textBox177 = new System.Windows.Forms.TextBox();
-            this.textBox168 = new System.Windows.Forms.TextBox();
-            this.textBox176 = new System.Windows.Forms.TextBox();
-            this.textBox169 = new System.Windows.Forms.TextBox();
-            this.textBox175 = new System.Windows.Forms.TextBox();
-            this.textBox170 = new System.Windows.Forms.TextBox();
-            this.textBox174 = new System.Windows.Forms.TextBox();
-            this.textBox173 = new System.Windows.Forms.TextBox();
-            this.textBox163 = new System.Windows.Forms.TextBox();
-            this.textBox172 = new System.Windows.Forms.TextBox();
-            this.textBox164 = new System.Windows.Forms.TextBox();
-            this.textBox171 = new System.Windows.Forms.TextBox();
-            this.textBox165 = new System.Windows.Forms.TextBox();
-            this.textBox166 = new System.Windows.Forms.TextBox();
-            this.textBox145 = new System.Windows.Forms.TextBox();
-            this.textBox158 = new System.Windows.Forms.TextBox();
-            this.textBox159 = new System.Windows.Forms.TextBox();
-            this.textBox160 = new System.Windows.Forms.TextBox();
-            this.textBox161 = new System.Windows.Forms.TextBox();
-            this.textBox162 = new System.Windows.Forms.TextBox();
-            this.textBox144 = new System.Windows.Forms.TextBox();
-            this.textBox146 = new System.Windows.Forms.TextBox();
-            this.textBox147 = new System.Windows.Forms.TextBox();
-            this.textBox148 = new System.Windows.Forms.TextBox();
-            this.textBox149 = new System.Windows.Forms.TextBox();
-            this.textBox150 = new System.Windows.Forms.TextBox();
-            this.textBox151 = new System.Windows.Forms.TextBox();
-            this.textBox152 = new System.Windows.Forms.TextBox();
-            this.textBox153 = new System.Windows.Forms.TextBox();
-            this.textBox154 = new System.Windows.Forms.TextBox();
-            this.textBox155 = new System.Windows.Forms.TextBox();
-            this.textBox156 = new System.Windows.Forms.TextBox();
-            this.textBox157 = new System.Windows.Forms.TextBox();
-            this.textBox128 = new System.Windows.Forms.TextBox();
-            this.textBox129 = new System.Windows.Forms.TextBox();
-            this.textBox130 = new System.Windows.Forms.TextBox();
-            this.textBox131 = new System.Windows.Forms.TextBox();
-            this.textBox132 = new System.Windows.Forms.TextBox();
-            this.textBox133 = new System.Windows.Forms.TextBox();
-            this.textBox134 = new System.Windows.Forms.TextBox();
-            this.textBox135 = new System.Windows.Forms.TextBox();
-            this.textBox136 = new System.Windows.Forms.TextBox();
-            this.textBox137 = new System.Windows.Forms.TextBox();
-            this.textBox138 = new System.Windows.Forms.TextBox();
-            this.textBox139 = new System.Windows.Forms.TextBox();
-            this.textBox140 = new System.Windows.Forms.TextBox();
-            this.textBox141 = new System.Windows.Forms.TextBox();
-            this.textBox142 = new System.Windows.Forms.TextBox();
-            this.textBox143 = new System.Windows.Forms.TextBox();
-            this.textBox119 = new System.Windows.Forms.TextBox();
-            this.textBox120 = new System.Windows.Forms.TextBox();
-            this.textBox121 = new System.Windows.Forms.TextBox();
-            this.textBox122 = new System.Windows.Forms.TextBox();
-            this.textBox123 = new System.Windows.Forms.TextBox();
-            this.textBox124 = new System.Windows.Forms.TextBox();
-            this.textBox125 = new System.Windows.Forms.TextBox();
-            this.textBox126 = new System.Windows.Forms.TextBox();
-            this.textBox127 = new System.Windows.Forms.TextBox();
-            this.textBox110 = new System.Windows.Forms.TextBox();
-            this.textBox111 = new System.Windows.Forms.TextBox();
-            this.textBox112 = new System.Windows.Forms.TextBox();
-            this.textBox113 = new System.Windows.Forms.TextBox();
-            this.textBox114 = new System.Windows.Forms.TextBox();
-            this.textBox115 = new System.Windows.Forms.TextBox();
-            this.textBox116 = new System.Windows.Forms.TextBox();
-            this.textBox117 = new System.Windows.Forms.TextBox();
-            this.textBox118 = new System.Windows.Forms.TextBox();
-            this.textBox101 = new System.Windows.Forms.TextBox();
-            this.textBox102 = new System.Windows.Forms.TextBox();
-            this.textBox103 = new System.Windows.Forms.TextBox();
-            this.textBox104 = new System.Windows.Forms.TextBox();
-            this.textBox105 = new System.Windows.Forms.TextBox();
-            this.textBox106 = new System.Windows.Forms.TextBox();
-            this.textBox107 = new System.Windows.Forms.TextBox();
-            this.textBox108 = new System.Windows.Forms.TextBox();
-            this.textBox109 = new System.Windows.Forms.TextBox();
-            this.textBox96 = new System.Windows.Forms.TextBox();
-            this.textBox97 = new System.Windows.Forms.TextBox();
-            this.textBox98 = new System.Windows.Forms.TextBox();
-            this.textBox99 = new System.Windows.Forms.TextBox();
-            this.textBox100 = new System.Windows.Forms.TextBox();
-            this.textBox91 = new System.Windows.Forms.TextBox();
-            this.textBox92 = new System.Windows.Forms.TextBox();
-            this.textBox93 = new System.Windows.Forms.TextBox();
-            this.textBox94 = new System.Windows.Forms.TextBox();
-            this.textBox95 = new System.Windows.Forms.TextBox();
-            this.textBox89 = new System.Windows.Forms.TextBox();
-            this.textBox90 = new System.Windows.Forms.TextBox();
-            this.textBox80 = new System.Windows.Forms.TextBox();
-            this.textBox81 = new System.Windows.Forms.TextBox();
-            this.textBox82 = new System.Windows.Forms.TextBox();
-            this.textBox83 = new System.Windows.Forms.TextBox();
-            this.textBox84 = new System.Windows.Forms.TextBox();
-            this.textBox85 = new System.Windows.Forms.TextBox();
-            this.textBox86 = new System.Windows.Forms.TextBox();
-            this.textBox87 = new System.Windows.Forms.TextBox();
-            this.textBox88 = new System.Windows.Forms.TextBox();
-            this.textBox77 = new System.Windows.Forms.TextBox();
-            this.textBox78 = new System.Windows.Forms.TextBox();
-            this.textBox79 = new System.Windows.Forms.TextBox();
-            this.textBox47 = new System.Windows.Forms.TextBox();
-            this.textBox48 = new System.Windows.Forms.TextBox();
-            this.textBox49 = new System.Windows.Forms.TextBox();
-            this.textBox50 = new System.Windows.Forms.TextBox();
-            this.textBox51 = new System.Windows.Forms.TextBox();
-            this.textBox52 = new System.Windows.Forms.TextBox();
-            this.textBox53 = new System.Windows.Forms.TextBox();
-            this.textBox54 = new System.Windows.Forms.TextBox();
-            this.textBox55 = new System.Windows.Forms.TextBox();
-            this.textBox56 = new System.Windows.Forms.TextBox();
-            this.textBox57 = new System.Windows.Forms.TextBox();
-            this.textBox58 = new System.Windows.Forms.TextBox();
-            this.textBox59 = new System.Windows.Forms.TextBox();
-            this.textBox60 = new System.Windows.Forms.TextBox();
-            this.textBox61 = new System.Windows.Forms.TextBox();
-            this.textBox62 = new System.Windows.Forms.TextBox();
-            this.textBox63 = new System.Windows.Forms.TextBox();
-            this.textBox64 = new System.Windows.Forms.TextBox();
-            this.textBox65 = new System.Windows.Forms.TextBox();
-            this.textBox66 = new System.Windows.Forms.TextBox();
-            this.textBox67 = new System.Windows.Forms.TextBox();
-            this.textBox68 = new System.Windows.Forms.TextBox();
-            this.textBox69 = new System.Windows.Forms.TextBox();
-            this.textBox70 = new System.Windows.Forms.TextBox();
-            this.textBox71 = new System.Windows.Forms.TextBox();
-            this.textBox72 = new System.Windows.Forms.TextBox();
-            this.textBox73 = new System.Windows.Forms.TextBox();
-            this.textBox74 = new System.Windows.Forms.TextBox();
-            this.textBox75 = new System.Windows.Forms.TextBox();
-            this.textBox76 = new System.Windows.Forms.TextBox();
-            this.textBox42 = new System.Windows.Forms.TextBox();
-            this.textBox43 = new System.Windows.Forms.TextBox();
-            this.textBox44 = new System.Windows.Forms.TextBox();
-            this.textBox45 = new System.Windows.Forms.TextBox();
-            this.textBox46 = new System.Windows.Forms.TextBox();
-            this.textBox37 = new System.Windows.Forms.TextBox();
-            this.textBox38 = new System.Windows.Forms.TextBox();
-            this.textBox39 = new System.Windows.Forms.TextBox();
-            this.textBox40 = new System.Windows.Forms.TextBox();
-            this.textBox41 = new System.Windows.Forms.TextBox();
-            this.textBox31 = new System.Windows.Forms.TextBox();
-            this.textBox32 = new System.Windows.Forms.TextBox();
-            this.textBox33 = new System.Windows.Forms.TextBox();
-            this.textBox34 = new System.Windows.Forms.TextBox();
-            this.textBox35 = new System.Windows.Forms.TextBox();
-            this.textBox36 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.textBox21 = new System.Windows.Forms.TextBox();
-            this.textBox22 = new System.Windows.Forms.TextBox();
-            this.textBox23 = new System.Windows.Forms.TextBox();
-            this.textBox24 = new System.Windows.Forms.TextBox();
-            this.textBox25 = new System.Windows.Forms.TextBox();
-            this.textBox26 = new System.Windows.Forms.TextBox();
-            this.textBox27 = new System.Windows.Forms.TextBox();
-            this.textBox28 = new System.Windows.Forms.TextBox();
-            this.textBox29 = new System.Windows.Forms.TextBox();
-            this.textBox30 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.tB_38_Lijn = new System.Windows.Forms.TextBox();
-            this.tB_38 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.tB_38_4 = new System.Windows.Forms.TextBox();
-            this.tB_38_3 = new System.Windows.Forms.TextBox();
-            this.tB_38_2 = new System.Windows.Forms.TextBox();
-            this.tB_38_1 = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label190 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.label52 = new System.Windows.Forms.Label();
+            this.label53 = new System.Windows.Forms.Label();
+            this.label54 = new System.Windows.Forms.Label();
+            this.label55 = new System.Windows.Forms.Label();
+            this.label57 = new System.Windows.Forms.Label();
+            this.label56 = new System.Windows.Forms.Label();
+            this.label58 = new System.Windows.Forms.Label();
+            this.label59 = new System.Windows.Forms.Label();
+            this.label60 = new System.Windows.Forms.Label();
+            this.label61 = new System.Windows.Forms.Label();
+            this.label62 = new System.Windows.Forms.Label();
+            this.label63 = new System.Windows.Forms.Label();
+            this.label64 = new System.Windows.Forms.Label();
+            this.label65 = new System.Windows.Forms.Label();
+            this.label66 = new System.Windows.Forms.Label();
+            this.label67 = new System.Windows.Forms.Label();
+            this.label68 = new System.Windows.Forms.Label();
+            this.label69 = new System.Windows.Forms.Label();
+            this.label70 = new System.Windows.Forms.Label();
+            this.label71 = new System.Windows.Forms.Label();
+            this.label72 = new System.Windows.Forms.Label();
+            this.label73 = new System.Windows.Forms.Label();
+            this.label74 = new System.Windows.Forms.Label();
+            this.label75 = new System.Windows.Forms.Label();
+            this.label76 = new System.Windows.Forms.Label();
+            this.label77 = new System.Windows.Forms.Label();
+            this.label78 = new System.Windows.Forms.Label();
+            this.label79 = new System.Windows.Forms.Label();
+            this.label80 = new System.Windows.Forms.Label();
+            this.label81 = new System.Windows.Forms.Label();
+            this.label82 = new System.Windows.Forms.Label();
+            this.label83 = new System.Windows.Forms.Label();
+            this.label84 = new System.Windows.Forms.Label();
+            this.label85 = new System.Windows.Forms.Label();
+            this.label86 = new System.Windows.Forms.Label();
+            this.label87 = new System.Windows.Forms.Label();
+            this.label89 = new System.Windows.Forms.Label();
+            this.label88 = new System.Windows.Forms.Label();
+            this.label90 = new System.Windows.Forms.Label();
+            this.label91 = new System.Windows.Forms.Label();
+            this.label92 = new System.Windows.Forms.Label();
+            this.label93 = new System.Windows.Forms.Label();
+            this.label94 = new System.Windows.Forms.Label();
+            this.label95 = new System.Windows.Forms.Label();
+            this.label96 = new System.Windows.Forms.Label();
+            this.label97 = new System.Windows.Forms.Label();
+            this.label98 = new System.Windows.Forms.Label();
+            this.label100 = new System.Windows.Forms.Label();
+            this.label99 = new System.Windows.Forms.Label();
+            this.label101 = new System.Windows.Forms.Label();
+            this.label102 = new System.Windows.Forms.Label();
+            this.label103 = new System.Windows.Forms.Label();
+            this.label104 = new System.Windows.Forms.Label();
+            this.label105 = new System.Windows.Forms.Label();
+            this.label106 = new System.Windows.Forms.Label();
+            this.label107 = new System.Windows.Forms.Label();
+            this.label108 = new System.Windows.Forms.Label();
+            this.label109 = new System.Windows.Forms.Label();
+            this.label110 = new System.Windows.Forms.Label();
+            this.label111 = new System.Windows.Forms.Label();
+            this.label112 = new System.Windows.Forms.Label();
+            this.label113 = new System.Windows.Forms.Label();
+            this.label114 = new System.Windows.Forms.Label();
+            this.label115 = new System.Windows.Forms.Label();
+            this.label117 = new System.Windows.Forms.Label();
+            this.label116 = new System.Windows.Forms.Label();
+            this.label118 = new System.Windows.Forms.Label();
+            this.label119 = new System.Windows.Forms.Label();
+            this.label120 = new System.Windows.Forms.Label();
+            this.label121 = new System.Windows.Forms.Label();
+            this.label122 = new System.Windows.Forms.Label();
+            this.label123 = new System.Windows.Forms.Label();
+            this.label124 = new System.Windows.Forms.Label();
+            this.label125 = new System.Windows.Forms.Label();
+            this.label126 = new System.Windows.Forms.Label();
+            this.label127 = new System.Windows.Forms.Label();
+            this.label128 = new System.Windows.Forms.Label();
+            this.label129 = new System.Windows.Forms.Label();
+            this.label130 = new System.Windows.Forms.Label();
+            this.label131 = new System.Windows.Forms.Label();
+            this.label132 = new System.Windows.Forms.Label();
+            this.label133 = new System.Windows.Forms.Label();
+            this.label134 = new System.Windows.Forms.Label();
+            this.label135 = new System.Windows.Forms.Label();
+            this.label136 = new System.Windows.Forms.Label();
+            this.label137 = new System.Windows.Forms.Label();
+            this.label138 = new System.Windows.Forms.Label();
+            this.label139 = new System.Windows.Forms.Label();
+            this.label140 = new System.Windows.Forms.Label();
+            this.label141 = new System.Windows.Forms.Label();
+            this.label142 = new System.Windows.Forms.Label();
+            this.label143 = new System.Windows.Forms.Label();
+            this.label144 = new System.Windows.Forms.Label();
+            this.label145 = new System.Windows.Forms.Label();
+            this.label146 = new System.Windows.Forms.Label();
+            this.label147 = new System.Windows.Forms.Label();
+            this.label148 = new System.Windows.Forms.Label();
+            this.label149 = new System.Windows.Forms.Label();
+            this.label150 = new System.Windows.Forms.Label();
+            this.label151 = new System.Windows.Forms.Label();
+            this.label152 = new System.Windows.Forms.Label();
+            this.label153 = new System.Windows.Forms.Label();
+            this.label154 = new System.Windows.Forms.Label();
+            this.label155 = new System.Windows.Forms.Label();
+            this.label156 = new System.Windows.Forms.Label();
+            this.label157 = new System.Windows.Forms.Label();
+            this.label158 = new System.Windows.Forms.Label();
+            this.label159 = new System.Windows.Forms.Label();
+            this.label160 = new System.Windows.Forms.Label();
+            this.label161 = new System.Windows.Forms.Label();
+            this.label162 = new System.Windows.Forms.Label();
+            this.label163 = new System.Windows.Forms.Label();
+            this.label164 = new System.Windows.Forms.Label();
+            this.label165 = new System.Windows.Forms.Label();
+            this.label166 = new System.Windows.Forms.Label();
+            this.label167 = new System.Windows.Forms.Label();
+            this.label168 = new System.Windows.Forms.Label();
+            this.label169 = new System.Windows.Forms.Label();
+            this.label170 = new System.Windows.Forms.Label();
+            this.label171 = new System.Windows.Forms.Label();
+            this.label172 = new System.Windows.Forms.Label();
+            this.label173 = new System.Windows.Forms.Label();
+            this.label174 = new System.Windows.Forms.Label();
+            this.label175 = new System.Windows.Forms.Label();
+            this.label176 = new System.Windows.Forms.Label();
+            this.label177 = new System.Windows.Forms.Label();
+            this.label178 = new System.Windows.Forms.Label();
+            this.label179 = new System.Windows.Forms.Label();
+            this.label180 = new System.Windows.Forms.Label();
+            this.label181 = new System.Windows.Forms.Label();
+            this.label182 = new System.Windows.Forms.Label();
+            this.label183 = new System.Windows.Forms.Label();
+            this.label184 = new System.Windows.Forms.Label();
+            this.label185 = new System.Windows.Forms.Label();
+            this.label186 = new System.Windows.Forms.Label();
+            this.label187 = new System.Windows.Forms.Label();
+            this.label188 = new System.Windows.Forms.Label();
+            this.label189 = new System.Windows.Forms.Label();
+            this.label191 = new System.Windows.Forms.Label();
+            this.label192 = new System.Windows.Forms.Label();
+            this.label193 = new System.Windows.Forms.Label();
+            this.label194 = new System.Windows.Forms.Label();
+            this.label195 = new System.Windows.Forms.Label();
+            this.label196 = new System.Windows.Forms.Label();
+            this.label197 = new System.Windows.Forms.Label();
+            this.label198 = new System.Windows.Forms.Label();
+            this.label199 = new System.Windows.Forms.Label();
+            this.label200 = new System.Windows.Forms.Label();
+            this.label201 = new System.Windows.Forms.Label();
+            this.label202 = new System.Windows.Forms.Label();
+            this.label203 = new System.Windows.Forms.Label();
+            this.label204 = new System.Windows.Forms.Label();
+            this.label205 = new System.Windows.Forms.Label();
+            this.label206 = new System.Windows.Forms.Label();
+            this.label207 = new System.Windows.Forms.Label();
+            this.label208 = new System.Windows.Forms.Label();
+            this.label209 = new System.Windows.Forms.Label();
+            this.label210 = new System.Windows.Forms.Label();
+            this.label211 = new System.Windows.Forms.Label();
+            this.label212 = new System.Windows.Forms.Label();
+            this.label213 = new System.Windows.Forms.Label();
+            this.label214 = new System.Windows.Forms.Label();
+            this.label215 = new System.Windows.Forms.Label();
+            this.label216 = new System.Windows.Forms.Label();
+            this.label217 = new System.Windows.Forms.Label();
+            this.label218 = new System.Windows.Forms.Label();
+            this.label219 = new System.Windows.Forms.Label();
+            this.label220 = new System.Windows.Forms.Label();
+            this.label221 = new System.Windows.Forms.Label();
+            this.label222 = new System.Windows.Forms.Label();
+            this.label223 = new System.Windows.Forms.Label();
+            this.label224 = new System.Windows.Forms.Label();
+            this.label225 = new System.Windows.Forms.Label();
+            this.label226 = new System.Windows.Forms.Label();
+            this.label227 = new System.Windows.Forms.Label();
+            this.label228 = new System.Windows.Forms.Label();
+            this.label229 = new System.Windows.Forms.Label();
+            this.label230 = new System.Windows.Forms.Label();
+            this.label231 = new System.Windows.Forms.Label();
+            this.label232 = new System.Windows.Forms.Label();
+            this.label233 = new System.Windows.Forms.Label();
+            this.label234 = new System.Windows.Forms.Label();
+            this.label235 = new System.Windows.Forms.Label();
             this.tabpageRemiseBeheer = new System.Windows.Forms.TabPage();
             this.grbRemiseBeheerSpoorBeheer = new System.Windows.Forms.GroupBox();
             this.tbxRemiseBeheerSpoorBeheerTramNummer = new System.Windows.Forms.TextBox();
@@ -290,6 +295,20 @@
             this.tbxRemiseBeheerTramNummer = new System.Windows.Forms.TextBox();
             this.lblRemiseBeheerTramNummer = new System.Windows.Forms.Label();
             this.tabpageStatusBeheer = new System.Windows.Forms.TabPage();
+            this.grbTramOnderhoud = new System.Windows.Forms.GroupBox();
+            this.lblOnderhoudSoort = new System.Windows.Forms.Label();
+            this.cbxOnderhoudSoort = new System.Windows.Forms.ComboBox();
+            this.btnOnderhoudBevestig = new System.Windows.Forms.Button();
+            this.dtpOnderhoudEindtijd = new System.Windows.Forms.DateTimePicker();
+            this.lblOnderhoudEindtijd = new System.Windows.Forms.Label();
+            this.dtpOnderhoudStarttijd = new System.Windows.Forms.DateTimePicker();
+            this.lblOnderhoudStarttijd = new System.Windows.Forms.Label();
+            this.dtpOnderhoudDatum = new System.Windows.Forms.DateTimePicker();
+            this.lblOnderhoudDatum = new System.Windows.Forms.Label();
+            this.lblOnderhoudMedewerker = new System.Windows.Forms.Label();
+            this.cbxOnderhoudMedewerker = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox223 = new System.Windows.Forms.TextBox();
             this.grbTramStatus = new System.Windows.Forms.GroupBox();
             this.btnStatusbeheerTramStatus = new System.Windows.Forms.Button();
             this.cbxStatusbeheerTramStatus = new System.Windows.Forms.ComboBox();
@@ -297,33 +316,34 @@
             this.lblStatusbeheerTramNummer = new System.Windows.Forms.Label();
             this.tbxStatusbeheerTramNummer = new System.Windows.Forms.TextBox();
             this.tabpageAccountBeheer = new System.Windows.Forms.TabPage();
+            this.lbAccountMedewerkers = new System.Windows.Forms.ListBox();
+            this.grbAccountNMedewerker = new System.Windows.Forms.GroupBox();
+            this.lblAccontPostcode = new System.Windows.Forms.Label();
+            this.tbxAccountPostcode = new System.Windows.Forms.TextBox();
+            this.tbxAccountStrtNR = new System.Windows.Forms.TextBox();
+            this.lblAccountStrtNR = new System.Windows.Forms.Label();
+            this.lblAccountNaam = new System.Windows.Forms.Label();
+            this.btnAccountToevoegen = new System.Windows.Forms.Button();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.lblAccountFunctie = new System.Windows.Forms.Label();
+            this.tbxAccountEmail = new System.Windows.Forms.TextBox();
+            this.lblAccountEmail = new System.Windows.Forms.Label();
+            this.tbxAccountNaam = new System.Windows.Forms.TextBox();
+            this.label239 = new System.Windows.Forms.Label();
             this.grbAccountBeheerNieuwAccount = new System.Windows.Forms.GroupBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.grbTramOnderhoud = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox223 = new System.Windows.Forms.TextBox();
-            this.cbxOnderhoudMedewerker = new System.Windows.Forms.ComboBox();
-            this.lblOnderhoudMedewerker = new System.Windows.Forms.Label();
-            this.lblOnderhoudDatum = new System.Windows.Forms.Label();
-            this.dtpOnderhoudDatum = new System.Windows.Forms.DateTimePicker();
-            this.lblOnderhoudStarttijd = new System.Windows.Forms.Label();
-            this.dtpOnderhoudStarttijd = new System.Windows.Forms.DateTimePicker();
-            this.dtpOnderhoudEindtijd = new System.Windows.Forms.DateTimePicker();
-            this.lblOnderhoudEindtijd = new System.Windows.Forms.Label();
-            this.btnOnderhoudBevestig = new System.Windows.Forms.Button();
-            this.lblOnderhoudSoort = new System.Windows.Forms.Label();
-            this.cbxOnderhoudSoort = new System.Windows.Forms.ComboBox();
             this.tabcontrolRemise.SuspendLayout();
             this.tabpageRemiseOverzicht.SuspendLayout();
-            this.gbRemiseOverzicht.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.tabpageRemiseBeheer.SuspendLayout();
             this.grbRemiseBeheerSpoorBeheer.SuspendLayout();
             this.grbRemiseBeheerNieuwType.SuspendLayout();
             this.grbRemiseBeheerTramBeheer.SuspendLayout();
             this.tabpageStatusBeheer.SuspendLayout();
+            this.grbTramOnderhoud.SuspendLayout();
             this.grbTramStatus.SuspendLayout();
             this.tabpageAccountBeheer.SuspendLayout();
-            this.grbTramOnderhoud.SuspendLayout();
+            this.grbAccountNMedewerker.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabcontrolRemise
@@ -342,8 +362,7 @@
             // 
             // tabpageRemiseOverzicht
             // 
-            this.tabpageRemiseOverzicht.Controls.Add(this.lbxReserveringen);
-            this.tabpageRemiseOverzicht.Controls.Add(this.gbRemiseOverzicht);
+            this.tabpageRemiseOverzicht.Controls.Add(this.tableLayoutPanel1);
             this.tabpageRemiseOverzicht.Location = new System.Drawing.Point(4, 25);
             this.tabpageRemiseOverzicht.Margin = new System.Windows.Forms.Padding(4);
             this.tabpageRemiseOverzicht.Name = "tabpageRemiseOverzicht";
@@ -353,3737 +372,2631 @@
             this.tabpageRemiseOverzicht.Text = "Remise Overzicht";
             this.tabpageRemiseOverzicht.UseVisualStyleBackColor = true;
             // 
-            // lbxReserveringen
-            // 
-            this.lbxReserveringen.FormattingEnabled = true;
-            this.lbxReserveringen.ItemHeight = 16;
-            this.lbxReserveringen.Location = new System.Drawing.Point(28, 495);
-            this.lbxReserveringen.Margin = new System.Windows.Forms.Padding(4);
-            this.lbxReserveringen.Name = "lbxReserveringen";
-            this.lbxReserveringen.Size = new System.Drawing.Size(233, 404);
-            this.lbxReserveringen.TabIndex = 1;
-            this.lbxReserveringen.Visible = false;
-            // 
-            // gbRemiseOverzicht
-            // 
-            this.gbRemiseOverzicht.BackColor = System.Drawing.Color.Transparent;
-            this.gbRemiseOverzicht.Controls.Add(this.textBox215);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox221);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox222);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox203);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox204);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox214);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox216);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox217);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox218);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox219);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox220);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox205);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox206);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox207);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox208);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox209);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox210);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox211);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox212);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox213);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox196);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox197);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox198);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox199);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox200);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox201);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox202);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox194);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox195);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox191);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox192);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox193);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox187);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox188);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox189);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox190);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox179);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox180);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox181);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox182);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox183);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox184);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox185);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox186);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox178);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox167);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox177);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox168);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox176);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox169);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox175);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox170);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox174);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox173);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox163);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox172);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox164);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox171);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox165);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox166);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox145);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox158);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox159);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox160);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox161);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox162);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox144);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox146);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox147);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox148);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox149);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox150);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox151);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox152);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox153);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox154);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox155);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox156);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox157);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox128);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox129);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox130);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox131);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox132);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox133);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox134);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox135);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox136);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox137);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox138);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox139);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox140);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox141);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox142);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox143);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox119);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox120);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox121);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox122);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox123);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox124);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox125);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox126);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox127);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox110);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox111);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox112);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox113);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox114);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox115);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox116);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox117);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox118);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox101);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox102);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox103);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox104);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox105);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox106);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox107);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox108);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox109);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox96);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox97);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox98);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox99);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox100);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox91);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox92);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox93);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox94);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox95);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox89);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox90);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox80);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox81);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox82);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox83);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox84);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox85);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox86);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox87);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox88);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox77);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox78);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox79);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox47);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox48);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox49);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox50);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox51);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox52);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox53);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox54);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox55);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox56);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox57);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox58);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox59);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox60);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox61);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox62);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox63);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox64);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox65);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox66);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox67);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox68);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox69);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox70);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox71);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox72);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox73);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox74);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox75);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox76);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox42);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox43);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox44);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox45);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox46);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox37);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox38);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox39);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox40);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox41);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox31);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox32);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox33);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox34);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox35);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox36);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox13);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox14);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox15);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox16);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox17);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox18);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox19);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox20);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox21);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox22);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox23);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox24);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox25);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox26);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox27);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox28);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox29);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox30);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox5);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox6);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox9);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox10);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox11);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox12);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox7);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox8);
-            this.gbRemiseOverzicht.Controls.Add(this.tB_38_Lijn);
-            this.gbRemiseOverzicht.Controls.Add(this.tB_38);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox1);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox2);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox3);
-            this.gbRemiseOverzicht.Controls.Add(this.textBox4);
-            this.gbRemiseOverzicht.Controls.Add(this.tB_38_4);
-            this.gbRemiseOverzicht.Controls.Add(this.tB_38_3);
-            this.gbRemiseOverzicht.Controls.Add(this.tB_38_2);
-            this.gbRemiseOverzicht.Controls.Add(this.tB_38_1);
-            this.gbRemiseOverzicht.Location = new System.Drawing.Point(311, 7);
-            this.gbRemiseOverzicht.Margin = new System.Windows.Forms.Padding(4);
-            this.gbRemiseOverzicht.Name = "gbRemiseOverzicht";
-            this.gbRemiseOverzicht.Padding = new System.Windows.Forms.Padding(4);
-            this.gbRemiseOverzicht.Size = new System.Drawing.Size(1563, 924);
-            this.gbRemiseOverzicht.TabIndex = 0;
-            this.gbRemiseOverzicht.TabStop = false;
-            // 
-            // textBox215
-            // 
-            this.textBox215.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox215.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.textBox215.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox215.Location = new System.Drawing.Point(1165, 512);
-            this.textBox215.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox215.MaxLength = 4;
-            this.textBox215.Multiline = true;
-            this.textBox215.Name = "textBox215";
-            this.textBox215.ReadOnly = true;
-            this.textBox215.Size = new System.Drawing.Size(65, 36);
-            this.textBox215.TabIndex = 222;
-            this.textBox215.Text = "13";
-            this.textBox215.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox221
-            // 
-            this.textBox221.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox221.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.textBox221.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox221.Location = new System.Drawing.Point(1165, 865);
-            this.textBox221.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox221.MaxLength = 4;
-            this.textBox221.Multiline = true;
-            this.textBox221.Name = "textBox221";
-            this.textBox221.ReadOnly = true;
-            this.textBox221.Size = new System.Drawing.Size(65, 36);
-            this.textBox221.TabIndex = 221;
-            this.textBox221.Text = "21";
-            this.textBox221.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox222
-            // 
-            this.textBox222.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox222.BackColor = System.Drawing.Color.White;
-            this.textBox222.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox222.Location = new System.Drawing.Point(1240, 865);
-            this.textBox222.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox222.MaxLength = 4;
-            this.textBox222.Multiline = true;
-            this.textBox222.Name = "textBox222";
-            this.textBox222.ReadOnly = true;
-            this.textBox222.Size = new System.Drawing.Size(65, 36);
-            this.textBox222.TabIndex = 220;
-            this.textBox222.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox203
-            // 
-            this.textBox203.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox203.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.textBox203.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox203.Location = new System.Drawing.Point(1165, 821);
-            this.textBox203.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox203.MaxLength = 4;
-            this.textBox203.Multiline = true;
-            this.textBox203.Name = "textBox203";
-            this.textBox203.ReadOnly = true;
-            this.textBox203.Size = new System.Drawing.Size(65, 36);
-            this.textBox203.TabIndex = 219;
-            this.textBox203.Text = "20";
-            this.textBox203.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox204
-            // 
-            this.textBox204.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox204.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.textBox204.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox204.Location = new System.Drawing.Point(1165, 777);
-            this.textBox204.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox204.MaxLength = 4;
-            this.textBox204.Multiline = true;
-            this.textBox204.Name = "textBox204";
-            this.textBox204.ReadOnly = true;
-            this.textBox204.Size = new System.Drawing.Size(65, 36);
-            this.textBox204.TabIndex = 218;
-            this.textBox204.Text = "19";
-            this.textBox204.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox214
-            // 
-            this.textBox214.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox214.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.textBox214.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox214.Location = new System.Drawing.Point(1165, 732);
-            this.textBox214.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox214.MaxLength = 4;
-            this.textBox214.Multiline = true;
-            this.textBox214.Name = "textBox214";
-            this.textBox214.ReadOnly = true;
-            this.textBox214.Size = new System.Drawing.Size(65, 36);
-            this.textBox214.TabIndex = 217;
-            this.textBox214.Text = "18";
-            this.textBox214.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox216
-            // 
-            this.textBox216.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox216.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.textBox216.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox216.Location = new System.Drawing.Point(1165, 468);
-            this.textBox216.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox216.MaxLength = 4;
-            this.textBox216.Multiline = true;
-            this.textBox216.Name = "textBox216";
-            this.textBox216.ReadOnly = true;
-            this.textBox216.Size = new System.Drawing.Size(65, 36);
-            this.textBox216.TabIndex = 215;
-            this.textBox216.Text = "12";
-            this.textBox216.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox217
-            // 
-            this.textBox217.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox217.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.textBox217.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox217.Location = new System.Drawing.Point(1165, 688);
-            this.textBox217.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox217.MaxLength = 4;
-            this.textBox217.Multiline = true;
-            this.textBox217.Name = "textBox217";
-            this.textBox217.ReadOnly = true;
-            this.textBox217.Size = new System.Drawing.Size(65, 36);
-            this.textBox217.TabIndex = 214;
-            this.textBox217.Text = "17";
-            this.textBox217.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox218
-            // 
-            this.textBox218.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox218.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.textBox218.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox218.Location = new System.Drawing.Point(1165, 644);
-            this.textBox218.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox218.MaxLength = 4;
-            this.textBox218.Multiline = true;
-            this.textBox218.Name = "textBox218";
-            this.textBox218.ReadOnly = true;
-            this.textBox218.Size = new System.Drawing.Size(65, 36);
-            this.textBox218.TabIndex = 213;
-            this.textBox218.Text = "16";
-            this.textBox218.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox219
-            // 
-            this.textBox219.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox219.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.textBox219.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox219.Location = new System.Drawing.Point(1165, 599);
-            this.textBox219.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox219.MaxLength = 4;
-            this.textBox219.Multiline = true;
-            this.textBox219.Name = "textBox219";
-            this.textBox219.ReadOnly = true;
-            this.textBox219.Size = new System.Drawing.Size(65, 36);
-            this.textBox219.TabIndex = 212;
-            this.textBox219.Text = "15";
-            this.textBox219.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox220
-            // 
-            this.textBox220.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox220.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.textBox220.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox220.Location = new System.Drawing.Point(1165, 555);
-            this.textBox220.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox220.MaxLength = 4;
-            this.textBox220.Multiline = true;
-            this.textBox220.Name = "textBox220";
-            this.textBox220.ReadOnly = true;
-            this.textBox220.Size = new System.Drawing.Size(65, 36);
-            this.textBox220.TabIndex = 211;
-            this.textBox220.Text = "14";
-            this.textBox220.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox205
-            // 
-            this.textBox205.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox205.BackColor = System.Drawing.Color.White;
-            this.textBox205.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox205.Location = new System.Drawing.Point(1240, 821);
-            this.textBox205.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox205.MaxLength = 4;
-            this.textBox205.Multiline = true;
-            this.textBox205.Name = "textBox205";
-            this.textBox205.ReadOnly = true;
-            this.textBox205.Size = new System.Drawing.Size(65, 36);
-            this.textBox205.TabIndex = 210;
-            this.textBox205.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox206
-            // 
-            this.textBox206.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox206.BackColor = System.Drawing.Color.White;
-            this.textBox206.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox206.Location = new System.Drawing.Point(1240, 777);
-            this.textBox206.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox206.MaxLength = 4;
-            this.textBox206.Multiline = true;
-            this.textBox206.Name = "textBox206";
-            this.textBox206.ReadOnly = true;
-            this.textBox206.Size = new System.Drawing.Size(65, 36);
-            this.textBox206.TabIndex = 209;
-            this.textBox206.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox207
-            // 
-            this.textBox207.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox207.BackColor = System.Drawing.Color.White;
-            this.textBox207.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox207.Location = new System.Drawing.Point(1240, 732);
-            this.textBox207.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox207.MaxLength = 4;
-            this.textBox207.Multiline = true;
-            this.textBox207.Name = "textBox207";
-            this.textBox207.ReadOnly = true;
-            this.textBox207.Size = new System.Drawing.Size(65, 36);
-            this.textBox207.TabIndex = 208;
-            this.textBox207.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox208
-            // 
-            this.textBox208.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox208.BackColor = System.Drawing.Color.White;
-            this.textBox208.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox208.Location = new System.Drawing.Point(1240, 512);
-            this.textBox208.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox208.MaxLength = 6;
-            this.textBox208.Multiline = true;
-            this.textBox208.Name = "textBox208";
-            this.textBox208.ReadOnly = true;
-            this.textBox208.Size = new System.Drawing.Size(65, 36);
-            this.textBox208.TabIndex = 207;
-            this.textBox208.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox209
-            // 
-            this.textBox209.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox209.BackColor = System.Drawing.Color.White;
-            this.textBox209.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox209.Location = new System.Drawing.Point(1240, 468);
-            this.textBox209.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox209.MaxLength = 4;
-            this.textBox209.Multiline = true;
-            this.textBox209.Name = "textBox209";
-            this.textBox209.ReadOnly = true;
-            this.textBox209.Size = new System.Drawing.Size(65, 36);
-            this.textBox209.TabIndex = 206;
-            this.textBox209.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox210
-            // 
-            this.textBox210.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox210.BackColor = System.Drawing.Color.White;
-            this.textBox210.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox210.Location = new System.Drawing.Point(1240, 688);
-            this.textBox210.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox210.MaxLength = 4;
-            this.textBox210.Multiline = true;
-            this.textBox210.Name = "textBox210";
-            this.textBox210.ReadOnly = true;
-            this.textBox210.Size = new System.Drawing.Size(65, 36);
-            this.textBox210.TabIndex = 205;
-            this.textBox210.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox211
-            // 
-            this.textBox211.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox211.BackColor = System.Drawing.Color.White;
-            this.textBox211.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox211.Location = new System.Drawing.Point(1240, 644);
-            this.textBox211.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox211.MaxLength = 4;
-            this.textBox211.Multiline = true;
-            this.textBox211.Name = "textBox211";
-            this.textBox211.ReadOnly = true;
-            this.textBox211.Size = new System.Drawing.Size(65, 36);
-            this.textBox211.TabIndex = 204;
-            this.textBox211.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox212
-            // 
-            this.textBox212.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox212.BackColor = System.Drawing.Color.White;
-            this.textBox212.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox212.Location = new System.Drawing.Point(1240, 599);
-            this.textBox212.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox212.MaxLength = 4;
-            this.textBox212.Multiline = true;
-            this.textBox212.Name = "textBox212";
-            this.textBox212.ReadOnly = true;
-            this.textBox212.Size = new System.Drawing.Size(65, 36);
-            this.textBox212.TabIndex = 203;
-            this.textBox212.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox213
-            // 
-            this.textBox213.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox213.BackColor = System.Drawing.Color.White;
-            this.textBox213.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox213.Location = new System.Drawing.Point(1240, 555);
-            this.textBox213.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox213.MaxLength = 4;
-            this.textBox213.Multiline = true;
-            this.textBox213.Name = "textBox213";
-            this.textBox213.ReadOnly = true;
-            this.textBox213.Size = new System.Drawing.Size(65, 36);
-            this.textBox213.TabIndex = 202;
-            this.textBox213.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox196
-            // 
-            this.textBox196.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox196.BackColor = System.Drawing.Color.White;
-            this.textBox196.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox196.Location = new System.Drawing.Point(1419, 288);
-            this.textBox196.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox196.MaxLength = 4;
-            this.textBox196.Multiline = true;
-            this.textBox196.Name = "textBox196";
-            this.textBox196.ReadOnly = true;
-            this.textBox196.Size = new System.Drawing.Size(65, 36);
-            this.textBox196.TabIndex = 201;
-            this.textBox196.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox197
-            // 
-            this.textBox197.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox197.BackColor = System.Drawing.Color.White;
-            this.textBox197.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox197.Location = new System.Drawing.Point(1419, 68);
-            this.textBox197.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox197.MaxLength = 6;
-            this.textBox197.Multiline = true;
-            this.textBox197.Name = "textBox197";
-            this.textBox197.ReadOnly = true;
-            this.textBox197.Size = new System.Drawing.Size(65, 36);
-            this.textBox197.TabIndex = 200;
-            this.textBox197.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox198
-            // 
-            this.textBox198.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox198.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.textBox198.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox198.Location = new System.Drawing.Point(1419, 23);
-            this.textBox198.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox198.MaxLength = 4;
-            this.textBox198.Multiline = true;
-            this.textBox198.Name = "textBox198";
-            this.textBox198.ReadOnly = true;
-            this.textBox198.Size = new System.Drawing.Size(65, 36);
-            this.textBox198.TabIndex = 199;
-            this.textBox198.Text = "58";
-            this.textBox198.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox199
-            // 
-            this.textBox199.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox199.BackColor = System.Drawing.Color.White;
-            this.textBox199.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox199.Location = new System.Drawing.Point(1419, 244);
-            this.textBox199.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox199.MaxLength = 4;
-            this.textBox199.Multiline = true;
-            this.textBox199.Name = "textBox199";
-            this.textBox199.ReadOnly = true;
-            this.textBox199.Size = new System.Drawing.Size(65, 36);
-            this.textBox199.TabIndex = 198;
-            this.textBox199.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox200
-            // 
-            this.textBox200.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox200.BackColor = System.Drawing.Color.White;
-            this.textBox200.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox200.Location = new System.Drawing.Point(1419, 199);
-            this.textBox200.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox200.MaxLength = 4;
-            this.textBox200.Multiline = true;
-            this.textBox200.Name = "textBox200";
-            this.textBox200.ReadOnly = true;
-            this.textBox200.Size = new System.Drawing.Size(65, 36);
-            this.textBox200.TabIndex = 197;
-            this.textBox200.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox201
-            // 
-            this.textBox201.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox201.BackColor = System.Drawing.Color.White;
-            this.textBox201.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox201.Location = new System.Drawing.Point(1419, 155);
-            this.textBox201.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox201.MaxLength = 4;
-            this.textBox201.Multiline = true;
-            this.textBox201.Name = "textBox201";
-            this.textBox201.ReadOnly = true;
-            this.textBox201.Size = new System.Drawing.Size(65, 36);
-            this.textBox201.TabIndex = 196;
-            this.textBox201.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox202
-            // 
-            this.textBox202.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox202.BackColor = System.Drawing.Color.White;
-            this.textBox202.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox202.Location = new System.Drawing.Point(1419, 111);
-            this.textBox202.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox202.MaxLength = 4;
-            this.textBox202.Multiline = true;
-            this.textBox202.Name = "textBox202";
-            this.textBox202.ReadOnly = true;
-            this.textBox202.Size = new System.Drawing.Size(65, 36);
-            this.textBox202.TabIndex = 195;
-            this.textBox202.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox194
-            // 
-            this.textBox194.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox194.BackColor = System.Drawing.Color.White;
-            this.textBox194.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox194.Location = new System.Drawing.Point(1076, 732);
-            this.textBox194.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox194.MaxLength = 4;
-            this.textBox194.Multiline = true;
-            this.textBox194.Name = "textBox194";
-            this.textBox194.ReadOnly = true;
-            this.textBox194.Size = new System.Drawing.Size(65, 36);
-            this.textBox194.TabIndex = 194;
-            this.textBox194.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox195
-            // 
-            this.textBox195.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox195.BackColor = System.Drawing.Color.White;
-            this.textBox195.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox195.Location = new System.Drawing.Point(1001, 732);
-            this.textBox195.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox195.MaxLength = 4;
-            this.textBox195.Multiline = true;
-            this.textBox195.Name = "textBox195";
-            this.textBox195.ReadOnly = true;
-            this.textBox195.Size = new System.Drawing.Size(65, 36);
-            this.textBox195.TabIndex = 193;
-            this.textBox195.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox191
-            // 
-            this.textBox191.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox191.BackColor = System.Drawing.Color.White;
-            this.textBox191.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox191.Location = new System.Drawing.Point(1076, 688);
-            this.textBox191.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox191.MaxLength = 4;
-            this.textBox191.Multiline = true;
-            this.textBox191.Name = "textBox191";
-            this.textBox191.ReadOnly = true;
-            this.textBox191.Size = new System.Drawing.Size(65, 36);
-            this.textBox191.TabIndex = 192;
-            this.textBox191.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox192
-            // 
-            this.textBox192.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox192.BackColor = System.Drawing.Color.White;
-            this.textBox192.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox192.Location = new System.Drawing.Point(1001, 688);
-            this.textBox192.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox192.MaxLength = 4;
-            this.textBox192.Multiline = true;
-            this.textBox192.Name = "textBox192";
-            this.textBox192.ReadOnly = true;
-            this.textBox192.Size = new System.Drawing.Size(65, 36);
-            this.textBox192.TabIndex = 191;
-            this.textBox192.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox193
-            // 
-            this.textBox193.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox193.BackColor = System.Drawing.Color.White;
-            this.textBox193.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox193.Location = new System.Drawing.Point(927, 688);
-            this.textBox193.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox193.MaxLength = 4;
-            this.textBox193.Multiline = true;
-            this.textBox193.Name = "textBox193";
-            this.textBox193.ReadOnly = true;
-            this.textBox193.Size = new System.Drawing.Size(65, 36);
-            this.textBox193.TabIndex = 190;
-            this.textBox193.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox187
-            // 
-            this.textBox187.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox187.BackColor = System.Drawing.Color.White;
-            this.textBox187.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox187.Location = new System.Drawing.Point(1076, 644);
-            this.textBox187.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox187.MaxLength = 4;
-            this.textBox187.Multiline = true;
-            this.textBox187.Name = "textBox187";
-            this.textBox187.ReadOnly = true;
-            this.textBox187.Size = new System.Drawing.Size(65, 36);
-            this.textBox187.TabIndex = 189;
-            this.textBox187.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox188
-            // 
-            this.textBox188.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox188.BackColor = System.Drawing.Color.White;
-            this.textBox188.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox188.Location = new System.Drawing.Point(1001, 644);
-            this.textBox188.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox188.MaxLength = 4;
-            this.textBox188.Multiline = true;
-            this.textBox188.Name = "textBox188";
-            this.textBox188.ReadOnly = true;
-            this.textBox188.Size = new System.Drawing.Size(65, 36);
-            this.textBox188.TabIndex = 188;
-            this.textBox188.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox189
-            // 
-            this.textBox189.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox189.BackColor = System.Drawing.Color.White;
-            this.textBox189.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox189.Location = new System.Drawing.Point(927, 644);
-            this.textBox189.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox189.MaxLength = 4;
-            this.textBox189.Multiline = true;
-            this.textBox189.Name = "textBox189";
-            this.textBox189.ReadOnly = true;
-            this.textBox189.Size = new System.Drawing.Size(65, 36);
-            this.textBox189.TabIndex = 187;
-            this.textBox189.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox190
-            // 
-            this.textBox190.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox190.BackColor = System.Drawing.Color.White;
-            this.textBox190.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox190.Location = new System.Drawing.Point(852, 644);
-            this.textBox190.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox190.MaxLength = 4;
-            this.textBox190.Multiline = true;
-            this.textBox190.Name = "textBox190";
-            this.textBox190.ReadOnly = true;
-            this.textBox190.Size = new System.Drawing.Size(65, 36);
-            this.textBox190.TabIndex = 186;
-            this.textBox190.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox179
-            // 
-            this.textBox179.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox179.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.textBox179.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox179.Location = new System.Drawing.Point(1076, 468);
-            this.textBox179.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox179.MaxLength = 6;
-            this.textBox179.Multiline = true;
-            this.textBox179.Name = "textBox179";
-            this.textBox179.ReadOnly = true;
-            this.textBox179.Size = new System.Drawing.Size(65, 36);
-            this.textBox179.TabIndex = 185;
-            this.textBox179.Text = "77";
-            this.textBox179.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox180
-            // 
-            this.textBox180.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox180.BackColor = System.Drawing.Color.White;
-            this.textBox180.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox180.Location = new System.Drawing.Point(1076, 599);
-            this.textBox180.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox180.MaxLength = 4;
-            this.textBox180.Multiline = true;
-            this.textBox180.Name = "textBox180";
-            this.textBox180.ReadOnly = true;
-            this.textBox180.Size = new System.Drawing.Size(65, 36);
-            this.textBox180.TabIndex = 184;
-            this.textBox180.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox181
-            // 
-            this.textBox181.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox181.BackColor = System.Drawing.Color.White;
-            this.textBox181.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox181.Location = new System.Drawing.Point(1076, 555);
-            this.textBox181.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox181.MaxLength = 4;
-            this.textBox181.Multiline = true;
-            this.textBox181.Name = "textBox181";
-            this.textBox181.ReadOnly = true;
-            this.textBox181.Size = new System.Drawing.Size(65, 36);
-            this.textBox181.TabIndex = 183;
-            this.textBox181.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox182
-            // 
-            this.textBox182.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox182.BackColor = System.Drawing.Color.White;
-            this.textBox182.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox182.Location = new System.Drawing.Point(1076, 511);
-            this.textBox182.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox182.MaxLength = 4;
-            this.textBox182.Multiline = true;
-            this.textBox182.Name = "textBox182";
-            this.textBox182.ReadOnly = true;
-            this.textBox182.Size = new System.Drawing.Size(65, 36);
-            this.textBox182.TabIndex = 182;
-            this.textBox182.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox183
-            // 
-            this.textBox183.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox183.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.textBox183.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox183.Location = new System.Drawing.Point(1001, 468);
-            this.textBox183.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox183.MaxLength = 6;
-            this.textBox183.Multiline = true;
-            this.textBox183.Name = "textBox183";
-            this.textBox183.ReadOnly = true;
-            this.textBox183.Size = new System.Drawing.Size(65, 36);
-            this.textBox183.TabIndex = 181;
-            this.textBox183.Text = "76";
-            this.textBox183.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox184
-            // 
-            this.textBox184.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox184.BackColor = System.Drawing.Color.White;
-            this.textBox184.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox184.Location = new System.Drawing.Point(1001, 599);
-            this.textBox184.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox184.MaxLength = 4;
-            this.textBox184.Multiline = true;
-            this.textBox184.Name = "textBox184";
-            this.textBox184.ReadOnly = true;
-            this.textBox184.Size = new System.Drawing.Size(65, 36);
-            this.textBox184.TabIndex = 180;
-            this.textBox184.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox185
-            // 
-            this.textBox185.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox185.BackColor = System.Drawing.Color.White;
-            this.textBox185.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox185.Location = new System.Drawing.Point(1001, 555);
-            this.textBox185.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox185.MaxLength = 4;
-            this.textBox185.Multiline = true;
-            this.textBox185.Name = "textBox185";
-            this.textBox185.ReadOnly = true;
-            this.textBox185.Size = new System.Drawing.Size(65, 36);
-            this.textBox185.TabIndex = 179;
-            this.textBox185.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox186
-            // 
-            this.textBox186.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox186.BackColor = System.Drawing.Color.White;
-            this.textBox186.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox186.Location = new System.Drawing.Point(1001, 511);
-            this.textBox186.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox186.MaxLength = 4;
-            this.textBox186.Multiline = true;
-            this.textBox186.Name = "textBox186";
-            this.textBox186.ReadOnly = true;
-            this.textBox186.Size = new System.Drawing.Size(65, 36);
-            this.textBox186.TabIndex = 178;
-            this.textBox186.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox178
-            // 
-            this.textBox178.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox178.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.textBox178.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox178.Location = new System.Drawing.Point(777, 468);
-            this.textBox178.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox178.MaxLength = 6;
-            this.textBox178.Multiline = true;
-            this.textBox178.Name = "textBox178";
-            this.textBox178.ReadOnly = true;
-            this.textBox178.Size = new System.Drawing.Size(65, 36);
-            this.textBox178.TabIndex = 177;
-            this.textBox178.Text = "61";
-            this.textBox178.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox167
-            // 
-            this.textBox167.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox167.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.textBox167.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox167.Location = new System.Drawing.Point(927, 468);
-            this.textBox167.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox167.MaxLength = 6;
-            this.textBox167.Multiline = true;
-            this.textBox167.Name = "textBox167";
-            this.textBox167.ReadOnly = true;
-            this.textBox167.Size = new System.Drawing.Size(65, 36);
-            this.textBox167.TabIndex = 177;
-            this.textBox167.Text = "75";
-            this.textBox167.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox177
-            // 
-            this.textBox177.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox177.BackColor = System.Drawing.Color.White;
-            this.textBox177.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox177.Location = new System.Drawing.Point(777, 599);
-            this.textBox177.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox177.MaxLength = 4;
-            this.textBox177.Multiline = true;
-            this.textBox177.Name = "textBox177";
-            this.textBox177.ReadOnly = true;
-            this.textBox177.Size = new System.Drawing.Size(65, 36);
-            this.textBox177.TabIndex = 176;
-            this.textBox177.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox168
-            // 
-            this.textBox168.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox168.BackColor = System.Drawing.Color.White;
-            this.textBox168.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox168.Location = new System.Drawing.Point(927, 599);
-            this.textBox168.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox168.MaxLength = 4;
-            this.textBox168.Multiline = true;
-            this.textBox168.Name = "textBox168";
-            this.textBox168.ReadOnly = true;
-            this.textBox168.Size = new System.Drawing.Size(65, 36);
-            this.textBox168.TabIndex = 176;
-            this.textBox168.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox176
-            // 
-            this.textBox176.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox176.BackColor = System.Drawing.Color.White;
-            this.textBox176.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox176.Location = new System.Drawing.Point(777, 555);
-            this.textBox176.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox176.MaxLength = 4;
-            this.textBox176.Multiline = true;
-            this.textBox176.Name = "textBox176";
-            this.textBox176.ReadOnly = true;
-            this.textBox176.Size = new System.Drawing.Size(65, 36);
-            this.textBox176.TabIndex = 175;
-            this.textBox176.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox169
-            // 
-            this.textBox169.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox169.BackColor = System.Drawing.Color.White;
-            this.textBox169.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox169.Location = new System.Drawing.Point(927, 555);
-            this.textBox169.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox169.MaxLength = 4;
-            this.textBox169.Multiline = true;
-            this.textBox169.Name = "textBox169";
-            this.textBox169.ReadOnly = true;
-            this.textBox169.Size = new System.Drawing.Size(65, 36);
-            this.textBox169.TabIndex = 175;
-            this.textBox169.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox175
-            // 
-            this.textBox175.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox175.BackColor = System.Drawing.Color.White;
-            this.textBox175.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox175.Location = new System.Drawing.Point(777, 511);
-            this.textBox175.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox175.MaxLength = 4;
-            this.textBox175.Multiline = true;
-            this.textBox175.Name = "textBox175";
-            this.textBox175.ReadOnly = true;
-            this.textBox175.Size = new System.Drawing.Size(65, 36);
-            this.textBox175.TabIndex = 174;
-            this.textBox175.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox170
-            // 
-            this.textBox170.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox170.BackColor = System.Drawing.Color.White;
-            this.textBox170.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox170.Location = new System.Drawing.Point(927, 511);
-            this.textBox170.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox170.MaxLength = 4;
-            this.textBox170.Multiline = true;
-            this.textBox170.Name = "textBox170";
-            this.textBox170.ReadOnly = true;
-            this.textBox170.Size = new System.Drawing.Size(65, 36);
-            this.textBox170.TabIndex = 174;
-            this.textBox170.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox174
-            // 
-            this.textBox174.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox174.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.textBox174.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox174.Location = new System.Drawing.Point(703, 468);
-            this.textBox174.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox174.MaxLength = 6;
-            this.textBox174.Multiline = true;
-            this.textBox174.Name = "textBox174";
-            this.textBox174.ReadOnly = true;
-            this.textBox174.Size = new System.Drawing.Size(65, 36);
-            this.textBox174.TabIndex = 173;
-            this.textBox174.Text = "62";
-            this.textBox174.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox173
-            // 
-            this.textBox173.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox173.BackColor = System.Drawing.Color.White;
-            this.textBox173.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox173.Location = new System.Drawing.Point(703, 599);
-            this.textBox173.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox173.MaxLength = 4;
-            this.textBox173.Multiline = true;
-            this.textBox173.Name = "textBox173";
-            this.textBox173.ReadOnly = true;
-            this.textBox173.Size = new System.Drawing.Size(65, 36);
-            this.textBox173.TabIndex = 172;
-            this.textBox173.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox163
-            // 
-            this.textBox163.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox163.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.textBox163.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox163.Location = new System.Drawing.Point(852, 468);
-            this.textBox163.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox163.MaxLength = 6;
-            this.textBox163.Multiline = true;
-            this.textBox163.Name = "textBox163";
-            this.textBox163.ReadOnly = true;
-            this.textBox163.Size = new System.Drawing.Size(65, 36);
-            this.textBox163.TabIndex = 173;
-            this.textBox163.Text = "74";
-            this.textBox163.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox172
-            // 
-            this.textBox172.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox172.BackColor = System.Drawing.Color.White;
-            this.textBox172.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox172.Location = new System.Drawing.Point(703, 555);
-            this.textBox172.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox172.MaxLength = 4;
-            this.textBox172.Multiline = true;
-            this.textBox172.Name = "textBox172";
-            this.textBox172.ReadOnly = true;
-            this.textBox172.Size = new System.Drawing.Size(65, 36);
-            this.textBox172.TabIndex = 171;
-            this.textBox172.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox164
-            // 
-            this.textBox164.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox164.BackColor = System.Drawing.Color.White;
-            this.textBox164.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox164.Location = new System.Drawing.Point(852, 599);
-            this.textBox164.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox164.MaxLength = 4;
-            this.textBox164.Multiline = true;
-            this.textBox164.Name = "textBox164";
-            this.textBox164.ReadOnly = true;
-            this.textBox164.Size = new System.Drawing.Size(65, 36);
-            this.textBox164.TabIndex = 172;
-            this.textBox164.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox171
-            // 
-            this.textBox171.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox171.BackColor = System.Drawing.Color.White;
-            this.textBox171.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox171.Location = new System.Drawing.Point(703, 511);
-            this.textBox171.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox171.MaxLength = 4;
-            this.textBox171.Multiline = true;
-            this.textBox171.Name = "textBox171";
-            this.textBox171.ReadOnly = true;
-            this.textBox171.Size = new System.Drawing.Size(65, 36);
-            this.textBox171.TabIndex = 170;
-            this.textBox171.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox165
-            // 
-            this.textBox165.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox165.BackColor = System.Drawing.Color.White;
-            this.textBox165.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox165.Location = new System.Drawing.Point(852, 555);
-            this.textBox165.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox165.MaxLength = 4;
-            this.textBox165.Multiline = true;
-            this.textBox165.Name = "textBox165";
-            this.textBox165.ReadOnly = true;
-            this.textBox165.Size = new System.Drawing.Size(65, 36);
-            this.textBox165.TabIndex = 171;
-            this.textBox165.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox166
-            // 
-            this.textBox166.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox166.BackColor = System.Drawing.Color.White;
-            this.textBox166.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox166.Location = new System.Drawing.Point(852, 511);
-            this.textBox166.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox166.MaxLength = 4;
-            this.textBox166.Multiline = true;
-            this.textBox166.Name = "textBox166";
-            this.textBox166.ReadOnly = true;
-            this.textBox166.Size = new System.Drawing.Size(65, 36);
-            this.textBox166.TabIndex = 170;
-            this.textBox166.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox145
-            // 
-            this.textBox145.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox145.BackColor = System.Drawing.Color.White;
-            this.textBox145.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox145.Location = new System.Drawing.Point(628, 684);
-            this.textBox145.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox145.MaxLength = 6;
-            this.textBox145.Multiline = true;
-            this.textBox145.Name = "textBox145";
-            this.textBox145.ReadOnly = true;
-            this.textBox145.Size = new System.Drawing.Size(65, 36);
-            this.textBox145.TabIndex = 169;
-            this.textBox145.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox158
-            // 
-            this.textBox158.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox158.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.textBox158.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox158.Location = new System.Drawing.Point(628, 468);
-            this.textBox158.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox158.MaxLength = 6;
-            this.textBox158.Multiline = true;
-            this.textBox158.Name = "textBox158";
-            this.textBox158.ReadOnly = true;
-            this.textBox158.Size = new System.Drawing.Size(65, 36);
-            this.textBox158.TabIndex = 168;
-            this.textBox158.Text = "63";
-            this.textBox158.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox159
-            // 
-            this.textBox159.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox159.BackColor = System.Drawing.Color.White;
-            this.textBox159.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox159.Location = new System.Drawing.Point(628, 644);
-            this.textBox159.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox159.MaxLength = 4;
-            this.textBox159.Multiline = true;
-            this.textBox159.Name = "textBox159";
-            this.textBox159.ReadOnly = true;
-            this.textBox159.Size = new System.Drawing.Size(65, 36);
-            this.textBox159.TabIndex = 167;
-            this.textBox159.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox160
-            // 
-            this.textBox160.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox160.BackColor = System.Drawing.Color.White;
-            this.textBox160.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox160.Location = new System.Drawing.Point(628, 599);
-            this.textBox160.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox160.MaxLength = 4;
-            this.textBox160.Multiline = true;
-            this.textBox160.Name = "textBox160";
-            this.textBox160.ReadOnly = true;
-            this.textBox160.Size = new System.Drawing.Size(65, 36);
-            this.textBox160.TabIndex = 166;
-            this.textBox160.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox161
-            // 
-            this.textBox161.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox161.BackColor = System.Drawing.Color.White;
-            this.textBox161.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox161.Location = new System.Drawing.Point(628, 555);
-            this.textBox161.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox161.MaxLength = 4;
-            this.textBox161.Multiline = true;
-            this.textBox161.Name = "textBox161";
-            this.textBox161.ReadOnly = true;
-            this.textBox161.Size = new System.Drawing.Size(65, 36);
-            this.textBox161.TabIndex = 165;
-            this.textBox161.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox162
-            // 
-            this.textBox162.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox162.BackColor = System.Drawing.Color.White;
-            this.textBox162.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox162.Location = new System.Drawing.Point(628, 511);
-            this.textBox162.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox162.MaxLength = 4;
-            this.textBox162.Multiline = true;
-            this.textBox162.Name = "textBox162";
-            this.textBox162.ReadOnly = true;
-            this.textBox162.Size = new System.Drawing.Size(65, 36);
-            this.textBox162.TabIndex = 164;
-            this.textBox162.Text = "2";
-            this.textBox162.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox144
-            // 
-            this.textBox144.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox144.BackColor = System.Drawing.Color.White;
-            this.textBox144.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox144.Location = new System.Drawing.Point(553, 684);
-            this.textBox144.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox144.MaxLength = 6;
-            this.textBox144.Multiline = true;
-            this.textBox144.Name = "textBox144";
-            this.textBox144.ReadOnly = true;
-            this.textBox144.Size = new System.Drawing.Size(65, 36);
-            this.textBox144.TabIndex = 163;
-            this.textBox144.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox146
-            // 
-            this.textBox146.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox146.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.textBox146.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox146.Location = new System.Drawing.Point(553, 468);
-            this.textBox146.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox146.MaxLength = 6;
-            this.textBox146.Multiline = true;
-            this.textBox146.Name = "textBox146";
-            this.textBox146.ReadOnly = true;
-            this.textBox146.Size = new System.Drawing.Size(65, 36);
-            this.textBox146.TabIndex = 161;
-            this.textBox146.Text = "64";
-            this.textBox146.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox147
-            // 
-            this.textBox147.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox147.BackColor = System.Drawing.Color.White;
-            this.textBox147.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox147.Location = new System.Drawing.Point(553, 644);
-            this.textBox147.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox147.MaxLength = 4;
-            this.textBox147.Multiline = true;
-            this.textBox147.Name = "textBox147";
-            this.textBox147.ReadOnly = true;
-            this.textBox147.Size = new System.Drawing.Size(65, 36);
-            this.textBox147.TabIndex = 160;
-            this.textBox147.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox148
-            // 
-            this.textBox148.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox148.BackColor = System.Drawing.Color.White;
-            this.textBox148.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox148.Location = new System.Drawing.Point(553, 599);
-            this.textBox148.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox148.MaxLength = 4;
-            this.textBox148.Multiline = true;
-            this.textBox148.Name = "textBox148";
-            this.textBox148.ReadOnly = true;
-            this.textBox148.Size = new System.Drawing.Size(65, 36);
-            this.textBox148.TabIndex = 159;
-            this.textBox148.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox149
-            // 
-            this.textBox149.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox149.BackColor = System.Drawing.Color.White;
-            this.textBox149.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox149.Location = new System.Drawing.Point(553, 555);
-            this.textBox149.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox149.MaxLength = 4;
-            this.textBox149.Multiline = true;
-            this.textBox149.Name = "textBox149";
-            this.textBox149.ReadOnly = true;
-            this.textBox149.Size = new System.Drawing.Size(65, 36);
-            this.textBox149.TabIndex = 158;
-            this.textBox149.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox150
-            // 
-            this.textBox150.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox150.BackColor = System.Drawing.Color.White;
-            this.textBox150.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox150.Location = new System.Drawing.Point(553, 511);
-            this.textBox150.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox150.MaxLength = 4;
-            this.textBox150.Multiline = true;
-            this.textBox150.Name = "textBox150";
-            this.textBox150.ReadOnly = true;
-            this.textBox150.Size = new System.Drawing.Size(65, 36);
-            this.textBox150.TabIndex = 157;
-            this.textBox150.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox151
-            // 
-            this.textBox151.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox151.BackColor = System.Drawing.Color.White;
-            this.textBox151.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox151.Location = new System.Drawing.Point(479, 684);
-            this.textBox151.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox151.MaxLength = 6;
-            this.textBox151.Multiline = true;
-            this.textBox151.Name = "textBox151";
-            this.textBox151.ReadOnly = true;
-            this.textBox151.Size = new System.Drawing.Size(65, 36);
-            this.textBox151.TabIndex = 156;
-            this.textBox151.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox152
-            // 
-            this.textBox152.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox152.BackColor = System.Drawing.Color.White;
-            this.textBox152.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox152.Location = new System.Drawing.Point(479, 727);
-            this.textBox152.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox152.MaxLength = 4;
-            this.textBox152.Multiline = true;
-            this.textBox152.Name = "textBox152";
-            this.textBox152.ReadOnly = true;
-            this.textBox152.Size = new System.Drawing.Size(65, 36);
-            this.textBox152.TabIndex = 155;
-            this.textBox152.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox153
-            // 
-            this.textBox153.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox153.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.textBox153.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox153.Location = new System.Drawing.Point(479, 468);
-            this.textBox153.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox153.MaxLength = 6;
-            this.textBox153.Multiline = true;
-            this.textBox153.Name = "textBox153";
-            this.textBox153.ReadOnly = true;
-            this.textBox153.Size = new System.Drawing.Size(65, 36);
-            this.textBox153.TabIndex = 154;
-            this.textBox153.Text = "51";
-            this.textBox153.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox154
-            // 
-            this.textBox154.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox154.BackColor = System.Drawing.Color.White;
-            this.textBox154.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox154.Location = new System.Drawing.Point(479, 644);
-            this.textBox154.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox154.MaxLength = 4;
-            this.textBox154.Multiline = true;
-            this.textBox154.Name = "textBox154";
-            this.textBox154.ReadOnly = true;
-            this.textBox154.Size = new System.Drawing.Size(65, 36);
-            this.textBox154.TabIndex = 153;
-            this.textBox154.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox155
-            // 
-            this.textBox155.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox155.BackColor = System.Drawing.Color.White;
-            this.textBox155.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox155.Location = new System.Drawing.Point(479, 599);
-            this.textBox155.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox155.MaxLength = 4;
-            this.textBox155.Multiline = true;
-            this.textBox155.Name = "textBox155";
-            this.textBox155.ReadOnly = true;
-            this.textBox155.Size = new System.Drawing.Size(65, 36);
-            this.textBox155.TabIndex = 152;
-            this.textBox155.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox156
-            // 
-            this.textBox156.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox156.BackColor = System.Drawing.Color.White;
-            this.textBox156.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox156.Location = new System.Drawing.Point(479, 555);
-            this.textBox156.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox156.MaxLength = 4;
-            this.textBox156.Multiline = true;
-            this.textBox156.Name = "textBox156";
-            this.textBox156.ReadOnly = true;
-            this.textBox156.Size = new System.Drawing.Size(65, 36);
-            this.textBox156.TabIndex = 151;
-            this.textBox156.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox157
-            // 
-            this.textBox157.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox157.BackColor = System.Drawing.Color.White;
-            this.textBox157.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox157.Location = new System.Drawing.Point(479, 511);
-            this.textBox157.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox157.MaxLength = 4;
-            this.textBox157.Multiline = true;
-            this.textBox157.Name = "textBox157";
-            this.textBox157.ReadOnly = true;
-            this.textBox157.Size = new System.Drawing.Size(65, 36);
-            this.textBox157.TabIndex = 150;
-            this.textBox157.Text = "13";
-            this.textBox157.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox128
-            // 
-            this.textBox128.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox128.BackColor = System.Drawing.Color.White;
-            this.textBox128.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox128.Location = new System.Drawing.Point(404, 684);
-            this.textBox128.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox128.MaxLength = 6;
-            this.textBox128.Multiline = true;
-            this.textBox128.Name = "textBox128";
-            this.textBox128.ReadOnly = true;
-            this.textBox128.Size = new System.Drawing.Size(65, 36);
-            this.textBox128.TabIndex = 149;
-            this.textBox128.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox129
-            // 
-            this.textBox129.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox129.BackColor = System.Drawing.Color.White;
-            this.textBox129.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox129.Location = new System.Drawing.Point(404, 772);
-            this.textBox129.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox129.MaxLength = 4;
-            this.textBox129.Multiline = true;
-            this.textBox129.Name = "textBox129";
-            this.textBox129.ReadOnly = true;
-            this.textBox129.Size = new System.Drawing.Size(65, 36);
-            this.textBox129.TabIndex = 148;
-            this.textBox129.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox130
-            // 
-            this.textBox130.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox130.BackColor = System.Drawing.Color.White;
-            this.textBox130.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox130.Location = new System.Drawing.Point(404, 727);
-            this.textBox130.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox130.MaxLength = 4;
-            this.textBox130.Multiline = true;
-            this.textBox130.Name = "textBox130";
-            this.textBox130.ReadOnly = true;
-            this.textBox130.Size = new System.Drawing.Size(65, 36);
-            this.textBox130.TabIndex = 147;
-            this.textBox130.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox131
-            // 
-            this.textBox131.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox131.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.textBox131.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox131.Location = new System.Drawing.Point(404, 468);
-            this.textBox131.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox131.MaxLength = 6;
-            this.textBox131.Multiline = true;
-            this.textBox131.Name = "textBox131";
-            this.textBox131.ReadOnly = true;
-            this.textBox131.Size = new System.Drawing.Size(65, 36);
-            this.textBox131.TabIndex = 146;
-            this.textBox131.Text = "52";
-            this.textBox131.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox132
-            // 
-            this.textBox132.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox132.BackColor = System.Drawing.Color.White;
-            this.textBox132.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox132.Location = new System.Drawing.Point(404, 644);
-            this.textBox132.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox132.MaxLength = 4;
-            this.textBox132.Multiline = true;
-            this.textBox132.Name = "textBox132";
-            this.textBox132.ReadOnly = true;
-            this.textBox132.Size = new System.Drawing.Size(65, 36);
-            this.textBox132.TabIndex = 145;
-            this.textBox132.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox133
-            // 
-            this.textBox133.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox133.BackColor = System.Drawing.Color.White;
-            this.textBox133.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox133.Location = new System.Drawing.Point(404, 599);
-            this.textBox133.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox133.MaxLength = 4;
-            this.textBox133.Multiline = true;
-            this.textBox133.Name = "textBox133";
-            this.textBox133.ReadOnly = true;
-            this.textBox133.Size = new System.Drawing.Size(65, 36);
-            this.textBox133.TabIndex = 144;
-            this.textBox133.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox134
-            // 
-            this.textBox134.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox134.BackColor = System.Drawing.Color.White;
-            this.textBox134.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox134.Location = new System.Drawing.Point(404, 555);
-            this.textBox134.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox134.MaxLength = 4;
-            this.textBox134.Multiline = true;
-            this.textBox134.Name = "textBox134";
-            this.textBox134.ReadOnly = true;
-            this.textBox134.Size = new System.Drawing.Size(65, 36);
-            this.textBox134.TabIndex = 143;
-            this.textBox134.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox135
-            // 
-            this.textBox135.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox135.BackColor = System.Drawing.Color.White;
-            this.textBox135.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox135.Location = new System.Drawing.Point(404, 511);
-            this.textBox135.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox135.MaxLength = 4;
-            this.textBox135.Multiline = true;
-            this.textBox135.Name = "textBox135";
-            this.textBox135.ReadOnly = true;
-            this.textBox135.Size = new System.Drawing.Size(65, 36);
-            this.textBox135.TabIndex = 142;
-            this.textBox135.Text = "5";
-            this.textBox135.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox136
-            // 
-            this.textBox136.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox136.BackColor = System.Drawing.Color.White;
-            this.textBox136.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox136.Location = new System.Drawing.Point(329, 684);
-            this.textBox136.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox136.MaxLength = 6;
-            this.textBox136.Multiline = true;
-            this.textBox136.Name = "textBox136";
-            this.textBox136.ReadOnly = true;
-            this.textBox136.Size = new System.Drawing.Size(65, 36);
-            this.textBox136.TabIndex = 141;
-            this.textBox136.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox137
-            // 
-            this.textBox137.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox137.BackColor = System.Drawing.Color.White;
-            this.textBox137.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox137.Location = new System.Drawing.Point(329, 772);
-            this.textBox137.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox137.MaxLength = 4;
-            this.textBox137.Multiline = true;
-            this.textBox137.Name = "textBox137";
-            this.textBox137.ReadOnly = true;
-            this.textBox137.Size = new System.Drawing.Size(65, 36);
-            this.textBox137.TabIndex = 140;
-            this.textBox137.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox138
-            // 
-            this.textBox138.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox138.BackColor = System.Drawing.Color.White;
-            this.textBox138.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox138.Location = new System.Drawing.Point(329, 727);
-            this.textBox138.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox138.MaxLength = 4;
-            this.textBox138.Multiline = true;
-            this.textBox138.Name = "textBox138";
-            this.textBox138.ReadOnly = true;
-            this.textBox138.Size = new System.Drawing.Size(65, 36);
-            this.textBox138.TabIndex = 139;
-            this.textBox138.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox139
-            // 
-            this.textBox139.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox139.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.textBox139.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox139.Location = new System.Drawing.Point(329, 468);
-            this.textBox139.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox139.MaxLength = 6;
-            this.textBox139.Multiline = true;
-            this.textBox139.Name = "textBox139";
-            this.textBox139.ReadOnly = true;
-            this.textBox139.Size = new System.Drawing.Size(65, 36);
-            this.textBox139.TabIndex = 138;
-            this.textBox139.Text = "53";
-            this.textBox139.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox140
-            // 
-            this.textBox140.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox140.BackColor = System.Drawing.Color.White;
-            this.textBox140.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox140.Location = new System.Drawing.Point(329, 644);
-            this.textBox140.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox140.MaxLength = 4;
-            this.textBox140.Multiline = true;
-            this.textBox140.Name = "textBox140";
-            this.textBox140.ReadOnly = true;
-            this.textBox140.Size = new System.Drawing.Size(65, 36);
-            this.textBox140.TabIndex = 137;
-            this.textBox140.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox141
-            // 
-            this.textBox141.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox141.BackColor = System.Drawing.Color.White;
-            this.textBox141.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox141.Location = new System.Drawing.Point(329, 599);
-            this.textBox141.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox141.MaxLength = 4;
-            this.textBox141.Multiline = true;
-            this.textBox141.Name = "textBox141";
-            this.textBox141.ReadOnly = true;
-            this.textBox141.Size = new System.Drawing.Size(65, 36);
-            this.textBox141.TabIndex = 136;
-            this.textBox141.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox142
-            // 
-            this.textBox142.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox142.BackColor = System.Drawing.Color.White;
-            this.textBox142.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox142.Location = new System.Drawing.Point(329, 555);
-            this.textBox142.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox142.MaxLength = 4;
-            this.textBox142.Multiline = true;
-            this.textBox142.Name = "textBox142";
-            this.textBox142.ReadOnly = true;
-            this.textBox142.Size = new System.Drawing.Size(65, 36);
-            this.textBox142.TabIndex = 135;
-            this.textBox142.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox143
-            // 
-            this.textBox143.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox143.BackColor = System.Drawing.Color.White;
-            this.textBox143.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox143.Location = new System.Drawing.Point(329, 511);
-            this.textBox143.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox143.MaxLength = 4;
-            this.textBox143.Multiline = true;
-            this.textBox143.Name = "textBox143";
-            this.textBox143.ReadOnly = true;
-            this.textBox143.Size = new System.Drawing.Size(65, 36);
-            this.textBox143.TabIndex = 134;
-            this.textBox143.Text = "2";
-            this.textBox143.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox119
-            // 
-            this.textBox119.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox119.BackColor = System.Drawing.Color.White;
-            this.textBox119.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox119.Location = new System.Drawing.Point(255, 684);
-            this.textBox119.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox119.MaxLength = 6;
-            this.textBox119.Multiline = true;
-            this.textBox119.Name = "textBox119";
-            this.textBox119.ReadOnly = true;
-            this.textBox119.Size = new System.Drawing.Size(65, 36);
-            this.textBox119.TabIndex = 133;
-            this.textBox119.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox120
-            // 
-            this.textBox120.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox120.BackColor = System.Drawing.Color.White;
-            this.textBox120.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox120.Location = new System.Drawing.Point(255, 816);
-            this.textBox120.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox120.MaxLength = 4;
-            this.textBox120.Multiline = true;
-            this.textBox120.Name = "textBox120";
-            this.textBox120.ReadOnly = true;
-            this.textBox120.Size = new System.Drawing.Size(65, 36);
-            this.textBox120.TabIndex = 132;
-            this.textBox120.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox121
-            // 
-            this.textBox121.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox121.BackColor = System.Drawing.Color.White;
-            this.textBox121.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox121.Location = new System.Drawing.Point(255, 772);
-            this.textBox121.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox121.MaxLength = 4;
-            this.textBox121.Multiline = true;
-            this.textBox121.Name = "textBox121";
-            this.textBox121.ReadOnly = true;
-            this.textBox121.Size = new System.Drawing.Size(65, 36);
-            this.textBox121.TabIndex = 131;
-            this.textBox121.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox122
-            // 
-            this.textBox122.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox122.BackColor = System.Drawing.Color.White;
-            this.textBox122.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox122.Location = new System.Drawing.Point(255, 727);
-            this.textBox122.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox122.MaxLength = 4;
-            this.textBox122.Multiline = true;
-            this.textBox122.Name = "textBox122";
-            this.textBox122.ReadOnly = true;
-            this.textBox122.Size = new System.Drawing.Size(65, 36);
-            this.textBox122.TabIndex = 130;
-            this.textBox122.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox123
-            // 
-            this.textBox123.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox123.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.textBox123.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox123.Location = new System.Drawing.Point(255, 468);
-            this.textBox123.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox123.MaxLength = 6;
-            this.textBox123.Multiline = true;
-            this.textBox123.Name = "textBox123";
-            this.textBox123.ReadOnly = true;
-            this.textBox123.Size = new System.Drawing.Size(65, 36);
-            this.textBox123.TabIndex = 129;
-            this.textBox123.Text = "54";
-            this.textBox123.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox124
-            // 
-            this.textBox124.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox124.BackColor = System.Drawing.Color.White;
-            this.textBox124.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox124.Location = new System.Drawing.Point(255, 644);
-            this.textBox124.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox124.MaxLength = 4;
-            this.textBox124.Multiline = true;
-            this.textBox124.Name = "textBox124";
-            this.textBox124.ReadOnly = true;
-            this.textBox124.Size = new System.Drawing.Size(65, 36);
-            this.textBox124.TabIndex = 128;
-            this.textBox124.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox125
-            // 
-            this.textBox125.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox125.BackColor = System.Drawing.Color.White;
-            this.textBox125.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox125.Location = new System.Drawing.Point(255, 599);
-            this.textBox125.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox125.MaxLength = 4;
-            this.textBox125.Multiline = true;
-            this.textBox125.Name = "textBox125";
-            this.textBox125.ReadOnly = true;
-            this.textBox125.Size = new System.Drawing.Size(65, 36);
-            this.textBox125.TabIndex = 127;
-            this.textBox125.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox126
-            // 
-            this.textBox126.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox126.BackColor = System.Drawing.Color.White;
-            this.textBox126.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox126.Location = new System.Drawing.Point(255, 555);
-            this.textBox126.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox126.MaxLength = 4;
-            this.textBox126.Multiline = true;
-            this.textBox126.Name = "textBox126";
-            this.textBox126.ReadOnly = true;
-            this.textBox126.Size = new System.Drawing.Size(65, 36);
-            this.textBox126.TabIndex = 126;
-            this.textBox126.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox127
-            // 
-            this.textBox127.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox127.BackColor = System.Drawing.Color.White;
-            this.textBox127.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox127.Location = new System.Drawing.Point(255, 511);
-            this.textBox127.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox127.MaxLength = 4;
-            this.textBox127.Multiline = true;
-            this.textBox127.Name = "textBox127";
-            this.textBox127.ReadOnly = true;
-            this.textBox127.Size = new System.Drawing.Size(65, 36);
-            this.textBox127.TabIndex = 125;
-            this.textBox127.Text = "5";
-            this.textBox127.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox110
-            // 
-            this.textBox110.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox110.BackColor = System.Drawing.Color.White;
-            this.textBox110.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox110.Location = new System.Drawing.Point(180, 684);
-            this.textBox110.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox110.MaxLength = 6;
-            this.textBox110.Multiline = true;
-            this.textBox110.Name = "textBox110";
-            this.textBox110.ReadOnly = true;
-            this.textBox110.Size = new System.Drawing.Size(65, 36);
-            this.textBox110.TabIndex = 124;
-            this.textBox110.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox111
-            // 
-            this.textBox111.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox111.BackColor = System.Drawing.Color.White;
-            this.textBox111.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox111.Location = new System.Drawing.Point(180, 816);
-            this.textBox111.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox111.MaxLength = 4;
-            this.textBox111.Multiline = true;
-            this.textBox111.Name = "textBox111";
-            this.textBox111.ReadOnly = true;
-            this.textBox111.Size = new System.Drawing.Size(65, 36);
-            this.textBox111.TabIndex = 123;
-            this.textBox111.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox112
-            // 
-            this.textBox112.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox112.BackColor = System.Drawing.Color.White;
-            this.textBox112.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox112.Location = new System.Drawing.Point(180, 772);
-            this.textBox112.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox112.MaxLength = 4;
-            this.textBox112.Multiline = true;
-            this.textBox112.Name = "textBox112";
-            this.textBox112.ReadOnly = true;
-            this.textBox112.Size = new System.Drawing.Size(65, 36);
-            this.textBox112.TabIndex = 122;
-            this.textBox112.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox113
-            // 
-            this.textBox113.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox113.BackColor = System.Drawing.Color.White;
-            this.textBox113.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox113.Location = new System.Drawing.Point(180, 727);
-            this.textBox113.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox113.MaxLength = 4;
-            this.textBox113.Multiline = true;
-            this.textBox113.Name = "textBox113";
-            this.textBox113.ReadOnly = true;
-            this.textBox113.Size = new System.Drawing.Size(65, 36);
-            this.textBox113.TabIndex = 121;
-            this.textBox113.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox114
-            // 
-            this.textBox114.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox114.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.textBox114.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox114.Location = new System.Drawing.Point(180, 468);
-            this.textBox114.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox114.MaxLength = 6;
-            this.textBox114.Multiline = true;
-            this.textBox114.Name = "textBox114";
-            this.textBox114.ReadOnly = true;
-            this.textBox114.Size = new System.Drawing.Size(65, 36);
-            this.textBox114.TabIndex = 120;
-            this.textBox114.Text = "55";
-            this.textBox114.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox115
-            // 
-            this.textBox115.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox115.BackColor = System.Drawing.Color.White;
-            this.textBox115.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox115.Location = new System.Drawing.Point(180, 644);
-            this.textBox115.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox115.MaxLength = 4;
-            this.textBox115.Multiline = true;
-            this.textBox115.Name = "textBox115";
-            this.textBox115.ReadOnly = true;
-            this.textBox115.Size = new System.Drawing.Size(65, 36);
-            this.textBox115.TabIndex = 119;
-            this.textBox115.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox116
-            // 
-            this.textBox116.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox116.BackColor = System.Drawing.Color.White;
-            this.textBox116.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox116.Location = new System.Drawing.Point(180, 599);
-            this.textBox116.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox116.MaxLength = 4;
-            this.textBox116.Multiline = true;
-            this.textBox116.Name = "textBox116";
-            this.textBox116.ReadOnly = true;
-            this.textBox116.Size = new System.Drawing.Size(65, 36);
-            this.textBox116.TabIndex = 118;
-            this.textBox116.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox117
-            // 
-            this.textBox117.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox117.BackColor = System.Drawing.Color.White;
-            this.textBox117.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox117.Location = new System.Drawing.Point(180, 555);
-            this.textBox117.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox117.MaxLength = 4;
-            this.textBox117.Multiline = true;
-            this.textBox117.Name = "textBox117";
-            this.textBox117.ReadOnly = true;
-            this.textBox117.Size = new System.Drawing.Size(65, 36);
-            this.textBox117.TabIndex = 117;
-            this.textBox117.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox118
-            // 
-            this.textBox118.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox118.BackColor = System.Drawing.Color.White;
-            this.textBox118.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox118.Location = new System.Drawing.Point(180, 511);
-            this.textBox118.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox118.MaxLength = 4;
-            this.textBox118.Multiline = true;
-            this.textBox118.Name = "textBox118";
-            this.textBox118.ReadOnly = true;
-            this.textBox118.Size = new System.Drawing.Size(65, 36);
-            this.textBox118.TabIndex = 116;
-            this.textBox118.Text = "2";
-            this.textBox118.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox101
-            // 
-            this.textBox101.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox101.BackColor = System.Drawing.Color.White;
-            this.textBox101.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox101.Location = new System.Drawing.Point(105, 684);
-            this.textBox101.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox101.MaxLength = 6;
-            this.textBox101.Multiline = true;
-            this.textBox101.Name = "textBox101";
-            this.textBox101.ReadOnly = true;
-            this.textBox101.Size = new System.Drawing.Size(65, 36);
-            this.textBox101.TabIndex = 115;
-            this.textBox101.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox102
-            // 
-            this.textBox102.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox102.BackColor = System.Drawing.Color.White;
-            this.textBox102.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox102.Location = new System.Drawing.Point(105, 816);
-            this.textBox102.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox102.MaxLength = 4;
-            this.textBox102.Multiline = true;
-            this.textBox102.Name = "textBox102";
-            this.textBox102.ReadOnly = true;
-            this.textBox102.Size = new System.Drawing.Size(65, 36);
-            this.textBox102.TabIndex = 114;
-            this.textBox102.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox103
-            // 
-            this.textBox103.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox103.BackColor = System.Drawing.Color.White;
-            this.textBox103.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox103.Location = new System.Drawing.Point(105, 772);
-            this.textBox103.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox103.MaxLength = 4;
-            this.textBox103.Multiline = true;
-            this.textBox103.Name = "textBox103";
-            this.textBox103.ReadOnly = true;
-            this.textBox103.Size = new System.Drawing.Size(65, 36);
-            this.textBox103.TabIndex = 113;
-            this.textBox103.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox104
-            // 
-            this.textBox104.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox104.BackColor = System.Drawing.Color.White;
-            this.textBox104.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox104.Location = new System.Drawing.Point(105, 727);
-            this.textBox104.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox104.MaxLength = 4;
-            this.textBox104.Multiline = true;
-            this.textBox104.Name = "textBox104";
-            this.textBox104.ReadOnly = true;
-            this.textBox104.Size = new System.Drawing.Size(65, 36);
-            this.textBox104.TabIndex = 112;
-            this.textBox104.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox105
-            // 
-            this.textBox105.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox105.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.textBox105.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox105.Location = new System.Drawing.Point(105, 468);
-            this.textBox105.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox105.MaxLength = 6;
-            this.textBox105.Multiline = true;
-            this.textBox105.Name = "textBox105";
-            this.textBox105.ReadOnly = true;
-            this.textBox105.Size = new System.Drawing.Size(65, 36);
-            this.textBox105.TabIndex = 111;
-            this.textBox105.Text = "56";
-            this.textBox105.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox106
-            // 
-            this.textBox106.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox106.BackColor = System.Drawing.Color.White;
-            this.textBox106.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox106.Location = new System.Drawing.Point(105, 644);
-            this.textBox106.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox106.MaxLength = 4;
-            this.textBox106.Multiline = true;
-            this.textBox106.Name = "textBox106";
-            this.textBox106.ReadOnly = true;
-            this.textBox106.Size = new System.Drawing.Size(65, 36);
-            this.textBox106.TabIndex = 110;
-            this.textBox106.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox107
-            // 
-            this.textBox107.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox107.BackColor = System.Drawing.Color.White;
-            this.textBox107.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox107.Location = new System.Drawing.Point(105, 599);
-            this.textBox107.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox107.MaxLength = 4;
-            this.textBox107.Multiline = true;
-            this.textBox107.Name = "textBox107";
-            this.textBox107.ReadOnly = true;
-            this.textBox107.Size = new System.Drawing.Size(65, 36);
-            this.textBox107.TabIndex = 109;
-            this.textBox107.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox108
-            // 
-            this.textBox108.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox108.BackColor = System.Drawing.Color.White;
-            this.textBox108.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox108.Location = new System.Drawing.Point(105, 555);
-            this.textBox108.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox108.MaxLength = 4;
-            this.textBox108.Multiline = true;
-            this.textBox108.Name = "textBox108";
-            this.textBox108.ReadOnly = true;
-            this.textBox108.Size = new System.Drawing.Size(65, 36);
-            this.textBox108.TabIndex = 108;
-            this.textBox108.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox109
-            // 
-            this.textBox109.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox109.BackColor = System.Drawing.Color.White;
-            this.textBox109.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox109.Location = new System.Drawing.Point(105, 511);
-            this.textBox109.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox109.MaxLength = 4;
-            this.textBox109.Multiline = true;
-            this.textBox109.Name = "textBox109";
-            this.textBox109.ReadOnly = true;
-            this.textBox109.Size = new System.Drawing.Size(65, 36);
-            this.textBox109.TabIndex = 107;
-            this.textBox109.Text = "5";
-            this.textBox109.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox96
-            // 
-            this.textBox96.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox96.BackColor = System.Drawing.Color.White;
-            this.textBox96.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox96.Location = new System.Drawing.Point(31, 684);
-            this.textBox96.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox96.MaxLength = 6;
-            this.textBox96.Multiline = true;
-            this.textBox96.Name = "textBox96";
-            this.textBox96.ReadOnly = true;
-            this.textBox96.Size = new System.Drawing.Size(65, 36);
-            this.textBox96.TabIndex = 106;
-            this.textBox96.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox97
-            // 
-            this.textBox97.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox97.BackColor = System.Drawing.Color.White;
-            this.textBox97.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox97.Location = new System.Drawing.Point(31, 860);
-            this.textBox97.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox97.MaxLength = 4;
-            this.textBox97.Multiline = true;
-            this.textBox97.Name = "textBox97";
-            this.textBox97.ReadOnly = true;
-            this.textBox97.Size = new System.Drawing.Size(65, 36);
-            this.textBox97.TabIndex = 105;
-            this.textBox97.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox98
-            // 
-            this.textBox98.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox98.BackColor = System.Drawing.Color.White;
-            this.textBox98.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox98.Location = new System.Drawing.Point(31, 816);
-            this.textBox98.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox98.MaxLength = 4;
-            this.textBox98.Multiline = true;
-            this.textBox98.Name = "textBox98";
-            this.textBox98.ReadOnly = true;
-            this.textBox98.Size = new System.Drawing.Size(65, 36);
-            this.textBox98.TabIndex = 104;
-            this.textBox98.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox99
-            // 
-            this.textBox99.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox99.BackColor = System.Drawing.Color.White;
-            this.textBox99.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox99.Location = new System.Drawing.Point(31, 772);
-            this.textBox99.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox99.MaxLength = 4;
-            this.textBox99.Multiline = true;
-            this.textBox99.Name = "textBox99";
-            this.textBox99.ReadOnly = true;
-            this.textBox99.Size = new System.Drawing.Size(65, 36);
-            this.textBox99.TabIndex = 103;
-            this.textBox99.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox100
-            // 
-            this.textBox100.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox100.BackColor = System.Drawing.Color.White;
-            this.textBox100.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox100.Location = new System.Drawing.Point(31, 727);
-            this.textBox100.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox100.MaxLength = 4;
-            this.textBox100.Multiline = true;
-            this.textBox100.Name = "textBox100";
-            this.textBox100.ReadOnly = true;
-            this.textBox100.Size = new System.Drawing.Size(65, 36);
-            this.textBox100.TabIndex = 102;
-            this.textBox100.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox91
-            // 
-            this.textBox91.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox91.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.textBox91.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox91.Location = new System.Drawing.Point(31, 468);
-            this.textBox91.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox91.MaxLength = 6;
-            this.textBox91.Multiline = true;
-            this.textBox91.Name = "textBox91";
-            this.textBox91.ReadOnly = true;
-            this.textBox91.Size = new System.Drawing.Size(65, 36);
-            this.textBox91.TabIndex = 101;
-            this.textBox91.Text = "57";
-            this.textBox91.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox92
-            // 
-            this.textBox92.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox92.BackColor = System.Drawing.Color.White;
-            this.textBox92.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox92.Location = new System.Drawing.Point(31, 644);
-            this.textBox92.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox92.MaxLength = 4;
-            this.textBox92.Multiline = true;
-            this.textBox92.Name = "textBox92";
-            this.textBox92.ReadOnly = true;
-            this.textBox92.Size = new System.Drawing.Size(65, 36);
-            this.textBox92.TabIndex = 100;
-            this.textBox92.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox93
-            // 
-            this.textBox93.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox93.BackColor = System.Drawing.Color.White;
-            this.textBox93.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox93.Location = new System.Drawing.Point(31, 599);
-            this.textBox93.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox93.MaxLength = 4;
-            this.textBox93.Multiline = true;
-            this.textBox93.Name = "textBox93";
-            this.textBox93.ReadOnly = true;
-            this.textBox93.Size = new System.Drawing.Size(65, 36);
-            this.textBox93.TabIndex = 99;
-            this.textBox93.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox94
-            // 
-            this.textBox94.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox94.BackColor = System.Drawing.Color.White;
-            this.textBox94.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox94.Location = new System.Drawing.Point(31, 555);
-            this.textBox94.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox94.MaxLength = 4;
-            this.textBox94.Multiline = true;
-            this.textBox94.Name = "textBox94";
-            this.textBox94.ReadOnly = true;
-            this.textBox94.Size = new System.Drawing.Size(65, 36);
-            this.textBox94.TabIndex = 98;
-            this.textBox94.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox95
-            // 
-            this.textBox95.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox95.BackColor = System.Drawing.Color.White;
-            this.textBox95.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox95.Location = new System.Drawing.Point(31, 511);
-            this.textBox95.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox95.MaxLength = 4;
-            this.textBox95.Multiline = true;
-            this.textBox95.Name = "textBox95";
-            this.textBox95.ReadOnly = true;
-            this.textBox95.Size = new System.Drawing.Size(65, 36);
-            this.textBox95.TabIndex = 97;
-            this.textBox95.Text = "16/24";
-            this.textBox95.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox89
-            // 
-            this.textBox89.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox89.BackColor = System.Drawing.Color.White;
-            this.textBox89.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox89.Location = new System.Drawing.Point(1344, 465);
-            this.textBox89.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox89.MaxLength = 4;
-            this.textBox89.Multiline = true;
-            this.textBox89.Name = "textBox89";
-            this.textBox89.ReadOnly = true;
-            this.textBox89.Size = new System.Drawing.Size(65, 36);
-            this.textBox89.TabIndex = 96;
-            this.textBox89.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox90
-            // 
-            this.textBox90.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox90.BackColor = System.Drawing.Color.White;
-            this.textBox90.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox90.Location = new System.Drawing.Point(1344, 421);
-            this.textBox90.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox90.MaxLength = 4;
-            this.textBox90.Multiline = true;
-            this.textBox90.Name = "textBox90";
-            this.textBox90.ReadOnly = true;
-            this.textBox90.Size = new System.Drawing.Size(65, 36);
-            this.textBox90.TabIndex = 95;
-            this.textBox90.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox80
-            // 
-            this.textBox80.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox80.BackColor = System.Drawing.Color.White;
-            this.textBox80.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox80.Location = new System.Drawing.Point(1344, 377);
-            this.textBox80.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox80.MaxLength = 4;
-            this.textBox80.Multiline = true;
-            this.textBox80.Name = "textBox80";
-            this.textBox80.ReadOnly = true;
-            this.textBox80.Size = new System.Drawing.Size(65, 36);
-            this.textBox80.TabIndex = 94;
-            this.textBox80.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox81
-            // 
-            this.textBox81.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox81.BackColor = System.Drawing.Color.White;
-            this.textBox81.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox81.Location = new System.Drawing.Point(1344, 332);
-            this.textBox81.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox81.MaxLength = 4;
-            this.textBox81.Multiline = true;
-            this.textBox81.Name = "textBox81";
-            this.textBox81.ReadOnly = true;
-            this.textBox81.Size = new System.Drawing.Size(65, 36);
-            this.textBox81.TabIndex = 93;
-            this.textBox81.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox82
-            // 
-            this.textBox82.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox82.BackColor = System.Drawing.Color.White;
-            this.textBox82.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox82.Location = new System.Drawing.Point(1344, 288);
-            this.textBox82.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox82.MaxLength = 4;
-            this.textBox82.Multiline = true;
-            this.textBox82.Name = "textBox82";
-            this.textBox82.ReadOnly = true;
-            this.textBox82.Size = new System.Drawing.Size(65, 36);
-            this.textBox82.TabIndex = 92;
-            this.textBox82.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox83
-            // 
-            this.textBox83.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox83.BackColor = System.Drawing.Color.White;
-            this.textBox83.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox83.Location = new System.Drawing.Point(1344, 68);
-            this.textBox83.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox83.MaxLength = 6;
-            this.textBox83.Multiline = true;
-            this.textBox83.Name = "textBox83";
-            this.textBox83.ReadOnly = true;
-            this.textBox83.Size = new System.Drawing.Size(65, 36);
-            this.textBox83.TabIndex = 91;
-            this.textBox83.Text = "17";
-            this.textBox83.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox84
-            // 
-            this.textBox84.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox84.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.textBox84.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox84.Location = new System.Drawing.Point(1344, 23);
-            this.textBox84.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox84.MaxLength = 4;
-            this.textBox84.Multiline = true;
-            this.textBox84.Name = "textBox84";
-            this.textBox84.ReadOnly = true;
-            this.textBox84.Size = new System.Drawing.Size(65, 36);
-            this.textBox84.TabIndex = 90;
-            this.textBox84.Text = "45";
-            this.textBox84.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox85
-            // 
-            this.textBox85.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox85.BackColor = System.Drawing.Color.White;
-            this.textBox85.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox85.Location = new System.Drawing.Point(1344, 244);
-            this.textBox85.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox85.MaxLength = 4;
-            this.textBox85.Multiline = true;
-            this.textBox85.Name = "textBox85";
-            this.textBox85.ReadOnly = true;
-            this.textBox85.Size = new System.Drawing.Size(65, 36);
-            this.textBox85.TabIndex = 89;
-            this.textBox85.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox86
-            // 
-            this.textBox86.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox86.BackColor = System.Drawing.Color.White;
-            this.textBox86.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox86.Location = new System.Drawing.Point(1344, 199);
-            this.textBox86.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox86.MaxLength = 4;
-            this.textBox86.Multiline = true;
-            this.textBox86.Name = "textBox86";
-            this.textBox86.ReadOnly = true;
-            this.textBox86.Size = new System.Drawing.Size(65, 36);
-            this.textBox86.TabIndex = 88;
-            this.textBox86.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox87
-            // 
-            this.textBox87.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox87.BackColor = System.Drawing.Color.White;
-            this.textBox87.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox87.Location = new System.Drawing.Point(1344, 155);
-            this.textBox87.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox87.MaxLength = 4;
-            this.textBox87.Multiline = true;
-            this.textBox87.Name = "textBox87";
-            this.textBox87.ReadOnly = true;
-            this.textBox87.Size = new System.Drawing.Size(65, 36);
-            this.textBox87.TabIndex = 87;
-            this.textBox87.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox88
-            // 
-            this.textBox88.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox88.BackColor = System.Drawing.Color.White;
-            this.textBox88.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox88.Location = new System.Drawing.Point(1344, 111);
-            this.textBox88.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox88.MaxLength = 4;
-            this.textBox88.Multiline = true;
-            this.textBox88.Name = "textBox88";
-            this.textBox88.ReadOnly = true;
-            this.textBox88.Size = new System.Drawing.Size(65, 36);
-            this.textBox88.TabIndex = 86;
-            this.textBox88.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox77
-            // 
-            this.textBox77.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox77.BackColor = System.Drawing.Color.White;
-            this.textBox77.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox77.Location = new System.Drawing.Point(777, 377);
-            this.textBox77.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox77.MaxLength = 4;
-            this.textBox77.Multiline = true;
-            this.textBox77.Name = "textBox77";
-            this.textBox77.ReadOnly = true;
-            this.textBox77.Size = new System.Drawing.Size(65, 36);
-            this.textBox77.TabIndex = 85;
-            this.textBox77.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox78
-            // 
-            this.textBox78.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox78.BackColor = System.Drawing.Color.White;
-            this.textBox78.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox78.Location = new System.Drawing.Point(777, 332);
-            this.textBox78.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox78.MaxLength = 4;
-            this.textBox78.Multiline = true;
-            this.textBox78.Name = "textBox78";
-            this.textBox78.ReadOnly = true;
-            this.textBox78.Size = new System.Drawing.Size(65, 36);
-            this.textBox78.TabIndex = 84;
-            this.textBox78.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox79
-            // 
-            this.textBox79.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox79.BackColor = System.Drawing.Color.White;
-            this.textBox79.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox79.Location = new System.Drawing.Point(777, 288);
-            this.textBox79.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox79.MaxLength = 4;
-            this.textBox79.Multiline = true;
-            this.textBox79.Name = "textBox79";
-            this.textBox79.ReadOnly = true;
-            this.textBox79.Size = new System.Drawing.Size(65, 36);
-            this.textBox79.TabIndex = 83;
-            this.textBox79.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox47
-            // 
-            this.textBox47.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox47.BackColor = System.Drawing.Color.White;
-            this.textBox47.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox47.Location = new System.Drawing.Point(1076, 68);
-            this.textBox47.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox47.MaxLength = 6;
-            this.textBox47.Multiline = true;
-            this.textBox47.Name = "textBox47";
-            this.textBox47.ReadOnly = true;
-            this.textBox47.Size = new System.Drawing.Size(65, 36);
-            this.textBox47.TabIndex = 82;
-            this.textBox47.Text = "13";
-            this.textBox47.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox48
-            // 
-            this.textBox48.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox48.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.textBox48.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox48.Location = new System.Drawing.Point(1076, 23);
-            this.textBox48.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox48.MaxLength = 4;
-            this.textBox48.Multiline = true;
-            this.textBox48.Name = "textBox48";
-            this.textBox48.ReadOnly = true;
-            this.textBox48.Size = new System.Drawing.Size(65, 36);
-            this.textBox48.TabIndex = 81;
-            this.textBox48.Text = "44";
-            this.textBox48.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox49
-            // 
-            this.textBox49.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox49.BackColor = System.Drawing.Color.White;
-            this.textBox49.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox49.Location = new System.Drawing.Point(1076, 244);
-            this.textBox49.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox49.MaxLength = 4;
-            this.textBox49.Multiline = true;
-            this.textBox49.Name = "textBox49";
-            this.textBox49.ReadOnly = true;
-            this.textBox49.Size = new System.Drawing.Size(65, 36);
-            this.textBox49.TabIndex = 80;
-            this.textBox49.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox50
-            // 
-            this.textBox50.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox50.BackColor = System.Drawing.Color.White;
-            this.textBox50.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox50.Location = new System.Drawing.Point(1076, 199);
-            this.textBox50.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox50.MaxLength = 4;
-            this.textBox50.Multiline = true;
-            this.textBox50.Name = "textBox50";
-            this.textBox50.ReadOnly = true;
-            this.textBox50.Size = new System.Drawing.Size(65, 36);
-            this.textBox50.TabIndex = 79;
-            this.textBox50.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox51
-            // 
-            this.textBox51.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox51.BackColor = System.Drawing.Color.White;
-            this.textBox51.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox51.Location = new System.Drawing.Point(1076, 155);
-            this.textBox51.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox51.MaxLength = 4;
-            this.textBox51.Multiline = true;
-            this.textBox51.Name = "textBox51";
-            this.textBox51.ReadOnly = true;
-            this.textBox51.Size = new System.Drawing.Size(65, 36);
-            this.textBox51.TabIndex = 78;
-            this.textBox51.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox52
-            // 
-            this.textBox52.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox52.BackColor = System.Drawing.Color.White;
-            this.textBox52.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox52.Location = new System.Drawing.Point(1076, 111);
-            this.textBox52.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox52.MaxLength = 4;
-            this.textBox52.Multiline = true;
-            this.textBox52.Name = "textBox52";
-            this.textBox52.ReadOnly = true;
-            this.textBox52.Size = new System.Drawing.Size(65, 36);
-            this.textBox52.TabIndex = 77;
-            this.textBox52.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox53
-            // 
-            this.textBox53.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox53.BackColor = System.Drawing.Color.White;
-            this.textBox53.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox53.Location = new System.Drawing.Point(1001, 68);
-            this.textBox53.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox53.MaxLength = 6;
-            this.textBox53.Multiline = true;
-            this.textBox53.Name = "textBox53";
-            this.textBox53.ReadOnly = true;
-            this.textBox53.Size = new System.Drawing.Size(65, 36);
-            this.textBox53.TabIndex = 76;
-            this.textBox53.Text = "1";
-            this.textBox53.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox54
-            // 
-            this.textBox54.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox54.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.textBox54.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox54.Location = new System.Drawing.Point(1001, 23);
-            this.textBox54.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox54.MaxLength = 4;
-            this.textBox54.Multiline = true;
-            this.textBox54.Name = "textBox54";
-            this.textBox54.ReadOnly = true;
-            this.textBox54.Size = new System.Drawing.Size(65, 36);
-            this.textBox54.TabIndex = 75;
-            this.textBox54.Text = "43";
-            this.textBox54.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox55
-            // 
-            this.textBox55.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox55.BackColor = System.Drawing.Color.White;
-            this.textBox55.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox55.Location = new System.Drawing.Point(1001, 244);
-            this.textBox55.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox55.MaxLength = 4;
-            this.textBox55.Multiline = true;
-            this.textBox55.Name = "textBox55";
-            this.textBox55.ReadOnly = true;
-            this.textBox55.Size = new System.Drawing.Size(65, 36);
-            this.textBox55.TabIndex = 74;
-            this.textBox55.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox56
-            // 
-            this.textBox56.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox56.BackColor = System.Drawing.Color.White;
-            this.textBox56.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox56.Location = new System.Drawing.Point(1001, 199);
-            this.textBox56.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox56.MaxLength = 4;
-            this.textBox56.Multiline = true;
-            this.textBox56.Name = "textBox56";
-            this.textBox56.ReadOnly = true;
-            this.textBox56.Size = new System.Drawing.Size(65, 36);
-            this.textBox56.TabIndex = 73;
-            this.textBox56.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox57
-            // 
-            this.textBox57.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox57.BackColor = System.Drawing.Color.White;
-            this.textBox57.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox57.Location = new System.Drawing.Point(1001, 155);
-            this.textBox57.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox57.MaxLength = 4;
-            this.textBox57.Multiline = true;
-            this.textBox57.Name = "textBox57";
-            this.textBox57.ReadOnly = true;
-            this.textBox57.Size = new System.Drawing.Size(65, 36);
-            this.textBox57.TabIndex = 72;
-            this.textBox57.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox58
-            // 
-            this.textBox58.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox58.BackColor = System.Drawing.Color.White;
-            this.textBox58.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox58.Location = new System.Drawing.Point(1001, 111);
-            this.textBox58.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox58.MaxLength = 4;
-            this.textBox58.Multiline = true;
-            this.textBox58.Name = "textBox58";
-            this.textBox58.ReadOnly = true;
-            this.textBox58.Size = new System.Drawing.Size(65, 36);
-            this.textBox58.TabIndex = 71;
-            this.textBox58.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox59
-            // 
-            this.textBox59.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox59.BackColor = System.Drawing.Color.White;
-            this.textBox59.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox59.Location = new System.Drawing.Point(927, 68);
-            this.textBox59.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox59.MaxLength = 6;
-            this.textBox59.Multiline = true;
-            this.textBox59.Name = "textBox59";
-            this.textBox59.ReadOnly = true;
-            this.textBox59.Size = new System.Drawing.Size(65, 36);
-            this.textBox59.TabIndex = 70;
-            this.textBox59.Text = "5";
-            this.textBox59.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox60
-            // 
-            this.textBox60.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox60.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.textBox60.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox60.Location = new System.Drawing.Point(927, 23);
-            this.textBox60.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox60.MaxLength = 4;
-            this.textBox60.Multiline = true;
-            this.textBox60.Name = "textBox60";
-            this.textBox60.ReadOnly = true;
-            this.textBox60.Size = new System.Drawing.Size(65, 36);
-            this.textBox60.TabIndex = 69;
-            this.textBox60.Text = "42";
-            this.textBox60.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox61
-            // 
-            this.textBox61.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox61.BackColor = System.Drawing.Color.White;
-            this.textBox61.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox61.Location = new System.Drawing.Point(852, 68);
-            this.textBox61.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox61.MaxLength = 6;
-            this.textBox61.Multiline = true;
-            this.textBox61.Name = "textBox61";
-            this.textBox61.ReadOnly = true;
-            this.textBox61.Size = new System.Drawing.Size(65, 36);
-            this.textBox61.TabIndex = 68;
-            this.textBox61.Text = "10";
-            this.textBox61.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox62
-            // 
-            this.textBox62.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox62.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.textBox62.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox62.Location = new System.Drawing.Point(852, 23);
-            this.textBox62.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox62.MaxLength = 4;
-            this.textBox62.Multiline = true;
-            this.textBox62.Name = "textBox62";
-            this.textBox62.ReadOnly = true;
-            this.textBox62.Size = new System.Drawing.Size(65, 36);
-            this.textBox62.TabIndex = 67;
-            this.textBox62.Text = "41";
-            this.textBox62.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox63
-            // 
-            this.textBox63.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox63.BackColor = System.Drawing.Color.White;
-            this.textBox63.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox63.Location = new System.Drawing.Point(927, 244);
-            this.textBox63.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox63.MaxLength = 4;
-            this.textBox63.Multiline = true;
-            this.textBox63.Name = "textBox63";
-            this.textBox63.ReadOnly = true;
-            this.textBox63.Size = new System.Drawing.Size(65, 36);
-            this.textBox63.TabIndex = 66;
-            this.textBox63.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox64
-            // 
-            this.textBox64.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox64.BackColor = System.Drawing.Color.White;
-            this.textBox64.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox64.Location = new System.Drawing.Point(927, 199);
-            this.textBox64.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox64.MaxLength = 4;
-            this.textBox64.Multiline = true;
-            this.textBox64.Name = "textBox64";
-            this.textBox64.ReadOnly = true;
-            this.textBox64.Size = new System.Drawing.Size(65, 36);
-            this.textBox64.TabIndex = 65;
-            this.textBox64.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox65
-            // 
-            this.textBox65.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox65.BackColor = System.Drawing.Color.White;
-            this.textBox65.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox65.Location = new System.Drawing.Point(927, 155);
-            this.textBox65.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox65.MaxLength = 4;
-            this.textBox65.Multiline = true;
-            this.textBox65.Name = "textBox65";
-            this.textBox65.ReadOnly = true;
-            this.textBox65.Size = new System.Drawing.Size(65, 36);
-            this.textBox65.TabIndex = 64;
-            this.textBox65.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox66
-            // 
-            this.textBox66.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox66.BackColor = System.Drawing.Color.White;
-            this.textBox66.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox66.Location = new System.Drawing.Point(927, 111);
-            this.textBox66.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox66.MaxLength = 4;
-            this.textBox66.Multiline = true;
-            this.textBox66.Name = "textBox66";
-            this.textBox66.ReadOnly = true;
-            this.textBox66.Size = new System.Drawing.Size(65, 36);
-            this.textBox66.TabIndex = 63;
-            this.textBox66.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox67
-            // 
-            this.textBox67.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox67.BackColor = System.Drawing.Color.White;
-            this.textBox67.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox67.Location = new System.Drawing.Point(852, 244);
-            this.textBox67.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox67.MaxLength = 4;
-            this.textBox67.Multiline = true;
-            this.textBox67.Name = "textBox67";
-            this.textBox67.ReadOnly = true;
-            this.textBox67.Size = new System.Drawing.Size(65, 36);
-            this.textBox67.TabIndex = 62;
-            this.textBox67.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox68
-            // 
-            this.textBox68.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox68.BackColor = System.Drawing.Color.White;
-            this.textBox68.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox68.Location = new System.Drawing.Point(852, 199);
-            this.textBox68.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox68.MaxLength = 4;
-            this.textBox68.Multiline = true;
-            this.textBox68.Name = "textBox68";
-            this.textBox68.ReadOnly = true;
-            this.textBox68.Size = new System.Drawing.Size(65, 36);
-            this.textBox68.TabIndex = 61;
-            this.textBox68.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox69
-            // 
-            this.textBox69.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox69.BackColor = System.Drawing.Color.White;
-            this.textBox69.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox69.Location = new System.Drawing.Point(852, 155);
-            this.textBox69.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox69.MaxLength = 4;
-            this.textBox69.Multiline = true;
-            this.textBox69.Name = "textBox69";
-            this.textBox69.ReadOnly = true;
-            this.textBox69.Size = new System.Drawing.Size(65, 36);
-            this.textBox69.TabIndex = 60;
-            this.textBox69.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox70
-            // 
-            this.textBox70.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox70.BackColor = System.Drawing.Color.White;
-            this.textBox70.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox70.Location = new System.Drawing.Point(852, 111);
-            this.textBox70.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox70.MaxLength = 4;
-            this.textBox70.Multiline = true;
-            this.textBox70.Name = "textBox70";
-            this.textBox70.ReadOnly = true;
-            this.textBox70.Size = new System.Drawing.Size(65, 36);
-            this.textBox70.TabIndex = 59;
-            this.textBox70.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox71
-            // 
-            this.textBox71.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox71.BackColor = System.Drawing.Color.White;
-            this.textBox71.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox71.Location = new System.Drawing.Point(777, 68);
-            this.textBox71.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox71.MaxLength = 6;
-            this.textBox71.Multiline = true;
-            this.textBox71.Name = "textBox71";
-            this.textBox71.ReadOnly = true;
-            this.textBox71.Size = new System.Drawing.Size(65, 36);
-            this.textBox71.TabIndex = 58;
-            this.textBox71.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox72
-            // 
-            this.textBox72.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox72.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.textBox72.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox72.Location = new System.Drawing.Point(777, 23);
-            this.textBox72.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox72.MaxLength = 4;
-            this.textBox72.Multiline = true;
-            this.textBox72.Name = "textBox72";
-            this.textBox72.ReadOnly = true;
-            this.textBox72.Size = new System.Drawing.Size(65, 36);
-            this.textBox72.TabIndex = 57;
-            this.textBox72.Text = "40";
-            this.textBox72.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox73
-            // 
-            this.textBox73.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox73.BackColor = System.Drawing.Color.White;
-            this.textBox73.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox73.Location = new System.Drawing.Point(777, 244);
-            this.textBox73.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox73.MaxLength = 4;
-            this.textBox73.Multiline = true;
-            this.textBox73.Name = "textBox73";
-            this.textBox73.ReadOnly = true;
-            this.textBox73.Size = new System.Drawing.Size(65, 36);
-            this.textBox73.TabIndex = 56;
-            this.textBox73.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox74
-            // 
-            this.textBox74.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox74.BackColor = System.Drawing.Color.White;
-            this.textBox74.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox74.Location = new System.Drawing.Point(777, 199);
-            this.textBox74.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox74.MaxLength = 4;
-            this.textBox74.Multiline = true;
-            this.textBox74.Name = "textBox74";
-            this.textBox74.ReadOnly = true;
-            this.textBox74.Size = new System.Drawing.Size(65, 36);
-            this.textBox74.TabIndex = 55;
-            this.textBox74.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox75
-            // 
-            this.textBox75.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox75.BackColor = System.Drawing.Color.White;
-            this.textBox75.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox75.Location = new System.Drawing.Point(777, 155);
-            this.textBox75.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox75.MaxLength = 4;
-            this.textBox75.Multiline = true;
-            this.textBox75.Name = "textBox75";
-            this.textBox75.ReadOnly = true;
-            this.textBox75.Size = new System.Drawing.Size(65, 36);
-            this.textBox75.TabIndex = 54;
-            this.textBox75.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox76
-            // 
-            this.textBox76.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox76.BackColor = System.Drawing.Color.White;
-            this.textBox76.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox76.Location = new System.Drawing.Point(777, 111);
-            this.textBox76.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox76.MaxLength = 4;
-            this.textBox76.Multiline = true;
-            this.textBox76.Name = "textBox76";
-            this.textBox76.ReadOnly = true;
-            this.textBox76.Size = new System.Drawing.Size(65, 36);
-            this.textBox76.TabIndex = 53;
-            this.textBox76.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox42
-            // 
-            this.textBox42.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox42.BackColor = System.Drawing.Color.White;
-            this.textBox42.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox42.Location = new System.Drawing.Point(628, 68);
-            this.textBox42.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox42.MaxLength = 6;
-            this.textBox42.Multiline = true;
-            this.textBox42.Name = "textBox42";
-            this.textBox42.ReadOnly = true;
-            this.textBox42.Size = new System.Drawing.Size(65, 36);
-            this.textBox42.TabIndex = 52;
-            this.textBox42.Text = "16/24";
-            this.textBox42.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox43
-            // 
-            this.textBox43.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox43.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.textBox43.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox43.Location = new System.Drawing.Point(628, 23);
-            this.textBox43.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox43.MaxLength = 4;
-            this.textBox43.Multiline = true;
-            this.textBox43.Name = "textBox43";
-            this.textBox43.ReadOnly = true;
-            this.textBox43.Size = new System.Drawing.Size(65, 36);
-            this.textBox43.TabIndex = 51;
-            this.textBox43.Text = "30";
-            this.textBox43.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox44
-            // 
-            this.textBox44.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox44.BackColor = System.Drawing.Color.White;
-            this.textBox44.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox44.Location = new System.Drawing.Point(628, 199);
-            this.textBox44.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox44.MaxLength = 4;
-            this.textBox44.Multiline = true;
-            this.textBox44.Name = "textBox44";
-            this.textBox44.ReadOnly = true;
-            this.textBox44.Size = new System.Drawing.Size(65, 36);
-            this.textBox44.TabIndex = 50;
-            this.textBox44.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox45
-            // 
-            this.textBox45.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox45.BackColor = System.Drawing.Color.White;
-            this.textBox45.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox45.Location = new System.Drawing.Point(628, 155);
-            this.textBox45.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox45.MaxLength = 4;
-            this.textBox45.Multiline = true;
-            this.textBox45.Name = "textBox45";
-            this.textBox45.ReadOnly = true;
-            this.textBox45.Size = new System.Drawing.Size(65, 36);
-            this.textBox45.TabIndex = 49;
-            this.textBox45.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox46
-            // 
-            this.textBox46.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox46.BackColor = System.Drawing.Color.White;
-            this.textBox46.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox46.Location = new System.Drawing.Point(628, 111);
-            this.textBox46.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox46.MaxLength = 4;
-            this.textBox46.Multiline = true;
-            this.textBox46.Name = "textBox46";
-            this.textBox46.ReadOnly = true;
-            this.textBox46.Size = new System.Drawing.Size(65, 36);
-            this.textBox46.TabIndex = 48;
-            this.textBox46.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox37
-            // 
-            this.textBox37.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox37.BackColor = System.Drawing.Color.White;
-            this.textBox37.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox37.Location = new System.Drawing.Point(553, 68);
-            this.textBox37.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox37.MaxLength = 6;
-            this.textBox37.Multiline = true;
-            this.textBox37.Name = "textBox37";
-            this.textBox37.ReadOnly = true;
-            this.textBox37.Size = new System.Drawing.Size(65, 36);
-            this.textBox37.TabIndex = 47;
-            this.textBox37.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox38
-            // 
-            this.textBox38.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox38.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.textBox38.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox38.Location = new System.Drawing.Point(553, 23);
-            this.textBox38.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox38.MaxLength = 4;
-            this.textBox38.Multiline = true;
-            this.textBox38.Name = "textBox38";
-            this.textBox38.ReadOnly = true;
-            this.textBox38.Size = new System.Drawing.Size(65, 36);
-            this.textBox38.TabIndex = 46;
-            this.textBox38.Text = "31";
-            this.textBox38.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox39
-            // 
-            this.textBox39.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox39.BackColor = System.Drawing.Color.White;
-            this.textBox39.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox39.Location = new System.Drawing.Point(553, 199);
-            this.textBox39.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox39.MaxLength = 4;
-            this.textBox39.Multiline = true;
-            this.textBox39.Name = "textBox39";
-            this.textBox39.ReadOnly = true;
-            this.textBox39.Size = new System.Drawing.Size(65, 36);
-            this.textBox39.TabIndex = 45;
-            this.textBox39.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox40
-            // 
-            this.textBox40.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox40.BackColor = System.Drawing.Color.White;
-            this.textBox40.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox40.Location = new System.Drawing.Point(553, 155);
-            this.textBox40.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox40.MaxLength = 4;
-            this.textBox40.Multiline = true;
-            this.textBox40.Name = "textBox40";
-            this.textBox40.ReadOnly = true;
-            this.textBox40.Size = new System.Drawing.Size(65, 36);
-            this.textBox40.TabIndex = 44;
-            this.textBox40.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox41
-            // 
-            this.textBox41.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox41.BackColor = System.Drawing.Color.White;
-            this.textBox41.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox41.Location = new System.Drawing.Point(553, 111);
-            this.textBox41.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox41.MaxLength = 4;
-            this.textBox41.Multiline = true;
-            this.textBox41.Name = "textBox41";
-            this.textBox41.ReadOnly = true;
-            this.textBox41.Size = new System.Drawing.Size(65, 36);
-            this.textBox41.TabIndex = 43;
-            this.textBox41.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox31
-            // 
-            this.textBox31.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox31.BackColor = System.Drawing.Color.White;
-            this.textBox31.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox31.Location = new System.Drawing.Point(479, 68);
-            this.textBox31.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox31.MaxLength = 6;
-            this.textBox31.Multiline = true;
-            this.textBox31.Name = "textBox31";
-            this.textBox31.ReadOnly = true;
-            this.textBox31.Size = new System.Drawing.Size(65, 36);
-            this.textBox31.TabIndex = 42;
-            this.textBox31.Text = "10";
-            this.textBox31.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox32
-            // 
-            this.textBox32.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox32.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.textBox32.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox32.Location = new System.Drawing.Point(479, 23);
-            this.textBox32.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox32.MaxLength = 4;
-            this.textBox32.Multiline = true;
-            this.textBox32.Name = "textBox32";
-            this.textBox32.ReadOnly = true;
-            this.textBox32.Size = new System.Drawing.Size(65, 36);
-            this.textBox32.TabIndex = 41;
-            this.textBox32.Text = "32";
-            this.textBox32.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox33
-            // 
-            this.textBox33.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox33.BackColor = System.Drawing.Color.White;
-            this.textBox33.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox33.Location = new System.Drawing.Point(479, 244);
-            this.textBox33.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox33.MaxLength = 4;
-            this.textBox33.Multiline = true;
-            this.textBox33.Name = "textBox33";
-            this.textBox33.ReadOnly = true;
-            this.textBox33.Size = new System.Drawing.Size(65, 36);
-            this.textBox33.TabIndex = 40;
-            this.textBox33.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox34
-            // 
-            this.textBox34.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox34.BackColor = System.Drawing.Color.White;
-            this.textBox34.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox34.Location = new System.Drawing.Point(479, 199);
-            this.textBox34.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox34.MaxLength = 4;
-            this.textBox34.Multiline = true;
-            this.textBox34.Name = "textBox34";
-            this.textBox34.ReadOnly = true;
-            this.textBox34.Size = new System.Drawing.Size(65, 36);
-            this.textBox34.TabIndex = 39;
-            this.textBox34.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox35
-            // 
-            this.textBox35.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox35.BackColor = System.Drawing.Color.White;
-            this.textBox35.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox35.Location = new System.Drawing.Point(479, 155);
-            this.textBox35.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox35.MaxLength = 4;
-            this.textBox35.Multiline = true;
-            this.textBox35.Name = "textBox35";
-            this.textBox35.ReadOnly = true;
-            this.textBox35.Size = new System.Drawing.Size(65, 36);
-            this.textBox35.TabIndex = 38;
-            this.textBox35.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox36
-            // 
-            this.textBox36.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox36.BackColor = System.Drawing.Color.White;
-            this.textBox36.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox36.Location = new System.Drawing.Point(479, 111);
-            this.textBox36.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox36.MaxLength = 4;
-            this.textBox36.Multiline = true;
-            this.textBox36.Name = "textBox36";
-            this.textBox36.ReadOnly = true;
-            this.textBox36.Size = new System.Drawing.Size(65, 36);
-            this.textBox36.TabIndex = 37;
-            this.textBox36.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox13
-            // 
-            this.textBox13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox13.BackColor = System.Drawing.Color.White;
-            this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox13.Location = new System.Drawing.Point(404, 68);
-            this.textBox13.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox13.MaxLength = 6;
-            this.textBox13.Multiline = true;
-            this.textBox13.Name = "textBox13";
-            this.textBox13.ReadOnly = true;
-            this.textBox13.Size = new System.Drawing.Size(65, 36);
-            this.textBox13.TabIndex = 36;
-            this.textBox13.Text = "16/24";
-            this.textBox13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox14
-            // 
-            this.textBox14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox14.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.textBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox14.Location = new System.Drawing.Point(404, 23);
-            this.textBox14.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox14.MaxLength = 4;
-            this.textBox14.Multiline = true;
-            this.textBox14.Name = "textBox14";
-            this.textBox14.ReadOnly = true;
-            this.textBox14.Size = new System.Drawing.Size(65, 36);
-            this.textBox14.TabIndex = 35;
-            this.textBox14.Text = "33";
-            this.textBox14.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox15
-            // 
-            this.textBox15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox15.BackColor = System.Drawing.Color.White;
-            this.textBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox15.Location = new System.Drawing.Point(404, 244);
-            this.textBox15.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox15.MaxLength = 4;
-            this.textBox15.Multiline = true;
-            this.textBox15.Name = "textBox15";
-            this.textBox15.ReadOnly = true;
-            this.textBox15.Size = new System.Drawing.Size(65, 36);
-            this.textBox15.TabIndex = 34;
-            this.textBox15.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox16
-            // 
-            this.textBox16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox16.BackColor = System.Drawing.Color.White;
-            this.textBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox16.Location = new System.Drawing.Point(404, 199);
-            this.textBox16.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox16.MaxLength = 4;
-            this.textBox16.Multiline = true;
-            this.textBox16.Name = "textBox16";
-            this.textBox16.ReadOnly = true;
-            this.textBox16.Size = new System.Drawing.Size(65, 36);
-            this.textBox16.TabIndex = 33;
-            this.textBox16.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox17
-            // 
-            this.textBox17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox17.BackColor = System.Drawing.Color.White;
-            this.textBox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox17.Location = new System.Drawing.Point(404, 155);
-            this.textBox17.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox17.MaxLength = 4;
-            this.textBox17.Multiline = true;
-            this.textBox17.Name = "textBox17";
-            this.textBox17.ReadOnly = true;
-            this.textBox17.Size = new System.Drawing.Size(65, 36);
-            this.textBox17.TabIndex = 32;
-            this.textBox17.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox18
-            // 
-            this.textBox18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox18.BackColor = System.Drawing.Color.White;
-            this.textBox18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox18.Location = new System.Drawing.Point(404, 111);
-            this.textBox18.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox18.MaxLength = 4;
-            this.textBox18.Multiline = true;
-            this.textBox18.Name = "textBox18";
-            this.textBox18.ReadOnly = true;
-            this.textBox18.Size = new System.Drawing.Size(65, 36);
-            this.textBox18.TabIndex = 31;
-            this.textBox18.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox19
-            // 
-            this.textBox19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox19.BackColor = System.Drawing.Color.White;
-            this.textBox19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox19.Location = new System.Drawing.Point(329, 68);
-            this.textBox19.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox19.MaxLength = 6;
-            this.textBox19.Multiline = true;
-            this.textBox19.Name = "textBox19";
-            this.textBox19.ReadOnly = true;
-            this.textBox19.Size = new System.Drawing.Size(65, 36);
-            this.textBox19.TabIndex = 30;
-            this.textBox19.Text = "2";
-            this.textBox19.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox20
-            // 
-            this.textBox20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox20.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.textBox20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox20.Location = new System.Drawing.Point(329, 23);
-            this.textBox20.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox20.MaxLength = 4;
-            this.textBox20.Multiline = true;
-            this.textBox20.Name = "textBox20";
-            this.textBox20.ReadOnly = true;
-            this.textBox20.Size = new System.Drawing.Size(65, 36);
-            this.textBox20.TabIndex = 29;
-            this.textBox20.Text = "34";
-            this.textBox20.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox21
-            // 
-            this.textBox21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox21.BackColor = System.Drawing.Color.White;
-            this.textBox21.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox21.Location = new System.Drawing.Point(255, 68);
-            this.textBox21.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox21.MaxLength = 6;
-            this.textBox21.Multiline = true;
-            this.textBox21.Name = "textBox21";
-            this.textBox21.ReadOnly = true;
-            this.textBox21.Size = new System.Drawing.Size(65, 36);
-            this.textBox21.TabIndex = 28;
-            this.textBox21.Text = "16/24";
-            this.textBox21.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox22
-            // 
-            this.textBox22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox22.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.textBox22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox22.Location = new System.Drawing.Point(255, 23);
-            this.textBox22.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox22.MaxLength = 4;
-            this.textBox22.Multiline = true;
-            this.textBox22.Name = "textBox22";
-            this.textBox22.ReadOnly = true;
-            this.textBox22.Size = new System.Drawing.Size(65, 36);
-            this.textBox22.TabIndex = 27;
-            this.textBox22.Text = "35";
-            this.textBox22.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox23
-            // 
-            this.textBox23.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox23.BackColor = System.Drawing.Color.White;
-            this.textBox23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox23.Location = new System.Drawing.Point(329, 244);
-            this.textBox23.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox23.MaxLength = 4;
-            this.textBox23.Multiline = true;
-            this.textBox23.Name = "textBox23";
-            this.textBox23.ReadOnly = true;
-            this.textBox23.Size = new System.Drawing.Size(65, 36);
-            this.textBox23.TabIndex = 26;
-            this.textBox23.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox24
-            // 
-            this.textBox24.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox24.BackColor = System.Drawing.Color.White;
-            this.textBox24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox24.Location = new System.Drawing.Point(329, 199);
-            this.textBox24.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox24.MaxLength = 4;
-            this.textBox24.Multiline = true;
-            this.textBox24.Name = "textBox24";
-            this.textBox24.ReadOnly = true;
-            this.textBox24.Size = new System.Drawing.Size(65, 36);
-            this.textBox24.TabIndex = 25;
-            this.textBox24.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox25
-            // 
-            this.textBox25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox25.BackColor = System.Drawing.Color.White;
-            this.textBox25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox25.Location = new System.Drawing.Point(329, 155);
-            this.textBox25.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox25.MaxLength = 4;
-            this.textBox25.Multiline = true;
-            this.textBox25.Name = "textBox25";
-            this.textBox25.ReadOnly = true;
-            this.textBox25.Size = new System.Drawing.Size(65, 36);
-            this.textBox25.TabIndex = 24;
-            this.textBox25.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox26
-            // 
-            this.textBox26.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox26.BackColor = System.Drawing.Color.White;
-            this.textBox26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox26.Location = new System.Drawing.Point(329, 111);
-            this.textBox26.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox26.MaxLength = 4;
-            this.textBox26.Multiline = true;
-            this.textBox26.Name = "textBox26";
-            this.textBox26.ReadOnly = true;
-            this.textBox26.Size = new System.Drawing.Size(65, 36);
-            this.textBox26.TabIndex = 23;
-            this.textBox26.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox27
-            // 
-            this.textBox27.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox27.BackColor = System.Drawing.Color.White;
-            this.textBox27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox27.Location = new System.Drawing.Point(255, 244);
-            this.textBox27.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox27.MaxLength = 4;
-            this.textBox27.Multiline = true;
-            this.textBox27.Name = "textBox27";
-            this.textBox27.ReadOnly = true;
-            this.textBox27.Size = new System.Drawing.Size(65, 36);
-            this.textBox27.TabIndex = 22;
-            this.textBox27.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox28
-            // 
-            this.textBox28.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox28.BackColor = System.Drawing.Color.White;
-            this.textBox28.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox28.Location = new System.Drawing.Point(255, 199);
-            this.textBox28.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox28.MaxLength = 4;
-            this.textBox28.Multiline = true;
-            this.textBox28.Name = "textBox28";
-            this.textBox28.ReadOnly = true;
-            this.textBox28.Size = new System.Drawing.Size(65, 36);
-            this.textBox28.TabIndex = 21;
-            this.textBox28.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox29
-            // 
-            this.textBox29.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox29.BackColor = System.Drawing.Color.White;
-            this.textBox29.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox29.Location = new System.Drawing.Point(255, 155);
-            this.textBox29.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox29.MaxLength = 4;
-            this.textBox29.Multiline = true;
-            this.textBox29.Name = "textBox29";
-            this.textBox29.ReadOnly = true;
-            this.textBox29.Size = new System.Drawing.Size(65, 36);
-            this.textBox29.TabIndex = 20;
-            this.textBox29.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox30
-            // 
-            this.textBox30.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox30.BackColor = System.Drawing.Color.White;
-            this.textBox30.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox30.Location = new System.Drawing.Point(255, 111);
-            this.textBox30.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox30.MaxLength = 4;
-            this.textBox30.Multiline = true;
-            this.textBox30.Name = "textBox30";
-            this.textBox30.ReadOnly = true;
-            this.textBox30.Size = new System.Drawing.Size(65, 36);
-            this.textBox30.TabIndex = 19;
-            this.textBox30.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox5.BackColor = System.Drawing.Color.White;
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox5.Location = new System.Drawing.Point(180, 68);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox5.MaxLength = 6;
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(65, 36);
-            this.textBox5.TabIndex = 18;
-            this.textBox5.Text = "1";
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox6.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox6.Location = new System.Drawing.Point(180, 23);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox6.MaxLength = 4;
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(65, 36);
-            this.textBox6.TabIndex = 17;
-            this.textBox6.Text = "36";
-            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox9.BackColor = System.Drawing.Color.White;
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox9.Location = new System.Drawing.Point(180, 244);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox9.MaxLength = 4;
-            this.textBox9.Multiline = true;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.ReadOnly = true;
-            this.textBox9.Size = new System.Drawing.Size(65, 36);
-            this.textBox9.TabIndex = 16;
-            this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox10
-            // 
-            this.textBox10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox10.BackColor = System.Drawing.Color.White;
-            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox10.Location = new System.Drawing.Point(180, 199);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox10.MaxLength = 4;
-            this.textBox10.Multiline = true;
-            this.textBox10.Name = "textBox10";
-            this.textBox10.ReadOnly = true;
-            this.textBox10.Size = new System.Drawing.Size(65, 36);
-            this.textBox10.TabIndex = 15;
-            this.textBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox11
-            // 
-            this.textBox11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox11.BackColor = System.Drawing.Color.White;
-            this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox11.Location = new System.Drawing.Point(180, 155);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox11.MaxLength = 4;
-            this.textBox11.Multiline = true;
-            this.textBox11.Name = "textBox11";
-            this.textBox11.ReadOnly = true;
-            this.textBox11.Size = new System.Drawing.Size(65, 36);
-            this.textBox11.TabIndex = 14;
-            this.textBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox12
-            // 
-            this.textBox12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox12.BackColor = System.Drawing.Color.White;
-            this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox12.Location = new System.Drawing.Point(180, 111);
-            this.textBox12.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox12.MaxLength = 4;
-            this.textBox12.Multiline = true;
-            this.textBox12.Name = "textBox12";
-            this.textBox12.ReadOnly = true;
-            this.textBox12.Size = new System.Drawing.Size(65, 36);
-            this.textBox12.TabIndex = 13;
-            this.textBox12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox7.BackColor = System.Drawing.Color.White;
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox7.Location = new System.Drawing.Point(105, 68);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox7.MaxLength = 6;
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.ReadOnly = true;
-            this.textBox7.Size = new System.Drawing.Size(65, 36);
-            this.textBox7.TabIndex = 12;
-            this.textBox7.Text = "5";
-            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox8.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox8.Location = new System.Drawing.Point(105, 23);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox8.MaxLength = 4;
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.ReadOnly = true;
-            this.textBox8.Size = new System.Drawing.Size(65, 36);
-            this.textBox8.TabIndex = 11;
-            this.textBox8.Text = "37";
-            this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // tB_38_Lijn
-            // 
-            this.tB_38_Lijn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tB_38_Lijn.BackColor = System.Drawing.Color.White;
-            this.tB_38_Lijn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.tB_38_Lijn.Location = new System.Drawing.Point(31, 68);
-            this.tB_38_Lijn.Margin = new System.Windows.Forms.Padding(0);
-            this.tB_38_Lijn.MaxLength = 6;
-            this.tB_38_Lijn.Multiline = true;
-            this.tB_38_Lijn.Name = "tB_38_Lijn";
-            this.tB_38_Lijn.ReadOnly = true;
-            this.tB_38_Lijn.Size = new System.Drawing.Size(65, 36);
-            this.tB_38_Lijn.TabIndex = 10;
-            this.tB_38_Lijn.Text = "2";
-            this.tB_38_Lijn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // tB_38
-            // 
-            this.tB_38.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tB_38.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.tB_38.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.tB_38.Location = new System.Drawing.Point(31, 23);
-            this.tB_38.Margin = new System.Windows.Forms.Padding(4);
-            this.tB_38.MaxLength = 4;
-            this.tB_38.Multiline = true;
-            this.tB_38.Name = "tB_38";
-            this.tB_38.ReadOnly = true;
-            this.tB_38.Size = new System.Drawing.Size(65, 36);
-            this.tB_38.TabIndex = 9;
-            this.tB_38.Text = "38";
-            this.tB_38.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox1.Location = new System.Drawing.Point(105, 244);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.MaxLength = 4;
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(65, 36);
-            this.textBox1.TabIndex = 8;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox2.Location = new System.Drawing.Point(105, 199);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.MaxLength = 4;
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(65, 36);
-            this.textBox2.TabIndex = 7;
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.BackColor = System.Drawing.Color.White;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox3.Location = new System.Drawing.Point(105, 155);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.MaxLength = 4;
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(65, 36);
-            this.textBox3.TabIndex = 6;
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox4.BackColor = System.Drawing.Color.White;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.textBox4.Location = new System.Drawing.Point(105, 111);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.MaxLength = 4;
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(65, 36);
-            this.textBox4.TabIndex = 5;
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // tB_38_4
-            // 
-            this.tB_38_4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tB_38_4.BackColor = System.Drawing.Color.White;
-            this.tB_38_4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.tB_38_4.Location = new System.Drawing.Point(31, 244);
-            this.tB_38_4.Margin = new System.Windows.Forms.Padding(4);
-            this.tB_38_4.MaxLength = 4;
-            this.tB_38_4.Multiline = true;
-            this.tB_38_4.Name = "tB_38_4";
-            this.tB_38_4.ReadOnly = true;
-            this.tB_38_4.Size = new System.Drawing.Size(65, 36);
-            this.tB_38_4.TabIndex = 4;
-            this.tB_38_4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // tB_38_3
-            // 
-            this.tB_38_3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tB_38_3.BackColor = System.Drawing.Color.White;
-            this.tB_38_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.tB_38_3.Location = new System.Drawing.Point(31, 199);
-            this.tB_38_3.Margin = new System.Windows.Forms.Padding(4);
-            this.tB_38_3.MaxLength = 4;
-            this.tB_38_3.Multiline = true;
-            this.tB_38_3.Name = "tB_38_3";
-            this.tB_38_3.ReadOnly = true;
-            this.tB_38_3.Size = new System.Drawing.Size(65, 36);
-            this.tB_38_3.TabIndex = 3;
-            this.tB_38_3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // tB_38_2
-            // 
-            this.tB_38_2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tB_38_2.BackColor = System.Drawing.Color.White;
-            this.tB_38_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.tB_38_2.Location = new System.Drawing.Point(31, 155);
-            this.tB_38_2.Margin = new System.Windows.Forms.Padding(4);
-            this.tB_38_2.MaxLength = 4;
-            this.tB_38_2.Multiline = true;
-            this.tB_38_2.Name = "tB_38_2";
-            this.tB_38_2.ReadOnly = true;
-            this.tB_38_2.Size = new System.Drawing.Size(65, 36);
-            this.tB_38_2.TabIndex = 2;
-            this.tB_38_2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // tB_38_1
-            // 
-            this.tB_38_1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tB_38_1.BackColor = System.Drawing.Color.White;
-            this.tB_38_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.tB_38_1.Location = new System.Drawing.Point(31, 111);
-            this.tB_38_1.Margin = new System.Windows.Forms.Padding(4);
-            this.tB_38_1.MaxLength = 4;
-            this.tB_38_1.Multiline = true;
-            this.tB_38_1.Name = "tB_38_1";
-            this.tB_38_1.ReadOnly = true;
-            this.tB_38_1.Size = new System.Drawing.Size(65, 36);
-            this.tB_38_1.TabIndex = 1;
-            this.tB_38_1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.tableLayoutPanel1.ColumnCount = 19;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.263158F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.263158F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.263158F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.263158F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.263158F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.263158F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.263158F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.263158F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.263158F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.263158F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.263158F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.263158F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.263158F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.263158F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.263158F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.263158F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.263158F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.263158F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.263158F));
+            this.tableLayoutPanel1.Controls.Add(this.label190, 0, 22);
+            this.tableLayoutPanel1.Controls.Add(this.label9, 7, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label8, 6, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label7, 5, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label6, 4, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label5, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label4, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label3, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label11, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label12, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label13, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label14, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label15, 4, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label16, 5, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label17, 6, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label10, 8, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label18, 7, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label19, 8, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label20, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label21, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label22, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label23, 3, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label24, 4, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label25, 5, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label26, 6, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label27, 7, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label28, 8, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label29, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label30, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label31, 2, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label32, 3, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label33, 4, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label34, 5, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label35, 6, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label36, 7, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label37, 8, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label38, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.label39, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.label40, 2, 4);
+            this.tableLayoutPanel1.Controls.Add(this.label41, 3, 4);
+            this.tableLayoutPanel1.Controls.Add(this.label42, 4, 4);
+            this.tableLayoutPanel1.Controls.Add(this.label43, 5, 4);
+            this.tableLayoutPanel1.Controls.Add(this.label44, 6, 4);
+            this.tableLayoutPanel1.Controls.Add(this.label45, 7, 4);
+            this.tableLayoutPanel1.Controls.Add(this.label46, 8, 4);
+            this.tableLayoutPanel1.Controls.Add(this.label47, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.label48, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.label49, 2, 5);
+            this.tableLayoutPanel1.Controls.Add(this.label50, 3, 5);
+            this.tableLayoutPanel1.Controls.Add(this.label51, 4, 5);
+            this.tableLayoutPanel1.Controls.Add(this.label52, 5, 5);
+            this.tableLayoutPanel1.Controls.Add(this.label53, 6, 5);
+            this.tableLayoutPanel1.Controls.Add(this.label54, 10, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label55, 11, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label57, 13, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label56, 12, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label58, 14, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label59, 10, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label60, 11, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label61, 12, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label62, 13, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label63, 14, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label64, 10, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label65, 11, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label66, 12, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label67, 13, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label68, 14, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label69, 10, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label70, 11, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label71, 12, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label72, 13, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label73, 14, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label74, 10, 4);
+            this.tableLayoutPanel1.Controls.Add(this.label75, 11, 4);
+            this.tableLayoutPanel1.Controls.Add(this.label76, 12, 4);
+            this.tableLayoutPanel1.Controls.Add(this.label77, 13, 4);
+            this.tableLayoutPanel1.Controls.Add(this.label78, 14, 4);
+            this.tableLayoutPanel1.Controls.Add(this.label79, 10, 5);
+            this.tableLayoutPanel1.Controls.Add(this.label80, 11, 5);
+            this.tableLayoutPanel1.Controls.Add(this.label81, 12, 5);
+            this.tableLayoutPanel1.Controls.Add(this.label82, 13, 5);
+            this.tableLayoutPanel1.Controls.Add(this.label83, 14, 5);
+            this.tableLayoutPanel1.Controls.Add(this.label84, 10, 6);
+            this.tableLayoutPanel1.Controls.Add(this.label85, 10, 7);
+            this.tableLayoutPanel1.Controls.Add(this.label86, 10, 8);
+            this.tableLayoutPanel1.Controls.Add(this.label87, 16, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label89, 16, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label88, 16, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label90, 16, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label91, 16, 4);
+            this.tableLayoutPanel1.Controls.Add(this.label92, 16, 5);
+            this.tableLayoutPanel1.Controls.Add(this.label93, 16, 6);
+            this.tableLayoutPanel1.Controls.Add(this.label94, 16, 7);
+            this.tableLayoutPanel1.Controls.Add(this.label95, 16, 8);
+            this.tableLayoutPanel1.Controls.Add(this.label96, 16, 9);
+            this.tableLayoutPanel1.Controls.Add(this.label97, 16, 10);
+            this.tableLayoutPanel1.Controls.Add(this.label98, 18, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label100, 18, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label99, 18, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label101, 18, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label102, 18, 4);
+            this.tableLayoutPanel1.Controls.Add(this.label103, 18, 5);
+            this.tableLayoutPanel1.Controls.Add(this.label104, 18, 6);
+            this.tableLayoutPanel1.Controls.Add(this.label105, 0, 13);
+            this.tableLayoutPanel1.Controls.Add(this.label106, 1, 13);
+            this.tableLayoutPanel1.Controls.Add(this.label107, 2, 13);
+            this.tableLayoutPanel1.Controls.Add(this.label108, 3, 13);
+            this.tableLayoutPanel1.Controls.Add(this.label109, 4, 13);
+            this.tableLayoutPanel1.Controls.Add(this.label110, 5, 13);
+            this.tableLayoutPanel1.Controls.Add(this.label111, 6, 13);
+            this.tableLayoutPanel1.Controls.Add(this.label112, 7, 13);
+            this.tableLayoutPanel1.Controls.Add(this.label113, 8, 13);
+            this.tableLayoutPanel1.Controls.Add(this.label114, 9, 13);
+            this.tableLayoutPanel1.Controls.Add(this.label115, 10, 13);
+            this.tableLayoutPanel1.Controls.Add(this.label117, 1, 14);
+            this.tableLayoutPanel1.Controls.Add(this.label116, 0, 14);
+            this.tableLayoutPanel1.Controls.Add(this.label118, 2, 14);
+            this.tableLayoutPanel1.Controls.Add(this.label119, 3, 14);
+            this.tableLayoutPanel1.Controls.Add(this.label120, 4, 14);
+            this.tableLayoutPanel1.Controls.Add(this.label121, 5, 14);
+            this.tableLayoutPanel1.Controls.Add(this.label122, 6, 14);
+            this.tableLayoutPanel1.Controls.Add(this.label123, 7, 14);
+            this.tableLayoutPanel1.Controls.Add(this.label124, 8, 14);
+            this.tableLayoutPanel1.Controls.Add(this.label125, 9, 14);
+            this.tableLayoutPanel1.Controls.Add(this.label126, 10, 14);
+            this.tableLayoutPanel1.Controls.Add(this.label127, 0, 15);
+            this.tableLayoutPanel1.Controls.Add(this.label128, 1, 15);
+            this.tableLayoutPanel1.Controls.Add(this.label129, 2, 15);
+            this.tableLayoutPanel1.Controls.Add(this.label130, 3, 15);
+            this.tableLayoutPanel1.Controls.Add(this.label131, 4, 15);
+            this.tableLayoutPanel1.Controls.Add(this.label132, 5, 15);
+            this.tableLayoutPanel1.Controls.Add(this.label133, 6, 15);
+            this.tableLayoutPanel1.Controls.Add(this.label134, 7, 15);
+            this.tableLayoutPanel1.Controls.Add(this.label135, 8, 15);
+            this.tableLayoutPanel1.Controls.Add(this.label136, 9, 15);
+            this.tableLayoutPanel1.Controls.Add(this.label137, 10, 15);
+            this.tableLayoutPanel1.Controls.Add(this.label138, 0, 16);
+            this.tableLayoutPanel1.Controls.Add(this.label139, 1, 16);
+            this.tableLayoutPanel1.Controls.Add(this.label140, 2, 16);
+            this.tableLayoutPanel1.Controls.Add(this.label141, 3, 16);
+            this.tableLayoutPanel1.Controls.Add(this.label142, 4, 16);
+            this.tableLayoutPanel1.Controls.Add(this.label143, 5, 16);
+            this.tableLayoutPanel1.Controls.Add(this.label144, 6, 16);
+            this.tableLayoutPanel1.Controls.Add(this.label145, 7, 16);
+            this.tableLayoutPanel1.Controls.Add(this.label146, 8, 16);
+            this.tableLayoutPanel1.Controls.Add(this.label147, 9, 16);
+            this.tableLayoutPanel1.Controls.Add(this.label148, 10, 16);
+            this.tableLayoutPanel1.Controls.Add(this.label149, 0, 17);
+            this.tableLayoutPanel1.Controls.Add(this.label150, 1, 17);
+            this.tableLayoutPanel1.Controls.Add(this.label151, 2, 17);
+            this.tableLayoutPanel1.Controls.Add(this.label152, 3, 17);
+            this.tableLayoutPanel1.Controls.Add(this.label153, 4, 17);
+            this.tableLayoutPanel1.Controls.Add(this.label154, 5, 17);
+            this.tableLayoutPanel1.Controls.Add(this.label155, 6, 17);
+            this.tableLayoutPanel1.Controls.Add(this.label156, 7, 17);
+            this.tableLayoutPanel1.Controls.Add(this.label157, 8, 17);
+            this.tableLayoutPanel1.Controls.Add(this.label158, 9, 17);
+            this.tableLayoutPanel1.Controls.Add(this.label159, 10, 17);
+            this.tableLayoutPanel1.Controls.Add(this.label160, 0, 18);
+            this.tableLayoutPanel1.Controls.Add(this.label161, 1, 18);
+            this.tableLayoutPanel1.Controls.Add(this.label162, 2, 18);
+            this.tableLayoutPanel1.Controls.Add(this.label163, 3, 18);
+            this.tableLayoutPanel1.Controls.Add(this.label164, 4, 18);
+            this.tableLayoutPanel1.Controls.Add(this.label165, 5, 18);
+            this.tableLayoutPanel1.Controls.Add(this.label166, 6, 18);
+            this.tableLayoutPanel1.Controls.Add(this.label167, 7, 18);
+            this.tableLayoutPanel1.Controls.Add(this.label168, 8, 18);
+            this.tableLayoutPanel1.Controls.Add(this.label169, 0, 19);
+            this.tableLayoutPanel1.Controls.Add(this.label170, 1, 19);
+            this.tableLayoutPanel1.Controls.Add(this.label171, 2, 19);
+            this.tableLayoutPanel1.Controls.Add(this.label172, 3, 19);
+            this.tableLayoutPanel1.Controls.Add(this.label173, 4, 19);
+            this.tableLayoutPanel1.Controls.Add(this.label174, 5, 19);
+            this.tableLayoutPanel1.Controls.Add(this.label175, 6, 19);
+            this.tableLayoutPanel1.Controls.Add(this.label176, 7, 19);
+            this.tableLayoutPanel1.Controls.Add(this.label177, 0, 20);
+            this.tableLayoutPanel1.Controls.Add(this.label178, 1, 20);
+            this.tableLayoutPanel1.Controls.Add(this.label179, 2, 20);
+            this.tableLayoutPanel1.Controls.Add(this.label180, 3, 20);
+            this.tableLayoutPanel1.Controls.Add(this.label181, 4, 20);
+            this.tableLayoutPanel1.Controls.Add(this.label182, 5, 20);
+            this.tableLayoutPanel1.Controls.Add(this.label183, 6, 20);
+            this.tableLayoutPanel1.Controls.Add(this.label184, 0, 21);
+            this.tableLayoutPanel1.Controls.Add(this.label185, 1, 21);
+            this.tableLayoutPanel1.Controls.Add(this.label186, 2, 21);
+            this.tableLayoutPanel1.Controls.Add(this.label187, 3, 21);
+            this.tableLayoutPanel1.Controls.Add(this.label188, 4, 21);
+            this.tableLayoutPanel1.Controls.Add(this.label189, 5, 21);
+            this.tableLayoutPanel1.Controls.Add(this.label191, 1, 22);
+            this.tableLayoutPanel1.Controls.Add(this.label192, 2, 22);
+            this.tableLayoutPanel1.Controls.Add(this.label193, 12, 13);
+            this.tableLayoutPanel1.Controls.Add(this.label194, 13, 13);
+            this.tableLayoutPanel1.Controls.Add(this.label195, 14, 13);
+            this.tableLayoutPanel1.Controls.Add(this.label196, 15, 13);
+            this.tableLayoutPanel1.Controls.Add(this.label197, 12, 14);
+            this.tableLayoutPanel1.Controls.Add(this.label198, 13, 14);
+            this.tableLayoutPanel1.Controls.Add(this.label199, 14, 14);
+            this.tableLayoutPanel1.Controls.Add(this.label200, 15, 14);
+            this.tableLayoutPanel1.Controls.Add(this.label201, 12, 15);
+            this.tableLayoutPanel1.Controls.Add(this.label202, 13, 15);
+            this.tableLayoutPanel1.Controls.Add(this.label203, 14, 15);
+            this.tableLayoutPanel1.Controls.Add(this.label204, 15, 15);
+            this.tableLayoutPanel1.Controls.Add(this.label205, 12, 16);
+            this.tableLayoutPanel1.Controls.Add(this.label206, 13, 16);
+            this.tableLayoutPanel1.Controls.Add(this.label207, 14, 16);
+            this.tableLayoutPanel1.Controls.Add(this.label208, 15, 16);
+            this.tableLayoutPanel1.Controls.Add(this.label209, 12, 17);
+            this.tableLayoutPanel1.Controls.Add(this.label210, 13, 17);
+            this.tableLayoutPanel1.Controls.Add(this.label211, 14, 17);
+            this.tableLayoutPanel1.Controls.Add(this.label212, 15, 17);
+            this.tableLayoutPanel1.Controls.Add(this.label213, 12, 18);
+            this.tableLayoutPanel1.Controls.Add(this.label214, 14, 18);
+            this.tableLayoutPanel1.Controls.Add(this.label215, 15, 18);
+            this.tableLayoutPanel1.Controls.Add(this.label216, 17, 13);
+            this.tableLayoutPanel1.Controls.Add(this.label217, 18, 13);
+            this.tableLayoutPanel1.Controls.Add(this.label218, 17, 14);
+            this.tableLayoutPanel1.Controls.Add(this.label219, 18, 14);
+            this.tableLayoutPanel1.Controls.Add(this.label220, 17, 15);
+            this.tableLayoutPanel1.Controls.Add(this.label221, 18, 15);
+            this.tableLayoutPanel1.Controls.Add(this.label222, 17, 16);
+            this.tableLayoutPanel1.Controls.Add(this.label223, 18, 16);
+            this.tableLayoutPanel1.Controls.Add(this.label224, 17, 17);
+            this.tableLayoutPanel1.Controls.Add(this.label225, 18, 17);
+            this.tableLayoutPanel1.Controls.Add(this.label226, 17, 18);
+            this.tableLayoutPanel1.Controls.Add(this.label227, 18, 18);
+            this.tableLayoutPanel1.Controls.Add(this.label228, 17, 19);
+            this.tableLayoutPanel1.Controls.Add(this.label229, 18, 19);
+            this.tableLayoutPanel1.Controls.Add(this.label230, 17, 20);
+            this.tableLayoutPanel1.Controls.Add(this.label231, 18, 20);
+            this.tableLayoutPanel1.Controls.Add(this.label232, 17, 21);
+            this.tableLayoutPanel1.Controls.Add(this.label233, 18, 21);
+            this.tableLayoutPanel1.Controls.Add(this.label234, 17, 22);
+            this.tableLayoutPanel1.Controls.Add(this.label235, 18, 22);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(7, 7);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 23;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.347826F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.347826F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.347826F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.347826F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.347826F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.347826F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.347826F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.347826F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.347826F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.347826F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.347826F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.347826F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.347826F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.347826F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.347826F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.347826F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.347826F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.347826F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.347826F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.347826F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.347826F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.347826F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.347826F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1867, 928);
+            this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // label190
+            // 
+            this.label190.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label190.AutoSize = true;
+            this.label190.Location = new System.Drawing.Point(18, 895);
+            this.label190.Name = "label190";
+            this.label190.Size = new System.Drawing.Size(62, 17);
+            this.label190.TabIndex = 188;
+            this.label190.Text = "label190";
+            // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(723, 12);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(24, 17);
+            this.label9.TabIndex = 7;
+            this.label9.Text = "31";
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(625, 12);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(24, 17);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "32";
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(527, 12);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(24, 17);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "33";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(429, 12);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(24, 17);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "34";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(331, 12);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(24, 17);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "35";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(233, 12);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(24, 17);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "36";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(135, 12);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(24, 17);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "37";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(37, 12);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(24, 17);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "38";
+            // 
+            // label11
+            // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(41, 52);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(16, 17);
+            this.label11.TabIndex = 9;
+            this.label11.Text = "2";
+            // 
+            // label12
+            // 
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(139, 52);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(16, 17);
+            this.label12.TabIndex = 10;
+            this.label12.Text = "5";
+            // 
+            // label13
+            // 
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(237, 52);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(16, 17);
+            this.label13.TabIndex = 11;
+            this.label13.Text = "1";
+            // 
+            // label14
+            // 
+            this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(321, 52);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(44, 17);
+            this.label14.TabIndex = 12;
+            this.label14.Text = "16/24";
+            // 
+            // label15
+            // 
+            this.label15.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(433, 52);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(16, 17);
+            this.label15.TabIndex = 13;
+            this.label15.Text = "2";
+            // 
+            // label16
+            // 
+            this.label16.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(517, 52);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(44, 17);
+            this.label16.TabIndex = 14;
+            this.label16.Text = "16/24";
+            // 
+            // label17
+            // 
+            this.label17.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(625, 52);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(24, 17);
+            this.label17.TabIndex = 15;
+            this.label17.Text = "10";
+            // 
+            // label10
+            // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(821, 12);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(24, 17);
+            this.label10.TabIndex = 8;
+            this.label10.Text = "30";
+            // 
+            // label18
+            // 
+            this.label18.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(708, 52);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(54, 17);
+            this.label18.TabIndex = 16;
+            this.label18.Text = "label18";
+            // 
+            // label19
+            // 
+            this.label19.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(811, 52);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(44, 17);
+            this.label19.TabIndex = 17;
+            this.label19.Text = "16/24";
+            // 
+            // label20
+            // 
+            this.label20.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(22, 92);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(54, 17);
+            this.label20.TabIndex = 18;
+            this.label20.Text = "label20";
+            // 
+            // label21
+            // 
+            this.label21.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(120, 92);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(54, 17);
+            this.label21.TabIndex = 19;
+            this.label21.Text = "label21";
+            // 
+            // label22
+            // 
+            this.label22.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(218, 92);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(54, 17);
+            this.label22.TabIndex = 20;
+            this.label22.Text = "label22";
+            // 
+            // label23
+            // 
+            this.label23.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(316, 92);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(54, 17);
+            this.label23.TabIndex = 21;
+            this.label23.Text = "label23";
+            // 
+            // label24
+            // 
+            this.label24.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(414, 92);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(54, 17);
+            this.label24.TabIndex = 22;
+            this.label24.Text = "label24";
+            // 
+            // label25
+            // 
+            this.label25.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(512, 92);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(54, 17);
+            this.label25.TabIndex = 23;
+            this.label25.Text = "label25";
+            // 
+            // label26
+            // 
+            this.label26.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(610, 92);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(54, 17);
+            this.label26.TabIndex = 24;
+            this.label26.Text = "label26";
+            // 
+            // label27
+            // 
+            this.label27.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(708, 92);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(54, 17);
+            this.label27.TabIndex = 25;
+            this.label27.Text = "label27";
+            // 
+            // label28
+            // 
+            this.label28.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(806, 92);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(54, 17);
+            this.label28.TabIndex = 26;
+            this.label28.Text = "label28";
+            // 
+            // label29
+            // 
+            this.label29.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(22, 132);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(54, 17);
+            this.label29.TabIndex = 27;
+            this.label29.Text = "label29";
+            // 
+            // label30
+            // 
+            this.label30.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(120, 132);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(54, 17);
+            this.label30.TabIndex = 28;
+            this.label30.Text = "label30";
+            // 
+            // label31
+            // 
+            this.label31.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(218, 132);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(54, 17);
+            this.label31.TabIndex = 29;
+            this.label31.Text = "label31";
+            // 
+            // label32
+            // 
+            this.label32.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(316, 132);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(54, 17);
+            this.label32.TabIndex = 30;
+            this.label32.Text = "label32";
+            // 
+            // label33
+            // 
+            this.label33.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(414, 132);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(54, 17);
+            this.label33.TabIndex = 31;
+            this.label33.Text = "label33";
+            // 
+            // label34
+            // 
+            this.label34.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(512, 132);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(54, 17);
+            this.label34.TabIndex = 32;
+            this.label34.Text = "label34";
+            // 
+            // label35
+            // 
+            this.label35.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(610, 132);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(54, 17);
+            this.label35.TabIndex = 33;
+            this.label35.Text = "label35";
+            // 
+            // label36
+            // 
+            this.label36.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(708, 132);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(54, 17);
+            this.label36.TabIndex = 34;
+            this.label36.Text = "label36";
+            // 
+            // label37
+            // 
+            this.label37.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(806, 132);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(54, 17);
+            this.label37.TabIndex = 35;
+            this.label37.Text = "label37";
+            // 
+            // label38
+            // 
+            this.label38.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(22, 172);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(54, 17);
+            this.label38.TabIndex = 36;
+            this.label38.Text = "label38";
+            // 
+            // label39
+            // 
+            this.label39.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(120, 172);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(54, 17);
+            this.label39.TabIndex = 37;
+            this.label39.Text = "label39";
+            // 
+            // label40
+            // 
+            this.label40.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(218, 172);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(54, 17);
+            this.label40.TabIndex = 38;
+            this.label40.Text = "label40";
+            // 
+            // label41
+            // 
+            this.label41.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(316, 172);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(54, 17);
+            this.label41.TabIndex = 39;
+            this.label41.Text = "label41";
+            // 
+            // label42
+            // 
+            this.label42.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(414, 172);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(54, 17);
+            this.label42.TabIndex = 40;
+            this.label42.Text = "label42";
+            // 
+            // label43
+            // 
+            this.label43.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(512, 172);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(54, 17);
+            this.label43.TabIndex = 41;
+            this.label43.Text = "label43";
+            // 
+            // label44
+            // 
+            this.label44.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(610, 172);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(54, 17);
+            this.label44.TabIndex = 42;
+            this.label44.Text = "label44";
+            // 
+            // label45
+            // 
+            this.label45.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label45.AutoSize = true;
+            this.label45.Location = new System.Drawing.Point(708, 172);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(54, 17);
+            this.label45.TabIndex = 43;
+            this.label45.Text = "label45";
+            // 
+            // label46
+            // 
+            this.label46.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(806, 172);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(54, 17);
+            this.label46.TabIndex = 44;
+            this.label46.Text = "label46";
+            // 
+            // label47
+            // 
+            this.label47.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(22, 212);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(54, 17);
+            this.label47.TabIndex = 45;
+            this.label47.Text = "label47";
+            // 
+            // label48
+            // 
+            this.label48.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(120, 212);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(54, 17);
+            this.label48.TabIndex = 46;
+            this.label48.Text = "label48";
+            // 
+            // label49
+            // 
+            this.label49.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(218, 212);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(54, 17);
+            this.label49.TabIndex = 47;
+            this.label49.Text = "label49";
+            // 
+            // label50
+            // 
+            this.label50.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label50.AutoSize = true;
+            this.label50.Location = new System.Drawing.Point(316, 212);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(54, 17);
+            this.label50.TabIndex = 48;
+            this.label50.Text = "label50";
+            // 
+            // label51
+            // 
+            this.label51.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label51.AutoSize = true;
+            this.label51.Location = new System.Drawing.Point(414, 212);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(54, 17);
+            this.label51.TabIndex = 49;
+            this.label51.Text = "label51";
+            // 
+            // label52
+            // 
+            this.label52.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label52.AutoSize = true;
+            this.label52.Location = new System.Drawing.Point(512, 212);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(54, 17);
+            this.label52.TabIndex = 50;
+            this.label52.Text = "label52";
+            // 
+            // label53
+            // 
+            this.label53.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label53.AutoSize = true;
+            this.label53.Location = new System.Drawing.Point(610, 212);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(54, 17);
+            this.label53.TabIndex = 51;
+            this.label53.Text = "label53";
+            // 
+            // label54
+            // 
+            this.label54.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label54.AutoSize = true;
+            this.label54.Location = new System.Drawing.Point(1017, 12);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(24, 17);
+            this.label54.TabIndex = 52;
+            this.label54.Text = "40";
+            // 
+            // label55
+            // 
+            this.label55.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label55.AutoSize = true;
+            this.label55.Location = new System.Drawing.Point(1115, 12);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(24, 17);
+            this.label55.TabIndex = 53;
+            this.label55.Text = "41";
+            // 
+            // label57
+            // 
+            this.label57.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label57.AutoSize = true;
+            this.label57.Location = new System.Drawing.Point(1311, 12);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(24, 17);
+            this.label57.TabIndex = 55;
+            this.label57.Text = "43";
+            // 
+            // label56
+            // 
+            this.label56.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label56.AutoSize = true;
+            this.label56.Location = new System.Drawing.Point(1213, 12);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(24, 17);
+            this.label56.TabIndex = 54;
+            this.label56.Text = "42";
+            // 
+            // label58
+            // 
+            this.label58.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label58.AutoSize = true;
+            this.label58.Location = new System.Drawing.Point(1409, 12);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(24, 17);
+            this.label58.TabIndex = 56;
+            this.label58.Text = "44";
+            // 
+            // label59
+            // 
+            this.label59.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label59.AutoSize = true;
+            this.label59.Location = new System.Drawing.Point(1002, 52);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(54, 17);
+            this.label59.TabIndex = 57;
+            this.label59.Text = "label59";
+            // 
+            // label60
+            // 
+            this.label60.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label60.AutoSize = true;
+            this.label60.Location = new System.Drawing.Point(1115, 52);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(24, 17);
+            this.label60.TabIndex = 58;
+            this.label60.Text = "10";
+            // 
+            // label61
+            // 
+            this.label61.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label61.AutoSize = true;
+            this.label61.Location = new System.Drawing.Point(1213, 52);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(24, 17);
+            this.label61.TabIndex = 59;
+            this.label61.Text = "55";
+            // 
+            // label62
+            // 
+            this.label62.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label62.AutoSize = true;
+            this.label62.Location = new System.Drawing.Point(1315, 52);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(16, 17);
+            this.label62.TabIndex = 60;
+            this.label62.Text = "1";
+            // 
+            // label63
+            // 
+            this.label63.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label63.AutoSize = true;
+            this.label63.Location = new System.Drawing.Point(1409, 52);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(24, 17);
+            this.label63.TabIndex = 61;
+            this.label63.Text = "13";
+            // 
+            // label64
+            // 
+            this.label64.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label64.AutoSize = true;
+            this.label64.Location = new System.Drawing.Point(1002, 92);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(54, 17);
+            this.label64.TabIndex = 62;
+            this.label64.Text = "label64";
+            // 
+            // label65
+            // 
+            this.label65.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label65.AutoSize = true;
+            this.label65.Location = new System.Drawing.Point(1100, 92);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(54, 17);
+            this.label65.TabIndex = 63;
+            this.label65.Text = "label65";
+            // 
+            // label66
+            // 
+            this.label66.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label66.AutoSize = true;
+            this.label66.Location = new System.Drawing.Point(1198, 92);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(54, 17);
+            this.label66.TabIndex = 64;
+            this.label66.Text = "label66";
+            // 
+            // label67
+            // 
+            this.label67.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label67.AutoSize = true;
+            this.label67.Location = new System.Drawing.Point(1296, 92);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(54, 17);
+            this.label67.TabIndex = 65;
+            this.label67.Text = "label67";
+            // 
+            // label68
+            // 
+            this.label68.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label68.AutoSize = true;
+            this.label68.Location = new System.Drawing.Point(1394, 92);
+            this.label68.Name = "label68";
+            this.label68.Size = new System.Drawing.Size(54, 17);
+            this.label68.TabIndex = 66;
+            this.label68.Text = "label68";
+            // 
+            // label69
+            // 
+            this.label69.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label69.AutoSize = true;
+            this.label69.Location = new System.Drawing.Point(1002, 132);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(54, 17);
+            this.label69.TabIndex = 67;
+            this.label69.Text = "label69";
+            // 
+            // label70
+            // 
+            this.label70.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label70.AutoSize = true;
+            this.label70.Location = new System.Drawing.Point(1100, 132);
+            this.label70.Name = "label70";
+            this.label70.Size = new System.Drawing.Size(54, 17);
+            this.label70.TabIndex = 68;
+            this.label70.Text = "label70";
+            // 
+            // label71
+            // 
+            this.label71.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label71.AutoSize = true;
+            this.label71.Location = new System.Drawing.Point(1198, 132);
+            this.label71.Name = "label71";
+            this.label71.Size = new System.Drawing.Size(54, 17);
+            this.label71.TabIndex = 69;
+            this.label71.Text = "label71";
+            // 
+            // label72
+            // 
+            this.label72.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label72.AutoSize = true;
+            this.label72.Location = new System.Drawing.Point(1296, 132);
+            this.label72.Name = "label72";
+            this.label72.Size = new System.Drawing.Size(54, 17);
+            this.label72.TabIndex = 70;
+            this.label72.Text = "label72";
+            // 
+            // label73
+            // 
+            this.label73.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label73.AutoSize = true;
+            this.label73.Location = new System.Drawing.Point(1394, 132);
+            this.label73.Name = "label73";
+            this.label73.Size = new System.Drawing.Size(54, 17);
+            this.label73.TabIndex = 71;
+            this.label73.Text = "label73";
+            // 
+            // label74
+            // 
+            this.label74.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label74.AutoSize = true;
+            this.label74.Location = new System.Drawing.Point(1002, 172);
+            this.label74.Name = "label74";
+            this.label74.Size = new System.Drawing.Size(54, 17);
+            this.label74.TabIndex = 72;
+            this.label74.Text = "label74";
+            // 
+            // label75
+            // 
+            this.label75.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label75.AutoSize = true;
+            this.label75.Location = new System.Drawing.Point(1100, 172);
+            this.label75.Name = "label75";
+            this.label75.Size = new System.Drawing.Size(54, 17);
+            this.label75.TabIndex = 73;
+            this.label75.Text = "label75";
+            // 
+            // label76
+            // 
+            this.label76.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label76.AutoSize = true;
+            this.label76.Location = new System.Drawing.Point(1198, 172);
+            this.label76.Name = "label76";
+            this.label76.Size = new System.Drawing.Size(54, 17);
+            this.label76.TabIndex = 74;
+            this.label76.Text = "label76";
+            // 
+            // label77
+            // 
+            this.label77.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label77.AutoSize = true;
+            this.label77.Location = new System.Drawing.Point(1296, 172);
+            this.label77.Name = "label77";
+            this.label77.Size = new System.Drawing.Size(54, 17);
+            this.label77.TabIndex = 75;
+            this.label77.Text = "label77";
+            // 
+            // label78
+            // 
+            this.label78.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label78.AutoSize = true;
+            this.label78.Location = new System.Drawing.Point(1394, 172);
+            this.label78.Name = "label78";
+            this.label78.Size = new System.Drawing.Size(54, 17);
+            this.label78.TabIndex = 76;
+            this.label78.Text = "label78";
+            // 
+            // label79
+            // 
+            this.label79.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label79.AutoSize = true;
+            this.label79.Location = new System.Drawing.Point(1002, 212);
+            this.label79.Name = "label79";
+            this.label79.Size = new System.Drawing.Size(54, 17);
+            this.label79.TabIndex = 77;
+            this.label79.Text = "label79";
+            // 
+            // label80
+            // 
+            this.label80.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label80.AutoSize = true;
+            this.label80.Location = new System.Drawing.Point(1100, 212);
+            this.label80.Name = "label80";
+            this.label80.Size = new System.Drawing.Size(54, 17);
+            this.label80.TabIndex = 78;
+            this.label80.Text = "label80";
+            // 
+            // label81
+            // 
+            this.label81.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label81.AutoSize = true;
+            this.label81.Location = new System.Drawing.Point(1198, 212);
+            this.label81.Name = "label81";
+            this.label81.Size = new System.Drawing.Size(54, 17);
+            this.label81.TabIndex = 79;
+            this.label81.Text = "label81";
+            // 
+            // label82
+            // 
+            this.label82.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label82.AutoSize = true;
+            this.label82.Location = new System.Drawing.Point(1296, 212);
+            this.label82.Name = "label82";
+            this.label82.Size = new System.Drawing.Size(54, 17);
+            this.label82.TabIndex = 80;
+            this.label82.Text = "label82";
+            // 
+            // label83
+            // 
+            this.label83.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label83.AutoSize = true;
+            this.label83.Location = new System.Drawing.Point(1394, 212);
+            this.label83.Name = "label83";
+            this.label83.Size = new System.Drawing.Size(54, 17);
+            this.label83.TabIndex = 81;
+            this.label83.Text = "label83";
+            // 
+            // label84
+            // 
+            this.label84.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label84.AutoSize = true;
+            this.label84.Location = new System.Drawing.Point(1002, 252);
+            this.label84.Name = "label84";
+            this.label84.Size = new System.Drawing.Size(54, 17);
+            this.label84.TabIndex = 82;
+            this.label84.Text = "label84";
+            // 
+            // label85
+            // 
+            this.label85.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label85.AutoSize = true;
+            this.label85.Location = new System.Drawing.Point(1002, 292);
+            this.label85.Name = "label85";
+            this.label85.Size = new System.Drawing.Size(54, 17);
+            this.label85.TabIndex = 83;
+            this.label85.Text = "label85";
+            // 
+            // label86
+            // 
+            this.label86.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label86.AutoSize = true;
+            this.label86.Location = new System.Drawing.Point(1002, 332);
+            this.label86.Name = "label86";
+            this.label86.Size = new System.Drawing.Size(54, 17);
+            this.label86.TabIndex = 84;
+            this.label86.Text = "label86";
+            // 
+            // label87
+            // 
+            this.label87.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label87.AutoSize = true;
+            this.label87.Location = new System.Drawing.Point(1605, 12);
+            this.label87.Name = "label87";
+            this.label87.Size = new System.Drawing.Size(24, 17);
+            this.label87.TabIndex = 85;
+            this.label87.Text = "45";
+            // 
+            // label89
+            // 
+            this.label89.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label89.AutoSize = true;
+            this.label89.Location = new System.Drawing.Point(1590, 92);
+            this.label89.Name = "label89";
+            this.label89.Size = new System.Drawing.Size(54, 17);
+            this.label89.TabIndex = 87;
+            this.label89.Text = "label89";
+            // 
+            // label88
+            // 
+            this.label88.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label88.AutoSize = true;
+            this.label88.Location = new System.Drawing.Point(1605, 52);
+            this.label88.Name = "label88";
+            this.label88.Size = new System.Drawing.Size(24, 17);
+            this.label88.TabIndex = 86;
+            this.label88.Text = "17";
+            // 
+            // label90
+            // 
+            this.label90.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label90.AutoSize = true;
+            this.label90.Location = new System.Drawing.Point(1590, 132);
+            this.label90.Name = "label90";
+            this.label90.Size = new System.Drawing.Size(54, 17);
+            this.label90.TabIndex = 88;
+            this.label90.Text = "label90";
+            // 
+            // label91
+            // 
+            this.label91.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label91.AutoSize = true;
+            this.label91.Location = new System.Drawing.Point(1590, 172);
+            this.label91.Name = "label91";
+            this.label91.Size = new System.Drawing.Size(54, 17);
+            this.label91.TabIndex = 89;
+            this.label91.Text = "label91";
+            // 
+            // label92
+            // 
+            this.label92.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label92.AutoSize = true;
+            this.label92.Location = new System.Drawing.Point(1590, 212);
+            this.label92.Name = "label92";
+            this.label92.Size = new System.Drawing.Size(54, 17);
+            this.label92.TabIndex = 90;
+            this.label92.Text = "label92";
+            // 
+            // label93
+            // 
+            this.label93.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label93.AutoSize = true;
+            this.label93.Location = new System.Drawing.Point(1590, 252);
+            this.label93.Name = "label93";
+            this.label93.Size = new System.Drawing.Size(54, 17);
+            this.label93.TabIndex = 91;
+            this.label93.Text = "label93";
+            // 
+            // label94
+            // 
+            this.label94.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label94.AutoSize = true;
+            this.label94.Location = new System.Drawing.Point(1590, 292);
+            this.label94.Name = "label94";
+            this.label94.Size = new System.Drawing.Size(54, 17);
+            this.label94.TabIndex = 92;
+            this.label94.Text = "label94";
+            // 
+            // label95
+            // 
+            this.label95.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label95.AutoSize = true;
+            this.label95.Location = new System.Drawing.Point(1590, 332);
+            this.label95.Name = "label95";
+            this.label95.Size = new System.Drawing.Size(54, 17);
+            this.label95.TabIndex = 93;
+            this.label95.Text = "label95";
+            // 
+            // label96
+            // 
+            this.label96.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label96.AutoSize = true;
+            this.label96.Location = new System.Drawing.Point(1590, 372);
+            this.label96.Name = "label96";
+            this.label96.Size = new System.Drawing.Size(54, 17);
+            this.label96.TabIndex = 94;
+            this.label96.Text = "label96";
+            // 
+            // label97
+            // 
+            this.label97.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label97.AutoSize = true;
+            this.label97.Location = new System.Drawing.Point(1590, 412);
+            this.label97.Name = "label97";
+            this.label97.Size = new System.Drawing.Size(54, 17);
+            this.label97.TabIndex = 95;
+            this.label97.Text = "label97";
+            // 
+            // label98
+            // 
+            this.label98.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label98.AutoSize = true;
+            this.label98.Location = new System.Drawing.Point(1803, 12);
+            this.label98.Name = "label98";
+            this.label98.Size = new System.Drawing.Size(24, 17);
+            this.label98.TabIndex = 96;
+            this.label98.Text = "58";
+            // 
+            // label100
+            // 
+            this.label100.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label100.AutoSize = true;
+            this.label100.Location = new System.Drawing.Point(1784, 92);
+            this.label100.Name = "label100";
+            this.label100.Size = new System.Drawing.Size(62, 17);
+            this.label100.TabIndex = 98;
+            this.label100.Text = "label100";
+            // 
+            // label99
+            // 
+            this.label99.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label99.AutoSize = true;
+            this.label99.Location = new System.Drawing.Point(1788, 52);
+            this.label99.Name = "label99";
+            this.label99.Size = new System.Drawing.Size(54, 17);
+            this.label99.TabIndex = 97;
+            this.label99.Text = "label99";
+            // 
+            // label101
+            // 
+            this.label101.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label101.AutoSize = true;
+            this.label101.Location = new System.Drawing.Point(1784, 132);
+            this.label101.Name = "label101";
+            this.label101.Size = new System.Drawing.Size(62, 17);
+            this.label101.TabIndex = 99;
+            this.label101.Text = "label101";
+            // 
+            // label102
+            // 
+            this.label102.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label102.AutoSize = true;
+            this.label102.Location = new System.Drawing.Point(1784, 172);
+            this.label102.Name = "label102";
+            this.label102.Size = new System.Drawing.Size(62, 17);
+            this.label102.TabIndex = 100;
+            this.label102.Text = "label102";
+            // 
+            // label103
+            // 
+            this.label103.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label103.AutoSize = true;
+            this.label103.Location = new System.Drawing.Point(1784, 212);
+            this.label103.Name = "label103";
+            this.label103.Size = new System.Drawing.Size(62, 17);
+            this.label103.TabIndex = 101;
+            this.label103.Text = "label103";
+            // 
+            // label104
+            // 
+            this.label104.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label104.AutoSize = true;
+            this.label104.Location = new System.Drawing.Point(1784, 252);
+            this.label104.Name = "label104";
+            this.label104.Size = new System.Drawing.Size(62, 17);
+            this.label104.TabIndex = 102;
+            this.label104.Text = "label104";
+            // 
+            // label105
+            // 
+            this.label105.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label105.AutoSize = true;
+            this.label105.Location = new System.Drawing.Point(37, 532);
+            this.label105.Name = "label105";
+            this.label105.Size = new System.Drawing.Size(24, 17);
+            this.label105.TabIndex = 103;
+            this.label105.Text = "57";
+            // 
+            // label106
+            // 
+            this.label106.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label106.AutoSize = true;
+            this.label106.Location = new System.Drawing.Point(135, 532);
+            this.label106.Name = "label106";
+            this.label106.Size = new System.Drawing.Size(24, 17);
+            this.label106.TabIndex = 104;
+            this.label106.Text = "56";
+            // 
+            // label107
+            // 
+            this.label107.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label107.AutoSize = true;
+            this.label107.Location = new System.Drawing.Point(233, 532);
+            this.label107.Name = "label107";
+            this.label107.Size = new System.Drawing.Size(24, 17);
+            this.label107.TabIndex = 105;
+            this.label107.Text = "55";
+            // 
+            // label108
+            // 
+            this.label108.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label108.AutoSize = true;
+            this.label108.Location = new System.Drawing.Point(331, 532);
+            this.label108.Name = "label108";
+            this.label108.Size = new System.Drawing.Size(24, 17);
+            this.label108.TabIndex = 106;
+            this.label108.Text = "54";
+            // 
+            // label109
+            // 
+            this.label109.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label109.AutoSize = true;
+            this.label109.Location = new System.Drawing.Point(429, 532);
+            this.label109.Name = "label109";
+            this.label109.Size = new System.Drawing.Size(24, 17);
+            this.label109.TabIndex = 107;
+            this.label109.Text = "53";
+            // 
+            // label110
+            // 
+            this.label110.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label110.AutoSize = true;
+            this.label110.Location = new System.Drawing.Point(527, 532);
+            this.label110.Name = "label110";
+            this.label110.Size = new System.Drawing.Size(24, 17);
+            this.label110.TabIndex = 108;
+            this.label110.Text = "52";
+            // 
+            // label111
+            // 
+            this.label111.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label111.AutoSize = true;
+            this.label111.Location = new System.Drawing.Point(625, 532);
+            this.label111.Name = "label111";
+            this.label111.Size = new System.Drawing.Size(24, 17);
+            this.label111.TabIndex = 109;
+            this.label111.Text = "51";
+            // 
+            // label112
+            // 
+            this.label112.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label112.AutoSize = true;
+            this.label112.Location = new System.Drawing.Point(723, 532);
+            this.label112.Name = "label112";
+            this.label112.Size = new System.Drawing.Size(24, 17);
+            this.label112.TabIndex = 110;
+            this.label112.Text = "64";
+            // 
+            // label113
+            // 
+            this.label113.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label113.AutoSize = true;
+            this.label113.Location = new System.Drawing.Point(821, 532);
+            this.label113.Name = "label113";
+            this.label113.Size = new System.Drawing.Size(24, 17);
+            this.label113.TabIndex = 111;
+            this.label113.Text = "63";
+            // 
+            // label114
+            // 
+            this.label114.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label114.AutoSize = true;
+            this.label114.Location = new System.Drawing.Point(919, 532);
+            this.label114.Name = "label114";
+            this.label114.Size = new System.Drawing.Size(24, 17);
+            this.label114.TabIndex = 112;
+            this.label114.Text = "62";
+            // 
+            // label115
+            // 
+            this.label115.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label115.AutoSize = true;
+            this.label115.Location = new System.Drawing.Point(1017, 532);
+            this.label115.Name = "label115";
+            this.label115.Size = new System.Drawing.Size(24, 17);
+            this.label115.TabIndex = 113;
+            this.label115.Text = "61";
+            // 
+            // label117
+            // 
+            this.label117.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label117.AutoSize = true;
+            this.label117.Location = new System.Drawing.Point(139, 572);
+            this.label117.Name = "label117";
+            this.label117.Size = new System.Drawing.Size(16, 17);
+            this.label117.TabIndex = 115;
+            this.label117.Text = "5";
+            // 
+            // label116
+            // 
+            this.label116.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label116.AutoSize = true;
+            this.label116.Location = new System.Drawing.Point(27, 572);
+            this.label116.Name = "label116";
+            this.label116.Size = new System.Drawing.Size(44, 17);
+            this.label116.TabIndex = 114;
+            this.label116.Text = "16/24";
+            // 
+            // label118
+            // 
+            this.label118.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label118.AutoSize = true;
+            this.label118.Location = new System.Drawing.Point(237, 572);
+            this.label118.Name = "label118";
+            this.label118.Size = new System.Drawing.Size(16, 17);
+            this.label118.TabIndex = 116;
+            this.label118.Text = "2";
+            // 
+            // label119
+            // 
+            this.label119.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label119.AutoSize = true;
+            this.label119.Location = new System.Drawing.Point(335, 572);
+            this.label119.Name = "label119";
+            this.label119.Size = new System.Drawing.Size(16, 17);
+            this.label119.TabIndex = 117;
+            this.label119.Text = "5";
+            // 
+            // label120
+            // 
+            this.label120.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label120.AutoSize = true;
+            this.label120.Location = new System.Drawing.Point(429, 572);
+            this.label120.Name = "label120";
+            this.label120.Size = new System.Drawing.Size(24, 17);
+            this.label120.TabIndex = 118;
+            this.label120.Text = "13";
+            // 
+            // label121
+            // 
+            this.label121.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label121.AutoSize = true;
+            this.label121.Location = new System.Drawing.Point(527, 572);
+            this.label121.Name = "label121";
+            this.label121.Size = new System.Drawing.Size(24, 17);
+            this.label121.TabIndex = 119;
+            this.label121.Text = "17";
+            // 
+            // label122
+            // 
+            this.label122.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label122.AutoSize = true;
+            this.label122.Location = new System.Drawing.Point(606, 572);
+            this.label122.Name = "label122";
+            this.label122.Size = new System.Drawing.Size(62, 17);
+            this.label122.TabIndex = 120;
+            this.label122.Text = "label122";
+            // 
+            // label123
+            // 
+            this.label123.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label123.AutoSize = true;
+            this.label123.Location = new System.Drawing.Point(704, 572);
+            this.label123.Name = "label123";
+            this.label123.Size = new System.Drawing.Size(62, 17);
+            this.label123.TabIndex = 121;
+            this.label123.Text = "label123";
+            // 
+            // label124
+            // 
+            this.label124.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label124.AutoSize = true;
+            this.label124.Location = new System.Drawing.Point(825, 572);
+            this.label124.Name = "label124";
+            this.label124.Size = new System.Drawing.Size(16, 17);
+            this.label124.TabIndex = 122;
+            this.label124.Text = "2";
+            // 
+            // label125
+            // 
+            this.label125.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label125.AutoSize = true;
+            this.label125.Location = new System.Drawing.Point(900, 572);
+            this.label125.Name = "label125";
+            this.label125.Size = new System.Drawing.Size(62, 17);
+            this.label125.TabIndex = 123;
+            this.label125.Text = "label125";
+            // 
+            // label126
+            // 
+            this.label126.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label126.AutoSize = true;
+            this.label126.Location = new System.Drawing.Point(998, 572);
+            this.label126.Name = "label126";
+            this.label126.Size = new System.Drawing.Size(62, 17);
+            this.label126.TabIndex = 124;
+            this.label126.Text = "label126";
+            // 
+            // label127
+            // 
+            this.label127.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label127.AutoSize = true;
+            this.label127.Location = new System.Drawing.Point(18, 612);
+            this.label127.Name = "label127";
+            this.label127.Size = new System.Drawing.Size(62, 17);
+            this.label127.TabIndex = 125;
+            this.label127.Text = "label127";
+            // 
+            // label128
+            // 
+            this.label128.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label128.AutoSize = true;
+            this.label128.Location = new System.Drawing.Point(116, 612);
+            this.label128.Name = "label128";
+            this.label128.Size = new System.Drawing.Size(62, 17);
+            this.label128.TabIndex = 126;
+            this.label128.Text = "label128";
+            // 
+            // label129
+            // 
+            this.label129.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label129.AutoSize = true;
+            this.label129.Location = new System.Drawing.Point(214, 612);
+            this.label129.Name = "label129";
+            this.label129.Size = new System.Drawing.Size(62, 17);
+            this.label129.TabIndex = 127;
+            this.label129.Text = "label129";
+            // 
+            // label130
+            // 
+            this.label130.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label130.AutoSize = true;
+            this.label130.Location = new System.Drawing.Point(312, 612);
+            this.label130.Name = "label130";
+            this.label130.Size = new System.Drawing.Size(62, 17);
+            this.label130.TabIndex = 128;
+            this.label130.Text = "label130";
+            // 
+            // label131
+            // 
+            this.label131.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label131.AutoSize = true;
+            this.label131.Location = new System.Drawing.Point(410, 612);
+            this.label131.Name = "label131";
+            this.label131.Size = new System.Drawing.Size(62, 17);
+            this.label131.TabIndex = 129;
+            this.label131.Text = "label131";
+            // 
+            // label132
+            // 
+            this.label132.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label132.AutoSize = true;
+            this.label132.Location = new System.Drawing.Point(508, 612);
+            this.label132.Name = "label132";
+            this.label132.Size = new System.Drawing.Size(62, 17);
+            this.label132.TabIndex = 130;
+            this.label132.Text = "label132";
+            // 
+            // label133
+            // 
+            this.label133.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label133.AutoSize = true;
+            this.label133.Location = new System.Drawing.Point(606, 612);
+            this.label133.Name = "label133";
+            this.label133.Size = new System.Drawing.Size(62, 17);
+            this.label133.TabIndex = 131;
+            this.label133.Text = "label133";
+            // 
+            // label134
+            // 
+            this.label134.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label134.AutoSize = true;
+            this.label134.Location = new System.Drawing.Point(704, 612);
+            this.label134.Name = "label134";
+            this.label134.Size = new System.Drawing.Size(62, 17);
+            this.label134.TabIndex = 132;
+            this.label134.Text = "label134";
+            // 
+            // label135
+            // 
+            this.label135.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label135.AutoSize = true;
+            this.label135.Location = new System.Drawing.Point(802, 612);
+            this.label135.Name = "label135";
+            this.label135.Size = new System.Drawing.Size(62, 17);
+            this.label135.TabIndex = 133;
+            this.label135.Text = "label135";
+            // 
+            // label136
+            // 
+            this.label136.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label136.AutoSize = true;
+            this.label136.Location = new System.Drawing.Point(900, 612);
+            this.label136.Name = "label136";
+            this.label136.Size = new System.Drawing.Size(62, 17);
+            this.label136.TabIndex = 134;
+            this.label136.Text = "label136";
+            // 
+            // label137
+            // 
+            this.label137.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label137.AutoSize = true;
+            this.label137.Location = new System.Drawing.Point(998, 612);
+            this.label137.Name = "label137";
+            this.label137.Size = new System.Drawing.Size(62, 17);
+            this.label137.TabIndex = 135;
+            this.label137.Text = "label137";
+            // 
+            // label138
+            // 
+            this.label138.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label138.AutoSize = true;
+            this.label138.Location = new System.Drawing.Point(18, 652);
+            this.label138.Name = "label138";
+            this.label138.Size = new System.Drawing.Size(62, 17);
+            this.label138.TabIndex = 136;
+            this.label138.Text = "label138";
+            // 
+            // label139
+            // 
+            this.label139.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label139.AutoSize = true;
+            this.label139.Location = new System.Drawing.Point(116, 652);
+            this.label139.Name = "label139";
+            this.label139.Size = new System.Drawing.Size(62, 17);
+            this.label139.TabIndex = 137;
+            this.label139.Text = "label139";
+            // 
+            // label140
+            // 
+            this.label140.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label140.AutoSize = true;
+            this.label140.Location = new System.Drawing.Point(214, 652);
+            this.label140.Name = "label140";
+            this.label140.Size = new System.Drawing.Size(62, 17);
+            this.label140.TabIndex = 138;
+            this.label140.Text = "label140";
+            // 
+            // label141
+            // 
+            this.label141.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label141.AutoSize = true;
+            this.label141.Location = new System.Drawing.Point(312, 652);
+            this.label141.Name = "label141";
+            this.label141.Size = new System.Drawing.Size(62, 17);
+            this.label141.TabIndex = 139;
+            this.label141.Text = "label141";
+            // 
+            // label142
+            // 
+            this.label142.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label142.AutoSize = true;
+            this.label142.Location = new System.Drawing.Point(410, 652);
+            this.label142.Name = "label142";
+            this.label142.Size = new System.Drawing.Size(62, 17);
+            this.label142.TabIndex = 140;
+            this.label142.Text = "label142";
+            // 
+            // label143
+            // 
+            this.label143.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label143.AutoSize = true;
+            this.label143.Location = new System.Drawing.Point(508, 652);
+            this.label143.Name = "label143";
+            this.label143.Size = new System.Drawing.Size(62, 17);
+            this.label143.TabIndex = 141;
+            this.label143.Text = "label143";
+            // 
+            // label144
+            // 
+            this.label144.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label144.AutoSize = true;
+            this.label144.Location = new System.Drawing.Point(606, 652);
+            this.label144.Name = "label144";
+            this.label144.Size = new System.Drawing.Size(62, 17);
+            this.label144.TabIndex = 142;
+            this.label144.Text = "label144";
+            // 
+            // label145
+            // 
+            this.label145.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label145.AutoSize = true;
+            this.label145.Location = new System.Drawing.Point(704, 652);
+            this.label145.Name = "label145";
+            this.label145.Size = new System.Drawing.Size(62, 17);
+            this.label145.TabIndex = 143;
+            this.label145.Text = "label145";
+            // 
+            // label146
+            // 
+            this.label146.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label146.AutoSize = true;
+            this.label146.Location = new System.Drawing.Point(802, 652);
+            this.label146.Name = "label146";
+            this.label146.Size = new System.Drawing.Size(62, 17);
+            this.label146.TabIndex = 144;
+            this.label146.Text = "label146";
+            // 
+            // label147
+            // 
+            this.label147.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label147.AutoSize = true;
+            this.label147.Location = new System.Drawing.Point(900, 652);
+            this.label147.Name = "label147";
+            this.label147.Size = new System.Drawing.Size(62, 17);
+            this.label147.TabIndex = 145;
+            this.label147.Text = "label147";
+            // 
+            // label148
+            // 
+            this.label148.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label148.AutoSize = true;
+            this.label148.Location = new System.Drawing.Point(998, 652);
+            this.label148.Name = "label148";
+            this.label148.Size = new System.Drawing.Size(62, 17);
+            this.label148.TabIndex = 146;
+            this.label148.Text = "label148";
+            // 
+            // label149
+            // 
+            this.label149.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label149.AutoSize = true;
+            this.label149.Location = new System.Drawing.Point(18, 692);
+            this.label149.Name = "label149";
+            this.label149.Size = new System.Drawing.Size(62, 17);
+            this.label149.TabIndex = 147;
+            this.label149.Text = "label149";
+            // 
+            // label150
+            // 
+            this.label150.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label150.AutoSize = true;
+            this.label150.Location = new System.Drawing.Point(116, 692);
+            this.label150.Name = "label150";
+            this.label150.Size = new System.Drawing.Size(62, 17);
+            this.label150.TabIndex = 148;
+            this.label150.Text = "label150";
+            // 
+            // label151
+            // 
+            this.label151.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label151.AutoSize = true;
+            this.label151.Location = new System.Drawing.Point(214, 692);
+            this.label151.Name = "label151";
+            this.label151.Size = new System.Drawing.Size(62, 17);
+            this.label151.TabIndex = 149;
+            this.label151.Text = "label151";
+            // 
+            // label152
+            // 
+            this.label152.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label152.AutoSize = true;
+            this.label152.Location = new System.Drawing.Point(312, 692);
+            this.label152.Name = "label152";
+            this.label152.Size = new System.Drawing.Size(62, 17);
+            this.label152.TabIndex = 150;
+            this.label152.Text = "label152";
+            // 
+            // label153
+            // 
+            this.label153.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label153.AutoSize = true;
+            this.label153.Location = new System.Drawing.Point(410, 692);
+            this.label153.Name = "label153";
+            this.label153.Size = new System.Drawing.Size(62, 17);
+            this.label153.TabIndex = 151;
+            this.label153.Text = "label153";
+            // 
+            // label154
+            // 
+            this.label154.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label154.AutoSize = true;
+            this.label154.Location = new System.Drawing.Point(508, 692);
+            this.label154.Name = "label154";
+            this.label154.Size = new System.Drawing.Size(62, 17);
+            this.label154.TabIndex = 152;
+            this.label154.Text = "label154";
+            // 
+            // label155
+            // 
+            this.label155.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label155.AutoSize = true;
+            this.label155.Location = new System.Drawing.Point(606, 692);
+            this.label155.Name = "label155";
+            this.label155.Size = new System.Drawing.Size(62, 17);
+            this.label155.TabIndex = 153;
+            this.label155.Text = "label155";
+            // 
+            // label156
+            // 
+            this.label156.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label156.AutoSize = true;
+            this.label156.Location = new System.Drawing.Point(704, 692);
+            this.label156.Name = "label156";
+            this.label156.Size = new System.Drawing.Size(62, 17);
+            this.label156.TabIndex = 154;
+            this.label156.Text = "label156";
+            // 
+            // label157
+            // 
+            this.label157.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label157.AutoSize = true;
+            this.label157.Location = new System.Drawing.Point(802, 692);
+            this.label157.Name = "label157";
+            this.label157.Size = new System.Drawing.Size(62, 17);
+            this.label157.TabIndex = 155;
+            this.label157.Text = "label157";
+            // 
+            // label158
+            // 
+            this.label158.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label158.AutoSize = true;
+            this.label158.Location = new System.Drawing.Point(900, 692);
+            this.label158.Name = "label158";
+            this.label158.Size = new System.Drawing.Size(62, 17);
+            this.label158.TabIndex = 156;
+            this.label158.Text = "label158";
+            // 
+            // label159
+            // 
+            this.label159.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label159.AutoSize = true;
+            this.label159.Location = new System.Drawing.Point(998, 692);
+            this.label159.Name = "label159";
+            this.label159.Size = new System.Drawing.Size(62, 17);
+            this.label159.TabIndex = 157;
+            this.label159.Text = "label159";
+            // 
+            // label160
+            // 
+            this.label160.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label160.AutoSize = true;
+            this.label160.Location = new System.Drawing.Point(18, 732);
+            this.label160.Name = "label160";
+            this.label160.Size = new System.Drawing.Size(62, 17);
+            this.label160.TabIndex = 158;
+            this.label160.Text = "label160";
+            // 
+            // label161
+            // 
+            this.label161.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label161.AutoSize = true;
+            this.label161.Location = new System.Drawing.Point(116, 732);
+            this.label161.Name = "label161";
+            this.label161.Size = new System.Drawing.Size(62, 17);
+            this.label161.TabIndex = 159;
+            this.label161.Text = "label161";
+            // 
+            // label162
+            // 
+            this.label162.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label162.AutoSize = true;
+            this.label162.Location = new System.Drawing.Point(214, 732);
+            this.label162.Name = "label162";
+            this.label162.Size = new System.Drawing.Size(62, 17);
+            this.label162.TabIndex = 160;
+            this.label162.Text = "label162";
+            // 
+            // label163
+            // 
+            this.label163.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label163.AutoSize = true;
+            this.label163.Location = new System.Drawing.Point(312, 732);
+            this.label163.Name = "label163";
+            this.label163.Size = new System.Drawing.Size(62, 17);
+            this.label163.TabIndex = 161;
+            this.label163.Text = "label163";
+            // 
+            // label164
+            // 
+            this.label164.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label164.AutoSize = true;
+            this.label164.Location = new System.Drawing.Point(410, 732);
+            this.label164.Name = "label164";
+            this.label164.Size = new System.Drawing.Size(62, 17);
+            this.label164.TabIndex = 162;
+            this.label164.Text = "label164";
+            // 
+            // label165
+            // 
+            this.label165.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label165.AutoSize = true;
+            this.label165.Location = new System.Drawing.Point(508, 732);
+            this.label165.Name = "label165";
+            this.label165.Size = new System.Drawing.Size(62, 17);
+            this.label165.TabIndex = 163;
+            this.label165.Text = "label165";
+            // 
+            // label166
+            // 
+            this.label166.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label166.AutoSize = true;
+            this.label166.Location = new System.Drawing.Point(606, 732);
+            this.label166.Name = "label166";
+            this.label166.Size = new System.Drawing.Size(62, 17);
+            this.label166.TabIndex = 164;
+            this.label166.Text = "label166";
+            // 
+            // label167
+            // 
+            this.label167.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label167.AutoSize = true;
+            this.label167.Location = new System.Drawing.Point(704, 732);
+            this.label167.Name = "label167";
+            this.label167.Size = new System.Drawing.Size(62, 17);
+            this.label167.TabIndex = 165;
+            this.label167.Text = "label167";
+            // 
+            // label168
+            // 
+            this.label168.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label168.AutoSize = true;
+            this.label168.Location = new System.Drawing.Point(802, 732);
+            this.label168.Name = "label168";
+            this.label168.Size = new System.Drawing.Size(62, 17);
+            this.label168.TabIndex = 166;
+            this.label168.Text = "label168";
+            // 
+            // label169
+            // 
+            this.label169.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label169.AutoSize = true;
+            this.label169.Location = new System.Drawing.Point(18, 772);
+            this.label169.Name = "label169";
+            this.label169.Size = new System.Drawing.Size(62, 17);
+            this.label169.TabIndex = 167;
+            this.label169.Text = "label169";
+            // 
+            // label170
+            // 
+            this.label170.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label170.AutoSize = true;
+            this.label170.Location = new System.Drawing.Point(116, 772);
+            this.label170.Name = "label170";
+            this.label170.Size = new System.Drawing.Size(62, 17);
+            this.label170.TabIndex = 168;
+            this.label170.Text = "label170";
+            // 
+            // label171
+            // 
+            this.label171.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label171.AutoSize = true;
+            this.label171.Location = new System.Drawing.Point(214, 772);
+            this.label171.Name = "label171";
+            this.label171.Size = new System.Drawing.Size(62, 17);
+            this.label171.TabIndex = 169;
+            this.label171.Text = "label171";
+            // 
+            // label172
+            // 
+            this.label172.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label172.AutoSize = true;
+            this.label172.Location = new System.Drawing.Point(312, 772);
+            this.label172.Name = "label172";
+            this.label172.Size = new System.Drawing.Size(62, 17);
+            this.label172.TabIndex = 170;
+            this.label172.Text = "label172";
+            // 
+            // label173
+            // 
+            this.label173.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label173.AutoSize = true;
+            this.label173.Location = new System.Drawing.Point(410, 772);
+            this.label173.Name = "label173";
+            this.label173.Size = new System.Drawing.Size(62, 17);
+            this.label173.TabIndex = 171;
+            this.label173.Text = "label173";
+            // 
+            // label174
+            // 
+            this.label174.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label174.AutoSize = true;
+            this.label174.Location = new System.Drawing.Point(508, 772);
+            this.label174.Name = "label174";
+            this.label174.Size = new System.Drawing.Size(62, 17);
+            this.label174.TabIndex = 172;
+            this.label174.Text = "label174";
+            // 
+            // label175
+            // 
+            this.label175.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label175.AutoSize = true;
+            this.label175.Location = new System.Drawing.Point(606, 772);
+            this.label175.Name = "label175";
+            this.label175.Size = new System.Drawing.Size(62, 17);
+            this.label175.TabIndex = 173;
+            this.label175.Text = "label175";
+            // 
+            // label176
+            // 
+            this.label176.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label176.AutoSize = true;
+            this.label176.Location = new System.Drawing.Point(704, 772);
+            this.label176.Name = "label176";
+            this.label176.Size = new System.Drawing.Size(62, 17);
+            this.label176.TabIndex = 174;
+            this.label176.Text = "label176";
+            // 
+            // label177
+            // 
+            this.label177.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label177.AutoSize = true;
+            this.label177.Location = new System.Drawing.Point(18, 812);
+            this.label177.Name = "label177";
+            this.label177.Size = new System.Drawing.Size(62, 17);
+            this.label177.TabIndex = 175;
+            this.label177.Text = "label177";
+            // 
+            // label178
+            // 
+            this.label178.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label178.AutoSize = true;
+            this.label178.Location = new System.Drawing.Point(116, 812);
+            this.label178.Name = "label178";
+            this.label178.Size = new System.Drawing.Size(62, 17);
+            this.label178.TabIndex = 176;
+            this.label178.Text = "label178";
+            // 
+            // label179
+            // 
+            this.label179.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label179.AutoSize = true;
+            this.label179.Location = new System.Drawing.Point(214, 812);
+            this.label179.Name = "label179";
+            this.label179.Size = new System.Drawing.Size(62, 17);
+            this.label179.TabIndex = 177;
+            this.label179.Text = "label179";
+            // 
+            // label180
+            // 
+            this.label180.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label180.AutoSize = true;
+            this.label180.Location = new System.Drawing.Point(312, 812);
+            this.label180.Name = "label180";
+            this.label180.Size = new System.Drawing.Size(62, 17);
+            this.label180.TabIndex = 178;
+            this.label180.Text = "label180";
+            // 
+            // label181
+            // 
+            this.label181.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label181.AutoSize = true;
+            this.label181.Location = new System.Drawing.Point(410, 812);
+            this.label181.Name = "label181";
+            this.label181.Size = new System.Drawing.Size(62, 17);
+            this.label181.TabIndex = 179;
+            this.label181.Text = "label181";
+            // 
+            // label182
+            // 
+            this.label182.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label182.AutoSize = true;
+            this.label182.Location = new System.Drawing.Point(508, 812);
+            this.label182.Name = "label182";
+            this.label182.Size = new System.Drawing.Size(62, 17);
+            this.label182.TabIndex = 180;
+            this.label182.Text = "label182";
+            // 
+            // label183
+            // 
+            this.label183.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label183.AutoSize = true;
+            this.label183.Location = new System.Drawing.Point(606, 812);
+            this.label183.Name = "label183";
+            this.label183.Size = new System.Drawing.Size(62, 17);
+            this.label183.TabIndex = 181;
+            this.label183.Text = "label183";
+            // 
+            // label184
+            // 
+            this.label184.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label184.AutoSize = true;
+            this.label184.Location = new System.Drawing.Point(18, 852);
+            this.label184.Name = "label184";
+            this.label184.Size = new System.Drawing.Size(62, 17);
+            this.label184.TabIndex = 182;
+            this.label184.Text = "label184";
+            // 
+            // label185
+            // 
+            this.label185.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label185.AutoSize = true;
+            this.label185.Location = new System.Drawing.Point(116, 852);
+            this.label185.Name = "label185";
+            this.label185.Size = new System.Drawing.Size(62, 17);
+            this.label185.TabIndex = 183;
+            this.label185.Text = "label185";
+            // 
+            // label186
+            // 
+            this.label186.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label186.AutoSize = true;
+            this.label186.Location = new System.Drawing.Point(214, 852);
+            this.label186.Name = "label186";
+            this.label186.Size = new System.Drawing.Size(62, 17);
+            this.label186.TabIndex = 184;
+            this.label186.Text = "label186";
+            // 
+            // label187
+            // 
+            this.label187.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label187.AutoSize = true;
+            this.label187.Location = new System.Drawing.Point(312, 852);
+            this.label187.Name = "label187";
+            this.label187.Size = new System.Drawing.Size(62, 17);
+            this.label187.TabIndex = 185;
+            this.label187.Text = "label187";
+            // 
+            // label188
+            // 
+            this.label188.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label188.AutoSize = true;
+            this.label188.Location = new System.Drawing.Point(410, 852);
+            this.label188.Name = "label188";
+            this.label188.Size = new System.Drawing.Size(62, 17);
+            this.label188.TabIndex = 186;
+            this.label188.Text = "label188";
+            // 
+            // label189
+            // 
+            this.label189.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label189.AutoSize = true;
+            this.label189.Location = new System.Drawing.Point(508, 852);
+            this.label189.Name = "label189";
+            this.label189.Size = new System.Drawing.Size(62, 17);
+            this.label189.TabIndex = 187;
+            this.label189.Text = "label189";
+            // 
+            // label191
+            // 
+            this.label191.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label191.AutoSize = true;
+            this.label191.Location = new System.Drawing.Point(116, 895);
+            this.label191.Name = "label191";
+            this.label191.Size = new System.Drawing.Size(62, 17);
+            this.label191.TabIndex = 189;
+            this.label191.Text = "label191";
+            // 
+            // label192
+            // 
+            this.label192.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label192.AutoSize = true;
+            this.label192.Location = new System.Drawing.Point(214, 895);
+            this.label192.Name = "label192";
+            this.label192.Size = new System.Drawing.Size(62, 17);
+            this.label192.TabIndex = 190;
+            this.label192.Text = "label192";
+            // 
+            // label193
+            // 
+            this.label193.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label193.AutoSize = true;
+            this.label193.Location = new System.Drawing.Point(1213, 532);
+            this.label193.Name = "label193";
+            this.label193.Size = new System.Drawing.Size(24, 17);
+            this.label193.TabIndex = 191;
+            this.label193.Text = "74";
+            // 
+            // label194
+            // 
+            this.label194.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label194.AutoSize = true;
+            this.label194.Location = new System.Drawing.Point(1311, 532);
+            this.label194.Name = "label194";
+            this.label194.Size = new System.Drawing.Size(24, 17);
+            this.label194.TabIndex = 192;
+            this.label194.Text = "75";
+            // 
+            // label195
+            // 
+            this.label195.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label195.AutoSize = true;
+            this.label195.Location = new System.Drawing.Point(1409, 532);
+            this.label195.Name = "label195";
+            this.label195.Size = new System.Drawing.Size(24, 17);
+            this.label195.TabIndex = 193;
+            this.label195.Text = "76";
+            // 
+            // label196
+            // 
+            this.label196.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label196.AutoSize = true;
+            this.label196.Location = new System.Drawing.Point(1507, 532);
+            this.label196.Name = "label196";
+            this.label196.Size = new System.Drawing.Size(24, 17);
+            this.label196.TabIndex = 194;
+            this.label196.Text = "77";
+            // 
+            // label197
+            // 
+            this.label197.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label197.AutoSize = true;
+            this.label197.Location = new System.Drawing.Point(1194, 572);
+            this.label197.Name = "label197";
+            this.label197.Size = new System.Drawing.Size(62, 17);
+            this.label197.TabIndex = 195;
+            this.label197.Text = "label197";
+            // 
+            // label198
+            // 
+            this.label198.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label198.AutoSize = true;
+            this.label198.Location = new System.Drawing.Point(1292, 572);
+            this.label198.Name = "label198";
+            this.label198.Size = new System.Drawing.Size(62, 17);
+            this.label198.TabIndex = 196;
+            this.label198.Text = "label198";
+            // 
+            // label199
+            // 
+            this.label199.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label199.AutoSize = true;
+            this.label199.Location = new System.Drawing.Point(1390, 572);
+            this.label199.Name = "label199";
+            this.label199.Size = new System.Drawing.Size(62, 17);
+            this.label199.TabIndex = 197;
+            this.label199.Text = "label199";
+            // 
+            // label200
+            // 
+            this.label200.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label200.AutoSize = true;
+            this.label200.Location = new System.Drawing.Point(1488, 572);
+            this.label200.Name = "label200";
+            this.label200.Size = new System.Drawing.Size(62, 17);
+            this.label200.TabIndex = 198;
+            this.label200.Text = "label200";
+            // 
+            // label201
+            // 
+            this.label201.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label201.AutoSize = true;
+            this.label201.Location = new System.Drawing.Point(1194, 612);
+            this.label201.Name = "label201";
+            this.label201.Size = new System.Drawing.Size(62, 17);
+            this.label201.TabIndex = 199;
+            this.label201.Text = "label201";
+            // 
+            // label202
+            // 
+            this.label202.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label202.AutoSize = true;
+            this.label202.Location = new System.Drawing.Point(1292, 612);
+            this.label202.Name = "label202";
+            this.label202.Size = new System.Drawing.Size(62, 17);
+            this.label202.TabIndex = 200;
+            this.label202.Text = "label202";
+            // 
+            // label203
+            // 
+            this.label203.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label203.AutoSize = true;
+            this.label203.Location = new System.Drawing.Point(1390, 612);
+            this.label203.Name = "label203";
+            this.label203.Size = new System.Drawing.Size(62, 17);
+            this.label203.TabIndex = 201;
+            this.label203.Text = "label203";
+            // 
+            // label204
+            // 
+            this.label204.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label204.AutoSize = true;
+            this.label204.Location = new System.Drawing.Point(1488, 612);
+            this.label204.Name = "label204";
+            this.label204.Size = new System.Drawing.Size(62, 17);
+            this.label204.TabIndex = 202;
+            this.label204.Text = "label204";
+            // 
+            // label205
+            // 
+            this.label205.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label205.AutoSize = true;
+            this.label205.Location = new System.Drawing.Point(1194, 652);
+            this.label205.Name = "label205";
+            this.label205.Size = new System.Drawing.Size(62, 17);
+            this.label205.TabIndex = 203;
+            this.label205.Text = "label205";
+            // 
+            // label206
+            // 
+            this.label206.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label206.AutoSize = true;
+            this.label206.Location = new System.Drawing.Point(1292, 652);
+            this.label206.Name = "label206";
+            this.label206.Size = new System.Drawing.Size(62, 17);
+            this.label206.TabIndex = 204;
+            this.label206.Text = "label206";
+            // 
+            // label207
+            // 
+            this.label207.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label207.AutoSize = true;
+            this.label207.Location = new System.Drawing.Point(1390, 652);
+            this.label207.Name = "label207";
+            this.label207.Size = new System.Drawing.Size(62, 17);
+            this.label207.TabIndex = 205;
+            this.label207.Text = "label207";
+            // 
+            // label208
+            // 
+            this.label208.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label208.AutoSize = true;
+            this.label208.Location = new System.Drawing.Point(1488, 652);
+            this.label208.Name = "label208";
+            this.label208.Size = new System.Drawing.Size(62, 17);
+            this.label208.TabIndex = 206;
+            this.label208.Text = "label208";
+            // 
+            // label209
+            // 
+            this.label209.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label209.AutoSize = true;
+            this.label209.Location = new System.Drawing.Point(1194, 692);
+            this.label209.Name = "label209";
+            this.label209.Size = new System.Drawing.Size(62, 17);
+            this.label209.TabIndex = 207;
+            this.label209.Text = "label209";
+            // 
+            // label210
+            // 
+            this.label210.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label210.AutoSize = true;
+            this.label210.Location = new System.Drawing.Point(1292, 692);
+            this.label210.Name = "label210";
+            this.label210.Size = new System.Drawing.Size(62, 17);
+            this.label210.TabIndex = 208;
+            this.label210.Text = "label210";
+            // 
+            // label211
+            // 
+            this.label211.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label211.AutoSize = true;
+            this.label211.Location = new System.Drawing.Point(1390, 692);
+            this.label211.Name = "label211";
+            this.label211.Size = new System.Drawing.Size(62, 17);
+            this.label211.TabIndex = 209;
+            this.label211.Text = "label211";
+            // 
+            // label212
+            // 
+            this.label212.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label212.AutoSize = true;
+            this.label212.Location = new System.Drawing.Point(1488, 692);
+            this.label212.Name = "label212";
+            this.label212.Size = new System.Drawing.Size(62, 17);
+            this.label212.TabIndex = 210;
+            this.label212.Text = "label212";
+            // 
+            // label213
+            // 
+            this.label213.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label213.AutoSize = true;
+            this.label213.Location = new System.Drawing.Point(1194, 732);
+            this.label213.Name = "label213";
+            this.label213.Size = new System.Drawing.Size(62, 17);
+            this.label213.TabIndex = 211;
+            this.label213.Text = "label213";
+            // 
+            // label214
+            // 
+            this.label214.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label214.AutoSize = true;
+            this.label214.Location = new System.Drawing.Point(1390, 732);
+            this.label214.Name = "label214";
+            this.label214.Size = new System.Drawing.Size(62, 17);
+            this.label214.TabIndex = 212;
+            this.label214.Text = "label214";
+            // 
+            // label215
+            // 
+            this.label215.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label215.AutoSize = true;
+            this.label215.Location = new System.Drawing.Point(1488, 732);
+            this.label215.Name = "label215";
+            this.label215.Size = new System.Drawing.Size(62, 17);
+            this.label215.TabIndex = 213;
+            this.label215.Text = "label215";
+            // 
+            // label216
+            // 
+            this.label216.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label216.AutoSize = true;
+            this.label216.Location = new System.Drawing.Point(1703, 532);
+            this.label216.Name = "label216";
+            this.label216.Size = new System.Drawing.Size(24, 17);
+            this.label216.TabIndex = 214;
+            this.label216.Text = "12";
+            // 
+            // label217
+            // 
+            this.label217.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label217.AutoSize = true;
+            this.label217.Location = new System.Drawing.Point(1784, 532);
+            this.label217.Name = "label217";
+            this.label217.Size = new System.Drawing.Size(62, 17);
+            this.label217.TabIndex = 215;
+            this.label217.Text = "label217";
+            // 
+            // label218
+            // 
+            this.label218.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label218.AutoSize = true;
+            this.label218.Location = new System.Drawing.Point(1703, 572);
+            this.label218.Name = "label218";
+            this.label218.Size = new System.Drawing.Size(24, 17);
+            this.label218.TabIndex = 216;
+            this.label218.Text = "13";
+            // 
+            // label219
+            // 
+            this.label219.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label219.AutoSize = true;
+            this.label219.Location = new System.Drawing.Point(1784, 572);
+            this.label219.Name = "label219";
+            this.label219.Size = new System.Drawing.Size(62, 17);
+            this.label219.TabIndex = 217;
+            this.label219.Text = "label219";
+            // 
+            // label220
+            // 
+            this.label220.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label220.AutoSize = true;
+            this.label220.Location = new System.Drawing.Point(1703, 612);
+            this.label220.Name = "label220";
+            this.label220.Size = new System.Drawing.Size(24, 17);
+            this.label220.TabIndex = 218;
+            this.label220.Text = "14";
+            // 
+            // label221
+            // 
+            this.label221.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label221.AutoSize = true;
+            this.label221.Location = new System.Drawing.Point(1784, 612);
+            this.label221.Name = "label221";
+            this.label221.Size = new System.Drawing.Size(62, 17);
+            this.label221.TabIndex = 219;
+            this.label221.Text = "label221";
+            // 
+            // label222
+            // 
+            this.label222.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label222.AutoSize = true;
+            this.label222.Location = new System.Drawing.Point(1703, 652);
+            this.label222.Name = "label222";
+            this.label222.Size = new System.Drawing.Size(24, 17);
+            this.label222.TabIndex = 220;
+            this.label222.Text = "15";
+            // 
+            // label223
+            // 
+            this.label223.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label223.AutoSize = true;
+            this.label223.Location = new System.Drawing.Point(1784, 652);
+            this.label223.Name = "label223";
+            this.label223.Size = new System.Drawing.Size(62, 17);
+            this.label223.TabIndex = 221;
+            this.label223.Text = "label223";
+            // 
+            // label224
+            // 
+            this.label224.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label224.AutoSize = true;
+            this.label224.Location = new System.Drawing.Point(1703, 692);
+            this.label224.Name = "label224";
+            this.label224.Size = new System.Drawing.Size(24, 17);
+            this.label224.TabIndex = 222;
+            this.label224.Text = "16";
+            // 
+            // label225
+            // 
+            this.label225.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label225.AutoSize = true;
+            this.label225.Location = new System.Drawing.Point(1784, 692);
+            this.label225.Name = "label225";
+            this.label225.Size = new System.Drawing.Size(62, 17);
+            this.label225.TabIndex = 223;
+            this.label225.Text = "label225";
+            // 
+            // label226
+            // 
+            this.label226.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label226.AutoSize = true;
+            this.label226.Location = new System.Drawing.Point(1703, 732);
+            this.label226.Name = "label226";
+            this.label226.Size = new System.Drawing.Size(24, 17);
+            this.label226.TabIndex = 224;
+            this.label226.Text = "17";
+            // 
+            // label227
+            // 
+            this.label227.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label227.AutoSize = true;
+            this.label227.Location = new System.Drawing.Point(1784, 732);
+            this.label227.Name = "label227";
+            this.label227.Size = new System.Drawing.Size(62, 17);
+            this.label227.TabIndex = 225;
+            this.label227.Text = "label227";
+            // 
+            // label228
+            // 
+            this.label228.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label228.AutoSize = true;
+            this.label228.Location = new System.Drawing.Point(1703, 772);
+            this.label228.Name = "label228";
+            this.label228.Size = new System.Drawing.Size(24, 17);
+            this.label228.TabIndex = 226;
+            this.label228.Text = "18";
+            // 
+            // label229
+            // 
+            this.label229.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label229.AutoSize = true;
+            this.label229.Location = new System.Drawing.Point(1784, 772);
+            this.label229.Name = "label229";
+            this.label229.Size = new System.Drawing.Size(62, 17);
+            this.label229.TabIndex = 227;
+            this.label229.Text = "label229";
+            // 
+            // label230
+            // 
+            this.label230.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label230.AutoSize = true;
+            this.label230.Location = new System.Drawing.Point(1703, 812);
+            this.label230.Name = "label230";
+            this.label230.Size = new System.Drawing.Size(24, 17);
+            this.label230.TabIndex = 228;
+            this.label230.Text = "19";
+            // 
+            // label231
+            // 
+            this.label231.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label231.AutoSize = true;
+            this.label231.Location = new System.Drawing.Point(1784, 812);
+            this.label231.Name = "label231";
+            this.label231.Size = new System.Drawing.Size(62, 17);
+            this.label231.TabIndex = 229;
+            this.label231.Text = "label231";
+            // 
+            // label232
+            // 
+            this.label232.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label232.AutoSize = true;
+            this.label232.Location = new System.Drawing.Point(1703, 852);
+            this.label232.Name = "label232";
+            this.label232.Size = new System.Drawing.Size(24, 17);
+            this.label232.TabIndex = 230;
+            this.label232.Text = "20";
+            // 
+            // label233
+            // 
+            this.label233.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label233.AutoSize = true;
+            this.label233.Location = new System.Drawing.Point(1784, 852);
+            this.label233.Name = "label233";
+            this.label233.Size = new System.Drawing.Size(62, 17);
+            this.label233.TabIndex = 231;
+            this.label233.Text = "label233";
+            // 
+            // label234
+            // 
+            this.label234.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label234.AutoSize = true;
+            this.label234.Location = new System.Drawing.Point(1703, 895);
+            this.label234.Name = "label234";
+            this.label234.Size = new System.Drawing.Size(24, 17);
+            this.label234.TabIndex = 232;
+            this.label234.Text = "21";
+            // 
+            // label235
+            // 
+            this.label235.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label235.AutoSize = true;
+            this.label235.Location = new System.Drawing.Point(1784, 895);
+            this.label235.Name = "label235";
+            this.label235.Size = new System.Drawing.Size(62, 17);
+            this.label235.TabIndex = 233;
+            this.label235.Text = "label235";
             // 
             // tabpageRemiseBeheer
             // 
@@ -4391,6 +3304,154 @@
             this.tabpageStatusBeheer.Text = "Statusbeheer";
             this.tabpageStatusBeheer.UseVisualStyleBackColor = true;
             // 
+            // grbTramOnderhoud
+            // 
+            this.grbTramOnderhoud.Controls.Add(this.lblOnderhoudSoort);
+            this.grbTramOnderhoud.Controls.Add(this.cbxOnderhoudSoort);
+            this.grbTramOnderhoud.Controls.Add(this.btnOnderhoudBevestig);
+            this.grbTramOnderhoud.Controls.Add(this.dtpOnderhoudEindtijd);
+            this.grbTramOnderhoud.Controls.Add(this.lblOnderhoudEindtijd);
+            this.grbTramOnderhoud.Controls.Add(this.dtpOnderhoudStarttijd);
+            this.grbTramOnderhoud.Controls.Add(this.lblOnderhoudStarttijd);
+            this.grbTramOnderhoud.Controls.Add(this.dtpOnderhoudDatum);
+            this.grbTramOnderhoud.Controls.Add(this.lblOnderhoudDatum);
+            this.grbTramOnderhoud.Controls.Add(this.lblOnderhoudMedewerker);
+            this.grbTramOnderhoud.Controls.Add(this.cbxOnderhoudMedewerker);
+            this.grbTramOnderhoud.Controls.Add(this.label1);
+            this.grbTramOnderhoud.Controls.Add(this.textBox223);
+            this.grbTramOnderhoud.Location = new System.Drawing.Point(331, 6);
+            this.grbTramOnderhoud.Name = "grbTramOnderhoud";
+            this.grbTramOnderhoud.Size = new System.Drawing.Size(326, 264);
+            this.grbTramOnderhoud.TabIndex = 1;
+            this.grbTramOnderhoud.TabStop = false;
+            this.grbTramOnderhoud.Text = "Onderhoud";
+            // 
+            // lblOnderhoudSoort
+            // 
+            this.lblOnderhoudSoort.AutoSize = true;
+            this.lblOnderhoudSoort.Location = new System.Drawing.Point(10, 74);
+            this.lblOnderhoudSoort.Name = "lblOnderhoudSoort";
+            this.lblOnderhoudSoort.Size = new System.Drawing.Size(46, 17);
+            this.lblOnderhoudSoort.TabIndex = 14;
+            this.lblOnderhoudSoort.Text = "Soort:";
+            // 
+            // cbxOnderhoudSoort
+            // 
+            this.cbxOnderhoudSoort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxOnderhoudSoort.FormattingEnabled = true;
+            this.cbxOnderhoudSoort.Items.AddRange(new object[] {
+            "Vies",
+            "Schoonmaak",
+            "Defect",
+            "Reparatie",
+            "Remise",
+            "Dienst"});
+            this.cbxOnderhoudSoort.Location = new System.Drawing.Point(167, 67);
+            this.cbxOnderhoudSoort.Name = "cbxOnderhoudSoort";
+            this.cbxOnderhoudSoort.Size = new System.Drawing.Size(153, 24);
+            this.cbxOnderhoudSoort.TabIndex = 13;
+            // 
+            // btnOnderhoudBevestig
+            // 
+            this.btnOnderhoudBevestig.Location = new System.Drawing.Point(237, 229);
+            this.btnOnderhoudBevestig.Name = "btnOnderhoudBevestig";
+            this.btnOnderhoudBevestig.Size = new System.Drawing.Size(83, 27);
+            this.btnOnderhoudBevestig.TabIndex = 2;
+            this.btnOnderhoudBevestig.Text = "Bevestig";
+            this.btnOnderhoudBevestig.UseVisualStyleBackColor = true;
+            // 
+            // dtpOnderhoudEindtijd
+            // 
+            this.dtpOnderhoudEindtijd.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dtpOnderhoudEindtijd.Location = new System.Drawing.Point(167, 198);
+            this.dtpOnderhoudEindtijd.Name = "dtpOnderhoudEindtijd";
+            this.dtpOnderhoudEindtijd.Size = new System.Drawing.Size(153, 22);
+            this.dtpOnderhoudEindtijd.TabIndex = 12;
+            // 
+            // lblOnderhoudEindtijd
+            // 
+            this.lblOnderhoudEindtijd.AutoSize = true;
+            this.lblOnderhoudEindtijd.Location = new System.Drawing.Point(10, 203);
+            this.lblOnderhoudEindtijd.Name = "lblOnderhoudEindtijd";
+            this.lblOnderhoudEindtijd.Size = new System.Drawing.Size(63, 17);
+            this.lblOnderhoudEindtijd.TabIndex = 11;
+            this.lblOnderhoudEindtijd.Text = "EindTijd:";
+            // 
+            // dtpOnderhoudStarttijd
+            // 
+            this.dtpOnderhoudStarttijd.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dtpOnderhoudStarttijd.Location = new System.Drawing.Point(167, 166);
+            this.dtpOnderhoudStarttijd.Name = "dtpOnderhoudStarttijd";
+            this.dtpOnderhoudStarttijd.Size = new System.Drawing.Size(153, 22);
+            this.dtpOnderhoudStarttijd.TabIndex = 10;
+            // 
+            // lblOnderhoudStarttijd
+            // 
+            this.lblOnderhoudStarttijd.AutoSize = true;
+            this.lblOnderhoudStarttijd.Location = new System.Drawing.Point(10, 171);
+            this.lblOnderhoudStarttijd.Name = "lblOnderhoudStarttijd";
+            this.lblOnderhoudStarttijd.Size = new System.Drawing.Size(65, 17);
+            this.lblOnderhoudStarttijd.TabIndex = 9;
+            this.lblOnderhoudStarttijd.Text = "StartTijd:";
+            // 
+            // dtpOnderhoudDatum
+            // 
+            this.dtpOnderhoudDatum.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpOnderhoudDatum.Location = new System.Drawing.Point(167, 133);
+            this.dtpOnderhoudDatum.Name = "dtpOnderhoudDatum";
+            this.dtpOnderhoudDatum.Size = new System.Drawing.Size(153, 22);
+            this.dtpOnderhoudDatum.TabIndex = 8;
+            // 
+            // lblOnderhoudDatum
+            // 
+            this.lblOnderhoudDatum.AutoSize = true;
+            this.lblOnderhoudDatum.Location = new System.Drawing.Point(10, 138);
+            this.lblOnderhoudDatum.Name = "lblOnderhoudDatum";
+            this.lblOnderhoudDatum.Size = new System.Drawing.Size(53, 17);
+            this.lblOnderhoudDatum.TabIndex = 7;
+            this.lblOnderhoudDatum.Text = "Datum:";
+            // 
+            // lblOnderhoudMedewerker
+            // 
+            this.lblOnderhoudMedewerker.AutoSize = true;
+            this.lblOnderhoudMedewerker.Location = new System.Drawing.Point(10, 106);
+            this.lblOnderhoudMedewerker.Name = "lblOnderhoudMedewerker";
+            this.lblOnderhoudMedewerker.Size = new System.Drawing.Size(89, 17);
+            this.lblOnderhoudMedewerker.TabIndex = 6;
+            this.lblOnderhoudMedewerker.Text = "Medewerker:";
+            // 
+            // cbxOnderhoudMedewerker
+            // 
+            this.cbxOnderhoudMedewerker.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxOnderhoudMedewerker.FormattingEnabled = true;
+            this.cbxOnderhoudMedewerker.Items.AddRange(new object[] {
+            "Vies",
+            "Schoonmaak",
+            "Defect",
+            "Reparatie",
+            "Remise",
+            "Dienst"});
+            this.cbxOnderhoudMedewerker.Location = new System.Drawing.Point(167, 99);
+            this.cbxOnderhoudMedewerker.Name = "cbxOnderhoudMedewerker";
+            this.cbxOnderhoudMedewerker.Size = new System.Drawing.Size(153, 24);
+            this.cbxOnderhoudMedewerker.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(10, 39);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(96, 17);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Tramnummer:";
+            // 
+            // textBox223
+            // 
+            this.textBox223.Location = new System.Drawing.Point(167, 36);
+            this.textBox223.Name = "textBox223";
+            this.textBox223.Size = new System.Drawing.Size(153, 22);
+            this.textBox223.TabIndex = 2;
+            // 
             // grbTramStatus
             // 
             this.grbTramStatus.Controls.Add(this.btnStatusbeheerTramStatus);
@@ -4458,6 +3519,8 @@
             // 
             // tabpageAccountBeheer
             // 
+            this.tabpageAccountBeheer.Controls.Add(this.lbAccountMedewerkers);
+            this.tabpageAccountBeheer.Controls.Add(this.grbAccountNMedewerker);
             this.tabpageAccountBeheer.Controls.Add(this.grbAccountBeheerNieuwAccount);
             this.tabpageAccountBeheer.Location = new System.Drawing.Point(4, 25);
             this.tabpageAccountBeheer.Name = "tabpageAccountBeheer";
@@ -4467,11 +3530,147 @@
             this.tabpageAccountBeheer.Text = "Accountbeheer";
             this.tabpageAccountBeheer.UseVisualStyleBackColor = true;
             // 
+            // lbAccountMedewerkers
+            // 
+            this.lbAccountMedewerkers.FormattingEnabled = true;
+            this.lbAccountMedewerkers.ItemHeight = 16;
+            this.lbAccountMedewerkers.Location = new System.Drawing.Point(347, 17);
+            this.lbAccountMedewerkers.Name = "lbAccountMedewerkers";
+            this.lbAccountMedewerkers.Size = new System.Drawing.Size(556, 564);
+            this.lbAccountMedewerkers.TabIndex = 2;
+            // 
+            // grbAccountNMedewerker
+            // 
+            this.grbAccountNMedewerker.Controls.Add(this.lblAccontPostcode);
+            this.grbAccountNMedewerker.Controls.Add(this.tbxAccountPostcode);
+            this.grbAccountNMedewerker.Controls.Add(this.tbxAccountStrtNR);
+            this.grbAccountNMedewerker.Controls.Add(this.lblAccountStrtNR);
+            this.grbAccountNMedewerker.Controls.Add(this.lblAccountNaam);
+            this.grbAccountNMedewerker.Controls.Add(this.btnAccountToevoegen);
+            this.grbAccountNMedewerker.Controls.Add(this.comboBox2);
+            this.grbAccountNMedewerker.Controls.Add(this.lblAccountFunctie);
+            this.grbAccountNMedewerker.Controls.Add(this.tbxAccountEmail);
+            this.grbAccountNMedewerker.Controls.Add(this.lblAccountEmail);
+            this.grbAccountNMedewerker.Controls.Add(this.tbxAccountNaam);
+            this.grbAccountNMedewerker.Controls.Add(this.label239);
+            this.grbAccountNMedewerker.Location = new System.Drawing.Point(6, 6);
+            this.grbAccountNMedewerker.Name = "grbAccountNMedewerker";
+            this.grbAccountNMedewerker.Size = new System.Drawing.Size(326, 241);
+            this.grbAccountNMedewerker.TabIndex = 1;
+            this.grbAccountNMedewerker.TabStop = false;
+            this.grbAccountNMedewerker.Text = "Nieuwe Medewerker";
+            // 
+            // lblAccontPostcode
+            // 
+            this.lblAccontPostcode.AutoSize = true;
+            this.lblAccontPostcode.Location = new System.Drawing.Point(9, 151);
+            this.lblAccontPostcode.Name = "lblAccontPostcode";
+            this.lblAccontPostcode.Size = new System.Drawing.Size(71, 17);
+            this.lblAccontPostcode.TabIndex = 14;
+            this.lblAccontPostcode.Text = "Postcode:";
+            // 
+            // tbxAccountPostcode
+            // 
+            this.tbxAccountPostcode.Enabled = false;
+            this.tbxAccountPostcode.Location = new System.Drawing.Point(160, 148);
+            this.tbxAccountPostcode.Name = "tbxAccountPostcode";
+            this.tbxAccountPostcode.Size = new System.Drawing.Size(153, 22);
+            this.tbxAccountPostcode.TabIndex = 13;
+            // 
+            // tbxAccountStrtNR
+            // 
+            this.tbxAccountStrtNR.Enabled = false;
+            this.tbxAccountStrtNR.Location = new System.Drawing.Point(160, 120);
+            this.tbxAccountStrtNR.Name = "tbxAccountStrtNR";
+            this.tbxAccountStrtNR.Size = new System.Drawing.Size(153, 22);
+            this.tbxAccountStrtNR.TabIndex = 11;
+            // 
+            // lblAccountStrtNR
+            // 
+            this.lblAccountStrtNR.AutoSize = true;
+            this.lblAccountStrtNR.Location = new System.Drawing.Point(9, 123);
+            this.lblAccountStrtNR.Name = "lblAccountStrtNR";
+            this.lblAccountStrtNR.Size = new System.Drawing.Size(121, 17);
+            this.lblAccountStrtNR.TabIndex = 10;
+            this.lblAccountStrtNR.Text = "Straatnaam + NR:";
+            // 
+            // lblAccountNaam
+            // 
+            this.lblAccountNaam.AutoSize = true;
+            this.lblAccountNaam.Location = new System.Drawing.Point(9, 36);
+            this.lblAccountNaam.Name = "lblAccountNaam";
+            this.lblAccountNaam.Size = new System.Drawing.Size(49, 17);
+            this.lblAccountNaam.TabIndex = 9;
+            this.lblAccountNaam.Text = "Naam:";
+            // 
+            // btnAccountToevoegen
+            // 
+            this.btnAccountToevoegen.Enabled = false;
+            this.btnAccountToevoegen.Location = new System.Drawing.Point(210, 191);
+            this.btnAccountToevoegen.Name = "btnAccountToevoegen";
+            this.btnAccountToevoegen.Size = new System.Drawing.Size(103, 27);
+            this.btnAccountToevoegen.TabIndex = 8;
+            this.btnAccountToevoegen.Text = "Toevoegen";
+            this.btnAccountToevoegen.UseVisualStyleBackColor = true;
+            this.btnAccountToevoegen.Click += new System.EventHandler(this.btnAccountToevoegen_Click);
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.Enabled = false;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(160, 90);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(153, 24);
+            this.comboBox2.TabIndex = 5;
+            // 
+            // lblAccountFunctie
+            // 
+            this.lblAccountFunctie.AutoSize = true;
+            this.lblAccountFunctie.Location = new System.Drawing.Point(9, 93);
+            this.lblAccountFunctie.Name = "lblAccountFunctie";
+            this.lblAccountFunctie.Size = new System.Drawing.Size(58, 17);
+            this.lblAccountFunctie.TabIndex = 4;
+            this.lblAccountFunctie.Text = "Functie:";
+            // 
+            // tbxAccountEmail
+            // 
+            this.tbxAccountEmail.Enabled = false;
+            this.tbxAccountEmail.Location = new System.Drawing.Point(160, 61);
+            this.tbxAccountEmail.Name = "tbxAccountEmail";
+            this.tbxAccountEmail.Size = new System.Drawing.Size(153, 22);
+            this.tbxAccountEmail.TabIndex = 3;
+            // 
+            // lblAccountEmail
+            // 
+            this.lblAccountEmail.AutoSize = true;
+            this.lblAccountEmail.Location = new System.Drawing.Point(9, 64);
+            this.lblAccountEmail.Name = "lblAccountEmail";
+            this.lblAccountEmail.Size = new System.Drawing.Size(46, 17);
+            this.lblAccountEmail.TabIndex = 2;
+            this.lblAccountEmail.Text = "Email:";
+            // 
+            // tbxAccountNaam
+            // 
+            this.tbxAccountNaam.Enabled = false;
+            this.tbxAccountNaam.Location = new System.Drawing.Point(160, 33);
+            this.tbxAccountNaam.Name = "tbxAccountNaam";
+            this.tbxAccountNaam.Size = new System.Drawing.Size(153, 22);
+            this.tbxAccountNaam.TabIndex = 1;
+            // 
+            // label239
+            // 
+            this.label239.AutoSize = true;
+            this.label239.Location = new System.Drawing.Point(6, 36);
+            this.label239.Name = "label239";
+            this.label239.Size = new System.Drawing.Size(0, 17);
+            this.label239.TabIndex = 0;
+            // 
             // grbAccountBeheerNieuwAccount
             // 
-            this.grbAccountBeheerNieuwAccount.Location = new System.Drawing.Point(6, 6);
+            this.grbAccountBeheerNieuwAccount.Location = new System.Drawing.Point(6, 253);
             this.grbAccountBeheerNieuwAccount.Name = "grbAccountBeheerNieuwAccount";
-            this.grbAccountBeheerNieuwAccount.Size = new System.Drawing.Size(248, 238);
+            this.grbAccountBeheerNieuwAccount.Size = new System.Drawing.Size(326, 328);
             this.grbAccountBeheerNieuwAccount.TabIndex = 0;
             this.grbAccountBeheerNieuwAccount.TabStop = false;
             this.grbAccountBeheerNieuwAccount.Text = "Nieuw Account";
@@ -4486,154 +3685,6 @@
             this.tabPage4.Text = "tabPage4";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // grbTramOnderhoud
-            // 
-            this.grbTramOnderhoud.Controls.Add(this.lblOnderhoudSoort);
-            this.grbTramOnderhoud.Controls.Add(this.cbxOnderhoudSoort);
-            this.grbTramOnderhoud.Controls.Add(this.btnOnderhoudBevestig);
-            this.grbTramOnderhoud.Controls.Add(this.dtpOnderhoudEindtijd);
-            this.grbTramOnderhoud.Controls.Add(this.lblOnderhoudEindtijd);
-            this.grbTramOnderhoud.Controls.Add(this.dtpOnderhoudStarttijd);
-            this.grbTramOnderhoud.Controls.Add(this.lblOnderhoudStarttijd);
-            this.grbTramOnderhoud.Controls.Add(this.dtpOnderhoudDatum);
-            this.grbTramOnderhoud.Controls.Add(this.lblOnderhoudDatum);
-            this.grbTramOnderhoud.Controls.Add(this.lblOnderhoudMedewerker);
-            this.grbTramOnderhoud.Controls.Add(this.cbxOnderhoudMedewerker);
-            this.grbTramOnderhoud.Controls.Add(this.label1);
-            this.grbTramOnderhoud.Controls.Add(this.textBox223);
-            this.grbTramOnderhoud.Location = new System.Drawing.Point(331, 6);
-            this.grbTramOnderhoud.Name = "grbTramOnderhoud";
-            this.grbTramOnderhoud.Size = new System.Drawing.Size(326, 264);
-            this.grbTramOnderhoud.TabIndex = 1;
-            this.grbTramOnderhoud.TabStop = false;
-            this.grbTramOnderhoud.Text = "Onderhoud";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 39);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 17);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Tramnummer:";
-            // 
-            // textBox223
-            // 
-            this.textBox223.Location = new System.Drawing.Point(167, 36);
-            this.textBox223.Name = "textBox223";
-            this.textBox223.Size = new System.Drawing.Size(153, 22);
-            this.textBox223.TabIndex = 2;
-            // 
-            // cbxOnderhoudMedewerker
-            // 
-            this.cbxOnderhoudMedewerker.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxOnderhoudMedewerker.FormattingEnabled = true;
-            this.cbxOnderhoudMedewerker.Items.AddRange(new object[] {
-            "Vies",
-            "Schoonmaak",
-            "Defect",
-            "Reparatie",
-            "Remise",
-            "Dienst"});
-            this.cbxOnderhoudMedewerker.Location = new System.Drawing.Point(167, 99);
-            this.cbxOnderhoudMedewerker.Name = "cbxOnderhoudMedewerker";
-            this.cbxOnderhoudMedewerker.Size = new System.Drawing.Size(153, 24);
-            this.cbxOnderhoudMedewerker.TabIndex = 5;
-            // 
-            // lblOnderhoudMedewerker
-            // 
-            this.lblOnderhoudMedewerker.AutoSize = true;
-            this.lblOnderhoudMedewerker.Location = new System.Drawing.Point(10, 106);
-            this.lblOnderhoudMedewerker.Name = "lblOnderhoudMedewerker";
-            this.lblOnderhoudMedewerker.Size = new System.Drawing.Size(89, 17);
-            this.lblOnderhoudMedewerker.TabIndex = 6;
-            this.lblOnderhoudMedewerker.Text = "Medewerker:";
-            // 
-            // lblOnderhoudDatum
-            // 
-            this.lblOnderhoudDatum.AutoSize = true;
-            this.lblOnderhoudDatum.Location = new System.Drawing.Point(10, 138);
-            this.lblOnderhoudDatum.Name = "lblOnderhoudDatum";
-            this.lblOnderhoudDatum.Size = new System.Drawing.Size(53, 17);
-            this.lblOnderhoudDatum.TabIndex = 7;
-            this.lblOnderhoudDatum.Text = "Datum:";
-            // 
-            // dtpOnderhoudDatum
-            // 
-            this.dtpOnderhoudDatum.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpOnderhoudDatum.Location = new System.Drawing.Point(167, 133);
-            this.dtpOnderhoudDatum.Name = "dtpOnderhoudDatum";
-            this.dtpOnderhoudDatum.Size = new System.Drawing.Size(153, 22);
-            this.dtpOnderhoudDatum.TabIndex = 8;
-            // 
-            // lblOnderhoudStarttijd
-            // 
-            this.lblOnderhoudStarttijd.AutoSize = true;
-            this.lblOnderhoudStarttijd.Location = new System.Drawing.Point(10, 171);
-            this.lblOnderhoudStarttijd.Name = "lblOnderhoudStarttijd";
-            this.lblOnderhoudStarttijd.Size = new System.Drawing.Size(65, 17);
-            this.lblOnderhoudStarttijd.TabIndex = 9;
-            this.lblOnderhoudStarttijd.Text = "StartTijd:";
-            // 
-            // dtpOnderhoudStarttijd
-            // 
-            this.dtpOnderhoudStarttijd.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpOnderhoudStarttijd.Location = new System.Drawing.Point(167, 166);
-            this.dtpOnderhoudStarttijd.Name = "dtpOnderhoudStarttijd";
-            this.dtpOnderhoudStarttijd.Size = new System.Drawing.Size(153, 22);
-            this.dtpOnderhoudStarttijd.TabIndex = 10;
-            // 
-            // dtpOnderhoudEindtijd
-            // 
-            this.dtpOnderhoudEindtijd.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpOnderhoudEindtijd.Location = new System.Drawing.Point(167, 198);
-            this.dtpOnderhoudEindtijd.Name = "dtpOnderhoudEindtijd";
-            this.dtpOnderhoudEindtijd.Size = new System.Drawing.Size(153, 22);
-            this.dtpOnderhoudEindtijd.TabIndex = 12;
-            // 
-            // lblOnderhoudEindtijd
-            // 
-            this.lblOnderhoudEindtijd.AutoSize = true;
-            this.lblOnderhoudEindtijd.Location = new System.Drawing.Point(10, 203);
-            this.lblOnderhoudEindtijd.Name = "lblOnderhoudEindtijd";
-            this.lblOnderhoudEindtijd.Size = new System.Drawing.Size(63, 17);
-            this.lblOnderhoudEindtijd.TabIndex = 11;
-            this.lblOnderhoudEindtijd.Text = "EindTijd:";
-            // 
-            // btnOnderhoudBevestig
-            // 
-            this.btnOnderhoudBevestig.Location = new System.Drawing.Point(237, 229);
-            this.btnOnderhoudBevestig.Name = "btnOnderhoudBevestig";
-            this.btnOnderhoudBevestig.Size = new System.Drawing.Size(83, 27);
-            this.btnOnderhoudBevestig.TabIndex = 2;
-            this.btnOnderhoudBevestig.Text = "Bevestig";
-            this.btnOnderhoudBevestig.UseVisualStyleBackColor = true;
-            // 
-            // lblOnderhoudSoort
-            // 
-            this.lblOnderhoudSoort.AutoSize = true;
-            this.lblOnderhoudSoort.Location = new System.Drawing.Point(10, 74);
-            this.lblOnderhoudSoort.Name = "lblOnderhoudSoort";
-            this.lblOnderhoudSoort.Size = new System.Drawing.Size(46, 17);
-            this.lblOnderhoudSoort.TabIndex = 14;
-            this.lblOnderhoudSoort.Text = "Soort:";
-            // 
-            // cbxOnderhoudSoort
-            // 
-            this.cbxOnderhoudSoort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxOnderhoudSoort.FormattingEnabled = true;
-            this.cbxOnderhoudSoort.Items.AddRange(new object[] {
-            "Vies",
-            "Schoonmaak",
-            "Defect",
-            "Reparatie",
-            "Remise",
-            "Dienst"});
-            this.cbxOnderhoudSoort.Location = new System.Drawing.Point(167, 67);
-            this.cbxOnderhoudSoort.Name = "cbxOnderhoudSoort";
-            this.cbxOnderhoudSoort.Size = new System.Drawing.Size(153, 24);
-            this.cbxOnderhoudSoort.TabIndex = 13;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -4643,10 +3694,11 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
             this.Text = "Remisesysteem";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.tabcontrolRemise.ResumeLayout(false);
             this.tabpageRemiseOverzicht.ResumeLayout(false);
-            this.gbRemiseOverzicht.ResumeLayout(false);
-            this.gbRemiseOverzicht.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.tabpageRemiseBeheer.ResumeLayout(false);
             this.grbRemiseBeheerSpoorBeheer.ResumeLayout(false);
             this.grbRemiseBeheerSpoorBeheer.PerformLayout();
@@ -4655,11 +3707,13 @@
             this.grbRemiseBeheerTramBeheer.ResumeLayout(false);
             this.grbRemiseBeheerTramBeheer.PerformLayout();
             this.tabpageStatusBeheer.ResumeLayout(false);
+            this.grbTramOnderhoud.ResumeLayout(false);
+            this.grbTramOnderhoud.PerformLayout();
             this.grbTramStatus.ResumeLayout(false);
             this.grbTramStatus.PerformLayout();
             this.tabpageAccountBeheer.ResumeLayout(false);
-            this.grbTramOnderhoud.ResumeLayout(false);
-            this.grbTramOnderhoud.PerformLayout();
+            this.grbAccountNMedewerker.ResumeLayout(false);
+            this.grbAccountNMedewerker.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -4668,236 +3722,6 @@
 
         private System.Windows.Forms.TabControl tabcontrolRemise;
         private System.Windows.Forms.TabPage tabpageRemiseOverzicht;
-        private System.Windows.Forms.GroupBox gbRemiseOverzicht;
-        private System.Windows.Forms.TextBox tB_38_1;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.TextBox textBox20;
-        private System.Windows.Forms.TextBox textBox21;
-        private System.Windows.Forms.TextBox textBox22;
-        private System.Windows.Forms.TextBox textBox23;
-        private System.Windows.Forms.TextBox textBox24;
-        private System.Windows.Forms.TextBox textBox25;
-        private System.Windows.Forms.TextBox textBox26;
-        private System.Windows.Forms.TextBox textBox27;
-        private System.Windows.Forms.TextBox textBox28;
-        private System.Windows.Forms.TextBox textBox29;
-        private System.Windows.Forms.TextBox textBox30;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox tB_38_Lijn;
-        private System.Windows.Forms.TextBox tB_38;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox tB_38_4;
-        private System.Windows.Forms.TextBox tB_38_3;
-        private System.Windows.Forms.TextBox tB_38_2;
-        private System.Windows.Forms.TextBox textBox128;
-        private System.Windows.Forms.TextBox textBox129;
-        private System.Windows.Forms.TextBox textBox130;
-        private System.Windows.Forms.TextBox textBox131;
-        private System.Windows.Forms.TextBox textBox132;
-        private System.Windows.Forms.TextBox textBox133;
-        private System.Windows.Forms.TextBox textBox134;
-        private System.Windows.Forms.TextBox textBox135;
-        private System.Windows.Forms.TextBox textBox136;
-        private System.Windows.Forms.TextBox textBox137;
-        private System.Windows.Forms.TextBox textBox138;
-        private System.Windows.Forms.TextBox textBox139;
-        private System.Windows.Forms.TextBox textBox140;
-        private System.Windows.Forms.TextBox textBox141;
-        private System.Windows.Forms.TextBox textBox142;
-        private System.Windows.Forms.TextBox textBox143;
-        private System.Windows.Forms.TextBox textBox119;
-        private System.Windows.Forms.TextBox textBox120;
-        private System.Windows.Forms.TextBox textBox121;
-        private System.Windows.Forms.TextBox textBox122;
-        private System.Windows.Forms.TextBox textBox123;
-        private System.Windows.Forms.TextBox textBox124;
-        private System.Windows.Forms.TextBox textBox125;
-        private System.Windows.Forms.TextBox textBox126;
-        private System.Windows.Forms.TextBox textBox127;
-        private System.Windows.Forms.TextBox textBox110;
-        private System.Windows.Forms.TextBox textBox111;
-        private System.Windows.Forms.TextBox textBox112;
-        private System.Windows.Forms.TextBox textBox113;
-        private System.Windows.Forms.TextBox textBox114;
-        private System.Windows.Forms.TextBox textBox115;
-        private System.Windows.Forms.TextBox textBox116;
-        private System.Windows.Forms.TextBox textBox117;
-        private System.Windows.Forms.TextBox textBox118;
-        private System.Windows.Forms.TextBox textBox101;
-        private System.Windows.Forms.TextBox textBox102;
-        private System.Windows.Forms.TextBox textBox103;
-        private System.Windows.Forms.TextBox textBox104;
-        private System.Windows.Forms.TextBox textBox105;
-        private System.Windows.Forms.TextBox textBox106;
-        private System.Windows.Forms.TextBox textBox107;
-        private System.Windows.Forms.TextBox textBox108;
-        private System.Windows.Forms.TextBox textBox109;
-        private System.Windows.Forms.TextBox textBox96;
-        private System.Windows.Forms.TextBox textBox97;
-        private System.Windows.Forms.TextBox textBox98;
-        private System.Windows.Forms.TextBox textBox99;
-        private System.Windows.Forms.TextBox textBox100;
-        private System.Windows.Forms.TextBox textBox91;
-        private System.Windows.Forms.TextBox textBox92;
-        private System.Windows.Forms.TextBox textBox93;
-        private System.Windows.Forms.TextBox textBox94;
-        private System.Windows.Forms.TextBox textBox95;
-        private System.Windows.Forms.TextBox textBox89;
-        private System.Windows.Forms.TextBox textBox90;
-        private System.Windows.Forms.TextBox textBox80;
-        private System.Windows.Forms.TextBox textBox81;
-        private System.Windows.Forms.TextBox textBox82;
-        private System.Windows.Forms.TextBox textBox83;
-        private System.Windows.Forms.TextBox textBox84;
-        private System.Windows.Forms.TextBox textBox85;
-        private System.Windows.Forms.TextBox textBox86;
-        private System.Windows.Forms.TextBox textBox87;
-        private System.Windows.Forms.TextBox textBox88;
-        private System.Windows.Forms.TextBox textBox77;
-        private System.Windows.Forms.TextBox textBox78;
-        private System.Windows.Forms.TextBox textBox79;
-        private System.Windows.Forms.TextBox textBox47;
-        private System.Windows.Forms.TextBox textBox48;
-        private System.Windows.Forms.TextBox textBox49;
-        private System.Windows.Forms.TextBox textBox50;
-        private System.Windows.Forms.TextBox textBox51;
-        private System.Windows.Forms.TextBox textBox52;
-        private System.Windows.Forms.TextBox textBox53;
-        private System.Windows.Forms.TextBox textBox54;
-        private System.Windows.Forms.TextBox textBox55;
-        private System.Windows.Forms.TextBox textBox56;
-        private System.Windows.Forms.TextBox textBox57;
-        private System.Windows.Forms.TextBox textBox58;
-        private System.Windows.Forms.TextBox textBox59;
-        private System.Windows.Forms.TextBox textBox60;
-        private System.Windows.Forms.TextBox textBox61;
-        private System.Windows.Forms.TextBox textBox62;
-        private System.Windows.Forms.TextBox textBox63;
-        private System.Windows.Forms.TextBox textBox64;
-        private System.Windows.Forms.TextBox textBox65;
-        private System.Windows.Forms.TextBox textBox66;
-        private System.Windows.Forms.TextBox textBox67;
-        private System.Windows.Forms.TextBox textBox68;
-        private System.Windows.Forms.TextBox textBox69;
-        private System.Windows.Forms.TextBox textBox70;
-        private System.Windows.Forms.TextBox textBox71;
-        private System.Windows.Forms.TextBox textBox72;
-        private System.Windows.Forms.TextBox textBox73;
-        private System.Windows.Forms.TextBox textBox74;
-        private System.Windows.Forms.TextBox textBox75;
-        private System.Windows.Forms.TextBox textBox76;
-        private System.Windows.Forms.TextBox textBox42;
-        private System.Windows.Forms.TextBox textBox43;
-        private System.Windows.Forms.TextBox textBox44;
-        private System.Windows.Forms.TextBox textBox45;
-        private System.Windows.Forms.TextBox textBox46;
-        private System.Windows.Forms.TextBox textBox37;
-        private System.Windows.Forms.TextBox textBox38;
-        private System.Windows.Forms.TextBox textBox39;
-        private System.Windows.Forms.TextBox textBox40;
-        private System.Windows.Forms.TextBox textBox41;
-        private System.Windows.Forms.TextBox textBox31;
-        private System.Windows.Forms.TextBox textBox32;
-        private System.Windows.Forms.TextBox textBox33;
-        private System.Windows.Forms.TextBox textBox34;
-        private System.Windows.Forms.TextBox textBox35;
-        private System.Windows.Forms.TextBox textBox36;
-        private System.Windows.Forms.TextBox textBox144;
-        private System.Windows.Forms.TextBox textBox146;
-        private System.Windows.Forms.TextBox textBox147;
-        private System.Windows.Forms.TextBox textBox148;
-        private System.Windows.Forms.TextBox textBox149;
-        private System.Windows.Forms.TextBox textBox150;
-        private System.Windows.Forms.TextBox textBox151;
-        private System.Windows.Forms.TextBox textBox152;
-        private System.Windows.Forms.TextBox textBox153;
-        private System.Windows.Forms.TextBox textBox154;
-        private System.Windows.Forms.TextBox textBox155;
-        private System.Windows.Forms.TextBox textBox156;
-        private System.Windows.Forms.TextBox textBox157;
-        private System.Windows.Forms.TextBox textBox221;
-        private System.Windows.Forms.TextBox textBox222;
-        private System.Windows.Forms.TextBox textBox203;
-        private System.Windows.Forms.TextBox textBox204;
-        private System.Windows.Forms.TextBox textBox214;
-        private System.Windows.Forms.TextBox textBox216;
-        private System.Windows.Forms.TextBox textBox217;
-        private System.Windows.Forms.TextBox textBox218;
-        private System.Windows.Forms.TextBox textBox219;
-        private System.Windows.Forms.TextBox textBox220;
-        private System.Windows.Forms.TextBox textBox205;
-        private System.Windows.Forms.TextBox textBox206;
-        private System.Windows.Forms.TextBox textBox207;
-        private System.Windows.Forms.TextBox textBox208;
-        private System.Windows.Forms.TextBox textBox209;
-        private System.Windows.Forms.TextBox textBox210;
-        private System.Windows.Forms.TextBox textBox211;
-        private System.Windows.Forms.TextBox textBox212;
-        private System.Windows.Forms.TextBox textBox213;
-        private System.Windows.Forms.TextBox textBox196;
-        private System.Windows.Forms.TextBox textBox197;
-        private System.Windows.Forms.TextBox textBox198;
-        private System.Windows.Forms.TextBox textBox199;
-        private System.Windows.Forms.TextBox textBox200;
-        private System.Windows.Forms.TextBox textBox201;
-        private System.Windows.Forms.TextBox textBox202;
-        private System.Windows.Forms.TextBox textBox194;
-        private System.Windows.Forms.TextBox textBox195;
-        private System.Windows.Forms.TextBox textBox191;
-        private System.Windows.Forms.TextBox textBox192;
-        private System.Windows.Forms.TextBox textBox193;
-        private System.Windows.Forms.TextBox textBox187;
-        private System.Windows.Forms.TextBox textBox188;
-        private System.Windows.Forms.TextBox textBox189;
-        private System.Windows.Forms.TextBox textBox190;
-        private System.Windows.Forms.TextBox textBox179;
-        private System.Windows.Forms.TextBox textBox180;
-        private System.Windows.Forms.TextBox textBox181;
-        private System.Windows.Forms.TextBox textBox182;
-        private System.Windows.Forms.TextBox textBox183;
-        private System.Windows.Forms.TextBox textBox184;
-        private System.Windows.Forms.TextBox textBox185;
-        private System.Windows.Forms.TextBox textBox186;
-        private System.Windows.Forms.TextBox textBox178;
-        private System.Windows.Forms.TextBox textBox167;
-        private System.Windows.Forms.TextBox textBox177;
-        private System.Windows.Forms.TextBox textBox168;
-        private System.Windows.Forms.TextBox textBox176;
-        private System.Windows.Forms.TextBox textBox169;
-        private System.Windows.Forms.TextBox textBox175;
-        private System.Windows.Forms.TextBox textBox170;
-        private System.Windows.Forms.TextBox textBox174;
-        private System.Windows.Forms.TextBox textBox173;
-        private System.Windows.Forms.TextBox textBox163;
-        private System.Windows.Forms.TextBox textBox172;
-        private System.Windows.Forms.TextBox textBox164;
-        private System.Windows.Forms.TextBox textBox171;
-        private System.Windows.Forms.TextBox textBox165;
-        private System.Windows.Forms.TextBox textBox166;
-        private System.Windows.Forms.TextBox textBox145;
-        private System.Windows.Forms.TextBox textBox158;
-        private System.Windows.Forms.TextBox textBox159;
-        private System.Windows.Forms.TextBox textBox160;
-        private System.Windows.Forms.TextBox textBox161;
-        private System.Windows.Forms.TextBox textBox162;
-        private System.Windows.Forms.TextBox textBox215;
-        private System.Windows.Forms.ListBox lbxReserveringen;
         private System.Windows.Forms.TabPage tabpageStatusBeheer;
         private System.Windows.Forms.TabPage tabpageRemiseBeheer;
         private System.Windows.Forms.TabPage tabpageAccountBeheer;
@@ -4951,5 +3775,254 @@
         private System.Windows.Forms.ComboBox cbxOnderhoudMedewerker;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox223;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.Label label190;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.Label label59;
+        private System.Windows.Forms.Label label60;
+        private System.Windows.Forms.Label label61;
+        private System.Windows.Forms.Label label62;
+        private System.Windows.Forms.Label label63;
+        private System.Windows.Forms.Label label64;
+        private System.Windows.Forms.Label label65;
+        private System.Windows.Forms.Label label66;
+        private System.Windows.Forms.Label label67;
+        private System.Windows.Forms.Label label68;
+        private System.Windows.Forms.Label label69;
+        private System.Windows.Forms.Label label70;
+        private System.Windows.Forms.Label label71;
+        private System.Windows.Forms.Label label72;
+        private System.Windows.Forms.Label label73;
+        private System.Windows.Forms.Label label74;
+        private System.Windows.Forms.Label label75;
+        private System.Windows.Forms.Label label76;
+        private System.Windows.Forms.Label label77;
+        private System.Windows.Forms.Label label78;
+        private System.Windows.Forms.Label label79;
+        private System.Windows.Forms.Label label80;
+        private System.Windows.Forms.Label label81;
+        private System.Windows.Forms.Label label82;
+        private System.Windows.Forms.Label label83;
+        private System.Windows.Forms.Label label84;
+        private System.Windows.Forms.Label label85;
+        private System.Windows.Forms.Label label86;
+        private System.Windows.Forms.Label label87;
+        private System.Windows.Forms.Label label89;
+        private System.Windows.Forms.Label label88;
+        private System.Windows.Forms.Label label90;
+        private System.Windows.Forms.Label label91;
+        private System.Windows.Forms.Label label92;
+        private System.Windows.Forms.Label label93;
+        private System.Windows.Forms.Label label94;
+        private System.Windows.Forms.Label label95;
+        private System.Windows.Forms.Label label96;
+        private System.Windows.Forms.Label label97;
+        private System.Windows.Forms.Label label98;
+        private System.Windows.Forms.Label label100;
+        private System.Windows.Forms.Label label99;
+        private System.Windows.Forms.Label label101;
+        private System.Windows.Forms.Label label102;
+        private System.Windows.Forms.Label label103;
+        private System.Windows.Forms.Label label104;
+        private System.Windows.Forms.Label label105;
+        private System.Windows.Forms.Label label106;
+        private System.Windows.Forms.Label label107;
+        private System.Windows.Forms.Label label108;
+        private System.Windows.Forms.Label label109;
+        private System.Windows.Forms.Label label110;
+        private System.Windows.Forms.Label label111;
+        private System.Windows.Forms.Label label112;
+        private System.Windows.Forms.Label label113;
+        private System.Windows.Forms.Label label114;
+        private System.Windows.Forms.Label label115;
+        private System.Windows.Forms.Label label117;
+        private System.Windows.Forms.Label label116;
+        private System.Windows.Forms.Label label118;
+        private System.Windows.Forms.Label label119;
+        private System.Windows.Forms.Label label120;
+        private System.Windows.Forms.Label label121;
+        private System.Windows.Forms.Label label122;
+        private System.Windows.Forms.Label label123;
+        private System.Windows.Forms.Label label124;
+        private System.Windows.Forms.Label label125;
+        private System.Windows.Forms.Label label126;
+        private System.Windows.Forms.Label label127;
+        private System.Windows.Forms.Label label128;
+        private System.Windows.Forms.Label label129;
+        private System.Windows.Forms.Label label130;
+        private System.Windows.Forms.Label label131;
+        private System.Windows.Forms.Label label132;
+        private System.Windows.Forms.Label label133;
+        private System.Windows.Forms.Label label134;
+        private System.Windows.Forms.Label label135;
+        private System.Windows.Forms.Label label136;
+        private System.Windows.Forms.Label label137;
+        private System.Windows.Forms.Label label138;
+        private System.Windows.Forms.Label label139;
+        private System.Windows.Forms.Label label140;
+        private System.Windows.Forms.Label label141;
+        private System.Windows.Forms.Label label142;
+        private System.Windows.Forms.Label label143;
+        private System.Windows.Forms.Label label144;
+        private System.Windows.Forms.Label label145;
+        private System.Windows.Forms.Label label146;
+        private System.Windows.Forms.Label label147;
+        private System.Windows.Forms.Label label148;
+        private System.Windows.Forms.Label label149;
+        private System.Windows.Forms.Label label150;
+        private System.Windows.Forms.Label label151;
+        private System.Windows.Forms.Label label152;
+        private System.Windows.Forms.Label label153;
+        private System.Windows.Forms.Label label154;
+        private System.Windows.Forms.Label label155;
+        private System.Windows.Forms.Label label156;
+        private System.Windows.Forms.Label label157;
+        private System.Windows.Forms.Label label158;
+        private System.Windows.Forms.Label label159;
+        private System.Windows.Forms.Label label160;
+        private System.Windows.Forms.Label label161;
+        private System.Windows.Forms.Label label162;
+        private System.Windows.Forms.Label label163;
+        private System.Windows.Forms.Label label164;
+        private System.Windows.Forms.Label label165;
+        private System.Windows.Forms.Label label166;
+        private System.Windows.Forms.Label label167;
+        private System.Windows.Forms.Label label168;
+        private System.Windows.Forms.Label label169;
+        private System.Windows.Forms.Label label170;
+        private System.Windows.Forms.Label label171;
+        private System.Windows.Forms.Label label172;
+        private System.Windows.Forms.Label label173;
+        private System.Windows.Forms.Label label174;
+        private System.Windows.Forms.Label label175;
+        private System.Windows.Forms.Label label176;
+        private System.Windows.Forms.Label label177;
+        private System.Windows.Forms.Label label178;
+        private System.Windows.Forms.Label label179;
+        private System.Windows.Forms.Label label180;
+        private System.Windows.Forms.Label label181;
+        private System.Windows.Forms.Label label182;
+        private System.Windows.Forms.Label label183;
+        private System.Windows.Forms.Label label184;
+        private System.Windows.Forms.Label label185;
+        private System.Windows.Forms.Label label186;
+        private System.Windows.Forms.Label label187;
+        private System.Windows.Forms.Label label188;
+        private System.Windows.Forms.Label label189;
+        private System.Windows.Forms.Label label191;
+        private System.Windows.Forms.Label label192;
+        private System.Windows.Forms.Label label193;
+        private System.Windows.Forms.Label label194;
+        private System.Windows.Forms.Label label195;
+        private System.Windows.Forms.Label label196;
+        private System.Windows.Forms.Label label197;
+        private System.Windows.Forms.Label label198;
+        private System.Windows.Forms.Label label199;
+        private System.Windows.Forms.Label label200;
+        private System.Windows.Forms.Label label201;
+        private System.Windows.Forms.Label label202;
+        private System.Windows.Forms.Label label203;
+        private System.Windows.Forms.Label label204;
+        private System.Windows.Forms.Label label205;
+        private System.Windows.Forms.Label label206;
+        private System.Windows.Forms.Label label207;
+        private System.Windows.Forms.Label label208;
+        private System.Windows.Forms.Label label209;
+        private System.Windows.Forms.Label label210;
+        private System.Windows.Forms.Label label211;
+        private System.Windows.Forms.Label label212;
+        private System.Windows.Forms.Label label213;
+        private System.Windows.Forms.Label label214;
+        private System.Windows.Forms.Label label215;
+        private System.Windows.Forms.Label label216;
+        private System.Windows.Forms.Label label217;
+        private System.Windows.Forms.Label label218;
+        private System.Windows.Forms.Label label219;
+        private System.Windows.Forms.Label label220;
+        private System.Windows.Forms.Label label221;
+        private System.Windows.Forms.Label label222;
+        private System.Windows.Forms.Label label223;
+        private System.Windows.Forms.Label label224;
+        private System.Windows.Forms.Label label225;
+        private System.Windows.Forms.Label label226;
+        private System.Windows.Forms.Label label227;
+        private System.Windows.Forms.Label label228;
+        private System.Windows.Forms.Label label229;
+        private System.Windows.Forms.Label label230;
+        private System.Windows.Forms.Label label231;
+        private System.Windows.Forms.Label label232;
+        private System.Windows.Forms.Label label233;
+        private System.Windows.Forms.Label label234;
+        private System.Windows.Forms.Label label235;
+        private System.Windows.Forms.GroupBox grbAccountNMedewerker;
+        private System.Windows.Forms.Label lblAccountNaam;
+        private System.Windows.Forms.Button btnAccountToevoegen;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label lblAccountFunctie;
+        private System.Windows.Forms.TextBox tbxAccountEmail;
+        private System.Windows.Forms.Label lblAccountEmail;
+        private System.Windows.Forms.TextBox tbxAccountNaam;
+        private System.Windows.Forms.Label label239;
+        private System.Windows.Forms.Label lblAccontPostcode;
+        private System.Windows.Forms.TextBox tbxAccountPostcode;
+        private System.Windows.Forms.TextBox tbxAccountStrtNR;
+        private System.Windows.Forms.Label lblAccountStrtNR;
+        private System.Windows.Forms.ListBox lbAccountMedewerkers;
     }
 }

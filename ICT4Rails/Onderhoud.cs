@@ -101,12 +101,12 @@ namespace ICT4Rails
             
 
             string info = "ID: " + idstr +
-                "Tram: " + tramstr +
-                ", Medewerker: " + medewerkerstr +
-                ", Soort: " + soortstr +
-                ", Starttijd: " + starttijdstr +
-                ", Eindtijd: " + eindtijdstr +
-                ", Opmerking: " + opmerking;
+                " - Tram: " + tramstr +
+                " - Medewerker: " + medewerkerstr +
+                " - Soort: " + soortstr +
+                " - Starttijd: " + starttijdstr +
+                " - Eindtijd: " + eindtijdstr +
+                " - Opmerking: " + opmerking;
 
             return info;
         }

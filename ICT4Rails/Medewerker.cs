@@ -9,7 +9,6 @@ namespace ICT4Rails
     public class Medewerker
     {
         private int id;
-        private string wachtwoord;
         private string naam;
         private string email;
         private string functie;
@@ -23,24 +22,15 @@ namespace ICT4Rails
         public string Adres { get { return adres; } }
         public string Postcode { get { return postcode; } }
 
+        /* Voor als de medewerker gegevens uit de database wordt gehaald */
         public Medewerker(int id, string naam, string email, string functie, string adres, string postcode)
         {
+            this.id = id;
             this.naam = naam;
             this.email = email;
             this.functie = functie;
             this.adres = adres;
             this.postcode = postcode;
-            this.id = id;
-        }
-
-        public bool LogIn()
-        {
-            return true;
-        }
-
-        public bool LogOut()
-        {
-            return true;
         }
 
         public override string ToString()
@@ -99,11 +89,11 @@ namespace ICT4Rails
             }
 
             string info = "ID: " + ID.ToString() +
-                "Naam: " + naamstr +
-                "Emailadres: " + emailstr +
-                "Functie: " + functiestr +
-                "Adres: " + adresstr +
-                "Postcode: " + postcodestr;
+                " - Naam: " + naamstr +
+                " - Emailadres: " + emailstr +
+                " - Functie: " + functiestr +
+                " - Adres: " + adresstr +
+                " - Postcode: " + postcodestr;
 
             return info;
         }

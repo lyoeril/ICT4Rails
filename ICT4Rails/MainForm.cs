@@ -16,7 +16,8 @@ namespace ICT4Rails
         public MainForm()
         {
             InitializeComponent();
-            if (Program.loggedIn.ToString() == "Bestuurder")
+
+            if (Program.loggedIn.GebruikersNaam == "qwer")
             {
                 tabcontrolRemise.Controls.Remove(tabpageRemiseOverzicht);
                 tabcontrolRemise.Controls.Remove(tabpageRemiseBeheer);
@@ -32,7 +33,32 @@ namespace ICT4Rails
                 tabcontrolRemise.TabPages.Insert(3, tabpageAccountBeheer);
                 tabcontrolRemise.TabPages.Insert(4, tabPage4);
             }
-            //tabcontrolRemise.Controls.Remove(tabpageRemiseOverzicht);
+
+            //if(tabcontrolRemise.SelectedTab == tabcontrolRemise.TabPages["AccountBeheer"])
+            //{
+            foreach (Label l in tableLayoutPanel1.Controls)
+            {
+                if (l.Text.StartsWith("label"))
+                {
+                    l.Text = "";
+                }
+            }
+
+            this.tableLayoutPanel1.CellPaint += new TableLayoutCellPaintEventHandler(tableLayoutPanel1_CellPaint);
+        }
+
+        private void tableLayoutPanel1_CellPaint(object sender, TableLayoutCellPaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            Rectangle r = e.CellBounds;
+            if (e.Row == 0)
+            {
+                g.FillRectangle(Brushes.Gray, r);
+            }
+            else if (e.Row == 1 && e.Column == 0)
+            {
+                g.FillRectangle(Brushes.LightBlue, r);
+            }
         }
 
         // Overzichttab
@@ -78,7 +104,7 @@ namespace ICT4Rails
 
         private void cbxRemiseBeheerSpoorBeheerBewerking_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cbxRemiseBeheerSpoorBeheerBewerking.SelectedText == "Blokkeer")
+            if (cbxRemiseBeheerSpoorBeheerBewerking.SelectedText == "Blokkeer")
             {
                 tbxRemiseBeheerSpoorBeheerSpoorNummer.Enabled = true;
                 tbxRemiseBeheerSpoorBeheerSectorNummer.Enabled = false;
@@ -104,6 +130,23 @@ namespace ICT4Rails
         {
             cbxStatusbeheerTramStatus.SelectedItem = null;
             tbxStatusbeheerTramNummer.Text = "";
+        }
+
+      
+
+        //AccountBeheer
+      
+
+
+
+        private void RefreshUI()
+        {
+            lbAccountMedewerkers.Text = "";
+        }
+
+        private void btnAccountToevoegen_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

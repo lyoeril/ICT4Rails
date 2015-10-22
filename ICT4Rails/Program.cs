@@ -12,7 +12,7 @@ namespace ICT4Rails
         /// The main entry point for the application.
         /// </summary>
 
-        public static Medewerker loggedIn;
+        public static Gebruiker loggedIn;
 
         [STAThread]
         static void Main()
