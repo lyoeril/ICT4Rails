@@ -16,6 +16,7 @@ namespace Unittests_ICT4Rails
         private Onderhoud onderhoud;       
         private Tram tram;
         private Administratie administratie;
+        private Gebruiker gebruiker;
 
         private DateTime reserveringDatum;
         private DateTime starttijd;
@@ -39,6 +40,7 @@ namespace Unittests_ICT4Rails
             reservering = new Reservering(tram, spoor, reserveringDatum);
             onderhoud = new Onderhoud(1, medewerker, tram, starttijd, eindtijd, "testopmerking", "testsoort");
             administratie = new Administratie();
+            gebruiker = new Gebruiker(1, "testgebruikersnaam", "testwachtwoord");
         }
         
         [TestMethod]
@@ -49,11 +51,17 @@ namespace Unittests_ICT4Rails
             Assert.AreEqual("testemail", medewerker.Email);
             Assert.AreEqual("testfunctie", medewerker.Functie);
             Assert.AreEqual("testadres", medewerker.Adres);
+<<<<<<< HEAD
             Assert.AreEqual("testpostcode", medewerker.Postcode);
+=======
 
-            //ToString        
+            Assert.AreEqual("testpostcode", medewerker.Postcode);     
+>>>>>>> origin/master
+
+            //ToString      
 
             Assert.AreEqual("ID: 1 - Naam: testnaam - Emailadres: testemail - Functie: testfunctie - Adres: testadres - Postcode: testpostcode", medewerker.ToString(), "Fout bij medewerker");
+<<<<<<< HEAD
             Assert.AreEqual("testpostcode", medewerker.Postcode);
 
             //ToString
@@ -61,6 +69,9 @@ namespace Unittests_ICT4Rails
             medewerker = new Medewerker(1, "", "", "", "", "");
             Assert.AreEqual("Naam: Onbekend - Emailadres: Onbekend - Functie: Onbekend - Adres: Onbekend - Postcode: Onbekend", medewerker.ToString());            
             Assert.AreEqual("ID: 1Naam: testnaamEmailadres: testemailFunctie: testfunctieAdres: testadresPostcode: testpostcode", medewerker.ToString(), "Fout bij medewerker");
+=======
+
+>>>>>>> origin/master
             medewerker = new Medewerker(1, "", "", "", "", "");
             Assert.AreEqual("ID: 1 - Naam: Onbekend - Emailadres: Onbekend - Functie: Onbekend - Adres: Onbekend - Postcode: Onbekend", medewerker.ToString());   
         }
@@ -158,22 +169,20 @@ namespace Unittests_ICT4Rails
         {
             //Add bestaande medewerker moet false geven
             Assert.IsTrue(administratie.AddMedewerker(medewerker));
-            /*
+            
             try
             {
                 administratie.AddMedewerker(medewerker);
                 Assert.Fail(); // If it gets to this line, no exception was thrown
             }
             catch (Exception) { }
-            */
+            
              
             //remove medewerker
-            //Assert.IsTrue(administratie.RemoveMedewerker(medewerker), "Remove Medewerker Fout");
+            Assert.IsTrue(administratie.RemoveMedewerker(medewerker), "Remove Medewerker Fout");
 
             //remove niet bestaande medewerker
-           // Assert.IsFalse(administratie.RemoveMedewerker(medewerker));
-            
-            //TODO
+            Assert.IsFalse(administratie.RemoveMedewerker(medewerker));
         }
 
         [TestMethod]
@@ -200,6 +209,25 @@ namespace Unittests_ICT4Rails
                 Assert.Fail(); // If it gets to this line, no exception was thrown
             }
             catch (Exception) { }
+        }
+        
+        [TestMethod]
+        public void AdministratieTramTest()
+        {
+            //toevoegen
+            Assert.IsTrue(administratie.AddTram(tram));
+
+            try
+            {
+                administratie.AddTram(tram);
+                Assert.Fail();
+            }
+            catch (Exception) { }
+
+
+            //Verwijderen
+            Assert.IsTrue(administratie.RemoveTram(tram));
+            Assert.IsFalse(administratie.RemoveTram(tram));
 
         }
 
@@ -212,7 +240,12 @@ namespace Unittests_ICT4Rails
         [TestMethod]
         public void GebruikerTest()
         {
-            //TODO
+            gebruiker = new Gebruiker(1, "testgebruikersnaam", "testwachtwoord");
+            Assert.AreEqual(1, gebruiker.ID);
+            Assert.AreEqual("testgebruikersnaam", gebruiker.GebruikersNaam);
+
+            Assert.IsTrue(gebruiker.LogIn("testwachtwoord"));
+            Assert.IsFalse(gebruiker.LogIn("foutwachtwoord"));
         }
     }
 }
