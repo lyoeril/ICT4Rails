@@ -13,7 +13,7 @@ namespace ICT4Rails
     {
         //username en password moeten nog worden ingevuld voor je eigen databaseinstellingen;
         private string errorMessage;
-        private static readonly string connectionString = "User Id=" + "--username--" + ";Password=" + "--password--" + ";Data Source=" + "//localhost:1521/XE" + ";";
+        private static readonly string connectionString = "User Id=" + "S24B" + ";Password=" + "S24B" + ";Data Source=" + "//localhost:1521/XE" + ";";
         
 
         public static OracleConnection Connection
