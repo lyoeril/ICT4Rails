@@ -55,16 +55,11 @@ namespace Unittests_ICT4Rails
 
             //ToString
             Assert.AreEqual("ID: 1 - Naam: testnaam - Emailadres: testemail - Functie: testfunctie - Adres: testadres - Postcode: testpostcode", medewerker.ToString(), "Fout bij medewerker");
-            Assert.AreEqual("testpostcode", medewerker.Postcode);
-
-            //ToString
-            Assert.AreEqual("Naam: testnaam - Emailadres: testemail - Functie: testfunctie - Adres: testadres - Postcode: testpostcode", medewerker.ToString());
+            
             medewerker = new Medewerker(1, "", "", "", "", "");
-            Assert.AreEqual("Naam: Onbekend - Emailadres: Onbekend - Functie: Onbekend - Adres: Onbekend - Postcode: Onbekend", medewerker.ToString());            
-            Assert.AreEqual("ID: 1Naam: testnaamEmailadres: testemailFunctie: testfunctieAdres: testadresPostcode: testpostcode", medewerker.ToString(), "Fout bij medewerker");
+            Assert.AreEqual("ID: 1 - Naam: Onbekend - Emailadres: Onbekend - Functie: Onbekend - Adres: Onbekend - Postcode: Onbekend", medewerker.ToString());        
+           
 
-            medewerker = new Medewerker(1, "", "", "", "", "");
-            Assert.AreEqual("ID: 1 - Naam: Onbekend - Emailadres: Onbekend - Functie: Onbekend - Adres: Onbekend - Postcode: Onbekend", medewerker.ToString());   
         }
         
         [TestMethod]
