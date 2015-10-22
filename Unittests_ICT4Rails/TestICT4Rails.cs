@@ -51,13 +51,6 @@ namespace Unittests_ICT4Rails
             Assert.AreEqual("testadres", medewerker.Adres);
             Assert.AreEqual("testpostcode", medewerker.Postcode);
 
-            
-
-            //In-en uitloggen
-            Assert.IsTrue(medewerker.LogIn());
-            Assert.IsTrue(medewerker.LogOut());
-
-
             //ToString
             Assert.AreEqual("Naam: testnaam - Emailadres: testemail - Functie: testfunctie - Adres: testadres - Postcode: testpostcode", medewerker.ToString());
             medewerker = new Medewerker(1, "", "", "", "", "");
@@ -198,6 +191,12 @@ namespace Unittests_ICT4Rails
 
         [TestMethod]
         public void DatabaseTest()
+        {
+            //TODO
+        }
+
+        [TestMethod]
+        public void GebruikerTest()
         {
             //TODO
         }
