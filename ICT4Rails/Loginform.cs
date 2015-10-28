@@ -13,6 +13,7 @@ namespace ICT4Rails
     public partial class LoginForm : Form
     {
         Administratie administratie;
+
         public LoginForm()
         {
             InitializeComponent();

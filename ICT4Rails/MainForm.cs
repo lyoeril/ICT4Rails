@@ -43,7 +43,6 @@ namespace ICT4Rails
                     l.Text = "";
                 }
             }
-
             this.tableLayoutPanel1.CellPaint += new TableLayoutCellPaintEventHandler(tableLayoutPanel1_CellPaint);
         }
 
@@ -51,13 +50,31 @@ namespace ICT4Rails
         {
             Graphics g = e.Graphics;
             Rectangle r = e.CellBounds;
-            if (e.Row == 0)
+            foreach (Label l in tableLayoutPanel1.Controls)
             {
-                g.FillRectangle(Brushes.Gray, r);
-            }
-            else if (e.Row == 1 && e.Column == 0)
-            {
-                g.FillRectangle(Brushes.LightBlue, r);
+                if (e.Row == tableLayoutPanel1.GetRow(l) && e.Column == tableLayoutPanel1.GetColumn(l))
+                {
+                    if (l.Text == "1")
+                    {
+                        g.FillRectangle(Brushes.LightGreen, r);
+                    }
+                    else if (l.Text == "2")
+                    {
+                        g.FillRectangle(Brushes.Yellow, r);
+                    }
+                    else if (l.Text == "5")
+                    {
+                        g.FillRectangle(Brushes.MediumPurple, r);
+                    }
+                    else if (l.Text == "10")
+                    {
+                        g.FillRectangle(Brushes.LightGray, r);
+                    }
+                    else if (l.Text == "16/24")
+                    {
+                        g.FillRectangle(Brushes.Brown, r);
+                    }
+                }
             }
         }
 

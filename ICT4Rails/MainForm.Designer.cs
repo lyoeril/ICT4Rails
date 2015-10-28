@@ -307,7 +307,7 @@
             this.lblOnderhoudDatum = new System.Windows.Forms.Label();
             this.lblOnderhoudMedewerker = new System.Windows.Forms.Label();
             this.cbxOnderhoudMedewerker = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblOnderhoudTramnummer = new System.Windows.Forms.Label();
             this.textBox223 = new System.Windows.Forms.TextBox();
             this.grbTramStatus = new System.Windows.Forms.GroupBox();
             this.btnStatusbeheerTramStatus = new System.Windows.Forms.Button();
@@ -3317,7 +3317,7 @@
             this.grbTramOnderhoud.Controls.Add(this.lblOnderhoudDatum);
             this.grbTramOnderhoud.Controls.Add(this.lblOnderhoudMedewerker);
             this.grbTramOnderhoud.Controls.Add(this.cbxOnderhoudMedewerker);
-            this.grbTramOnderhoud.Controls.Add(this.label1);
+            this.grbTramOnderhoud.Controls.Add(this.lblOnderhoudTramnummer);
             this.grbTramOnderhoud.Controls.Add(this.textBox223);
             this.grbTramOnderhoud.Location = new System.Drawing.Point(331, 6);
             this.grbTramOnderhoud.Name = "grbTramOnderhoud";
@@ -3436,14 +3436,14 @@
             this.cbxOnderhoudMedewerker.Size = new System.Drawing.Size(153, 24);
             this.cbxOnderhoudMedewerker.TabIndex = 5;
             // 
-            // label1
+            // lblOnderhoudTramnummer
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 39);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 17);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Tramnummer:";
+            this.lblOnderhoudTramnummer.AutoSize = true;
+            this.lblOnderhoudTramnummer.Location = new System.Drawing.Point(10, 39);
+            this.lblOnderhoudTramnummer.Name = "lblOnderhoudTramnummer";
+            this.lblOnderhoudTramnummer.Size = new System.Drawing.Size(96, 17);
+            this.lblOnderhoudTramnummer.TabIndex = 3;
+            this.lblOnderhoudTramnummer.Text = "Tramnummer:";
             // 
             // textBox223
             // 
@@ -3773,7 +3773,7 @@
         private System.Windows.Forms.Label lblOnderhoudDatum;
         private System.Windows.Forms.Label lblOnderhoudMedewerker;
         private System.Windows.Forms.ComboBox cbxOnderhoudMedewerker;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblOnderhoudTramnummer;
         private System.Windows.Forms.TextBox textBox223;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label9;

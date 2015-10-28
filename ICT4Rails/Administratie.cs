@@ -32,7 +32,7 @@ namespace ICT4Rails
         /* alles voor de beheerder */
         public bool AddMedewerker(Medewerker medewerker)
         {
-            if(FindMedewerker(medewerker.ID) != null)
+            if (FindMedewerker(medewerker.ID) != null)
             {
                 //throw new Exception("De medewerker bestaat al!"); exception kan hier niet omdat een exception de methode break't, de return false code wordt niet uitgevoerd en dan wordt er niets gereturnd
                 return false;
@@ -70,8 +70,7 @@ namespace ICT4Rails
         public bool ChangeMedewerker(Medewerker medewerker)
         {
             // TO DO
-            return false;
-
+            throw new NotImplementedException();
         }
 
         public bool AddTram(Tram tram)
