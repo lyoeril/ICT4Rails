@@ -88,6 +88,53 @@ namespace ICT4Rails
                     }
                 }
             }
+            // Geeft alle spoor labels de correcte text
+            foreach (Label l in tableLayoutPanel1.Controls)
+            {
+                if ((string)l.Tag == "0, 0") { l.Text = "38"; }
+                else if ((string)l.Tag == "1, 0") { l.Text = "37"; }
+                else if ((string)l.Tag == "2, 0") { l.Text = "36"; }
+                else if ((string)l.Tag == "3, 0") { l.Text = "35"; }
+                else if ((string)l.Tag == "4, 0") { l.Text = "34"; }
+                else if ((string)l.Tag == "5, 0") { l.Text = "33"; }
+                else if ((string)l.Tag == "6, 0") { l.Text = "32"; }
+                else if ((string)l.Tag == "7, 0") { l.Text = "31"; }
+                else if ((string)l.Tag == "8, 0") { l.Text = "30"; }
+                else if ((string)l.Tag == "10, 0") { l.Text = "40"; }
+                else if ((string)l.Tag == "11, 0") { l.Text = "41"; }
+                else if ((string)l.Tag == "12, 0") { l.Text = "42"; }
+                else if ((string)l.Tag == "13, 0") { l.Text = "43"; }
+                else if ((string)l.Tag == "14, 0") { l.Text = "44"; }
+                else if ((string)l.Tag == "16, 0") { l.Text = "45"; }
+                else if ((string)l.Tag == "18, 0") { l.Text = "58"; }
+
+                else if ((string)l.Tag == "0, 13") { l.Text = "57"; }
+                else if ((string)l.Tag == "1, 13") { l.Text = "56"; }
+                else if ((string)l.Tag == "2, 13") { l.Text = "55"; }
+                else if ((string)l.Tag == "3, 13") { l.Text = "54"; }
+                else if ((string)l.Tag == "4, 13") { l.Text = "53"; }
+                else if ((string)l.Tag == "5, 13") { l.Text = "52"; }
+                else if ((string)l.Tag == "6, 13") { l.Text = "51"; }
+                else if ((string)l.Tag == "7, 13") { l.Text = "64"; }
+                else if ((string)l.Tag == "8, 13") { l.Text = "63"; }
+                else if ((string)l.Tag == "9, 13") { l.Text = "62"; }
+                else if ((string)l.Tag == "10, 13") { l.Text = "61"; }
+                else if ((string)l.Tag == "12, 13") { l.Text = "74"; }
+                else if ((string)l.Tag == "13, 13") { l.Text = "75"; }
+                else if ((string)l.Tag == "14, 13") { l.Text = "76"; }
+                else if ((string)l.Tag == "15, 13") { l.Text = "77"; }
+
+                else if ((string)l.Tag == "17, 13") { l.Text = "12"; }
+                else if ((string)l.Tag == "17, 14") { l.Text = "13"; }
+                else if ((string)l.Tag == "17, 15") { l.Text = "14"; }
+                else if ((string)l.Tag == "17, 16") { l.Text = "15"; }
+                else if ((string)l.Tag == "17, 17") { l.Text = "16"; }
+                else if ((string)l.Tag == "17, 18") { l.Text = "17"; }
+                else if ((string)l.Tag == "17, 19") { l.Text = "18"; }
+                else if ((string)l.Tag == "17, 20") { l.Text = "19"; }
+                else if ((string)l.Tag == "17, 21") { l.Text = "20"; }
+                else if ((string)l.Tag == "17, 22") { l.Text = "21"; }
+            }
         }
 
         // Deze methode is er zodat de onderstaande code niet nog langer wordt

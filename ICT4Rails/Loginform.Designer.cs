@@ -96,7 +96,7 @@
             this.lblPassword.TabIndex = 13;
             this.lblPassword.Text = "Wachtwoord:";
             // 
-            // Loginform
+            // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -108,7 +108,7 @@
             this.Controls.Add(this.tbxPassword);
             this.Controls.Add(this.lblPassword);
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Loginform";
+            this.Name = "LoginForm";
             this.Text = "Login";
             this.ResumeLayout(false);
             this.PerformLayout();

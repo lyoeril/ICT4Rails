@@ -9,11 +9,14 @@ using Oracle.ManagedDataAccess.Types;
 
 namespace ICT4Rails
 {
-    class Database
+    public class Database
     {
         //username en password moeten nog worden ingevuld voor je eigen databaseinstellingen;
         private string errorMessage;
-        private static readonly string connectionString = "User Id=" + "S24B" + ";Password=" + "S24B" + ";Data Source=" + "//localhost:1521/XE" + ";";
+        private static string dataUser = "S24B";
+        private static string dataPass = "S24B";
+        private static string dataSrc = "//localhost:1521/XE";
+        private static readonly string connectionString = "User Id=" + dataUser + ";Password=" + dataPass + ";Data Source=" + dataSrc + ";";
         
 
         public static OracleConnection Connection
