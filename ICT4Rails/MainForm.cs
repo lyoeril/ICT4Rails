@@ -13,10 +13,20 @@ namespace ICT4Rails
 {
     public partial class MainForm : Form
     {
+        private Label[][] Sporen;
+
         public MainForm()
         {
             InitializeComponent();
+            LogIn();
+            VulSporen();
+            Sporen = SporenArray();
 
+            this.tableLayoutPanel1.CellPaint += new TableLayoutCellPaintEventHandler(tableLayoutPanel1_CellPaint);
+        }
+
+        private void LogIn()
+        {
             if (Program.loggedIn.GebruikersNaam == "qwer")
             {
                 tabcontrolRemise.Controls.Remove(tabpageRemiseOverzicht);
@@ -33,17 +43,108 @@ namespace ICT4Rails
                 tabcontrolRemise.TabPages.Insert(3, tabpageAccountBeheer);
                 tabcontrolRemise.TabPages.Insert(4, tabPage4);
             }
+        }
 
-            //if(tabcontrolRemise.SelectedTab == tabcontrolRemise.TabPages["AccountBeheer"])
-            //{
-            foreach (Label l in tableLayoutPanel1.Controls)
+        // Overzichttab
+
+        // Vult TableLayoutPanel met labels op de correcte locaties
+        private void VulSporen()
+        {
+            tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            int labelCount = 1;
+            for (int x = 0; x < 19; x++)
             {
-                if (l.Text.StartsWith("label"))
+                for (int y = 0; y < 23; y++)
                 {
-                    l.Text = "";
+                    if (x >= 3 && x <= 16 && y == 22 ||
+                        x >= 6 && x <= 16 && y == 21 ||
+                        x >= 7 && x <= 9 && y == 5 ||
+                        x >= 7 && x <= 16 && y == 20 ||
+                        x >= 8 && x <= 16 && y == 19 ||
+                        x == 9 && y <= 5 ||
+                        x <= 9 && y >= 6 && y <= 12 ||
+                        x >= 9 && x <= 11 && y == 18 ||
+                        x == 10 && y >= 9 && y <= 12 ||
+                        x >= 11 && x <= 15 && y >= 6 && y <= 12 ||
+                        x == 11 && y >= 13 && y <= 17 ||
+                        x == 13 && y == 18 ||
+                        x == 15 && y <= 5 ||
+                        x == 16 && y >= 11 && y <= 18 ||
+                        x == 17 && y <= 5 ||
+                        x >= 17 && y >= 6 && y <= 12)
+                    {
+                        // niks
+                    }
+                    else
+                    {
+                        Label label = new Label();
+                        label.Anchor = System.Windows.Forms.AnchorStyles.None;
+                        label.AutoSize = true;
+                        label.Name = "label" + Convert.ToString(labelCount);
+                        label.Tag = Convert.ToString(x) + ", " + Convert.ToString(y);
+                        label.Text = Convert.ToString(x) + ", " + Convert.ToString(y);
+                        tableLayoutPanel1.Controls.Add(label, x, y);
+                        labelCount++;
+                    }
                 }
             }
-            this.tableLayoutPanel1.CellPaint += new TableLayoutCellPaintEventHandler(tableLayoutPanel1_CellPaint);
+        }
+
+        // Deze methode is er zodat de onderstaande code niet nog langer wordt
+        private Label GetLabel(int x, int y)
+        {
+            Label label = (Label)tableLayoutPanel1.GetControlFromPosition(x, y);
+            return label;
+        }
+
+        // Stopt alle sectorLabels in spoorArrays en de spoor arrays in een collectieve sporenArray
+        private Label[][] SporenArray()
+        {
+            Label[][] sporenArray = new Label[78][];
+
+            sporenArray[12] = new Label[1] { GetLabel(18, 13) };
+            sporenArray[13] = new Label[1] { GetLabel(18, 14) };
+            sporenArray[14] = new Label[1] { GetLabel(18, 15) };
+            sporenArray[15] = new Label[1] { GetLabel(18, 16) };
+            sporenArray[16] = new Label[1] { GetLabel(18, 17) };
+            sporenArray[17] = new Label[1] { GetLabel(18, 18) };
+            sporenArray[18] = new Label[1] { GetLabel(18, 19) };
+            sporenArray[19] = new Label[1] { GetLabel(18, 20) };
+            sporenArray[20] = new Label[1] { GetLabel(18, 21) };
+            sporenArray[21] = new Label[1] { GetLabel(18, 22) };
+            sporenArray[30] = new Label[4] { GetLabel(8, 1), GetLabel(8, 2), GetLabel(8, 3), GetLabel(8, 4) };
+            sporenArray[31] = new Label[4] { GetLabel(7, 1), GetLabel(7, 2), GetLabel(7, 3), GetLabel(7, 4) };
+            sporenArray[32] = new Label[5] { GetLabel(6, 1), GetLabel(6, 2), GetLabel(6, 3), GetLabel(6, 4), GetLabel(6, 5) };
+            sporenArray[33] = new Label[5] { GetLabel(5, 1), GetLabel(5, 2), GetLabel(5, 3), GetLabel(5, 4), GetLabel(5, 5) };
+            sporenArray[34] = new Label[5] { GetLabel(4, 1), GetLabel(4, 2), GetLabel(4, 3), GetLabel(4, 4), GetLabel(4, 5) };
+            sporenArray[35] = new Label[5] { GetLabel(3, 1), GetLabel(3, 2), GetLabel(3, 3), GetLabel(3, 4), GetLabel(3, 5) };
+            sporenArray[36] = new Label[5] { GetLabel(2, 1), GetLabel(2, 2), GetLabel(2, 3), GetLabel(2, 4), GetLabel(2, 5) };
+            sporenArray[37] = new Label[5] { GetLabel(1, 1), GetLabel(1, 2), GetLabel(1, 3), GetLabel(1, 4), GetLabel(1, 5) };
+            sporenArray[38] = new Label[5] { GetLabel(0, 1), GetLabel(0, 2), GetLabel(0, 3), GetLabel(0, 4), GetLabel(0, 5) };
+            sporenArray[40] = new Label[8] { GetLabel(10, 1), GetLabel(10, 2), GetLabel(10, 3), GetLabel(10, 4), GetLabel(10, 5), GetLabel(10, 6), GetLabel(10, 7), GetLabel(10, 8) };
+            sporenArray[41] = new Label[5] { GetLabel(11, 1), GetLabel(11, 2), GetLabel(11, 3), GetLabel(11, 4), GetLabel(11, 5) };
+            sporenArray[42] = new Label[5] { GetLabel(12, 1), GetLabel(12, 2), GetLabel(12, 3), GetLabel(12, 4), GetLabel(12, 5) };
+            sporenArray[43] = new Label[5] { GetLabel(13, 1), GetLabel(13, 2), GetLabel(13, 3), GetLabel(13, 4), GetLabel(13, 5) };
+            sporenArray[44] = new Label[5] { GetLabel(14, 1), GetLabel(14, 2), GetLabel(14, 3), GetLabel(14, 4), GetLabel(14, 5) };
+            sporenArray[45] = new Label[10] { GetLabel(16, 1), GetLabel(16, 2), GetLabel(16, 3), GetLabel(16, 4), GetLabel(16, 5), GetLabel(16, 6), GetLabel(16, 7), GetLabel(16, 8), GetLabel(16, 9), GetLabel(16, 10) };
+            sporenArray[51] = new Label[7] { GetLabel(6, 14), GetLabel(6, 15), GetLabel(6, 16), GetLabel(6, 17), GetLabel(6, 18), GetLabel(6, 19), GetLabel(6, 20) };
+            sporenArray[52] = new Label[8] { GetLabel(5, 14), GetLabel(5, 15), GetLabel(5, 16), GetLabel(5, 17), GetLabel(5, 18), GetLabel(5, 19), GetLabel(5, 20), GetLabel(5, 21) };
+            sporenArray[53] = new Label[8] { GetLabel(4, 14), GetLabel(4, 15), GetLabel(4, 16), GetLabel(4, 17), GetLabel(4, 18), GetLabel(4, 19), GetLabel(4, 20), GetLabel(4, 21) };
+            sporenArray[54] = new Label[8] { GetLabel(3, 14), GetLabel(3, 15), GetLabel(3, 16), GetLabel(3, 17), GetLabel(3, 18), GetLabel(3, 19), GetLabel(3, 20), GetLabel(3, 21) };
+            sporenArray[55] = new Label[9] { GetLabel(2, 14), GetLabel(2, 15), GetLabel(2, 16), GetLabel(2, 17), GetLabel(2, 18), GetLabel(2, 19), GetLabel(2, 20), GetLabel(2, 21), GetLabel(2, 22) };
+            sporenArray[56] = new Label[9] { GetLabel(1, 14), GetLabel(1, 15), GetLabel(1, 16), GetLabel(1, 17), GetLabel(1, 18), GetLabel(1, 19), GetLabel(1, 20), GetLabel(1, 21), GetLabel(1, 22) };
+            sporenArray[57] = new Label[9] { GetLabel(0, 14), GetLabel(0, 15), GetLabel(0, 16), GetLabel(0, 17), GetLabel(0, 18), GetLabel(0, 19), GetLabel(0, 20), GetLabel(0, 21), GetLabel(0, 22) };
+            sporenArray[58] = new Label[6] { GetLabel(18, 1), GetLabel(18, 2), GetLabel(18, 3), GetLabel(18, 4), GetLabel(18, 5), GetLabel(18, 6) };
+            sporenArray[61] = new Label[4] { GetLabel(10, 14), GetLabel(10, 15), GetLabel(10, 16), GetLabel(10, 17) };
+            sporenArray[62] = new Label[4] { GetLabel(9, 14), GetLabel(9, 15), GetLabel(9, 16), GetLabel(9, 17) };
+            sporenArray[63] = new Label[5] { GetLabel(8, 14), GetLabel(8, 15), GetLabel(8, 16), GetLabel(8, 17), GetLabel(8, 18) };
+            sporenArray[64] = new Label[6] { GetLabel(7, 14), GetLabel(7, 15), GetLabel(7, 16), GetLabel(7, 17), GetLabel(7, 18), GetLabel(7, 19) };
+            sporenArray[74] = new Label[5] { GetLabel(12, 14), GetLabel(12, 15), GetLabel(12, 16), GetLabel(12, 17), GetLabel(12, 18) };
+            sporenArray[75] = new Label[4] { GetLabel(13, 14), GetLabel(13, 15), GetLabel(13, 16), GetLabel(13, 17) };
+            sporenArray[76] = new Label[5] { GetLabel(14, 14), GetLabel(14, 15), GetLabel(14, 16), GetLabel(14, 17), GetLabel(14, 18) };
+            sporenArray[77] = new Label[5] { GetLabel(15, 14), GetLabel(15, 15), GetLabel(15, 16), GetLabel(15, 17), GetLabel(15, 18) };
+
+            return sporenArray;
         }
 
         private void tableLayoutPanel1_CellPaint(object sender, TableLayoutCellPaintEventArgs e)
@@ -77,10 +178,6 @@ namespace ICT4Rails
                 }
             }
         }
-
-        // Overzichttab
-
-        // [insert code here]
 
         // Beheertab
 
@@ -149,13 +246,8 @@ namespace ICT4Rails
             tbxStatusbeheerTramNummer.Text = "";
         }
 
-      
-
         //AccountBeheer
-      
-
-
-
+        
         private void RefreshUI()
         {
             lbAccountMedewerkers.Text = "";
