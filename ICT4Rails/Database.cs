@@ -48,6 +48,21 @@ namespace ICT4Rails
             }
             return Medewerkers;
         }
+        public void InsertMedewerker(string naam, string email, string functie, string adres, string postcode)
+        {
+            using (OracleConnection connection = Connection)
+            {
+                string Insert = "INSERT INTO MEDEWERKER (ID, Naam, Email, Functie, Adres, Postcode) VALUES (seq_Medewerker_ID.nextval" + ",'" + naam + "','" + email + "','" + functie + "','" + adres + "','" + postcode + "')";
+                //INSERT INTO MEDEWERKER (ID, Naam, Email, Functie, Adres, Postcode)
+                // VALUES(seq_Medewerker_ID.nextval, 'Mario', 'Mario@hotmail.com', 'BEHEERDER', 'Vlaamseweg 9', '4458ND');
+
+                using (OracleCommand command = new OracleCommand(Insert, connection))
+                {
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
 
         private Medewerker CreateMedewerkerFromReader(OracleDataReader reader)
         {
@@ -132,6 +147,7 @@ namespace ICT4Rails
             }
             return null;
         }
+        
 
         private Tram CreateTramFromReader(OracleDataReader reader)
         {

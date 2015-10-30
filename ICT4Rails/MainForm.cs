@@ -294,15 +294,36 @@ namespace ICT4Rails
         }
 
         //AccountBeheer
-        
-        private void RefreshUI()
+
+        //AccountBeheer
+
+        private void vullMederwerkerList()
         {
             lbAccountMedewerkers.Text = "";
         }
 
+
+
+
+
+
         private void btnAccountToevoegen_Click(object sender, EventArgs e)
         {
+            string Cbkeuze = cbAccountFunctie.SelectedItem.ToString();
+            Database d;
+            d = new Database();
+            d.InsertMedewerker(tbxAccountNaam.Text, tbxAccountEmail.Text, Cbkeuze, tbxAccountStrtNR.Text, tbxAccountPostcode.Text);
 
+        }
+
+        private void OpenAccountUI()
+        {
+            btnAccountToevoegen.Enabled = true;
+            tbxAccountEmail.Enabled = true;
+            tbxAccountNaam.Enabled = true;
+            tbxAccountPostcode.Enabled = true;
+            tbxAccountStrtNR.Enabled = true;
+            cbAccountFunctie.Enabled = true;
         }
     }
 }
