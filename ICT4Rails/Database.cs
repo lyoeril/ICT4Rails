@@ -53,9 +53,6 @@ namespace ICT4Rails
             using (OracleConnection connection = Connection)
             {
                 string Insert = "INSERT INTO MEDEWERKER (ID, Naam, Email, Functie, Adres, Postcode) VALUES (seq_Medewerker_ID.nextval" + ",'" + naam + "','" + email + "','" + functie + "','" + adres + "','" + postcode + "')";
-                //INSERT INTO MEDEWERKER (ID, Naam, Email, Functie, Adres, Postcode)
-                // VALUES(seq_Medewerker_ID.nextval, 'Mario', 'Mario@hotmail.com', 'BEHEERDER', 'Vlaamseweg 9', '4458ND');
-
                 using (OracleCommand command = new OracleCommand(Insert, connection))
                 {
                     command.ExecuteNonQuery();

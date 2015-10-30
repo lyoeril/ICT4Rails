@@ -726,7 +726,7 @@
             this.lbAccountMedewerkers.ItemHeight = 16;
             this.lbAccountMedewerkers.Location = new System.Drawing.Point(347, 17);
             this.lbAccountMedewerkers.Name = "lbAccountMedewerkers";
-            this.lbAccountMedewerkers.Size = new System.Drawing.Size(556, 564);
+            this.lbAccountMedewerkers.Size = new System.Drawing.Size(1140, 564);
             this.lbAccountMedewerkers.TabIndex = 2;
             // 
             // grbAccountNMedewerker

@@ -15,12 +15,18 @@ namespace ICT4Rails
     {
         private Label[][] Sporen;
 
+        //Medewerker
+        
+        List<Medewerker> medewerkers;
+        
+
         public MainForm()
         {
             InitializeComponent();
             LogIn();
             VulSporen();
             Sporen = SporenArray();
+            vullMederwerkerList();
 
             this.tableLayoutPanel1.CellPaint += new TableLayoutCellPaintEventHandler(tableLayoutPanel1_CellPaint);
         }
@@ -295,11 +301,16 @@ namespace ICT4Rails
 
         //AccountBeheer
 
-        //AccountBeheer
-
         private void vullMederwerkerList()
         {
-            lbAccountMedewerkers.Text = "";
+            lbAccountMedewerkers.Items.Clear();
+            Database DataMed = new Database();
+            medewerkers = DataMed.GetAllMedewerkers();
+
+            foreach(Medewerker medewerker in medewerkers)
+            {
+                lbAccountMedewerkers.Items.Add(medewerker);
+            }
         }
 
 
@@ -310,9 +321,8 @@ namespace ICT4Rails
         private void btnAccountToevoegen_Click(object sender, EventArgs e)
         {
             string Cbkeuze = cbAccountFunctie.SelectedItem.ToString();
-            Database d;
-            d = new Database();
-            d.InsertMedewerker(tbxAccountNaam.Text, tbxAccountEmail.Text, Cbkeuze, tbxAccountStrtNR.Text, tbxAccountPostcode.Text);
+            Database DataMed = new Database();
+            DataMed.InsertMedewerker(tbxAccountNaam.Text, tbxAccountEmail.Text, Cbkeuze, tbxAccountStrtNR.Text, tbxAccountPostcode.Text);
 
         }
 
