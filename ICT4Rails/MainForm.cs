@@ -18,7 +18,10 @@ namespace ICT4Rails
         //Medewerker
         
         List<Medewerker> medewerkers;
+        Database DataMed = new Database();
+
         
+
 
         public MainForm()
         {
@@ -27,6 +30,7 @@ namespace ICT4Rails
             VulSporen();
             Sporen = SporenArray();
             vullMederwerkerList();
+            OpenAccountUI();
 
             this.tableLayoutPanel1.CellPaint += new TableLayoutCellPaintEventHandler(tableLayoutPanel1_CellPaint);
         }
@@ -304,26 +308,36 @@ namespace ICT4Rails
         private void vullMederwerkerList()
         {
             lbAccountMedewerkers.Items.Clear();
-            Database DataMed = new Database();
             medewerkers = DataMed.GetAllMedewerkers();
-
-            foreach(Medewerker medewerker in medewerkers)
+            // Haal alle medewerkers op van database
+            foreach (Medewerker medewerker in medewerkers)
             {
                 lbAccountMedewerkers.Items.Add(medewerker);
             }
         }
 
-
-
-
-
-
         private void btnAccountToevoegen_Click(object sender, EventArgs e)
         {
-            string Cbkeuze = cbAccountFunctie.SelectedItem.ToString();
-            Database DataMed = new Database();
-            DataMed.InsertMedewerker(tbxAccountNaam.Text, tbxAccountEmail.Text, Cbkeuze, tbxAccountStrtNR.Text, tbxAccountPostcode.Text);
 
+            if (tbxAccountEmail.Text.Contains('@') && tbxAccountEmail.Text.Contains('.'))
+            {
+                if (cbAccountFunctie.SelectedItem == null)
+                {
+                    MessageBox.Show("Geef een functie op voor de medewerker die u aan het toevoegen bent.");
+                }
+                else
+                {
+                    string Cbkeuze = cbAccountFunctie.SelectedItem.ToString();
+                    DataMed.InsertMedewerker(tbxAccountNaam.Text, tbxAccountEmail.Text, Cbkeuze, tbxAccountStrtNR.Text, tbxAccountPostcode.Text);
+                }
+                //Medewerker toevoegen aan datbase
+                vullMederwerkerList();
+            }
+            else
+            {
+                MessageBox.Show("Email is niet geldig gevonden door het systeem.");
+            }
+          
         }
 
         private void OpenAccountUI()
@@ -334,6 +348,29 @@ namespace ICT4Rails
             tbxAccountPostcode.Enabled = true;
             tbxAccountStrtNR.Enabled = true;
             cbAccountFunctie.Enabled = true;
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("TEST", "ENZO",
+            MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
+            
+        }
+
+        private void lbAccountMedewerkers_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lbAccountMedewerkers.SelectedItem != null)
+            {
+                Medewerker medewerker = lbAccountMedewerkers.SelectedItem as Medewerker;
+                int MedID = medewerker.ID;
+                enableButtons();
+            }
+        }
+
+        private void enableButtons()
+        {
+            // knopjes hier toevoegen.... WJSIKFK USEijfhledf
         }
     }
 }

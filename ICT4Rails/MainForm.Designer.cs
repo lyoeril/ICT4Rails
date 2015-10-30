@@ -98,6 +98,8 @@
             this.label239 = new System.Windows.Forms.Label();
             this.grbAccountBeheerNieuwAccount = new System.Windows.Forms.GroupBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.AccountUsername = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabcontrolRemise.SuspendLayout();
             this.tabpageRemiseOverzicht.SuspendLayout();
             this.tabpageRemiseBeheer.SuspendLayout();
@@ -109,6 +111,7 @@
             this.grbTramStatus.SuspendLayout();
             this.tabpageAccountBeheer.SuspendLayout();
             this.grbAccountNMedewerker.SuspendLayout();
+            this.grbAccountBeheerNieuwAccount.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabcontrolRemise
@@ -728,6 +731,7 @@
             this.lbAccountMedewerkers.Name = "lbAccountMedewerkers";
             this.lbAccountMedewerkers.Size = new System.Drawing.Size(1140, 564);
             this.lbAccountMedewerkers.TabIndex = 2;
+            this.lbAccountMedewerkers.SelectedIndexChanged += new System.EventHandler(this.lbAccountMedewerkers_SelectedIndexChanged);
             // 
             // grbAccountNMedewerker
             // 
@@ -763,6 +767,7 @@
             // 
             this.tbxAccountPostcode.Enabled = false;
             this.tbxAccountPostcode.Location = new System.Drawing.Point(160, 148);
+            this.tbxAccountPostcode.MaxLength = 6;
             this.tbxAccountPostcode.Name = "tbxAccountPostcode";
             this.tbxAccountPostcode.Size = new System.Drawing.Size(153, 22);
             this.tbxAccountPostcode.TabIndex = 13;
@@ -809,6 +814,11 @@
             this.cbAccountFunctie.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbAccountFunctie.Enabled = false;
             this.cbAccountFunctie.FormattingEnabled = true;
+            this.cbAccountFunctie.Items.AddRange(new object[] {
+            "SCHOONMAKER",
+            "REPARATEUR",
+            "BEHEERDER",
+            "WAGENPARKBEHEERDER"});
             this.cbAccountFunctie.Location = new System.Drawing.Point(160, 90);
             this.cbAccountFunctie.Name = "cbAccountFunctie";
             this.cbAccountFunctie.Size = new System.Drawing.Size(153, 24);
@@ -858,6 +868,8 @@
             // 
             // grbAccountBeheerNieuwAccount
             // 
+            this.grbAccountBeheerNieuwAccount.Controls.Add(this.button1);
+            this.grbAccountBeheerNieuwAccount.Controls.Add(this.AccountUsername);
             this.grbAccountBeheerNieuwAccount.Location = new System.Drawing.Point(6, 253);
             this.grbAccountBeheerNieuwAccount.Name = "grbAccountBeheerNieuwAccount";
             this.grbAccountBeheerNieuwAccount.Size = new System.Drawing.Size(326, 328);
@@ -874,6 +886,24 @@
             this.tabPage4.TabIndex = 4;
             this.tabPage4.Text = "tabPage4";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // AccountUsername
+            // 
+            this.AccountUsername.Enabled = false;
+            this.AccountUsername.Location = new System.Drawing.Point(160, 65);
+            this.AccountUsername.Name = "AccountUsername";
+            this.AccountUsername.Size = new System.Drawing.Size(153, 22);
+            this.AccountUsername.TabIndex = 2;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(238, 282);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Upgrade";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // MainForm
             // 
@@ -902,6 +932,8 @@
             this.tabpageAccountBeheer.ResumeLayout(false);
             this.grbAccountNMedewerker.ResumeLayout(false);
             this.grbAccountNMedewerker.PerformLayout();
+            this.grbAccountBeheerNieuwAccount.ResumeLayout(false);
+            this.grbAccountBeheerNieuwAccount.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -978,5 +1010,7 @@
         private System.Windows.Forms.Label lblAccountStrtNR;
         private System.Windows.Forms.ListBox lbAccountMedewerkers;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TextBox AccountUsername;
+        private System.Windows.Forms.Button button1;
     }
 }
