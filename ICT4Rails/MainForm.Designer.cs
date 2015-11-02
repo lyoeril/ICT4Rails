@@ -97,9 +97,12 @@
             this.tbxAccountNaam = new System.Windows.Forms.TextBox();
             this.label239 = new System.Windows.Forms.Label();
             this.grbAccountBeheerNieuwAccount = new System.Windows.Forms.GroupBox();
+            this.BtnAccountInlogToevoegen = new System.Windows.Forms.Button();
+            this.tbxAccountUsername = new System.Windows.Forms.TextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.AccountUsername = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.tbxAccountWachtwoord = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.tabcontrolRemise.SuspendLayout();
             this.tabpageRemiseOverzicht.SuspendLayout();
             this.tabpageRemiseBeheer.SuspendLayout();
@@ -868,14 +871,35 @@
             // 
             // grbAccountBeheerNieuwAccount
             // 
-            this.grbAccountBeheerNieuwAccount.Controls.Add(this.button1);
-            this.grbAccountBeheerNieuwAccount.Controls.Add(this.AccountUsername);
+            this.grbAccountBeheerNieuwAccount.Controls.Add(this.label2);
+            this.grbAccountBeheerNieuwAccount.Controls.Add(this.label1);
+            this.grbAccountBeheerNieuwAccount.Controls.Add(this.tbxAccountWachtwoord);
+            this.grbAccountBeheerNieuwAccount.Controls.Add(this.BtnAccountInlogToevoegen);
+            this.grbAccountBeheerNieuwAccount.Controls.Add(this.tbxAccountUsername);
             this.grbAccountBeheerNieuwAccount.Location = new System.Drawing.Point(6, 253);
             this.grbAccountBeheerNieuwAccount.Name = "grbAccountBeheerNieuwAccount";
             this.grbAccountBeheerNieuwAccount.Size = new System.Drawing.Size(326, 328);
             this.grbAccountBeheerNieuwAccount.TabIndex = 0;
             this.grbAccountBeheerNieuwAccount.TabStop = false;
             this.grbAccountBeheerNieuwAccount.Text = "Nieuw Account";
+            // 
+            // BtnAccountInlogToevoegen
+            // 
+            this.BtnAccountInlogToevoegen.Location = new System.Drawing.Point(201, 154);
+            this.BtnAccountInlogToevoegen.Name = "BtnAccountInlogToevoegen";
+            this.BtnAccountInlogToevoegen.Size = new System.Drawing.Size(103, 27);
+            this.BtnAccountInlogToevoegen.TabIndex = 3;
+            this.BtnAccountInlogToevoegen.Text = "Toevoegen";
+            this.BtnAccountInlogToevoegen.UseVisualStyleBackColor = true;
+            this.BtnAccountInlogToevoegen.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // tbxAccountUsername
+            // 
+            this.tbxAccountUsername.Enabled = false;
+            this.tbxAccountUsername.Location = new System.Drawing.Point(151, 83);
+            this.tbxAccountUsername.Name = "tbxAccountUsername";
+            this.tbxAccountUsername.Size = new System.Drawing.Size(153, 22);
+            this.tbxAccountUsername.TabIndex = 2;
             // 
             // tabPage4
             // 
@@ -887,23 +911,32 @@
             this.tabPage4.Text = "tabPage4";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // AccountUsername
+            // tbxAccountWachtwoord
             // 
-            this.AccountUsername.Enabled = false;
-            this.AccountUsername.Location = new System.Drawing.Point(160, 65);
-            this.AccountUsername.Name = "AccountUsername";
-            this.AccountUsername.Size = new System.Drawing.Size(153, 22);
-            this.AccountUsername.TabIndex = 2;
+            this.tbxAccountWachtwoord.Enabled = false;
+            this.tbxAccountWachtwoord.Location = new System.Drawing.Point(151, 109);
+            this.tbxAccountWachtwoord.MaxLength = 25;
+            this.tbxAccountWachtwoord.Name = "tbxAccountWachtwoord";
+            this.tbxAccountWachtwoord.Size = new System.Drawing.Size(153, 22);
+            this.tbxAccountWachtwoord.TabIndex = 15;
             // 
-            // button1
+            // label1
             // 
-            this.button1.Location = new System.Drawing.Point(238, 282);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Upgrade";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(9, 86);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(117, 17);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Gebruikersnaam:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(9, 112);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(90, 17);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Wachtwoord:";
             // 
             // MainForm
             // 
@@ -1010,7 +1043,10 @@
         private System.Windows.Forms.Label lblAccountStrtNR;
         private System.Windows.Forms.ListBox lbAccountMedewerkers;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.TextBox AccountUsername;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox tbxAccountUsername;
+        private System.Windows.Forms.Button BtnAccountInlogToevoegen;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox tbxAccountWachtwoord;
     }
 }

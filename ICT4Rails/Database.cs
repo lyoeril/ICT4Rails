@@ -59,6 +59,18 @@ namespace ICT4Rails
             }
         }
 
+        public void InsertGebruiker(string gebruikersnaam, int medewerkerID, string wachtwoord)
+        {
+            using (OracleConnection connection = Connection)
+            {
+                string Insert = "INSERT INTO GEBRUIKER (Gebruikersnaam, MedewerkerID, Wachtwoord) VALUES (" + "'" + gebruikersnaam + "'," + medewerkerID + ",'" + wachtwoord + "')";
+                using (OracleCommand command = new OracleCommand(Insert, connection))
+                {
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
 
         private Medewerker CreateMedewerkerFromReader(OracleDataReader reader)
         {

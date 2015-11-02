@@ -19,8 +19,10 @@ namespace ICT4Rails
         
         List<Medewerker> medewerkers;
         Database DataMed = new Database();
+        Administratie administratie = new Administratie();
+        public int MedID;
 
-        
+
 
 
         public MainForm()
@@ -353,6 +355,8 @@ namespace ICT4Rails
 
         private void button1_Click(object sender, EventArgs e)
         {
+            administratie.FindMedewerker(MedID);
+            DataMed.InsertGebruiker(tbxAccountUsername.Text, MedID, tbxAccountWachtwoord.Text);
             MessageBox.Show("TEST", "ENZO",
             MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
             
@@ -363,14 +367,16 @@ namespace ICT4Rails
             if (lbAccountMedewerkers.SelectedItem != null)
             {
                 Medewerker medewerker = lbAccountMedewerkers.SelectedItem as Medewerker;
-                int MedID = medewerker.ID;
+                MedID = medewerker.ID;
                 enableButtons();
             }
         }
 
         private void enableButtons()
         {
-            // knopjes hier toevoegen.... WJSIKFK USEijfhledf
+            tbxAccountUsername.Enabled = true;
+            tbxAccountWachtwoord.Enabled = true;
+            BtnAccountInlogToevoegen.Enabled = true;
         }
     }
 }
