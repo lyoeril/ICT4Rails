@@ -12,12 +12,11 @@ namespace ICT4Rails
     public class Database
     {
         //username en password moeten nog worden ingevuld voor je eigen databaseinstellingen;
-        private string errorMessage;
         private static string dataUser = "S24B";
         private static string dataPass = "S24B";
         private static string dataSrc = "//localhost:1521/XE";
         private static readonly string connectionString = "User Id=" + dataUser + ";Password=" + dataPass + ";Data Source=" + dataSrc + ";";
-        
+
 
         public static OracleConnection Connection
         {
@@ -130,34 +129,145 @@ namespace ICT4Rails
             List<Tram> Trams = new List<Tram>();
             using (OracleConnection connection = Connection)
             {
-                string query = "SELECT * FROM TRAM Order by Id";
+                string query = "SELECT * FROM TRAM";
+                using (OracleCommand command = new OracleCommand(query, connection))
+                {
+                    using (OracleDataReader reader = command.ExecuteReader())
+                    {
+                        List<TramType> tramtypes = GetAllTramtypes();
+                        List<Status> statuslist = GetAllStatus();
+                        while (reader.Read())
+                        {
+                            Trams.Add(CreateTramFromReader(reader, tramtypes, statuslist));
+                        }
+                    }
+                }
+            }
+            return Trams;
+        }
+
+
+        private Tram CreateTramFromReader(OracleDataReader reader,List<TramType> tramtypes,List<Status> statuslist)
+        {
+            int id = Convert.ToInt32(reader["ID"]);
+            string typenaam = Convert.ToString(reader["TYPENAAM"]);
+            string statusnaam = Convert.ToString(reader["STATUSNAAM"]);
+            string lijn = Convert.ToString(reader["LIJN"]);
+            string beschikbaar = Convert.ToString(reader["BESCHIKBAAR"]);
+            TramType Type = null;            
+            Status Status = null;            
+            bool trueorfalse;
+            // eerst zal status en tramtype uitgewerkt moeten worden
+            foreach (TramType type in tramtypes)
+            {
+                if (type.Naam == typenaam)
+                {
+                    Type = type;
+                    break;
+                }
+            }
+            foreach (Status status in statuslist)
+            {
+                if(status.Naam == statusnaam)
+                {
+                    Status = status;
+                    break;
+                }
+            }
+            if(beschikbaar == "Y")
+            {
+                trueorfalse = true;
+            }
+            else
+            {
+                trueorfalse = false;
+            }
+            return new Tram(id, Type, Status, lijn, trueorfalse);            
+        }
+
+        public List<Status> GetAllStatus()
+        {
+            List<Status> Statuslist = new List<Status>();
+            using (OracleConnection connection = Connection)
+            {
+                string query = "SELECT * FROM STATUS";
                 using (OracleCommand command = new OracleCommand(query, connection))
                 {
                     using (OracleDataReader reader = command.ExecuteReader())
                     {
                         while (reader.Read())
                         {
-                            Trams.Add(CreateTramFromReader(reader));
+                            Statuslist.Add(CreateStatusFromReader(reader));
                         }
                     }
                 }
             }
-            return null;
+            return Statuslist;
         }
-        
-
-        private Tram CreateTramFromReader(OracleDataReader reader)
+        private Status CreateStatusFromReader(OracleDataReader reader)
         {
-            int id = Convert.ToInt32(reader["ID"]);
-            int medewerker = Convert.ToInt32(reader["MedewerkerID"]);
-            int tram = Convert.ToInt32(reader["TramnummerID"]);
-            DateTime starttijd = Convert.ToDateTime(reader["Starttijd"]);
-            DateTime eindtijd = Convert.ToDateTime(reader["Eindtijd"]);
-            string opmerking = Convert.ToString(reader["Opmerking"]);
-            string soort = Convert.ToString(reader["Soort"]);
+            return new Status(
+                Convert.ToString(reader["NAAM"]),
+                Convert.ToString(reader["BIJZONDERHEDEN"])
+                );
+        }
 
-            // eerst zal status en tramtype uitgewerkt moeten worden
-            return null;
+
+        public List<TramType> GetAllTramtypes()
+        {
+            List<TramType> Tramtypes = new List<TramType>();
+            using (OracleConnection connection = Connection)
+            {
+                string query = "SELECT * FROM TYPE";
+                using (OracleCommand command = new OracleCommand(query, connection))
+                {
+                    using (OracleDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Tramtypes.Add(CreateTramTypeFromReader(reader));
+                        }
+                    }
+                }
+            }
+            return Tramtypes;
+        }
+
+        private TramType CreateTramTypeFromReader(OracleDataReader reader)
+        {
+            return new TramType(
+                Convert.ToString(reader["NAAM"]),
+                Convert.ToString(reader["BESCHRIJVING"]),
+                Convert.ToInt32(reader["LENGTE"])
+                );
+        }
+        public List<Gebruiker> GetAllGebruiker()
+        {
+            List<Gebruiker> Gebruikers = new List<Gebruiker>();
+            using (OracleConnection connection = Connection)
+            {
+                string query = "SELECT * FROM GEBRUIKER";
+                using (OracleCommand command = new OracleCommand(query, connection))
+                {
+                    using (OracleDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Gebruikers.Add(CreateGebruikerFromReader(reader));
+                        }
+                    }
+                }
+            }
+            return Gebruikers;
+        }
+
+        private Gebruiker CreateGebruikerFromReader(OracleDataReader reader)
+        {
+            return new Gebruiker(
+                Convert.ToString(reader["GEBRUIKERSNAAM"]),
+                Convert.ToInt32(reader["MEDEWERKERID"]),
+                Convert.ToString(reader["WACHTWOORD"])
+                );
         }
     }
 }

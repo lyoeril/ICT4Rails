@@ -8,16 +8,16 @@ namespace ICT4Rails
 {
     public class Gebruiker
     {
-        private int id;
+        private int mederwerker_ID;
         private string gebruikersNaam;
         private string wachtwoord;
 
-        public int ID { get { return id; } }
+        public int Medewerker_ID { get { return mederwerker_ID; } }
         public string GebruikersNaam { get { return gebruikersNaam; } }
 
-        public Gebruiker(int id, string gebruikersNaam, string wachtwoord)
+        public Gebruiker(string gebruikersNaam, int Medewerker_id, string wachtwoord)
         {
-            this.id = id;
+            this.mederwerker_ID = Medewerker_id;
             this.gebruikersNaam = gebruikersNaam;
             this.wachtwoord = wachtwoord;
         }
