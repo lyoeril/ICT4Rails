@@ -35,6 +35,7 @@ namespace ICT4Rails
                         remise.Show();
                         this.Hide();
                         tbxPassword.Text = "";
+                        break;
                     }
                     else
                     {
