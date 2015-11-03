@@ -96,6 +96,7 @@ namespace ICT4Rails
                         Label label = new Label();
                         label.Anchor = System.Windows.Forms.AnchorStyles.None;
                         label.AutoSize = true;
+                        label.Click += new EventHandler(label_Click);
                         label.Name = "label" + Convert.ToString(labelCount);
                         label.Tag = Convert.ToString(x) + ", " + Convert.ToString(y);
                         label.Text = Convert.ToString(x) + ", " + Convert.ToString(y);
@@ -104,6 +105,9 @@ namespace ICT4Rails
                     }
                 }
             }
+
+
+
             // Geeft alle spoor labels de correcte text
             foreach (Label l in tableLayoutPanel1.Controls)
             {
@@ -151,6 +155,12 @@ namespace ICT4Rails
                 else if ((string)l.Tag == "17, 21") { l.Text = "20"; }
                 else if ((string)l.Tag == "17, 22") { l.Text = "21"; }
             }
+        }
+
+        //de methode die aangeroepen wordt als er op een label geklikt wordt
+        private void label_Click(object sender, EventArgs ee)
+        {
+            //code
         }
 
         // Deze methode is er zodat de onderstaande code niet nog langer wordt
