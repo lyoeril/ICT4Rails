@@ -47,11 +47,11 @@ namespace ICT4Rails
             }
             return Medewerkers;
         }
-        public void InsertMedewerker(string naam, string email, string functie, string adres, string postcode)
+        public void InsertMedewerker(Medewerker medewerker)
         {
             using (OracleConnection connection = Connection)
             {
-                string Insert = "INSERT INTO MEDEWERKER (ID, Naam, Email, Functie, Adres, Postcode) VALUES (seq_Medewerker_ID.nextval" + ",'" + naam + "','" + email + "','" + functie + "','" + adres + "','" + postcode + "')";
+                string Insert = "INSERT INTO MEDEWERKER (ID, Naam, Email, Functie, Adres, Postcode) VALUES (seq_Medewerker_ID.nextval" + ",'" + medewerker.Naam + "','" + medewerker.Email + "','" + medewerker.Functie + "','" + medewerker.Adres + "','" + medewerker.Postcode + "')";
                 using (OracleCommand command = new OracleCommand(Insert, connection))
                 {
                     command.ExecuteNonQuery();
@@ -59,11 +59,11 @@ namespace ICT4Rails
             }
         }
 
-        public void InsertGebruiker(string gebruikersnaam, int medewerkerID, string wachtwoord)
+        public void InsertGebruiker(Gebruiker gebruiker)
         {
             using (OracleConnection connection = Connection)
             {
-                string Insert = "INSERT INTO GEBRUIKER (Gebruikersnaam, MedewerkerID, Wachtwoord) VALUES (" + "'" + gebruikersnaam + "'," + medewerkerID + ",'" + wachtwoord + "')";
+                string Insert = "INSERT INTO GEBRUIKER (Gebruikersnaam, MedewerkerID, Wachtwoord) VALUES (" + "'" + gebruiker.GebruikersNaam + "'," + gebruiker.Medewerker_ID + ",'" + gebruiker.Wachtwoord + "')";
                 using (OracleCommand command = new OracleCommand(Insert, connection))
                 {
                     command.ExecuteNonQuery();
@@ -83,7 +83,7 @@ namespace ICT4Rails
             }
         }
 
-<<<<<<< HEAD
+
         public void RemoveMedewerker(Medewerker mederwerker)
         {
             using (OracleConnection connection = Connection)
@@ -99,7 +99,7 @@ namespace ICT4Rails
         }
 
 
-=======
+
         public void InsertTramPositie(int spoorID, int tramID, DateTime aankomst, DateTime vertrek)
         {
             using (OracleConnection connection = Connection)
@@ -112,7 +112,7 @@ namespace ICT4Rails
                 }
             }
         }
->>>>>>> origin/master
+
         private Medewerker CreateMedewerkerFromReader(OracleDataReader reader)
         {
             return new Medewerker(
