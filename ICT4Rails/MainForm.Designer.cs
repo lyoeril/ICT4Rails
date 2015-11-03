@@ -74,7 +74,7 @@
             this.lblOnderhoudMedewerker = new System.Windows.Forms.Label();
             this.cbxOnderhoudMedewerker = new System.Windows.Forms.ComboBox();
             this.lblOnderhoudTramnummer = new System.Windows.Forms.Label();
-            this.textBox223 = new System.Windows.Forms.TextBox();
+            this.tbxStatusbeheerOnderhoudTramnr = new System.Windows.Forms.TextBox();
             this.grbTramStatus = new System.Windows.Forms.GroupBox();
             this.btnStatusbeheerTramStatus = new System.Windows.Forms.Button();
             this.cbxStatusbeheerTramStatus = new System.Windows.Forms.ComboBox();
@@ -97,13 +97,13 @@
             this.tbxAccountNaam = new System.Windows.Forms.TextBox();
             this.label239 = new System.Windows.Forms.Label();
             this.grbAccountBeheerNieuwAccount = new System.Windows.Forms.GroupBox();
+            this.BttnAccountRemoveMedewerker = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tbxAccountWachtwoord = new System.Windows.Forms.TextBox();
             this.BtnAccountInlogToevoegen = new System.Windows.Forms.Button();
             this.tbxAccountUsername = new System.Windows.Forms.TextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.BttnAccountRemoveMedewerker = new System.Windows.Forms.Button();
             this.tabcontrolRemise.SuspendLayout();
             this.tabpageRemiseOverzicht.SuspendLayout();
             this.tabpageRemiseBeheer.SuspendLayout();
@@ -515,7 +515,7 @@
             this.grbTramOnderhoud.Controls.Add(this.lblOnderhoudMedewerker);
             this.grbTramOnderhoud.Controls.Add(this.cbxOnderhoudMedewerker);
             this.grbTramOnderhoud.Controls.Add(this.lblOnderhoudTramnummer);
-            this.grbTramOnderhoud.Controls.Add(this.textBox223);
+            this.grbTramOnderhoud.Controls.Add(this.tbxStatusbeheerOnderhoudTramnr);
             this.grbTramOnderhoud.Location = new System.Drawing.Point(331, 6);
             this.grbTramOnderhoud.Name = "grbTramOnderhoud";
             this.grbTramOnderhoud.Size = new System.Drawing.Size(326, 264);
@@ -642,12 +642,13 @@
             this.lblOnderhoudTramnummer.TabIndex = 3;
             this.lblOnderhoudTramnummer.Text = "Tramnummer:";
             // 
-            // textBox223
+            // tbxStatusbeheerOnderhoudTramnr
             // 
-            this.textBox223.Location = new System.Drawing.Point(167, 36);
-            this.textBox223.Name = "textBox223";
-            this.textBox223.Size = new System.Drawing.Size(153, 22);
-            this.textBox223.TabIndex = 2;
+            this.tbxStatusbeheerOnderhoudTramnr.Enabled = false;
+            this.tbxStatusbeheerOnderhoudTramnr.Location = new System.Drawing.Point(167, 36);
+            this.tbxStatusbeheerOnderhoudTramnr.Name = "tbxStatusbeheerOnderhoudTramnr";
+            this.tbxStatusbeheerOnderhoudTramnr.Size = new System.Drawing.Size(153, 22);
+            this.tbxStatusbeheerOnderhoudTramnr.TabIndex = 2;
             // 
             // grbTramStatus
             // 
@@ -709,6 +710,7 @@
             // 
             // tbxStatusbeheerTramNummer
             // 
+            this.tbxStatusbeheerTramNummer.Enabled = false;
             this.tbxStatusbeheerTramNummer.Location = new System.Drawing.Point(160, 36);
             this.tbxStatusbeheerTramNummer.Name = "tbxStatusbeheerTramNummer";
             this.tbxStatusbeheerTramNummer.Size = new System.Drawing.Size(153, 22);
@@ -885,6 +887,16 @@
             this.grbAccountBeheerNieuwAccount.TabStop = false;
             this.grbAccountBeheerNieuwAccount.Text = "Nieuw Account";
             // 
+            // BttnAccountRemoveMedewerker
+            // 
+            this.BttnAccountRemoveMedewerker.Location = new System.Drawing.Point(201, 237);
+            this.BttnAccountRemoveMedewerker.Name = "BttnAccountRemoveMedewerker";
+            this.BttnAccountRemoveMedewerker.Size = new System.Drawing.Size(103, 27);
+            this.BttnAccountRemoveMedewerker.TabIndex = 18;
+            this.BttnAccountRemoveMedewerker.Text = "Verwijder";
+            this.BttnAccountRemoveMedewerker.UseVisualStyleBackColor = true;
+            this.BttnAccountRemoveMedewerker.Click += new System.EventHandler(this.BttnAccountRemoveMedewerker_Click);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -940,16 +952,6 @@
             this.tabPage4.TabIndex = 4;
             this.tabPage4.Text = "tabPage4";
             this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // BttnAccountRemoveMedewerker
-            // 
-            this.BttnAccountRemoveMedewerker.Location = new System.Drawing.Point(201, 237);
-            this.BttnAccountRemoveMedewerker.Name = "BttnAccountRemoveMedewerker";
-            this.BttnAccountRemoveMedewerker.Size = new System.Drawing.Size(103, 27);
-            this.BttnAccountRemoveMedewerker.TabIndex = 18;
-            this.BttnAccountRemoveMedewerker.Text = "Verwijder";
-            this.BttnAccountRemoveMedewerker.UseVisualStyleBackColor = true;
-            this.BttnAccountRemoveMedewerker.Click += new System.EventHandler(this.BttnAccountRemoveMedewerker_Click);
             // 
             // MainForm
             // 
@@ -1040,7 +1042,7 @@
         private System.Windows.Forms.Label lblOnderhoudMedewerker;
         private System.Windows.Forms.ComboBox cbxOnderhoudMedewerker;
         private System.Windows.Forms.Label lblOnderhoudTramnummer;
-        private System.Windows.Forms.TextBox textBox223;
+        private System.Windows.Forms.TextBox tbxStatusbeheerOnderhoudTramnr;
         private System.Windows.Forms.GroupBox grbAccountNMedewerker;
         private System.Windows.Forms.Label lblAccountNaam;
         private System.Windows.Forms.Button btnAccountToevoegen;

@@ -24,7 +24,8 @@ namespace ICT4Rails
         public Administratie()
         {
             data = new Database();
-            this.gebruikers = data.GetAllGebruiker();           
+            this.gebruikers = data.GetAllGebruikers();
+            this.gebruikers.Add(new Gebruiker("", 0, ""));
             this.medewerkers = data.GetAllMedewerkers();
             this.onderhoudslijst = data.GetAllOnderhoud();
             this.trams = data.GetAllTrams();
@@ -33,7 +34,7 @@ namespace ICT4Rails
         public void RefreshClass()
         {
             Database data = new Database();
-            this.gebruikers = data.GetAllGebruiker();
+            this.gebruikers = data.GetAllGebruikers();
             this.medewerkers = data.GetAllMedewerkers();
         }
         /* alles voor de beheerder */
