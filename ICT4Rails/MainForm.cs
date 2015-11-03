@@ -20,13 +20,13 @@ namespace ICT4Rails
         
         List<Medewerker> medewerkers;
         Database DataMed = new Database();
-        Administratie administratie = new Administratie();
+        Administratie administratie;
         public int MedID;
 
 
 
 
-        public MainForm()
+        public MainForm(Administratie administratie)
         {
             InitializeComponent();
             LogIn();
@@ -34,6 +34,8 @@ namespace ICT4Rails
             Sporen = SporenArray();
             vullMederwerkerList();
             OpenAccountUI();
+
+            this.administratie = administratie;
 
             this.tableLayoutPanel1.CellPaint += new TableLayoutCellPaintEventHandler(tableLayoutPanel1_CellPaint);
         }
