@@ -72,6 +72,20 @@ namespace ICT4Rails
             }
         }
 
+        public void RemoveMedewerker(Medewerker mederwerker)
+        {
+            using (OracleConnection connection = Connection)
+            {
+                string Delete = "DELETE FROM MEDEWERKER WHERE ID ="+ mederwerker.ID;
+
+                using (OracleCommand command = new OracleCommand(Delete, connection))
+                {
+                    command.ExecuteNonQuery();
+                }
+
+            }
+        }
+
 
         private Medewerker CreateMedewerkerFromReader(OracleDataReader reader)
         {

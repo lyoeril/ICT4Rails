@@ -22,6 +22,7 @@ namespace ICT4Rails
         Database DataMed = new Database();
         Administratie administratie = new Administratie();
         public int MedID;
+        private Medewerker Fullmedewerker;
 
 
 
@@ -342,7 +343,6 @@ namespace ICT4Rails
                         vullMederwerkerList();
                         clearTextboxes();
                         administratie.RefreshClass();
-
                     }
                     else
                     {
@@ -373,7 +373,6 @@ namespace ICT4Rails
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
             if (administratie.FindGebruiker(MedID) != null)
             {
                 MessageBox.Show("Gebruiker heeft al een inlog account");
@@ -392,6 +391,7 @@ namespace ICT4Rails
             if (lbAccountMedewerkers.SelectedItem != null)
             {
                 Medewerker medewerker = lbAccountMedewerkers.SelectedItem as Medewerker;
+                Fullmedewerker = lbAccountMedewerkers.SelectedItem as Medewerker;
                 MedID = medewerker.ID;
                 enableButtons();
             }
@@ -416,6 +416,11 @@ namespace ICT4Rails
         {
             Regex regex = new Regex("^[1-9]{1}[0-9]{3}?[A-Z]{2}$");
             return regex.IsMatch(postcode);
+        }
+
+        private void BttnAccountRemoveMedewerker_Click(object sender, EventArgs e)
+        {
+            administratie.RemoveMedewerker(Fullmedewerker);
         }
     }
 }

@@ -19,9 +19,11 @@ namespace ICT4Rails
         public List<Onderhoud> Onderhoudslijst { get { return onderhoudslijst; } }
         public List<Tram> Trams { get { return trams; } }
 
+        Database data;
+
         public Administratie()
         {
-            Database data = new Database();
+            data = new Database();
             this.gebruikers = data.GetAllGebruiker();           
             this.medewerkers = data.GetAllMedewerkers();
             this.onderhoudslijst = data.GetAllOnderhoud();
@@ -51,6 +53,8 @@ namespace ICT4Rails
             if (FindMedewerker(medewerker.ID) != null)
             {
                 medewerkers.Remove(FindMedewerker(medewerker.ID));
+                data.RemoveMedewerker(medewerker);
+                
                 return true;
             }
             return false;

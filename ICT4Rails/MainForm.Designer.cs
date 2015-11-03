@@ -97,12 +97,13 @@
             this.tbxAccountNaam = new System.Windows.Forms.TextBox();
             this.label239 = new System.Windows.Forms.Label();
             this.grbAccountBeheerNieuwAccount = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tbxAccountWachtwoord = new System.Windows.Forms.TextBox();
             this.BtnAccountInlogToevoegen = new System.Windows.Forms.Button();
             this.tbxAccountUsername = new System.Windows.Forms.TextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tbxAccountWachtwoord = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.BttnAccountRemoveMedewerker = new System.Windows.Forms.Button();
             this.tabcontrolRemise.SuspendLayout();
             this.tabpageRemiseOverzicht.SuspendLayout();
             this.tabpageRemiseBeheer.SuspendLayout();
@@ -871,6 +872,7 @@
             // 
             // grbAccountBeheerNieuwAccount
             // 
+            this.grbAccountBeheerNieuwAccount.Controls.Add(this.BttnAccountRemoveMedewerker);
             this.grbAccountBeheerNieuwAccount.Controls.Add(this.label2);
             this.grbAccountBeheerNieuwAccount.Controls.Add(this.label1);
             this.grbAccountBeheerNieuwAccount.Controls.Add(this.tbxAccountWachtwoord);
@@ -883,9 +885,37 @@
             this.grbAccountBeheerNieuwAccount.TabStop = false;
             this.grbAccountBeheerNieuwAccount.Text = "Nieuw Account";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(9, 112);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(90, 17);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Wachtwoord:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(9, 86);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(117, 17);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Gebruikersnaam:";
+            // 
+            // tbxAccountWachtwoord
+            // 
+            this.tbxAccountWachtwoord.Enabled = false;
+            this.tbxAccountWachtwoord.Location = new System.Drawing.Point(151, 109);
+            this.tbxAccountWachtwoord.MaxLength = 25;
+            this.tbxAccountWachtwoord.Name = "tbxAccountWachtwoord";
+            this.tbxAccountWachtwoord.PasswordChar = '*';
+            this.tbxAccountWachtwoord.Size = new System.Drawing.Size(153, 22);
+            this.tbxAccountWachtwoord.TabIndex = 15;
+            // 
             // BtnAccountInlogToevoegen
             // 
-            this.BtnAccountInlogToevoegen.Location = new System.Drawing.Point(201, 154);
+            this.BtnAccountInlogToevoegen.Location = new System.Drawing.Point(201, 151);
             this.BtnAccountInlogToevoegen.Name = "BtnAccountInlogToevoegen";
             this.BtnAccountInlogToevoegen.Size = new System.Drawing.Size(103, 27);
             this.BtnAccountInlogToevoegen.TabIndex = 3;
@@ -911,32 +941,15 @@
             this.tabPage4.Text = "tabPage4";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // tbxAccountWachtwoord
+            // BttnAccountRemoveMedewerker
             // 
-            this.tbxAccountWachtwoord.Enabled = false;
-            this.tbxAccountWachtwoord.Location = new System.Drawing.Point(151, 109);
-            this.tbxAccountWachtwoord.MaxLength = 25;
-            this.tbxAccountWachtwoord.Name = "tbxAccountWachtwoord";
-            this.tbxAccountWachtwoord.Size = new System.Drawing.Size(153, 22);
-            this.tbxAccountWachtwoord.TabIndex = 15;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 86);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(117, 17);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Gebruikersnaam:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 112);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 17);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "Wachtwoord:";
+            this.BttnAccountRemoveMedewerker.Location = new System.Drawing.Point(201, 237);
+            this.BttnAccountRemoveMedewerker.Name = "BttnAccountRemoveMedewerker";
+            this.BttnAccountRemoveMedewerker.Size = new System.Drawing.Size(103, 27);
+            this.BttnAccountRemoveMedewerker.TabIndex = 18;
+            this.BttnAccountRemoveMedewerker.Text = "Verwijder";
+            this.BttnAccountRemoveMedewerker.UseVisualStyleBackColor = true;
+            this.BttnAccountRemoveMedewerker.Click += new System.EventHandler(this.BttnAccountRemoveMedewerker_Click);
             // 
             // MainForm
             // 
@@ -1048,5 +1061,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbxAccountWachtwoord;
+        private System.Windows.Forms.Button BttnAccountRemoveMedewerker;
     }
 }
