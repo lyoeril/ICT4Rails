@@ -19,7 +19,7 @@ namespace ICT4Rails
         public TramType Type { get { return type; } }
         public Status Status { get { return status; } }
         public string Lijn { get { return lijn; } }
-        public int Nummer { get { return id; } }
+        public int Id { get { return id; } }
         public bool Beschikbaar { get { return beschikbaar; } }
 
 

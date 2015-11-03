@@ -71,7 +71,19 @@ namespace ICT4Rails
 
             }
         }
+        public void InsertReservering(int spoorID, int tramID, DateTime datum)
+        {
+            using (OracleConnection connection = Connection)
+            {
+                string insert = "insert into reservering (ID, SpoorID, TramID, Datum) values(seq_Reservering_ID.nextval, " + Convert.ToString(spoorID) + ", " + Convert.ToString(tramID) + ", " + Convert.ToString(datum) + ")";
+                using (OracleCommand command = new OracleCommand(insert, connection))
+                {
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
 
+<<<<<<< HEAD
         public void RemoveMedewerker(Medewerker mederwerker)
         {
             using (OracleConnection connection = Connection)
@@ -87,6 +99,20 @@ namespace ICT4Rails
         }
 
 
+=======
+        public void InsertTramPositie(int spoorID, int tramID, DateTime aankomst, DateTime vertrek)
+        {
+            using (OracleConnection connection = Connection)
+            {
+                //ID IN DE STRING MOET NOG TOEGEVOEGD WORDEN MAAR IDK OF DIT MET SEQUENCE KAN
+                string insert = "insert into trampositie (ID, SpoorID, TramID, AankomstTijd, VertrekTijd) values(ID, " + Convert.ToString(spoorID) + ", " + Convert.ToString(tramID) + ", " + Convert.ToString(aankomst) + ", " + Convert.ToString(vertrek) + ")";
+                using (OracleCommand command = new OracleCommand(insert, connection))
+                {
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+>>>>>>> origin/master
         private Medewerker CreateMedewerkerFromReader(OracleDataReader reader)
         {
             return new Medewerker(
@@ -141,7 +167,7 @@ namespace ICT4Rails
             }
             foreach (Tram t in a.Trams)
             {
-                if (t.Nummer == tram)
+                if (t.Id == tram)
                 {
                     tr = t; ;
                 }
@@ -174,15 +200,15 @@ namespace ICT4Rails
         }
 
 
-        private Tram CreateTramFromReader(OracleDataReader reader,List<TramType> tramtypes,List<Status> statuslist)
+        private Tram CreateTramFromReader(OracleDataReader reader, List<TramType> tramtypes, List<Status> statuslist)
         {
             int id = Convert.ToInt32(reader["ID"]);
             string typenaam = Convert.ToString(reader["TYPENAAM"]);
             string statusnaam = Convert.ToString(reader["STATUSNAAM"]);
             string lijn = Convert.ToString(reader["LIJN"]);
             string beschikbaar = Convert.ToString(reader["BESCHIKBAAR"]);
-            TramType Type = null;            
-            Status Status = null;            
+            TramType Type = null;
+            Status Status = null;
             bool trueorfalse;
             // eerst zal status en tramtype uitgewerkt moeten worden
             foreach (TramType type in tramtypes)
@@ -195,13 +221,13 @@ namespace ICT4Rails
             }
             foreach (Status status in statuslist)
             {
-                if(status.Naam == statusnaam)
+                if (status.Naam == statusnaam)
                 {
                     Status = status;
                     break;
                 }
             }
-            if(beschikbaar == "Y")
+            if (beschikbaar == "Y")
             {
                 trueorfalse = true;
             }
@@ -209,7 +235,7 @@ namespace ICT4Rails
             {
                 trueorfalse = false;
             }
-            return new Tram(id, Type, Status, lijn, trueorfalse);            
+            return new Tram(id, Type, Status, lijn, trueorfalse);
         }
 
         public List<Status> GetAllStatus()
@@ -268,7 +294,7 @@ namespace ICT4Rails
                 Convert.ToInt32(reader["LENGTE"])
                 );
         }
-        public List<Gebruiker> GetAllGebruiker()
+        public List<Gebruiker> GetAllGebruikers()
         {
             List<Gebruiker> Gebruikers = new List<Gebruiker>();
             using (OracleConnection connection = Connection)
@@ -295,6 +321,102 @@ namespace ICT4Rails
                 Convert.ToInt32(reader["MEDEWERKERID"]),
                 Convert.ToString(reader["WACHTWOORD"])
                 );
+        }
+
+        public List<Spoor> GetAllSporen()
+        {
+            List<Spoor> Sporen = new List<Spoor>();
+            using (OracleConnection connection = Connection)
+            {
+                string query = "SELECT SPOORNUMMER, SPOORSECTOR, BESCHIKBAAR FROM SPOOR";
+                using (OracleCommand command = new OracleCommand(query, connection))
+                {
+                    using (OracleDataReader reader = command.ExecuteReader())
+                    {
+
+                        while (reader.Read())
+                        {
+                            Sporen.Add(CreateSpoorFromReader(reader));
+                        }
+                    }
+                }
+            }
+            return Sporen;
+        }
+
+        private Spoor CreateSpoorFromReader(OracleDataReader reader)
+        {
+            int spoorid = Convert.ToInt32(reader["SPOORNUMMER"]);
+            int spoorsector = Convert.ToInt32(reader["SPOORSECTOR"]);
+            char Beschikbaar = Convert.ToChar(reader["BESCHIKBAAR"]);
+            bool beschikbaar;
+            if ( Beschikbaar == 'Y')
+            {
+                beschikbaar = true;
+            }
+            else
+            {
+                beschikbaar = false;
+            }
+            return new Spoor(spoorid, spoorsector, beschikbaar);
+        }
+        public List<Reservering> GetAllReserveringen()
+        {
+            List<Reservering> Reserveringen = new List<Reservering>();
+            using (OracleConnection connection = Connection)
+            {
+                string query = "SELECT * FROM Reservering";
+                using (OracleCommand command = new OracleCommand(query, connection))
+                {
+                    using (OracleDataReader reader = command.ExecuteReader())
+                    {
+                        List<Tram> trams = GetAllTrams();
+                        List<Spoor> sporen = GetAllSporen();
+                        while (reader.Read())
+                        {
+                            Reserveringen.Add(CreateReserveringFromReader(reader, trams,sporen));
+                        }
+                    }
+                }
+            }
+            return Reserveringen;
+        }
+        private Reservering CreateReserveringFromReader(OracleDataReader reader, List<Tram> trams, List<Spoor> sporen)
+        {
+            int id = Convert.ToInt32(reader["ID"]);
+            int spoorid = Convert.ToInt32(reader["SPOORID"]);
+            int tramid = Convert.ToInt32(reader["TRAMID"]);
+            DateTime datetime = Convert.ToDateTime(reader["DATUM"]);
+            char actief = Convert.ToChar(reader["ACTIEF"]);
+
+            Tram Tram = null;
+            Spoor Spoor = null;
+            foreach (Tram tram in trams)
+            {
+                if (tram.Id == id)
+                {
+                    Tram = tram;
+                    break;
+                }
+            }
+            foreach (Spoor spoor in sporen)
+            {
+                if (spoor.Spoornummer == spoorid)
+                {
+                    Spoor = spoor;
+                    break;
+                }
+            }
+            bool Actief;
+            if(actief == 'Y')
+            {
+                Actief = true;
+            }
+            else
+            {
+                Actief = false;
+            }
+            return new Reservering(id,Tram,Spoor,datetime, Actief);
         }
     }
 }

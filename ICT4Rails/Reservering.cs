@@ -8,16 +8,19 @@ namespace ICT4Rails
 {
     public class Reservering
     {
+        private int id;
         private Tram tram;
         private Spoor spoor;
         private DateTime datum;
-
+        private bool actief;
         public DateTime Datum { get { return datum; } }
-        public Reservering(Tram tram, Spoor spoor, DateTime datum)
+        public Reservering(int id,Tram tram, Spoor spoor, DateTime datum, bool actief)
         {
+            this.id = id;
             this.tram = tram;
             this.spoor = spoor;
             this.datum = datum;
+            this.actief = actief;
         }
 
         public override string ToString()
@@ -30,7 +33,7 @@ namespace ICT4Rails
             }
             else
             {
-                tramstr = tram.Nummer.ToString();
+                tramstr = tram.Id.ToString();
             }
 
             string spoorstr;
