@@ -97,7 +97,15 @@ namespace ICT4Rails
             }
             return null;
         }
-
+        public bool RemoveGebruiker(Gebruiker gebruiker)
+        {
+            if (FindGebruiker(gebruiker.Medewerker_ID) != null)
+            {
+                data.RemoveGebruiker(gebruiker);
+                return true;
+            }
+            return false;
+        }
         public bool ChangeMedewerker(Medewerker medewerker)
         {
             // TO DO

@@ -23,6 +23,8 @@ namespace ICT4Rails
         Administratie administratie;
         public int MedID;
         private Medewerker Fullmedewerker;
+        private Gebruiker gebruiker;
+        private bool heeftaccount = false;
 
 
 
@@ -401,6 +403,13 @@ namespace ICT4Rails
                 Fullmedewerker = lbAccountMedewerkers.SelectedItem as Medewerker;
                 MedID = medewerker.ID;
                 enableButtons();
+
+                if (administratie.FindGebruiker(medewerker.ID) != null)
+                {
+                    gebruiker = administratie.FindGebruiker(medewerker.ID);
+                    heeftaccount = true;
+                    MessageBox.Show("gebruiker heeft een account");
+                }
             }
         }
 
@@ -412,7 +421,6 @@ namespace ICT4Rails
             BttnAccountRemoveMedewerker.Enabled = true;
             
         }
-
         private void clearTextboxes()
         {
             tbxAccountEmail.Text = "";
@@ -426,17 +434,33 @@ namespace ICT4Rails
             Regex regex = new Regex("^[1-9]{1}[0-9]{3}?[A-Z]{2}$");
             return regex.IsMatch(postcode);
         }
-
         private void BttnAccountRemoveMedewerker_Click(object sender, EventArgs e)
         {
-            //administratie.FindGebruiker(Fullmedewerker.ID);
             if (administratie.FindGebruiker(Fullmedewerker.ID) == null)
             {
                 administratie.RemoveMedewerker(Fullmedewerker);
+                administratie.RefreshClass();
+                vullMederwerkerList();
             }
+            else
+            {
+                DialogResult result = MessageBox.Show("Gebruiker heeft een account, wilt u door gaan met het verwijderen?", "Question", MessageBoxButtons.YesNo);
 
-            else {
-                MessageBox.Show("Gebruiker heeft een account");
+                if (result == DialogResult.Yes)
+                {
+                    if(heeftaccount == true)
+                    {
+                        administratie.RemoveGebruiker(gebruiker);
+                        administratie.RemoveMedewerker(Fullmedewerker);
+                    }
+                    else
+                    {
+                        administratie.RemoveMedewerker(Fullmedewerker);
+                    }
+                    administratie.RefreshClass();
+                    vullMederwerkerList();
+                    heeftaccount = false;
+                }
             }
         }
     }

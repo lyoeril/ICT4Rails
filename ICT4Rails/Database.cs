@@ -98,6 +98,20 @@ namespace ICT4Rails
             }
         }
 
+        public void RemoveGebruiker(Gebruiker gebruiker)
+        {
+            using (OracleConnection connection = Connection)
+            {
+                string Delete = "DELETE FROM GEBRUIKER WHERE MedewerkerID =" + gebruiker.Medewerker_ID;
+
+                using (OracleCommand command = new OracleCommand(Delete, connection))
+                {
+                    command.ExecuteNonQuery();
+                }
+
+            }
+        }
+
 
 
         public void InsertTramPositie(int spoorID, int tramID, DateTime aankomst, DateTime vertrek)
