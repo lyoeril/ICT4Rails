@@ -83,7 +83,6 @@ namespace ICT4Rails
             }
         }
 
-<<<<<<< HEAD
         public void RemoveMedewerker(Medewerker mederwerker)
         {
             using (OracleConnection connection = Connection)
@@ -98,8 +97,6 @@ namespace ICT4Rails
             }
         }
 
-
-=======
         public void InsertTramPositie(int spoorID, int tramID, DateTime aankomst, DateTime vertrek)
         {
             using (OracleConnection connection = Connection)
@@ -112,7 +109,7 @@ namespace ICT4Rails
                 }
             }
         }
->>>>>>> origin/master
+
         private Medewerker CreateMedewerkerFromReader(OracleDataReader reader)
         {
             return new Medewerker(
