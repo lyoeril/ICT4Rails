@@ -83,7 +83,10 @@ namespace ICT4Rails
             }
         }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
         public void RemoveMedewerker(Medewerker mederwerker)
         {
             using (OracleConnection connection = Connection)
@@ -98,6 +101,7 @@ namespace ICT4Rails
             }
         }
 
+<<<<<<< HEAD
         public void RemoveGebruiker(Gebruiker gebruiker)
         {
             using (OracleConnection connection = Connection)
@@ -114,6 +118,8 @@ namespace ICT4Rails
 
 
 
+=======
+>>>>>>> origin/master
         public void InsertTramPositie(int spoorID, int tramID, DateTime aankomst, DateTime vertrek)
         {
             using (OracleConnection connection = Connection)
