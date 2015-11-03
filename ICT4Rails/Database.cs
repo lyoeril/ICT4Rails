@@ -432,5 +432,34 @@ namespace ICT4Rails
             }
             return new Reservering(id,Tram,Spoor,datetime, Actief);
         }
+
+        public void UpdateTramStatus(int tramID, string statusnaam)
+        {
+            string UpperStatus = statusnaam.ToUpper();
+
+            using (OracleConnection connection = Connection)
+            {
+                string Update = "UPDATE TRAM SET STATUSNAAM = '" + UpperStatus + "' WHERE ID = " + tramID;
+                using (OracleCommand command = new OracleCommand(Update, connection))
+                {
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public void InsertOnderhoud(Medewerker medewerker, int tramnummerID, string opmerking, string soort, DateTime starttijd, DateTime eindtijd)
+        {
+            int medewerkerID = medewerker.ID;
+            string Uppersoort = soort.ToUpper();
+
+            using (OracleConnection connection = Connection)
+            {
+                string Insert = "INSERT INTO ONDERHOUD(ID, MedewerkerID, TramnummerID, Opmerking, Soort, Starttijd, Eindtijd) VALUES (seq_Onderhoud_ID.nextval," + medewerkerID + "," + tramnummerID + ",'" + opmerking + "','" + Uppersoort + "','" + starttijd + "','" + eindtijd + "')";
+                using (OracleCommand command = new OracleCommand(Insert, connection))
+                {
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
     }
 }

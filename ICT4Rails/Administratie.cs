@@ -193,5 +193,21 @@ namespace ICT4Rails
             // TO DO
             // bij deze methode wordt de status van het spoor verandert naar ....
         }
+
+        public bool AddOnderhoudsbeurt(Medewerker medewerker, int tramnummerID, string opmerking, string soort, DateTime starttijd, DateTime eindtijd)
+        {
+            // bij deze methode wordt er een nieuwe onderhoudsbeurt toegevoegd
+            //----------------------------------------------------------------------------------
+
+            data.InsertOnderhoud(medewerker, tramnummerID, opmerking, soort, starttijd, eindtijd);
+            return true;
+            //----------------------------------------------------------------------------------
+        }
+
+
+        public void TramStatusVeranderen(int tramNummer, string statusnaam)
+        {
+            data.UpdateTramStatus(tramNummer, statusnaam);
+        }
     }
 }

@@ -36,6 +36,7 @@ namespace ICT4Rails
             Sporen = SporenArray();
             vullMederwerkerList();
             OpenAccountUI();
+            loadComboboxes();
 
             this.administratie = administratie;
 
@@ -347,8 +348,11 @@ namespace ICT4Rails
 
         private void btnBevestigTramStatus_Click(object sender, EventArgs e)
         {
-            cbxStatusbeheerTramStatus.SelectedItem = null;
-            tbxStatusbeheerTramNummer.Text = "";
+            if (!string.IsNullOrWhiteSpace(cbxStatusbeheerTramStatus.Text))
+            {
+                administratie.TramStatusVeranderen(Convert.ToInt32(tbxStatusbeheerTramNummer.Text), cbxStatusbeheerTramStatus.Text);
+                MessageBox.Show("De status van de tram is veranderd in: " + cbxStatusbeheerTramStatus.Text);
+            }
         }
 
         //AccountBeheer
@@ -503,5 +507,39 @@ namespace ICT4Rails
                 }
             }
         }
+
+        private void loadComboboxes()
+        {
+            foreach (Medewerker m in medewerkers)
+            {
+                cbxOnderhoudMedewerker.Items.Add(m);
+            }
+        }
+
+        private void btnOnderhoudBevestig_Click(object sender, EventArgs e)
+        {
+            string opmerking;
+            DateTime starttijd = Convert.ToDateTime(dtpOnderhoudStarttijd.Value);
+            DateTime eindtijd = Convert.ToDateTime(dtpOnderhoudEindtijd.Value);
+            Medewerker m = cbxOnderhoudMedewerker.SelectedItem as Medewerker;
+            string soort = cbxOnderhoudSoort.SelectedItem.ToString();
+            int tramnummer = Convert.ToInt32(tbxStatusbeheerOnderhoudTramnr.Text);
+
+            opmerking = "none";
+            //Opmerking werkt nog niet: designeer aanpassing nodig: geen textbox voor opmerking aanwezig;
+
+            try
+            {
+                administratie.AddOnderhoudsbeurt(m, tramnummer, opmerking, soort, starttijd, eindtijd);
+            }
+            catch (FormatException fe)
+            {
+                MessageBox.Show(starttijd.ToString());
+                MessageBox.Show(fe.Message);
+            }
+
+        }
+
+
     }
 }
