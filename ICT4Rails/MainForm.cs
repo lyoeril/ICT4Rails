@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows;
+using System.Text.RegularExpressions;
 
 namespace ICT4Rails
 {
@@ -320,26 +321,43 @@ namespace ICT4Rails
 
         private void btnAccountToevoegen_Click(object sender, EventArgs e)
         {
-
-            if (tbxAccountEmail.Text.Contains('@') && tbxAccountEmail.Text.Contains('.'))
+            if (!string.IsNullOrWhiteSpace(tbxAccountNaam.Text) && !string.IsNullOrWhiteSpace(tbxAccountPostcode.Text)
+                                                                 && !string.IsNullOrWhiteSpace(tbxAccountStrtNR.Text))
             {
-                if (cbAccountFunctie.SelectedItem == null)
+                bool rekt = ValidatePostcode(tbxAccountPostcode.Text);
+                if (rekt) 
                 {
-                    MessageBox.Show("Geef een functie op voor de medewerker die u aan het toevoegen bent.");
+                    if (tbxAccountEmail.Text.Contains('@') && tbxAccountEmail.Text.Contains('.'))
+                    {
+                        if (cbAccountFunctie.SelectedItem == null)
+                        {
+                            MessageBox.Show("Geef een functie op voor de medewerker die u aan het toevoegen bent.");
+                        }
+                        else
+                        {
+                            string Cbkeuze = cbAccountFunctie.SelectedItem.ToString();
+                            DataMed.InsertMedewerker(tbxAccountNaam.Text, tbxAccountEmail.Text, Cbkeuze, tbxAccountStrtNR.Text, tbxAccountPostcode.Text);
+                        }
+                        //Medewerker toevoegen aan datbase
+                        vullMederwerkerList();
+                        clearTextboxes();
+                        administratie.RefreshClass();
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Email is niet geldig gevonden door het systeem.");
+                    }
                 }
                 else
                 {
-                    string Cbkeuze = cbAccountFunctie.SelectedItem.ToString();
-                    DataMed.InsertMedewerker(tbxAccountNaam.Text, tbxAccountEmail.Text, Cbkeuze, tbxAccountStrtNR.Text, tbxAccountPostcode.Text);
+                    MessageBox.Show("Vul alle gegevens in om een account aan te maken.");
                 }
-                //Medewerker toevoegen aan datbase
-                vullMederwerkerList();
             }
             else
             {
-                MessageBox.Show("Email is niet geldig gevonden door het systeem.");
+                MessageBox.Show("Is geen goede postcode voor nl");
             }
-          
         }
 
         private void OpenAccountUI()
@@ -355,11 +373,18 @@ namespace ICT4Rails
 
         private void button1_Click(object sender, EventArgs e)
         {
-            administratie.FindMedewerker(MedID);
-            DataMed.InsertGebruiker(tbxAccountUsername.Text, MedID, tbxAccountWachtwoord.Text);
-            MessageBox.Show("TEST", "ENZO",
-            MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
             
+            if (administratie.FindGebruiker(MedID) != null)
+            {
+                MessageBox.Show("Gebruiker heeft al een inlog account");
+            }
+            else
+            {
+                DataMed.InsertGebruiker(tbxAccountUsername.Text, MedID, tbxAccountWachtwoord.Text);
+                MessageBox.Show("Account is toegevoegd en kan gebruikt worden", "ICT4Rails",
+                MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                administratie.RefreshClass();
+            }
         }
 
         private void lbAccountMedewerkers_SelectedIndexChanged(object sender, EventArgs e)
@@ -377,6 +402,20 @@ namespace ICT4Rails
             tbxAccountUsername.Enabled = true;
             tbxAccountWachtwoord.Enabled = true;
             BtnAccountInlogToevoegen.Enabled = true;
+        }
+
+        private void clearTextboxes()
+        {
+            tbxAccountEmail.Text = "";
+            tbxAccountNaam.Text = "";
+            tbxAccountPostcode.Text = "";
+            tbxAccountStrtNR.Text = "";
+            cbAccountFunctie.Text = "";
+        }
+        private bool ValidatePostcode(string postcode)
+        {
+            Regex regex = new Regex("^[1-9]{1}[0-9]{3}?[A-Z]{2}$");
+            return regex.IsMatch(postcode);
         }
     }
 }

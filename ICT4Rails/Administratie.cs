@@ -28,6 +28,12 @@ namespace ICT4Rails
             this.trams = data.GetAllTrams();
         }
 
+        public void RefreshClass()
+        {
+            Database data = new Database();
+            this.gebruikers = data.GetAllGebruiker();
+            this.medewerkers = data.GetAllMedewerkers();
+        }
         /* alles voor de beheerder */
         public bool AddMedewerker(Medewerker medewerker)
         {
@@ -64,6 +70,21 @@ namespace ICT4Rails
             }
             return null;
             throw new Exception("Er zijn geen medewerkers");
+        }
+
+        public Gebruiker FindGebruiker(int id)
+        {
+            if (gebruikers != null)
+            {
+                foreach (Gebruiker g in gebruikers)
+                {
+                    if (g.Medewerker_ID == id)
+                    {
+                        return g;
+                    }
+                }
+            }
+            return null;
         }
 
         public bool ChangeMedewerker(Medewerker medewerker)
