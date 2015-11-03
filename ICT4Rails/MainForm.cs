@@ -87,8 +87,8 @@ namespace ICT4Rails
                         x == 13 && y == 18 ||
                         x == 15 && y <= 5 ||
                         x == 16 && y >= 11 && y <= 18 ||
-                        x == 17 && y <= 5 ||
-                        x >= 17 && y >= 6 && y <= 12)
+                        x == 17 && y <= 6 ||
+                        x >= 17 && y >= 7 && y <= 12)
                     {
                         // niks
                     }
@@ -100,7 +100,7 @@ namespace ICT4Rails
                         label.Click += new EventHandler(label_Click);
                         label.Name = "label" + Convert.ToString(labelCount);
                         label.Tag = Convert.ToString(x) + ", " + Convert.ToString(y);
-                        label.Text = Convert.ToString(x) + ", " + Convert.ToString(y);
+                        label.Text = "20" + Convert.ToString(x); // + ", " + Convert.ToString(y);
                         tableLayoutPanel1.Controls.Add(label, x, y);
                         labelCount++;
                     }
@@ -161,7 +161,38 @@ namespace ICT4Rails
         //de methode die aangeroepen wordt als er op een label geklikt wordt
         private void label_Click(object sender, EventArgs ee)
         {
-            //code
+            Label label = (Label)sender;
+            if (label.Text != "")
+            {
+                foreach (Tram t in administratie.Trams)
+                {
+                    if (Convert.ToString(t.Id) == label.Text)
+                    {
+                        for (int spoor = 0; spoor < Sporen.Length; spoor++)
+                        {
+                            if (Sporen[spoor] != null)
+                            {
+                                for (int sector = 1; sector < Sporen[spoor].Length; sector++)
+                                {
+                                    if (Sporen[spoor][sector] == label)
+                                    {
+                                        this.tabcontrolRemise.SelectedTab = tabpageRemiseBeheer;
+                                        tbxRemiseBeheerTramNummer.Text = Convert.ToString(t.Id);
+                                        tbxRemiseBeheerTramLijn.Text = Convert.ToString(t.Lijn);
+                                        //tbxRemiseBeheerTramType.SelectedItem = 
+                                        //moet nog een methode toegevoegd worden om alle bestaande types uit de db te halen
+                                        tbxRemiseBeheerSpoorBeheerSpoorNummer.Text = Convert.ToString(spoor);
+                                        tbxRemiseBeheerSpoorBeheerSectorNummer.Text = Convert.ToString(sector);
+                                        tbxRemiseBeheerSpoorBeheerTramNummer.Text = Convert.ToString(t.Id);
+                                        tbxStatusbeheerTramNummer.Text = Convert.ToString(t.Id);
+                                        tbxStatusbeheerOnderhoudTramnr.Text = Convert.ToString(t.Id);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         // Deze methode is er zodat de onderstaande code niet nog langer wordt

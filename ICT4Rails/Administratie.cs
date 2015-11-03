@@ -24,17 +24,11 @@ namespace ICT4Rails
         public Administratie()
         {
             data = new Database();
-<<<<<<< HEAD
             this.gebruikers = data.GetAllGebruikers();
             this.gebruikers.Add(new Gebruiker("", 0, ""));
-=======
-<<<<<<< HEAD
             this.gebruikers = data.GetAllGebruikers();
             this.gebruikers.Add(new Gebruiker("", 0, ""));
-=======
             this.gebruikers = data.GetAllGebruikers();           
->>>>>>> origin/master
->>>>>>> origin/master
             this.medewerkers = data.GetAllMedewerkers();
             this.onderhoudslijst = data.GetAllOnderhoud();
             this.trams = data.GetAllTrams();
