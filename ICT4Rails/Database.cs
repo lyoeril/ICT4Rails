@@ -82,8 +82,7 @@ namespace ICT4Rails
                 }
             }
         }
-
-<<<<<<< HEAD
+        
         public void RemoveMedewerker(Medewerker mederwerker)
         {
             using (OracleConnection connection = Connection)
@@ -97,9 +96,7 @@ namespace ICT4Rails
 
             }
         }
-
-
-=======
+        
         public void InsertTramPositie(int spoorID, int tramID, DateTime aankomst, DateTime vertrek)
         {
             using (OracleConnection connection = Connection)
@@ -112,7 +109,7 @@ namespace ICT4Rails
                 }
             }
         }
->>>>>>> origin/master
+
         private Medewerker CreateMedewerkerFromReader(OracleDataReader reader)
         {
             return new Medewerker(
@@ -257,6 +254,7 @@ namespace ICT4Rails
             }
             return Statuslist;
         }
+
         private Status CreateStatusFromReader(OracleDataReader reader)
         {
             return new Status(
@@ -360,6 +358,7 @@ namespace ICT4Rails
             }
             return new Spoor(spoorid, spoorsector, beschikbaar);
         }
+
         public List<Reservering> GetAllReserveringen()
         {
             List<Reservering> Reserveringen = new List<Reservering>();
@@ -381,6 +380,7 @@ namespace ICT4Rails
             }
             return Reserveringen;
         }
+
         private Reservering CreateReserveringFromReader(OracleDataReader reader, List<Tram> trams, List<Spoor> sporen)
         {
             int id = Convert.ToInt32(reader["ID"]);

@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows;
 using System.Text.RegularExpressions;
+using Phidgets;
+using Phidgets.Events;
 
 namespace ICT4Rails
 {
@@ -23,9 +25,6 @@ namespace ICT4Rails
         Administratie administratie;
         public int MedID;
         private Medewerker Fullmedewerker;
-
-
-
 
         public MainForm(Administratie administratie)
         {
