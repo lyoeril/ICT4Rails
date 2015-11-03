@@ -22,7 +22,8 @@ namespace ICT4Rails
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            // "asdf" is temp admin user because reasons
+            bool notFound = true;
+
             foreach (Gebruiker g in administratie.Gebruikers)
             {
                 if (g.GebruikersNaam == tbxUsername.Text)
@@ -30,22 +31,24 @@ namespace ICT4Rails
                     if (g.LogIn(tbxPassword.Text))
                     {
                         Program.loggedIn = g;
-                        MainForm remise = new MainForm();
+                        MainForm remise = new MainForm(administratie);
                         remise.FormClosing += MainForm_FormClosing;
                         remise.Show();
                         this.Hide();
                         tbxPassword.Text = "";
+                        notFound = false;
                         break;
                     }
                     else
                     {
                         MessageBox.Show("Ongeldig Wachtwoord");
+                        break;
                     }
                 }
-                else
-                {
-                    MessageBox.Show("Ongeldige Gebruikersnaam");
-                }
+            }
+            if (notFound)
+            {
+                MessageBox.Show("Ongeldige Gebruikersnaam");
             }
         }
 
