@@ -25,10 +25,7 @@ namespace ICT4Rails
         {
             data = new Database();
             this.gebruikers = data.GetAllGebruikers();
-            this.gebruikers.Add(new Gebruiker("", 0, ""));
-            this.gebruikers = data.GetAllGebruikers();
-            this.gebruikers.Add(new Gebruiker("", 0, ""));
-            this.gebruikers = data.GetAllGebruikers();           
+            this.gebruikers.Add(new Gebruiker("", 0, ""));         
             this.medewerkers = data.GetAllMedewerkers();
             this.onderhoudslijst = data.GetAllOnderhoud();
             this.trams = data.GetAllTrams();

@@ -953,8 +953,6 @@
             this.tabPage4.Text = "tabPage4";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-<<<<<<< HEAD
-=======
             // BttnAccountRemoveMedewerker
             // 
             this.BttnAccountRemoveMedewerker.Enabled = false;
@@ -966,7 +964,6 @@
             this.BttnAccountRemoveMedewerker.UseVisualStyleBackColor = true;
             this.BttnAccountRemoveMedewerker.Click += new System.EventHandler(this.BttnAccountRemoveMedewerker_Click);
             // 
->>>>>>> origin/master
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
