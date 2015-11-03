@@ -14,6 +14,7 @@ namespace ICT4Rails
 
         public int Medewerker_ID { get { return mederwerker_ID; } }
         public string GebruikersNaam { get { return gebruikersNaam; } }
+        public string Wachtwoord { get { return wachtwoord; } }
 
         public Gebruiker(string gebruikersNaam, int Medewerker_id, string wachtwoord)
         {

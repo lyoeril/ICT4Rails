@@ -25,6 +25,8 @@ namespace ICT4Rails
         Administratie administratie;
         public int MedID;
         private Medewerker Fullmedewerker;
+        private Gebruiker gebruiker;
+        private bool heeftaccount = false;
 
         public MainForm(Administratie administratie)
         {
@@ -95,6 +97,7 @@ namespace ICT4Rails
                         Label label = new Label();
                         label.Anchor = System.Windows.Forms.AnchorStyles.None;
                         label.AutoSize = true;
+                        label.Click += new EventHandler(label_Click);
                         label.Name = "label" + Convert.ToString(labelCount);
                         label.Tag = Convert.ToString(x) + ", " + Convert.ToString(y);
                         label.Text = Convert.ToString(x) + ", " + Convert.ToString(y);
@@ -103,6 +106,9 @@ namespace ICT4Rails
                     }
                 }
             }
+
+
+
             // Geeft alle spoor labels de correcte text
             foreach (Label l in tableLayoutPanel1.Controls)
             {
@@ -150,6 +156,12 @@ namespace ICT4Rails
                 else if ((string)l.Tag == "17, 21") { l.Text = "20"; }
                 else if ((string)l.Tag == "17, 22") { l.Text = "21"; }
             }
+        }
+
+        //de methode die aangeroepen wordt als er op een label geklikt wordt
+        private void label_Click(object sender, EventArgs ee)
+        {
+            //code
         }
 
         // Deze methode is er zodat de onderstaande code niet nog langer wordt
@@ -338,7 +350,8 @@ namespace ICT4Rails
                         else
                         {
                             string Cbkeuze = cbAccountFunctie.SelectedItem.ToString();
-                            DataMed.InsertMedewerker(tbxAccountNaam.Text, tbxAccountEmail.Text, Cbkeuze, tbxAccountStrtNR.Text, tbxAccountPostcode.Text);
+                            Medewerker medewerker = new Medewerker(0, tbxAccountNaam.Text, tbxAccountEmail.Text, Cbkeuze, tbxAccountStrtNR.Text, tbxAccountPostcode.Text);
+                            administratie.AddMedewerker(medewerker);
                         }
                         //Medewerker toevoegen aan datbase
                         vullMederwerkerList();
@@ -380,10 +393,14 @@ namespace ICT4Rails
             }
             else
             {
-                DataMed.InsertGebruiker(tbxAccountUsername.Text, MedID, tbxAccountWachtwoord.Text);
+                Gebruiker gebruiker = new Gebruiker(tbxAccountUsername.Text, MedID, tbxAccountWachtwoord.Text);
+                administratie.AddGebruiker(gebruiker);
                 MessageBox.Show("Account is toegevoegd en kan gebruikt worden", "ICT4Rails",
                 MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
                 administratie.RefreshClass();
+                vullMederwerkerList();
+                clearTextboxes();
             }
         }
 
@@ -395,6 +412,13 @@ namespace ICT4Rails
                 Fullmedewerker = lbAccountMedewerkers.SelectedItem as Medewerker;
                 MedID = medewerker.ID;
                 enableButtons();
+
+                if (administratie.FindGebruiker(medewerker.ID) != null)
+                {
+                    gebruiker = administratie.FindGebruiker(medewerker.ID);
+                    heeftaccount = true;
+                    MessageBox.Show("gebruiker heeft een account");
+                }
             }
         }
 
@@ -403,8 +427,9 @@ namespace ICT4Rails
             tbxAccountUsername.Enabled = true;
             tbxAccountWachtwoord.Enabled = true;
             BtnAccountInlogToevoegen.Enabled = true;
+            BttnAccountRemoveMedewerker.Enabled = true;
+            
         }
-
         private void clearTextboxes()
         {
             tbxAccountEmail.Text = "";
@@ -418,10 +443,34 @@ namespace ICT4Rails
             Regex regex = new Regex("^[1-9]{1}[0-9]{3}?[A-Z]{2}$");
             return regex.IsMatch(postcode);
         }
-
         private void BttnAccountRemoveMedewerker_Click(object sender, EventArgs e)
         {
-            administratie.RemoveMedewerker(Fullmedewerker);
+            if (administratie.FindGebruiker(Fullmedewerker.ID) == null)
+            {
+                administratie.RemoveMedewerker(Fullmedewerker);
+                administratie.RefreshClass();
+                vullMederwerkerList();
+            }
+            else
+            {
+                DialogResult result = MessageBox.Show("Gebruiker heeft een account, wilt u door gaan met het verwijderen?", "Question", MessageBoxButtons.YesNo);
+
+                if (result == DialogResult.Yes)
+                {
+                    if(heeftaccount == true)
+                    {
+                        administratie.RemoveGebruiker(gebruiker);
+                        administratie.RemoveMedewerker(Fullmedewerker);
+                    }
+                    else
+                    {
+                        administratie.RemoveMedewerker(Fullmedewerker);
+                    }
+                    administratie.RefreshClass();
+                    vullMederwerkerList();
+                    heeftaccount = false;
+                }
+            }
         }
     }
 }

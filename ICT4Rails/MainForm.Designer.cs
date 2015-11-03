@@ -716,6 +716,7 @@
             // 
             // tabpageAccountBeheer
             // 
+            this.tabpageAccountBeheer.Controls.Add(this.BttnAccountRemoveMedewerker);
             this.tabpageAccountBeheer.Controls.Add(this.lbAccountMedewerkers);
             this.tabpageAccountBeheer.Controls.Add(this.grbAccountNMedewerker);
             this.tabpageAccountBeheer.Controls.Add(this.grbAccountBeheerNieuwAccount);
@@ -872,7 +873,6 @@
             // 
             // grbAccountBeheerNieuwAccount
             // 
-            this.grbAccountBeheerNieuwAccount.Controls.Add(this.BttnAccountRemoveMedewerker);
             this.grbAccountBeheerNieuwAccount.Controls.Add(this.label2);
             this.grbAccountBeheerNieuwAccount.Controls.Add(this.label1);
             this.grbAccountBeheerNieuwAccount.Controls.Add(this.tbxAccountWachtwoord);
@@ -943,7 +943,8 @@
             // 
             // BttnAccountRemoveMedewerker
             // 
-            this.BttnAccountRemoveMedewerker.Location = new System.Drawing.Point(201, 237);
+            this.BttnAccountRemoveMedewerker.Enabled = false;
+            this.BttnAccountRemoveMedewerker.Location = new System.Drawing.Point(467, 644);
             this.BttnAccountRemoveMedewerker.Name = "BttnAccountRemoveMedewerker";
             this.BttnAccountRemoveMedewerker.Size = new System.Drawing.Size(103, 27);
             this.BttnAccountRemoveMedewerker.TabIndex = 18;
