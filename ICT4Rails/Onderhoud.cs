@@ -55,7 +55,7 @@ namespace ICT4Rails
             }
             else
             {
-                tramstr = tram.Nummer.ToString();
+                tramstr = tram.Id.ToString();
             }
 
             string medewerkerstr;

@@ -127,7 +127,7 @@ namespace ICT4Rails
             }
             foreach (Tram t in a.Trams)
             {
-                if (t.Nummer == tram)
+                if (t.Id == tram)
                 {
                     tr = t; ;
                 }
@@ -160,15 +160,15 @@ namespace ICT4Rails
         }
 
 
-        private Tram CreateTramFromReader(OracleDataReader reader,List<TramType> tramtypes,List<Status> statuslist)
+        private Tram CreateTramFromReader(OracleDataReader reader, List<TramType> tramtypes, List<Status> statuslist)
         {
             int id = Convert.ToInt32(reader["ID"]);
             string typenaam = Convert.ToString(reader["TYPENAAM"]);
             string statusnaam = Convert.ToString(reader["STATUSNAAM"]);
             string lijn = Convert.ToString(reader["LIJN"]);
             string beschikbaar = Convert.ToString(reader["BESCHIKBAAR"]);
-            TramType Type = null;            
-            Status Status = null;            
+            TramType Type = null;
+            Status Status = null;
             bool trueorfalse;
             // eerst zal status en tramtype uitgewerkt moeten worden
             foreach (TramType type in tramtypes)
@@ -181,13 +181,13 @@ namespace ICT4Rails
             }
             foreach (Status status in statuslist)
             {
-                if(status.Naam == statusnaam)
+                if (status.Naam == statusnaam)
                 {
                     Status = status;
                     break;
                 }
             }
-            if(beschikbaar == "Y")
+            if (beschikbaar == "Y")
             {
                 trueorfalse = true;
             }
@@ -195,7 +195,7 @@ namespace ICT4Rails
             {
                 trueorfalse = false;
             }
-            return new Tram(id, Type, Status, lijn, trueorfalse);            
+            return new Tram(id, Type, Status, lijn, trueorfalse);
         }
 
         public List<Status> GetAllStatus()
@@ -281,6 +281,46 @@ namespace ICT4Rails
                 Convert.ToInt32(reader["MEDEWERKERID"]),
                 Convert.ToString(reader["WACHTWOORD"])
                 );
+        }
+
+        public List<Reservering> GetAllReserveringen()
+        {
+            List<Reservering> Reserveringen = new List<Reservering>();
+            using (OracleConnection connection = Connection)
+            {
+                string query = "SELECT * FROM Reservering";
+                using (OracleCommand command = new OracleCommand(query, connection))
+                {
+                    using (OracleDataReader reader = command.ExecuteReader())
+                    {
+                        List<Tram> trams = GetAllTrams();
+                        while (reader.Read())
+                        {
+                            Reserveringen.Add(CreateReserveringFromReader(reader));
+                        }
+                    }
+                }
+            }
+            return Reserveringen;
+        }
+        private Reservering CreateReserveringFromReader(OracleDataReader reader, List<Tram> trams)
+        {
+            int id = Convert.ToInt32(reader["ID"]);
+            int spoorid = Convert.ToInt32(reader["SPOORID"]);
+            int tramid = Convert.ToInt32(reader["TRAMID"]);
+            DateTime datetime = Convert.ToDateTime(reader["DATUM"]);
+            char actief = Convert.ToChar(reader["ACTIEF"]);
+            
+            Tram Tram = null;
+            foreach(Tram tram in trams)
+            {
+                if(tram.Id == id)
+                {
+                    Tram = tram;
+                    break;
+                }
+            }
+            return null;
         }
     }
 }
