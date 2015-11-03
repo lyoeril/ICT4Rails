@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows;
 using System.Text.RegularExpressions;
+using Phidgets;
+using Phidgets.Events;
 
 namespace ICT4Rails
 {
@@ -23,9 +25,8 @@ namespace ICT4Rails
         Administratie administratie;
         public int MedID;
         private Medewerker Fullmedewerker;
-
-
-
+        private Gebruiker gebruiker;
+        private bool heeftaccount = false;
 
         public MainForm(Administratie administratie)
         {
@@ -349,7 +350,8 @@ namespace ICT4Rails
                         else
                         {
                             string Cbkeuze = cbAccountFunctie.SelectedItem.ToString();
-                            DataMed.InsertMedewerker(tbxAccountNaam.Text, tbxAccountEmail.Text, Cbkeuze, tbxAccountStrtNR.Text, tbxAccountPostcode.Text);
+                            Medewerker medewerker = new Medewerker(0, tbxAccountNaam.Text, tbxAccountEmail.Text, Cbkeuze, tbxAccountStrtNR.Text, tbxAccountPostcode.Text);
+                            administratie.AddMedewerker(medewerker);
                         }
                         //Medewerker toevoegen aan datbase
                         vullMederwerkerList();
@@ -391,10 +393,14 @@ namespace ICT4Rails
             }
             else
             {
-                DataMed.InsertGebruiker(tbxAccountUsername.Text, MedID, tbxAccountWachtwoord.Text);
+                Gebruiker gebruiker = new Gebruiker(tbxAccountUsername.Text, MedID, tbxAccountWachtwoord.Text);
+                administratie.AddGebruiker(gebruiker);
                 MessageBox.Show("Account is toegevoegd en kan gebruikt worden", "ICT4Rails",
                 MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
                 administratie.RefreshClass();
+                vullMederwerkerList();
+                clearTextboxes();
             }
         }
 
@@ -406,6 +412,13 @@ namespace ICT4Rails
                 Fullmedewerker = lbAccountMedewerkers.SelectedItem as Medewerker;
                 MedID = medewerker.ID;
                 enableButtons();
+
+                if (administratie.FindGebruiker(medewerker.ID) != null)
+                {
+                    gebruiker = administratie.FindGebruiker(medewerker.ID);
+                    heeftaccount = true;
+                    MessageBox.Show("gebruiker heeft een account");
+                }
             }
         }
 
@@ -414,8 +427,9 @@ namespace ICT4Rails
             tbxAccountUsername.Enabled = true;
             tbxAccountWachtwoord.Enabled = true;
             BtnAccountInlogToevoegen.Enabled = true;
+            BttnAccountRemoveMedewerker.Enabled = true;
+            
         }
-
         private void clearTextboxes()
         {
             tbxAccountEmail.Text = "";
@@ -429,10 +443,34 @@ namespace ICT4Rails
             Regex regex = new Regex("^[1-9]{1}[0-9]{3}?[A-Z]{2}$");
             return regex.IsMatch(postcode);
         }
-
         private void BttnAccountRemoveMedewerker_Click(object sender, EventArgs e)
         {
-            administratie.RemoveMedewerker(Fullmedewerker);
+            if (administratie.FindGebruiker(Fullmedewerker.ID) == null)
+            {
+                administratie.RemoveMedewerker(Fullmedewerker);
+                administratie.RefreshClass();
+                vullMederwerkerList();
+            }
+            else
+            {
+                DialogResult result = MessageBox.Show("Gebruiker heeft een account, wilt u door gaan met het verwijderen?", "Question", MessageBoxButtons.YesNo);
+
+                if (result == DialogResult.Yes)
+                {
+                    if(heeftaccount == true)
+                    {
+                        administratie.RemoveGebruiker(gebruiker);
+                        administratie.RemoveMedewerker(Fullmedewerker);
+                    }
+                    else
+                    {
+                        administratie.RemoveMedewerker(Fullmedewerker);
+                    }
+                    administratie.RefreshClass();
+                    vullMederwerkerList();
+                    heeftaccount = false;
+                }
+            }
         }
     }
 }

@@ -24,8 +24,17 @@ namespace ICT4Rails
         public Administratie()
         {
             data = new Database();
+<<<<<<< HEAD
             this.gebruikers = data.GetAllGebruikers();
             this.gebruikers.Add(new Gebruiker("", 0, ""));
+=======
+<<<<<<< HEAD
+            this.gebruikers = data.GetAllGebruikers();
+            this.gebruikers.Add(new Gebruiker("", 0, ""));
+=======
+            this.gebruikers = data.GetAllGebruikers();           
+>>>>>>> origin/master
+>>>>>>> origin/master
             this.medewerkers = data.GetAllMedewerkers();
             this.onderhoudslijst = data.GetAllOnderhoud();
             this.trams = data.GetAllTrams();
@@ -42,10 +51,9 @@ namespace ICT4Rails
         {
             if (FindMedewerker(medewerker.ID) != null)
             {
-                //throw new Exception("De medewerker bestaat al!"); exception kan hier niet omdat een exception de methode break't, de return false code wordt niet uitgevoerd en dan wordt er niets gereturnd
                 return false;
             }             
-            medewerkers.Add(medewerker);
+            data.InsertMedewerker(medewerker);
             return true;
         }
 
@@ -53,9 +61,7 @@ namespace ICT4Rails
         {
             if (FindMedewerker(medewerker.ID) != null)
             {
-                medewerkers.Remove(FindMedewerker(medewerker.ID));
                 data.RemoveMedewerker(medewerker);
-                
                 return true;
             }
             return false;
@@ -77,6 +83,16 @@ namespace ICT4Rails
             throw new Exception("Er zijn geen medewerkers");
         }
 
+        public bool AddGebruiker(Gebruiker gebruiker)
+        {
+            if (FindGebruiker(gebruiker.Medewerker_ID) != null)
+            {
+                return false;
+            }
+            data.InsertGebruiker(gebruiker);
+            return true;
+        }
+
         public Gebruiker FindGebruiker(int id)
         {
             if (gebruikers != null)
@@ -91,7 +107,15 @@ namespace ICT4Rails
             }
             return null;
         }
-
+        public bool RemoveGebruiker(Gebruiker gebruiker)
+        {
+            if (FindGebruiker(gebruiker.Medewerker_ID) != null)
+            {
+                data.RemoveGebruiker(gebruiker);
+                return true;
+            }
+            return false;
+        }
         public bool ChangeMedewerker(Medewerker medewerker)
         {
             // TO DO

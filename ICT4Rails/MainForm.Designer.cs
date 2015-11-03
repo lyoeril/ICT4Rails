@@ -718,6 +718,7 @@
             // 
             // tabpageAccountBeheer
             // 
+            this.tabpageAccountBeheer.Controls.Add(this.BttnAccountRemoveMedewerker);
             this.tabpageAccountBeheer.Controls.Add(this.lbAccountMedewerkers);
             this.tabpageAccountBeheer.Controls.Add(this.grbAccountNMedewerker);
             this.tabpageAccountBeheer.Controls.Add(this.grbAccountBeheerNieuwAccount);
@@ -874,7 +875,6 @@
             // 
             // grbAccountBeheerNieuwAccount
             // 
-            this.grbAccountBeheerNieuwAccount.Controls.Add(this.BttnAccountRemoveMedewerker);
             this.grbAccountBeheerNieuwAccount.Controls.Add(this.label2);
             this.grbAccountBeheerNieuwAccount.Controls.Add(this.label1);
             this.grbAccountBeheerNieuwAccount.Controls.Add(this.tbxAccountWachtwoord);
@@ -953,6 +953,20 @@
             this.tabPage4.Text = "tabPage4";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+<<<<<<< HEAD
+=======
+            // BttnAccountRemoveMedewerker
+            // 
+            this.BttnAccountRemoveMedewerker.Enabled = false;
+            this.BttnAccountRemoveMedewerker.Location = new System.Drawing.Point(467, 644);
+            this.BttnAccountRemoveMedewerker.Name = "BttnAccountRemoveMedewerker";
+            this.BttnAccountRemoveMedewerker.Size = new System.Drawing.Size(103, 27);
+            this.BttnAccountRemoveMedewerker.TabIndex = 18;
+            this.BttnAccountRemoveMedewerker.Text = "Verwijder";
+            this.BttnAccountRemoveMedewerker.UseVisualStyleBackColor = true;
+            this.BttnAccountRemoveMedewerker.Click += new System.EventHandler(this.BttnAccountRemoveMedewerker_Click);
+            // 
+>>>>>>> origin/master
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
