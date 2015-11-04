@@ -34,5 +34,10 @@ namespace ICT4Rails
                 return false;
             }
         }
+
+        public override string ToString()
+        {
+            return  mederwerker_ID + " - " + GebruikersNaam;
+        }
     }
 }

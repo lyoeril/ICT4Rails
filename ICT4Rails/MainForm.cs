@@ -20,13 +20,15 @@ namespace ICT4Rails
 
         //Medewerker
         
-        List<Medewerker> medewerkers;
+       
         Database DataMed = new Database();
         Administratie administratie;
         public int MedID;
         private Medewerker Fullmedewerker;
         private Gebruiker gebruiker;
         private bool heeftaccount = false;
+        private List<Gebruiker> gebruikers;
+        List<Medewerker> medewerkers;
 
         public MainForm(Administratie administratie)
         {
@@ -360,12 +362,20 @@ namespace ICT4Rails
         private void vullMederwerkerList()
         {
             lbAccountMedewerkers.Items.Clear();
+            lbAccountGebruiker.Items.Clear();
             medewerkers = DataMed.GetAllMedewerkers();
+            gebruikers = DataMed.GetAllGebruikers();
             // Haal alle medewerkers op van database
             foreach (Medewerker medewerker in medewerkers)
             {
                 lbAccountMedewerkers.Items.Add(medewerker);
             }
+
+            foreach (Gebruiker gebruiker in gebruikers)
+            {
+                lbAccountGebruiker.Items.Add(gebruiker);
+            }
+            
         }
 
         private void btnAccountToevoegen_Click(object sender, EventArgs e)
@@ -452,8 +462,16 @@ namespace ICT4Rails
                 {
                     gebruiker = administratie.FindGebruiker(medewerker.ID);
                     heeftaccount = true;
-                    MessageBox.Show("gebruiker heeft een account");
                 }
+            }
+        }
+
+        private void lbAccountGebruiker_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(lbAccountGebruiker.SelectedItem != null)
+            {
+                gebruiker = lbAccountGebruiker.SelectedItem as Gebruiker;
+                btnAccountGebrkerverw.Enabled = true;
             }
         }
 
@@ -463,7 +481,6 @@ namespace ICT4Rails
             tbxAccountWachtwoord.Enabled = true;
             BtnAccountInlogToevoegen.Enabled = true;
             BttnAccountRemoveMedewerker.Enabled = true;
-            
         }
         private void clearTextboxes()
         {
@@ -508,6 +525,16 @@ namespace ICT4Rails
             }
         }
 
+        private void btnAccountGebrkerverw_Click(object sender, EventArgs e)
+        {
+            if (administratie.FindGebruiker(gebruiker.Medewerker_ID) == null)
+            {
+                administratie.RemoveGebruiker(gebruiker);
+                administratie.RefreshClass();
+                vullMederwerkerList();
+            }
+        }
+
         private void loadComboboxes()
         {
             foreach (Medewerker m in medewerkers)
@@ -540,6 +567,6 @@ namespace ICT4Rails
 
         }
 
-
+        
     }
 }
