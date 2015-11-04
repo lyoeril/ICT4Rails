@@ -18,17 +18,17 @@ namespace ICT4Rails
     {
         private Label[][] Sporen;
 
-        //Medewerker
-        
+        //Medewerker        
        
-        Database DataMed = new Database();
-        Administratie administratie;
-        public int MedID;
+        private Database DataMed = new Database();
+        private Administratie administratie;
+        private int MedID;
         private Medewerker Fullmedewerker;
         private Gebruiker gebruiker;
         private bool heeftaccount = false;
         private List<Gebruiker> gebruikers;
-        List<Medewerker> medewerkers;
+        private List<Medewerker> medewerkers;
+        private RFID rfid;
 
         public MainForm(Administratie administratie)
         {
@@ -43,6 +43,63 @@ namespace ICT4Rails
             this.administratie = administratie;
 
             this.tableLayoutPanel1.CellPaint += new TableLayoutCellPaintEventHandler(tableLayoutPanel1_CellPaint);
+
+            rfid = new RFID();
+            rfid.Attach += new AttachEventHandler(rfid_Attach);
+            rfid.Detach += new DetachEventHandler(rfid_Detach);
+            rfid.Tag += new TagEventHandler(rfid_Tag);
+            rfid.TagLost += new TagEventHandler(rfid_TagLost);
+            rfid.open();
+            if (rfid.outputs.Count > 0)
+            {
+                rfid.Antenna = true;
+                rfid.LED = true;
+            }
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            rfid.Attach -= new AttachEventHandler(rfid_Attach);
+            rfid.Detach -= new DetachEventHandler(rfid_Detach);
+            rfid.Tag -= new TagEventHandler(rfid_Tag);
+            rfid.TagLost -= new TagEventHandler(rfid_TagLost);
+
+            if (rfid.outputs.Count > 0)
+            {
+                rfid.Antenna = false;
+                rfid.LED = false;
+            }
+
+            rfid.close();
+        }
+
+        //e.Tag = RFID-tag ID
+        private void rfid_Tag(object sender, TagEventArgs e)
+        {
+            MessageBox.Show(e.Tag);
+        }
+
+        private void rfid_TagLost(object sender, TagEventArgs e)
+        {
+            //
+        }
+
+        private void rfid_Attach(object sender, AttachEventArgs e)
+        {
+            if (rfid.outputs.Count > 0)
+            {
+                rfid.Antenna = true;
+                rfid.LED = true;
+            }
+        }
+
+        private void rfid_Detach(object sender, DetachEventArgs e)
+        {
+            if (rfid.outputs.Count > 0)
+            {
+                rfid.Antenna = false;
+                rfid.LED = false;
+            }
         }
 
         private void LogIn()

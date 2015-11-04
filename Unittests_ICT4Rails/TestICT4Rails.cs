@@ -36,11 +36,11 @@ namespace Unittests_ICT4Rails
             spoor = new Spoor(1, 1, true);
             tramType = new TramType("testtypenaam", "testbeschrijving", 1);
             status = new Status("teststatusnaam", "testbijzonderheden");
-            tram = new Tram(tramType, status, 1, 1, true, uitrijdtijd);
-            reservering = new Reservering(tram, spoor, reserveringDatum);
+            tram = new Tram(1, tramType, status, "1", true);
+            reservering = new Reservering(1, tram, spoor, reserveringDatum, true);
             onderhoud = new Onderhoud(1, medewerker, tram, starttijd, eindtijd, "testopmerking", "testsoort");
             administratie = new Administratie();
-            gebruiker = new Gebruiker(1, "testgebruikersnaam", "testwachtwoord");
+            gebruiker = new Gebruiker("testgebruikersnaam", 1, "testwachtwoord");
         }
         
         [TestMethod]
@@ -125,28 +125,28 @@ namespace Unittests_ICT4Rails
         [TestMethod]
         public void TramTest()
         {
-            tram = new Tram(tramType, status, 1, 1, true, uitrijdtijd);
+            tram = new Tram(1, tramType, status, "1", true);
             Assert.AreEqual(tramType, tram.Type);
             Assert.AreEqual(status, tram.Status);
             Assert.AreEqual(1, tram.Lijn);
-            Assert.AreEqual(1, tram.Nummer);
+            Assert.AreEqual(1, tram.Id);
             Assert.AreEqual(true, tram.Beschikbaar);
-            Assert.AreEqual(uitrijdtijd, tram.Uitrijdtijd);
+            //Assert.AreEqual(uitrijdtijd, tram.Uitrijdtijd);
 
             //ToString
             Assert.AreEqual("Nummer: 1 - Lijn: 1 - Type: testtypenaam - Status: teststatusnaam - Beschikbaar: Ja - Uitrijdatum: 15-10-2015 00:00:00 - Uitrijtijd: 20:00:00", tram.ToString());
              
-            tram = new Tram(null, null, 0, 0, false, uitrijdtijd);
+            tram = new Tram(0, null, null, null, false);
             Assert.AreEqual("Nummer: Onbekend - Lijn: Onbekend - Type: Onbekend - Status: Onbekend - Beschikbaar: Nee - Uitrijdatum: 15-10-2015 00:00:00 - Uitrijtijd: 20:00:00", tram.ToString()); 
         }
 
         [TestMethod]
         public void ReserveringTest()
         {
-            reservering = new Reservering(tram, spoor, reserveringDatum);
+            reservering = new Reservering(1, tram, spoor, reserveringDatum, false);
             Assert.AreEqual(reserveringDatum, reservering.Datum);
             Assert.AreEqual("Tram: 1 - Spoor: 1 - Datum: 15-10-2015 00:00:00", reservering.ToString());
-            reservering = new Reservering(null, null, reserveringDatum);
+            reservering = new Reservering(1, null, null, reserveringDatum, true);
             Assert.AreEqual("Tram: Onbekend - Spoor: Onbekend - Datum: 15-10-2015 00:00:00", reservering.ToString());   
         }
 
@@ -226,8 +226,8 @@ namespace Unittests_ICT4Rails
         [TestMethod]
         public void GebruikerTest()
         {
-            gebruiker = new Gebruiker(1, "testgebruikersnaam", "testwachtwoord");
-            Assert.AreEqual(1, gebruiker.ID);
+            gebruiker = new Gebruiker("testgebruikersnaam", 1, "testwachtwoord");
+            Assert.AreEqual(1, gebruiker.Medewerker_ID);
             Assert.AreEqual("testgebruikersnaam", gebruiker.GebruikersNaam);
 
             Assert.IsTrue(gebruiker.LogIn("testwachtwoord"));
