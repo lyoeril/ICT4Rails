@@ -87,7 +87,7 @@ namespace Unittests_ICT4Rails
 
             Assert.AreEqual("Spoornummer: 1 - Lijn: 1 - Beschikbaar: Ja", spoor.ToString());
             
-            spoor = new Spoor(1, 0, 0, false);
+            spoor = new Spoor(2, 0, 0, false);
             Assert.AreEqual("Spoornummer: Onbekend - Lijn: Onbekend - Beschikbaar: Nee", spoor.ToString());  
             
         }
