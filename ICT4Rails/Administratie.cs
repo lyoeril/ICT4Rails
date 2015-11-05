@@ -267,5 +267,15 @@ namespace ICT4Rails
 
             data.RemoveTram(t);
         }
+
+        public List<Medewerker> GetAllMedewerkers()
+        {
+            if (data.GetAllMedewerkers() != null)
+            {
+                return data.GetAllMedewerkers();
+            }
+            return null;
+        }
+
     }
 }
