@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace ICT4Rails
@@ -31,6 +32,12 @@ namespace ICT4Rails
             this.functie = functie;
             this.adres = adres;
             this.postcode = postcode;
+        }
+
+        public bool ValidatePostcode(string postcode)
+        {
+            Regex regex = new Regex("^[1-9]{1}[0-9]{3}?[A-Z]{2}$");
+            return regex.IsMatch(postcode);
         }
 
         public override string ToString()
