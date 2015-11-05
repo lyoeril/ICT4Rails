@@ -14,9 +14,14 @@ namespace ICT4Rails
         {
             using (OracleConnection connection = Connection)
             {
-                string Insert = "INSERT INTO MEDEWERKER (ID, Naam, Email, Functie, Adres, Postcode) VALUES (seq_Medewerker_ID.nextval" + ",'" + medewerker.Naam + "','" + medewerker.Email + "','" + medewerker.Functie + "','" + medewerker.Adres + "','" + medewerker.Postcode + "')";
+                string Insert = "INSERT INTO MEDEWERKER (ID, Naam, Email, Functie, Adres, Postcode) VALUES (seq_Medewerker_ID.nextval" + ",':NAAM',':EMAIL',':FUNCTIE',':ADRES',':POSTCODE')";
                 using (OracleCommand command = new OracleCommand(Insert, connection))
                 {
+                    command.Parameters.Add(new OracleParameter("NAAM", medewerker.Naam));
+                    command.Parameters.Add(new OracleParameter("EMAIL", medewerker.Email));
+                    command.Parameters.Add(new OracleParameter("FUNCTIE", medewerker.Functie));
+                    command.Parameters.Add(new OracleParameter("ADRES", medewerker.Adres));
+                    command.Parameters.Add(new OracleParameter("POSTCODE", medewerker.Postcode));
                     command.ExecuteNonQuery();
                 }
             }
@@ -26,21 +31,26 @@ namespace ICT4Rails
         {
             using (OracleConnection connection = Connection)
             {
-                string Insert = "INSERT INTO GEBRUIKER (Gebruikersnaam, MedewerkerID, Wachtwoord) VALUES (" + "'" + gebruiker.GebruikersNaam + "'," + gebruiker.Medewerker_ID + ",'" + gebruiker.Wachtwoord + "')";
+                string Insert = "INSERT INTO GEBRUIKER (Gebruikersnaam, MedewerkerID, Wachtwoord) VALUES (':NAAM',:ID,':PASS')";
                 using (OracleCommand command = new OracleCommand(Insert, connection))
                 {
+                    command.Parameters.Add(new OracleParameter("NAAM", gebruiker.GebruikersNaam));
+                    command.Parameters.Add(new OracleParameter("ID", gebruiker.Medewerker_ID));
+                    command.Parameters.Add(new OracleParameter("PASS", gebruiker.Wachtwoord));
                     command.ExecuteNonQuery();
                 }
 
             }
         }
-        public void InsertReservering(int spoorID, int tramID, DateTime datum)
+        public void InsertReservering(Reservering reservering)
         {
             using (OracleConnection connection = Connection)
             {
-                string insert = "insert into reservering (ID, SpoorID, TramID, Datum) values(seq_Reservering_ID.nextval, " + Convert.ToString(spoorID) + ", " + Convert.ToString(tramID) + ", " + Convert.ToString(datum) + ")";
+                string insert = "insert into reservering (ID, SpoorID, TramID, Datum) values(seq_Reservering_ID.nextval, " + spoorID + ", " + Convert.ToString(tramID) + ", " + Convert.ToString(datum) + ")";
                 using (OracleCommand command = new OracleCommand(insert, connection))
-                {
+                {/*
+                    command.Parameters.Add(new OracleParameter("SPOORID", reservering.Spoor.));
+                    command.Parameters.Add(new OracleParameter (""))*/
                     command.ExecuteNonQuery();
                 }
             }
