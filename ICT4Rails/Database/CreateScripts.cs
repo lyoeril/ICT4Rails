@@ -20,6 +20,7 @@ namespace ICT4Rails
                 Convert.ToString(reader["Postcode"])
                 );
         }
+
         private Onderhoud CreateOnderhoudFromReader(OracleDataReader reader)
         {
             int id = Convert.ToInt32(reader["ID"]);
@@ -51,9 +52,6 @@ namespace ICT4Rails
             Onderhoud onderhoud = new Onderhoud(id, me, tr, starttijd, eindtijd, opmerking, soort);
             return onderhoud;
         }
-
-
-
 
         private Tram CreateTramFromReader(OracleDataReader reader, List<TramType> tramtypes, List<Status> statuslist)
         {
@@ -93,8 +91,6 @@ namespace ICT4Rails
             return new Tram(id, Type, Status, lijn, trueorfalse);
         }
 
-
-
         private Status CreateStatusFromReader(OracleDataReader reader)
         {
             return new Status(
@@ -102,9 +98,6 @@ namespace ICT4Rails
                 Convert.ToString(reader["BIJZONDERHEDEN"])
                 );
         }
-
-
-
 
         private TramType CreateTramTypeFromReader(OracleDataReader reader)
         {
@@ -115,7 +108,6 @@ namespace ICT4Rails
                 );
         }
 
-
         private Gebruiker CreateGebruikerFromReader(OracleDataReader reader)
         {
             return new Gebruiker(
@@ -124,8 +116,6 @@ namespace ICT4Rails
                 Convert.ToString(reader["WACHTWOORD"])
                 );
         }
-
-
 
         private Spoor CreateSpoorFromReader(OracleDataReader reader)
         {
@@ -143,8 +133,6 @@ namespace ICT4Rails
             }
             return new Spoor(spoorid, spoorsector, beschikbaar);
         }
-
-
 
         private Reservering CreateReserveringFromReader(OracleDataReader reader, List<Tram> trams, List<Spoor> sporen)
         {

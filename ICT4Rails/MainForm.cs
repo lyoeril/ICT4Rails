@@ -33,6 +33,7 @@ namespace ICT4Rails
         public MainForm(Administratie administratie)
         {
             InitializeComponent();
+            this.administratie = administratie;
             LogIn();
             VulSporen();
             Sporen = SporenArray();
@@ -40,7 +41,7 @@ namespace ICT4Rails
             OpenAccountUI();
             loadComboboxes();
 
-            this.administratie = administratie;
+            
 
             this.tableLayoutPanel1.CellPaint += new TableLayoutCellPaintEventHandler(tableLayoutPanel1_CellPaint);
 
