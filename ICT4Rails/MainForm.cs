@@ -39,8 +39,7 @@ namespace ICT4Rails
             OpenAccountUI();
             loadComboboxes();
 
-            
-
+            this.FormClosing += new FormClosingEventHandler(MainForm_FormClosing);
             this.tableLayoutPanel1.CellPaint += new TableLayoutCellPaintEventHandler(tableLayoutPanel1_CellPaint);
 
             rfid = new RFID();
@@ -52,7 +51,6 @@ namespace ICT4Rails
             if (rfid.outputs.Count > 0)
             {
                 rfid.Antenna = true;
-                rfid.LED = true;
             }
         }
 
@@ -75,12 +73,24 @@ namespace ICT4Rails
         //e.Tag = RFID-tag ID
         private void rfid_Tag(object sender, TagEventArgs e)
         {
-            MessageBox.Show(e.Tag);
+            rfid.LED = true;
+            //int id = 0;
+            //if (e.Tag == "") { id = 0; } // TAG
+            //else if (e.Tag == "") { id = 0; } // TAG
+            //else if (e.Tag == "") { id = 0; } // TAG
+            //else if (e.Tag == "") { id = 0; } // TAG
+            //foreach (Tram t in administratie.Trams)
+            //{
+            //    if (t.Id == id)
+            //    {
+            //        SorteerTram(t);
+            //    }
+            //}
         }
 
         private void rfid_TagLost(object sender, TagEventArgs e)
         {
-            //
+            rfid.LED = false;
         }
 
         private void rfid_Attach(object sender, AttachEventArgs e)
@@ -88,7 +98,6 @@ namespace ICT4Rails
             if (rfid.outputs.Count > 0)
             {
                 rfid.Antenna = true;
-                rfid.LED = true;
             }
         }
 
@@ -196,7 +205,7 @@ namespace ICT4Rails
                         label.Click += new EventHandler(label_Click);
                         label.Name = "label" + Convert.ToString(labelCount);
                         label.Tag = Convert.ToString(x) + ", " + Convert.ToString(y);
-                        label.Text = "20" + Convert.ToString(x); // + ", " + Convert.ToString(y);
+                        label.Text = "!"; //"20" + Convert.ToString(x); // + ", " + Convert.ToString(y);
                         tableLayoutPanel1.Controls.Add(label, x, y);
                         labelCount++;
                     }
@@ -811,6 +820,109 @@ namespace ICT4Rails
             }
         }
 
+        public void SorteerTram(Tram tram)
+        {
+            string[][] Lijnen = new string[9][];
+            Lijnen[0] = new string[4] { "1", "36", "43", "51" };
+            Lijnen[1] = new string[5] { "2", "38", "34", "55", "63" };
+            Lijnen[2] = new string[2] { "5", "42" };
+            Lijnen[3] = new string[4] { "5", "37", "56", "54" };
+            Lijnen[4] = new string[4] { "10", "32", "41", "62" };
+            Lijnen[5] = new string[3] { "13", "44", "53" };
+            Lijnen[6] = new string[3] { "17", "52", "45" };
+            Lijnen[7] = new string[5] { "16/24", "30", "35", "33", "57" };
+            Lijnen[8] = new string[2] { "OCV", "61" };
+            for (int lijn = 0; lijn < Lijnen.Length; lijn++)
+            {
+                if (tram.Lijn == Lijnen[lijn][0])
+                {
+                    //if (tram.Lijn == "5" && tram.Id >= 901 && tram.Id <= 920)
+                    //{
+                    //    for (int spoor = 1; spoor < Lijnen[lijn].Length; spoor++)
+                    //    {
+                    //        int spoornummer = Convert.ToInt32(Lijnen[3][spoor]);
+                    //        for (int sector = 1; sector < Sporen[spoornummer].Length; sector++)
+                    //        {
+                    //            Label l = null;
+                    //            l = Sporen[spoornummer][sector];
 
+                    //            if (l.Text == "")
+                    //            {
+                    //                l.Text = Convert.ToString(tram.Id);
+                    //                return;
+                    //            }
+                    //        }
+                    //    }
+                    //}
+                    //else if (tram.Lijn == "5" && tram.Id >= 2201 && tram.Id <= 2204)
+                    //{
+                    //    for (int spoor = 1; spoor < Lijnen[lijn].Length; spoor++)
+                    //    {
+                    //        int spoornummer = Convert.ToInt32(Lijnen[2][spoor]);
+                    //        for (int sector = 1; sector < Sporen[spoornummer].Length; sector++)
+                    //        {
+                    //            Label l = null;
+                    //            l = Sporen[spoornummer][sector];
+
+                    //            if (l.Text == "")
+                    //            {
+                    //                l.Text = Convert.ToString(tram.Id);
+                    //                return;
+                    //            }
+                    //        }
+                    //    }
+                    //}
+                    //else
+                    //{
+                    //    for (int spoor = 1; spoor < Lijnen[lijn].Length; spoor++)
+                    //    {
+                    //        int spoornummer = Convert.ToInt32(Lijnen[lijn][spoor]);
+                    //        for (int sector = 1; sector < Sporen[spoornummer].Length; sector++)
+                    //        {
+                    //            Label l = null;
+                    //            l = Sporen[spoornummer][sector];
+
+                    //            if (l.Text == "")
+                    //            {
+                    //                l.Text = Convert.ToString(tram.Id);
+                    //                return;
+                    //            }
+                    //        }
+                    //    }
+                    //}
+                    for (int spoor = 1; spoor < Lijnen[lijn].Length; spoor++)
+                    {
+                        int spoornummer = -1;
+                        if (lijn == 3 && tram.Id >= 901 && tram.Id <= 920)
+                        {
+                            spoornummer = Convert.ToInt32(Lijnen[3][spoor]);
+                        }
+                        else if (lijn == 2 && tram.Id >= 2201 && tram.Id <= 2204)
+                        {
+                            spoornummer = Convert.ToInt32(Lijnen[2][spoor]);
+                        }
+                        else if (tram.Lijn != "5")
+                        {
+                            spoornummer = Convert.ToInt32(Lijnen[lijn][spoor]);
+                        }
+
+                        if (spoornummer != -1)
+                        {
+                            for (int sector = 1; sector < Sporen[spoornummer].Length; sector++)
+                            {
+                                Label l = null;
+                                l = Sporen[spoornummer][sector];
+
+                                if (l.Text == "!")
+                                {
+                                    l.Text = Convert.ToString(tram.Id);
+                                    return;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
