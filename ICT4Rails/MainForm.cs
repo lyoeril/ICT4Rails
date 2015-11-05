@@ -435,7 +435,7 @@ namespace ICT4Rails
                     {
                         if (t.Id == Convert.ToInt32(tbxRemiseBeheerTramNummer.Text))
                         {
-                            //remove tram from db
+                            administratie.TramVerwijderen(Convert.ToInt32(tbxRemiseBeheerTramNummer.Text));
                             error = "";
                         }
                     }
@@ -453,7 +453,8 @@ namespace ICT4Rails
                     {
                         if (t.Id == Convert.ToInt32(tbxRemiseBeheerTramNummer.Text))
                         {
-                            //update tram in db
+                            TramType type = (TramType)cbxRemiseBeheerSpoorBeheerBewerking.SelectedItem;
+                            administratie.TramBewerken(Convert.ToInt32(tbxRemiseBeheerTramNummer.Text), type.Naam, "REMISE", tbxRemiseBeheerTramLijn.Text, true);
                             error = "";
                         }
                     }
@@ -531,7 +532,7 @@ namespace ICT4Rails
                     {
                         if (s.Spoornummer == Convert.ToInt32(tbxRemiseBeheerSpoorBeheerSpoorNummer.Text))
                         {
-                            //blokkeer spoor in db (update beschikbaarheid)
+                            administratie.SpoorStatusVeranderen(Convert.ToInt32(tbxRemiseBeheerSpoorBeheerSpoorNummer.Text), Convert.ToInt32(tbxRemiseBeheerSpoorBeheerSectorNummer.Text), false);
                             error = "";
                         }
                     }
@@ -549,7 +550,7 @@ namespace ICT4Rails
                     {
                         if (s.Spoornummer == Convert.ToInt32(tbxRemiseBeheerSpoorBeheerSpoorNummer.Text))
                         {
-                            //reserveer spoor in db (update beschikbaarheid)
+                            administratie.SpoorStatusVeranderen(Convert.ToInt32(tbxRemiseBeheerSpoorBeheerSpoorNummer.Text), Convert.ToInt32(tbxRemiseBeheerSpoorBeheerSectorNummer.Text), false);
                             error = "";
                         }
                     }
@@ -576,7 +577,7 @@ namespace ICT4Rails
             if (!string.IsNullOrWhiteSpace(cbxStatusbeheerTramStatus.Text) && !string.IsNullOrWhiteSpace(tbxStatusbeheerTramNummer.Text))
             {
                 administratie.TramStatusVeranderen(Convert.ToInt32(tbxStatusbeheerTramNummer.Text), cbxStatusbeheerTramStatus.Text);
-                MessageBox.Show("De status van de tram is veranderd in: " + cbxStatusbeheerTramStatus.Text);
+                MessageBox.Show("De status van de tram met tramnummer: " + tbxStatusbeheerTramNummer.Text + " is veranderd in: " + cbxStatusbeheerTramStatus.Text);
             }
         }
 
@@ -621,7 +622,6 @@ namespace ICT4Rails
                             Medewerker medewerker = new Medewerker(0, tbxAccountNaam.Text, tbxAccountEmail.Text, Cbkeuze, tbxAccountStrtNR.Text, tbxAccountPostcode.Text);
                             administratie.AddMedewerker(medewerker);
                         }
-                        //Medewerker toevoegen aan datbase
                         vullMederwerkerList();
                         clearTextboxes();
                         administratie.RefreshClass();

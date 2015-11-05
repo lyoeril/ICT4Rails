@@ -9,31 +9,31 @@ namespace ICT4Rails
     public class Spoor
     {
         private int spoornummer;
-        private int lijn;
+        private int sectornummer;
         private bool beschikbaar;
 
         public int Spoornummer { get { return spoornummer; } }
-        public int Lijn { get { return lijn; } }
-        public bool Beschikbaar { get { return beschikbaar; } }
+        public int Sectornummer { get { return sectornummer; } }
+        public bool Beschikbaar { get { return beschikbaar; } set { beschikbaar = value; } }
 
-        public Spoor(int spoornr, int lijn, bool beschikbaar)
+        public Spoor(int spoornr, int sectornr, bool beschikbaar)
         {
             this.spoornummer = spoornr;
-            this.lijn = lijn;
+            this.sectornummer = sectornr;
             this.beschikbaar = beschikbaar;
         }
 
         public override string ToString()
         {
             //override tostring methode om gegevens gemakkelijk weer te geven
-            string lijnstr;
-            if (lijn == 0)
+            string sectorstr;
+            if (sectornummer == 0)
             {
-                lijnstr = "Onbekend";
+                sectorstr = "Onbekend";
             }
             else
             {
-                lijnstr = lijn.ToString();
+                sectorstr = sectornummer.ToString();
             }
 
             string spoorstr;
@@ -57,7 +57,7 @@ namespace ICT4Rails
             }
 
             string info = "Spoornummer: " + spoorstr +
-                " - Lijn: " + lijnstr +
+                " - Sector: " + sectorstr +
                 " - Beschikbaar: " + beschikbaarstr;
 
             return info;

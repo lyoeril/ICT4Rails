@@ -21,14 +21,10 @@ namespace ICT4Rails
                 {
                     command.Parameters.Add(new OracleParameter("Status", tram.Status.Naam.ToUpper()));
                     command.Parameters.Add(new OracleParameter("Lijnnummer", tram.Lijn));
-                    char beschikbaar;
+                    char beschikbaar = 'N';
                     if (tram.Beschikbaar)
                     {
                         beschikbaar = 'Y';
-                    }
-                    else
-                    {
-                        beschikbaar = 'N';
                     }
                     command.Parameters.Add(new OracleParameter("Beschikbaar", beschikbaar));
                     command.Parameters.Add(new OracleParameter("IDTRAM", tram.Id));
@@ -46,6 +42,27 @@ namespace ICT4Rails
                     command.Parameters.Add(new OracleParameter("Gebruikersnaam", gebruiker.GebruikersNaam));
                     command.Parameters.Add(new OracleParameter("Wachtwoord", gebruiker.Wachtwoord));
                     command.Parameters.Add(new OracleParameter("ID", gebruiker.Medewerker_ID));
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public void UpdateSpoor(Spoor spoor)
+        {
+            using (OracleConnection connection = Connection)
+            {
+                string Update = "UPDATE SPOOR SET ID =:id, SpoorNummer =:spnr, SpoorSector =:spsctr, Beschikbaar =:beschkbr WHERE MedewerkerID =:ID";
+                using (OracleCommand command = new OracleCommand(Update, connection))
+                {
+                    command.Parameters.Add(new OracleParameter("id", SPOORID));
+                    command.Parameters.Add(new OracleParameter("spnr", spoor.Spoornummer));
+                    command.Parameters.Add(new OracleParameter("spsctr", spoor.Sectornummer));
+                    char beschikbaar = 'N';
+                    if (spoor.Beschikbaar)
+                    {
+                        beschikbaar = 'Y';
+                    }
+                    command.Parameters.Add(new OracleParameter("beschkbr", beschikbaar));
                     command.ExecuteNonQuery();
                 }
             }

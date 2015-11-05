@@ -188,10 +188,10 @@ namespace ICT4Rails
             // hierbij word een reservering geplaatst tussen een tram en een spoor.
         }
 
-        public void SpoorStatusVeranderen()
+        public void SpoorStatusVeranderen(int spoornr, int sectornr, bool beschikbaar)
         {
-            // TO DO
-            // bij deze methode wordt de status van het spoor verandert naar ....
+            Spoor spoor = new Spoor(spoornr, sectornr, beschikbaar);
+            data.UpdateSpoor(spoor);
         }
 
         public bool AddOnderhoudsbeurt(Medewerker medewerker, int tramnummerID, string opmerking, string soort, DateTime starttijd, DateTime eindtijd)
@@ -224,6 +224,45 @@ namespace ICT4Rails
                 }
             }
 
+        }
+
+        public void TramBewerken(int tramNummer, string typeNaam, string statusNaam, string lijn, bool beschikbaarheid)
+        {
+            TramType type = null;
+            Status status = null;
+
+            foreach (TramType t in data.GetAllTramtypes())
+            {
+                if (t.Naam == typeNaam)
+                {
+                    type = t;
+                }
+            }
+
+            foreach (Status s in data.GetAllStatus())
+            {
+                if (s.Naam == statusNaam)
+                {
+                    status = s;
+                }
+            }
+
+            Tram tram = new Tram(tramNummer, type, status, lijn, beschikbaarheid);
+            data.UpdateTramStatus(tram);
+        }
+
+        public void TramVerwijderen(int tramNummer)
+        {
+            Tram t = null;
+            foreach(Tram tram in trams)
+            {
+                if(tram.Id == tramNummer)
+                {
+                    t = tram;
+                }
+            }
+
+            data.RemoveTram(t);
         }
     }
 }

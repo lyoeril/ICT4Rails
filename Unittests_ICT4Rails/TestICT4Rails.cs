@@ -82,7 +82,7 @@ namespace Unittests_ICT4Rails
         public void TestSpoor()
         {
             Assert.AreEqual(1, spoor.Spoornummer);
-            Assert.AreEqual(1, spoor.Lijn);
+            Assert.AreEqual(1, spoor.Sectornummer);
             Assert.AreEqual(true, spoor.Beschikbaar);
 
             Assert.AreEqual("Spoornummer: 1 - Lijn: 1 - Beschikbaar: Ja", spoor.ToString());
