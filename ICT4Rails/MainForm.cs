@@ -654,7 +654,7 @@ namespace ICT4Rails
             {
                 MessageBox.Show("Gebruiker heeft al een inlog account");
             }
-            else if (!string.IsNullOrWhiteSpace(tbxAccountUsername.Text) && !string.IsNullOrWhiteSpace(tbxAccountWachtwoord.Text))
+            else if (string.IsNullOrWhiteSpace(tbxAccountUsername.Text) && string.IsNullOrWhiteSpace(tbxAccountWachtwoord.Text))
             {
                 MessageBox.Show("Vul eerst alle velden in.");
             }
