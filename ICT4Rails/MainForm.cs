@@ -110,7 +110,8 @@ namespace ICT4Rails
                 tabcontrolRemise.Controls.Remove(tabpageRemiseBeheer);
                 tabcontrolRemise.TabPages.Insert(0, tabpageStatusBeheer);
                 tabcontrolRemise.Controls.Remove(tabpageAccountBeheer);
-                tabcontrolRemise.Controls.Remove(tabPage4);
+                tabcontrolRemise.Controls.Remove(tabPageSchoonmaak);
+
             }
             else
             {
@@ -118,7 +119,8 @@ namespace ICT4Rails
                 tabcontrolRemise.TabPages.Insert(1, tabpageRemiseBeheer);
                 tabcontrolRemise.TabPages.Insert(2, tabpageStatusBeheer);
                 tabcontrolRemise.TabPages.Insert(3, tabpageAccountBeheer);
-                tabcontrolRemise.TabPages.Insert(4, tabPage4);
+                tabcontrolRemise.TabPages.Insert(4, tabPageSchoonmaak);
+                tabcontrolRemise.TabPages.Insert(5, tabPageReparatie);
             }
         }
 
