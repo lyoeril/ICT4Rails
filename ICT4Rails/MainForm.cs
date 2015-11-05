@@ -357,7 +357,12 @@ namespace ICT4Rails
         {
             if (cbxRemiseBeheerTramBewerking.SelectedItem.ToString() == "Voeg toe")
             {
-                
+                List<Tram> trams = DataMed.GetAllTrams();
+
+                foreach (Tram t in trams)
+                {
+                    
+                }
             }
             else if (cbxRemiseBeheerTramBewerking.SelectedItem.ToString() == "Verwijder")
             {
