@@ -26,8 +26,6 @@ namespace ICT4Rails
         private Medewerker Fullmedewerker;
         private Gebruiker gebruiker;
         private bool heeftaccount = false;
-        private List<Gebruiker> gebruikers;
-        private List<Medewerker> medewerkers;
         private RFID rfid;
 
         public MainForm(Administratie administratie)
@@ -37,11 +35,9 @@ namespace ICT4Rails
             LogIn();
             VulSporen();
             Sporen = SporenArray();
-            vullMederwerkerList();
+            VulListBoxAccount();
             OpenAccountUI();
             loadComboboxes();
-
-            
 
             this.tableLayoutPanel1.CellPaint += new TableLayoutCellPaintEventHandler(tableLayoutPanel1_CellPaint);
 
@@ -70,7 +66,6 @@ namespace ICT4Rails
                 rfid.Antenna = false;
                 rfid.LED = false;
             }
-
             rfid.close();
         }
 
@@ -155,8 +150,6 @@ namespace ICT4Rails
                         tabcontrolRemise.TabPages.Remove(tabPageReparatie);
                     }
                 }
-
-
             }
         }
 
@@ -204,8 +197,6 @@ namespace ICT4Rails
                     }
                 }
             }
-
-
 
             // Geeft alle spoor labels de correcte text
             foreach (Label l in tableLayoutPanel1.Controls)
@@ -582,19 +573,17 @@ namespace ICT4Rails
 
         //AccountBeheer
 
-        private void vullMederwerkerList()
+        private void VulListBoxAccount()
         {
             lbAccountMedewerkers.Items.Clear();
             lbAccountGebruiker.Items.Clear();
-            medewerkers = DataMed.GetAllMedewerkers();
-            gebruikers = DataMed.GetAllGebruikers();
             // Haal alle medewerkers op van database
-            foreach (Medewerker medewerker in medewerkers)
+            foreach (Medewerker medewerker in administratie.Medewerkers)
             {
                 lbAccountMedewerkers.Items.Add(medewerker);
             }
 
-            foreach (Gebruiker gebruiker in gebruikers)
+            foreach (Gebruiker gebruiker in administratie.Gebruikers)
             {
                 lbAccountGebruiker.Items.Add(gebruiker);
             }
@@ -622,7 +611,7 @@ namespace ICT4Rails
                             administratie.AddMedewerker(medewerker);
                         }
                         //Medewerker toevoegen aan datbase
-                        vullMederwerkerList();
+                        VulListBoxAccount();
                         clearTextboxes();
                         administratie.RefreshClass();
                     }
@@ -671,7 +660,7 @@ namespace ICT4Rails
                 MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
                 administratie.RefreshClass();
-                vullMederwerkerList();
+                VulListBoxAccount();
                 clearTextboxes();
             }
         }
@@ -728,7 +717,7 @@ namespace ICT4Rails
             {
                 administratie.RemoveMedewerker(Fullmedewerker);
                 administratie.RefreshClass();
-                vullMederwerkerList();
+                VulListBoxAccount();
             }
             else
             {
@@ -746,7 +735,7 @@ namespace ICT4Rails
                         administratie.RemoveMedewerker(Fullmedewerker);
                     }
                     administratie.RefreshClass();
-                    vullMederwerkerList();
+                    VulListBoxAccount();
                     heeftaccount = false;
                 }
             }
@@ -758,13 +747,13 @@ namespace ICT4Rails
             {
                 administratie.RemoveGebruiker(gebruiker);
                 administratie.RefreshClass();
-                vullMederwerkerList();
+                VulListBoxAccount();
             }
         }
 
         private void loadComboboxes()
         {
-            foreach (Medewerker m in medewerkers)
+            foreach (Medewerker m in administratie.Medewerkers)
             {
                 cbxOnderhoudMedewerker.Items.Add(m);
             }
@@ -820,6 +809,34 @@ namespace ICT4Rails
             }
         }
 
+        public Point SorteerTram(Tram tram)
+        {
+            Point pos = new Point();
 
+            int[] Lijn1 = { 36, 43, 51 };
+            int[] Lijn2 = { 38, 34, 55, 63 };
+
+            if (tram.Lijn == "1")
+            {
+                for (int x = 1; x < Sporen[38].Length; x++)
+                {
+                    Label l = Sporen[38][x];
+                    if (l.Text == "")
+                    {
+                        l.Text = Convert.ToString(tram.Id);
+                        foreach (Spoor s in administratie.Sporen)
+                        {
+                            if (s.Spoornummer == 38 && s.Sectornummer == x)
+                            {
+                                s.Beschikbaar = false;
+                            }
+                        }
+                        break;
+                    }
+                }
+            }
+
+            return pos;
+        }
     }
 }
