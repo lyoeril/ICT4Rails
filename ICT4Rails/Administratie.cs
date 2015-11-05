@@ -207,7 +207,23 @@ namespace ICT4Rails
 
         public void TramStatusVeranderen(int tramNummer, string statusnaam)
         {
-            data.UpdateTramStatus(tramNummer, statusnaam);
+            foreach(Tram tram in Trams)
+            {
+                if(tram.Id == tramNummer)
+                {
+                    foreach(Status status in data.GetAllStatus())
+                    {
+                        if(statusnaam == status.Naam)
+                        {
+                            tram.Status = status;
+                            data.UpdateTramStatus(tram);
+                        }
+                    }
+                    
+                    data.UpdateTramStatus(tram);
+                }
+            }
+
         }
     }
 }
