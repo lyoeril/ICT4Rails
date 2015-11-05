@@ -23,11 +23,9 @@ namespace ICT4Rails
         private Database DataMed = new Database();
         private Administratie administratie;
         private int MedID;
-        private Medewerker Fullmedewerker;
+        private Medewerker medewerker;
         private Gebruiker gebruiker;
         private bool heeftaccount = false;
-        private List<Gebruiker> gebruikers;
-        private List<Medewerker> medewerkers;
         private RFID rfid;
 
         public MainForm(Administratie administratie)
@@ -587,15 +585,13 @@ namespace ICT4Rails
         {
             lbAccountMedewerkers.Items.Clear();
             lbAccountGebruiker.Items.Clear();
-            medewerkers = DataMed.GetAllMedewerkers();
-            gebruikers = DataMed.GetAllGebruikers();
             // Haal alle medewerkers op van database
-            foreach (Medewerker medewerker in medewerkers)
+            foreach (Medewerker medewerker in administratie.Medewerkers)
             {
                 lbAccountMedewerkers.Items.Add(medewerker);
             }
 
-            foreach (Gebruiker gebruiker in gebruikers)
+            foreach (Gebruiker gebruiker in administratie.Gebruikers)
             {
                 lbAccountGebruiker.Items.Add(gebruiker);
             }
@@ -607,8 +603,7 @@ namespace ICT4Rails
             if (!string.IsNullOrWhiteSpace(tbxAccountNaam.Text) && !string.IsNullOrWhiteSpace(tbxAccountPostcode.Text)
                                                                  && !string.IsNullOrWhiteSpace(tbxAccountStrtNR.Text))
             {
-                bool rekt = ValidatePostcode(tbxAccountPostcode.Text);
-                if (rekt)
+                if (medewerker.ValidatePostcode(tbxAccountPostcode.Text))
                 {
                     if (tbxAccountEmail.Text.Contains('@') && tbxAccountEmail.Text.Contains('.'))
                     {
@@ -633,12 +628,12 @@ namespace ICT4Rails
                 }
                 else
                 {
-                    MessageBox.Show("Vul alle gegevens in om een account aan te maken.");
+                    MessageBox.Show("Is geen goede postcode voor nl");
                 }
             }
             else
             {
-                MessageBox.Show("Is geen goede postcode voor nl");
+                MessageBox.Show("Vul alle gegevens in om een account aan te maken.");
             }
         }
 
@@ -681,7 +676,7 @@ namespace ICT4Rails
             if (lbAccountMedewerkers.SelectedItem != null)
             {
                 Medewerker medewerker = lbAccountMedewerkers.SelectedItem as Medewerker;
-                Fullmedewerker = lbAccountMedewerkers.SelectedItem as Medewerker;
+                medewerker = lbAccountMedewerkers.SelectedItem as Medewerker;
                 MedID = medewerker.ID;
                 enableButtons();
 
@@ -717,16 +712,12 @@ namespace ICT4Rails
             tbxAccountStrtNR.Text = "";
             cbAccountFunctie.Text = "";
         }
-        private bool ValidatePostcode(string postcode)
-        {
-            Regex regex = new Regex("^[1-9]{1}[0-9]{3}?[A-Z]{2}$");
-            return regex.IsMatch(postcode);
-        }
+       
         private void BttnAccountRemoveMedewerker_Click(object sender, EventArgs e)
         {
-            if (administratie.FindGebruiker(Fullmedewerker.ID) == null)
+            if (administratie.FindGebruiker(medewerker.ID) == null)
             {
-                administratie.RemoveMedewerker(Fullmedewerker);
+                administratie.RemoveMedewerker(medewerker);
                 administratie.RefreshClass();
                 vullMederwerkerList();
             }
@@ -739,11 +730,11 @@ namespace ICT4Rails
                     if (heeftaccount == true)
                     {
                         administratie.RemoveGebruiker(gebruiker);
-                        administratie.RemoveMedewerker(Fullmedewerker);
+                        administratie.RemoveMedewerker(medewerker);
                     }
                     else
                     {
-                        administratie.RemoveMedewerker(Fullmedewerker);
+                        administratie.RemoveMedewerker(medewerker);
                     }
                     administratie.RefreshClass();
                     vullMederwerkerList();
@@ -764,7 +755,7 @@ namespace ICT4Rails
 
         private void loadComboboxes()
         {
-            foreach (Medewerker m in medewerkers)
+            foreach (Medewerker m in administratie.Medewerkers)
             {
                 cbxOnderhoudMedewerker.Items.Add(m);
             }
