@@ -46,11 +46,34 @@ namespace ICT4Rails
         {
             using (OracleConnection connection = Connection)
             {
-                string insert = "insert into reservering (ID, SpoorID, TramID, Datum) values(seq_Reservering_ID.nextval, " + spoorID + ", " + Convert.ToString(tramID) + ", " + Convert.ToString(datum) + ")";
+                string insert = "insert into reservering (ID, SpoorID, TramID, Datum) values(seq_Reservering_ID.nextval, :SPOORID, :DATUM)";
                 using (OracleCommand command = new OracleCommand(insert, connection))
-                {/*
-                    command.Parameters.Add(new OracleParameter("SPOORID", reservering.Spoor.));
-                    command.Parameters.Add(new OracleParameter (""))*/
+                {
+                    command.Parameters.Add(new OracleParameter("SPOORID", reservering.Spoor.Spoorid));
+                    command.Parameters.Add(new OracleParameter("TRAMID", reservering.Tram.Id));
+                    command.Parameters.Add(new OracleParameter("DATUM", reservering.Datum));
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public void InsertTram(Tram tram)
+        {
+            using (OracleConnection connection = Connection)
+            {
+                string insert = "insert into tram (ID, TYPENAAM, STATUSNAAM, LIJN, BESCHIKBAAR) values(:TRAMID, ':TYPENAAM', ':STATUSNAAM', ':LIJN', ':BESCHIKBAAR')";
+                using (OracleCommand command = new OracleCommand(insert, connection))
+                {
+                    command.Parameters.Add(new OracleParameter("TRAMID", tram.Id));
+                    command.Parameters.Add(new OracleParameter("TYPENAAM", tram.Type.Naam));
+                    command.Parameters.Add(new OracleParameter("STATUSNAAM", tram.Status.Naam));
+                    command.Parameters.Add(new OracleParameter("LIJN", tram.Lijn));
+                    char beschikbaar = 'N';
+                    if (tram.Beschikbaar)
+                    {
+                        beschikbaar = 'Y';
+                    }
+                    command.Parameters.Add(new OracleParameter("BESCHIKBAAR", beschikbaar));
                     command.ExecuteNonQuery();
                 }
             }

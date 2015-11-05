@@ -119,7 +119,8 @@ namespace ICT4Rails
 
         private Spoor CreateSpoorFromReader(OracleDataReader reader)
         {
-            int spoorid = Convert.ToInt32(reader["SPOORNUMMER"]);
+            int spoorid = Convert.ToInt32(reader["ID"]);
+            int spoornummer = Convert.ToInt32(reader["SPOORNUMMER"]);
             int spoorsector = Convert.ToInt32(reader["SPOORSECTOR"]);
             char Beschikbaar = Convert.ToChar(reader["BESCHIKBAAR"]);
             bool beschikbaar;
@@ -131,7 +132,7 @@ namespace ICT4Rails
             {
                 beschikbaar = false;
             }
-            return new Spoor(spoorid, spoorsector, beschikbaar);
+            return new Spoor(spoorid, spoornummer, spoorsector, beschikbaar);
         }
 
         private Reservering CreateReserveringFromReader(OracleDataReader reader, List<Tram> trams, List<Spoor> sporen)

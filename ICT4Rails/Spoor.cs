@@ -8,16 +8,19 @@ namespace ICT4Rails
 {
     public class Spoor
     {
+        private int spoorid;
         private int spoornummer;
         private int sectornummer;
         private bool beschikbaar;
 
+        public int Spoorid { get { return spoorid; } }
         public int Spoornummer { get { return spoornummer; } }
         public int Sectornummer { get { return sectornummer; } }
         public bool Beschikbaar { get { return beschikbaar; } set { beschikbaar = value; } }
 
-        public Spoor(int spoornr, int sectornummer, bool beschikbaar)
+        public Spoor(int spoorid, int spoornr, int sectornummer, bool beschikbaar)
         {
+            this.spoorid = spoorid;
             this.spoornummer = spoornr;
             this.sectornummer = sectornummer;
             this.beschikbaar = beschikbaar;

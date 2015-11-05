@@ -138,12 +138,11 @@ namespace ICT4Rails
             List<Spoor> Sporen = new List<Spoor>();
             using (OracleConnection connection = Connection)
             {
-                string query = "SELECT SPOORNUMMER, SPOORSECTOR, BESCHIKBAAR FROM SPOOR";
+                string query = "SELECT * FROM SPOOR";
                 using (OracleCommand command = new OracleCommand(query, connection))
                 {
                     using (OracleDataReader reader = command.ExecuteReader())
                     {
-
                         while (reader.Read())
                         {
                             Sporen.Add(CreateSpoorFromReader(reader));
