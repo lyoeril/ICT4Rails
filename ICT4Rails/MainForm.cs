@@ -104,25 +104,60 @@ namespace ICT4Rails
 
         private void LogIn()
         {
-            if (Program.loggedIn.GebruikersNaam == "qwer")
+            foreach (Medewerker medewerker in administratie.Medewerkers)
             {
-                tabcontrolRemise.Controls.Remove(tabpageRemiseOverzicht);
-                tabcontrolRemise.Controls.Remove(tabpageRemiseBeheer);
-                tabcontrolRemise.TabPages.Insert(0, tabpageStatusBeheer);
-                tabcontrolRemise.Controls.Remove(tabpageAccountBeheer);
-                tabcontrolRemise.Controls.Remove(tabPageSchoonmaak);
-
-            }
-            else
-            {
-                tabcontrolRemise.TabPages.Insert(0, tabpageRemiseOverzicht);
-                tabcontrolRemise.TabPages.Insert(1, tabpageRemiseBeheer);
-                tabcontrolRemise.TabPages.Insert(2, tabpageStatusBeheer);
-                tabcontrolRemise.TabPages.Insert(3, tabpageAccountBeheer);
-                tabcontrolRemise.TabPages.Insert(4, tabPageSchoonmaak);
-                tabcontrolRemise.TabPages.Insert(5, tabPageReparatie);
+                if (Program.loggedIn.Medewerker_ID == medewerker.ID)
+                {
+                    if (medewerker.Functie == "BEHEERDER")
+                    {
+                        tabcontrolRemise.TabPages.Insert(0, tabpageRemiseOverzicht);
+                        tabcontrolRemise.TabPages.Insert(1, tabpageRemiseBeheer);
+                        tabcontrolRemise.TabPages.Insert(2, tabpageStatusBeheer);
+                        tabcontrolRemise.TabPages.Insert(3, tabpageAccountBeheer);
+                        tabcontrolRemise.TabPages.Insert(4, tabPageSchoonmaak);
+                        tabcontrolRemise.TabPages.Insert(5, tabPageReparatie);
+                    }
+                    if (medewerker.Functie == "REPARATEUR")
+                    {
+                        tabcontrolRemise.TabPages.Remove(tabpageRemiseOverzicht);
+                        tabcontrolRemise.TabPages.Remove(tabpageRemiseBeheer);
+                        tabcontrolRemise.TabPages.Insert(0, tabpageStatusBeheer);
+                        tabcontrolRemise.TabPages.Remove(tabpageAccountBeheer);
+                        tabcontrolRemise.TabPages.Remove(tabPageSchoonmaak);
+                        tabcontrolRemise.TabPages.Insert(1, tabPageReparatie);
+                    }
+                    if (medewerker.Functie == "SCHOONMAAK")
+                    {
+                        tabcontrolRemise.TabPages.Remove(tabpageRemiseOverzicht);
+                        tabcontrolRemise.TabPages.Remove(tabpageRemiseBeheer);
+                        tabcontrolRemise.TabPages.Remove(tabpageStatusBeheer);
+                        tabcontrolRemise.TabPages.Remove(tabpageAccountBeheer);
+                        tabcontrolRemise.TabPages.Insert(0, tabPageSchoonmaak);
+                        tabcontrolRemise.TabPages.Remove(tabPageReparatie);
+                    }
+                    if (medewerker.Functie == "WAGENPARKBEHEERDER")
+                    {
+                        tabcontrolRemise.TabPages.Insert(0, tabpageRemiseOverzicht);
+                        tabcontrolRemise.TabPages.Insert(1, tabpageRemiseBeheer);
+                        tabcontrolRemise.TabPages.Insert(2, tabpageStatusBeheer);
+                        tabcontrolRemise.TabPages.Remove(tabpageAccountBeheer);
+                        tabcontrolRemise.TabPages.Remove(tabPageSchoonmaak);
+                        tabcontrolRemise.TabPages.Remove(tabPageReparatie);
+                    }
+                    else
+                    {
+                        tabcontrolRemise.TabPages.Remove(tabpageRemiseOverzicht);
+                        tabcontrolRemise.TabPages.Remove(tabpageRemiseBeheer);
+                        tabcontrolRemise.TabPages.Remove(tabpageStatusBeheer);
+                        tabcontrolRemise.TabPages.Remove(tabpageAccountBeheer);
+                        tabcontrolRemise.TabPages.Insert(0, tabPageSchoonmaak);
+                        tabcontrolRemise.TabPages.Remove(tabPageReparatie);
+                    }
+                }
             }
         }
+        
+    
 
         // Overzichttab
 
