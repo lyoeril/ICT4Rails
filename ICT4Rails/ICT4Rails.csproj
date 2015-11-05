@@ -33,6 +33,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ICT4Rails|AnyCPU'">
+    <OutputPath>bin\ICT4Rails\</OutputPath>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Oracle.ManagedDataAccess, Version=4.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
       <HintPath>..\packages\Oracle.ManagedDataAccess.12.1.2400\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
@@ -55,7 +58,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Database.cs" />
+    <Compile Include="Database\CreateScripts.cs" />
+    <Compile Include="Database\DatabaseInit.cs" />
+    <Compile Include="Database\GetAllScripts.cs" />
+    <Compile Include="Database\InsertScripts.cs" />
+    <Compile Include="Database\RemoveScripts.cs" />
+    <Compile Include="Database\UpdateScripts.cs" />
     <Compile Include="Gebruiker.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>

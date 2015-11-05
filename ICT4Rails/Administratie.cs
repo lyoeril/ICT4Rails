@@ -12,11 +12,13 @@ namespace ICT4Rails
         private List<Gebruiker> gebruikers;
         private List<Medewerker> medewerkers;
         private List<Onderhoud> onderhoudslijst;
+        private List<Spoor> sporen;
         private List<Tram> trams;
 
         public List<Gebruiker> Gebruikers { get { return gebruikers; } }
         public List<Medewerker> Medewerkers { get { return medewerkers; } }
         public List<Onderhoud> Onderhoudslijst { get { return onderhoudslijst; } }
+        public List<Spoor> Sporen { get { return sporen; } }
         public List<Tram> Trams { get { return trams; } }
 
         Database data;
@@ -28,6 +30,7 @@ namespace ICT4Rails
             this.gebruikers.Add(new Gebruiker("", 0, ""));         
             this.medewerkers = data.GetAllMedewerkers();
             this.onderhoudslijst = data.GetAllOnderhoud();
+            this.sporen = data.GetAllSporen();
             this.trams = data.GetAllTrams();
         }
 
@@ -207,7 +210,23 @@ namespace ICT4Rails
 
         public void TramStatusVeranderen(int tramNummer, string statusnaam)
         {
-            data.UpdateTramStatus(tramNummer, statusnaam);
+            foreach(Tram tram in Trams)
+            {
+                if(tram.Id == tramNummer)
+                {
+                    foreach(Status status in data.GetAllStatus())
+                    {
+                        if(statusnaam == status.Naam)
+                        {
+                            tram.Status = status;
+                            data.UpdateTramStatus(tram);
+                        }
+                    }
+                    
+                    data.UpdateTramStatus(tram);
+                }
+            }
+
         }
     }
 }

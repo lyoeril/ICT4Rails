@@ -17,13 +17,13 @@ namespace ICT4Rails
 
 
         public TramType Type { get { return type; } }
-        public Status Status { get { return status; } }
+        public Status Status { get { return status; } set { status = value; } }
         public string Lijn { get { return lijn; } }
         public int Id { get { return id; } }
         public bool Beschikbaar { get { return beschikbaar; } }
 
 
-        public Tram (int id, TramType type, Status status,string lijn, bool beschikbaar)
+        public Tram(int id, TramType type, Status status, string lijn, bool beschikbaar)
         {
             this.id = id;
             this.type = type;
@@ -96,6 +96,6 @@ namespace ICT4Rails
 
             return info;
         }
-        
+
     }
 }
