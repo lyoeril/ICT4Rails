@@ -30,6 +30,27 @@ namespace ICT4Rails
             }
             return Medewerkers;
         }
+        public List<Trampositie> GetAllTramposities()
+        {
+            List<Trampositie> trampositielijst = new List<Trampositie>();
+            using (OracleConnection connection = Connection)
+            {
+                string query = "SELECT * FROM ONDERHOUD Order by Id";
+                using (OracleCommand command = new OracleCommand(query, connection))
+                {
+                    List<Tram> tramlijst = GetAllTrams();
+                    List<Spoor> sporenlijst = GetAllSporen();
+                    using (OracleDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            trampositielijst.Add(CreateTramPositieFromReader(reader, sporenlijst, tramlijst));
+                        }
+                    }
+                }
+            }
+            return trampositielijst;
+        }
 
         public List<Onderhoud> GetAllOnderhoud()
         {

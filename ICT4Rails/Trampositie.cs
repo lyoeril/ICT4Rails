@@ -20,12 +20,13 @@ namespace ICT4Rails
         public DateTime Aankomstijd { get { return aankomstijd; } set { vertrektijd = value; } }
         public DateTime Vertrektijd { get; }
 
-        public Trampositie(int id, Spoor spoor, Tram tram, DateTime aankomstijd)
+        public Trampositie(int id, Spoor spoor, Tram tram, DateTime aankomstijd, DateTime vertrektijd)
         {
             this.id = id;
             this.spoor = spoor;
             this.tram = tram;
             this.aankomstijd = aankomstijd;
+            this.vertrektijd = vertrektijd;
         }
 
         public override string ToString()
