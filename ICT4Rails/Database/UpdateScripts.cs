@@ -10,13 +10,11 @@ namespace ICT4Rails
 {
     public partial class Database
     {
-        public void UpdateTramStatus(Tram tram)
+        public void UpdateTram(Tram tram)
         {
-            string UpperStatus = tram.Status.ToString().ToUpper();
-
             using (OracleConnection connection = Connection)
             {
-                string Update = "UPDATE TRAM SET STATUSNAAM =:Status, LIJN=:Lijnnummer, BESCHIKBAAR=:Beschikbaar  WHERE ID =:IDTRAM ";
+                string Update = "UPDATE TRAM SET STATUSNAAM = :Status, LIJN= :Lijnnummer, BESCHIKBAAR=:Beschikbaar  WHERE ID =:IDTRAM ";
                 using (OracleCommand command = new OracleCommand(Update, connection))
                 {
                     command.Parameters.Add(new OracleParameter("Status", tram.Status.Naam.ToUpper()));

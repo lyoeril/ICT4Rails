@@ -37,7 +37,7 @@ namespace ICT4Rails
             Sporen = SporenArray();
             vullMederwerkerList();
             OpenAccountUI();
-            loadComboboxes();
+            loadComboboxStatusbeheerOnderhoudMedewerker();
 
             
 
@@ -572,10 +572,25 @@ namespace ICT4Rails
 
         private void btnBevestigTramStatus_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrWhiteSpace(cbxStatusbeheerTramStatus.Text) && !string.IsNullOrWhiteSpace(tbxStatusbeheerTramNummer.Text))
+            if (!string.IsNullOrWhiteSpace(cbxStatusbeheerTramStatus.Text))
             {
-                administratie.TramStatusVeranderen(Convert.ToInt32(tbxStatusbeheerTramNummer.Text), cbxStatusbeheerTramStatus.Text);
-                MessageBox.Show("De status van de tram met tramnummer: " + tbxStatusbeheerTramNummer.Text + " is veranderd in: " + cbxStatusbeheerTramStatus.Text);
+                try
+                {
+                    administratie.TramStatusVeranderen(Convert.ToInt32(tbxStatusbeheerTramNummer.Text), cbxStatusbeheerTramStatus.Text);
+                    int tramnummer = Convert.ToInt32(tbxStatusbeheerTramNummer.Text);
+                    foreach (Tram t in administratie.Trams)
+                    {
+                        if (tramnummer == t.Id)
+                        {
+                            tbxStatusbeheerHuidigeStatus.Text = t.Status.Naam;
+                        }
+                    };
+                    MessageBox.Show("De status van tram " + tbxStatusbeheerTramNummer.Text + " is veranderd in '" + cbxStatusbeheerTramStatus.Text + "'");                
+                }
+                catch
+                {
+                    MessageBox.Show("Er is iets fout gegaan: Misschien een fout nummer ingevuld?");
+                }
             }
         }
 
@@ -614,7 +629,7 @@ namespace ICT4Rails
                         else
                         {
                             string Cbkeuze = cbAccountFunctie.SelectedItem.ToString();
-                            Medewerker medewerker = new Medewerker(0, tbxAccountNaam.Text, tbxAccountEmail.Text, Cbkeuze, tbxAccountStrtNR.Text, tbxAccountPostcode.Text);
+                            medewerker = new Medewerker(0, tbxAccountNaam.Text, tbxAccountEmail.Text, Cbkeuze, tbxAccountStrtNR.Text, tbxAccountPostcode.Text);
                             administratie.AddMedewerker(medewerker);
                         }
                         vullMederwerkerList();
@@ -763,19 +778,47 @@ namespace ICT4Rails
 
         private void btnOnderhoudBevestig_Click(object sender, EventArgs e)
         {
-            string opmerking;
             DateTime starttijd = Convert.ToDateTime(dtpOnderhoudStarttijd.Value);
-            DateTime eindtijd = Convert.ToDateTime(dtpOnderhoudEindtijd.Value);
-            Medewerker m = cbxOnderhoudMedewerker.SelectedItem as Medewerker;
-            string soort = cbxOnderhoudSoort.SelectedItem.ToString();
-            int tramnummer = Convert.ToInt32(tbxStatusbeheerOnderhoudTramnr.Text);
-
-            opmerking = "none";
-            //Opmerking werkt nog niet: designeer aanpassing nodig: geen textbox voor opmerking aanwezig;
-
+            DateTime eindtijd = Convert.ToDateTime(dtpOnderhoudEindtijd.Value);            
             try
             {
-                administratie.AddOnderhoudsbeurt(m, tramnummer, opmerking, soort, starttijd, eindtijd);
+                string opmerking = tbxStatusbeheerOnderhoudOpmerking.Text;
+
+                Medewerker m = cbxOnderhoudMedewerker.SelectedItem as Medewerker;
+                string soort = cbxOnderhoudSoort.SelectedItem.ToString();
+                int tramnummer = Convert.ToInt32(tbxStatusbeheerOnderhoudTramnr.Text);
+                //geen schoonmaak voor tram 2x toevoegen, net als reparatie;
+                if (soort == "Schoonmaak")
+                {
+                    foreach (Tram t in administratie.Trams)
+                    {
+                        if (t.Id == tramnummer)
+                        {
+                            if (t.Status.Naam != soort.ToUpper())
+                            {
+                                administratie.AddOnderhoudsbeurt(m, tramnummer, opmerking, soort, starttijd, eindtijd);
+                                administratie.TramStatusVeranderen(tramnummer, soort);
+                                MessageBox.Show("Tram " + tramnummer.ToString() + " heeft nu de status " + soort);
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    foreach (Tram t in administratie.Trams)
+                    {
+                        if (t.Id == tramnummer)
+                        {
+                            if (t.Status.Naam != soort.ToUpper())
+                            {
+                                administratie.AddOnderhoudsbeurt(m, tramnummer, opmerking, soort, starttijd, eindtijd);
+                                administratie.TramStatusVeranderen(tramnummer, soort);
+                                MessageBox.Show("Tram " + tramnummer.ToString() + " heeft nu de status " + soort);
+                            }
+                        }
+                    }
+                }
+                administratie.TramStatusVeranderen(tramnummer, soort);
             }
             catch (FormatException fe)
             {
@@ -809,6 +852,39 @@ namespace ICT4Rails
             {
                 MessageBox.Show("Voer eerst alle velden in.");
             }
+        }
+
+        public void loadComboboxStatusbeheerOnderhoudMedewerker()
+        {
+            if (administratie.GetAllMedewerkers().Count != 0)
+            {
+                cbxOnderhoudMedewerker.Items.Clear();
+                foreach (Medewerker m in administratie.GetAllMedewerkers())
+                {
+                    cbxOnderhoudMedewerker.Items.Add(m);
+                }
+            }
+        }
+
+        private void Check_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int tramnummer = Convert.ToInt32(tbxStatusbeheerTramNummer.Text);
+
+                foreach (Tram t in administratie.Trams)
+                {
+                    if (tramnummer == t.Id)
+                    {
+                        tbxStatusbeheerHuidigeStatus.Text = t.Status.Naam;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Vul de gegevens correct in");
+            }
+
         }
 
 

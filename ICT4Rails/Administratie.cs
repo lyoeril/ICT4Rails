@@ -216,14 +216,14 @@ namespace ICT4Rails
                 {
                     foreach(Status status in data.GetAllStatus())
                     {
-                        if(statusnaam == status.Naam)
+                        if(statusnaam.ToUpper() == status.Naam)
                         {
                             tram.Status = status;
-                            data.UpdateTramStatus(tram);
+                            data.UpdateTram(tram);
                         }
                     }
                     
-                    data.UpdateTramStatus(tram);
+                    data.UpdateTram(tram);
                 }
             }
 
@@ -251,7 +251,7 @@ namespace ICT4Rails
             }
 
             Tram tram = new Tram(tramNummer, type, status, lijn, beschikbaarheid);
-            data.UpdateTramStatus(tram);
+            data.UpdateTram(tram);
         }
 
         public void TramVerwijderen(int tramNummer)

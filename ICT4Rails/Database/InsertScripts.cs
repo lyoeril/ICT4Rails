@@ -97,11 +97,19 @@ namespace ICT4Rails
 
             using (OracleConnection connection = Connection)
             {
-                string Insert = "INSERT INTO ONDERHOUD(ID, MedewerkerID, TramnummerID, Opmerking, Soort, Starttijd, Eindtijd) VALUES (seq_Onderhoud_ID.nextval," + medewerkerID + "," + tramnummerID + ",'" + opmerking + "','" + Uppersoort + "','" + starttijd + "','" + eindtijd + "')";
-                using (OracleCommand command = new OracleCommand(Insert, connection))
+                try
                 {
-                    command.ExecuteNonQuery();
+                    string Insert = "INSERT INTO ONDERHOUD(ID, MedewerkerID, TramnummerID, Opmerking, Soort, Starttijd, Eindtijd) VALUES (seq_Onderhoud_ID.nextval," + medewerkerID + "," + tramnummerID + ",'" + opmerking + "','" + Uppersoort + "','" + starttijd + "','" + eindtijd + "')";
+                    using (OracleCommand command = new OracleCommand(Insert, connection))
+                    {
+                        command.ExecuteNonQuery();
+                    }
                 }
+                catch (OracleException oexc)
+                {
+                    Console.WriteLine(oexc.Message);
+                }
+                
             }
         }
     }
