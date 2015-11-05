@@ -713,11 +713,79 @@ namespace ICT4Rails
 
         private void lbAccountGebruiker_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (lbAccountGebruiker.SelectedItem != null)
+            string test = gebruiker.GebruikersNaam;
+            string test2 = gebruiker.Wachtwoord;
+            InputBoxVeranderGebruiker(gebruiker, "Verander gegevens", ref test, ref test2);
+
+            if (DialogResult.ToString() == "OK")
             {
-                gebruiker = lbAccountGebruiker.SelectedItem as Gebruiker;
-                btnAccountGebrkerverw.Enabled = true;
+                MessageBox.Show("Account is aangepast.");
             }
+        }
+
+        public DialogResult InputBoxVeranderGebruiker(Gebruiker gebruiker, string title, ref string valueUS, ref string valuePW)
+        {
+            Form form = new Form();
+            Label label = new Label();
+            Label label1 = new Label();
+            TextBox textBox = new TextBox();
+            TextBox textBox2 = new TextBox();
+            Button buttonOk = new Button();
+            Button buttonCancel = new Button();
+
+            form.Text = title;
+            label.Text = "Gebruikersnaam:";
+            label1.Text = "Wachtwoord:";
+            textBox.Text = valueUS;
+            textBox2.Text = valuePW;
+
+            buttonOk.Text = "OK";
+            buttonCancel.Text = "Cancel";
+            buttonOk.DialogResult = DialogResult.OK;
+            buttonCancel.DialogResult = DialogResult.Cancel;
+
+            label.SetBounds(9, 20, 372, 13);
+            textBox.SetBounds(12, 36, 372, 20);
+            label1.SetBounds(12, 60, 372, 13);
+            textBox2.SetBounds(12, 74, 372, 20);
+            buttonOk.SetBounds(228, 105, 75, 23);
+            buttonCancel.SetBounds(309, 105, 75, 23);
+
+            label.AutoSize = true;
+            label1.AutoSize = true;
+            textBox.Anchor = textBox.Anchor | AnchorStyles.Right;
+            textBox2.Anchor = textBox2.Anchor | AnchorStyles.Right;
+            buttonOk.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            buttonCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+
+            //form.ClientSize = new Size(396, 107);
+            form.ClientSize = new Size(396, 140);
+            form.Controls.AddRange(new Control[] { label, label1, textBox, textBox2, buttonOk, buttonCancel });
+            form.ClientSize = new Size(Math.Max(300, label.Right + 10), form.ClientSize.Height);
+            form.FormBorderStyle = FormBorderStyle.FixedDialog;
+            form.StartPosition = FormStartPosition.CenterScreen;
+            form.MinimizeBox = false;
+            form.MaximizeBox = false;
+            form.AcceptButton = buttonOk;
+            form.CancelButton = buttonCancel;
+
+            DialogResult dialogResult = form.ShowDialog();
+            valueUS = textBox.Text;
+            valuePW = textBox2.Text;
+
+            try
+            {
+                Gebruiker UpdateGebruiker = new Gebruiker(valueUS, gebruiker.Medewerker_ID, valuePW);
+                administratie.ChangeGebruiker(UpdateGebruiker);
+                administratie.RefreshClass();
+                vullMederwerkerList();
+            }
+
+            catch (OracleException e)
+            {
+                MessageBox.Show(e.Message);
+            }
+            return dialogResult;
         }
 
         private void enableButtons()
