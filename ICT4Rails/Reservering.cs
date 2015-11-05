@@ -13,7 +13,13 @@ namespace ICT4Rails
         private Spoor spoor;
         private DateTime datum;
         private bool actief;
+
+        public int ID { get { return id; } }
+        public Tram Tram { get { return tram; } }
+        public Spoor Spoor { get { return spoor; } }
         public DateTime Datum { get { return datum; } }
+
+        public bool Actief { get { return actief; } }
         public Reservering(int id,Tram tram, Spoor spoor, DateTime datum, bool actief)
         {
             this.id = id;
