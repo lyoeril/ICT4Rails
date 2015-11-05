@@ -712,7 +712,16 @@ namespace ICT4Rails
             }
         }
 
-        private void lbAccountGebruiker_SelectedIndexChanged(object sender, EventArgs e)
+        private void lbAccountGebruiker_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (lbAccountGebruiker.SelectedItem != null)
+            {
+                gebruiker = lbAccountGebruiker.SelectedItem as Gebruiker;
+                btnAccountGebrkerverw.Enabled = true;
+            }
+        }
+
+        private void lbAccountGebruiker_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             string grbNaam = gebruiker.GebruikersNaam;
             string gbrWachtwoord = gebruiker.Wachtwoord;
@@ -759,7 +768,6 @@ namespace ICT4Rails
             buttonOk.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             buttonCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
 
-            //form.ClientSize = new Size(396, 107);
             form.ClientSize = new Size(396, 140);
             form.Controls.AddRange(new Control[] { label, label1, textBox, textBox2, buttonOk, buttonCancel });
             form.ClientSize = new Size(Math.Max(300, label.Right + 10), form.ClientSize.Height);
@@ -1008,5 +1016,7 @@ namespace ICT4Rails
                 }
             }
         }
+
+        
     }
 }

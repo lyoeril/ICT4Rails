@@ -810,7 +810,8 @@
             this.lbAccountGebruiker.Name = "lbAccountGebruiker";
             this.lbAccountGebruiker.Size = new System.Drawing.Size(239, 420);
             this.lbAccountGebruiker.TabIndex = 20;
-            this.lbAccountGebruiker.SelectedIndexChanged += new System.EventHandler(this.lbAccountGebruiker_SelectedIndexChanged);
+            this.lbAccountGebruiker.SelectedIndexChanged += new System.EventHandler(this.lbAccountGebruiker_SelectedIndexChanged_1);
+            this.lbAccountGebruiker.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lbAccountGebruiker_MouseDoubleClick);
             // 
             // groupBox1
             // 
@@ -1111,7 +1112,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1644, 734);
+            this.ClientSize = new System.Drawing.Size(1632, 734);
             this.Controls.Add(this.tabcontrolRemise);
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MainForm";
