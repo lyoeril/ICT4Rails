@@ -19,7 +19,7 @@ namespace ICT4Rails
         private Label[][] Sporen;
 
         //Medewerker        
-       
+
         private Database DataMed = new Database();
         private Administratie administratie;
         private int MedID;
@@ -104,25 +104,8 @@ namespace ICT4Rails
 
         private void LogIn()
         {
-            if (Program.loggedIn.GebruikersNaam == "qwer")
+            foreach (Medewerker medewerker in administratie.Medewerkers)
             {
-<<<<<<< HEAD
-                tabcontrolRemise.Controls.Remove(tabpageRemiseOverzicht);
-                tabcontrolRemise.Controls.Remove(tabpageRemiseBeheer);
-                tabcontrolRemise.TabPages.Insert(0, tabpageStatusBeheer);
-                tabcontrolRemise.Controls.Remove(tabpageAccountBeheer);
-                tabcontrolRemise.Controls.Remove(tabPageSchoonmaak);
-
-            }
-            else
-            {
-                tabcontrolRemise.TabPages.Insert(0, tabpageRemiseOverzicht);
-                tabcontrolRemise.TabPages.Insert(1, tabpageRemiseBeheer);
-                tabcontrolRemise.TabPages.Insert(2, tabpageStatusBeheer);
-                tabcontrolRemise.TabPages.Insert(3, tabpageAccountBeheer);
-                tabcontrolRemise.TabPages.Insert(4, tabPageSchoonmaak);
-                tabcontrolRemise.TabPages.Insert(5, tabPageReparatie);
-=======
                 if (Program.loggedIn.Medewerker_ID == medewerker.ID)
                 {
                     if (medewerker.Functie == "BEHEERDER")
@@ -171,7 +154,8 @@ namespace ICT4Rails
                         tabcontrolRemise.TabPages.Remove(tabPageReparatie);
                     }
                 }
->>>>>>> origin/master
+
+
             }
         }
 
@@ -482,34 +466,34 @@ namespace ICT4Rails
                 tbxRemiseBeheerTramNummer.Text = "";
                 tbxRemiseBeheerTramLijn.Text = "";
                 cbxRemiseBeheerTramType.SelectedItem = null;
-                }
+            }
             else
             {
                 MessageBox.Show("Voer eerst alle velden in.");
             }
-         }
+        }
 
-            private void cbxRemiseBeheerTramBewerking_SelectedIndexChanged(object sender, EventArgs e)
+        private void cbxRemiseBeheerTramBewerking_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbxRemiseBeheerTramBewerking.SelectedItem.ToString() == "Voeg toe")
             {
-                if (cbxRemiseBeheerTramBewerking.SelectedItem.ToString() == "Voeg toe")
-                {
-                    tbxRemiseBeheerTramNummer.Enabled = true;
-                    tbxRemiseBeheerTramLijn.Enabled = true;
-                    cbxRemiseBeheerTramType.Enabled = true;
-                }
-                else if (cbxRemiseBeheerTramBewerking.SelectedItem.ToString() == "Verwijder")
-                {
-                    tbxRemiseBeheerTramNummer.Enabled = true;
-                    tbxRemiseBeheerTramLijn.Enabled = false;
-                    cbxRemiseBeheerTramType.Enabled = false;
-                }
-                else if (cbxRemiseBeheerTramBewerking.SelectedItem.ToString() == "Bewerk")
-                {
-                    tbxRemiseBeheerTramNummer.Enabled = true;
-                    tbxRemiseBeheerTramLijn.Enabled = true;
-                    cbxRemiseBeheerTramType.Enabled = true;
-                }
-                btnRemiseBeheerTramBeheerBevestig.Enabled = true;
+                tbxRemiseBeheerTramNummer.Enabled = true;
+                tbxRemiseBeheerTramLijn.Enabled = true;
+                cbxRemiseBeheerTramType.Enabled = true;
+            }
+            else if (cbxRemiseBeheerTramBewerking.SelectedItem.ToString() == "Verwijder")
+            {
+                tbxRemiseBeheerTramNummer.Enabled = true;
+                tbxRemiseBeheerTramLijn.Enabled = false;
+                cbxRemiseBeheerTramType.Enabled = false;
+            }
+            else if (cbxRemiseBeheerTramBewerking.SelectedItem.ToString() == "Bewerk")
+            {
+                tbxRemiseBeheerTramNummer.Enabled = true;
+                tbxRemiseBeheerTramLijn.Enabled = true;
+                cbxRemiseBeheerTramType.Enabled = true;
+            }
+            btnRemiseBeheerTramBeheerBevestig.Enabled = true;
         }
 
         private void cbxRemiseBeheerSpoorBeheerBewerking_SelectedIndexChanged(object sender, EventArgs e)
@@ -574,7 +558,7 @@ namespace ICT4Rails
                         MessageBox.Show(error);
                     }
                 }
-            
+
                 tbxRemiseBeheerSpoorBeheerSpoorNummer.Text = "";
                 tbxRemiseBeheerSpoorBeheerSectorNummer.Text = "";
                 tbxRemiseBeheerSpoorBeheerTramNummer.Text = "";
@@ -583,7 +567,7 @@ namespace ICT4Rails
             {
                 MessageBox.Show("Voer eerst alle velden in.");
             }
-            
+
         }
 
         private void btnBevestigTramStatus_Click(object sender, EventArgs e)
@@ -613,7 +597,7 @@ namespace ICT4Rails
             {
                 lbAccountGebruiker.Items.Add(gebruiker);
             }
-            
+
         }
 
         private void btnAccountToevoegen_Click(object sender, EventArgs e)
@@ -622,7 +606,7 @@ namespace ICT4Rails
                                                                  && !string.IsNullOrWhiteSpace(tbxAccountStrtNR.Text))
             {
                 bool rekt = ValidatePostcode(tbxAccountPostcode.Text);
-                if (rekt) 
+                if (rekt)
                 {
                     if (tbxAccountEmail.Text.Contains('@') && tbxAccountEmail.Text.Contains('.'))
                     {
@@ -665,7 +649,7 @@ namespace ICT4Rails
             tbxAccountPostcode.Enabled = true;
             tbxAccountStrtNR.Enabled = true;
             cbAccountFunctie.Enabled = true;
-            
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -710,7 +694,7 @@ namespace ICT4Rails
 
         private void lbAccountGebruiker_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(lbAccountGebruiker.SelectedItem != null)
+            if (lbAccountGebruiker.SelectedItem != null)
             {
                 gebruiker = lbAccountGebruiker.SelectedItem as Gebruiker;
                 btnAccountGebrkerverw.Enabled = true;
@@ -751,7 +735,7 @@ namespace ICT4Rails
 
                 if (result == DialogResult.Yes)
                 {
-                    if(heeftaccount == true)
+                    if (heeftaccount == true)
                     {
                         administratie.RemoveGebruiker(gebruiker);
                         administratie.RemoveMedewerker(Fullmedewerker);
@@ -835,6 +819,6 @@ namespace ICT4Rails
             }
         }
 
-        
+
     }
 }
