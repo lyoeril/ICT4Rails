@@ -19,7 +19,7 @@ namespace ICT4Rails
         private Label[][] Sporen;
 
         //Medewerker        
-       
+
         private Database DataMed = new Database();
         private Administratie administratie;
         private int MedID;
@@ -32,7 +32,9 @@ namespace ICT4Rails
 
         public MainForm(Administratie administratie)
         {
+
             InitializeComponent();
+            this.administratie = administratie;
             LogIn();
             VulSporen();
             Sporen = SporenArray();
@@ -40,7 +42,7 @@ namespace ICT4Rails
             OpenAccountUI();
             loadComboboxes();
 
-            this.administratie = administratie;
+
 
             this.tableLayoutPanel1.CellPaint += new TableLayoutCellPaintEventHandler(tableLayoutPanel1_CellPaint);
 
@@ -156,8 +158,8 @@ namespace ICT4Rails
                 }
             }
         }
-        
-    
+
+
 
         // Overzichttab
 
@@ -398,7 +400,7 @@ namespace ICT4Rails
 
                 foreach (Tram t in trams)
                 {
-                    
+
                 }
             }
             else if (cbxRemiseBeheerTramBewerking.SelectedItem.ToString() == "Verwijder")
@@ -489,7 +491,7 @@ namespace ICT4Rails
             {
                 lbAccountGebruiker.Items.Add(gebruiker);
             }
-            
+
         }
 
         private void btnAccountToevoegen_Click(object sender, EventArgs e)
@@ -498,7 +500,7 @@ namespace ICT4Rails
                                                                  && !string.IsNullOrWhiteSpace(tbxAccountStrtNR.Text))
             {
                 bool rekt = ValidatePostcode(tbxAccountPostcode.Text);
-                if (rekt) 
+                if (rekt)
                 {
                     if (tbxAccountEmail.Text.Contains('@') && tbxAccountEmail.Text.Contains('.'))
                     {
@@ -541,7 +543,7 @@ namespace ICT4Rails
             tbxAccountPostcode.Enabled = true;
             tbxAccountStrtNR.Enabled = true;
             cbAccountFunctie.Enabled = true;
-            
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -582,7 +584,7 @@ namespace ICT4Rails
 
         private void lbAccountGebruiker_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(lbAccountGebruiker.SelectedItem != null)
+            if (lbAccountGebruiker.SelectedItem != null)
             {
                 gebruiker = lbAccountGebruiker.SelectedItem as Gebruiker;
                 btnAccountGebrkerverw.Enabled = true;
@@ -623,7 +625,7 @@ namespace ICT4Rails
 
                 if (result == DialogResult.Yes)
                 {
-                    if(heeftaccount == true)
+                    if (heeftaccount == true)
                     {
                         administratie.RemoveGebruiker(gebruiker);
                         administratie.RemoveMedewerker(Fullmedewerker);
@@ -681,6 +683,6 @@ namespace ICT4Rails
 
         }
 
-        
+
     }
 }
