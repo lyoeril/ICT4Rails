@@ -9,6 +9,8 @@ namespace ICT4Rails
 {
     public partial class Database
     {
+
+        // reservering, 
         public void RemoveMedewerker(Medewerker mederwerker)
         {
             using (OracleConnection connection = Connection)
