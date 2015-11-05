@@ -191,9 +191,9 @@ namespace ICT4Rails
             // hierbij word een reservering geplaatst tussen een tram en een spoor.
         }
 
-        public void SpoorStatusVeranderen(int spoornr, int sectornr, bool beschikbaar)
+        public void SpoorStatusVeranderen(int id, int spoornr, int sectornr, bool beschikbaar)
         {
-            Spoor spoor = new Spoor(spoornr, sectornr, beschikbaar);
+            Spoor spoor = new Spoor(id, spoornr, sectornr, beschikbaar);
             data.UpdateSpoor(spoor);
         }
 

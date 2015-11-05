@@ -54,7 +54,7 @@ namespace ICT4Rails
                 string Update = "UPDATE SPOOR SET ID =:id, SpoorNummer =:spnr, SpoorSector =:spsctr, Beschikbaar =:beschkbr WHERE MedewerkerID =:ID";
                 using (OracleCommand command = new OracleCommand(Update, connection))
                 {
-                    command.Parameters.Add(new OracleParameter("id", SPOORID));
+                    command.Parameters.Add(new OracleParameter("id", spoor.Spoorid));
                     command.Parameters.Add(new OracleParameter("spnr", spoor.Spoornummer));
                     command.Parameters.Add(new OracleParameter("spsctr", spoor.Sectornummer));
                     char beschikbaar = 'N';
