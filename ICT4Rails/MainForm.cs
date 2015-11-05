@@ -404,28 +404,27 @@ namespace ICT4Rails
                     {
                         if (t.Id == Convert.ToInt32(tbxRemiseBeheerTramNummer.Text))
                         {
-                            MessageBox.Show("Er bestaat al een Tram met dit Tramnummer!");
-                        }
-                        else
-                        {
-                            TramType type = (TramType)cbxRemiseBeheerTramType.SelectedItem;
-                            List<Status> statussen = DataMed.GetAllStatus();
-                            Status status = null;
-
-                            foreach (Status s in statussen)
-                            {
-                                if (s.Naam == "REMISE")
-                                {
-                                    status = s;
-                                }
-                            }
-
-                            Tram tram = new Tram(Convert.ToInt32(tbxRemiseBeheerTramNummer.Text), type, status, tbxRemiseBeheerTramLijn.Text, true);
-
-                            //insert tram into db
-                            MessageBox.Show("Tram is toegevoegd!");
+                            throw new Exception("Er bestaat al een Tram met dit Tramnummer!");
                         }
                     }
+
+                    TramType type = (TramType)cbxRemiseBeheerTramType.SelectedItem;
+                    List<Status> statussen = DataMed.GetAllStatus();
+                    Status status = null;
+
+                    foreach (Status s in statussen)
+                    {
+                        if (s.Naam == "REMISE")
+                        {
+                            status = s;
+                            break;
+                        }
+                    }
+
+                    Tram tram = new Tram(Convert.ToInt32(tbxRemiseBeheerTramNummer.Text), type, status, tbxRemiseBeheerTramLijn.Text, true);
+
+                    administratie.AddTram(tram);
+                    MessageBox.Show("Tram is toegevoegd!");
                 }
                 else if (cbxRemiseBeheerTramBewerking.SelectedItem.ToString() == "Verwijder")
                 {
@@ -437,6 +436,7 @@ namespace ICT4Rails
                         {
                             administratie.TramVerwijderen(Convert.ToInt32(tbxRemiseBeheerTramNummer.Text));
                             error = "";
+                            break;
                         }
                     }
 
@@ -453,9 +453,20 @@ namespace ICT4Rails
                     {
                         if (t.Id == Convert.ToInt32(tbxRemiseBeheerTramNummer.Text))
                         {
-                            TramType type = (TramType)cbxRemiseBeheerSpoorBeheerBewerking.SelectedItem;
+                            TramType type = null;
+
+                            foreach (TramType tramtype in administratie.GetTypes())
+                            {
+                                if (tramtype.ToString() == cbxRemiseBeheerTramType.SelectedItem.ToString())
+                                {
+                                    type = tramtype;
+                                    break;
+                                }
+                            }
+
                             administratie.TramBewerken(Convert.ToInt32(tbxRemiseBeheerTramNummer.Text), type.Naam, "REMISE", tbxRemiseBeheerTramLijn.Text, true);
                             error = "";
+                            break;
                         }
                     }
 
@@ -473,6 +484,8 @@ namespace ICT4Rails
             {
                 MessageBox.Show("Voer eerst alle velden in.");
             }
+
+            administratie.RefreshClass();
         }
 
         private void cbxRemiseBeheerTramBewerking_SelectedIndexChanged(object sender, EventArgs e)
@@ -504,9 +517,7 @@ namespace ICT4Rails
             {
                 tbxRemiseBeheerSpoorBeheerSpoorNummer.Enabled = true;
                 tbxRemiseBeheerSpoorBeheerSectorNummer.Enabled = false;
-                tbxRemiseBeheerSpoorBeheerSectorNummer.Text = "";
                 tbxRemiseBeheerSpoorBeheerTramNummer.Enabled = false;
-                tbxRemiseBeheerSpoorBeheerTramNummer.Text = "";
             }
             else if (cbxRemiseBeheerSpoorBeheerBewerking.SelectedItem.ToString() == "Reserveer")
             {
@@ -534,6 +545,7 @@ namespace ICT4Rails
                         {
                             administratie.SpoorStatusVeranderen(s.Spoorid ,Convert.ToInt32(tbxRemiseBeheerSpoorBeheerSpoorNummer.Text), Convert.ToInt32(tbxRemiseBeheerSpoorBeheerSectorNummer.Text), false);
                             error = "";
+                            break;
                         }
                     }
 
@@ -552,6 +564,7 @@ namespace ICT4Rails
                         {
                             administratie.SpoorStatusVeranderen(s.Spoorid, Convert.ToInt32(tbxRemiseBeheerSpoorBeheerSpoorNummer.Text), Convert.ToInt32(tbxRemiseBeheerSpoorBeheerSectorNummer.Text), false);
                             error = "";
+                            break;
                         }
                     }
 
@@ -570,6 +583,7 @@ namespace ICT4Rails
                 MessageBox.Show("Voer eerst alle velden in.");
             }
 
+            administratie.RefreshClass();
         }
 
         private void btnBevestigTramStatus_Click(object sender, EventArgs e)
@@ -796,7 +810,8 @@ namespace ICT4Rails
 
         private void btnRemiseBeheerNieuwTypeVoegToe_Click(object sender, EventArgs e)
         {
-            if (tbxRemiseBeheerNieuwTypeBeschrijving.Text != "" && tbxRemiseBeheerNieuwTypeLengte.Text != "" && tbxRemiseBeheerNieuwTypeNaam.Text != "")
+            int lengte;
+            if (tbxRemiseBeheerNieuwTypeNaam.Text != "" && tbxRemiseBeheerNieuwTypeBeschrijving.Text != "" && Int32.TryParse(tbxRemiseBeheerNieuwTypeLengte.Text, out lengte))
             {
                 List<TramType> types = DataMed.GetAllTramtypes();
                 string error = "";
@@ -810,16 +825,14 @@ namespace ICT4Rails
 
                 if (error == "")
                 {
-                    TramType type = new TramType(tbxRemiseBeheerNieuwTypeNaam.Text, tbxRemiseBeheerNieuwTypeBeschrijving.Text, Convert.ToInt32(tbxRemiseBeheerNieuwTypeLengte.Text));
-                    //insert tramtype in db
+                    TramType type = new TramType(tbxRemiseBeheerNieuwTypeNaam.Text, tbxRemiseBeheerNieuwTypeBeschrijving.Text, lengte);
+                    administratie.AddTramType(type);
                 }
             }
             else
             {
-                MessageBox.Show("Voer eerst alle velden in.");
+                MessageBox.Show("Voer eerst alle velden correct in!");
             }
         }
-
-
     }
 }

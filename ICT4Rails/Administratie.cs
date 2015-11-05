@@ -126,7 +126,7 @@ namespace ICT4Rails
                     throw new Exception("De tram bestaat al!");
                 }
             }
-            trams.Add(tram);
+            data.InsertTram(tram);
             return true;
         }
 
@@ -239,6 +239,7 @@ namespace ICT4Rails
                 if (t.Naam == typeNaam)
                 {
                     type = t;
+                    break;
                 }
             }
 
@@ -247,6 +248,7 @@ namespace ICT4Rails
                 if (s.Naam == statusNaam)
                 {
                     status = s;
+                    break;
                 }
             }
 
@@ -277,5 +279,14 @@ namespace ICT4Rails
             return null;
         }
 
+        public List<TramType> GetTypes()
+        {
+            return data.GetAllTramtypes();
+        }
+
+        public void AddTramType(TramType type)
+        {
+            data.InsertTramType(type);
+        }
     }
 }

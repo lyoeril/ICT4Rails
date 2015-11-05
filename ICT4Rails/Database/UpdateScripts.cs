@@ -16,7 +16,7 @@ namespace ICT4Rails
 
             using (OracleConnection connection = Connection)
             {
-                string Update = "UPDATE TRAM SET STATUSNAAM =:Status, LIJN=:Lijnnummer, BESCHIKBAAR=:Beschikbaar  WHERE ID =:IDTRAM ";
+                string Update = "UPDATE TRAM SET STATUSNAAM =:Status, LIJN=:Lijnnummer, BESCHIKBAAR=:Beschikbaar, TYPENAAM=:Type  WHERE ID =:IDTRAM ";
                 using (OracleCommand command = new OracleCommand(Update, connection))
                 {
                     command.Parameters.Add(new OracleParameter("Status", tram.Status.Naam.ToUpper()));
@@ -27,6 +27,7 @@ namespace ICT4Rails
                         beschikbaar = 'Y';
                     }
                     command.Parameters.Add(new OracleParameter("Beschikbaar", beschikbaar));
+                    command.Parameters.Add(new OracleParameter("Type", tram.Type.Naam));
                     command.Parameters.Add(new OracleParameter("IDTRAM", tram.Id));
                     command.ExecuteNonQuery();
                 }
@@ -51,7 +52,7 @@ namespace ICT4Rails
         {
             using (OracleConnection connection = Connection)
             {
-                string Update = "UPDATE SPOOR SET ID =:id, SpoorNummer =:spnr, SpoorSector =:spsctr, Beschikbaar =:beschkbr WHERE MedewerkerID =:ID";
+                string Update = "UPDATE SPOOR SET ID =:id, SpoorNummer =:spnr, SpoorSector =:spsctr, Beschikbaar =:beschkbr WHERE ID =:id";
                 using (OracleCommand command = new OracleCommand(Update, connection))
                 {
                     command.Parameters.Add(new OracleParameter("id", spoor.Spoorid));

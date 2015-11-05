@@ -61,7 +61,7 @@ namespace ICT4Rails
         {
             using (OracleConnection connection = Connection)
             {
-                string insert = "insert into tram (ID, TYPENAAM, STATUSNAAM, LIJN, BESCHIKBAAR) values(:TRAMID, ':TYPENAAM', ':STATUSNAAM', ':LIJN', ':BESCHIKBAAR')";
+                string insert = "insert into tram (ID, TYPENAAM, STATUSNAAM, LIJN, BESCHIKBAAR) values(:TRAMID, :TYPENAAM, :STATUSNAAM, :LIJN, :BESCHIKBAAR)";
                 using (OracleCommand command = new OracleCommand(insert, connection))
                 {
                     command.Parameters.Add(new OracleParameter("TRAMID", tram.Id));
@@ -100,6 +100,21 @@ namespace ICT4Rails
                 string Insert = "INSERT INTO ONDERHOUD(ID, MedewerkerID, TramnummerID, Opmerking, Soort, Starttijd, Eindtijd) VALUES (seq_Onderhoud_ID.nextval," + medewerkerID + "," + tramnummerID + ",'" + opmerking + "','" + Uppersoort + "','" + starttijd + "','" + eindtijd + "')";
                 using (OracleCommand command = new OracleCommand(Insert, connection))
                 {
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public void InsertTramType(TramType type)
+        {
+            using (OracleConnection connection = Connection)
+            {
+                string insert = "insert into type (naam, beschrijving, lengte) values(:NAAM, :BESCHRIJVING, :LENGTE)";
+                using (OracleCommand command = new OracleCommand(insert, connection))
+                {
+                    command.Parameters.Add(new OracleParameter("NAAM", type.Naam));
+                    command.Parameters.Add(new OracleParameter("BESCHRIJVING", type.Beschrijving));
+                    command.Parameters.Add(new OracleParameter("LENGTE", type.Lengte));
                     command.ExecuteNonQuery();
                 }
             }
