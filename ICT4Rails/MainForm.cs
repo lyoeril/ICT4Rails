@@ -653,13 +653,10 @@ namespace ICT4Rails
                         else
                         {
                             string Cbkeuze = cbAccountFunctie.SelectedItem.ToString();
-<<<<<<< HEAD
                             medewerker = new Medewerker(0, tbxAccountNaam.Text, tbxAccountEmail.Text, Cbkeuze, tbxAccountStrtNR.Text, tbxAccountPostcode.Text);
                             administratie.AddMedewerker(medewerker);
-=======
                             Medewerker mdwrkr = new Medewerker(0, tbxAccountNaam.Text, tbxAccountEmail.Text, Cbkeuze, tbxAccountStrtNR.Text, tbxAccountPostcode.Text);
                             administratie.AddMedewerker(mdwrkr);
->>>>>>> origin/master
                         }
                         vullMederwerkerList();
                         clearTextboxes();
@@ -960,7 +957,6 @@ namespace ICT4Rails
             }
         }
 
-<<<<<<< HEAD
         public void loadComboboxStatusbeheerOnderhoudMedewerker()
         {
             if (administratie.GetAllMedewerkers().Count != 0)
@@ -994,7 +990,6 @@ namespace ICT4Rails
 
         }
 
-=======
         public void SorteerTram(Tram tram)
         {
             string[][] Lijnen = new string[9][];
@@ -1098,9 +1093,6 @@ namespace ICT4Rails
                     }
                 }
             }
-        }
->>>>>>> origin/master
-
-        
+        }       
     }
 }

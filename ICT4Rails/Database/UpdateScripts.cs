@@ -14,11 +14,8 @@ namespace ICT4Rails
         {
             using (OracleConnection connection = Connection)
             {
-<<<<<<< HEAD
+
                 string Update = "UPDATE TRAM SET STATUSNAAM = :Status, LIJN= :Lijnnummer, BESCHIKBAAR=:Beschikbaar  WHERE ID =:IDTRAM ";
-=======
-                string Update = "UPDATE TRAM SET STATUSNAAM =:Status, LIJN=:Lijnnummer, BESCHIKBAAR=:Beschikbaar, TYPENAAM=:Type  WHERE ID =:IDTRAM ";
->>>>>>> origin/master
                 using (OracleCommand command = new OracleCommand(Update, connection))
                 {
                     command.Parameters.Add(new OracleParameter("Status", tram.Status.Naam.ToUpper()));
