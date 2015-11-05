@@ -246,6 +246,8 @@ namespace ICT4Rails
                                         tbxRemiseBeheerSpoorBeheerTramNummer.Text = Convert.ToString(t.Id);
                                         tbxStatusbeheerTramNummer.Text = Convert.ToString(t.Id);
                                         tbxStatusbeheerOnderhoudTramnr.Text = Convert.ToString(t.Id);
+
+                                        cbxRemiseBeheerTramType.DataSource = DataMed.GetAllTramtypes();
                                     }
                                 }
                             }
@@ -353,6 +355,19 @@ namespace ICT4Rails
 
         private void btnRemiseBeheerBevestig_Click(object sender, EventArgs e)
         {
+            if (cbxRemiseBeheerTramBewerking.SelectedItem.ToString() == "Voeg toe")
+            {
+                
+            }
+            else if (cbxRemiseBeheerTramBewerking.SelectedItem.ToString() == "Verwijder")
+            {
+
+            }
+            else if (cbxRemiseBeheerTramBewerking.SelectedItem.ToString() == "Bewerk")
+            {
+
+            }
+
             tbxRemiseBeheerTramNummer.Text = "";
             tbxRemiseBeheerTramLijn.Text = "";
             cbxRemiseBeheerTramType.SelectedItem = null;
@@ -360,19 +375,19 @@ namespace ICT4Rails
 
         private void cbxRemiseBeheerTramBewerking_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbxRemiseBeheerTramBewerking.SelectedText == "Voeg toe")
+            if (cbxRemiseBeheerTramBewerking.SelectedItem.ToString() == "Voeg toe")
             {
                 tbxRemiseBeheerTramNummer.Enabled = true;
                 tbxRemiseBeheerTramLijn.Enabled = true;
                 cbxRemiseBeheerTramType.Enabled = true;
             }
-            else if (cbxRemiseBeheerTramBewerking.SelectedText == "Verwijder")
+            else if (cbxRemiseBeheerTramBewerking.SelectedItem.ToString() == "Verwijder")
             {
                 tbxRemiseBeheerTramNummer.Enabled = true;
                 tbxRemiseBeheerTramLijn.Enabled = false;
                 cbxRemiseBeheerTramType.Enabled = false;
             }
-            else if (cbxRemiseBeheerTramBewerking.SelectedText == "Bewerk")
+            else if (cbxRemiseBeheerTramBewerking.SelectedItem.ToString() == "Bewerk")
             {
                 tbxRemiseBeheerTramNummer.Enabled = true;
                 tbxRemiseBeheerTramLijn.Enabled = true;
@@ -383,13 +398,13 @@ namespace ICT4Rails
 
         private void cbxRemiseBeheerSpoorBeheerBewerking_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbxRemiseBeheerSpoorBeheerBewerking.SelectedText == "Blokkeer")
+            if (cbxRemiseBeheerSpoorBeheerBewerking.SelectedItem.ToString() == "Blokkeer")
             {
                 tbxRemiseBeheerSpoorBeheerSpoorNummer.Enabled = true;
                 tbxRemiseBeheerSpoorBeheerSectorNummer.Enabled = false;
                 tbxRemiseBeheerSpoorBeheerTramNummer.Enabled = false;
             }
-            else if (cbxRemiseBeheerSpoorBeheerBewerking.SelectedText == "Reserveer")
+            else if (cbxRemiseBeheerSpoorBeheerBewerking.SelectedItem.ToString() == "Reserveer")
             {
                 tbxRemiseBeheerSpoorBeheerSpoorNummer.Enabled = true;
                 tbxRemiseBeheerSpoorBeheerSectorNummer.Enabled = true;

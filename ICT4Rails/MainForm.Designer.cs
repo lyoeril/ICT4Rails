@@ -231,18 +231,17 @@
             this.grbRemiseBeheerSpoorBeheer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grbRemiseBeheerSpoorBeheer.Name = "grbRemiseBeheerSpoorBeheer";
             this.grbRemiseBeheerSpoorBeheer.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grbRemiseBeheerSpoorBeheer.Size = new System.Drawing.Size(319, 183);
+            this.grbRemiseBeheerSpoorBeheer.Size = new System.Drawing.Size(638, 183);
             this.grbRemiseBeheerSpoorBeheer.TabIndex = 7;
             this.grbRemiseBeheerSpoorBeheer.TabStop = false;
             this.grbRemiseBeheerSpoorBeheer.Text = "Spoorbeheer";
             // 
             // tbxRemiseBeheerSpoorBeheerTramNummer
             // 
-            this.tbxRemiseBeheerSpoorBeheerTramNummer.Enabled = false;
-            this.tbxRemiseBeheerSpoorBeheerTramNummer.Location = new System.Drawing.Point(160, 116);
+            this.tbxRemiseBeheerSpoorBeheerTramNummer.Location = new System.Drawing.Point(315, 116);
             this.tbxRemiseBeheerSpoorBeheerTramNummer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbxRemiseBeheerSpoorBeheerTramNummer.Name = "tbxRemiseBeheerSpoorBeheerTramNummer";
-            this.tbxRemiseBeheerSpoorBeheerTramNummer.Size = new System.Drawing.Size(153, 22);
+            this.tbxRemiseBeheerSpoorBeheerTramNummer.Size = new System.Drawing.Size(317, 22);
             this.tbxRemiseBeheerSpoorBeheerTramNummer.TabIndex = 13;
             // 
             // lblRemiseBeheerSpoorBeheerTramNummer
@@ -257,7 +256,7 @@
             // btnRemiseBeheerSpoorBeheerBevestig
             // 
             this.btnRemiseBeheerSpoorBeheerBevestig.Enabled = false;
-            this.btnRemiseBeheerSpoorBeheerBevestig.Location = new System.Drawing.Point(229, 146);
+            this.btnRemiseBeheerSpoorBeheerBevestig.Location = new System.Drawing.Point(549, 142);
             this.btnRemiseBeheerSpoorBeheerBevestig.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRemiseBeheerSpoorBeheerBevestig.Name = "btnRemiseBeheerSpoorBeheerBevestig";
             this.btnRemiseBeheerSpoorBeheerBevestig.Size = new System.Drawing.Size(83, 27);
@@ -268,20 +267,18 @@
             // 
             // tbxRemiseBeheerSpoorBeheerSectorNummer
             // 
-            this.tbxRemiseBeheerSpoorBeheerSectorNummer.Enabled = false;
-            this.tbxRemiseBeheerSpoorBeheerSectorNummer.Location = new System.Drawing.Point(160, 89);
+            this.tbxRemiseBeheerSpoorBeheerSectorNummer.Location = new System.Drawing.Point(315, 89);
             this.tbxRemiseBeheerSpoorBeheerSectorNummer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbxRemiseBeheerSpoorBeheerSectorNummer.Name = "tbxRemiseBeheerSpoorBeheerSectorNummer";
-            this.tbxRemiseBeheerSpoorBeheerSectorNummer.Size = new System.Drawing.Size(153, 22);
+            this.tbxRemiseBeheerSpoorBeheerSectorNummer.Size = new System.Drawing.Size(317, 22);
             this.tbxRemiseBeheerSpoorBeheerSectorNummer.TabIndex = 10;
             // 
             // tbxRemiseBeheerSpoorBeheerSpoorNummer
             // 
-            this.tbxRemiseBeheerSpoorBeheerSpoorNummer.Enabled = false;
-            this.tbxRemiseBeheerSpoorBeheerSpoorNummer.Location = new System.Drawing.Point(160, 60);
+            this.tbxRemiseBeheerSpoorBeheerSpoorNummer.Location = new System.Drawing.Point(315, 60);
             this.tbxRemiseBeheerSpoorBeheerSpoorNummer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbxRemiseBeheerSpoorBeheerSpoorNummer.Name = "tbxRemiseBeheerSpoorBeheerSpoorNummer";
-            this.tbxRemiseBeheerSpoorBeheerSpoorNummer.Size = new System.Drawing.Size(153, 22);
+            this.tbxRemiseBeheerSpoorBeheerSpoorNummer.Size = new System.Drawing.Size(317, 22);
             this.tbxRemiseBeheerSpoorBeheerSpoorNummer.TabIndex = 9;
             // 
             // cbxRemiseBeheerSpoorBeheerBewerking
@@ -291,10 +288,10 @@
             this.cbxRemiseBeheerSpoorBeheerBewerking.Items.AddRange(new object[] {
             "Blokkeer",
             "Reserveer"});
-            this.cbxRemiseBeheerSpoorBeheerBewerking.Location = new System.Drawing.Point(160, 30);
+            this.cbxRemiseBeheerSpoorBeheerBewerking.Location = new System.Drawing.Point(315, 30);
             this.cbxRemiseBeheerSpoorBeheerBewerking.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbxRemiseBeheerSpoorBeheerBewerking.Name = "cbxRemiseBeheerSpoorBeheerBewerking";
-            this.cbxRemiseBeheerSpoorBeheerBewerking.Size = new System.Drawing.Size(153, 24);
+            this.cbxRemiseBeheerSpoorBeheerBewerking.Size = new System.Drawing.Size(317, 24);
             this.cbxRemiseBeheerSpoorBeheerBewerking.TabIndex = 9;
             this.cbxRemiseBeheerSpoorBeheerBewerking.SelectedIndexChanged += new System.EventHandler(this.cbxRemiseBeheerSpoorBeheerBewerking_SelectedIndexChanged);
             // 
@@ -338,14 +335,14 @@
             this.grbRemiseBeheerNieuwType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grbRemiseBeheerNieuwType.Name = "grbRemiseBeheerNieuwType";
             this.grbRemiseBeheerNieuwType.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grbRemiseBeheerNieuwType.Size = new System.Drawing.Size(319, 256);
+            this.grbRemiseBeheerNieuwType.Size = new System.Drawing.Size(638, 256);
             this.grbRemiseBeheerNieuwType.TabIndex = 6;
             this.grbRemiseBeheerNieuwType.TabStop = false;
             this.grbRemiseBeheerNieuwType.Text = "Nieuw Tram Type";
             // 
             // btnRemiseBeheerNieuwTypeVoegToe
             // 
-            this.btnRemiseBeheerNieuwTypeVoegToe.Location = new System.Drawing.Point(229, 222);
+            this.btnRemiseBeheerNieuwTypeVoegToe.Location = new System.Drawing.Point(549, 219);
             this.btnRemiseBeheerNieuwTypeVoegToe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRemiseBeheerNieuwTypeVoegToe.Name = "btnRemiseBeheerNieuwTypeVoegToe";
             this.btnRemiseBeheerNieuwTypeVoegToe.Size = new System.Drawing.Size(83, 27);
@@ -355,10 +352,10 @@
             // 
             // tbxRemiseBeheerNieuwTypeLengte
             // 
-            this.tbxRemiseBeheerNieuwTypeLengte.Location = new System.Drawing.Point(160, 194);
+            this.tbxRemiseBeheerNieuwTypeLengte.Location = new System.Drawing.Point(315, 193);
             this.tbxRemiseBeheerNieuwTypeLengte.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbxRemiseBeheerNieuwTypeLengte.Name = "tbxRemiseBeheerNieuwTypeLengte";
-            this.tbxRemiseBeheerNieuwTypeLengte.Size = new System.Drawing.Size(153, 22);
+            this.tbxRemiseBeheerNieuwTypeLengte.Size = new System.Drawing.Size(317, 22);
             this.tbxRemiseBeheerNieuwTypeLengte.TabIndex = 5;
             // 
             // lblRemiseBeheerNieuwTypeLengte
@@ -372,11 +369,11 @@
             // 
             // tbxRemiseBeheerNieuwTypeBeschrijving
             // 
-            this.tbxRemiseBeheerNieuwTypeBeschrijving.Location = new System.Drawing.Point(160, 64);
+            this.tbxRemiseBeheerNieuwTypeBeschrijving.Location = new System.Drawing.Point(315, 63);
             this.tbxRemiseBeheerNieuwTypeBeschrijving.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbxRemiseBeheerNieuwTypeBeschrijving.Multiline = true;
             this.tbxRemiseBeheerNieuwTypeBeschrijving.Name = "tbxRemiseBeheerNieuwTypeBeschrijving";
-            this.tbxRemiseBeheerNieuwTypeBeschrijving.Size = new System.Drawing.Size(153, 125);
+            this.tbxRemiseBeheerNieuwTypeBeschrijving.Size = new System.Drawing.Size(317, 125);
             this.tbxRemiseBeheerNieuwTypeBeschrijving.TabIndex = 3;
             // 
             // lblRemiseBeheerNieuwTypeBeschrijving
@@ -390,10 +387,10 @@
             // 
             // tbxRemiseBeheerNieuwTypeNaam
             // 
-            this.tbxRemiseBeheerNieuwTypeNaam.Location = new System.Drawing.Point(160, 36);
+            this.tbxRemiseBeheerNieuwTypeNaam.Location = new System.Drawing.Point(315, 36);
             this.tbxRemiseBeheerNieuwTypeNaam.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbxRemiseBeheerNieuwTypeNaam.Name = "tbxRemiseBeheerNieuwTypeNaam";
-            this.tbxRemiseBeheerNieuwTypeNaam.Size = new System.Drawing.Size(153, 22);
+            this.tbxRemiseBeheerNieuwTypeNaam.Size = new System.Drawing.Size(317, 22);
             this.tbxRemiseBeheerNieuwTypeNaam.TabIndex = 1;
             // 
             // lblRemiseBeheerNieuwTypeNaam
@@ -420,7 +417,7 @@
             this.grbRemiseBeheerTramBeheer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grbRemiseBeheerTramBeheer.Name = "grbRemiseBeheerTramBeheer";
             this.grbRemiseBeheerTramBeheer.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grbRemiseBeheerTramBeheer.Size = new System.Drawing.Size(319, 183);
+            this.grbRemiseBeheerTramBeheer.Size = new System.Drawing.Size(638, 183);
             this.grbRemiseBeheerTramBeheer.TabIndex = 0;
             this.grbRemiseBeheerTramBeheer.TabStop = false;
             this.grbRemiseBeheerTramBeheer.Text = "Trambeheer";
@@ -428,7 +425,7 @@
             // btnRemiseBeheerTramBeheerBevestig
             // 
             this.btnRemiseBeheerTramBeheerBevestig.Enabled = false;
-            this.btnRemiseBeheerTramBeheerBevestig.Location = new System.Drawing.Point(229, 146);
+            this.btnRemiseBeheerTramBeheerBevestig.Location = new System.Drawing.Point(549, 144);
             this.btnRemiseBeheerTramBeheerBevestig.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRemiseBeheerTramBeheerBevestig.Name = "btnRemiseBeheerTramBeheerBevestig";
             this.btnRemiseBeheerTramBeheerBevestig.Size = new System.Drawing.Size(83, 27);
@@ -445,10 +442,10 @@
             "Voeg toe",
             "Verwijder",
             "Bewerk"});
-            this.cbxRemiseBeheerTramBewerking.Location = new System.Drawing.Point(160, 30);
+            this.cbxRemiseBeheerTramBewerking.Location = new System.Drawing.Point(315, 30);
             this.cbxRemiseBeheerTramBewerking.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbxRemiseBeheerTramBewerking.Name = "cbxRemiseBeheerTramBewerking";
-            this.cbxRemiseBeheerTramBewerking.Size = new System.Drawing.Size(153, 24);
+            this.cbxRemiseBeheerTramBewerking.Size = new System.Drawing.Size(317, 24);
             this.cbxRemiseBeheerTramBewerking.TabIndex = 7;
             this.cbxRemiseBeheerTramBewerking.SelectedIndexChanged += new System.EventHandler(this.cbxRemiseBeheerTramBewerking_SelectedIndexChanged);
             // 
@@ -466,10 +463,10 @@
             this.cbxRemiseBeheerTramType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxRemiseBeheerTramType.Enabled = false;
             this.cbxRemiseBeheerTramType.FormattingEnabled = true;
-            this.cbxRemiseBeheerTramType.Location = new System.Drawing.Point(160, 116);
+            this.cbxRemiseBeheerTramType.Location = new System.Drawing.Point(142, 116);
             this.cbxRemiseBeheerTramType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbxRemiseBeheerTramType.Name = "cbxRemiseBeheerTramType";
-            this.cbxRemiseBeheerTramType.Size = new System.Drawing.Size(153, 24);
+            this.cbxRemiseBeheerTramType.Size = new System.Drawing.Size(490, 24);
             this.cbxRemiseBeheerTramType.TabIndex = 5;
             // 
             // lblRemiseBeheerType
@@ -483,11 +480,10 @@
             // 
             // tbxRemiseBeheerTramLijn
             // 
-            this.tbxRemiseBeheerTramLijn.Enabled = false;
-            this.tbxRemiseBeheerTramLijn.Location = new System.Drawing.Point(160, 89);
+            this.tbxRemiseBeheerTramLijn.Location = new System.Drawing.Point(315, 89);
             this.tbxRemiseBeheerTramLijn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbxRemiseBeheerTramLijn.Name = "tbxRemiseBeheerTramLijn";
-            this.tbxRemiseBeheerTramLijn.Size = new System.Drawing.Size(153, 22);
+            this.tbxRemiseBeheerTramLijn.Size = new System.Drawing.Size(317, 22);
             this.tbxRemiseBeheerTramLijn.TabIndex = 3;
             // 
             // lblRemiseBeheerLijn
@@ -501,11 +497,10 @@
             // 
             // tbxRemiseBeheerTramNummer
             // 
-            this.tbxRemiseBeheerTramNummer.Enabled = false;
-            this.tbxRemiseBeheerTramNummer.Location = new System.Drawing.Point(160, 60);
+            this.tbxRemiseBeheerTramNummer.Location = new System.Drawing.Point(315, 60);
             this.tbxRemiseBeheerTramNummer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbxRemiseBeheerTramNummer.Name = "tbxRemiseBeheerTramNummer";
-            this.tbxRemiseBeheerTramNummer.Size = new System.Drawing.Size(153, 22);
+            this.tbxRemiseBeheerTramNummer.Size = new System.Drawing.Size(317, 22);
             this.tbxRemiseBeheerTramNummer.TabIndex = 1;
             // 
             // lblRemiseBeheerTramNummer
