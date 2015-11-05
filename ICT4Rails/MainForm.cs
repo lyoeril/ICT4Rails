@@ -11,6 +11,7 @@ using System.Windows;
 using System.Text.RegularExpressions;
 using Phidgets;
 using Phidgets.Events;
+using Oracle.ManagedDataAccess.Client;
 
 namespace ICT4Rails
 {
@@ -713,9 +714,9 @@ namespace ICT4Rails
 
         private void lbAccountGebruiker_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string test = gebruiker.GebruikersNaam;
-            string test2 = gebruiker.Wachtwoord;
-            InputBoxVeranderGebruiker(gebruiker, "Verander gegevens", ref test, ref test2);
+            string grbNaam = gebruiker.GebruikersNaam;
+            string gbrWachtwoord = gebruiker.Wachtwoord;
+            InputBoxVeranderGebruiker(gebruiker, "Verander gegevens", ref grbNaam, ref gbrWachtwoord);
 
             if (DialogResult.ToString() == "OK")
             {
