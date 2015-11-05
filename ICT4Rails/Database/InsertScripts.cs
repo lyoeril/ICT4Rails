@@ -14,7 +14,7 @@ namespace ICT4Rails
         {
             using (OracleConnection connection = Connection)
             {
-                string Insert = "INSERT INTO MEDEWERKER (ID, Naam, Email, Functie, Adres, Postcode) VALUES (seq_Medewerker_ID.nextval" + ",':NAAM',':EMAIL',':FUNCTIE',':ADRES',':POSTCODE')";
+                string Insert = "INSERT INTO MEDEWERKER (ID, Naam, Email, Functie, Adres, Postcode) VALUES (seq_Medewerker_ID.nextval, :NAAM, :EMAIL, :FUNCTIE, :ADRES, :POSTCODE)";
                 using (OracleCommand command = new OracleCommand(Insert, connection))
                 {
                     command.Parameters.Add(new OracleParameter("NAAM", medewerker.Naam));
@@ -31,7 +31,7 @@ namespace ICT4Rails
         {
             using (OracleConnection connection = Connection)
             {
-                string Insert = "INSERT INTO GEBRUIKER (Gebruikersnaam, MedewerkerID, Wachtwoord) VALUES (':NAAM',:ID,':PASS')";
+                string Insert = "INSERT INTO GEBRUIKER (Gebruikersnaam, MedewerkerID, Wachtwoord) VALUES (:NAAM, :ID, :PASS)";
                 using (OracleCommand command = new OracleCommand(Insert, connection))
                 {
                     command.Parameters.Add(new OracleParameter("NAAM", gebruiker.GebruikersNaam));

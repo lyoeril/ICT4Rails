@@ -106,8 +106,38 @@ namespace ICT4Rails
                 Convert.ToString(reader["BESCHRIJVING"]),
                 Convert.ToInt32(reader["LENGTE"])
                 );
+
         }
 
+        private Trampositie CreateTramPositieFromReader(OracleDataReader reader, List<Spoor> sporenlijst, List<Tram> Tramlijst)
+        {
+            int id = Convert.ToInt32(reader["ID"]);
+            int spoorid = Convert.ToInt32(reader["SPOORID"]);
+            int tramid = Convert.ToInt32(reader["TRAMID"]);
+            DateTime aankomstijd = Convert.ToDateTime(reader["AANKOMSTIJD"]);
+            DateTime vertrektijd = Convert.ToDateTime(reader["VERTREKTIJD"]);
+
+            Tram Tram = null;
+            Spoor Spoor = null;
+            foreach (Tram tram in Tramlijst)
+            {
+                if (tram.Id == tramid)
+                {
+                    Tram = tram;
+                    break;
+                }
+            }
+
+            foreach (Spoor spoor in sporenlijst)
+            {
+                if (spoor.Spoornummer == spoorid)
+                {
+                    Spoor = spoor;
+                    break;
+                }
+            }
+            return new Trampositie(id, Spoor, Tram, aankomstijd, vertrektijd);
+        }
         private Gebruiker CreateGebruikerFromReader(OracleDataReader reader)
         {
             return new Gebruiker(

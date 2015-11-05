@@ -23,11 +23,9 @@ namespace ICT4Rails
         private Database DataMed = new Database();
         private Administratie administratie;
         private int MedID;
-        private Medewerker Fullmedewerker;
+        private Medewerker medewerker;
         private Gebruiker gebruiker;
         private bool heeftaccount = false;
-        private List<Gebruiker> gebruikers;
-        private List<Medewerker> medewerkers;
         private RFID rfid;
 
         public MainForm(Administratie administratie)
@@ -41,8 +39,7 @@ namespace ICT4Rails
             OpenAccountUI();
             loadComboboxes();
 
-            
-
+            this.FormClosing += new FormClosingEventHandler(MainForm_FormClosing);
             this.tableLayoutPanel1.CellPaint += new TableLayoutCellPaintEventHandler(tableLayoutPanel1_CellPaint);
 
             rfid = new RFID();
@@ -54,7 +51,6 @@ namespace ICT4Rails
             if (rfid.outputs.Count > 0)
             {
                 rfid.Antenna = true;
-                rfid.LED = true;
             }
         }
 
@@ -77,12 +73,24 @@ namespace ICT4Rails
         //e.Tag = RFID-tag ID
         private void rfid_Tag(object sender, TagEventArgs e)
         {
-            MessageBox.Show(e.Tag);
+            rfid.LED = true;
+            //int id = 0;
+            //if (e.Tag == "") { id = 0; } // TAG
+            //else if (e.Tag == "") { id = 0; } // TAG
+            //else if (e.Tag == "") { id = 0; } // TAG
+            //else if (e.Tag == "") { id = 0; } // TAG
+            //foreach (Tram t in administratie.Trams)
+            //{
+            //    if (t.Id == id)
+            //    {
+            //        SorteerTram(t);
+            //    }
+            //}
         }
 
         private void rfid_TagLost(object sender, TagEventArgs e)
         {
-            //
+            rfid.LED = false;
         }
 
         private void rfid_Attach(object sender, AttachEventArgs e)
@@ -90,7 +98,6 @@ namespace ICT4Rails
             if (rfid.outputs.Count > 0)
             {
                 rfid.Antenna = true;
-                rfid.LED = true;
             }
         }
 
@@ -198,7 +205,7 @@ namespace ICT4Rails
                         label.Click += new EventHandler(label_Click);
                         label.Name = "label" + Convert.ToString(labelCount);
                         label.Tag = Convert.ToString(x) + ", " + Convert.ToString(y);
-                        label.Text = "20" + Convert.ToString(x); // + ", " + Convert.ToString(y);
+                        label.Text = "!"; //"20" + Convert.ToString(x); // + ", " + Convert.ToString(y);
                         tableLayoutPanel1.Controls.Add(label, x, y);
                         labelCount++;
                     }
@@ -601,15 +608,13 @@ namespace ICT4Rails
         {
             lbAccountMedewerkers.Items.Clear();
             lbAccountGebruiker.Items.Clear();
-            medewerkers = DataMed.GetAllMedewerkers();
-            gebruikers = DataMed.GetAllGebruikers();
             // Haal alle medewerkers op van database
-            foreach (Medewerker medewerker in medewerkers)
+            foreach (Medewerker medewerker in administratie.Medewerkers)
             {
                 lbAccountMedewerkers.Items.Add(medewerker);
             }
 
-            foreach (Gebruiker gebruiker in gebruikers)
+            foreach (Gebruiker gebruiker in administratie.Gebruikers)
             {
                 lbAccountGebruiker.Items.Add(gebruiker);
             }
@@ -621,8 +626,7 @@ namespace ICT4Rails
             if (!string.IsNullOrWhiteSpace(tbxAccountNaam.Text) && !string.IsNullOrWhiteSpace(tbxAccountPostcode.Text)
                                                                  && !string.IsNullOrWhiteSpace(tbxAccountStrtNR.Text))
             {
-                bool rekt = ValidatePostcode(tbxAccountPostcode.Text);
-                if (rekt)
+                if (medewerker.ValidatePostcode(tbxAccountPostcode.Text))
                 {
                     if (tbxAccountEmail.Text.Contains('@') && tbxAccountEmail.Text.Contains('.'))
                     {
@@ -633,8 +637,8 @@ namespace ICT4Rails
                         else
                         {
                             string Cbkeuze = cbAccountFunctie.SelectedItem.ToString();
-                            Medewerker medewerker = new Medewerker(0, tbxAccountNaam.Text, tbxAccountEmail.Text, Cbkeuze, tbxAccountStrtNR.Text, tbxAccountPostcode.Text);
-                            administratie.AddMedewerker(medewerker);
+                            Medewerker mdwrkr = new Medewerker(0, tbxAccountNaam.Text, tbxAccountEmail.Text, Cbkeuze, tbxAccountStrtNR.Text, tbxAccountPostcode.Text);
+                            administratie.AddMedewerker(mdwrkr);
                         }
                         vullMederwerkerList();
                         clearTextboxes();
@@ -647,12 +651,12 @@ namespace ICT4Rails
                 }
                 else
                 {
-                    MessageBox.Show("Vul alle gegevens in om een account aan te maken.");
+                    MessageBox.Show("Is geen goede postcode voor nl");
                 }
             }
             else
             {
-                MessageBox.Show("Is geen goede postcode voor nl");
+                MessageBox.Show("Vul alle gegevens in om een account aan te maken.");
             }
         }
 
@@ -673,7 +677,7 @@ namespace ICT4Rails
             {
                 MessageBox.Show("Gebruiker heeft al een inlog account");
             }
-            else if (!string.IsNullOrWhiteSpace(tbxAccountUsername.Text) && !string.IsNullOrWhiteSpace(tbxAccountWachtwoord.Text))
+            else if (string.IsNullOrWhiteSpace(tbxAccountUsername.Text) && string.IsNullOrWhiteSpace(tbxAccountWachtwoord.Text))
             {
                 MessageBox.Show("Vul eerst alle velden in.");
             }
@@ -695,7 +699,7 @@ namespace ICT4Rails
             if (lbAccountMedewerkers.SelectedItem != null)
             {
                 Medewerker medewerker = lbAccountMedewerkers.SelectedItem as Medewerker;
-                Fullmedewerker = lbAccountMedewerkers.SelectedItem as Medewerker;
+                medewerker = lbAccountMedewerkers.SelectedItem as Medewerker;
                 MedID = medewerker.ID;
                 enableButtons();
 
@@ -731,16 +735,12 @@ namespace ICT4Rails
             tbxAccountStrtNR.Text = "";
             cbAccountFunctie.Text = "";
         }
-        private bool ValidatePostcode(string postcode)
-        {
-            Regex regex = new Regex("^[1-9]{1}[0-9]{3}?[A-Z]{2}$");
-            return regex.IsMatch(postcode);
-        }
+       
         private void BttnAccountRemoveMedewerker_Click(object sender, EventArgs e)
         {
-            if (administratie.FindGebruiker(Fullmedewerker.ID) == null)
+            if (administratie.FindGebruiker(medewerker.ID) == null)
             {
-                administratie.RemoveMedewerker(Fullmedewerker);
+                administratie.RemoveMedewerker(medewerker);
                 administratie.RefreshClass();
                 vullMederwerkerList();
             }
@@ -753,11 +753,11 @@ namespace ICT4Rails
                     if (heeftaccount == true)
                     {
                         administratie.RemoveGebruiker(gebruiker);
-                        administratie.RemoveMedewerker(Fullmedewerker);
+                        administratie.RemoveMedewerker(medewerker);
                     }
                     else
                     {
-                        administratie.RemoveMedewerker(Fullmedewerker);
+                        administratie.RemoveMedewerker(medewerker);
                     }
                     administratie.RefreshClass();
                     vullMederwerkerList();
@@ -778,7 +778,7 @@ namespace ICT4Rails
 
         private void loadComboboxes()
         {
-            foreach (Medewerker m in medewerkers)
+            foreach (Medewerker m in administratie.Medewerkers)
             {
                 cbxOnderhoudMedewerker.Items.Add(m);
             }
@@ -832,6 +832,111 @@ namespace ICT4Rails
             else
             {
                 MessageBox.Show("Voer eerst alle velden correct in!");
+            }
+        }
+
+        public void SorteerTram(Tram tram)
+        {
+            string[][] Lijnen = new string[9][];
+            Lijnen[0] = new string[4] { "1", "36", "43", "51" };
+            Lijnen[1] = new string[5] { "2", "38", "34", "55", "63" };
+            Lijnen[2] = new string[2] { "5", "42" };
+            Lijnen[3] = new string[4] { "5", "37", "56", "54" };
+            Lijnen[4] = new string[4] { "10", "32", "41", "62" };
+            Lijnen[5] = new string[3] { "13", "44", "53" };
+            Lijnen[6] = new string[3] { "17", "52", "45" };
+            Lijnen[7] = new string[5] { "16/24", "30", "35", "33", "57" };
+            Lijnen[8] = new string[2] { "OCV", "61" };
+            for (int lijn = 0; lijn < Lijnen.Length; lijn++)
+            {
+                if (tram.Lijn == Lijnen[lijn][0])
+                {
+                    //if (tram.Lijn == "5" && tram.Id >= 901 && tram.Id <= 920)
+                    //{
+                    //    for (int spoor = 1; spoor < Lijnen[lijn].Length; spoor++)
+                    //    {
+                    //        int spoornummer = Convert.ToInt32(Lijnen[3][spoor]);
+                    //        for (int sector = 1; sector < Sporen[spoornummer].Length; sector++)
+                    //        {
+                    //            Label l = null;
+                    //            l = Sporen[spoornummer][sector];
+
+                    //            if (l.Text == "")
+                    //            {
+                    //                l.Text = Convert.ToString(tram.Id);
+                    //                return;
+                    //            }
+                    //        }
+                    //    }
+                    //}
+                    //else if (tram.Lijn == "5" && tram.Id >= 2201 && tram.Id <= 2204)
+                    //{
+                    //    for (int spoor = 1; spoor < Lijnen[lijn].Length; spoor++)
+                    //    {
+                    //        int spoornummer = Convert.ToInt32(Lijnen[2][spoor]);
+                    //        for (int sector = 1; sector < Sporen[spoornummer].Length; sector++)
+                    //        {
+                    //            Label l = null;
+                    //            l = Sporen[spoornummer][sector];
+
+                    //            if (l.Text == "")
+                    //            {
+                    //                l.Text = Convert.ToString(tram.Id);
+                    //                return;
+                    //            }
+                    //        }
+                    //    }
+                    //}
+                    //else
+                    //{
+                    //    for (int spoor = 1; spoor < Lijnen[lijn].Length; spoor++)
+                    //    {
+                    //        int spoornummer = Convert.ToInt32(Lijnen[lijn][spoor]);
+                    //        for (int sector = 1; sector < Sporen[spoornummer].Length; sector++)
+                    //        {
+                    //            Label l = null;
+                    //            l = Sporen[spoornummer][sector];
+
+                    //            if (l.Text == "")
+                    //            {
+                    //                l.Text = Convert.ToString(tram.Id);
+                    //                return;
+                    //            }
+                    //        }
+                    //    }
+                    //}
+                    for (int spoor = 1; spoor < Lijnen[lijn].Length; spoor++)
+                    {
+                        int spoornummer = -1;
+                        if (lijn == 3 && tram.Id >= 901 && tram.Id <= 920)
+                        {
+                            spoornummer = Convert.ToInt32(Lijnen[3][spoor]);
+                        }
+                        else if (lijn == 2 && tram.Id >= 2201 && tram.Id <= 2204)
+                        {
+                            spoornummer = Convert.ToInt32(Lijnen[2][spoor]);
+                        }
+                        else if (tram.Lijn != "5")
+                        {
+                            spoornummer = Convert.ToInt32(Lijnen[lijn][spoor]);
+                        }
+
+                        if (spoornummer != -1)
+                        {
+                            for (int sector = 1; sector < Sporen[spoornummer].Length; sector++)
+                            {
+                                Label l = null;
+                                l = Sporen[spoornummer][sector];
+
+                                if (l.Text == "!")
+                                {
+                                    l.Text = Convert.ToString(tram.Id);
+                                    return;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
