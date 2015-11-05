@@ -33,7 +33,7 @@ namespace Unittests_ICT4Rails
             uitrijdtijd = new DateTime(2015, 10, 15, 20, 00, 00);
             
             medewerker = new Medewerker(1, "testnaam", "testemail", "testfunctie", "testadres", "testpostcode");
-            spoor = new Spoor(1, 1, true);
+            spoor = new Spoor(1, 1, 1, true);
             tramType = new TramType("testtypenaam", "testbeschrijving", 1);
             status = new Status("teststatusnaam", "testbijzonderheden");
             tram = new Tram(1, tramType, status, "1", true);
@@ -87,7 +87,7 @@ namespace Unittests_ICT4Rails
 
             Assert.AreEqual("Spoornummer: 1 - Lijn: 1 - Beschikbaar: Ja", spoor.ToString());
             
-            spoor = new Spoor(0, 0, false);
+            spoor = new Spoor(1, 0, 0, false);
             Assert.AreEqual("Spoornummer: Onbekend - Lijn: Onbekend - Beschikbaar: Nee", spoor.ToString());  
             
         }

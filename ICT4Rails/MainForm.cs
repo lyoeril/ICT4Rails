@@ -532,7 +532,7 @@ namespace ICT4Rails
                     {
                         if (s.Spoornummer == Convert.ToInt32(tbxRemiseBeheerSpoorBeheerSpoorNummer.Text))
                         {
-                            administratie.SpoorStatusVeranderen(Convert.ToInt32(tbxRemiseBeheerSpoorBeheerSpoorNummer.Text), Convert.ToInt32(tbxRemiseBeheerSpoorBeheerSectorNummer.Text), false);
+                            administratie.SpoorStatusVeranderen(s.Spoorid ,Convert.ToInt32(tbxRemiseBeheerSpoorBeheerSpoorNummer.Text), Convert.ToInt32(tbxRemiseBeheerSpoorBeheerSectorNummer.Text), false);
                             error = "";
                         }
                     }
@@ -550,7 +550,7 @@ namespace ICT4Rails
                     {
                         if (s.Spoornummer == Convert.ToInt32(tbxRemiseBeheerSpoorBeheerSpoorNummer.Text))
                         {
-                            administratie.SpoorStatusVeranderen(Convert.ToInt32(tbxRemiseBeheerSpoorBeheerSpoorNummer.Text), Convert.ToInt32(tbxRemiseBeheerSpoorBeheerSectorNummer.Text), false);
+                            administratie.SpoorStatusVeranderen(s.Spoorid, Convert.ToInt32(tbxRemiseBeheerSpoorBeheerSpoorNummer.Text), Convert.ToInt32(tbxRemiseBeheerSpoorBeheerSectorNummer.Text), false);
                             error = "";
                         }
                     }
