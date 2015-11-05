@@ -112,5 +112,20 @@ namespace ICT4Rails
                 
             }
         }
+
+        public void InsertTramType(TramType type)
+        {
+            using (OracleConnection connection = Connection)
+            {
+                string insert = "insert into type (naam, beschrijving, lengte) values(:NAAM, :BESCHRIJVING, :LENGTE)";
+                using (OracleCommand command = new OracleCommand(insert, connection))
+                {
+                    command.Parameters.Add(new OracleParameter("NAAM", type.Naam));
+                    command.Parameters.Add(new OracleParameter("BESCHRIJVING", type.Beschrijving));
+                    command.Parameters.Add(new OracleParameter("LENGTE", type.Lengte));
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
     }
 }
