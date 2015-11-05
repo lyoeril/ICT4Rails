@@ -119,7 +119,7 @@ namespace ICT4Rails
                         tabcontrolRemise.TabPages.Insert(4, tabPageSchoonmaak);
                         tabcontrolRemise.TabPages.Insert(5, tabPageReparatie);
                     }
-                    if (medewerker.Functie == "REPARATEUR")
+                    else if (medewerker.Functie == "REPARATEUR")
                     {
                         tabcontrolRemise.TabPages.Remove(tabpageRemiseOverzicht);
                         tabcontrolRemise.TabPages.Remove(tabpageRemiseBeheer);
@@ -128,7 +128,7 @@ namespace ICT4Rails
                         tabcontrolRemise.TabPages.Remove(tabPageSchoonmaak);
                         tabcontrolRemise.TabPages.Insert(1, tabPageReparatie);
                     }
-                    if (medewerker.Functie == "SCHOONMAAK")
+                    else if (medewerker.Functie == "SCHOONMAAK")
                     {
                         tabcontrolRemise.TabPages.Remove(tabpageRemiseOverzicht);
                         tabcontrolRemise.TabPages.Remove(tabpageRemiseBeheer);
@@ -137,7 +137,7 @@ namespace ICT4Rails
                         tabcontrolRemise.TabPages.Insert(0, tabPageSchoonmaak);
                         tabcontrolRemise.TabPages.Remove(tabPageReparatie);
                     }
-                    if (medewerker.Functie == "WAGENPARKBEHEERDER")
+                    else if (medewerker.Functie == "WAGENPARKBEHEERDER")
                     {
                         tabcontrolRemise.TabPages.Insert(0, tabpageRemiseOverzicht);
                         tabcontrolRemise.TabPages.Insert(1, tabpageRemiseBeheer);
