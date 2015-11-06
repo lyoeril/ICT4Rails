@@ -18,6 +18,7 @@ namespace ICT4Rails
     public partial class MainForm : Form
     {
         private Label[][] Sporen;
+        private string[][] Lijnen;
 
         //Medewerker        
 
@@ -36,6 +37,8 @@ namespace ICT4Rails
             LogIn();
             VulSporen();
             Sporen = SporenArray();
+            Lijnen = LijnenArray();
+            VulLijnnummers();
             vullMederwerkerList();
             OpenAccountUI();
             loadComboboxStatusbeheerOnderhoudMedewerker();
@@ -70,8 +73,7 @@ namespace ICT4Rails
 
             rfid.close();
         }
-
-        //e.Tag = RFID-tag ID
+        
         private void rfid_Tag(object sender, TagEventArgs e)
         {
             rfid.LED = true;
@@ -206,7 +208,7 @@ namespace ICT4Rails
                         label.Click += new EventHandler(label_Click);
                         label.Name = "label" + Convert.ToString(labelCount);
                         label.Tag = Convert.ToString(x) + ", " + Convert.ToString(y);
-                        label.Text = "!"; //"20" + Convert.ToString(x); // + ", " + Convert.ToString(y);
+                        label.Text = ""; //"20" + Convert.ToString(x); // + ", " + Convert.ToString(y);
                         tableLayoutPanel1.Controls.Add(label, x, y);
                         labelCount++;
                     }
@@ -264,6 +266,26 @@ namespace ICT4Rails
             }
         }
 
+        private void VulLijnnummers()
+        {
+            for (int spoor = 0; spoor < Sporen.Length; spoor++)
+            {
+                for (int lijn = 0; lijn < Lijnen.Length; lijn++)
+                {
+                    if (Sporen[spoor] != null && Sporen[spoor][0] != null)
+                    {
+                        for (int lijnSpoor = 1; lijnSpoor < Lijnen[lijn].Length; lijnSpoor++)
+                        {
+                            if (Convert.ToString(spoor) == Lijnen[lijn][lijnSpoor])
+                            {
+                                Sporen[spoor][0].Text = Lijnen[lijn][0];
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
         //de methode die aangeroepen wordt als er op een label geklikt wordt
         private void label_Click(object sender, EventArgs ee)
         {
@@ -315,16 +337,16 @@ namespace ICT4Rails
         {
             Label[][] sporenArray = new Label[78][];
 
-            sporenArray[12] = new Label[1] { GetLabel(18, 13) };
-            sporenArray[13] = new Label[1] { GetLabel(18, 14) };
-            sporenArray[14] = new Label[1] { GetLabel(18, 15) };
-            sporenArray[15] = new Label[1] { GetLabel(18, 16) };
-            sporenArray[16] = new Label[1] { GetLabel(18, 17) };
-            sporenArray[17] = new Label[1] { GetLabel(18, 18) };
-            sporenArray[18] = new Label[1] { GetLabel(18, 19) };
-            sporenArray[19] = new Label[1] { GetLabel(18, 20) };
-            sporenArray[20] = new Label[1] { GetLabel(18, 21) };
-            sporenArray[21] = new Label[1] { GetLabel(18, 22) };
+            sporenArray[12] = new Label[2] { null, GetLabel(18, 13) };
+            sporenArray[13] = new Label[2] { null, GetLabel(18, 14) };
+            sporenArray[14] = new Label[2] { null, GetLabel(18, 15) };
+            sporenArray[15] = new Label[2] { null, GetLabel(18, 16) };
+            sporenArray[16] = new Label[2] { null, GetLabel(18, 17) };
+            sporenArray[17] = new Label[2] { null, GetLabel(18, 18) };
+            sporenArray[18] = new Label[2] { null, GetLabel(18, 19) };
+            sporenArray[19] = new Label[2] { null, GetLabel(18, 20) };
+            sporenArray[20] = new Label[2] { null, GetLabel(18, 21) };
+            sporenArray[21] = new Label[2] { null, GetLabel(18, 22) };
             sporenArray[30] = new Label[4] { GetLabel(8, 1), GetLabel(8, 2), GetLabel(8, 3), GetLabel(8, 4) };
             sporenArray[31] = new Label[4] { GetLabel(7, 1), GetLabel(7, 2), GetLabel(7, 3), GetLabel(7, 4) };
             sporenArray[32] = new Label[5] { GetLabel(6, 1), GetLabel(6, 2), GetLabel(6, 3), GetLabel(6, 4), GetLabel(6, 5) };
@@ -352,41 +374,50 @@ namespace ICT4Rails
             sporenArray[62] = new Label[4] { GetLabel(9, 14), GetLabel(9, 15), GetLabel(9, 16), GetLabel(9, 17) };
             sporenArray[63] = new Label[5] { GetLabel(8, 14), GetLabel(8, 15), GetLabel(8, 16), GetLabel(8, 17), GetLabel(8, 18) };
             sporenArray[64] = new Label[6] { GetLabel(7, 14), GetLabel(7, 15), GetLabel(7, 16), GetLabel(7, 17), GetLabel(7, 18), GetLabel(7, 19) };
-            sporenArray[74] = new Label[5] { GetLabel(12, 14), GetLabel(12, 15), GetLabel(12, 16), GetLabel(12, 17), GetLabel(12, 18) };
-            sporenArray[75] = new Label[4] { GetLabel(13, 14), GetLabel(13, 15), GetLabel(13, 16), GetLabel(13, 17) };
-            sporenArray[76] = new Label[5] { GetLabel(14, 14), GetLabel(14, 15), GetLabel(14, 16), GetLabel(14, 17), GetLabel(14, 18) };
-            sporenArray[77] = new Label[5] { GetLabel(15, 14), GetLabel(15, 15), GetLabel(15, 16), GetLabel(15, 17), GetLabel(15, 18) };
+            sporenArray[74] = new Label[6] { null, GetLabel(12, 14), GetLabel(12, 15), GetLabel(12, 16), GetLabel(12, 17), GetLabel(12, 18) };
+            sporenArray[75] = new Label[5] { null, GetLabel(13, 14), GetLabel(13, 15), GetLabel(13, 16), GetLabel(13, 17) };
+            sporenArray[76] = new Label[6] { null, GetLabel(14, 14), GetLabel(14, 15), GetLabel(14, 16), GetLabel(14, 17), GetLabel(14, 18) };
+            sporenArray[77] = new Label[6] { null, GetLabel(15, 14), GetLabel(15, 15), GetLabel(15, 16), GetLabel(15, 17), GetLabel(15, 18) };
 
             return sporenArray;
+        }
+
+        private string[][] LijnenArray()
+        {
+            string[][] lijnenArray = new string[9][];
+
+            lijnenArray[0] = new string[4] { "1", "36", "43", "51" };
+            lijnenArray[1] = new string[5] { "2", "38", "34", "55", "63" };
+            lijnenArray[2] = new string[2] { "5", "42" };
+            lijnenArray[3] = new string[4] { "5", "37", "56", "54" };
+            lijnenArray[4] = new string[4] { "10", "32", "41", "62" };
+            lijnenArray[5] = new string[3] { "13", "44", "53" };
+            lijnenArray[6] = new string[3] { "17", "52", "45" };
+            lijnenArray[7] = new string[5] { "16/24", "30", "35", "33", "57" };
+            lijnenArray[8] = new string[2] { "OCV", "61" };
+
+            return lijnenArray;
         }
 
         private void tableLayoutPanel1_CellPaint(object sender, TableLayoutCellPaintEventArgs e)
         {
             Graphics g = e.Graphics;
             Rectangle r = e.CellBounds;
-            foreach (Label l in tableLayoutPanel1.Controls)
+            for (int spoor = 0; spoor < Sporen.Length; spoor++)
             {
-                if (e.Row == tableLayoutPanel1.GetRow(l) && e.Column == tableLayoutPanel1.GetColumn(l))
+                if (Sporen[spoor] != null && Sporen[spoor][0] != null)
                 {
-                    if (l.Text == "1")
+                    Label l = Sporen[spoor][0];
+                    if (e.Row == tableLayoutPanel1.GetRow(l) && e.Column == tableLayoutPanel1.GetColumn(l))
                     {
-                        g.FillRectangle(Brushes.LightGreen, r);
-                    }
-                    else if (l.Text == "2")
-                    {
-                        g.FillRectangle(Brushes.Yellow, r);
-                    }
-                    else if (l.Text == "5")
-                    {
-                        g.FillRectangle(Brushes.MediumPurple, r);
-                    }
-                    else if (l.Text == "10")
-                    {
-                        g.FillRectangle(Brushes.LightGray, r);
-                    }
-                    else if (l.Text == "16/24")
-                    {
-                        g.FillRectangle(Brushes.Brown, r);
+                        if (l.Text == "1") { g.FillRectangle(Brushes.LightGreen, r); }
+                        else if (l.Text == "2") { g.FillRectangle(Brushes.Yellow, r); }
+                        else if (l.Text == "5") { g.FillRectangle(Brushes.MediumPurple, r); }
+                        else if (l.Text == "10") { g.FillRectangle(Brushes.LightGray, r); }
+                        else if (l.Text == "13") { g.FillRectangle(Brushes.Blue, r); }
+                        else if (l.Text == "17") { g.FillRectangle(Brushes.Red, r); }
+                        else if (l.Text == "16/24") { g.FillRectangle(Brushes.DarkRed, r); }
+                        else if (l.Text == "OCV" || l.Text == "") { g.FillRectangle(Brushes.Pink, r); }
                     }
                 }
             }
@@ -686,7 +717,6 @@ namespace ICT4Rails
             tbxAccountPostcode.Enabled = true;
             tbxAccountStrtNR.Enabled = true;
             cbAccountFunctie.Enabled = true;
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -992,74 +1022,10 @@ namespace ICT4Rails
 
         public void SorteerTram(Tram tram)
         {
-            string[][] Lijnen = new string[9][];
-            Lijnen[0] = new string[4] { "1", "36", "43", "51" };
-            Lijnen[1] = new string[5] { "2", "38", "34", "55", "63" };
-            Lijnen[2] = new string[2] { "5", "42" };
-            Lijnen[3] = new string[4] { "5", "37", "56", "54" };
-            Lijnen[4] = new string[4] { "10", "32", "41", "62" };
-            Lijnen[5] = new string[3] { "13", "44", "53" };
-            Lijnen[6] = new string[3] { "17", "52", "45" };
-            Lijnen[7] = new string[5] { "16/24", "30", "35", "33", "57" };
-            Lijnen[8] = new string[2] { "OCV", "61" };
             for (int lijn = 0; lijn < Lijnen.Length; lijn++)
             {
                 if (tram.Lijn == Lijnen[lijn][0])
                 {
-                    //if (tram.Lijn == "5" && tram.Id >= 901 && tram.Id <= 920)
-                    //{
-                    //    for (int spoor = 1; spoor < Lijnen[lijn].Length; spoor++)
-                    //    {
-                    //        int spoornummer = Convert.ToInt32(Lijnen[3][spoor]);
-                    //        for (int sector = 1; sector < Sporen[spoornummer].Length; sector++)
-                    //        {
-                    //            Label l = null;
-                    //            l = Sporen[spoornummer][sector];
-
-                    //            if (l.Text == "")
-                    //            {
-                    //                l.Text = Convert.ToString(tram.Id);
-                    //                return;
-                    //            }
-                    //        }
-                    //    }
-                    //}
-                    //else if (tram.Lijn == "5" && tram.Id >= 2201 && tram.Id <= 2204)
-                    //{
-                    //    for (int spoor = 1; spoor < Lijnen[lijn].Length; spoor++)
-                    //    {
-                    //        int spoornummer = Convert.ToInt32(Lijnen[2][spoor]);
-                    //        for (int sector = 1; sector < Sporen[spoornummer].Length; sector++)
-                    //        {
-                    //            Label l = null;
-                    //            l = Sporen[spoornummer][sector];
-
-                    //            if (l.Text == "")
-                    //            {
-                    //                l.Text = Convert.ToString(tram.Id);
-                    //                return;
-                    //            }
-                    //        }
-                    //    }
-                    //}
-                    //else
-                    //{
-                    //    for (int spoor = 1; spoor < Lijnen[lijn].Length; spoor++)
-                    //    {
-                    //        int spoornummer = Convert.ToInt32(Lijnen[lijn][spoor]);
-                    //        for (int sector = 1; sector < Sporen[spoornummer].Length; sector++)
-                    //        {
-                    //            Label l = null;
-                    //            l = Sporen[spoornummer][sector];
-
-                    //            if (l.Text == "")
-                    //            {
-                    //                l.Text = Convert.ToString(tram.Id);
-                    //                return;
-                    //            }
-                    //        }
-                    //    }
-                    //}
                     for (int spoor = 1; spoor < Lijnen[lijn].Length; spoor++)
                     {
                         int spoornummer = -1;
