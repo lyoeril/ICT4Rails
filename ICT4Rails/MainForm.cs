@@ -673,7 +673,7 @@ namespace ICT4Rails
             if (!string.IsNullOrWhiteSpace(tbxAccountNaam.Text) && !string.IsNullOrWhiteSpace(tbxAccountPostcode.Text)
                                                                  && !string.IsNullOrWhiteSpace(tbxAccountStrtNR.Text))
             {
-                if (medewerker.ValidatePostcode(tbxAccountPostcode.Text))
+                if (administratie.ValidatePostcode(tbxAccountPostcode.Text))
                 {
                     if (tbxAccountEmail.Text.Contains('@') && tbxAccountEmail.Text.Contains('.'))
                     {
@@ -686,12 +686,10 @@ namespace ICT4Rails
                             string Cbkeuze = cbAccountFunctie.SelectedItem.ToString();
                             medewerker = new Medewerker(0, tbxAccountNaam.Text, tbxAccountEmail.Text, Cbkeuze, tbxAccountStrtNR.Text, tbxAccountPostcode.Text);
                             administratie.AddMedewerker(medewerker);
-                            Medewerker mdwrkr = new Medewerker(0, tbxAccountNaam.Text, tbxAccountEmail.Text, Cbkeuze, tbxAccountStrtNR.Text, tbxAccountPostcode.Text);
-                            administratie.AddMedewerker(mdwrkr);
                         }
+                        administratie.RefreshClass();
                         vullMederwerkerList();
                         clearTextboxes();
-                        administratie.RefreshClass();
                     }
                     else
                     {

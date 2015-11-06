@@ -34,12 +34,6 @@ namespace ICT4Rails
             this.postcode = postcode;
         }
 
-        public bool ValidatePostcode(string postcode)
-        {
-            Regex regex = new Regex("^[1-9]{1}[0-9]{3}?[A-Z]{2}$");
-            return regex.IsMatch(postcode);
-        }
-
         public override string ToString()
         {
             //override tostring methode om gegevens gemakkelijk weer te geven
