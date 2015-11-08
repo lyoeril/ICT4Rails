@@ -15,18 +15,18 @@ namespace ICT4Rails
             using (OracleConnection connection = Connection)
             {
 
-                string Update = "UPDATE TRAM SET STATUSNAAM = :Status, LIJN= :Lijnnummer, BESCHIKBAAR=:Beschikbaar  WHERE ID =:IDTRAM ";
+                string Update = "UPDATE TRAM SET STATUSNAAM =:STATUS, LIJN=:LIJNNUMMER, BESCHIKBAAR=:BESCHIKBAAR, TYPENAAM =:TYPE  WHERE ID =:IDTRAM ";
                 using (OracleCommand command = new OracleCommand(Update, connection))
                 {
-                    command.Parameters.Add(new OracleParameter("Status", tram.Status.Naam.ToUpper()));
-                    command.Parameters.Add(new OracleParameter("Lijnnummer", tram.Lijn));
+                    command.Parameters.Add(new OracleParameter("STATUS", tram.Status.Naam));
+                    command.Parameters.Add(new OracleParameter("LIJNNUMMER", tram.Lijn));
                     char beschikbaar = 'N';
                     if (tram.Beschikbaar)
                     {
                         beschikbaar = 'Y';
                     }
-                    command.Parameters.Add(new OracleParameter("Beschikbaar", beschikbaar));
-                    command.Parameters.Add(new OracleParameter("Type", tram.Type.Naam));
+                    command.Parameters.Add(new OracleParameter("BESCHIKBAAR", beschikbaar));
+                    command.Parameters.Add(new OracleParameter("TYPE", tram.Type.Naam));
                     command.Parameters.Add(new OracleParameter("IDTRAM", tram.Id));
                     command.ExecuteNonQuery();
                 }

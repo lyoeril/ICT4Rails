@@ -596,11 +596,11 @@ namespace ICT4Rails
                 else if (cbxRemiseBeheerSpoorBeheerBewerking.SelectedItem.ToString() == "Reserveer")
                 {
                     error = "Dit spoor is al gereserveerd!";
-
                     foreach (Spoor s in sporen)
                     {
                         if (s.Spoornummer == Convert.ToInt32(tbxRemiseBeheerSpoorBeheerSpoorNummer.Text))
                         {
+                            // Hier klopt niets van... je moet een reservering plaatsen niet het spoor beschikbaar maken of niet!
                             administratie.SpoorStatusVeranderen(s.Spoorid, Convert.ToInt32(tbxRemiseBeheerSpoorBeheerSpoorNummer.Text), Convert.ToInt32(tbxRemiseBeheerSpoorBeheerSectorNummer.Text), false);
                             error = "";
                             break;
@@ -632,19 +632,20 @@ namespace ICT4Rails
                 try
                 {
                     administratie.TramStatusVeranderen(Convert.ToInt32(tbxStatusbeheerTramNummer.Text), cbxStatusbeheerTramStatus.Text);
-                    int tramnummer = Convert.ToInt32(tbxStatusbeheerTramNummer.Text);
-                    foreach (Tram t in administratie.Trams)
-                    {
-                        if (tramnummer == t.Id)
-                        {
-                            tbxStatusbeheerHuidigeStatus.Text = t.Status.Naam;
-                        }
-                    };
                     MessageBox.Show("De status van tram " + tbxStatusbeheerTramNummer.Text + " is veranderd in '" + cbxStatusbeheerTramStatus.Text + "'");                
                 }
-                catch
+                catch(Exception en)
                 {
+                    MessageBox.Show(en.ToString());
                     MessageBox.Show("Er is iets fout gegaan: Misschien een fout nummer ingevuld?");
+                }
+                finally
+                {
+                    btnStatusbeheerTramStatus.Enabled = false;
+                    tbxStatusbeheerTramNummer.Text = null;
+                    tbxStatusbeheerHuidigeStatus.Text = null;
+                    cbxStatusbeheerTramStatus.Text = null;
+                    cbxStatusbeheerTramStatus.Enabled = false;
                 }
             }
         }
@@ -1002,14 +1003,17 @@ namespace ICT4Rails
             try
             {
                 int tramnummer = Convert.ToInt32(tbxStatusbeheerTramNummer.Text);
-
+                tbxStatusbeheerHuidigeStatus.Text = null;
                 foreach (Tram t in administratie.Trams)
                 {
                     if (tramnummer == t.Id)
                     {
                         tbxStatusbeheerHuidigeStatus.Text = t.Status.Naam;
+                        cbxStatusbeheerTramStatus.Enabled = true;
+                        btnStatusbeheerTramStatus.Enabled = true;
                     }
                 }
+                
             }
             catch (Exception)
             {
