@@ -125,8 +125,7 @@ namespace ICT4Rails
                         tabcontrolRemise.TabPages.Insert(1, tabpageRemiseBeheer);
                         tabcontrolRemise.TabPages.Insert(2, tabpageStatusBeheer);
                         tabcontrolRemise.TabPages.Insert(3, tabpageAccountBeheer);
-                        tabcontrolRemise.TabPages.Insert(4, tabPageSchoonmaak);
-                        tabcontrolRemise.TabPages.Insert(5, tabPageReparatie);
+                        tabcontrolRemise.TabPages.Insert(4, tabpageOnderhoud);
                     }
                     else if (medewerker.Functie == "REPARATEUR")
                     {
@@ -134,8 +133,7 @@ namespace ICT4Rails
                         tabcontrolRemise.TabPages.Remove(tabpageRemiseBeheer);
                         tabcontrolRemise.TabPages.Insert(0, tabpageStatusBeheer);
                         tabcontrolRemise.TabPages.Remove(tabpageAccountBeheer);
-                        tabcontrolRemise.TabPages.Remove(tabPageSchoonmaak);
-                        tabcontrolRemise.TabPages.Insert(1, tabPageReparatie);
+                        tabcontrolRemise.TabPages.Remove(tabpageOnderhoud);
                     }
                     else if (medewerker.Functie == "SCHOONMAAK")
                     {
@@ -143,8 +141,7 @@ namespace ICT4Rails
                         tabcontrolRemise.TabPages.Remove(tabpageRemiseBeheer);
                         tabcontrolRemise.TabPages.Remove(tabpageStatusBeheer);
                         tabcontrolRemise.TabPages.Remove(tabpageAccountBeheer);
-                        tabcontrolRemise.TabPages.Insert(0, tabPageSchoonmaak);
-                        tabcontrolRemise.TabPages.Remove(tabPageReparatie);
+                        tabcontrolRemise.TabPages.Insert(0, tabpageOnderhoud);
                     }
                     else if (medewerker.Functie == "WAGENPARKBEHEERDER")
                     {
@@ -152,8 +149,7 @@ namespace ICT4Rails
                         tabcontrolRemise.TabPages.Insert(1, tabpageRemiseBeheer);
                         tabcontrolRemise.TabPages.Insert(2, tabpageStatusBeheer);
                         tabcontrolRemise.TabPages.Remove(tabpageAccountBeheer);
-                        tabcontrolRemise.TabPages.Remove(tabPageSchoonmaak);
-                        tabcontrolRemise.TabPages.Remove(tabPageReparatie);
+                        tabcontrolRemise.TabPages.Remove(tabpageOnderhoud);
                     }
                     else
                     {
@@ -161,8 +157,7 @@ namespace ICT4Rails
                         tabcontrolRemise.TabPages.Remove(tabpageRemiseBeheer);
                         tabcontrolRemise.TabPages.Remove(tabpageStatusBeheer);
                         tabcontrolRemise.TabPages.Remove(tabpageAccountBeheer);
-                        tabcontrolRemise.TabPages.Insert(0, tabPageSchoonmaak);
-                        tabcontrolRemise.TabPages.Remove(tabPageReparatie);
+                        tabcontrolRemise.TabPages.Insert(0, tabpageOnderhoud);
                     }
                 }
 
@@ -220,49 +215,49 @@ namespace ICT4Rails
             // Geeft alle spoor labels de correcte text
             foreach (Label l in tableLayoutPanel1.Controls)
             {
-                if ((string)l.Tag == "0, 0") { l.Text = "38"; }
-                else if ((string)l.Tag == "1, 0") { l.Text = "37"; }
-                else if ((string)l.Tag == "2, 0") { l.Text = "36"; }
-                else if ((string)l.Tag == "3, 0") { l.Text = "35"; }
-                else if ((string)l.Tag == "4, 0") { l.Text = "34"; }
-                else if ((string)l.Tag == "5, 0") { l.Text = "33"; }
-                else if ((string)l.Tag == "6, 0") { l.Text = "32"; }
-                else if ((string)l.Tag == "7, 0") { l.Text = "31"; }
-                else if ((string)l.Tag == "8, 0") { l.Text = "30"; }
-                else if ((string)l.Tag == "10, 0") { l.Text = "40"; }
-                else if ((string)l.Tag == "11, 0") { l.Text = "41"; }
-                else if ((string)l.Tag == "12, 0") { l.Text = "42"; }
-                else if ((string)l.Tag == "13, 0") { l.Text = "43"; }
-                else if ((string)l.Tag == "14, 0") { l.Text = "44"; }
-                else if ((string)l.Tag == "16, 0") { l.Text = "45"; }
-                else if ((string)l.Tag == "18, 0") { l.Text = "58"; }
+                GetLabel(0, 0).Text = "38";
+                GetLabel(1, 0).Text = "37";
+                GetLabel(2, 0).Text = "36";
+                GetLabel(3, 0).Text = "35";
+                GetLabel(4, 0).Text = "34";
+                GetLabel(5, 0).Text = "33";
+                GetLabel(6, 0).Text = "32";
+                GetLabel(7, 0).Text = "31";
+                GetLabel(8, 0).Text = "30";
+                GetLabel(10, 0).Text = "40";
+                GetLabel(11, 0).Text = "41";
+                GetLabel(12, 0).Text = "42";
+                GetLabel(13, 0).Text = "43";
+                GetLabel(14, 0).Text = "44";
+                GetLabel(16, 0).Text = "45";
+                GetLabel(18, 0).Text = "58";
 
-                else if ((string)l.Tag == "0, 13") { l.Text = "57"; }
-                else if ((string)l.Tag == "1, 13") { l.Text = "56"; }
-                else if ((string)l.Tag == "2, 13") { l.Text = "55"; }
-                else if ((string)l.Tag == "3, 13") { l.Text = "54"; }
-                else if ((string)l.Tag == "4, 13") { l.Text = "53"; }
-                else if ((string)l.Tag == "5, 13") { l.Text = "52"; }
-                else if ((string)l.Tag == "6, 13") { l.Text = "51"; }
-                else if ((string)l.Tag == "7, 13") { l.Text = "64"; }
-                else if ((string)l.Tag == "8, 13") { l.Text = "63"; }
-                else if ((string)l.Tag == "9, 13") { l.Text = "62"; }
-                else if ((string)l.Tag == "10, 13") { l.Text = "61"; }
-                else if ((string)l.Tag == "12, 13") { l.Text = "74"; }
-                else if ((string)l.Tag == "13, 13") { l.Text = "75"; }
-                else if ((string)l.Tag == "14, 13") { l.Text = "76"; }
-                else if ((string)l.Tag == "15, 13") { l.Text = "77"; }
+                GetLabel(0, 13).Text = "57";
+                GetLabel(1, 13).Text = "56";
+                GetLabel(2, 13).Text = "55";
+                GetLabel(3, 13).Text = "54";
+                GetLabel(4, 13).Text = "53";
+                GetLabel(5, 13).Text = "52";
+                GetLabel(6, 13).Text = "51";
+                GetLabel(7, 13).Text = "64";
+                GetLabel(8, 13).Text = "63";
+                GetLabel(9, 13).Text = "62";
+                GetLabel(10, 13).Text = "61";
+                GetLabel(12, 13).Text = "74";
+                GetLabel(13, 13).Text = "75";
+                GetLabel(14, 13).Text = "76";
+                GetLabel(15, 13).Text = "77";
 
-                else if ((string)l.Tag == "17, 13") { l.Text = "12"; }
-                else if ((string)l.Tag == "17, 14") { l.Text = "13"; }
-                else if ((string)l.Tag == "17, 15") { l.Text = "14"; }
-                else if ((string)l.Tag == "17, 16") { l.Text = "15"; }
-                else if ((string)l.Tag == "17, 17") { l.Text = "16"; }
-                else if ((string)l.Tag == "17, 18") { l.Text = "17"; }
-                else if ((string)l.Tag == "17, 19") { l.Text = "18"; }
-                else if ((string)l.Tag == "17, 20") { l.Text = "19"; }
-                else if ((string)l.Tag == "17, 21") { l.Text = "20"; }
-                else if ((string)l.Tag == "17, 22") { l.Text = "21"; }
+                GetLabel(17, 13).Text = "12";
+                GetLabel(17, 14).Text = "13";
+                GetLabel(17, 15).Text = "14";
+                GetLabel(17, 16).Text = "15";
+                GetLabel(17, 17).Text = "16";
+                GetLabel(17, 18).Text = "17";
+                GetLabel(17, 19).Text = "18";
+                GetLabel(17, 20).Text = "19";
+                GetLabel(17, 21).Text = "20";
+                GetLabel(17, 22).Text = "21";
             }
         }
 
@@ -1061,6 +1056,11 @@ namespace ICT4Rails
                     }
                 }
             }
-        }       
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
