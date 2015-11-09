@@ -39,9 +39,10 @@ namespace ICT4Rails
             Sporen = SporenArray();
             Lijnen = LijnenArray();
             VulLijnnummers();
-            vullMederwerkerList();
+            VulLijsten();
             OpenAccountUI();
             loadListComboboxStatusbeheerOnderhoudMedewerker();
+            loadComboboxes();
 
             this.FormClosing += new FormClosingEventHandler(MainForm_FormClosing);
             this.tableLayoutPanel1.CellPaint += new TableLayoutCellPaintEventHandler(tableLayoutPanel1_CellPaint);
@@ -209,8 +210,6 @@ namespace ICT4Rails
                     }
                 }
             }
-
-
 
             // Geeft alle spoor labels de correcte text
             foreach (Label l in tableLayoutPanel1.Controls)
@@ -399,19 +398,32 @@ namespace ICT4Rails
             Rectangle r = e.CellBounds;
             for (int spoor = 0; spoor < Sporen.Length; spoor++)
             {
-                if (Sporen[spoor] != null && Sporen[spoor][0] != null)
+                if (Sporen[spoor] != null)
                 {
-                    Label l = Sporen[spoor][0];
-                    if (e.Row == tableLayoutPanel1.GetRow(l) && e.Column == tableLayoutPanel1.GetColumn(l))
+                    for (int sector = 0; sector < Sporen[spoor].Length; sector++)
                     {
-                        if (l.Text == "1") { g.FillRectangle(Brushes.LightGreen, r); }
-                        else if (l.Text == "2") { g.FillRectangle(Brushes.Yellow, r); }
-                        else if (l.Text == "5") { g.FillRectangle(Brushes.MediumPurple, r); }
-                        else if (l.Text == "10") { g.FillRectangle(Brushes.LightGray, r); }
-                        else if (l.Text == "13") { g.FillRectangle(Brushes.Blue, r); }
-                        else if (l.Text == "17") { g.FillRectangle(Brushes.Red, r); }
-                        else if (l.Text == "16/24") { g.FillRectangle(Brushes.DarkRed, r); }
-                        else if (l.Text == "OCV" || l.Text == "") { g.FillRectangle(Brushes.Pink, r); }
+                        if (Sporen[spoor][sector] != null)
+                        {
+                            Label l = Sporen[spoor][sector];
+                            if (e.Row == tableLayoutPanel1.GetRow(l) && e.Column == tableLayoutPanel1.GetColumn(l))
+                            {
+                                if (sector == 0)
+                                {
+                                    if (l.Text == "1") { g.FillRectangle(Brushes.LightGreen, r); }
+                                    else if (l.Text == "2") { g.FillRectangle(Brushes.Yellow, r); }
+                                    else if (l.Text == "5") { g.FillRectangle(Brushes.MediumPurple, r); }
+                                    else if (l.Text == "10") { g.FillRectangle(Brushes.Gray, r); }
+                                    else if (l.Text == "13") { g.FillRectangle(Brushes.Blue, r); }
+                                    else if (l.Text == "17") { g.FillRectangle(Brushes.Red, r); }
+                                    else if (l.Text == "16/24") { g.FillRectangle(Brushes.DarkRed, r); }
+                                    else if (l.Text == "OCV" || l.Text == "") { g.FillRectangle(Brushes.Pink, r); }
+                                }
+                                else
+                                {
+                                    g.FillRectangle(Brushes.LightGray, r);
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -426,22 +438,22 @@ namespace ICT4Rails
 
         private void btnRemiseBeheerBevestig_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrWhiteSpace(tbxRemiseBeheerTramNummer.Text) && !string.IsNullOrWhiteSpace(tbxRemiseBeheerTramLijn.Text) && !string.IsNullOrWhiteSpace(cbxRemiseBeheerTramType.Text))
-            {
-                List<Tram> trams = DataMed.GetAllTrams();
-                string error = "";
+            List<Tram> trams = administratie.Trams;
 
-                if (cbxRemiseBeheerTramBewerking.SelectedItem.ToString() == "Voeg toe")
+            if (cbxRemiseBeheerTramBewerking.SelectedItem.ToString() == "Voeg toe")
+            {
+                try
                 {
                     foreach (Tram t in trams)
                     {
                         if (t.Id == Convert.ToInt32(tbxRemiseBeheerTramNummer.Text))
                         {
-                            throw new Exception("Er bestaat al een Tram met dit Tramnummer!");
+                            MessageBox.Show("De tram met dit nummer bestaat al");
+                            return;
                         }
                     }
 
-                    TramType type = (TramType)cbxRemiseBeheerTramType.SelectedItem;
+                    TramType type = cbxRemiseBeheerTramType.SelectedItem as TramType;
                     List<Status> statussen = DataMed.GetAllStatus();
                     Status status = null;
 
@@ -459,29 +471,36 @@ namespace ICT4Rails
                     administratie.AddTram(tram);
                     MessageBox.Show("Tram is toegevoegd!");
                 }
-                else if (cbxRemiseBeheerTramBewerking.SelectedItem.ToString() == "Verwijder")
+                catch(Exception)
                 {
-                    error = "Deze Tram is niet gevonden!";
+                    MessageBox.Show("Er is iets fout gegaan, tram is niet toegevoegd");
+                }
 
+            }
+            else if (cbxRemiseBeheerTramBewerking.SelectedItem.ToString() == "Verwijder")
+            {
+                try
+                {
                     foreach (Tram t in trams)
                     {
                         if (t.Id == Convert.ToInt32(tbxRemiseBeheerTramNummer.Text))
                         {
                             administratie.TramVerwijderen(Convert.ToInt32(tbxRemiseBeheerTramNummer.Text));
-                            error = "";
+                            MessageBox.Show("De tram is succesvol verwijderd");
                             break;
                         }
                     }
-
-                    if (error != "")
-                    {
-                        MessageBox.Show(error);
-                    }
                 }
-                else if (cbxRemiseBeheerTramBewerking.SelectedItem.ToString() == "Bewerk")
+                catch (Exception)
                 {
-                    error = "Er is iets fout gegaan tijdens het bewerken van de tram, de bewerkingen zijn niet toegepast.";
-
+                    MessageBox.Show("Het ingevulde tramnummer is onjuist");
+                }
+                
+            }
+            else if (cbxRemiseBeheerTramBewerking.SelectedItem.ToString() == "Bewerk")
+            {
+                try
+                {
                     foreach (Tram t in trams)
                     {
                         if (t.Id == Convert.ToInt32(tbxRemiseBeheerTramNummer.Text))
@@ -496,29 +515,22 @@ namespace ICT4Rails
                                     break;
                                 }
                             }
-
                             administratie.TramBewerken(Convert.ToInt32(tbxRemiseBeheerTramNummer.Text), type.Naam, "REMISE", tbxRemiseBeheerTramLijn.Text, true);
-                            error = "";
                             break;
                         }
                     }
-
-                    if (error != "")
-                    {
-                        MessageBox.Show(error);
-                    }
                 }
-
-                tbxRemiseBeheerTramNummer.Text = "";
-                tbxRemiseBeheerTramLijn.Text = "";
-                cbxRemiseBeheerTramType.SelectedItem = null;
-            }
-            else
-            {
-                MessageBox.Show("Voer eerst alle velden in.");
+                catch(Exception)
+                {
+                    MessageBox.Show("Er is iets fout gegaan tijdens het bewerken van de tram, de bewerkingen zijn niet toegepast.");
+                }
             }
 
-            administratie.RefreshClass();
+            tbxRemiseBeheerTramNummer.Text = "";
+            tbxRemiseBeheerTramLijn.Text = "";
+            cbxRemiseBeheerTramType.SelectedItem = null;
+
+        administratie.RefreshClass();
         }
 
         private void cbxRemiseBeheerTramBewerking_SelectedIndexChanged(object sender, EventArgs e)
@@ -621,11 +633,13 @@ namespace ICT4Rails
 
         //AccountBeheer
 
-        private void vullMederwerkerList()
+        private void VulLijsten()
         {
             lbAccountMedewerkers.Items.Clear();
             lbAccountGebruiker.Items.Clear();
-            // Haal alle medewerkers op van database
+            lB_RemisebeheerTramlijst.Items.Clear();
+            lB_RemisebeheerSpoorlijst.Items.Clear();
+            // Haal alle gegevens op van database
             foreach (Medewerker medewerker in administratie.Medewerkers)
             {
                 lbAccountMedewerkers.Items.Add(medewerker);
@@ -636,6 +650,15 @@ namespace ICT4Rails
                 lbAccountGebruiker.Items.Add(gebruiker);
             }
 
+            foreach (Tram tram in administratie.Trams)
+            {
+                lB_RemisebeheerTramlijst.Items.Add(tram);
+            }
+
+            foreach (Spoor spoor in administratie.Sporen)
+            {
+                lB_RemisebeheerSpoorlijst.Items.Add(spoor);
+            }
         }
 
         private void btnAccountToevoegen_Click(object sender, EventArgs e)
@@ -658,7 +681,7 @@ namespace ICT4Rails
                             administratie.AddMedewerker(medewerker);
                         }
                         administratie.RefreshClass();
-                        vullMederwerkerList();
+                        VulLijsten();
                         clearTextboxes();
                     }
                     else
@@ -705,7 +728,7 @@ namespace ICT4Rails
                 MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
                 administratie.RefreshClass();
-                vullMederwerkerList();
+                VulLijsten();
                 clearTextboxes();
             }
         }
@@ -802,7 +825,7 @@ namespace ICT4Rails
                 Gebruiker UpdateGebruiker = new Gebruiker(valueUS, gebruiker.Medewerker_ID, valuePW);
                 administratie.ChangeGebruiker(UpdateGebruiker);
                 administratie.RefreshClass();
-                vullMederwerkerList();
+                VulLijsten();
             }
 
             catch (OracleException e)
@@ -834,7 +857,7 @@ namespace ICT4Rails
             {
                 administratie.RemoveMedewerker(medewerker);
                 administratie.RefreshClass();
-                vullMederwerkerList();
+                VulLijsten();
             }
             else
             {
@@ -852,7 +875,7 @@ namespace ICT4Rails
                         administratie.RemoveMedewerker(medewerker);
                     }
                     administratie.RefreshClass();
-                    vullMederwerkerList();
+                    VulLijsten();
                     heeftaccount = false;
                 }
             }
@@ -864,7 +887,7 @@ namespace ICT4Rails
             {
                 administratie.RemoveGebruiker(gebruiker);
                 administratie.RefreshClass();
-                vullMederwerkerList();
+                VulLijsten();
             }
         }
 
@@ -873,6 +896,10 @@ namespace ICT4Rails
             foreach (Medewerker m in administratie.Medewerkers)
             {
                 cbxOnderhoudMedewerker.Items.Add(m);
+            }
+            foreach (TramType t in administratie.GetTypes())
+            {
+                cbxRemiseBeheerTramType.Items.Add(t);
             }
         }
 
@@ -959,7 +986,7 @@ namespace ICT4Rails
                                 Label l = null;
                                 l = Sporen[spoornummer][sector];
 
-                                if (l.Text == "!")
+                                if (l.Text == "")
                                 {
                                     l.Text = Convert.ToString(tram.Id);
                                     return;
@@ -1102,6 +1129,7 @@ namespace ICT4Rails
             loadListComboboxStatusbeheerOnderhoudMedewerker();
         }
 
+<<<<<<< HEAD
         private void btn_RefreshList2_Click(object sender, EventArgs e)
         {
             loadListComboboxStatusbeheerOnderhoudMedewerker();
@@ -1126,6 +1154,11 @@ namespace ICT4Rails
                 MessageBox.Show(en.Message);
             }
 
+=======
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            VulLijsten();
+>>>>>>> 177423a6ee7ddeffbd050c796a4589639efbed69
         }
     }
 }
