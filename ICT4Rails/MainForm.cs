@@ -39,7 +39,7 @@ namespace ICT4Rails
             Sporen = SporenArray();
             Lijnen = LijnenArray();
             VulLijnnummers();
-            vullMederwerkerList();
+            VulLijsten();
             OpenAccountUI();
             loadListComboboxStatusbeheerOnderhoudMedewerker();
 
@@ -633,11 +633,13 @@ namespace ICT4Rails
 
         //AccountBeheer
 
-        private void vullMederwerkerList()
+        private void VulLijsten()
         {
             lbAccountMedewerkers.Items.Clear();
             lbAccountGebruiker.Items.Clear();
-            // Haal alle medewerkers op van database
+            lB_RemisebeheerTramlijst.Items.Clear();
+            lB_RemisebeheerSpoorlijst.Items.Clear();
+            // Haal alle gegevens op van database
             foreach (Medewerker medewerker in administratie.Medewerkers)
             {
                 lbAccountMedewerkers.Items.Add(medewerker);
@@ -648,6 +650,15 @@ namespace ICT4Rails
                 lbAccountGebruiker.Items.Add(gebruiker);
             }
 
+            foreach (Tram tram in administratie.Trams)
+            {
+                lB_RemisebeheerTramlijst.Items.Add(tram);
+            }
+
+            foreach (Spoor spoor in administratie.Sporen)
+            {
+                lB_RemisebeheerSpoorlijst.Items.Add(spoor);
+            }
         }
 
         private void btnAccountToevoegen_Click(object sender, EventArgs e)
@@ -670,7 +681,7 @@ namespace ICT4Rails
                             administratie.AddMedewerker(medewerker);
                         }
                         administratie.RefreshClass();
-                        vullMederwerkerList();
+                        VulLijsten();
                         clearTextboxes();
                     }
                     else
@@ -717,7 +728,7 @@ namespace ICT4Rails
                 MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
                 administratie.RefreshClass();
-                vullMederwerkerList();
+                VulLijsten();
                 clearTextboxes();
             }
         }
@@ -814,7 +825,7 @@ namespace ICT4Rails
                 Gebruiker UpdateGebruiker = new Gebruiker(valueUS, gebruiker.Medewerker_ID, valuePW);
                 administratie.ChangeGebruiker(UpdateGebruiker);
                 administratie.RefreshClass();
-                vullMederwerkerList();
+                VulLijsten();
             }
 
             catch (OracleException e)
@@ -846,7 +857,7 @@ namespace ICT4Rails
             {
                 administratie.RemoveMedewerker(medewerker);
                 administratie.RefreshClass();
-                vullMederwerkerList();
+                VulLijsten();
             }
             else
             {
@@ -864,7 +875,7 @@ namespace ICT4Rails
                         administratie.RemoveMedewerker(medewerker);
                     }
                     administratie.RefreshClass();
-                    vullMederwerkerList();
+                    VulLijsten();
                     heeftaccount = false;
                 }
             }
@@ -876,7 +887,7 @@ namespace ICT4Rails
             {
                 administratie.RemoveGebruiker(gebruiker);
                 administratie.RefreshClass();
-                vullMederwerkerList();
+                VulLijsten();
             }
         }
 
