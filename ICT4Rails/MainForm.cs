@@ -982,8 +982,6 @@ namespace ICT4Rails
                 }
             }
         }
-<<<<<<< HEAD
-=======
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
@@ -1117,6 +1115,5 @@ namespace ICT4Rails
             administratie.RefreshClass();
             loadListComboboxStatusbeheerOnderhoudMedewerker();
         }
->>>>>>> origin/master
     }
 }
