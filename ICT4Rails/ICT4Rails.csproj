@@ -58,6 +58,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConducteurForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConducteurForm.Designer.cs">
+      <DependentUpon>ConducteurForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Database\CreateScripts.cs" />
     <Compile Include="Database\DatabaseInit.cs" />
     <Compile Include="Database\GetAllScripts.cs" />
@@ -89,6 +95,9 @@
     <Compile Include="Tram.cs" />
     <Compile Include="Trampositie.cs" />
     <Compile Include="TramType.cs" />
+    <EmbeddedResource Include="ConducteurForm.resx">
+      <DependentUpon>ConducteurForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Loginform.resx">
       <DependentUpon>Loginform.cs</DependentUpon>
     </EmbeddedResource>

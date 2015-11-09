@@ -90,26 +90,46 @@ namespace ICT4Rails
                 }
             }
         }
-        public void InsertOnderhoud(Medewerker medewerker, int tramnummerID, string opmerking, string soort, DateTime starttijd, DateTime eindtijd)
+        public void InsertOnderhoud(Onderhoud onderhoud)
         {
-            int medewerkerID = medewerker.ID;
-            string Uppersoort = soort.ToUpper();
-
             using (OracleConnection connection = Connection)
             {
                 try
                 {
-                    string Insert = "INSERT INTO ONDERHOUD(ID, MedewerkerID, TramnummerID, Opmerking, Soort, Starttijd, Eindtijd) VALUES (seq_Onderhoud_ID.nextval," + medewerkerID + "," + tramnummerID + ",'" + opmerking + "','" + Uppersoort + "','" + starttijd + "','" + eindtijd + "')";
-                    using (OracleCommand command = new OracleCommand(Insert, connection))
+                    if (onderhoud.Medewerker == null)
                     {
-                        command.ExecuteNonQuery();
+                        string Insert =
+                        "INSERT INTO ONDERHOUD(ID, TramnummerID, Soort, Opmerking)" +
+                        " VALUES (seq_Onderhoud_ID.nextval, :TRAMNUMMERID, :SOORT, :OPMERKING)";
+                        using (OracleCommand command = new OracleCommand(Insert, connection))
+                        {
+                            command.Parameters.Add(new OracleParameter("TRAMNUMMERID", onderhoud.Tram.Id));
+                            command.Parameters.Add(new OracleParameter("SOORT", onderhoud.Soort));
+                            command.Parameters.Add(new OracleParameter("OPMERKING", onderhoud.Opmerking));
+                            command.ExecuteNonQuery();
+                        }
+                    }
+                    else
+                    {
+                        string Insert =
+                        "INSERT INTO ONDERHOUD(ID, MedewerkerID, TramnummerID, Opmerking, Soort, Starttijd, Eindtijd)" +
+                        " VALUES (seq_Onderhoud_ID.nextval, :MEDEWERKERID, :TRAMNUMMERID, :OPMERKING,:SOORT,:STARTTIJD,:EINDTIJD)";
+                        using (OracleCommand command = new OracleCommand(Insert, connection))
+                        {
+                            command.Parameters.Add(new OracleParameter("MEDEWERKERID", onderhoud.Medewerker.ID));
+                            command.Parameters.Add(new OracleParameter("TRAMNUMMERID", onderhoud.Tram.Id));
+                            command.Parameters.Add(new OracleParameter("OPMERKING", onderhoud.Opmerking));
+                            command.Parameters.Add(new OracleParameter("SOORT", onderhoud.Soort));
+                            command.Parameters.Add(new OracleParameter("STARTTIJD", onderhoud.Starttijd));
+                            command.Parameters.Add(new OracleParameter("EINDTIJD", onderhoud.Eindtijd));
+                            command.ExecuteNonQuery();
+                        }
                     }
                 }
                 catch (OracleException oexc)
                 {
                     Console.WriteLine(oexc.Message);
                 }
-                
             }
         }
 

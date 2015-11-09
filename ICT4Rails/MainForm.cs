@@ -40,9 +40,10 @@ namespace ICT4Rails
             Sporen = SporenArray();
             Lijnen = LijnenArray();
             VulLijnnummers();
-            vullMederwerkerList();
+            VulLijsten();
             OpenAccountUI();
-            loadComboboxStatusbeheerOnderhoudMedewerker();
+            loadListComboboxStatusbeheerOnderhoudMedewerker();
+            loadComboboxes();
 
             this.FormClosing += new FormClosingEventHandler(MainForm_FormClosing);
             this.tableLayoutPanel1.CellPaint += new TableLayoutCellPaintEventHandler(tableLayoutPanel1_CellPaint);
@@ -74,7 +75,7 @@ namespace ICT4Rails
 
             rfid.close();
         }
-        
+
         private void rfid_Tag(object sender, TagEventArgs e)
         {
             rfid.LED = true;
@@ -126,7 +127,11 @@ namespace ICT4Rails
                         tabcontrolRemise.TabPages.Insert(1, tabpageRemiseBeheer);
                         tabcontrolRemise.TabPages.Insert(2, tabpageStatusBeheer);
                         tabcontrolRemise.TabPages.Insert(3, tabpageAccountBeheer);
+<<<<<<< HEAD
                         tabcontrolRemise.TabPages.Insert(4, tabPageSchoonmaak);
+=======
+                        tabcontrolRemise.TabPages.Insert(4, tabpageOnderhoud);
+>>>>>>> origin/master
                     }
                     else if (medewerker.Functie == "REPARATEUR")
                     {
@@ -134,7 +139,11 @@ namespace ICT4Rails
                         tabcontrolRemise.TabPages.Remove(tabpageRemiseBeheer);
                         tabcontrolRemise.TabPages.Insert(0, tabpageStatusBeheer);
                         tabcontrolRemise.TabPages.Remove(tabpageAccountBeheer);
+<<<<<<< HEAD
                         tabcontrolRemise.TabPages.Remove(tabPageSchoonmaak);
+=======
+                        tabcontrolRemise.TabPages.Remove(tabpageOnderhoud);
+>>>>>>> origin/master
                     }
                     else if (medewerker.Functie == "SCHOONMAAK")
                     {
@@ -142,7 +151,11 @@ namespace ICT4Rails
                         tabcontrolRemise.TabPages.Remove(tabpageRemiseBeheer);
                         tabcontrolRemise.TabPages.Remove(tabpageStatusBeheer);
                         tabcontrolRemise.TabPages.Remove(tabpageAccountBeheer);
+<<<<<<< HEAD
                         tabcontrolRemise.TabPages.Insert(0, tabPageSchoonmaak);
+=======
+                        tabcontrolRemise.TabPages.Insert(0, tabpageOnderhoud);
+>>>>>>> origin/master
                     }
                     else if (medewerker.Functie == "WAGENPARKBEHEERDER")
                     {
@@ -150,7 +163,11 @@ namespace ICT4Rails
                         tabcontrolRemise.TabPages.Insert(1, tabpageRemiseBeheer);
                         tabcontrolRemise.TabPages.Insert(2, tabpageStatusBeheer);
                         tabcontrolRemise.TabPages.Remove(tabpageAccountBeheer);
+<<<<<<< HEAD
                         tabcontrolRemise.TabPages.Remove(tabPageSchoonmaak);
+=======
+                        tabcontrolRemise.TabPages.Remove(tabpageOnderhoud);
+>>>>>>> origin/master
                     }
                     else
                     {
@@ -158,7 +175,11 @@ namespace ICT4Rails
                         tabcontrolRemise.TabPages.Remove(tabpageRemiseBeheer);
                         tabcontrolRemise.TabPages.Remove(tabpageStatusBeheer);
                         tabcontrolRemise.TabPages.Remove(tabpageAccountBeheer);
+<<<<<<< HEAD
                         tabcontrolRemise.TabPages.Insert(0, tabPageSchoonmaak);
+=======
+                        tabcontrolRemise.TabPages.Insert(0, tabpageOnderhoud);
+>>>>>>> origin/master
                     }
                 }
 
@@ -211,54 +232,52 @@ namespace ICT4Rails
                 }
             }
 
-
-
             // Geeft alle spoor labels de correcte text
             foreach (Label l in tableLayoutPanel1.Controls)
             {
-                if ((string)l.Tag == "0, 0") { l.Text = "38"; }
-                else if ((string)l.Tag == "1, 0") { l.Text = "37"; }
-                else if ((string)l.Tag == "2, 0") { l.Text = "36"; }
-                else if ((string)l.Tag == "3, 0") { l.Text = "35"; }
-                else if ((string)l.Tag == "4, 0") { l.Text = "34"; }
-                else if ((string)l.Tag == "5, 0") { l.Text = "33"; }
-                else if ((string)l.Tag == "6, 0") { l.Text = "32"; }
-                else if ((string)l.Tag == "7, 0") { l.Text = "31"; }
-                else if ((string)l.Tag == "8, 0") { l.Text = "30"; }
-                else if ((string)l.Tag == "10, 0") { l.Text = "40"; }
-                else if ((string)l.Tag == "11, 0") { l.Text = "41"; }
-                else if ((string)l.Tag == "12, 0") { l.Text = "42"; }
-                else if ((string)l.Tag == "13, 0") { l.Text = "43"; }
-                else if ((string)l.Tag == "14, 0") { l.Text = "44"; }
-                else if ((string)l.Tag == "16, 0") { l.Text = "45"; }
-                else if ((string)l.Tag == "18, 0") { l.Text = "58"; }
+                GetLabel(0, 0).Text = "38";
+                GetLabel(1, 0).Text = "37";
+                GetLabel(2, 0).Text = "36";
+                GetLabel(3, 0).Text = "35";
+                GetLabel(4, 0).Text = "34";
+                GetLabel(5, 0).Text = "33";
+                GetLabel(6, 0).Text = "32";
+                GetLabel(7, 0).Text = "31";
+                GetLabel(8, 0).Text = "30";
+                GetLabel(10, 0).Text = "40";
+                GetLabel(11, 0).Text = "41";
+                GetLabel(12, 0).Text = "42";
+                GetLabel(13, 0).Text = "43";
+                GetLabel(14, 0).Text = "44";
+                GetLabel(16, 0).Text = "45";
+                GetLabel(18, 0).Text = "58";
 
-                else if ((string)l.Tag == "0, 13") { l.Text = "57"; }
-                else if ((string)l.Tag == "1, 13") { l.Text = "56"; }
-                else if ((string)l.Tag == "2, 13") { l.Text = "55"; }
-                else if ((string)l.Tag == "3, 13") { l.Text = "54"; }
-                else if ((string)l.Tag == "4, 13") { l.Text = "53"; }
-                else if ((string)l.Tag == "5, 13") { l.Text = "52"; }
-                else if ((string)l.Tag == "6, 13") { l.Text = "51"; }
-                else if ((string)l.Tag == "7, 13") { l.Text = "64"; }
-                else if ((string)l.Tag == "8, 13") { l.Text = "63"; }
-                else if ((string)l.Tag == "9, 13") { l.Text = "62"; }
-                else if ((string)l.Tag == "10, 13") { l.Text = "61"; }
-                else if ((string)l.Tag == "12, 13") { l.Text = "74"; }
-                else if ((string)l.Tag == "13, 13") { l.Text = "75"; }
-                else if ((string)l.Tag == "14, 13") { l.Text = "76"; }
-                else if ((string)l.Tag == "15, 13") { l.Text = "77"; }
+                GetLabel(0, 13).Text = "57";
+                GetLabel(1, 13).Text = "56";
+                GetLabel(2, 13).Text = "55";
+                GetLabel(3, 13).Text = "54";
+                GetLabel(4, 13).Text = "53";
+                GetLabel(5, 13).Text = "52";
+                GetLabel(6, 13).Text = "51";
+                GetLabel(7, 13).Text = "64";
+                GetLabel(8, 13).Text = "63";
+                GetLabel(9, 13).Text = "62";
+                GetLabel(10, 13).Text = "61";
+                GetLabel(12, 13).Text = "74";
+                GetLabel(13, 13).Text = "75";
+                GetLabel(14, 13).Text = "76";
+                GetLabel(15, 13).Text = "77";
 
-                else if ((string)l.Tag == "17, 13") { l.Text = "12"; }
-                else if ((string)l.Tag == "17, 14") { l.Text = "13"; }
-                else if ((string)l.Tag == "17, 15") { l.Text = "14"; }
-                else if ((string)l.Tag == "17, 16") { l.Text = "15"; }
-                else if ((string)l.Tag == "17, 17") { l.Text = "16"; }
-                else if ((string)l.Tag == "17, 18") { l.Text = "17"; }
-                else if ((string)l.Tag == "17, 19") { l.Text = "18"; }
-                else if ((string)l.Tag == "17, 20") { l.Text = "19"; }
-                else if ((string)l.Tag == "17, 21") { l.Text = "20"; }
-                else if ((string)l.Tag == "17, 22") { l.Text = "21"; }
+                GetLabel(17, 13).Text = "12";
+                GetLabel(17, 14).Text = "13";
+                GetLabel(17, 15).Text = "14";
+                GetLabel(17, 16).Text = "15";
+                GetLabel(17, 17).Text = "16";
+                GetLabel(17, 18).Text = "17";
+                GetLabel(17, 19).Text = "18";
+                GetLabel(17, 20).Text = "19";
+                GetLabel(17, 21).Text = "20";
+                GetLabel(17, 22).Text = "21";
             }
         }
 
@@ -309,7 +328,6 @@ namespace ICT4Rails
                                         tbxRemiseBeheerSpoorBeheerSectorNummer.Text = Convert.ToString(sector);
                                         tbxRemiseBeheerSpoorBeheerTramNummer.Text = Convert.ToString(t.Id);
                                         tbxStatusbeheerTramNummer.Text = Convert.ToString(t.Id);
-                                        tbxStatusbeheerOnderhoudTramnr.Text = Convert.ToString(t.Id);
 
                                         cbxRemiseBeheerTramType.DataSource = DataMed.GetAllTramtypes();
                                     }
@@ -401,19 +419,32 @@ namespace ICT4Rails
             Rectangle r = e.CellBounds;
             for (int spoor = 0; spoor < Sporen.Length; spoor++)
             {
-                if (Sporen[spoor] != null && Sporen[spoor][0] != null)
+                if (Sporen[spoor] != null)
                 {
-                    Label l = Sporen[spoor][0];
-                    if (e.Row == tableLayoutPanel1.GetRow(l) && e.Column == tableLayoutPanel1.GetColumn(l))
+                    for (int sector = 0; sector < Sporen[spoor].Length; sector++)
                     {
-                        if (l.Text == "1") { g.FillRectangle(Brushes.LightGreen, r); }
-                        else if (l.Text == "2") { g.FillRectangle(Brushes.Yellow, r); }
-                        else if (l.Text == "5") { g.FillRectangle(Brushes.MediumPurple, r); }
-                        else if (l.Text == "10") { g.FillRectangle(Brushes.LightGray, r); }
-                        else if (l.Text == "13") { g.FillRectangle(Brushes.Blue, r); }
-                        else if (l.Text == "17") { g.FillRectangle(Brushes.Red, r); }
-                        else if (l.Text == "16/24") { g.FillRectangle(Brushes.DarkRed, r); }
-                        else if (l.Text == "OCV" || l.Text == "") { g.FillRectangle(Brushes.Pink, r); }
+                        if (Sporen[spoor][sector] != null)
+                        {
+                            Label l = Sporen[spoor][sector];
+                            if (e.Row == tableLayoutPanel1.GetRow(l) && e.Column == tableLayoutPanel1.GetColumn(l))
+                            {
+                                if (sector == 0)
+                                {
+                                    if (l.Text == "1") { g.FillRectangle(Brushes.LightGreen, r); }
+                                    else if (l.Text == "2") { g.FillRectangle(Brushes.Yellow, r); }
+                                    else if (l.Text == "5") { g.FillRectangle(Brushes.MediumPurple, r); }
+                                    else if (l.Text == "10") { g.FillRectangle(Brushes.Gray, r); }
+                                    else if (l.Text == "13") { g.FillRectangle(Brushes.Blue, r); }
+                                    else if (l.Text == "17") { g.FillRectangle(Brushes.Red, r); }
+                                    else if (l.Text == "16/24") { g.FillRectangle(Brushes.DarkRed, r); }
+                                    else if (l.Text == "OCV" || l.Text == "") { g.FillRectangle(Brushes.Pink, r); }
+                                }
+                                else
+                                {
+                                    g.FillRectangle(Brushes.LightGray, r);
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -428,22 +459,22 @@ namespace ICT4Rails
 
         private void btnRemiseBeheerBevestig_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrWhiteSpace(tbxRemiseBeheerTramNummer.Text) && !string.IsNullOrWhiteSpace(tbxRemiseBeheerTramLijn.Text) && !string.IsNullOrWhiteSpace(cbxRemiseBeheerTramType.Text))
-            {
-                List<Tram> trams = DataMed.GetAllTrams();
-                string error = "";
+            List<Tram> trams = administratie.Trams;
 
-                if (cbxRemiseBeheerTramBewerking.SelectedItem.ToString() == "Voeg toe")
+            if (cbxRemiseBeheerTramBewerking.SelectedItem.ToString() == "Voeg toe")
+            {
+                try
                 {
                     foreach (Tram t in trams)
                     {
                         if (t.Id == Convert.ToInt32(tbxRemiseBeheerTramNummer.Text))
                         {
-                            throw new Exception("Er bestaat al een Tram met dit Tramnummer!");
+                            MessageBox.Show("De tram met dit nummer bestaat al");
+                            return;
                         }
                     }
 
-                    TramType type = (TramType)cbxRemiseBeheerTramType.SelectedItem;
+                    TramType type = cbxRemiseBeheerTramType.SelectedItem as TramType;
                     List<Status> statussen = DataMed.GetAllStatus();
                     Status status = null;
 
@@ -461,29 +492,36 @@ namespace ICT4Rails
                     administratie.AddTram(tram);
                     MessageBox.Show("Tram is toegevoegd!");
                 }
-                else if (cbxRemiseBeheerTramBewerking.SelectedItem.ToString() == "Verwijder")
+                catch(Exception)
                 {
-                    error = "Deze Tram is niet gevonden!";
+                    MessageBox.Show("Er is iets fout gegaan, tram is niet toegevoegd");
+                }
 
+            }
+            else if (cbxRemiseBeheerTramBewerking.SelectedItem.ToString() == "Verwijder")
+            {
+                try
+                {
                     foreach (Tram t in trams)
                     {
                         if (t.Id == Convert.ToInt32(tbxRemiseBeheerTramNummer.Text))
                         {
                             administratie.TramVerwijderen(Convert.ToInt32(tbxRemiseBeheerTramNummer.Text));
-                            error = "";
+                            MessageBox.Show("De tram is succesvol verwijderd");
                             break;
                         }
                     }
-
-                    if (error != "")
-                    {
-                        MessageBox.Show(error);
-                    }
                 }
-                else if (cbxRemiseBeheerTramBewerking.SelectedItem.ToString() == "Bewerk")
+                catch (Exception)
                 {
-                    error = "Er is iets fout gegaan tijdens het bewerken van de tram, de bewerkingen zijn niet toegepast.";
-
+                    MessageBox.Show("Het ingevulde tramnummer is onjuist");
+                }
+                
+            }
+            else if (cbxRemiseBeheerTramBewerking.SelectedItem.ToString() == "Bewerk")
+            {
+                try
+                {
                     foreach (Tram t in trams)
                     {
                         if (t.Id == Convert.ToInt32(tbxRemiseBeheerTramNummer.Text))
@@ -498,29 +536,22 @@ namespace ICT4Rails
                                     break;
                                 }
                             }
-
                             administratie.TramBewerken(Convert.ToInt32(tbxRemiseBeheerTramNummer.Text), type.Naam, "REMISE", tbxRemiseBeheerTramLijn.Text, true);
-                            error = "";
                             break;
                         }
                     }
-
-                    if (error != "")
-                    {
-                        MessageBox.Show(error);
-                    }
                 }
-
-                tbxRemiseBeheerTramNummer.Text = "";
-                tbxRemiseBeheerTramLijn.Text = "";
-                cbxRemiseBeheerTramType.SelectedItem = null;
-            }
-            else
-            {
-                MessageBox.Show("Voer eerst alle velden in.");
+                catch(Exception)
+                {
+                    MessageBox.Show("Er is iets fout gegaan tijdens het bewerken van de tram, de bewerkingen zijn niet toegepast.");
+                }
             }
 
-            administratie.RefreshClass();
+            tbxRemiseBeheerTramNummer.Text = "";
+            tbxRemiseBeheerTramLijn.Text = "";
+            cbxRemiseBeheerTramType.SelectedItem = null;
+
+        administratie.RefreshClass();
         }
 
         private void cbxRemiseBeheerTramBewerking_SelectedIndexChanged(object sender, EventArgs e)
@@ -578,7 +609,7 @@ namespace ICT4Rails
                     {
                         if (s.Spoornummer == Convert.ToInt32(tbxRemiseBeheerSpoorBeheerSpoorNummer.Text))
                         {
-                            administratie.SpoorStatusVeranderen(s.Spoorid ,Convert.ToInt32(tbxRemiseBeheerSpoorBeheerSpoorNummer.Text), Convert.ToInt32(tbxRemiseBeheerSpoorBeheerSectorNummer.Text), false);
+                            administratie.SpoorStatusVeranderen(s.Spoorid, Convert.ToInt32(tbxRemiseBeheerSpoorBeheerSpoorNummer.Text), Convert.ToInt32(tbxRemiseBeheerSpoorBeheerSectorNummer.Text), false);
                             error = "";
                             break;
                         }
@@ -621,38 +652,15 @@ namespace ICT4Rails
             administratie.RefreshClass();
         }
 
-        private void btnBevestigTramStatus_Click(object sender, EventArgs e)
-        {
-            if (!string.IsNullOrWhiteSpace(cbxStatusbeheerTramStatus.Text))
-            {
-                try
-                {
-                    administratie.TramStatusVeranderen(Convert.ToInt32(tbxStatusbeheerTramNummer.Text), cbxStatusbeheerTramStatus.Text);
-                    MessageBox.Show("De status van tram " + tbxStatusbeheerTramNummer.Text + " is veranderd in '" + cbxStatusbeheerTramStatus.Text + "'");                
-                }
-                catch(Exception en)
-                {
-                    MessageBox.Show(en.ToString());
-                    MessageBox.Show("Er is iets fout gegaan: Misschien een fout nummer ingevuld?");
-                }
-                finally
-                {
-                    btnStatusbeheerTramStatus.Enabled = false;
-                    tbxStatusbeheerTramNummer.Text = null;
-                    tbxStatusbeheerHuidigeStatus.Text = null;
-                    cbxStatusbeheerTramStatus.Text = null;
-                    cbxStatusbeheerTramStatus.Enabled = false;
-                }
-            }
-        }
-
         //AccountBeheer
 
-        private void vullMederwerkerList()
+        private void VulLijsten()
         {
             lbAccountMedewerkers.Items.Clear();
             lbAccountGebruiker.Items.Clear();
-            // Haal alle medewerkers op van database
+            lB_RemisebeheerTramlijst.Items.Clear();
+            lB_RemisebeheerSpoorlijst.Items.Clear();
+            // Haal alle gegevens op van database
             foreach (Medewerker medewerker in administratie.Medewerkers)
             {
                 lbAccountMedewerkers.Items.Add(medewerker);
@@ -663,6 +671,15 @@ namespace ICT4Rails
                 lbAccountGebruiker.Items.Add(gebruiker);
             }
 
+            foreach (Tram tram in administratie.Trams)
+            {
+                lB_RemisebeheerTramlijst.Items.Add(tram);
+            }
+
+            foreach (Spoor spoor in administratie.Sporen)
+            {
+                lB_RemisebeheerSpoorlijst.Items.Add(spoor);
+            }
         }
 
         private void btnAccountToevoegen_Click(object sender, EventArgs e)
@@ -685,7 +702,7 @@ namespace ICT4Rails
                             administratie.AddMedewerker(medewerker);
                         }
                         administratie.RefreshClass();
-                        vullMederwerkerList();
+                        VulLijsten();
                         clearTextboxes();
                     }
                     else
@@ -732,7 +749,7 @@ namespace ICT4Rails
                 MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
                 administratie.RefreshClass();
-                vullMederwerkerList();
+                VulLijsten();
                 clearTextboxes();
             }
         }
@@ -774,8 +791,15 @@ namespace ICT4Rails
         {
             if (lbAccountMedewerkers.SelectedItem != null)
             {
+<<<<<<< HEAD
                 inputbox = new InputBox();
                 inputbox.InputBoxVeranderGebruiker(administratie, (Medewerker)lbAccountMedewerkers.SelectedItem, "Verander gegevens");
+=======
+                Gebruiker UpdateGebruiker = new Gebruiker(valueUS, gebruiker.Medewerker_ID, valuePW);
+                administratie.ChangeGebruiker(UpdateGebruiker);
+                administratie.RefreshClass();
+                VulLijsten();
+>>>>>>> origin/master
             }
 
             if (DialogResult.ToString() == "OK")
@@ -803,14 +827,14 @@ namespace ICT4Rails
             tbxAccountStrtNR.Text = "";
             cbAccountFunctie.Text = "";
         }
-       
+
         private void BttnAccountRemoveMedewerker_Click(object sender, EventArgs e)
         {
             if (administratie.FindGebruiker(medewerker.ID) == null)
             {
                 administratie.RemoveMedewerker(medewerker);
                 administratie.RefreshClass();
-                vullMederwerkerList();
+                VulLijsten();
             }
             else
             {
@@ -828,7 +852,7 @@ namespace ICT4Rails
                         administratie.RemoveMedewerker(medewerker);
                     }
                     administratie.RefreshClass();
-                    vullMederwerkerList();
+                    VulLijsten();
                     heeftaccount = false;
                 }
             }
@@ -840,7 +864,7 @@ namespace ICT4Rails
             {
                 administratie.RemoveGebruiker(gebruiker);
                 administratie.RefreshClass();
-                vullMederwerkerList();
+                VulLijsten();
             }
         }
 
@@ -850,59 +874,13 @@ namespace ICT4Rails
             {
                 cbxOnderhoudMedewerker.Items.Add(m);
             }
+            foreach (TramType t in administratie.GetTypes())
+            {
+                cbxRemiseBeheerTramType.Items.Add(t);
+            }
         }
 
-        private void btnOnderhoudBevestig_Click(object sender, EventArgs e)
-        {
-            DateTime starttijd = Convert.ToDateTime(dtpOnderhoudStarttijd.Value);
-            DateTime eindtijd = Convert.ToDateTime(dtpOnderhoudEindtijd.Value);            
-            try
-            {
-                string opmerking = tbxStatusbeheerOnderhoudOpmerking.Text;
 
-                Medewerker m = cbxOnderhoudMedewerker.SelectedItem as Medewerker;
-                string soort = cbxOnderhoudSoort.SelectedItem.ToString();
-                int tramnummer = Convert.ToInt32(tbxStatusbeheerOnderhoudTramnr.Text);
-                //geen schoonmaak voor tram 2x toevoegen, net als reparatie;
-                if (soort == "Schoonmaak")
-                {
-                    foreach (Tram t in administratie.Trams)
-                    {
-                        if (t.Id == tramnummer)
-                        {
-                            if (t.Status.Naam != soort.ToUpper())
-                            {
-                                administratie.AddOnderhoudsbeurt(m, tramnummer, opmerking, soort, starttijd, eindtijd);
-                                administratie.TramStatusVeranderen(tramnummer, soort);
-                                MessageBox.Show("Tram " + tramnummer.ToString() + " heeft nu de status " + soort);
-                            }
-                        }
-                    }
-                }
-                else
-                {
-                    foreach (Tram t in administratie.Trams)
-                    {
-                        if (t.Id == tramnummer)
-                        {
-                            if (t.Status.Naam != soort.ToUpper())
-                            {
-                                administratie.AddOnderhoudsbeurt(m, tramnummer, opmerking, soort, starttijd, eindtijd);
-                                administratie.TramStatusVeranderen(tramnummer, soort);
-                                MessageBox.Show("Tram " + tramnummer.ToString() + " heeft nu de status " + soort);
-                            }
-                        }
-                    }
-                }
-                administratie.TramStatusVeranderen(tramnummer, soort);
-            }
-            catch (FormatException fe)
-            {
-                MessageBox.Show(starttijd.ToString());
-                MessageBox.Show(fe.Message);
-            }
-
-        }
 
         private void btnRemiseBeheerNieuwTypeVoegToe_Click(object sender, EventArgs e)
         {
@@ -931,9 +909,10 @@ namespace ICT4Rails
             }
         }
 
-        public void loadComboboxStatusbeheerOnderhoudMedewerker()
+        public void loadListComboboxStatusbeheerOnderhoudMedewerker()
         {
-            if (administratie.GetAllMedewerkers().Count != 0)
+            administratie.RefreshClass();
+            if (administratie.Medewerkers.Count != 0)
             {
                 cbxOnderhoudMedewerker.Items.Clear();
                 foreach (Medewerker m in administratie.GetAllMedewerkers())
@@ -941,32 +920,20 @@ namespace ICT4Rails
                     cbxOnderhoudMedewerker.Items.Add(m);
                 }
             }
-        }
-
-        private void Check_Click(object sender, EventArgs e)
-        {
-            try
+            lB_Onderhoudslijst_historie.Items.Clear();
+            foreach (Onderhoud onderhoud in administratie.Onderhoudslijst)
             {
-                int tramnummer = Convert.ToInt32(tbxStatusbeheerTramNummer.Text);
-                tbxStatusbeheerHuidigeStatus.Text = null;
-                foreach (Tram t in administratie.Trams)
+                lB_Onderhoudslijst_historie.Items.Add(onderhoud);
+            }
+            lB_Onderhoud_Trams.Items.Clear();
+            foreach (Tram tram in administratie.Trams)
+            {
+                if (tram.Status.Naam == "SCHOONMAAK" || tram.Status.Naam == "DEFECT")
                 {
-                    if (tramnummer == t.Id)
-                    {
-                        tbxStatusbeheerHuidigeStatus.Text = t.Status.Naam;
-                        cbxStatusbeheerTramStatus.Enabled = true;
-                        btnStatusbeheerTramStatus.Enabled = true;
-                    }
+                    lB_Onderhoud_Trams.Items.Add(tram);
                 }
-                
             }
-            catch (Exception)
-            {
-                MessageBox.Show("Vul de gegevens correct in");
-            }
-
         }
-
         public void SorteerTram(Tram tram)
         {
             for (int lijn = 0; lijn < Lijnen.Length; lijn++)
@@ -996,7 +963,7 @@ namespace ICT4Rails
                                 Label l = null;
                                 l = Sporen[spoornummer][sector];
 
-                                if (l.Text == "!")
+                                if (l.Text == "")
                                 {
                                     l.Text = Convert.ToString(tram.Id);
                                     return;
@@ -1008,6 +975,171 @@ namespace ICT4Rails
             }
         }
 
+<<<<<<< HEAD
        
+=======
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Check_Click_1(object sender, EventArgs e)
+        {
+            bool gevonden = false;
+            try
+            {
+                int tramnummer = Convert.ToInt32(tbxStatusbeheerTramNummer.Text);
+                tbxStatusbeheerHuidigeStatus.Text = null;
+                foreach (Tram t in administratie.Trams)
+                {
+                    if (tramnummer == t.Id)
+                    {
+                        tbxStatusbeheerHuidigeStatus.Text = t.Status.Naam;
+                        cbxStatusbeheerTramStatus.Enabled = true;
+                        btnStatusbeheerTramStatus.Enabled = true;
+                        gevonden = true;
+                    }
+                }
+
+                if (!gevonden)
+                {
+                    MessageBox.Show("De tram is niet gevonden");
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Vul de gegevens correct in");
+            }
+        }
+
+        private void btnStatusbeheerTramStatus_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(cbxStatusbeheerTramStatus.Text))
+            {
+                try
+                {
+                    administratie.TramStatusVeranderen(Convert.ToInt32(tbxStatusbeheerTramNummer.Text), cbxStatusbeheerTramStatus.Text);
+                    MessageBox.Show("De status van tram " + tbxStatusbeheerTramNummer.Text + " is veranderd in '" + cbxStatusbeheerTramStatus.Text + "'");
+                    btnStatusbeheerTramStatus.Enabled = false;
+                    tbxStatusbeheerTramNummer.Text = null;
+                    tbxStatusbeheerHuidigeStatus.Text = null;
+                    cbxStatusbeheerTramStatus.Text = null;
+                    cbxStatusbeheerTramStatus.Enabled = false;
+                }
+                catch (Exception en)
+                {
+                    MessageBox.Show(en.ToString());
+                    MessageBox.Show("Er is iets fout gegaan: Misschien een fout nummer ingevuld?");
+                }
+            }
+        }
+
+        private void btnOnderhoudBevestig_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                int onderhoudsid = Convert.ToInt32(nUd_Onderhoud_Onderhoudsid.Value);
+                DateTime starttijd = Convert.ToDateTime(dtpOnderhoudStarttijd.Value);
+                DateTime eindtijd = Convert.ToDateTime(dtpOnderhoudEindtijd.Value);
+                Medewerker m = cbxOnderhoudMedewerker.SelectedItem as Medewerker;
+                //geen schoonmaak voor tram 2x toevoegen, net als reparatie;
+
+                foreach (Onderhoud o in administratie.Onderhoudslijst)
+                {
+                    if (o.ID == onderhoudsid)
+                    {
+                        if (o.Tram.Status.Naam == "SCHOONMAAK")
+                        {
+                            administratie.UpdateOnderhoudsbeurt(new Onderhoud(onderhoudsid, m, o.Tram, starttijd, eindtijd, "", "SCHOONMAAK"));
+                        }
+                        if (o.Tram.Status.Naam == "DEFECT")
+                        {
+                            administratie.UpdateOnderhoudsbeurt(new Onderhoud(onderhoudsid, m, o.Tram, starttijd, eindtijd, "", "DEFECT"));
+                        }
+                        administratie.TramStatusVeranderen(o.Tram.Id, "REMISE");
+                        loadListComboboxStatusbeheerOnderhoudMedewerker();
+                        MessageBox.Show("De onderhoud is toegevoegd");
+                    }
+                }
+
+
+                /*
+                if (soort == "SCHOONMAAK")
+                {
+                    foreach (Tram t in administratie.Trams)
+                    {
+                        if (t.Id == tramnummer)
+                        {
+                            if (t.Status.Naam != soort)
+                            {
+                                administratie.AddOnderhoudsbeurt(m, tramnummer, opmerking, soort, starttijd, eindtijd);
+                                administratie.TramStatusVeranderen(tramnummer, soort);
+                                MessageBox.Show("Tram " + tramnummer.ToString() + " heeft nu de status " + soort);
+                                loadListComboboxStatusbeheerOnderhoudMedewerker();
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    foreach (Tram t in administratie.Trams)
+                    {
+                        if (t.Id == tramnummer)
+                        {
+                            if (t.Status.Naam != soort.ToUpper())
+                            {
+                                administratie.AddOnderhoudsbeurt(m, tramnummer, opmerking, soort, starttijd, eindtijd);
+                                administratie.TramStatusVeranderen(tramnummer, soort);
+                                MessageBox.Show("Tram " + tramnummer.ToString() + " heeft nu de status " + soort);
+                            }
+                        }
+                    }
+                }
+                administratie.TramStatusVeranderen(tramnummer, "REMISE");*/
+            }
+
+            catch (Exception fe)
+            {
+                MessageBox.Show(fe.Message);
+            }
+        }
+
+        private void btn_RefreshLists_Click(object sender, EventArgs e)
+        {
+            loadListComboboxStatusbeheerOnderhoudMedewerker();
+        }
+
+<<<<<<< HEAD
+        private void btn_RefreshList2_Click(object sender, EventArgs e)
+        {
+            loadListComboboxStatusbeheerOnderhoudMedewerker();
+        }
+
+        private void btnOnderhoudBevestiging_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string soort = cbxOnderhoudSoort.Text.ToUpper();
+                string opmerking = tB_Statusbeheer_Opmerking.Text;
+                foreach (Tram t in administratie.Trams)
+                {
+                    if (t.Id == Convert.ToInt32(nUd_StatusbeheerTramnummer.Value))
+                    {
+                        administratie.AddOnderhoudsbeurt(new Onderhoud(1, t, soort, opmerking));
+                    }
+                }
+            }
+            catch (Exception en)
+            {
+                MessageBox.Show(en.Message);
+            }
+
+=======
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            VulLijsten();
+>>>>>>> 177423a6ee7ddeffbd050c796a4589639efbed69
+        }
+>>>>>>> origin/master
     }
 }

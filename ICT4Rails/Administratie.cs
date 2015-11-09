@@ -38,6 +38,9 @@ namespace ICT4Rails
         public void RefreshClass()
         {
             Database data = new Database();
+            this.onderhoudslijst = data.GetAllOnderhoud();
+            this.sporen = data.GetAllSporen();
+            this.trams = data.GetAllTrams();
             this.gebruikers = data.GetAllGebruikers();
             this.medewerkers = data.GetAllMedewerkers();
         }
@@ -175,10 +178,23 @@ namespace ICT4Rails
                     throw new Exception("De onderhoudsbeurt bestaat al!");
                 }
             }
-            onderhoudslijst.Add(onderhoudsbeurt);
+            data.InsertOnderhoud(onderhoudsbeurt);
             return true;
         }
 
+        public bool UpdateOnderhoudsbeurt(Onderhoud onderhoudsbeurt)
+        {
+            // bij deze methode wordt er een nieuwe onderhoudsbeurt toegevoegd
+            foreach (Onderhoud Selected_Onderhoudsbeurt in onderhoudslijst)
+            {
+                if (onderhoudsbeurt == Selected_Onderhoudsbeurt)
+                {
+                    throw new Exception("De onderhoudsbeurt bestaat al!");
+                }
+            }
+            data.UpdateOnderhoud(onderhoudsbeurt);
+            return true;
+        }
         public bool RemoveOnderhoudsbeurt(Onderhoud onderhoudsbeurt)
         {
             // bij deze methode wordt er een nieuwe onderhoudsbeurt verwijderd
@@ -217,12 +233,12 @@ namespace ICT4Rails
             data.UpdateSpoor(spoor);
         }
 
-        public bool AddOnderhoudsbeurt(Medewerker medewerker, int tramnummerID, string opmerking, string soort, DateTime starttijd, DateTime eindtijd)
+        public bool AddOnderhoudsbeurt(Medewerker medewerker, Tram tram, string opmerking, string soort, DateTime starttijd, DateTime eindtijd)
         {
             // bij deze methode wordt er een nieuwe onderhoudsbeurt toegevoegd
             //----------------------------------------------------------------------------------
 
-            data.InsertOnderhoud(medewerker, tramnummerID, opmerking, soort, starttijd, eindtijd);
+            data.InsertOnderhoud(new Onderhoud(1,medewerker, tram, starttijd, eindtijd, opmerking, soort));
             return true;
             //----------------------------------------------------------------------------------
         }

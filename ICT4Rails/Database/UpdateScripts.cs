@@ -67,5 +67,25 @@ namespace ICT4Rails
                 }
             }
         }
+
+        public void UpdateOnderhoud(Onderhoud o)
+        {
+            using (OracleConnection connection = Connection)
+            {
+                string starttijd1 = o.Starttijd.Day.ToString("00") + o.Starttijd.Month.ToString("00") + o.Starttijd.Year.ToString("0000") + " " + o.Starttijd.Hour.ToString("00") + ":" + o.Starttijd.Minute.ToString("00");
+                string eindtijd1 = o.Eindtijd.Day.ToString("00") + o.Eindtijd.Month.ToString("00") + o.Eindtijd.Year.ToString("0000") + " " + o.Eindtijd.Hour.ToString("00") + ":" + o.Eindtijd.Minute.ToString("00");
+                string Update = "UPDATE ONDERHOUD SET MedewerkerID =:MEDEWERKERID, TRAMNUMMERID =:TRAMNUMMER, SOORT =:SOORT, STARTTIJD = TO_TIMESTAMP('" + starttijd1 + "','DDMMYYYY HH24:MI'), EINDTIJD = TO_TIMESTAMP('" + eindtijd1 + "','DDMMYYYY HH24:MI') WHERE ID =:id";
+                using (OracleCommand command = new OracleCommand(Update, connection))
+                {
+                    command.Parameters.Add(new OracleParameter("MEDEWERKERID", o.Medewerker.ID));
+                    command.Parameters.Add(new OracleParameter("TRAMNUMMER", o.Tram.Id));
+                    command.Parameters.Add(new OracleParameter("SOORT", o.Soort));
+                    /*command.Parameters.Add(new OracleParameter("STARTTIJD", "TO_TIMESTAMP('"+starttijd1+"','DDMMYYYY HH24:MI')"));
+                    command.Parameters.Add(new OracleParameter("EINDTIJD", "TO_TIMESTAMP('" + eindtijd1 + "','DDMMYYYY HH24:MI')"));*/
+                    command.Parameters.Add(new OracleParameter("id", o.ID));
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
     }
 }

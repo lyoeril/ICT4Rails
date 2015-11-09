@@ -21,35 +21,47 @@ namespace ICT4Rails
                 );
         }
 
-        private Onderhoud CreateOnderhoudFromReader(OracleDataReader reader)
+        private Onderhoud CreateOnderhoudFromReader(OracleDataReader reader, List<Tram> trams, List<Medewerker> medewerkers)
         {
+            
             int id = Convert.ToInt32(reader["ID"]);
-            int medewerker = Convert.ToInt32(reader["MedewerkerID"]);
+            var medewerkerid = reader["MedewerkerID"];
             int tram = Convert.ToInt32(reader["TramnummerID"]);
-            DateTime starttijd = Convert.ToDateTime(reader["Starttijd"]);
-            DateTime eindtijd = Convert.ToDateTime(reader["Eindtijd"]);
-            string opmerking = Convert.ToString(reader["Opmerking"]);
             string soort = Convert.ToString(reader["Soort"]);
-
+            string opmerking = Convert.ToString(reader["Opmerking"]);
             Medewerker me = null;
             Tram tr = null;
-            Administratie a = new Administratie();
-            foreach (Medewerker m in a.Medewerkers)
-            {
-                if (m.ID == medewerker)
-                {
-                    me = m;
-                }
-            }
-            foreach (Tram t in a.Trams)
+            foreach (Tram t in trams)
             {
                 if (t.Id == tram)
                 {
                     tr = t; ;
                 }
             }
+            Onderhoud onderhoud;
+            
+            if(medewerkerid == null)
+            {
+                DateTime starttijd = Convert.ToDateTime( reader["Starttijd"]);
+                DateTime eindtijd = Convert.ToDateTime( reader["Eindtijd"]);
+                
+                foreach (Medewerker m in medewerkers)
+                {
+                    int medewerker = Convert.ToInt32(medewerkerid);
+                    if (m.ID == medewerker)
+                    {
+                        me = m;
+                    }
+                }
 
-            Onderhoud onderhoud = new Onderhoud(id, me, tr, starttijd, eindtijd, opmerking, soort);
+
+                onderhoud = new Onderhoud(id, me, tr, starttijd, eindtijd, opmerking, soort);
+            }
+            else
+            {
+                onderhoud = new Onderhoud(id, tr, soort, opmerking);
+            }
+            
             return onderhoud;
         }
 
