@@ -62,9 +62,11 @@ namespace ICT4Rails
                 {
                     using (OracleDataReader reader = command.ExecuteReader())
                     {
+                        List<Tram> trams = GetAllTrams();
+                        List<Medewerker> medewerkers = GetAllMedewerkers();
                         while (reader.Read())
                         {
-                            Onderhoudslijst.Add(CreateOnderhoudFromReader(reader));
+                            Onderhoudslijst.Add(CreateOnderhoudFromReader(reader, trams,medewerkers));
                         }
                     }
                 }

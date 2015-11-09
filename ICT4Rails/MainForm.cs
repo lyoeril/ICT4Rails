@@ -308,7 +308,6 @@ namespace ICT4Rails
                                         tbxRemiseBeheerSpoorBeheerSectorNummer.Text = Convert.ToString(sector);
                                         tbxRemiseBeheerSpoorBeheerTramNummer.Text = Convert.ToString(t.Id);
                                         tbxStatusbeheerTramNummer.Text = Convert.ToString(t.Id);
-                                        tbxStatusbeheerOnderhoudTramnr.Text = Convert.ToString(t.Id);
 
                                         cbxRemiseBeheerTramType.DataSource = DataMed.GetAllTramtypes();
                                     }
@@ -979,6 +978,7 @@ namespace ICT4Rails
 
         private void Check_Click_1(object sender, EventArgs e)
         {
+            bool gevonden = false;
             try
             {
                 int tramnummer = Convert.ToInt32(tbxStatusbeheerTramNummer.Text);
@@ -990,9 +990,14 @@ namespace ICT4Rails
                         tbxStatusbeheerHuidigeStatus.Text = t.Status.Naam;
                         cbxStatusbeheerTramStatus.Enabled = true;
                         btnStatusbeheerTramStatus.Enabled = true;
+                        gevonden = true;
                     }
                 }
 
+                if (!gevonden)
+                {
+                    MessageBox.Show("De tram is niet gevonden");
+                }
             }
             catch (Exception)
             {
@@ -1008,50 +1013,43 @@ namespace ICT4Rails
                 {
                     administratie.TramStatusVeranderen(Convert.ToInt32(tbxStatusbeheerTramNummer.Text), cbxStatusbeheerTramStatus.Text);
                     MessageBox.Show("De status van tram " + tbxStatusbeheerTramNummer.Text + " is veranderd in '" + cbxStatusbeheerTramStatus.Text + "'");
-                }
-                catch (Exception en)
-                {
-                    MessageBox.Show(en.ToString());
-                    MessageBox.Show("Er is iets fout gegaan: Misschien een fout nummer ingevuld?");
-                }
-                finally
-                {
                     btnStatusbeheerTramStatus.Enabled = false;
                     tbxStatusbeheerTramNummer.Text = null;
                     tbxStatusbeheerHuidigeStatus.Text = null;
                     cbxStatusbeheerTramStatus.Text = null;
                     cbxStatusbeheerTramStatus.Enabled = false;
                 }
+                catch (Exception en)
+                {
+                    MessageBox.Show(en.ToString());
+                    MessageBox.Show("Er is iets fout gegaan: Misschien een fout nummer ingevuld?");
+                }
             }
         }
 
         private void btnOnderhoudBevestig_Click_1(object sender, EventArgs e)
         {
-            DateTime starttijd = Convert.ToDateTime(dtpOnderhoudStarttijd.Value);
-            DateTime eindtijd = Convert.ToDateTime(dtpOnderhoudEindtijd.Value);
             try
             {
-                string opmerking = tbxStatusbeheerOnderhoudOpmerking.Text;
-
+                int onderhoudsid = Convert.ToInt32(nUd_Onderhoud_Onderhoudsid.Value);
+                DateTime starttijd = Convert.ToDateTime(dtpOnderhoudStarttijd.Value);
+                DateTime eindtijd = Convert.ToDateTime(dtpOnderhoudEindtijd.Value);
                 Medewerker m = cbxOnderhoudMedewerker.SelectedItem as Medewerker;
-                int tramnummer = Convert.ToInt32(tbxStatusbeheerOnderhoudTramnr.Text);
                 //geen schoonmaak voor tram 2x toevoegen, net als reparatie;
 
-
-
-                foreach (Tram t in administratie.Trams)
+                foreach (Onderhoud o in administratie.Onderhoudslijst)
                 {
-                    if (t.Id == tramnummer)
+                    if (o.ID == onderhoudsid)
                     {
-                        if (t.Status.Naam == "SCHOONMAAK")
+                        if (o.Tram.Status.Naam == "SCHOONMAAK")
                         {
-                            administratie.AddOnderhoudsbeurt(new Onderhoud(0,m,t,starttijd,eindtijd,opmerking,"SCHOONMAAK"));                        
+                            administratie.UpdateOnderhoudsbeurt(new Onderhoud(onderhoudsid, m, o.Tram, starttijd, eindtijd, "", "SCHOONMAAK"));
                         }
-                        if (t.Status.Naam == "DEFECT")
+                        if (o.Tram.Status.Naam == "DEFECT")
                         {
-                            administratie.AddOnderhoudsbeurt(new Onderhoud(0, m, t, starttijd, eindtijd, opmerking, "DEFECT"));
+                            administratie.UpdateOnderhoudsbeurt(new Onderhoud(onderhoudsid, m, o.Tram, starttijd, eindtijd, "", "DEFECT"));
                         }
-                        administratie.TramStatusVeranderen(tramnummer, "REMISE");
+                        administratie.TramStatusVeranderen(o.Tram.Id, "REMISE");
                         loadListComboboxStatusbeheerOnderhoudMedewerker();
                         MessageBox.Show("De onderhoud is toegevoegd");
                     }
@@ -1092,17 +1090,42 @@ namespace ICT4Rails
                 }
                 administratie.TramStatusVeranderen(tramnummer, "REMISE");*/
             }
-            catch (FormatException fe)
+
+            catch (Exception fe)
             {
-                MessageBox.Show(starttijd.ToString());
                 MessageBox.Show(fe.Message);
             }
         }
 
         private void btn_RefreshLists_Click(object sender, EventArgs e)
         {
-            administratie.RefreshClass();
             loadListComboboxStatusbeheerOnderhoudMedewerker();
+        }
+
+        private void btn_RefreshList2_Click(object sender, EventArgs e)
+        {
+            loadListComboboxStatusbeheerOnderhoudMedewerker();
+        }
+
+        private void btnOnderhoudBevestiging_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string soort = cbxOnderhoudSoort.Text.ToUpper();
+                string opmerking = tB_Statusbeheer_Opmerking.Text;
+                foreach (Tram t in administratie.Trams)
+                {
+                    if (t.Id == Convert.ToInt32(nUd_StatusbeheerTramnummer.Value))
+                    {
+                        administratie.AddOnderhoudsbeurt(new Onderhoud(1, t, soort, opmerking));
+                    }
+                }
+            }
+            catch (Exception en)
+            {
+                MessageBox.Show(en.Message);
+            }
+
         }
     }
 }

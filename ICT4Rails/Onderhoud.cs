@@ -19,7 +19,7 @@ namespace ICT4Rails
         public int ID { get { return id; } }
         public Medewerker Medewerker { get { return medewerker; } }
         public Tram Tram { get { return tram; } }
-        public DateTime Starttijd { get { return Starttijd; } }
+        public DateTime Starttijd { get { return starttijd; } }
         public DateTime Eindtijd { get { return eindtijd; } }
         public string Opmerking { get { return opmerking; } }
         public string Soort { get { return soort; } }
@@ -33,6 +33,14 @@ namespace ICT4Rails
             this.eindtijd = eindtijd;
             this.opmerking = opmerking;
             this.soort = soort;
+        }
+
+        public Onderhoud(int id, Tram tram, string soort, string opmerking)
+        {
+            this.id = id;
+            this.tram = tram;
+            this.soort = soort;
+            this.opmerking = opmerking;
         }
 
         public override string ToString()
