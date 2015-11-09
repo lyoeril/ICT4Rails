@@ -11,7 +11,7 @@ using System.Windows;
 using System.Text.RegularExpressions;
 using Phidgets;
 using Phidgets.Events;
-using Oracle.ManagedDataAccess.Client;
+
 
 namespace ICT4Rails
 {
@@ -24,6 +24,7 @@ namespace ICT4Rails
 
         private Database DataMed = new Database();
         private Administratie administratie;
+        private InputBox inputbox;
         private int MedID;
         private Medewerker medewerker;
         private Gebruiker gebruiker;
@@ -126,7 +127,6 @@ namespace ICT4Rails
                         tabcontrolRemise.TabPages.Insert(2, tabpageStatusBeheer);
                         tabcontrolRemise.TabPages.Insert(3, tabpageAccountBeheer);
                         tabcontrolRemise.TabPages.Insert(4, tabPageSchoonmaak);
-                        tabcontrolRemise.TabPages.Insert(5, tabPageReparatie);
                     }
                     else if (medewerker.Functie == "REPARATEUR")
                     {
@@ -135,7 +135,6 @@ namespace ICT4Rails
                         tabcontrolRemise.TabPages.Insert(0, tabpageStatusBeheer);
                         tabcontrolRemise.TabPages.Remove(tabpageAccountBeheer);
                         tabcontrolRemise.TabPages.Remove(tabPageSchoonmaak);
-                        tabcontrolRemise.TabPages.Insert(1, tabPageReparatie);
                     }
                     else if (medewerker.Functie == "SCHOONMAAK")
                     {
@@ -144,7 +143,6 @@ namespace ICT4Rails
                         tabcontrolRemise.TabPages.Remove(tabpageStatusBeheer);
                         tabcontrolRemise.TabPages.Remove(tabpageAccountBeheer);
                         tabcontrolRemise.TabPages.Insert(0, tabPageSchoonmaak);
-                        tabcontrolRemise.TabPages.Remove(tabPageReparatie);
                     }
                     else if (medewerker.Functie == "WAGENPARKBEHEERDER")
                     {
@@ -153,7 +151,6 @@ namespace ICT4Rails
                         tabcontrolRemise.TabPages.Insert(2, tabpageStatusBeheer);
                         tabcontrolRemise.TabPages.Remove(tabpageAccountBeheer);
                         tabcontrolRemise.TabPages.Remove(tabPageSchoonmaak);
-                        tabcontrolRemise.TabPages.Remove(tabPageReparatie);
                     }
                     else
                     {
@@ -162,7 +159,6 @@ namespace ICT4Rails
                         tabcontrolRemise.TabPages.Remove(tabpageStatusBeheer);
                         tabcontrolRemise.TabPages.Remove(tabpageAccountBeheer);
                         tabcontrolRemise.TabPages.Insert(0, tabPageSchoonmaak);
-                        tabcontrolRemise.TabPages.Remove(tabPageReparatie);
                     }
                 }
 
@@ -745,16 +741,8 @@ namespace ICT4Rails
         {
             if (lbAccountMedewerkers.SelectedItem != null)
             {
-                Medewerker medewerker = lbAccountMedewerkers.SelectedItem as Medewerker;
                 medewerker = lbAccountMedewerkers.SelectedItem as Medewerker;
-                MedID = medewerker.ID;
-                enableButtons();
-
-                if (administratie.FindGebruiker(medewerker.ID) != null)
-                {
-                    gebruiker = administratie.FindGebruiker(medewerker.ID);
-                    heeftaccount = true;
-                }
+                btnAccountGebrkerverw.Enabled = true;
             }
         }
 
@@ -769,79 +757,36 @@ namespace ICT4Rails
 
         private void lbAccountGebruiker_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            string grbNaam = gebruiker.GebruikersNaam;
-            string gbrWachtwoord = gebruiker.Wachtwoord;
-            InputBoxVeranderGebruiker(gebruiker, "Verander gegevens", ref grbNaam, ref gbrWachtwoord);
+            if (lbAccountGebruiker.SelectedItem != null)
+            {
+                inputbox = new InputBox();
+                inputbox.InputBoxVeranderGebruiker(administratie, (Gebruiker)lbAccountGebruiker.SelectedItem, "Verander gegevens");
+            }
+            
+            if (DialogResult.ToString() == "OK")
+            {
+                MessageBox.Show("Gebruiker is aangepast.");
+                vullMederwerkerList();
+            }
+        }
+
+        private void lbAccountMedewerkers_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (lbAccountMedewerkers.SelectedItem != null)
+            {
+                inputbox = new InputBox();
+                inputbox.InputBoxVeranderGebruiker(administratie, (Medewerker)lbAccountMedewerkers.SelectedItem, "Verander gegevens");
+            }
 
             if (DialogResult.ToString() == "OK")
             {
                 MessageBox.Show("Account is aangepast.");
-            }
-        }
-
-        public DialogResult InputBoxVeranderGebruiker(Gebruiker gebruiker, string title, ref string valueUS, ref string valuePW)
-        {
-            Form form = new Form();
-            Label label = new Label();
-            Label label1 = new Label();
-            TextBox textBox = new TextBox();
-            TextBox textBox2 = new TextBox();
-            Button buttonOk = new Button();
-            Button buttonCancel = new Button();
-
-            form.Text = title;
-            label.Text = "Gebruikersnaam:";
-            label1.Text = "Wachtwoord:";
-            textBox.Text = valueUS;
-            textBox2.Text = valuePW;
-
-            buttonOk.Text = "OK";
-            buttonCancel.Text = "Cancel";
-            buttonOk.DialogResult = DialogResult.OK;
-            buttonCancel.DialogResult = DialogResult.Cancel;
-
-            label.SetBounds(9, 20, 372, 13);
-            textBox.SetBounds(12, 36, 372, 20);
-            label1.SetBounds(12, 60, 372, 13);
-            textBox2.SetBounds(12, 74, 372, 20);
-            buttonOk.SetBounds(228, 105, 75, 23);
-            buttonCancel.SetBounds(309, 105, 75, 23);
-
-            label.AutoSize = true;
-            label1.AutoSize = true;
-            textBox.Anchor = textBox.Anchor | AnchorStyles.Right;
-            textBox2.Anchor = textBox2.Anchor | AnchorStyles.Right;
-            buttonOk.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            buttonCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-
-            form.ClientSize = new Size(396, 140);
-            form.Controls.AddRange(new Control[] { label, label1, textBox, textBox2, buttonOk, buttonCancel });
-            form.ClientSize = new Size(Math.Max(300, label.Right + 10), form.ClientSize.Height);
-            form.FormBorderStyle = FormBorderStyle.FixedDialog;
-            form.StartPosition = FormStartPosition.CenterScreen;
-            form.MinimizeBox = false;
-            form.MaximizeBox = false;
-            form.AcceptButton = buttonOk;
-            form.CancelButton = buttonCancel;
-
-            DialogResult dialogResult = form.ShowDialog();
-            valueUS = textBox.Text;
-            valuePW = textBox2.Text;
-
-            try
-            {
-                Gebruiker UpdateGebruiker = new Gebruiker(valueUS, gebruiker.Medewerker_ID, valuePW);
-                administratie.ChangeGebruiker(UpdateGebruiker);
-                administratie.RefreshClass();
                 vullMederwerkerList();
             }
-
-            catch (OracleException e)
-            {
-                MessageBox.Show(e.Message);
-            }
-            return dialogResult;
+            
         }
+
+        
 
         private void enableButtons()
         {
@@ -1061,6 +1006,8 @@ namespace ICT4Rails
                     }
                 }
             }
-        }       
+        }
+
+       
     }
 }

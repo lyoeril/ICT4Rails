@@ -65,6 +65,7 @@
     <Compile Include="Database\RemoveScripts.cs" />
     <Compile Include="Database\UpdateScripts.cs" />
     <Compile Include="Gebruiker.cs" />
+    <Compile Include="InputBox.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
