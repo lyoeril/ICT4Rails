@@ -1129,7 +1129,7 @@ namespace ICT4Rails
             loadListComboboxStatusbeheerOnderhoudMedewerker();
         }
 
-<<<<<<< HEAD
+
         private void btn_RefreshList2_Click(object sender, EventArgs e)
         {
             loadListComboboxStatusbeheerOnderhoudMedewerker();
@@ -1153,12 +1153,12 @@ namespace ICT4Rails
             {
                 MessageBox.Show(en.Message);
             }
+        }
 
-=======
         private void MainForm_Load(object sender, EventArgs e)
         {
             VulLijsten();
->>>>>>> 177423a6ee7ddeffbd050c796a4589639efbed69
+
         }
     }
 }
