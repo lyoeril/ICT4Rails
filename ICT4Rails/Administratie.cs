@@ -38,6 +38,9 @@ namespace ICT4Rails
         public void RefreshClass()
         {
             Database data = new Database();
+            this.onderhoudslijst = data.GetAllOnderhoud();
+            this.sporen = data.GetAllSporen();
+            this.trams = data.GetAllTrams();
             this.gebruikers = data.GetAllGebruikers();
             this.medewerkers = data.GetAllMedewerkers();
         }
