@@ -135,7 +135,7 @@
             this.tabcontrolRemise.Controls.Add(this.tabpageAccountBeheer);
             this.tabcontrolRemise.Controls.Add(this.tabpageOnderhoud);
             this.tabcontrolRemise.Location = new System.Drawing.Point(16, 15);
-            this.tabcontrolRemise.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabcontrolRemise.Margin = new System.Windows.Forms.Padding(4);
             this.tabcontrolRemise.Name = "tabcontrolRemise";
             this.tabcontrolRemise.SelectedIndex = 0;
             this.tabcontrolRemise.Size = new System.Drawing.Size(1892, 971);
@@ -145,9 +145,9 @@
             // 
             this.tabpageRemiseOverzicht.Controls.Add(this.tableLayoutPanel1);
             this.tabpageRemiseOverzicht.Location = new System.Drawing.Point(4, 25);
-            this.tabpageRemiseOverzicht.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabpageRemiseOverzicht.Margin = new System.Windows.Forms.Padding(4);
             this.tabpageRemiseOverzicht.Name = "tabpageRemiseOverzicht";
-            this.tabpageRemiseOverzicht.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabpageRemiseOverzicht.Padding = new System.Windows.Forms.Padding(4);
             this.tabpageRemiseOverzicht.Size = new System.Drawing.Size(1884, 942);
             this.tabpageRemiseOverzicht.TabIndex = 0;
             this.tabpageRemiseOverzicht.Text = "Remise Overzicht";
@@ -204,7 +204,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.347826F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1867, 927);
             this.tableLayoutPanel1.TabIndex = 0;
-            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // tabpageRemiseBeheer
             // 
@@ -1114,7 +1113,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1776, 734);
             this.Controls.Add(this.tabcontrolRemise);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
             this.Text = "Remisesysteem";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

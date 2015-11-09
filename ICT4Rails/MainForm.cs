@@ -210,8 +210,6 @@ namespace ICT4Rails
                 }
             }
 
-
-
             // Geeft alle spoor labels de correcte text
             foreach (Label l in tableLayoutPanel1.Controls)
             {
@@ -400,19 +398,32 @@ namespace ICT4Rails
             Rectangle r = e.CellBounds;
             for (int spoor = 0; spoor < Sporen.Length; spoor++)
             {
-                if (Sporen[spoor] != null && Sporen[spoor][0] != null)
+                if (Sporen[spoor] != null)
                 {
-                    Label l = Sporen[spoor][0];
-                    if (e.Row == tableLayoutPanel1.GetRow(l) && e.Column == tableLayoutPanel1.GetColumn(l))
+                    for (int sector = 0; sector < Sporen[spoor].Length; sector++)
                     {
-                        if (l.Text == "1") { g.FillRectangle(Brushes.LightGreen, r); }
-                        else if (l.Text == "2") { g.FillRectangle(Brushes.Yellow, r); }
-                        else if (l.Text == "5") { g.FillRectangle(Brushes.MediumPurple, r); }
-                        else if (l.Text == "10") { g.FillRectangle(Brushes.LightGray, r); }
-                        else if (l.Text == "13") { g.FillRectangle(Brushes.Blue, r); }
-                        else if (l.Text == "17") { g.FillRectangle(Brushes.Red, r); }
-                        else if (l.Text == "16/24") { g.FillRectangle(Brushes.DarkRed, r); }
-                        else if (l.Text == "OCV" || l.Text == "") { g.FillRectangle(Brushes.Pink, r); }
+                        if (Sporen[spoor][sector] != null)
+                        {
+                            Label l = Sporen[spoor][sector];
+                            if (e.Row == tableLayoutPanel1.GetRow(l) && e.Column == tableLayoutPanel1.GetColumn(l))
+                            {
+                                if (sector == 0)
+                                {
+                                    if (l.Text == "1") { g.FillRectangle(Brushes.LightGreen, r); }
+                                    else if (l.Text == "2") { g.FillRectangle(Brushes.Yellow, r); }
+                                    else if (l.Text == "5") { g.FillRectangle(Brushes.MediumPurple, r); }
+                                    else if (l.Text == "10") { g.FillRectangle(Brushes.Gray, r); }
+                                    else if (l.Text == "13") { g.FillRectangle(Brushes.Blue, r); }
+                                    else if (l.Text == "17") { g.FillRectangle(Brushes.Red, r); }
+                                    else if (l.Text == "16/24") { g.FillRectangle(Brushes.DarkRed, r); }
+                                    else if (l.Text == "OCV" || l.Text == "") { g.FillRectangle(Brushes.Pink, r); }
+                                }
+                                else
+                                {
+                                    g.FillRectangle(Brushes.LightGray, r);
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -1046,7 +1057,7 @@ namespace ICT4Rails
                                 Label l = null;
                                 l = Sporen[spoornummer][sector];
 
-                                if (l.Text == "!")
+                                if (l.Text == "")
                                 {
                                     l.Text = Convert.ToString(tram.Id);
                                     return;
@@ -1056,11 +1067,6 @@ namespace ICT4Rails
                     }
                 }
             }
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
