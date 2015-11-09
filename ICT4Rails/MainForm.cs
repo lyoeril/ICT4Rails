@@ -1126,5 +1126,10 @@ namespace ICT4Rails
             administratie.RefreshClass();
             loadListComboboxStatusbeheerOnderhoudMedewerker();
         }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            VulLijsten();
+        }
     }
 }
