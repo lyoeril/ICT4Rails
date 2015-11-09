@@ -1045,11 +1045,11 @@ namespace ICT4Rails
                     {
                         if (t.Status.Naam == "SCHOONMAAK")
                         {
-                            administratie.AddOnderhoudsbeurt(m, tramnummer, opmerking, "SCHOONMAAK", starttijd, eindtijd);                        
+                            administratie.AddOnderhoudsbeurt(new Onderhoud(0,m,t,starttijd,eindtijd,opmerking,"SCHOONMAAK"));                        
                         }
                         if (t.Status.Naam == "DEFECT")
                         {
-                            administratie.AddOnderhoudsbeurt(m, tramnummer, opmerking, "DEFECT", starttijd, eindtijd);
+                            administratie.AddOnderhoudsbeurt(new Onderhoud(0, m, t, starttijd, eindtijd, opmerking, "DEFECT"));
                         }
                         administratie.TramStatusVeranderen(tramnummer, "REMISE");
                         loadListComboboxStatusbeheerOnderhoudMedewerker();
@@ -1089,14 +1089,20 @@ namespace ICT4Rails
                             }
                         }
                     }
-                }*/
-                administratie.TramStatusVeranderen(tramnummer, "REMISE");
+                }
+                administratie.TramStatusVeranderen(tramnummer, "REMISE");*/
             }
             catch (FormatException fe)
             {
                 MessageBox.Show(starttijd.ToString());
                 MessageBox.Show(fe.Message);
             }
+        }
+
+        private void btn_RefreshLists_Click(object sender, EventArgs e)
+        {
+            administratie.RefreshClass();
+            loadListComboboxStatusbeheerOnderhoudMedewerker();
         }
     }
 }

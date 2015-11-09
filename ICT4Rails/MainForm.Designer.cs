@@ -112,6 +112,9 @@
             this.cbxOnderhoudMedewerker = new System.Windows.Forms.ComboBox();
             this.lblOnderhoudTramnummer = new System.Windows.Forms.Label();
             this.tbxStatusbeheerOnderhoudTramnr = new System.Windows.Forms.TextBox();
+            this.btn_RefreshLists = new System.Windows.Forms.Button();
+            this.lB_RemisebeheerTramlijst = new System.Windows.Forms.ListBox();
+            this.lB_RemisebeheerSpoorlijst = new System.Windows.Forms.ListBox();
             this.tabcontrolRemise.SuspendLayout();
             this.tabpageRemiseOverzicht.SuspendLayout();
             this.tabpageRemiseBeheer.SuspendLayout();
@@ -207,6 +210,8 @@
             // 
             // tabpageRemiseBeheer
             // 
+            this.tabpageRemiseBeheer.Controls.Add(this.lB_RemisebeheerSpoorlijst);
+            this.tabpageRemiseBeheer.Controls.Add(this.lB_RemisebeheerTramlijst);
             this.tabpageRemiseBeheer.Controls.Add(this.grbRemiseBeheerSpoorBeheer);
             this.tabpageRemiseBeheer.Controls.Add(this.grbRemiseBeheerNieuwType);
             this.tabpageRemiseBeheer.Controls.Add(this.grbRemiseBeheerTramBeheer);
@@ -978,19 +983,20 @@
             this.lB_Onderhoud_Trams.FormattingEnabled = true;
             this.lB_Onderhoud_Trams.Location = new System.Drawing.Point(5, 120);
             this.lB_Onderhoud_Trams.Name = "lB_Onderhoud_Trams";
-            this.lB_Onderhoud_Trams.Size = new System.Drawing.Size(954, 407);
+            this.lB_Onderhoud_Trams.Size = new System.Drawing.Size(800, 407);
             this.lB_Onderhoud_Trams.TabIndex = 4;
             // 
             // lB_Onderhoudslijst_historie
             // 
             this.lB_Onderhoudslijst_historie.FormattingEnabled = true;
-            this.lB_Onderhoudslijst_historie.Location = new System.Drawing.Point(965, 3);
+            this.lB_Onderhoudslijst_historie.Location = new System.Drawing.Point(811, 10);
             this.lB_Onderhoudslijst_historie.Name = "lB_Onderhoudslijst_historie";
-            this.lB_Onderhoudslijst_historie.Size = new System.Drawing.Size(441, 524);
+            this.lB_Onderhoudslijst_historie.Size = new System.Drawing.Size(595, 524);
             this.lB_Onderhoudslijst_historie.TabIndex = 3;
             // 
             // grbTramOnderhoud
             // 
+            this.grbTramOnderhoud.Controls.Add(this.btn_RefreshLists);
             this.grbTramOnderhoud.Controls.Add(this.tbxStatusbeheerOnderhoudOpmerking);
             this.grbTramOnderhoud.Controls.Add(this.lblOnderhoudOpmerking);
             this.grbTramOnderhoud.Controls.Add(this.btnOnderhoudBevestig);
@@ -1006,14 +1012,14 @@
             this.grbTramOnderhoud.Margin = new System.Windows.Forms.Padding(2);
             this.grbTramOnderhoud.Name = "grbTramOnderhoud";
             this.grbTramOnderhoud.Padding = new System.Windows.Forms.Padding(2);
-            this.grbTramOnderhoud.Size = new System.Drawing.Size(956, 110);
+            this.grbTramOnderhoud.Size = new System.Drawing.Size(801, 110);
             this.grbTramOnderhoud.TabIndex = 2;
             this.grbTramOnderhoud.TabStop = false;
             this.grbTramOnderhoud.Text = "Onderhoud";
             // 
             // tbxStatusbeheerOnderhoudOpmerking
             // 
-            this.tbxStatusbeheerOnderhoudOpmerking.Location = new System.Drawing.Point(759, 25);
+            this.tbxStatusbeheerOnderhoudOpmerking.Location = new System.Drawing.Point(603, 29);
             this.tbxStatusbeheerOnderhoudOpmerking.Margin = new System.Windows.Forms.Padding(2);
             this.tbxStatusbeheerOnderhoudOpmerking.Multiline = true;
             this.tbxStatusbeheerOnderhoudOpmerking.Name = "tbxStatusbeheerOnderhoudOpmerking";
@@ -1023,7 +1029,7 @@
             // lblOnderhoudOpmerking
             // 
             this.lblOnderhoudOpmerking.AutoSize = true;
-            this.lblOnderhoudOpmerking.Location = new System.Drawing.Point(694, 28);
+            this.lblOnderhoudOpmerking.Location = new System.Drawing.Point(538, 32);
             this.lblOnderhoudOpmerking.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblOnderhoudOpmerking.Name = "lblOnderhoudOpmerking";
             this.lblOnderhoudOpmerking.Size = new System.Drawing.Size(61, 13);
@@ -1032,7 +1038,7 @@
             // 
             // btnOnderhoudBevestig
             // 
-            this.btnOnderhoudBevestig.Location = new System.Drawing.Point(885, 76);
+            this.btnOnderhoudBevestig.Location = new System.Drawing.Point(729, 80);
             this.btnOnderhoudBevestig.Margin = new System.Windows.Forms.Padding(2);
             this.btnOnderhoudBevestig.Name = "btnOnderhoudBevestig";
             this.btnOnderhoudBevestig.Size = new System.Drawing.Size(62, 22);
@@ -1045,7 +1051,7 @@
             // 
             this.dtpOnderhoudEindtijd.CustomFormat = "dd-MM-yyyy HH:mm";
             this.dtpOnderhoudEindtijd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpOnderhoudEindtijd.Location = new System.Drawing.Point(559, 52);
+            this.dtpOnderhoudEindtijd.Location = new System.Drawing.Point(403, 53);
             this.dtpOnderhoudEindtijd.Margin = new System.Windows.Forms.Padding(2);
             this.dtpOnderhoudEindtijd.Name = "dtpOnderhoudEindtijd";
             this.dtpOnderhoudEindtijd.Size = new System.Drawing.Size(131, 20);
@@ -1054,7 +1060,7 @@
             // lblOnderhoudEindtijd
             // 
             this.lblOnderhoudEindtijd.AutoSize = true;
-            this.lblOnderhoudEindtijd.Location = new System.Drawing.Point(453, 54);
+            this.lblOnderhoudEindtijd.Location = new System.Drawing.Point(297, 55);
             this.lblOnderhoudEindtijd.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblOnderhoudEindtijd.Name = "lblOnderhoudEindtijd";
             this.lblOnderhoudEindtijd.Size = new System.Drawing.Size(102, 13);
@@ -1065,7 +1071,7 @@
             // 
             this.dtpOnderhoudStarttijd.CustomFormat = "dd-MM-yyyy HH:mm";
             this.dtpOnderhoudStarttijd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpOnderhoudStarttijd.Location = new System.Drawing.Point(559, 28);
+            this.dtpOnderhoudStarttijd.Location = new System.Drawing.Point(403, 29);
             this.dtpOnderhoudStarttijd.Margin = new System.Windows.Forms.Padding(2);
             this.dtpOnderhoudStarttijd.Name = "dtpOnderhoudStarttijd";
             this.dtpOnderhoudStarttijd.Size = new System.Drawing.Size(131, 20);
@@ -1074,7 +1080,7 @@
             // lblOnderhoudStarttijd
             // 
             this.lblOnderhoudStarttijd.AutoSize = true;
-            this.lblOnderhoudStarttijd.Location = new System.Drawing.Point(506, 32);
+            this.lblOnderhoudStarttijd.Location = new System.Drawing.Point(350, 33);
             this.lblOnderhoudStarttijd.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblOnderhoudStarttijd.Name = "lblOnderhoudStarttijd";
             this.lblOnderhoudStarttijd.Size = new System.Drawing.Size(49, 13);
@@ -1084,7 +1090,7 @@
             // lblOnderhoudMedewerker
             // 
             this.lblOnderhoudMedewerker.AutoSize = true;
-            this.lblOnderhoudMedewerker.Location = new System.Drawing.Point(313, 32);
+            this.lblOnderhoudMedewerker.Location = new System.Drawing.Point(157, 33);
             this.lblOnderhoudMedewerker.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblOnderhoudMedewerker.Name = "lblOnderhoudMedewerker";
             this.lblOnderhoudMedewerker.Size = new System.Drawing.Size(69, 13);
@@ -1095,7 +1101,7 @@
             // 
             this.cbxOnderhoudMedewerker.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxOnderhoudMedewerker.FormattingEnabled = true;
-            this.cbxOnderhoudMedewerker.Location = new System.Drawing.Point(386, 28);
+            this.cbxOnderhoudMedewerker.Location = new System.Drawing.Point(230, 29);
             this.cbxOnderhoudMedewerker.Margin = new System.Windows.Forms.Padding(2);
             this.cbxOnderhoudMedewerker.Name = "cbxOnderhoudMedewerker";
             this.cbxOnderhoudMedewerker.Size = new System.Drawing.Size(116, 21);
@@ -1118,6 +1124,32 @@
             this.tbxStatusbeheerOnderhoudTramnr.Name = "tbxStatusbeheerOnderhoudTramnr";
             this.tbxStatusbeheerOnderhoudTramnr.Size = new System.Drawing.Size(67, 20);
             this.tbxStatusbeheerOnderhoudTramnr.TabIndex = 2;
+            // 
+            // btn_RefreshLists
+            // 
+            this.btn_RefreshLists.Location = new System.Drawing.Point(639, 80);
+            this.btn_RefreshLists.Name = "btn_RefreshLists";
+            this.btn_RefreshLists.Size = new System.Drawing.Size(75, 23);
+            this.btn_RefreshLists.TabIndex = 17;
+            this.btn_RefreshLists.Text = "Ververs lijst";
+            this.btn_RefreshLists.UseVisualStyleBackColor = true;
+            this.btn_RefreshLists.Click += new System.EventHandler(this.btn_RefreshLists_Click);
+            // 
+            // lB_RemisebeheerTramlijst
+            // 
+            this.lB_RemisebeheerTramlijst.FormattingEnabled = true;
+            this.lB_RemisebeheerTramlijst.Location = new System.Drawing.Point(411, 5);
+            this.lB_RemisebeheerTramlijst.Name = "lB_RemisebeheerTramlijst";
+            this.lB_RemisebeheerTramlijst.Size = new System.Drawing.Size(477, 511);
+            this.lB_RemisebeheerTramlijst.TabIndex = 8;
+            // 
+            // lB_RemisebeheerSpoorlijst
+            // 
+            this.lB_RemisebeheerSpoorlijst.FormattingEnabled = true;
+            this.lB_RemisebeheerSpoorlijst.Location = new System.Drawing.Point(894, 5);
+            this.lB_RemisebeheerSpoorlijst.Name = "lB_RemisebeheerSpoorlijst";
+            this.lB_RemisebeheerSpoorlijst.Size = new System.Drawing.Size(512, 511);
+            this.lB_RemisebeheerSpoorlijst.TabIndex = 9;
             // 
             // MainForm
             // 
@@ -1240,5 +1272,8 @@
         private System.Windows.Forms.Label lblStatusbeheerTramStatus;
         private System.Windows.Forms.Label lblStatusbeheerTramNummer;
         private System.Windows.Forms.TextBox tbxStatusbeheerTramNummer;
+        private System.Windows.Forms.Button btn_RefreshLists;
+        private System.Windows.Forms.ListBox lB_RemisebeheerTramlijst;
+        private System.Windows.Forms.ListBox lB_RemisebeheerSpoorlijst;
     }
 }

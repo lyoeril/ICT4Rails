@@ -179,6 +179,7 @@ namespace ICT4Rails
                 }
             }
             onderhoudslijst.Add(onderhoudsbeurt);
+            RefreshClass();
             return true;
         }
 
@@ -220,12 +221,12 @@ namespace ICT4Rails
             data.UpdateSpoor(spoor);
         }
 
-        public bool AddOnderhoudsbeurt(Medewerker medewerker, int tramnummerID, string opmerking, string soort, DateTime starttijd, DateTime eindtijd)
+        public bool AddOnderhoudsbeurt(Medewerker medewerker, Tram tram, string opmerking, string soort, DateTime starttijd, DateTime eindtijd)
         {
             // bij deze methode wordt er een nieuwe onderhoudsbeurt toegevoegd
             //----------------------------------------------------------------------------------
 
-            data.InsertOnderhoud(medewerker, tramnummerID, opmerking, soort, starttijd, eindtijd);
+            data.InsertOnderhoud(new Onderhoud(1,medewerker, tram, starttijd, eindtijd, opmerking, soort));
             return true;
             //----------------------------------------------------------------------------------
         }
