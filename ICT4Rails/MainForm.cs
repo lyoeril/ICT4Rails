@@ -436,15 +436,12 @@ namespace ICT4Rails
         }
 
         private void btnRemiseBeheerBevestig_Click(object sender, EventArgs e)
-        {
-            List<Tram> trams = administratie.Trams;
-            Status status = null;
-
+        {  
             if (cbxRemiseBeheerTramBewerking.SelectedItem.ToString() == "Voeg toe")
             {
                 try
                 {
-                    foreach (Tram t in trams)
+                    foreach (Tram t in administratie.Trams)
                     {
                         if (t.Id == Convert.ToInt32(tbxRemiseBeheerTramNummer.Text))
                         {
@@ -454,10 +451,9 @@ namespace ICT4Rails
                     }
 
                     TramType type = cbxRemiseBeheerTramType.SelectedItem as TramType;
-                    List<Status> statussen = administratie.GetAllStatus();
-                    
+                    Status status = null;
 
-                    foreach (Status s in statussen)
+                    foreach (Status s in administratie.GetAllStatus())
                     {
                         if (s.Naam == "REMISE")
                         {
@@ -481,7 +477,7 @@ namespace ICT4Rails
             {
                 try
                 {
-                    foreach (Tram t in trams)
+                    foreach (Tram t in administratie.Trams)
                     {
                         if (t.Id == Convert.ToInt32(tbxRemiseBeheerTramNummer.Text))
                         {
@@ -499,24 +495,14 @@ namespace ICT4Rails
             }
             else if (cbxRemiseBeheerTramBewerking.SelectedItem.ToString() == "Bewerk")
             {
+                TramType type = cbxRemiseBeheerTramType.SelectedItem as TramType;
                 try
                 {
-                    foreach (Tram t in trams)
+                    foreach (Tram t in administratie.Trams)
                     {
                         if (t.Id == Convert.ToInt32(tbxRemiseBeheerTramNummer.Text))
-                        {
-                            TramType type = null;
-
-                            foreach (TramType tramtype in administratie.GetTypes())
-                            {
-                                if (tramtype.ToString() == cbxRemiseBeheerTramType.SelectedItem.ToString())
-                                {
-                                    type = tramtype;
-                                    break;
-                                }
-                            }
+                        { 
                             administratie.TramBewerken(Convert.ToInt32(tbxRemiseBeheerTramNummer.Text), type.Naam, "REMISE", cbxRemisebeheerTrambeheerLijn.SelectedItem.ToString(), true);
-                            break;
                         }
                     }
                 }
@@ -525,12 +511,12 @@ namespace ICT4Rails
                     MessageBox.Show("Er is iets fout gegaan tijdens het bewerken van de tram, de bewerkingen zijn niet toegepast.");
                 }
             }
-
             tbxRemiseBeheerTramNummer.Text = "";
             cbxRemisebeheerTrambeheerLijn.Text = "";
             cbxRemiseBeheerTramType.SelectedItem = null;
+            administratie.RefreshClass();
 
-        administratie.RefreshClass();
+            VulLijsten();
         }
 
         private void cbxRemiseBeheerTramBewerking_SelectedIndexChanged(object sender, EventArgs e)
@@ -1104,9 +1090,6 @@ namespace ICT4Rails
         private void MainForm_Load(object sender, EventArgs e)
         {
             VulLijsten();
-
-        }
-
-        
+        }      
     }
 }
