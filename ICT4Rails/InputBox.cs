@@ -53,7 +53,7 @@ namespace ICT4Rails
                 Gebruikersnaam.Text = "Gebruikersnaam:";
                 Wachtwoord.Text = "Wachtwoord:";
                 Gebruikersnaamtxt.Text = g.GebruikersNaam;
-                Wachtwoordtxt.Text = "(Wachtwoord)";
+                Wachtwoordtxt.Text = g.Wachtwoord;
 
                 Gebruikersnaam.AutoSize = true;
                 Wachtwoord.AutoSize = true;
@@ -61,23 +61,20 @@ namespace ICT4Rails
                 Wachtwoordtxt.Anchor = Wachtwoordtxt.Anchor | AnchorStyles.Right;
                 form.Controls.AddRange(new Control[] { Gebruikersnaam, Wachtwoord, Gebruikersnaamtxt, Wachtwoordtxt, buttonOk, buttonCancel });
                 form.ClientSize = new Size(Math.Max(300, Gebruikersnaam.Right + 10), form.ClientSize.Height);
-
                 DialogResult dialogResult = form.ShowDialog();
 
-                try
+                if (!string.IsNullOrWhiteSpace(Gebruikersnaamtxt.Text) && !string.IsNullOrWhiteSpace(Wachtwoordtxt.Text))
                 {
                     Gebruiker UpdateGebruiker = new Gebruiker(Gebruikersnaamtxt.Text, g.Medewerker_ID, Wachtwoordtxt.Text);
                     administratie.ChangeGebruiker(UpdateGebruiker);
-
+                    administratie.RefreshClass();
                 }
-
-                catch (OracleException e)
+                else
                 {
-                    MessageBox.Show(e.Message);
+                    MessageBox.Show("Vul gebruikersnaam en wachtwoord in om te kunnen update.");
+                    return;
                 }
-                return;
             }
-
             else if (obj is Medewerker)
             {
                 Medewerker m = obj as Medewerker;
@@ -116,14 +113,9 @@ namespace ICT4Rails
                 lblPostcode.SetBounds(12, 190, 372, 13);
                 txtPostcode.SetBounds(12, 206, 372, 20);
 
-                lblNaam.Text = "Naam:";
-                lblEmail.Text = "Email:";
-                lblFunctie.Text = "Functie:";
-                lblStraatNr.Text = "Straatnaam en nummer:";
-                lblPostcode.Text = "Postcode:";
-
+                lblNaam.Text = "Naam:"; lblPostcode.Text = "Postcode:"; lblEmail.Text = "Email:"; lblFunctie.Text = "Functie:"; lblStraatNr.Text = "Straatnaam en nummer:";
                 lblNaam.AutoSize = true; lblEmail.AutoSize = true; lblFunctie.AutoSize = true; lblStraatNr.AutoSize = true; lblPostcode.AutoSize = true;
-
+                txtNaam.Text = m.Naam; txtEmail.Text = m.Email; txtPostcode.Text = m.Postcode; txtStraatNR.Text = m.Adres; CBFunctie.Text = m.Functie;
                 txtNaam.Anchor = txtNaam.Anchor | AnchorStyles.Right;
                 txtEmail.Anchor = txtEmail.Anchor | AnchorStyles.Right;
                 CBFunctie.Anchor = CBFunctie.Anchor | AnchorStyles.Right;
@@ -132,7 +124,6 @@ namespace ICT4Rails
                 form.Controls.AddRange(new Control[] { lblNaam, lblEmail, lblFunctie, lblStraatNr, lblPostcode, txtNaam, txtEmail, CBFunctie, txtStraatNR, txtPostcode, buttonOk, buttonCancel });
                 form.ClientSize = new Size(Math.Max(300, lblNaam.Right + 10), form.ClientSize.Height);
                 DialogResult dialogResult = form.ShowDialog();
-
 
                 if (!string.IsNullOrWhiteSpace(txtNaam.Text) && !string.IsNullOrWhiteSpace(txtEmail.Text)
                                                                  && !string.IsNullOrWhiteSpace(txtStraatNR.Text))
@@ -146,14 +137,16 @@ namespace ICT4Rails
                                 MessageBox.Show("Geef een functie op voor de medewerker die u aan het toevoegen bent.");
                                 return;
                             }
-                            else
+                            if (dialogResult == buttonOk.DialogResult)
                             {
                                 string Cbkeuze = CBFunctie.SelectedItem.ToString();
                                 Medewerker Updatemedewerker = new Medewerker(m.ID, txtNaam.Text, txtEmail.Text, Cbkeuze, txtStraatNR.Text, txtPostcode.Text);
                                 administratie.ChangeMedewerker(Updatemedewerker);
                                 administratie.RefreshClass();
-                                MessageBox.Show("Medewererker is geupdate!.");
+
+                                MessageBox.Show("Medewerker is geupdate!");
                             }
+                            else return;
                         }
                         else
                         {
