@@ -67,7 +67,7 @@ namespace ICT4Rails
                 {
                     Gebruiker UpdateGebruiker = new Gebruiker(Gebruikersnaamtxt.Text, g.Medewerker_ID, Wachtwoordtxt.Text);
                     administratie.ChangeGebruiker(UpdateGebruiker);
-                    administratie.RefreshClass();
+                    
                 }
                 else
                 {
@@ -142,7 +142,7 @@ namespace ICT4Rails
                                 string Cbkeuze = CBFunctie.SelectedItem.ToString();
                                 Medewerker Updatemedewerker = new Medewerker(m.ID, txtNaam.Text, txtEmail.Text, Cbkeuze, txtStraatNR.Text, txtPostcode.Text);
                                 administratie.ChangeMedewerker(Updatemedewerker);
-                                administratie.RefreshClass();
+                                
 
                                 MessageBox.Show("Medewerker is geupdate!");
                             }

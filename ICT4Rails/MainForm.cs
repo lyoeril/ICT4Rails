@@ -38,10 +38,13 @@ namespace ICT4Rails
             Sporen = SporenArray();
             Lijnen = LijnenArray();
             VulLijnnummers();
-            VulLijsten();
+            
             OpenAccountUI();
-            loadListComboboxStatusbeheerOnderhoudMedewerker();
+
+            // lijsten en comboboxes
             loadComboboxes();
+            VerversLijsten();
+
 
             this.FormClosing += new FormClosingEventHandler(MainForm_FormClosing);
             this.tableLayoutPanel1.CellPaint += new TableLayoutCellPaintEventHandler(tableLayoutPanel1_CellPaint);
@@ -465,7 +468,7 @@ namespace ICT4Rails
         }
 
         private void btnRemiseBeheerBevestig_Click(object sender, EventArgs e)
-        {  
+        {
             if (cbxRemiseBeheerTramBewerking.SelectedItem.ToString() == "Voeg toe")
             {
                 try
@@ -481,7 +484,7 @@ namespace ICT4Rails
                     TramType type = cbxRemiseBeheerTramType.SelectedItem as TramType;
                     Status status = null;
 
-                    foreach (Status s in administratie.GetAllStatus())
+                    foreach (Status s in administratie.Statuslijst)
                     {
                         if (s.Naam == "REMISE")
                         {
@@ -492,7 +495,7 @@ namespace ICT4Rails
                     administratie.AddTram(new Tram(Convert.ToInt32(tbxRemiseBeheerTramNummer.Text), type, status, cbxRemisebeheerTrambeheerLijn.SelectedItem.ToString(), true));
                     MessageBox.Show("Tram is toegevoegd!");
                 }
-                catch(Exception)
+                catch (Exception)
                 {
                     MessageBox.Show("Er is iets fout gegaan, tram is niet toegevoegd");
                 }
@@ -516,7 +519,7 @@ namespace ICT4Rails
                 {
                     MessageBox.Show("Het ingevulde tramnummer is onjuist");
                 }
-                
+
             }
             else if (cbxRemiseBeheerTramBewerking.SelectedItem.ToString() == "Bewerk")
             {
@@ -526,12 +529,12 @@ namespace ICT4Rails
                     foreach (Tram t in administratie.Trams)
                     {
                         if (t.Id == Convert.ToInt32(tbxRemiseBeheerTramNummer.Text))
-                        { 
+                        {
                             administratie.TramBewerken(Convert.ToInt32(tbxRemiseBeheerTramNummer.Text), type.Naam, "REMISE", cbxRemisebeheerTrambeheerLijn.SelectedItem.ToString(), true);
                         }
                     }
                 }
-                catch(Exception)
+                catch (Exception)
                 {
                     MessageBox.Show("Er is iets fout gegaan tijdens het bewerken van de tram, de bewerkingen zijn niet toegepast.");
                 }
@@ -539,9 +542,9 @@ namespace ICT4Rails
             tbxRemiseBeheerTramNummer.Text = "";
             cbxRemisebeheerTrambeheerLijn.Text = "";
             cbxRemiseBeheerTramType.SelectedItem = null;
-            administratie.RefreshClass();
+            
 
-            VulLijsten();
+            VerversLijsten();
         }
 
         private void cbxRemiseBeheerTramBewerking_SelectedIndexChanged(object sender, EventArgs e)
@@ -638,14 +641,13 @@ namespace ICT4Rails
             {
                 MessageBox.Show("Voer eerst alle velden in.");
             }
-
-            administratie.RefreshClass();
-            VulLijsten();
+            
+            VerversLijsten();
         }
 
         //AccountBeheer
 
-        private void VulLijsten()
+        private void VerversLijsten()
         {
             lbAccountMedewerkers.Items.Clear();
             lbAccountGebruiker.Items.Clear();
@@ -671,6 +673,30 @@ namespace ICT4Rails
             {
                 lB_RemisebeheerSpoorlijst.Items.Add(spoor);
             }
+
+            // gemaakt door Yoeri
+            lB_Onderhoudslijst_historie.Items.Clear();
+            lB_Onderhoudslijst_TODO.Items.Clear();
+            foreach (Onderhoud onderhoud in administratie.Onderhoudslijst)
+            {
+                if(onderhoud.Medewerker != null)
+                {
+                    lB_Onderhoudslijst_historie.Items.Add(onderhoud);
+                }
+                else
+                {
+                    lB_Onderhoudslijst_TODO.Items.Add(onderhoud);
+                }               
+            }
+
+            lB_Onderhoud_Trams.Items.Clear();
+            foreach (Tram tram in administratie.Trams)
+            {
+                if (tram.Status.Naam == "SCHOONMAAK" || tram.Status.Naam == "DEFECT")
+                {
+                    lB_Onderhoud_Trams.Items.Add(tram);
+                }
+            }
         }
 
         private void btnAccountToevoegen_Click(object sender, EventArgs e)
@@ -692,8 +718,8 @@ namespace ICT4Rails
                             medewerker = new Medewerker(0, tbxAccountNaam.Text, tbxAccountEmail.Text, Cbkeuze, tbxAccountStrtNR.Text, tbxAccountPostcode.Text);
                             administratie.AddMedewerker(medewerker);
                         }
-                        administratie.RefreshClass();
-                        VulLijsten();
+                        
+                        VerversLijsten();
                         clearTextboxes();
                     }
                     else
@@ -739,8 +765,8 @@ namespace ICT4Rails
                 MessageBox.Show("Account is toegevoegd en kan gebruikt worden", "ICT4Rails",
                 MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
-                administratie.RefreshClass();
-                VulLijsten();
+
+                VerversLijsten();
                 clearTextboxes();
             }
         }
@@ -778,7 +804,7 @@ namespace ICT4Rails
                 inputbox = new InputBox();
                 inputbox.InputBoxVeranderGebruiker(administratie, (Gebruiker)lbAccountGebruiker.SelectedItem, "Verander gegevens");
             }
-            VulLijsten();
+            VerversLijsten();
         }
 
         private void lbAccountMedewerkers_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -788,8 +814,8 @@ namespace ICT4Rails
                 inputbox = new InputBox();
                 inputbox.InputBoxVeranderGebruiker(administratie, (Medewerker)lbAccountMedewerkers.SelectedItem, "Verander gegevens");
             }
-            VulLijsten();
-           
+            VerversLijsten();
+
         }
 
 
@@ -814,8 +840,7 @@ namespace ICT4Rails
             if (administratie.FindGebruiker(medewerker.ID) == null)
             {
                 administratie.RemoveMedewerker(medewerker);
-                administratie.RefreshClass();
-                VulLijsten();
+                VerversLijsten();
             }
             else
             {
@@ -832,8 +857,8 @@ namespace ICT4Rails
                     {
                         administratie.RemoveMedewerker(medewerker);
                     }
-                    administratie.RefreshClass();
-                    VulLijsten();
+
+                    VerversLijsten();
                     heeftaccount = false;
                 }
             }
@@ -844,18 +869,20 @@ namespace ICT4Rails
             if (administratie.FindGebruiker(gebruiker.Medewerker_ID) == null)
             {
                 administratie.RemoveGebruiker(gebruiker);
-                administratie.RefreshClass();
-                VulLijsten();
+                VerversLijsten();
             }
         }
 
         private void loadComboboxes()
         {
+            cbxOnderhoudMedewerker.Items.Clear();
             foreach (Medewerker m in administratie.Medewerkers)
             {
                 cbxOnderhoudMedewerker.Items.Add(m);
             }
-            foreach (TramType t in administratie.GetTypes())
+
+            cbxRemiseBeheerTramType.Items.Clear();
+            foreach (TramType t in administratie.Tramtypes)
             {
                 cbxRemiseBeheerTramType.Items.Add(t);
             }
@@ -868,7 +895,7 @@ namespace ICT4Rails
             int lengte;
             if (tbxRemiseBeheerNieuwTypeNaam.Text != "" && tbxRemiseBeheerNieuwTypeBeschrijving.Text != "" && Int32.TryParse(tbxRemiseBeheerNieuwTypeLengte.Text, out lengte))
             {
-                List<TramType> types = administratie.GetTypes();
+                List<TramType> types = administratie.Tramtypes;
                 string error = "";
                 foreach (TramType t in types)
                 {
@@ -890,31 +917,7 @@ namespace ICT4Rails
             }
         }
 
-        public void loadListComboboxStatusbeheerOnderhoudMedewerker()
-        {
-            administratie.RefreshClass();
-            if (administratie.Medewerkers.Count != 0)
-            {
-                cbxOnderhoudMedewerker.Items.Clear();
-                foreach (Medewerker m in administratie.GetAllMedewerkers())
-                {
-                    cbxOnderhoudMedewerker.Items.Add(m);
-                }
-            }
-            lB_Onderhoudslijst_historie.Items.Clear();
-            foreach (Onderhoud onderhoud in administratie.Onderhoudslijst)
-            {
-                lB_Onderhoudslijst_historie.Items.Add(onderhoud);
-            }
-            lB_Onderhoud_Trams.Items.Clear();
-            foreach (Tram tram in administratie.Trams)
-            {
-                if (tram.Status.Naam == "SCHOONMAAK" || tram.Status.Naam == "DEFECT")
-                {
-                    lB_Onderhoud_Trams.Items.Add(tram);
-                }
-            }
-        }
+
 
         public void SorteerTram(Tram tram)
         {
@@ -1025,7 +1028,6 @@ namespace ICT4Rails
                 DateTime eindtijd = Convert.ToDateTime(dtpOnderhoudEindtijd.Value);
                 Medewerker m = cbxOnderhoudMedewerker.SelectedItem as Medewerker;
                 //geen schoonmaak voor tram 2x toevoegen, net als reparatie;
-
                 foreach (Onderhoud o in administratie.Onderhoudslijst)
                 {
                     if (o.ID == onderhoudsid)
@@ -1039,47 +1041,11 @@ namespace ICT4Rails
                             administratie.UpdateOnderhoudsbeurt(new Onderhoud(onderhoudsid, m, o.Tram, starttijd, eindtijd, "", "DEFECT"));
                         }
                         administratie.TramStatusVeranderen(o.Tram.Id, "REMISE");
-                        loadListComboboxStatusbeheerOnderhoudMedewerker();
+                        VerversLijsten();
                         MessageBox.Show("De onderhoud is toegevoegd");
                     }
                 }
-
-
-                /*
-                if (soort == "SCHOONMAAK")
-                {
-                    foreach (Tram t in administratie.Trams)
-                    {
-                        if (t.Id == tramnummer)
-                        {
-                            if (t.Status.Naam != soort)
-                            {
-                                administratie.AddOnderhoudsbeurt(m, tramnummer, opmerking, soort, starttijd, eindtijd);
-                                administratie.TramStatusVeranderen(tramnummer, soort);
-                                MessageBox.Show("Tram " + tramnummer.ToString() + " heeft nu de status " + soort);
-                                loadListComboboxStatusbeheerOnderhoudMedewerker();
-                            }
-                        }
-                    }
-                }
-                else
-                {
-                    foreach (Tram t in administratie.Trams)
-                    {
-                        if (t.Id == tramnummer)
-                        {
-                            if (t.Status.Naam != soort.ToUpper())
-                            {
-                                administratie.AddOnderhoudsbeurt(m, tramnummer, opmerking, soort, starttijd, eindtijd);
-                                administratie.TramStatusVeranderen(tramnummer, soort);
-                                MessageBox.Show("Tram " + tramnummer.ToString() + " heeft nu de status " + soort);
-                            }
-                        }
-                    }
-                }
-                administratie.TramStatusVeranderen(tramnummer, "REMISE");*/
             }
-
             catch (Exception fe)
             {
                 MessageBox.Show(fe.Message);
@@ -1088,13 +1054,13 @@ namespace ICT4Rails
 
         private void btn_RefreshLists_Click(object sender, EventArgs e)
         {
-            loadListComboboxStatusbeheerOnderhoudMedewerker();
+            VerversLijsten();
         }
 
 
         private void btn_RefreshList2_Click(object sender, EventArgs e)
         {
-            loadListComboboxStatusbeheerOnderhoudMedewerker();
+            VerversLijsten();
         }
 
         private void btnOnderhoudBevestiging_Click(object sender, EventArgs e)
@@ -1119,7 +1085,7 @@ namespace ICT4Rails
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            VulLijsten();
+            VerversLijsten();
         }
 
         private void lB_RemisebeheerTramlijst_SelectedIndexChanged(object sender, EventArgs e)
@@ -1171,6 +1137,6 @@ namespace ICT4Rails
         {
             Spoor spoor = lB_RemisebeheerSpoorlijst.SelectedItem as Spoor;
             tbxRemiseBeheerSpoorBeheerSpoorNummer.Text = spoor.Spoorid.ToString();
-        }      
+        }
     }
 }

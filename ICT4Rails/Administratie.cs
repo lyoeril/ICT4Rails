@@ -17,33 +17,39 @@ namespace ICT4Rails
         private List<Onderhoud> onderhoudslijst;
         private List<Spoor> sporen;
         private List<Tram> trams;
-
+        private List<Status> statuslijst;
+        private List<TramType> tramtypes;
         public List<Gebruiker> Gebruikers { get { return gebruikers; } }
         public List<Medewerker> Medewerkers { get { return medewerkers; } }
         public List<Onderhoud> Onderhoudslijst { get { return onderhoudslijst; } }
         public List<Spoor> Sporen { get { return sporen; } }
         public List<Tram> Trams { get { return trams; } }
-
+        public List<Status> Statuslijst { get { return statuslijst; } }
+        public List<TramType> Tramtypes { get { return tramtypes; } }
         Database data;
 
         public Administratie()
         {
             data = new Database();
             this.gebruikers = data.GetAllGebruikers();
-            this.gebruikers.Add(new Gebruiker("", 0, ""));         
+            this.gebruikers.Add(new Gebruiker("", 0, ""));
             this.medewerkers = data.GetAllMedewerkers();
             this.onderhoudslijst = data.GetAllOnderhoud();
             this.sporen = data.GetAllSporen();
             this.trams = data.GetAllTrams();
+            this.statuslijst = data.GetAllStatus();
+            this.tramtypes = data.GetAllTramtypes();
         }
 
-        public void RefreshClass()
+        private void RefreshClass()
         {
             this.onderhoudslijst = data.GetAllOnderhoud();
             this.sporen = data.GetAllSporen();
             this.trams = data.GetAllTrams();
             this.gebruikers = data.GetAllGebruikers();
             this.medewerkers = data.GetAllMedewerkers();
+            this.statuslijst = data.GetAllStatus();
+            this.tramtypes = data.GetAllTramtypes();
         }
         /* alles voor de beheerder */
         public bool AddMedewerker(Medewerker medewerker)
@@ -51,8 +57,9 @@ namespace ICT4Rails
             if (FindMedewerker(medewerker.ID) != null)
             {
                 return false;
-            }             
+            }
             data.InsertMedewerker(medewerker);
+            RefreshClass();
             return true;
         }
 
@@ -61,6 +68,7 @@ namespace ICT4Rails
             if (FindMedewerker(medewerker.ID) != null)
             {
                 data.RemoveMedewerker(medewerker);
+                RefreshClass();
                 return true;
             }
             return false;
@@ -75,7 +83,7 @@ namespace ICT4Rails
                     if (m.ID == id)
                     {
                         return m;
-                    }                    
+                    }
                 }
             }
             return null;
@@ -89,6 +97,7 @@ namespace ICT4Rails
                 return false;
             }
             data.InsertGebruiker(gebruiker);
+            RefreshClass();
             return true;
         }
 
@@ -133,8 +142,10 @@ namespace ICT4Rails
             if (FindGebruiker(gebruiker.Medewerker_ID) != null)
             {
                 data.UpdateGebruiker(gebruiker);
+                RefreshClass();
                 return true;
             }
+
             return false;
         }
         public bool RemoveGebruiker(Gebruiker gebruiker)
@@ -142,15 +153,17 @@ namespace ICT4Rails
             if (FindGebruiker(gebruiker.Medewerker_ID) != null)
             {
                 data.RemoveGebruiker(gebruiker);
+                RefreshClass();
                 return true;
             }
             return false;
         }
         public bool ChangeMedewerker(Medewerker medewerker)
         {
-            if(FindMedewerker(medewerker.ID) != null)
+            if (FindMedewerker(medewerker.ID) != null)
             {
                 data.UpdateMedewerker(medewerker);
+                RefreshClass();
                 return true;
             }
             return false;
@@ -183,7 +196,7 @@ namespace ICT4Rails
             }
             return false;
         }
-        
+
         /* Hieronder ...*/
         public bool AddOnderhoudsbeurt(Onderhoud onderhoudsbeurt)
         {
@@ -196,6 +209,7 @@ namespace ICT4Rails
                 }
             }
             data.InsertOnderhoud(onderhoudsbeurt);
+            RefreshClass();
             return true;
         }
 
@@ -210,6 +224,7 @@ namespace ICT4Rails
                 }
             }
             data.UpdateOnderhoud(onderhoudsbeurt);
+            RefreshClass();
             return true;
         }
         public bool RemoveOnderhoudsbeurt(Onderhoud onderhoudsbeurt)
@@ -220,13 +235,14 @@ namespace ICT4Rails
                 if (onderhoudsbeurt == Selected_Onderhoudsbeurt)
                 {
                     onderhoudslijst.Remove(onderhoudsbeurt);
+                    RefreshClass();
                     return true;
                 }
             }
             return false;
         }
 
-        public List<Onderhoud> GetOnderhoudslijst (string soort)
+        public List<Onderhoud> GetOnderhoudslijst(string soort)
         {
             // bij deze methode wordt er een lijst geretourneerd gefiltert door een soort
             return null;
@@ -248,6 +264,7 @@ namespace ICT4Rails
         {
             Spoor spoor = new Spoor(id, spoornr, sectornr, beschikbaar);
             data.UpdateSpoor(spoor);
+            RefreshClass();
         }
 
         public bool AddOnderhoudsbeurt(Medewerker medewerker, Tram tram, string opmerking, string soort, DateTime starttijd, DateTime eindtijd)
@@ -255,7 +272,8 @@ namespace ICT4Rails
             // bij deze methode wordt er een nieuwe onderhoudsbeurt toegevoegd
             //----------------------------------------------------------------------------------
 
-            data.InsertOnderhoud(new Onderhoud(1,medewerker, tram, starttijd, eindtijd, opmerking, soort));
+            data.InsertOnderhoud(new Onderhoud(1, medewerker, tram, starttijd, eindtijd, opmerking, soort));
+            RefreshClass();
             return true;
             //----------------------------------------------------------------------------------
         }
@@ -263,20 +281,20 @@ namespace ICT4Rails
 
         public void TramStatusVeranderen(int tramNummer, string statusnaam)
         {
-            foreach(Tram tram in Trams)
+            foreach (Tram tram in Trams)
             {
-                if(tram.Id == tramNummer)
+                if (tram.Id == tramNummer)
                 {
-                    foreach(Status status in data.GetAllStatus())
+                    foreach (Status status in data.GetAllStatus())
                     {
-                        if(statusnaam.ToUpper() == status.Naam)
+                        if (statusnaam.ToUpper() == status.Naam)
                         {
                             tram.Status = status;
                             data.UpdateTram(tram);
                         }
                     }
-                    
                     data.UpdateTram(tram);
+                    RefreshClass();
                 }
             }
 
@@ -287,7 +305,7 @@ namespace ICT4Rails
             TramType type = null;
             Status status = null;
 
-            foreach (TramType t in data.GetAllTramtypes())
+            foreach (TramType t in Tramtypes)
             {
                 if (t.Naam == typeNaam)
                 {
@@ -296,7 +314,7 @@ namespace ICT4Rails
                 }
             }
 
-            foreach (Status s in data.GetAllStatus())
+            foreach (Status s in Statuslijst)
             {
                 if (s.Naam == statusNaam)
                 {
@@ -307,44 +325,28 @@ namespace ICT4Rails
 
             Tram tram = new Tram(tramNummer, type, status, lijn, beschikbaarheid);
             data.UpdateTram(tram);
+            RefreshClass();
         }
 
         public void TramVerwijderen(int tramNummer)
         {
             Tram t = null;
-            foreach(Tram tram in trams)
+            foreach (Tram tram in trams)
             {
-                if(tram.Id == tramNummer)
+                if (tram.Id == tramNummer)
                 {
                     t = tram;
                 }
             }
 
             data.RemoveTram(t);
-        }
-
-        public List<Medewerker> GetAllMedewerkers()
-        {
-            if (data.GetAllMedewerkers() != null)
-            {
-                return data.GetAllMedewerkers();
-            }
-            return null;
-        }
-
-        public List<TramType> GetTypes()
-        {
-            return data.GetAllTramtypes();
+            RefreshClass();
         }
 
         public void AddTramType(TramType type)
         {
             data.InsertTramType(type);
-        }
-
-        public List<Status> GetAllStatus()
-        {
-            return data.GetAllStatus();
+            RefreshClass();
         }
 
         public Point? GetRowColIndex(TableLayoutPanel tlp, Point point)
