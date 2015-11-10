@@ -35,12 +35,13 @@ namespace ICT4Rails
             {
                 if (t.Id == tram)
                 {
-                    tr = t; ;
+                    tr = t;
+                    break;
                 }
             }
             Onderhoud onderhoud;
             
-            if(medewerkerid == null)
+            if(medewerkerid != null)
             {
                 DateTime starttijd = Convert.ToDateTime( reader["Starttijd"]);
                 DateTime eindtijd = Convert.ToDateTime( reader["Eindtijd"]);
