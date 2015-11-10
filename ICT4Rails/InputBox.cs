@@ -152,21 +152,25 @@ namespace ICT4Rails
                                 Medewerker Updatemedewerker = new Medewerker(m.ID, txtNaam.Text, txtEmail.Text, Cbkeuze, txtStraatNR.Text, txtPostcode.Text);
                                 administratie.ChangeMedewerker(Updatemedewerker);
                                 administratie.RefreshClass();
+                                MessageBox.Show("Medewererker is geupdate!.");
                             }
                         }
                         else
                         {
                             MessageBox.Show("Vul een geldige emailadres op.");
+                            return;
                         }
                     }
                     else
                     {
                         MessageBox.Show("Is geen goede postcode voor nl");
+                        return;
                     }
                 }
                 else
                 {
                     MessageBox.Show("Vul alle gegevens in om een account te updaten.");
+                    return;
                 }
             }
         }

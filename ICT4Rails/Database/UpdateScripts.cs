@@ -47,6 +47,19 @@ namespace ICT4Rails
             }
         }
 
+        public void UpdateMedewerker(Medewerker medewerker)
+        {
+            using (OracleConnection connection = Connection)
+            {
+                string Update = "UPDATE GEBRUIKER SET GEBRUIKERSNAAM =:Gebruikersnaam, WACHTWOORD =:Wachtwoord WHERE MedewerkerID =:ID";
+                using (OracleCommand command = new OracleCommand(Update, connection))
+                {
+                    
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
         public void UpdateSpoor(Spoor spoor)
         {
             using (OracleConnection connection = Connection)

@@ -37,7 +37,6 @@ namespace ICT4Rails
 
         public void RefreshClass()
         {
-            Database data = new Database();
             this.onderhoudslijst = data.GetAllOnderhoud();
             this.sporen = data.GetAllSporen();
             this.trams = data.GetAllTrams();
@@ -112,9 +111,6 @@ namespace ICT4Rails
             return null;
         }
 
-
-
-
         public bool ChangeGebruiker(Gebruiker gebruiker)
         {
             if (FindGebruiker(gebruiker.Medewerker_ID) != null)
@@ -135,8 +131,12 @@ namespace ICT4Rails
         }
         public bool ChangeMedewerker(Medewerker medewerker)
         {
-            // TO DO
-            throw new NotImplementedException();
+            if(FindMedewerker(medewerker.ID) != null)
+            {
+                data.UpdateMedewerker(medewerker);
+                return true;
+            }
+            return false;
         }
 
         public bool AddTram(Tram tram)
