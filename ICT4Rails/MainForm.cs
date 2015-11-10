@@ -449,7 +449,6 @@ namespace ICT4Rails
                             return;
                         }
                     }
-
                     TramType type = cbxRemiseBeheerTramType.SelectedItem as TramType;
                     Status status = null;
 
@@ -461,10 +460,7 @@ namespace ICT4Rails
                             break;
                         }
                     }
-
-                    Tram tram = new Tram(Convert.ToInt32(tbxRemiseBeheerTramNummer.Text), type, status, cbxRemisebeheerTrambeheerLijn.SelectedItem.ToString(), true);
-
-                    administratie.AddTram(tram);
+                    administratie.AddTram(new Tram(Convert.ToInt32(tbxRemiseBeheerTramNummer.Text), type, status, cbxRemisebeheerTrambeheerLijn.SelectedItem.ToString(), true));
                     MessageBox.Show("Tram is toegevoegd!");
                 }
                 catch(Exception)
@@ -615,6 +611,7 @@ namespace ICT4Rails
             }
 
             administratie.RefreshClass();
+            VulLijsten();
         }
 
         //AccountBeheer
@@ -1090,6 +1087,18 @@ namespace ICT4Rails
         private void MainForm_Load(object sender, EventArgs e)
         {
             VulLijsten();
+        }
+
+        private void lB_RemisebeheerTramlijst_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Tram tram = lB_RemisebeheerTramlijst.SelectedItem as Tram;
+            tbxRemiseBeheerTramNummer.Text = tram.Id.ToString();
+        }
+
+        private void lB_RemisebeheerSpoorlijst_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Spoor spoor = lB_RemisebeheerSpoorlijst.SelectedItem as Spoor;
+            tbxRemiseBeheerSpoorBeheerSpoorNummer.Text = spoor.Spoorid.ToString();
         }      
     }
 }
