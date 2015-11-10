@@ -766,12 +766,7 @@ namespace ICT4Rails
                 inputbox = new InputBox();
                 inputbox.InputBoxVeranderGebruiker(administratie, (Gebruiker)lbAccountGebruiker.SelectedItem, "Verander gegevens");
             }
-
-            if (DialogResult.ToString() == "OK")
-            {
-                MessageBox.Show("Gebruiker is aangepast.");
-                VulLijsten();
-            }
+            VulLijsten();
         }
 
         private void lbAccountMedewerkers_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -781,12 +776,8 @@ namespace ICT4Rails
                 inputbox = new InputBox();
                 inputbox.InputBoxVeranderGebruiker(administratie, (Medewerker)lbAccountMedewerkers.SelectedItem, "Verander gegevens");
             }
-
-            if (DialogResult.ToString() == "OK")
-            {
-                MessageBox.Show("Account is aangepast.");
-                VulLijsten();
-            }
+            VulLijsten();
+           
         }
 
 

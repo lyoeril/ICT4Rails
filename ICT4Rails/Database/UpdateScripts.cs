@@ -51,10 +51,15 @@ namespace ICT4Rails
         {
             using (OracleConnection connection = Connection)
             {
-                string Update = "UPDATE GEBRUIKER SET GEBRUIKERSNAAM =:Gebruikersnaam, WACHTWOORD =:Wachtwoord WHERE MedewerkerID =:ID";
+                string Update = "UPDATE MEDEWERKER SET NAAM =:Naam, EMAIL =:Email, FUNCTIE =:Functie, ADRES =:Adres, POSTCODE =:Postcode WHERE ID =:ID";
                 using (OracleCommand command = new OracleCommand(Update, connection))
                 {
-                    
+                    command.Parameters.Add(new OracleParameter("Naam", medewerker.Naam));
+                    command.Parameters.Add(new OracleParameter("Email", medewerker.Email));
+                    command.Parameters.Add(new OracleParameter("Functie", medewerker.Functie));
+                    command.Parameters.Add(new OracleParameter("Adres", medewerker.Adres));
+                    command.Parameters.Add(new OracleParameter("Postcode", medewerker.Postcode));
+                    command.Parameters.Add(new OracleParameter("ID", medewerker.ID));
                     command.ExecuteNonQuery();
                 }
             }
