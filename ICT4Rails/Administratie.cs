@@ -324,5 +324,10 @@ namespace ICT4Rails
         {
             data.InsertTramType(type);
         }
+
+        public List<Status> GetAllStatus()
+        {
+            return data.GetAllStatus();
+        }
     }
 }

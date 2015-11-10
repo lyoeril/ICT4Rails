@@ -20,9 +20,7 @@ namespace ICT4Rails
         private Label[][] Sporen;
         private string[][] Lijnen;
 
-        //Medewerker        
-
-        private Database DataMed = new Database();
+        //Medewerker 
         private Administratie administratie;
         private InputBox inputbox;
         private int MedID;
@@ -301,7 +299,7 @@ namespace ICT4Rails
                                     {
                                         this.tabcontrolRemise.SelectedTab = tabpageRemiseBeheer;
                                         tbxRemiseBeheerTramNummer.Text = Convert.ToString(t.Id);
-                                        tbxRemiseBeheerTramLijn.Text = Convert.ToString(t.Lijn);
+                                        cbxRemisebeheerTrambeheerLijn.Text = Convert.ToString(t.Lijn);
                                         //tbxRemiseBeheerTramType.SelectedItem = 
                                         //moet nog een methode toegevoegd worden om alle bestaande types uit de db te halen
                                         tbxRemiseBeheerSpoorBeheerSpoorNummer.Text = Convert.ToString(spoor);
@@ -309,7 +307,7 @@ namespace ICT4Rails
                                         tbxRemiseBeheerSpoorBeheerTramNummer.Text = Convert.ToString(t.Id);
                                         tbxStatusbeheerTramNummer.Text = Convert.ToString(t.Id);
 
-                                        cbxRemiseBeheerTramType.DataSource = DataMed.GetAllTramtypes();
+                                        cbxRemiseBeheerTramType.DataSource = administratie.GetTypes();
                                     }
                                 }
                             }
@@ -440,6 +438,7 @@ namespace ICT4Rails
         private void btnRemiseBeheerBevestig_Click(object sender, EventArgs e)
         {
             List<Tram> trams = administratie.Trams;
+            Status status = null;
 
             if (cbxRemiseBeheerTramBewerking.SelectedItem.ToString() == "Voeg toe")
             {
@@ -455,8 +454,8 @@ namespace ICT4Rails
                     }
 
                     TramType type = cbxRemiseBeheerTramType.SelectedItem as TramType;
-                    List<Status> statussen = DataMed.GetAllStatus();
-                    Status status = null;
+                    List<Status> statussen = administratie.GetAllStatus();
+                    
 
                     foreach (Status s in statussen)
                     {
@@ -467,7 +466,7 @@ namespace ICT4Rails
                         }
                     }
 
-                    Tram tram = new Tram(Convert.ToInt32(tbxRemiseBeheerTramNummer.Text), type, status, tbxRemiseBeheerTramLijn.Text, true);
+                    Tram tram = new Tram(Convert.ToInt32(tbxRemiseBeheerTramNummer.Text), type, status, cbxRemisebeheerTrambeheerLijn.SelectedItem.ToString(), true);
 
                     administratie.AddTram(tram);
                     MessageBox.Show("Tram is toegevoegd!");
@@ -516,7 +515,7 @@ namespace ICT4Rails
                                     break;
                                 }
                             }
-                            administratie.TramBewerken(Convert.ToInt32(tbxRemiseBeheerTramNummer.Text), type.Naam, "REMISE", tbxRemiseBeheerTramLijn.Text, true);
+                            administratie.TramBewerken(Convert.ToInt32(tbxRemiseBeheerTramNummer.Text), type.Naam, "REMISE", cbxRemisebeheerTrambeheerLijn.SelectedItem.ToString(), true);
                             break;
                         }
                     }
@@ -528,7 +527,7 @@ namespace ICT4Rails
             }
 
             tbxRemiseBeheerTramNummer.Text = "";
-            tbxRemiseBeheerTramLijn.Text = "";
+            cbxRemisebeheerTrambeheerLijn.Text = "";
             cbxRemiseBeheerTramType.SelectedItem = null;
 
         administratie.RefreshClass();
@@ -539,19 +538,19 @@ namespace ICT4Rails
             if (cbxRemiseBeheerTramBewerking.SelectedItem.ToString() == "Voeg toe")
             {
                 tbxRemiseBeheerTramNummer.Enabled = true;
-                tbxRemiseBeheerTramLijn.Enabled = true;
+                cbxRemisebeheerTrambeheerLijn.Enabled = true;
                 cbxRemiseBeheerTramType.Enabled = true;
             }
             else if (cbxRemiseBeheerTramBewerking.SelectedItem.ToString() == "Verwijder")
             {
                 tbxRemiseBeheerTramNummer.Enabled = true;
-                tbxRemiseBeheerTramLijn.Enabled = false;
+                cbxRemisebeheerTrambeheerLijn.Enabled = false;
                 cbxRemiseBeheerTramType.Enabled = false;
             }
             else if (cbxRemiseBeheerTramBewerking.SelectedItem.ToString() == "Bewerk")
             {
                 tbxRemiseBeheerTramNummer.Enabled = true;
-                tbxRemiseBeheerTramLijn.Enabled = true;
+                cbxRemisebeheerTrambeheerLijn.Enabled = true;
                 cbxRemiseBeheerTramType.Enabled = true;
             }
             btnRemiseBeheerTramBeheerBevestig.Enabled = true;
@@ -578,7 +577,7 @@ namespace ICT4Rails
         {
             if (!string.IsNullOrWhiteSpace(cbxRemiseBeheerSpoorBeheerBewerking.Text) && !string.IsNullOrWhiteSpace(tbxRemiseBeheerSpoorBeheerSpoorNummer.Text) && !string.IsNullOrWhiteSpace(tbxRemiseBeheerSpoorBeheerSectorNummer.Text) && !string.IsNullOrWhiteSpace(tbxRemiseBeheerSpoorBeheerTramNummer.Text))
             {
-                List<Spoor> sporen = DataMed.GetAllSporen();
+                List<Spoor> sporen = administratie.Sporen;
                 string error = "";
 
                 if (cbxRemiseBeheerSpoorBeheerBewerking.SelectedItem.ToString() == "Blokkeer")
@@ -866,7 +865,7 @@ namespace ICT4Rails
             int lengte;
             if (tbxRemiseBeheerNieuwTypeNaam.Text != "" && tbxRemiseBeheerNieuwTypeBeschrijving.Text != "" && Int32.TryParse(tbxRemiseBeheerNieuwTypeLengte.Text, out lengte))
             {
-                List<TramType> types = DataMed.GetAllTramtypes();
+                List<TramType> types = administratie.GetTypes();
                 string error = "";
                 foreach (TramType t in types)
                 {
