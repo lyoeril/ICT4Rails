@@ -77,18 +77,37 @@ namespace ICT4Rails
         private void rfid_Tag(object sender, TagEventArgs e)
         {
             rfid.LED = true;
-            //int id = 0;
-            //if (e.Tag == "") { id = 0; } // TAG
+
+            if (e.Tag == "2200c77481") // Gele cirkel
+            {
+                foreach (Spoor s in administratie.Sporen)
+                {
+                    if (s.Spoornummer == 52 && s.Sectornummer == 4)
+                    {
+                        if (s.Beschikbaar)
+                        {
+                            s.Beschikbaar = false;
+                        }
+                        else
+                        {
+                            s.Beschikbaar = true;
+                        }
+                        tableLayoutPanel1.Refresh();
+                    }
+                }
+            }
+            int id = 0;
+            if (e.Tag == "2300fb7939") { id = 2201; } // TAG
+            else if (e.Tag == "2800a79650") { id = 2202; } // TAG
             //else if (e.Tag == "") { id = 0; } // TAG
             //else if (e.Tag == "") { id = 0; } // TAG
-            //else if (e.Tag == "") { id = 0; } // TAG
-            //foreach (Tram t in administratie.Trams)
-            //{
-            //    if (t.Id == id)
-            //    {
-            //        SorteerTram(t);
-            //    }
-            //}
+            foreach (Tram t in administratie.Trams)
+            {
+                if (t.Id == id)
+                {
+                    SorteerTram(t);
+                }
+            }
         }
 
         private void rfid_TagLost(object sender, TagEventArgs e)
@@ -200,7 +219,7 @@ namespace ICT4Rails
                         Label label = new Label();
                         label.Anchor = System.Windows.Forms.AnchorStyles.None;
                         label.AutoSize = true;
-                        label.Click += new EventHandler(label_Click);
+                        //label.Click += new EventHandler(label_Click);
                         label.Name = "label" + Convert.ToString(labelCount);
                         label.Tag = Convert.ToString(x) + ", " + Convert.ToString(y);
                         label.Text = ""; //"20" + Convert.ToString(x); // + ", " + Convert.ToString(y);
@@ -280,42 +299,42 @@ namespace ICT4Rails
         }
 
         //de methode die aangeroepen wordt als er op een label geklikt wordt
-        private void label_Click(object sender, EventArgs ee)
-        {
-            Label label = (Label)sender;
-            if (label.Text != "")
-            {
-                foreach (Tram t in administratie.Trams)
-                {
-                    if (Convert.ToString(t.Id) == label.Text)
-                    {
-                        for (int spoor = 0; spoor < Sporen.Length; spoor++)
-                        {
-                            if (Sporen[spoor] != null)
-                            {
-                                for (int sector = 1; sector < Sporen[spoor].Length; sector++)
-                                {
-                                    if (Sporen[spoor][sector] == label)
-                                    {
-                                        this.tabcontrolRemise.SelectedTab = tabpageRemiseBeheer;
-                                        tbxRemiseBeheerTramNummer.Text = Convert.ToString(t.Id);
-                                        cbxRemisebeheerTrambeheerLijn.Text = Convert.ToString(t.Lijn);
-                                        //tbxRemiseBeheerTramType.SelectedItem = 
-                                        //moet nog een methode toegevoegd worden om alle bestaande types uit de db te halen
-                                        tbxRemiseBeheerSpoorBeheerSpoorNummer.Text = Convert.ToString(spoor);
-                                        tbxRemiseBeheerSpoorBeheerSectorNummer.Text = Convert.ToString(sector);
-                                        tbxRemiseBeheerSpoorBeheerTramNummer.Text = Convert.ToString(t.Id);
-                                        tbxStatusbeheerTramNummer.Text = Convert.ToString(t.Id);
+        //private void label_Click(object sender, EventArgs e)
+        //{
+        //    Label label = (Label)sender;
+        //    if (label.Text != "")
+        //    {
+        //        foreach (Tram t in administratie.Trams)
+        //        {
+        //            if (Convert.ToString(t.Id) == label.Text)
+        //            {
+        //                for (int spoor = 0; spoor < Sporen.Length; spoor++)
+        //                {
+        //                    if (Sporen[spoor] != null)
+        //                    {
+        //                        for (int sector = 1; sector < Sporen[spoor].Length; sector++)
+        //                        {
+        //                            if (Sporen[spoor][sector] == label)
+        //                            {
+        //                                this.tabcontrolRemise.SelectedTab = tabpageRemiseBeheer;
+        //                                tbxRemiseBeheerTramNummer.Text = Convert.ToString(t.Id);
+        //                                cbxRemisebeheerTrambeheerLijn.Text = Convert.ToString(t.Lijn);
+        //                                //tbxRemiseBeheerTramType.SelectedItem = 
+        //                                //moet nog een methode toegevoegd worden om alle bestaande types uit de db te halen
+        //                                tbxRemiseBeheerSpoorBeheerSpoorNummer.Text = Convert.ToString(spoor);
+        //                                tbxRemiseBeheerSpoorBeheerSectorNummer.Text = Convert.ToString(sector);
+        //                                tbxRemiseBeheerSpoorBeheerTramNummer.Text = Convert.ToString(t.Id);
+        //                                tbxStatusbeheerTramNummer.Text = Convert.ToString(t.Id);
 
-                                        cbxRemiseBeheerTramType.DataSource = administratie.GetTypes();
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
+        //                                cbxRemiseBeheerTramType.DataSource = administratie.GetTypes();
+        //                            }
+        //                        }
+        //                    }
+        //                }
+        //            }
+        //        }
+        //    }
+        //}
 
         // Deze methode is er zodat de onderstaande code niet nog langer wordt
         private Label GetLabel(int x, int y)
@@ -420,6 +439,16 @@ namespace ICT4Rails
                                 else
                                 {
                                     g.FillRectangle(Brushes.LightGray, r);
+                                    foreach (Spoor s in administratie.Sporen)
+                                    {
+                                        if (s.Spoornummer == spoor && s.Sectornummer == sector && s.Beschikbaar == false)
+                                        {
+                                            l.Text = " ";
+                                            g.DrawLine(Pens.Black, new Point(e.CellBounds.X, e.CellBounds.Y), new Point(e.CellBounds.X + e.CellBounds.Width, e.CellBounds.Y + e.CellBounds.Height));
+                                            g.DrawLine(Pens.Black, new Point(e.CellBounds.X, e.CellBounds.Y + e.CellBounds.Height), new Point(e.CellBounds.X + e.CellBounds.Width, e.CellBounds.Y));
+                                            break;
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -886,8 +915,17 @@ namespace ICT4Rails
                 }
             }
         }
+
         public void SorteerTram(Tram tram)
         {
+            foreach (Label l in tableLayoutPanel1.Controls)
+            {
+                if (l.Text == Convert.ToString(tram.Id))
+                {
+                    l.Text = "";
+                    return;
+                }
+            }
             for (int lijn = 0; lijn < Lijnen.Length; lijn++)
             {
                 if (tram.Lijn == Lijnen[lijn][0])
@@ -1097,8 +1135,41 @@ namespace ICT4Rails
 
         private void tableLayoutPanel1_MouseClick(object sender, MouseEventArgs e)
         {
-            Point point = new Point(e.Location.X, e.Location.Y);
-            Point? labelPoint = administratie.GetRowColIndex(tableLayoutPanel1, point);
+            Point? labelPoint = administratie.GetRowColIndex(tableLayoutPanel1, (new Point(e.Location.X, e.Location.Y)));
+            if (labelPoint == null) { return; }
+            Label label = GetLabel(labelPoint.Value.X, labelPoint.Value.Y);
+            if (label == null) { MessageBox.Show("Geen geldige sector"); return; }
+            for (int spoor = 0; spoor < Sporen.Length; spoor++)
+            {
+                if (Sporen[spoor] != null)
+                {
+                    for (int sector = 1; sector < Sporen[spoor].Length; sector++)
+                    {
+                        if (Sporen[spoor][sector] != null)
+                        {
+                            if (Sporen[spoor][sector] == label)
+                            {
+                                foreach (Spoor s in administratie.Sporen)
+                                {
+                                    if (s.Spoornummer == spoor && s.Sectornummer == sector)
+                                    {
+                                        if (s.Beschikbaar)
+                                        {
+                                            s.Beschikbaar = false;
+                                        }
+                                        else
+                                        {
+                                            s.Beschikbaar = true;
+                                        }
+                                        tableLayoutPanel1.Refresh();
+                                        return;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         private void lB_RemisebeheerSpoorlijst_SelectedIndexChanged(object sender, EventArgs e)
