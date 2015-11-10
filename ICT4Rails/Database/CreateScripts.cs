@@ -26,6 +26,8 @@ namespace ICT4Rails
             
             int id = Convert.ToInt32(reader["ID"]);
             var medewerkerid = reader["MedewerkerID"];
+            var starttijd = reader["Starttijd"];
+            var eindtijd = reader["Eindtijd"];
             int tram = Convert.ToInt32(reader["TramnummerID"]);
             string soort = Convert.ToString(reader["Soort"]);
             string opmerking = Convert.ToString(reader["Opmerking"]);
@@ -41,10 +43,10 @@ namespace ICT4Rails
             }
             Onderhoud onderhoud;
             
-            if(medewerkerid != null)
+            if(medewerkerid != DBNull.Value && starttijd != DBNull.Value && eindtijd != DBNull.Value)
             {
-                DateTime starttijd = Convert.ToDateTime( reader["Starttijd"]);
-                DateTime eindtijd = Convert.ToDateTime( reader["Eindtijd"]);
+                DateTime Starttijd = Convert.ToDateTime(starttijd);
+                DateTime Eindtijd = Convert.ToDateTime(eindtijd);
                 
                 foreach (Medewerker m in medewerkers)
                 {
@@ -56,7 +58,7 @@ namespace ICT4Rails
                 }
 
 
-                onderhoud = new Onderhoud(id, me, tr, starttijd, eindtijd, opmerking, soort);
+                onderhoud = new Onderhoud(id, me, tr, Starttijd, Eindtijd, opmerking, soort);
             }
             else
             {

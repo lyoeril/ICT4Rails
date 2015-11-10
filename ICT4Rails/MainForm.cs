@@ -1129,8 +1129,27 @@ namespace ICT4Rails
 
         private void tableLayoutPanel1_MouseClick(object sender, MouseEventArgs e)
         {
-            Point point = new Point(e.Location.X, e.Location.Y);
-            Point? labelPoint = administratie.GetRowColIndex(tableLayoutPanel1, point);
+            Point? labelPoint = administratie.GetRowColIndex(tableLayoutPanel1, (new Point(e.Location.X, e.Location.Y)));
+            Label label = null;
+
+            if (labelPoint != null)
+            {
+                label = GetLabel(labelPoint.Value.X, labelPoint.Value.Y);
+            }
+            else
+            {
+                MessageBox.Show("Dit is geen selecteerbaar object!");
+            }
+            
+            if (label != null)
+            {
+                label.Text = "test";
+            }
+            else
+            {
+                MessageBox.Show("Object niet gevonden!");
+            }
+
         }
 
         private void lB_RemisebeheerSpoorlijst_SelectedIndexChanged(object sender, EventArgs e)
