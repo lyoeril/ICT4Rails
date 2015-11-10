@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Drawing;
 
 namespace ICT4Rails
 {
@@ -328,6 +330,35 @@ namespace ICT4Rails
         public List<Status> GetAllStatus()
         {
             return data.GetAllStatus();
+        }
+
+        public Point? GetRowColIndex(TableLayoutPanel tlp, Point point)
+        {
+            if (point.X > tlp.Width || point.Y > tlp.Height)
+            {
+                return null;
+            }
+
+            int w = tlp.Width;
+            int h = tlp.Height;
+            int[] widths = tlp.GetColumnWidths();
+
+            int i;
+            for (i = widths.Length - 1; i >= 0 && point.X < w; i--)
+            {
+                w -= widths[i];
+            }
+            int col = i + 1;
+
+            int[] heights = tlp.GetRowHeights();
+
+            for (i = heights.Length - 1; i >= 0 && point.Y < h; i--)
+            {
+                h -= heights[i];
+            }
+            int row = i + 1;
+
+            return new Point(col, row);
         }
     }
 }
