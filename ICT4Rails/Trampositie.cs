@@ -17,8 +17,8 @@ namespace ICT4Rails
         public int Id { get { return id; } }
         public Spoor Spoor { get { return spoor; } }
         public Tram Tram { get { return tram; } }
-        public DateTime Aankomstijd { get { return aankomstijd; } set { vertrektijd = value; } }
-        public DateTime Vertrektijd { get { return vertrektijd;} }
+        public DateTime Aankomstijd { get { return aankomstijd; } }
+        public DateTime Vertrektijd { get { return vertrektijd; } set { vertrektijd = value; } }
 
         public Trampositie(int id, Spoor spoor, Tram tram, DateTime aankomstijd, DateTime vertrektijd)
         {

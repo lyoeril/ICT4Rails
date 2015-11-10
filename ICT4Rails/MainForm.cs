@@ -77,18 +77,37 @@ namespace ICT4Rails
         private void rfid_Tag(object sender, TagEventArgs e)
         {
             rfid.LED = true;
-            //int id = 0;
-            //if (e.Tag == "") { id = 0; } // TAG
+
+            if (e.Tag == "2200c77481") // Gele cirkel
+            {
+                foreach (Spoor s in administratie.Sporen)
+                {
+                    if (s.Spoornummer == 52 && s.Sectornummer == 4)
+                    {
+                        if (s.Beschikbaar)
+                        {
+                            s.Beschikbaar = false;
+                        }
+                        else
+                        {
+                            s.Beschikbaar = true;
+                        }
+                        tableLayoutPanel1.Refresh();
+                    }
+                }
+            }
+            int id = 0;
+            if (e.Tag == "2300fb7939") { id = 2201; } // TAG
+            else if (e.Tag == "2800a79650") { id = 2202; } // TAG
             //else if (e.Tag == "") { id = 0; } // TAG
             //else if (e.Tag == "") { id = 0; } // TAG
-            //else if (e.Tag == "") { id = 0; } // TAG
-            //foreach (Tram t in administratie.Trams)
-            //{
-            //    if (t.Id == id)
-            //    {
-            //        SorteerTram(t);
-            //    }
-            //}
+            foreach (Tram t in administratie.Trams)
+            {
+                if (t.Id == id)
+                {
+                    SorteerTram(t);
+                }
+            }
         }
 
         private void rfid_TagLost(object sender, TagEventArgs e)
@@ -280,7 +299,7 @@ namespace ICT4Rails
         }
 
         //de methode die aangeroepen wordt als er op een label geklikt wordt
-        private void label_Click(object sender, EventArgs ee)
+        private void label_Click(object sender, EventArgs e)
         {
             Label label = (Label)sender;
             if (label.Text != "")
@@ -421,6 +440,16 @@ namespace ICT4Rails
                                 else
                                 {
                                     g.FillRectangle(Brushes.LightGray, r);
+                                    foreach (Spoor s in administratie.Sporen)
+                                    {
+                                        if (s.Spoornummer == spoor && s.Sectornummer == sector && s.Beschikbaar == false)
+                                        {
+                                            l.Text = " ";
+                                            g.DrawLine(Pens.Black, new Point(e.CellBounds.X, e.CellBounds.Y), new Point(e.CellBounds.X + e.CellBounds.Width, e.CellBounds.Y + e.CellBounds.Height));
+                                            g.DrawLine(Pens.Black, new Point(e.CellBounds.X, e.CellBounds.Y + e.CellBounds.Height), new Point(e.CellBounds.X + e.CellBounds.Width, e.CellBounds.Y));
+                                            break;
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -944,6 +973,14 @@ namespace ICT4Rails
         }
         public void SorteerTram(Tram tram)
         {
+            foreach (Label l in tableLayoutPanel1.Controls)
+            {
+                if (l.Text == Convert.ToString(tram.Id))
+                {
+                    l.Text = "";
+                    return;
+                }
+            }
             for (int lijn = 0; lijn < Lijnen.Length; lijn++)
             {
                 if (tram.Lijn == Lijnen[lijn][0])
@@ -981,11 +1018,6 @@ namespace ICT4Rails
                     }
                 }
             }
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void Check_Click_1(object sender, EventArgs e)
