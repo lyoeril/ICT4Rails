@@ -965,11 +965,6 @@ namespace ICT4Rails
             }
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void Check_Click_1(object sender, EventArgs e)
         {
             bool gevonden = false;

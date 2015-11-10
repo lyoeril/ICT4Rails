@@ -113,6 +113,21 @@ namespace ICT4Rails
             return null;
         }
 
+        public Gebruiker FindGebruikerByName(string naam)
+        {
+            if (gebruikers != null)
+            {
+                foreach (Gebruiker g in gebruikers)
+                {
+                    if (g.GebruikersNaam == naam)
+                    {
+                        return g;
+                    }
+                }
+            }
+            return null;
+        }
+
         public bool ChangeGebruiker(Gebruiker gebruiker)
         {
             if (FindGebruiker(gebruiker.Medewerker_ID) != null)
