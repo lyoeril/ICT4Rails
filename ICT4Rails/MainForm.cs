@@ -1127,6 +1127,12 @@ namespace ICT4Rails
             tbxRemiseBeheerTramNummer.Text = tram.Id.ToString();
         }
 
+        private void tableLayoutPanel1_MouseClick(object sender, MouseEventArgs e)
+        {
+            Point point = new Point(e.Location.X, e.Location.Y);
+            Point? labelPoint = administratie.GetRowColIndex(tableLayoutPanel1, point);
+        }
+
         private void lB_RemisebeheerSpoorlijst_SelectedIndexChanged(object sender, EventArgs e)
         {
             Spoor spoor = lB_RemisebeheerSpoorlijst.SelectedItem as Spoor;
