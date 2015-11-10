@@ -37,7 +37,6 @@ namespace ICT4Rails
 
         public void RefreshClass()
         {
-            Database data = new Database();
             this.onderhoudslijst = data.GetAllOnderhoud();
             this.sporen = data.GetAllSporen();
             this.trams = data.GetAllTrams();
@@ -112,9 +111,6 @@ namespace ICT4Rails
             return null;
         }
 
-
-
-
         public bool ChangeGebruiker(Gebruiker gebruiker)
         {
             if (FindGebruiker(gebruiker.Medewerker_ID) != null)
@@ -135,8 +131,12 @@ namespace ICT4Rails
         }
         public bool ChangeMedewerker(Medewerker medewerker)
         {
-            // TO DO
-            throw new NotImplementedException();
+            if(FindMedewerker(medewerker.ID) != null)
+            {
+                data.UpdateMedewerker(medewerker);
+                return true;
+            }
+            return false;
         }
 
         public bool AddTram(Tram tram)
@@ -178,11 +178,23 @@ namespace ICT4Rails
                     throw new Exception("De onderhoudsbeurt bestaat al!");
                 }
             }
-            onderhoudslijst.Add(onderhoudsbeurt);
-            RefreshClass();
+            data.InsertOnderhoud(onderhoudsbeurt);
             return true;
         }
 
+        public bool UpdateOnderhoudsbeurt(Onderhoud onderhoudsbeurt)
+        {
+            // bij deze methode wordt er een nieuwe onderhoudsbeurt toegevoegd
+            foreach (Onderhoud Selected_Onderhoudsbeurt in onderhoudslijst)
+            {
+                if (onderhoudsbeurt == Selected_Onderhoudsbeurt)
+                {
+                    throw new Exception("De onderhoudsbeurt bestaat al!");
+                }
+            }
+            data.UpdateOnderhoud(onderhoudsbeurt);
+            return true;
+        }
         public bool RemoveOnderhoudsbeurt(Onderhoud onderhoudsbeurt)
         {
             // bij deze methode wordt er een nieuwe onderhoudsbeurt verwijderd
@@ -311,6 +323,11 @@ namespace ICT4Rails
         public void AddTramType(TramType type)
         {
             data.InsertTramType(type);
+        }
+
+        public List<Status> GetAllStatus()
+        {
+            return data.GetAllStatus();
         }
     }
 }

@@ -13,11 +13,13 @@ namespace ICT4Rails
     public partial class LoginForm : Form
     {
         Administratie administratie;
+        ConducteurForm conducteur;
 
         public LoginForm()
         {
             InitializeComponent();
             administratie = new Administratie();
+            conducteur = new ConducteurForm();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -59,6 +61,11 @@ namespace ICT4Rails
                 this.Show();
                 Program.loggedIn = null;
             }
+        }
+
+        private void btnConducteurFormShow_Click(object sender, EventArgs e)
+        {
+            conducteur.Show();
         }
     }
 }

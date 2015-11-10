@@ -96,25 +96,40 @@ namespace ICT4Rails
             {
                 try
                 {
-                    string Insert = 
+                    if (onderhoud.Medewerker == null)
+                    {
+                        string Insert =
+                        "INSERT INTO ONDERHOUD(ID, TramnummerID, Soort, Opmerking)" +
+                        " VALUES (seq_Onderhoud_ID.nextval, :TRAMNUMMERID, :SOORT, :OPMERKING)";
+                        using (OracleCommand command = new OracleCommand(Insert, connection))
+                        {
+                            command.Parameters.Add(new OracleParameter("TRAMNUMMERID", onderhoud.Tram.Id));
+                            command.Parameters.Add(new OracleParameter("SOORT", onderhoud.Soort));
+                            command.Parameters.Add(new OracleParameter("OPMERKING", onderhoud.Opmerking));
+                            command.ExecuteNonQuery();
+                        }
+                    }
+                    else
+                    {
+                        string Insert =
                         "INSERT INTO ONDERHOUD(ID, MedewerkerID, TramnummerID, Opmerking, Soort, Starttijd, Eindtijd)" +
                         " VALUES (seq_Onderhoud_ID.nextval, :MEDEWERKERID, :TRAMNUMMERID, :OPMERKING,:SOORT,:STARTTIJD,:EINDTIJD)";
-                    using (OracleCommand command = new OracleCommand(Insert, connection))
-                    {
-                        command.Parameters.Add(new OracleParameter("MEDEWERKERID", onderhoud.Medewerker.ID));
-                        command.Parameters.Add(new OracleParameter("TRAMNUMMERID", onderhoud.Tram.Id));
-                        command.Parameters.Add(new OracleParameter("OPMERKING", onderhoud.Opmerking));
-                        command.Parameters.Add(new OracleParameter("SOORT", onderhoud.Soort));
-                        command.Parameters.Add(new OracleParameter("STARTTIJD", onderhoud.Starttijd));
-                        command.Parameters.Add(new OracleParameter("EINDTIJD", onderhoud.Eindtijd));
-                        command.ExecuteNonQuery();
+                        using (OracleCommand command = new OracleCommand(Insert, connection))
+                        {
+                            command.Parameters.Add(new OracleParameter("MEDEWERKERID", onderhoud.Medewerker.ID));
+                            command.Parameters.Add(new OracleParameter("TRAMNUMMERID", onderhoud.Tram.Id));
+                            command.Parameters.Add(new OracleParameter("OPMERKING", onderhoud.Opmerking));
+                            command.Parameters.Add(new OracleParameter("SOORT", onderhoud.Soort));
+                            command.Parameters.Add(new OracleParameter("STARTTIJD", onderhoud.Starttijd));
+                            command.Parameters.Add(new OracleParameter("EINDTIJD", onderhoud.Eindtijd));
+                            command.ExecuteNonQuery();
+                        }
                     }
                 }
                 catch (OracleException oexc)
                 {
                     Console.WriteLine(oexc.Message);
                 }
-                
             }
         }
 
