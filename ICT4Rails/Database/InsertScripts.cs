@@ -61,19 +61,13 @@ namespace ICT4Rails
         {
             using (OracleConnection connection = Connection)
             {
-                string insert = "insert into tram (ID, TYPENAAM, STATUSNAAM, LIJN, BESCHIKBAAR) values(:TRAMID, :TYPENAAM, :STATUSNAAM, :LIJN, :BESCHIKBAAR)";
+                string insert = "insert into tram (ID, TYPENAAM, STATUSNAAM, LIJN) values(:TRAMID, :TYPENAAM, :STATUSNAAM, :LIJN)";
                 using (OracleCommand command = new OracleCommand(insert, connection))
                 {
                     command.Parameters.Add(new OracleParameter("TRAMID", tram.Id));
                     command.Parameters.Add(new OracleParameter("TYPENAAM", tram.Type.Naam));
                     command.Parameters.Add(new OracleParameter("STATUSNAAM", tram.Status.Naam));
                     command.Parameters.Add(new OracleParameter("LIJN", tram.Lijn));
-                    char beschikbaar = 'N';
-                    if (tram.Beschikbaar)
-                    {
-                        beschikbaar = 'Y';
-                    }
-                    command.Parameters.Add(new OracleParameter("BESCHIKBAAR", beschikbaar));
                     command.ExecuteNonQuery();
                 }
             }

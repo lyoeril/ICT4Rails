@@ -35,7 +35,7 @@ namespace ICT4Rails
             List<Trampositie> trampositielijst = new List<Trampositie>();
             using (OracleConnection connection = Connection)
             {
-                string query = "SELECT * FROM ONDERHOUD Order by Id";
+                string query = "SELECT * FROM TRAMPOSITIE Order by Id";
                 using (OracleCommand command = new OracleCommand(query, connection))
                 {
                     List<Tram> tramlijst = GetAllTrams();
@@ -57,7 +57,7 @@ namespace ICT4Rails
             List<Onderhoud> Onderhoudslijst = new List<Onderhoud>();
             using (OracleConnection connection = Connection)
             {
-                string query = "SELECT * FROM ONDERHOUD Order by Id";
+                string query = "SELECT * FROM ONDERHOUD Order by soort,id";
                 using (OracleCommand command = new OracleCommand(query, connection))
                 {
                     using (OracleDataReader reader = command.ExecuteReader())
@@ -79,7 +79,7 @@ namespace ICT4Rails
             List<Tram> Trams = new List<Tram>();
             using (OracleConnection connection = Connection)
             {
-                string query = "SELECT * FROM TRAM";
+                string query = "SELECT * FROM TRAM order by lijn, id";
                 using (OracleCommand command = new OracleCommand(query, connection))
                 {
                     using (OracleDataReader reader = command.ExecuteReader())
@@ -141,7 +141,7 @@ namespace ICT4Rails
             List<Gebruiker> Gebruikers = new List<Gebruiker>();
             using (OracleConnection connection = Connection)
             {
-                string query = "SELECT * FROM GEBRUIKER";
+                string query = "SELECT * FROM GEBRUIKER order by MedewerkerID";
                 using (OracleCommand command = new OracleCommand(query, connection))
                 {
                     using (OracleDataReader reader = command.ExecuteReader())
@@ -161,7 +161,7 @@ namespace ICT4Rails
             List<Spoor> Sporen = new List<Spoor>();
             using (OracleConnection connection = Connection)
             {
-                string query = "SELECT * FROM SPOOR";
+                string query = "SELECT * FROM SPOOR order by spoornummer,spoorsector";
                 using (OracleCommand command = new OracleCommand(query, connection))
                 {
                     using (OracleDataReader reader = command.ExecuteReader())
@@ -181,7 +181,7 @@ namespace ICT4Rails
             List<Reservering> Reserveringen = new List<Reservering>();
             using (OracleConnection connection = Connection)
             {
-                string query = "SELECT * FROM Reservering";
+                string query = "SELECT * FROM Reservering order by actief, datum, id";
                 using (OracleCommand command = new OracleCommand(query, connection))
                 {
                     using (OracleDataReader reader = command.ExecuteReader())

@@ -69,8 +69,6 @@
             this.btn_RefreshList2 = new System.Windows.Forms.Button();
             this.tB_Statusbeheer_Opmerking = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.lblOnderhoudSoort = new System.Windows.Forms.Label();
-            this.cbxOnderhoudSoort = new System.Windows.Forms.ComboBox();
             this.btnOnderhoudBevestiging = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.grbTramStatus = new System.Windows.Forms.GroupBox();
@@ -601,8 +599,6 @@
             this.gB_OnderhoudInvoeren.Controls.Add(this.btn_RefreshList2);
             this.gB_OnderhoudInvoeren.Controls.Add(this.tB_Statusbeheer_Opmerking);
             this.gB_OnderhoudInvoeren.Controls.Add(this.label6);
-            this.gB_OnderhoudInvoeren.Controls.Add(this.lblOnderhoudSoort);
-            this.gB_OnderhoudInvoeren.Controls.Add(this.cbxOnderhoudSoort);
             this.gB_OnderhoudInvoeren.Controls.Add(this.btnOnderhoudBevestiging);
             this.gB_OnderhoudInvoeren.Controls.Add(this.label10);
             this.gB_OnderhoudInvoeren.Location = new System.Drawing.Point(390, 4);
@@ -662,29 +658,6 @@
             this.label6.Size = new System.Drawing.Size(61, 13);
             this.label6.TabIndex = 15;
             this.label6.Text = "Opmerking:";
-            // 
-            // lblOnderhoudSoort
-            // 
-            this.lblOnderhoudSoort.AutoSize = true;
-            this.lblOnderhoudSoort.Location = new System.Drawing.Point(8, 60);
-            this.lblOnderhoudSoort.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblOnderhoudSoort.Name = "lblOnderhoudSoort";
-            this.lblOnderhoudSoort.Size = new System.Drawing.Size(35, 13);
-            this.lblOnderhoudSoort.TabIndex = 14;
-            this.lblOnderhoudSoort.Text = "Soort:";
-            // 
-            // cbxOnderhoudSoort
-            // 
-            this.cbxOnderhoudSoort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxOnderhoudSoort.FormattingEnabled = true;
-            this.cbxOnderhoudSoort.Items.AddRange(new object[] {
-            "Schoonmaak",
-            "Defect"});
-            this.cbxOnderhoudSoort.Location = new System.Drawing.Point(125, 54);
-            this.cbxOnderhoudSoort.Margin = new System.Windows.Forms.Padding(2);
-            this.cbxOnderhoudSoort.Name = "cbxOnderhoudSoort";
-            this.cbxOnderhoudSoort.Size = new System.Drawing.Size(116, 21);
-            this.cbxOnderhoudSoort.TabIndex = 13;
             // 
             // btnOnderhoudBevestiging
             // 
@@ -1425,8 +1398,6 @@
         private System.Windows.Forms.GroupBox gB_OnderhoudInvoeren;
         private System.Windows.Forms.TextBox tB_Statusbeheer_Opmerking;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label lblOnderhoudSoort;
-        private System.Windows.Forms.ComboBox cbxOnderhoudSoort;
         private System.Windows.Forms.Button btnOnderhoudBevestiging;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ListBox lB_Onderhoud_Trams;

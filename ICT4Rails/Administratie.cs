@@ -291,10 +291,10 @@ namespace ICT4Rails
                         {
                             tram.Status = status;
                             data.UpdateTram(tram);
+                            RefreshClass();
                         }
                     }
-                    data.UpdateTram(tram);
-                    RefreshClass();
+                    
                 }
             }
 

@@ -156,6 +156,7 @@ namespace ICT4Rails
                         tabcontrolRemise.TabPages.Insert(0, tabpageStatusBeheer);
                         tabcontrolRemise.TabPages.Remove(tabpageAccountBeheer);
                         tabcontrolRemise.TabPages.Remove(tabpageOnderhoud);
+                        tabpageOnderhoud.Text = "Reparatie";
                     }
                     else if (medewerker.Functie == "SCHOONMAAK")
                     {
@@ -164,6 +165,7 @@ namespace ICT4Rails
                         tabcontrolRemise.TabPages.Remove(tabpageStatusBeheer);
                         tabcontrolRemise.TabPages.Remove(tabpageAccountBeheer);
                         tabcontrolRemise.TabPages.Insert(0, tabpageOnderhoud);
+                        tabpageOnderhoud.Text = "Schoonmaak";
                     }
                     else if (medewerker.Functie == "WAGENPARKBEHEERDER")
                     {
@@ -172,6 +174,7 @@ namespace ICT4Rails
                         tabcontrolRemise.TabPages.Insert(2, tabpageStatusBeheer);
                         tabcontrolRemise.TabPages.Remove(tabpageAccountBeheer);
                         tabcontrolRemise.TabPages.Remove(tabpageOnderhoud);
+
                     }
                     else
                     {
@@ -878,7 +881,7 @@ namespace ICT4Rails
             cbxOnderhoudMedewerker.Items.Clear();
             foreach (Medewerker m in administratie.Medewerkers)
             {
-                cbxOnderhoudMedewerker.Items.Add(m);
+                cbxOnderhoudMedewerker.Items.Add(m.Naam);
             }
 
             cbxRemiseBeheerTramType.Items.Clear();
@@ -1026,8 +1029,17 @@ namespace ICT4Rails
                 int onderhoudsid = Convert.ToInt32(nUd_Onderhoud_Onderhoudsid.Value);
                 DateTime starttijd = Convert.ToDateTime(dtpOnderhoudStarttijd.Value);
                 DateTime eindtijd = Convert.ToDateTime(dtpOnderhoudEindtijd.Value);
-                Medewerker m = cbxOnderhoudMedewerker.SelectedItem as Medewerker;
+                string medewerker = cbxOnderhoudMedewerker.SelectedItem.ToString();
+                Medewerker m = null;
                 //geen schoonmaak voor tram 2x toevoegen, net als reparatie;
+                foreach(Medewerker mede in administratie.Medewerkers)
+                {
+                    if(medewerker == mede.Naam)
+                    {
+                        m = mede;
+                        break;
+                    }
+                }
                 foreach (Onderhoud o in administratie.Onderhoudslijst)
                 {
                     if (o.ID == onderhoudsid)
@@ -1067,13 +1079,24 @@ namespace ICT4Rails
         {
             try
             {
-                string soort = cbxOnderhoudSoort.Text.ToUpper();
                 string opmerking = tB_Statusbeheer_Opmerking.Text;
                 foreach (Tram t in administratie.Trams)
                 {
                     if (t.Id == Convert.ToInt32(nUd_StatusbeheerTramnummer.Value))
                     {
-                        administratie.AddOnderhoudsbeurt(new Onderhoud(1, t, soort, opmerking));
+                        if(opmerking =="" || opmerking == null)
+                        {
+                            MessageBox.Show("Vul een opmerking in!");
+                        }
+                        else
+                        {
+                            administratie.AddOnderhoudsbeurt(new Onderhoud(1, t, t.Status.Naam, opmerking));
+                            MessageBox.Show("De onderhoud is toegevoegd.");
+                            VerversLijsten();
+                            nUd_StatusbeheerTramnummer.ResetText();
+                            tB_Statusbeheer_Opmerking.ResetText();
+                        }
+
                     }
                 }
             }
