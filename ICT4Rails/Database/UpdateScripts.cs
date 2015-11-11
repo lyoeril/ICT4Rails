@@ -80,6 +80,25 @@ namespace ICT4Rails
             }
         }
 
+        public void UpdateTrampositie(Trampositie trampositie)
+        {
+            string aankomstijd1 = trampositie.Aankomstijd.Day.ToString("00") + trampositie.Aankomstijd.Month.ToString("00") + trampositie.Aankomstijd.Year.ToString("0000") + " " + trampositie.Aankomstijd.Hour.ToString("00") + ":" + trampositie.Aankomstijd.Minute.ToString("00")+":"+ trampositie.Aankomstijd.Second.ToString("00");
+            string vertrektijd = trampositie.Vertrektijd.Day.ToString("00") + trampositie.Vertrektijd.Month.ToString("00") + trampositie.Vertrektijd.Year.ToString("0000") + " " + trampositie.Vertrektijd.Hour.ToString("00") + ":" + trampositie.Vertrektijd.Minute.ToString("00") + ":" + trampositie.Vertrektijd.Second.ToString("00");
+
+            using (OracleConnection connection = Connection)
+            {
+                string Update = "UPDATE TRAMPOSITIE SET Spoorid =:spnr, TRAMID =:tramid, AANKOMSTIJD =  TO_TIMESTAMP('" + aankomstijd1 + "','DDMMYYYY HH24:MI:SS'), VERTREKTIJD =  TO_TIMESTAMP('" + vertrektijd + "','DDMMYYYY HH24:MI:SS')  WHERE ID =:id";
+                using (OracleCommand command = new OracleCommand(Update, connection))
+                {
+                    command.Parameters.Add(new OracleParameter("spnr", trampositie.Spoor.Spoorid));
+                    command.Parameters.Add(new OracleParameter("tramid", trampositie.Tram.Id));
+                    
+                    command.Parameters.Add(new OracleParameter("id", trampositie.Id));
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
         public void UpdateOnderhoud(Onderhoud o)
         {
             using (OracleConnection connection = Connection)
