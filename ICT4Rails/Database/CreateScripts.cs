@@ -155,6 +155,7 @@ namespace ICT4Rails
             }
             
         }
+
         private Gebruiker CreateGebruikerFromReader(OracleDataReader reader)
         {
             return new Gebruiker(

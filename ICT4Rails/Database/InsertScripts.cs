@@ -72,6 +72,7 @@ namespace ICT4Rails
                 }
             }
         }
+
         public void InsertTramPositie(Trampositie trampositie)
         {
             using (OracleConnection connection = Connection)
@@ -87,6 +88,7 @@ namespace ICT4Rails
                 }
             }
         }
+
         public void InsertOnderhoud(Onderhoud onderhoud)
         {
             using (OracleConnection connection = Connection)
