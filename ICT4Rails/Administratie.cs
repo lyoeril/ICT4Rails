@@ -302,7 +302,7 @@ namespace ICT4Rails
 
         }
 
-        public void TramBewerken(int tramNummer, string typeNaam, string statusNaam, string lijn, bool beschikbaarheid)
+        public void TramBewerken(int tramNummer, string typeNaam, string statusNaam, string lijn)
         {
             TramType type = null;
             Status status = null;
@@ -325,7 +325,7 @@ namespace ICT4Rails
                 }
             }
 
-            Tram tram = new Tram(tramNummer, type, status, lijn, beschikbaarheid);
+            Tram tram = new Tram(tramNummer, type, status, lijn);
             data.UpdateTram(tram);
             RefreshClass();
         }
@@ -377,6 +377,12 @@ namespace ICT4Rails
             int row = i + 1;
 
             return new Point(col, row);
+        }
+
+        public List<Trampositie> GetTramPositie()
+        {
+            List<Trampositie> positie = data.GetAllTramposities();
+            return positie;
         }
     }
 }
