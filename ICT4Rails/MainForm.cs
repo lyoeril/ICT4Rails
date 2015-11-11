@@ -984,10 +984,9 @@ namespace ICT4Rails
                     if (Convert.ToString(tramp.Tram.Id) == l.Text)
                     {
                         l.Text = "";
-                        administratie.TramStatusVeranderen(tramp.Tram.Id, ""); //beschikbaar = n ?????
-                        //vertrektijd datetime.now
-                        //beschikbaar van sector = y
-                        //tramstatus naar dienst
+                        administratie.TramStatusVeranderen(tramp.Tram.Id, "DIENST");
+                        administratie.UpdateTramPositie(tramp.Spoor.Spoorid, tramp.Tram.Id, tramp.Aankomstijd, DateTime.Now);
+                        administratie.UpdateSpoor(tramp.Spoor.Spoorid, tramp.Spoor.Sectornummer, true);
                         return;
                     }
                 }

@@ -384,5 +384,15 @@ namespace ICT4Rails
             List<Trampositie> positie = data.GetAllTramposities();
             return positie;
         }
+
+        public void UpdateTramPositie(int spoorID, int tramID, DateTime aankomstTijd, DateTime vertrekTijd)
+        {
+            //
+        }
+
+        public void UpdateSpoor(int spoorID, int sectorNummer, bool beschikbaar)
+        {
+            //
+        }
     }
 }
