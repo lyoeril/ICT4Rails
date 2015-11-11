@@ -172,7 +172,7 @@ namespace ICT4Rails
                         tabcontrolRemise.TabPages.Insert(0, tabpageRemiseOverzicht);
                         tabcontrolRemise.TabPages.Insert(1, tabpageRemiseBeheer);
                         tabcontrolRemise.TabPages.Insert(2, tabpageStatusBeheer);
-                        tabcontrolRemise.TabPages.Remove(tabpageAccountBeheer);
+                        tabcontrolRemise.TabPages.Insert(3,tabpageAccountBeheer);
                         tabcontrolRemise.TabPages.Remove(tabpageOnderhoud);
 
                     }

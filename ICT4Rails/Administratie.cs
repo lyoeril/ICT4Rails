@@ -30,18 +30,12 @@ namespace ICT4Rails
 
         public Administratie()
         {
-            data = new Database();
-            this.gebruikers = data.GetAllGebruikers();
+            data = new Database(); 
+            RefreshClass();
             this.gebruikers.Add(new Gebruiker("", 0, ""));
-            this.medewerkers = data.GetAllMedewerkers();
-            this.onderhoudslijst = data.GetAllOnderhoud();
-            this.sporen = data.GetAllSporen();
-            this.trams = data.GetAllTrams();
-            this.statuslijst = data.GetAllStatus();
-            this.tramtypes = data.GetAllTramtypes();
         }
 
-        private void RefreshClass()
+        public void RefreshClass()
         {
             this.onderhoudslijst = data.GetAllOnderhoud();
             this.sporen = data.GetAllSporen();
