@@ -72,14 +72,17 @@ namespace ICT4Rails
                 }
             }
         }
-        public void InsertTramPositie(int spoorID, int tramID, DateTime aankomst, DateTime vertrek)
+        public void InsertTramPositie(Trampositie trampositie)
         {
             using (OracleConnection connection = Connection)
             {
                 //ID IN DE STRING MOET NOG TOEGEVOEGD WORDEN MAAR IDK OF DIT MET SEQUENCE KAN
-                string insert = "insert into trampositie (ID, SpoorID, TramID, AankomstTijd, VertrekTijd) values(ID, " + Convert.ToString(spoorID) + ", " + Convert.ToString(tramID) + ", " + Convert.ToString(aankomst) + ", " + Convert.ToString(vertrek) + ")";
+                string date = trampositie.Aankomstijd.Day.ToString("00") + trampositie.Aankomstijd.Month.ToString("00") + trampositie.Aankomstijd.Year.ToString("0000") + " " + trampositie.Aankomstijd.Hour.ToString("00") + ":" + trampositie.Aankomstijd.Minute.ToString("00") + ":" + trampositie.Aankomstijd.Second.ToString("00");
+                string insert = "insert into trampositie (ID, SpoorID, TramID, AankomstTijd) values(seq_Trampositie_ID.nextval, :SPOORID, :TRAMID, TO_TIMESTAMP('" + date + "','DDMMYYYY HH24:MI:SS'))";
                 using (OracleCommand command = new OracleCommand(insert, connection))
                 {
+                    command.Parameters.Add(new OracleParameter("SPOORID", trampositie.Spoor.Spoorid));
+                    command.Parameters.Add(new OracleParameter("TRAMID", trampositie.Tram.Id));
                     command.ExecuteNonQuery();
                 }
             }

@@ -464,11 +464,37 @@ namespace ICT4Rails
         public void UpdateTram(Tram tram)
         {
             data.UpdateTram(tram);
+            RefreshClass();
         }
 
-        public void AddTramPositie(Trampositie trampositie)
+        public void AddTramPositie(int spoorid, int tramid, DateTime aankomstijd)
         {
-            data.InsertTramPositie(trampositie.Spoor.Spoorid, trampositie.Tram.Id, trampositie.Aankomstijd, trampositie.Vertrektijd);
+            Spoor t_spoor = null;
+            foreach(Spoor spoor in Sporen)
+            {
+                if(spoor.Spoorid == spoorid)
+                {
+                    t_spoor = spoor;
+                    break;
+                }
+            }
+            Tram t_tram = null;
+            foreach(Tram tram in Trams)
+            {
+                if(tram.Id == tramid)
+                {
+                    t_tram = tram;
+                }
+            }
+            if(t_spoor == null)
+            {
+                throw new Exception("Het spoor is niet gevonden!");
+            }
+            if(t_tram == null)
+            {
+                throw new Exception("De tram is niet gevonden!");
+            }
+            data.InsertTramPositie(new Trampositie(0, t_spoor, t_tram, aankomstijd));
         }
     }
 }
