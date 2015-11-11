@@ -325,7 +325,7 @@ namespace ICT4Rails
                                 {
                                     foreach (Spoor s in administratie.Sporen)
                                     {
-                                        if (s.Spoorid == spoor)
+                                        if (s.Spoornummer == spoor)
                                         {
                                             if (s.Sectornummer == sector)
                                             {
@@ -348,7 +348,7 @@ namespace ICT4Rails
                                                 {
                                                     administratie.UpdateSpoor(spoor, sector, false);
                                                     administratie.UpdateTramPositie(oldPos.Id, oldPos.Spoor, oldPos.Tram, oldPos.Aankomstijd, DateTime.Now);
-                                                    administratie.AddTramPositie(administratie.Posities.Count + 1, s, sleepTram, DateTime.Now);
+                                                    administratie.AddTramPositie(s.Spoorid, sleepTram.Id, DateTime.Now);
                                                 }
                                                 else
                                                 {
@@ -578,7 +578,7 @@ namespace ICT4Rails
 
                                     foreach (Spoor s in administratie.Sporen)
                                     {
-                                        if (s.Spoorid == spoor)
+                                        if (s.Spoornummer == spoor)
                                         {
                                             if (s.Sectornummer == sector)
                                             {
@@ -685,6 +685,7 @@ namespace ICT4Rails
                         if (t.Id == Convert.ToInt32(tbxRemiseBeheerTramNummer.Text))
                         {
                             administratie.TramBewerken(Convert.ToInt32(tbxRemiseBeheerTramNummer.Text), type.Naam, "REMISE", cbxRemisebeheerTrambeheerLijn.SelectedItem.ToString());
+                            MessageBox.Show("De informatie van de tram is bewerkt");
                         }
                     }
                 }
@@ -693,8 +694,8 @@ namespace ICT4Rails
                     MessageBox.Show("Er is iets fout gegaan tijdens het bewerken van de tram, de bewerkingen zijn niet toegepast.");
                 }
             }
-            tbxRemiseBeheerTramNummer.Text = "";
-            cbxRemisebeheerTrambeheerLijn.Text = "";
+            tbxRemiseBeheerTramNummer.ResetText();
+            cbxRemisebeheerTrambeheerLijn.ResetText();
             cbxRemiseBeheerTramType.SelectedItem = null;
 
 
@@ -731,6 +732,7 @@ namespace ICT4Rails
                 tbxRemiseBeheerSpoorBeheerSpoorNummer.Enabled = true;
                 tbxRemiseBeheerSpoorBeheerSectorNummer.Enabled = true;
                 tbxRemiseBeheerSpoorBeheerTramNummer.Enabled = false;
+                btnRemiseBeheerSpoorBeheerBevestig.Text = "Verander";
                 dtp_datum_reservering.Enabled = false;
             }
             else if (cbxRemiseBeheerSpoorBeheerBewerking.SelectedItem.ToString() == "Reserveer")
@@ -738,41 +740,46 @@ namespace ICT4Rails
                 tbxRemiseBeheerSpoorBeheerSpoorNummer.Enabled = true;
                 tbxRemiseBeheerSpoorBeheerSectorNummer.Enabled = true;
                 tbxRemiseBeheerSpoorBeheerTramNummer.Enabled = true;
+                btnRemiseBeheerSpoorBeheerBevestig.Text = "Bevestig";
                 dtp_datum_reservering.Enabled = true;
             }
             btnRemiseBeheerSpoorBeheerBevestig.Enabled = true;
+            dtp_datum_reservering.ResetText();
         }
 
         private void btnRemiseBeheerSpoorBeheerBevestig_Click(object sender, EventArgs e)
         {
+            int spoornummer;
+            if (!int.TryParse(tbxRemiseBeheerSpoorBeheerSpoorNummer.Text, out spoornummer))
+            {
+                MessageBox.Show("Het spoornummer is niet correct ingevuld!");
+                return;
+            }
+            int spoorsector;
+            if (!int.TryParse(tbxRemiseBeheerSpoorBeheerSectorNummer.Text, out spoorsector))
+            {
+                MessageBox.Show("De spoorsector in niet correct ingevuld!");
+                return;
+            }
+
             if (cbxRemiseBeheerSpoorBeheerBewerking.SelectedItem.ToString() == "Blokkeer")
             {
-                foreach (Spoor s in administratie.Sporen)
+                try
                 {
-                    if (s.Spoornummer == Convert.ToInt32(tbxRemiseBeheerSpoorBeheerSpoorNummer.Text))
-                    {
-                        administratie.SpoorStatusVeranderen(s.Spoorid, Convert.ToInt32(tbxRemiseBeheerSpoorBeheerSpoorNummer.Text), Convert.ToInt32(tbxRemiseBeheerSpoorBeheerSectorNummer.Text), false);
-                        break;
-                    }
+                    administratie.SpoorStatusVeranderen(spoornummer, spoorsector);
+
                 }
+                catch(Exception en)
+                {
+                    MessageBox.Show(en.Message);
+                }
+                
 
             }
             else if (cbxRemiseBeheerSpoorBeheerBewerking.SelectedItem.ToString() == "Reserveer")
             {
                 try
                 {
-                    int spoornummer;
-                    if (!int.TryParse(tbxRemiseBeheerSpoorBeheerSpoorNummer.Text, out spoornummer))
-                    {
-                        MessageBox.Show("Het spoornummer is niet correct ingevuld!");
-                        return;
-                    }
-                    int spoorsector;
-                    if (!int.TryParse(tbxRemiseBeheerSpoorBeheerSectorNummer.Text, out spoorsector))
-                    {
-                        MessageBox.Show("De spoorsector in niet correct ingevuld!");
-                        return;
-                    }
                     int tramnummer;
                     if (!int.TryParse(tbxRemiseBeheerSpoorBeheerTramNummer.Text, out tramnummer))
                     {
@@ -1161,7 +1168,7 @@ namespace ICT4Rails
                         {
                             if (s == t.Spoor)
                             {
-                                administratie.UpdateSpoor(s.Spoorid, s.Sectornummer, true);
+                                administratie.UpdateSpoor(s.Spoornummer, s.Sectornummer, true);
                                 break;
                             }
                         }
@@ -1198,7 +1205,7 @@ namespace ICT4Rails
                             {
                                 foreach (Spoor sp in administratie.Sporen)
                                 {
-                                    if (sp.Spoorid == spoornummer)
+                                    if (sp.Spoornummer == spoornummer)
                                     {
                                         if (sp.Sectornummer == sector)
                                         {
@@ -1216,8 +1223,8 @@ namespace ICT4Rails
                                                     }
                                                 }
                                                 administratie.UpdateTram(tram);
-                                                administratie.UpdateSpoor(sp.Spoorid, sp.Sectornummer, false);
-                                                administratie.AddTramPositie(administratie.Posities.Count + 1, sp, tram, DateTime.Now);
+                                                administratie.UpdateSpoor(sp.Spoornummer, sp.Sectornummer, false);
+                                                administratie.AddTramPositie(sp.Spoorid, tram.Id, DateTime.Now);
                                                 return;
                                             }
                                         }
@@ -1263,7 +1270,7 @@ namespace ICT4Rails
             {
                 if (tp.Vertrektijd == null)
                 {
-                    Sporen[tp.Spoor.Spoorid][tp.Spoor.Sectornummer].Text = Convert.ToString(tp.Tram.Id);
+                    Sporen[tp.Spoor.Spoornummer][tp.Spoor.Sectornummer].Text = Convert.ToString(tp.Tram.Id);
                 }
             }
         }
@@ -1458,7 +1465,7 @@ namespace ICT4Rails
         private void lB_RemisebeheerSpoorlijst_SelectedIndexChanged(object sender, EventArgs e)
         {
             Spoor spoor = lB_RemisebeheerSpoorlijst.SelectedItem as Spoor;
-            tbxRemiseBeheerSpoorBeheerSpoorNummer.Text = spoor.Spoorid.ToString();
+            tbxRemiseBeheerSpoorBeheerSpoorNummer.Text = spoor.Spoornummer.ToString();
         }
 
         private void button1_Click_1(object sender, EventArgs e)

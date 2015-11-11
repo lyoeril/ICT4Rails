@@ -28,7 +28,13 @@ namespace ICT4Rails
             this.aankomstijd = aankomstijd;
             this.vertrektijd = vertrektijd;
         }
-
+        public Trampositie(int id, Spoor spoor, Tram tram, DateTime aankomstijd)
+        {
+            this.id = id;
+            this.spoor = spoor;
+            this.tram = tram;
+            this.aankomstijd = aankomstijd;
+        }
         public override string ToString()
         {
             string tramstr;

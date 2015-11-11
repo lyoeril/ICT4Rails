@@ -284,10 +284,30 @@ namespace ICT4Rails
             RefreshClass();
         }
 
-        public void SpoorStatusVeranderen(int id, int spoornr, int sectornr, bool beschikbaar)
+        public void SpoorStatusVeranderen(int spoornummer, int spoorsector)
         {
-            Spoor spoor = new Spoor(id, spoornr, sectornr, beschikbaar);
-            data.UpdateSpoor(spoor);
+            Spoor t_spoor = null;
+            foreach (Spoor spoor in Sporen)
+            {
+                if (spoornummer == spoor.Spoornummer && spoorsector == spoor.Sectornummer)
+                {
+                    t_spoor = spoor;
+                    if (t_spoor.Beschikbaar)
+                    {
+                        t_spoor.Beschikbaar = false;
+                    }
+                    else
+                    {
+                        t_spoor.Beschikbaar = true;
+                    }
+                    break;
+                }
+            }
+            if (t_spoor == null)
+            {
+                throw new Exception("Het spoor is niet gevonden!");
+            }
+            data.UpdateSpoor(t_spoor);
             RefreshClass();
         }
 
@@ -445,6 +465,38 @@ namespace ICT4Rails
         public void UpdateTram(Tram tram)
         {
             data.UpdateTram(tram);
+            RefreshClass();
+        }
+
+        public void AddTramPositie(int spoorid, int tramid, DateTime aankomstijd)
+        {
+            Spoor t_spoor = null;
+            foreach(Spoor spoor in Sporen)
+            {
+                if(spoor.Spoorid == spoorid)
+                {
+                    t_spoor = spoor;
+                    break;
+                }
+            }
+            Tram t_tram = null;
+            foreach(Tram tram in Trams)
+            {
+                if(tram.Id == tramid)
+                {
+                    t_tram = tram;
+                    break;
+                }
+            }
+            if(t_spoor == null)
+            {
+                throw new Exception("Het spoor is niet gevonden!");
+            }
+            if(t_tram == null)
+            {
+                throw new Exception("De tram is niet gevonden!");
+            }
+            data.InsertTramPositie(new Trampositie(0, t_spoor, t_tram, aankomstijd));
         }
     }
 }

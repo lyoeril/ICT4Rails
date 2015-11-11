@@ -123,7 +123,7 @@ namespace ICT4Rails
             int spoorid = Convert.ToInt32(reader["SPOORID"]);
             int tramid = Convert.ToInt32(reader["TRAMID"]);
             DateTime aankomstijd = Convert.ToDateTime(reader["AANKOMSTIJD"]);
-            DateTime vertrektijd = Convert.ToDateTime(reader["VERTREKTIJD"]);
+            var vertrektijd = reader["VERTREKTIJD"];
 
             Tram Tram = null;
             Spoor Spoor = null;
@@ -144,7 +144,16 @@ namespace ICT4Rails
                     break;
                 }
             }
-            return new Trampositie(id, Spoor, Tram, aankomstijd, vertrektijd);
+            if (vertrektijd == DBNull.Value)
+            {
+                return new Trampositie(id, Spoor, Tram, aankomstijd);
+            }
+            else
+            {
+                DateTime Vertrektijd = Convert.ToDateTime(vertrektijd);
+                return new Trampositie(id, Spoor, Tram, aankomstijd, Vertrektijd);
+            }
+            
         }
 
         private Gebruiker CreateGebruikerFromReader(OracleDataReader reader)
