@@ -20,6 +20,7 @@ namespace ICT4Rails
         private List<Status> statuslijst;
         private List<TramType> tramtypes;
         private List<Trampositie> posities;
+        private List<Reservering> reserveringen;
         private Database data;
 
         public List<Gebruiker> Gebruikers { get { return gebruikers; } }
@@ -30,7 +31,7 @@ namespace ICT4Rails
         public List<Status> Statuslijst { get { return statuslijst; } }
         public List<TramType> Tramtypes { get { return tramtypes; } }
         public List<Trampositie> Posities { get { return posities; } }
-
+        public List<Reservering> Reserveringen { get { return reserveringen; } }
         public Administratie()
         {
             data = new Database(); 
@@ -40,6 +41,7 @@ namespace ICT4Rails
 
         public void RefreshClass()
         {
+            this.reserveringen = data.GetAllReserveringen();
             this.onderhoudslijst = data.GetAllOnderhoud();
             this.sporen = data.GetAllSporen();
             this.trams = data.GetAllTrams();
@@ -271,6 +273,10 @@ namespace ICT4Rails
             if (t_spoor == null)
             {
                 throw new Exception("Het spoor is niet gevonden!");
+            }
+            if(t_spoor.Beschikbaar == false)
+            {
+                throw new Exception("Het spoor is niet beschikbaar!");
             }
             Reservering res = new Reservering(0, t_tram, t_spoor, datum, true);
             data.InsertReservering(res);

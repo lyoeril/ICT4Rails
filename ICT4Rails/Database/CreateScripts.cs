@@ -185,7 +185,7 @@ namespace ICT4Rails
             Spoor Spoor = null;
             foreach (Tram tram in trams)
             {
-                if (tram.Id == id)
+                if (tram.Id == tramid)
                 {
                     Tram = tram;
                     break;
@@ -193,7 +193,7 @@ namespace ICT4Rails
             }
             foreach (Spoor spoor in sporen)
             {
-                if (spoor.Spoornummer == spoorid)
+                if (spoor.Spoorid == spoorid)
                 {
                     Spoor = spoor;
                     break;
