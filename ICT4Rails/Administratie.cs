@@ -465,5 +465,10 @@ namespace ICT4Rails
         {
             data.UpdateTram(tram);
         }
+
+        public void AddTramPositie(Trampositie trampositie)
+        {
+            data.InsertTramPositie(trampositie.Spoor.Spoorid, trampositie.Tram.Id, trampositie.Aankomstijd, trampositie.Vertrektijd);
+        }
     }
 }
