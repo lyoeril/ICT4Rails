@@ -238,22 +238,39 @@ namespace ICT4Rails
             return false;
         }
 
-        public List<Onderhoud> GetOnderhoudslijst(string soort)
-        {
-            // bij deze methode wordt er een lijst geretourneerd gefiltert door een soort
-            return null;
-        }
-
-        public void OnderhoudsbeurtAfronden(DateTime starttijd, DateTime eindtijd)
-        {
-            //TO DO
-            // de onderhoudsbeurt wordt hier afgerond en de tramstatus wordt veranderd naar remise waardoor het een ander spoort krijgt toegewezen
-        }
-
-        public void SpoorReserveren()
+        public void SpoorReserveren(int spoornummer, int spoorsector, int tramid, DateTime datum)
         {
             // TO DO
             // hierbij word een reservering geplaatst tussen een tram en een spoor.
+            Tram t_tram = null;
+            foreach(Tram tram in Trams)
+            {
+                if (tram.Id == tramid)
+                {
+                    t_tram = tram;
+                    break;
+                }
+            }
+            if(t_tram == null)
+            {
+                throw new Exception("De tram is niet gevonden!");
+            }
+            Spoor t_spoor = null;
+            foreach(Spoor spoor in Sporen)
+            {
+                if(spoornummer == spoor.Spoornummer && spoorsector == spoor.Sectornummer)
+                {
+                    t_spoor = spoor;
+                    break;
+                }
+            }
+            if (t_spoor == null)
+            {
+                throw new Exception("Het spoor is niet gevonden!");
+            }
+            Reservering res = new Reservering(0, t_tram, t_spoor, datum, true);
+            data.InsertReservering(res);
+            RefreshClass();
         }
 
         public void SpoorStatusVeranderen(int id, int spoornr, int sectornr, bool beschikbaar)

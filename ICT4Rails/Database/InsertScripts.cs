@@ -44,14 +44,14 @@ namespace ICT4Rails
         }
         public void InsertReservering(Reservering reservering)
         {
+            string date = reservering.Datum.Day.ToString("00") + reservering.Datum.Month.ToString("00") + reservering.Datum.Year.ToString("0000");
             using (OracleConnection connection = Connection)
             {
-                string insert = "insert into reservering (ID, SpoorID, TramID, Datum) values(seq_Reservering_ID.nextval, :SPOORID, :DATUM)";
+                string insert = "insert into reservering (ID, SpoorID, TramID, Datum, ACTIEF) values(seq_Reservering_ID.nextval, :SPOORID, :TRAMID, TO_TIMESTAMP('" + date + "','DDMMYYYY') ,'Y')";
                 using (OracleCommand command = new OracleCommand(insert, connection))
                 {
                     command.Parameters.Add(new OracleParameter("SPOORID", reservering.Spoor.Spoorid));
                     command.Parameters.Add(new OracleParameter("TRAMID", reservering.Tram.Id));
-                    command.Parameters.Add(new OracleParameter("DATUM", reservering.Datum));
                     command.ExecuteNonQuery();
                 }
             }

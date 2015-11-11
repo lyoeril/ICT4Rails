@@ -123,6 +123,8 @@
             this.lblOnderhoudStarttijd = new System.Windows.Forms.Label();
             this.lblOnderhoudMedewerker = new System.Windows.Forms.Label();
             this.cbxOnderhoudMedewerker = new System.Windows.Forms.ComboBox();
+            this.dtp_datum_reservering = new System.Windows.Forms.DateTimePicker();
+            this.lbl_datum_reservering = new System.Windows.Forms.Label();
             this.tabcontrolRemise.SuspendLayout();
             this.tabpageRemiseOverzicht.SuspendLayout();
             this.tabpageRemiseBeheer.SuspendLayout();
@@ -244,7 +246,7 @@
             this.lB_RemisebeheerSpoorlijst.FormattingEnabled = true;
             this.lB_RemisebeheerSpoorlijst.Location = new System.Drawing.Point(894, 5);
             this.lB_RemisebeheerSpoorlijst.Name = "lB_RemisebeheerSpoorlijst";
-            this.lB_RemisebeheerSpoorlijst.Size = new System.Drawing.Size(512, 511);
+            this.lB_RemisebeheerSpoorlijst.Size = new System.Drawing.Size(512, 745);
             this.lB_RemisebeheerSpoorlijst.TabIndex = 9;
             // 
             // lB_RemisebeheerTramlijst
@@ -252,11 +254,13 @@
             this.lB_RemisebeheerTramlijst.FormattingEnabled = true;
             this.lB_RemisebeheerTramlijst.Location = new System.Drawing.Point(411, 5);
             this.lB_RemisebeheerTramlijst.Name = "lB_RemisebeheerTramlijst";
-            this.lB_RemisebeheerTramlijst.Size = new System.Drawing.Size(477, 511);
+            this.lB_RemisebeheerTramlijst.Size = new System.Drawing.Size(477, 745);
             this.lB_RemisebeheerTramlijst.TabIndex = 8;
             // 
             // grbRemiseBeheerSpoorBeheer
             // 
+            this.grbRemiseBeheerSpoorBeheer.Controls.Add(this.lbl_datum_reservering);
+            this.grbRemiseBeheerSpoorBeheer.Controls.Add(this.dtp_datum_reservering);
             this.grbRemiseBeheerSpoorBeheer.Controls.Add(this.tbxRemiseBeheerSpoorBeheerTramNummer);
             this.grbRemiseBeheerSpoorBeheer.Controls.Add(this.lblRemiseBeheerSpoorBeheerTramNummer);
             this.grbRemiseBeheerSpoorBeheer.Controls.Add(this.btnRemiseBeheerSpoorBeheerBevestig);
@@ -270,7 +274,7 @@
             this.grbRemiseBeheerSpoorBeheer.Margin = new System.Windows.Forms.Padding(2);
             this.grbRemiseBeheerSpoorBeheer.Name = "grbRemiseBeheerSpoorBeheer";
             this.grbRemiseBeheerSpoorBeheer.Padding = new System.Windows.Forms.Padding(2);
-            this.grbRemiseBeheerSpoorBeheer.Size = new System.Drawing.Size(402, 149);
+            this.grbRemiseBeheerSpoorBeheer.Size = new System.Drawing.Size(402, 174);
             this.grbRemiseBeheerSpoorBeheer.TabIndex = 7;
             this.grbRemiseBeheerSpoorBeheer.TabStop = false;
             this.grbRemiseBeheerSpoorBeheer.Text = "Spoorbeheer";
@@ -297,7 +301,7 @@
             // btnRemiseBeheerSpoorBeheerBevestig
             // 
             this.btnRemiseBeheerSpoorBeheerBevestig.Enabled = false;
-            this.btnRemiseBeheerSpoorBeheerBevestig.Location = new System.Drawing.Point(336, 118);
+            this.btnRemiseBeheerSpoorBeheerBevestig.Location = new System.Drawing.Point(335, 144);
             this.btnRemiseBeheerSpoorBeheerBevestig.Margin = new System.Windows.Forms.Padding(2);
             this.btnRemiseBeheerSpoorBeheerBevestig.Name = "btnRemiseBeheerSpoorBeheerBevestig";
             this.btnRemiseBeheerSpoorBeheerBevestig.Size = new System.Drawing.Size(62, 22);
@@ -351,7 +355,7 @@
             // lblRemiseBeheerSpoorBeheerSectorNummer
             // 
             this.lblRemiseBeheerSpoorBeheerSectorNummer.AutoSize = true;
-            this.lblRemiseBeheerSpoorBeheerSectorNummer.Location = new System.Drawing.Point(4, 74);
+            this.lblRemiseBeheerSpoorBeheerSectorNummer.Location = new System.Drawing.Point(4, 75);
             this.lblRemiseBeheerSpoorBeheerSectorNummer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRemiseBeheerSpoorBeheerSectorNummer.Name = "lblRemiseBeheerSpoorBeheerSectorNummer";
             this.lblRemiseBeheerSpoorBeheerSectorNummer.Size = new System.Drawing.Size(78, 13);
@@ -361,7 +365,7 @@
             // lblRemiseBeheerSpoorBeheerSpoorNummer
             // 
             this.lblRemiseBeheerSpoorBeheerSpoorNummer.AutoSize = true;
-            this.lblRemiseBeheerSpoorBeheerSpoorNummer.Location = new System.Drawing.Point(4, 51);
+            this.lblRemiseBeheerSpoorBeheerSpoorNummer.Location = new System.Drawing.Point(4, 52);
             this.lblRemiseBeheerSpoorBeheerSpoorNummer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRemiseBeheerSpoorBeheerSpoorNummer.Name = "lblRemiseBeheerSpoorBeheerSpoorNummer";
             this.lblRemiseBeheerSpoorBeheerSpoorNummer.Size = new System.Drawing.Size(75, 13);
@@ -377,7 +381,7 @@
             this.grbRemiseBeheerNieuwType.Controls.Add(this.lblRemiseBeheerNieuwTypeBeschrijving);
             this.grbRemiseBeheerNieuwType.Controls.Add(this.tbxRemiseBeheerNieuwTypeNaam);
             this.grbRemiseBeheerNieuwType.Controls.Add(this.lblRemiseBeheerNieuwTypeNaam);
-            this.grbRemiseBeheerNieuwType.Location = new System.Drawing.Point(4, 312);
+            this.grbRemiseBeheerNieuwType.Location = new System.Drawing.Point(4, 336);
             this.grbRemiseBeheerNieuwType.Margin = new System.Windows.Forms.Padding(2);
             this.grbRemiseBeheerNieuwType.Name = "grbRemiseBeheerNieuwType";
             this.grbRemiseBeheerNieuwType.Padding = new System.Windows.Forms.Padding(2);
@@ -1270,6 +1274,22 @@
             this.cbxOnderhoudMedewerker.Size = new System.Drawing.Size(120, 21);
             this.cbxOnderhoudMedewerker.TabIndex = 5;
             // 
+            // dtp_datum_reservering
+            // 
+            this.dtp_datum_reservering.Location = new System.Drawing.Point(120, 119);
+            this.dtp_datum_reservering.Name = "dtp_datum_reservering";
+            this.dtp_datum_reservering.Size = new System.Drawing.Size(277, 20);
+            this.dtp_datum_reservering.TabIndex = 14;
+            // 
+            // lbl_datum_reservering
+            // 
+            this.lbl_datum_reservering.AutoSize = true;
+            this.lbl_datum_reservering.Location = new System.Drawing.Point(4, 125);
+            this.lbl_datum_reservering.Name = "lbl_datum_reservering";
+            this.lbl_datum_reservering.Size = new System.Drawing.Size(41, 13);
+            this.lbl_datum_reservering.TabIndex = 15;
+            this.lbl_datum_reservering.Text = "Datum:";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1409,5 +1429,7 @@
         private System.Windows.Forms.GroupBox gB_Onderhoudslijst_TODO;
         private System.Windows.Forms.ListBox lB_Onderhoudslijst_TODO;
         private System.Windows.Forms.GroupBox gB_Onderhoudslijsthistorie;
+        private System.Windows.Forms.Label lbl_datum_reservering;
+        private System.Windows.Forms.DateTimePicker dtp_datum_reservering;
     }
 }

@@ -172,7 +172,7 @@ namespace ICT4Rails
                         tabcontrolRemise.TabPages.Insert(0, tabpageRemiseOverzicht);
                         tabcontrolRemise.TabPages.Insert(1, tabpageRemiseBeheer);
                         tabcontrolRemise.TabPages.Insert(2, tabpageStatusBeheer);
-                        tabcontrolRemise.TabPages.Insert(3,tabpageAccountBeheer);
+                        tabcontrolRemise.TabPages.Insert(3, tabpageAccountBeheer);
                         tabcontrolRemise.TabPages.Remove(tabpageOnderhoud);
 
                     }
@@ -578,76 +578,75 @@ namespace ICT4Rails
             if (cbxRemiseBeheerSpoorBeheerBewerking.SelectedItem.ToString() == "Blokkeer")
             {
                 tbxRemiseBeheerSpoorBeheerSpoorNummer.Enabled = true;
-                tbxRemiseBeheerSpoorBeheerSectorNummer.Enabled = false;
+                tbxRemiseBeheerSpoorBeheerSectorNummer.Enabled = true;
                 tbxRemiseBeheerSpoorBeheerTramNummer.Enabled = false;
+                dtp_datum_reservering.Enabled = false;
             }
             else if (cbxRemiseBeheerSpoorBeheerBewerking.SelectedItem.ToString() == "Reserveer")
             {
                 tbxRemiseBeheerSpoorBeheerSpoorNummer.Enabled = true;
                 tbxRemiseBeheerSpoorBeheerSectorNummer.Enabled = true;
                 tbxRemiseBeheerSpoorBeheerTramNummer.Enabled = true;
+                dtp_datum_reservering.Enabled = true;
             }
             btnRemiseBeheerSpoorBeheerBevestig.Enabled = true;
         }
 
         private void btnRemiseBeheerSpoorBeheerBevestig_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrWhiteSpace(cbxRemiseBeheerSpoorBeheerBewerking.Text) && !string.IsNullOrWhiteSpace(tbxRemiseBeheerSpoorBeheerSpoorNummer.Text) && !string.IsNullOrWhiteSpace(tbxRemiseBeheerSpoorBeheerSectorNummer.Text) && !string.IsNullOrWhiteSpace(tbxRemiseBeheerSpoorBeheerTramNummer.Text))
+            if (cbxRemiseBeheerSpoorBeheerBewerking.SelectedItem.ToString() == "Blokkeer")
             {
-                List<Spoor> sporen = administratie.Sporen;
-                string error = "";
-
-                if (cbxRemiseBeheerSpoorBeheerBewerking.SelectedItem.ToString() == "Blokkeer")
+                foreach (Spoor s in administratie.Sporen)
                 {
-                    error = "Dit spoor is al geblokkeerd!";
-
-                    foreach (Spoor s in sporen)
+                    if (s.Spoornummer == Convert.ToInt32(tbxRemiseBeheerSpoorBeheerSpoorNummer.Text))
                     {
-                        if (s.Spoornummer == Convert.ToInt32(tbxRemiseBeheerSpoorBeheerSpoorNummer.Text))
-                        {
-                            administratie.SpoorStatusVeranderen(s.Spoorid, Convert.ToInt32(tbxRemiseBeheerSpoorBeheerSpoorNummer.Text), Convert.ToInt32(tbxRemiseBeheerSpoorBeheerSectorNummer.Text), false);
-                            error = "";
-                            break;
-                        }
-                    }
-
-                    if (error != "")
-                    {
-                        MessageBox.Show(error);
-                    }
-                }
-                else if (cbxRemiseBeheerSpoorBeheerBewerking.SelectedItem.ToString() == "Reserveer")
-                {
-                    error = "Dit spoor is al gereserveerd!";
-                    foreach (Spoor s in sporen)
-                    {
-                        if (s.Spoornummer == Convert.ToInt32(tbxRemiseBeheerSpoorBeheerSpoorNummer.Text))
-                        {
-                            // Hier klopt niets van... je moet een reservering plaatsen niet het spoor beschikbaar maken of niet!
-                            administratie.SpoorStatusVeranderen(s.Spoorid, Convert.ToInt32(tbxRemiseBeheerSpoorBeheerSpoorNummer.Text), Convert.ToInt32(tbxRemiseBeheerSpoorBeheerSectorNummer.Text), false);
-                            error = "";
-                            break;
-                        }
-                    }
-
-                    if (error != "")
-                    {
-                        MessageBox.Show(error);
+                        administratie.SpoorStatusVeranderen(s.Spoorid, Convert.ToInt32(tbxRemiseBeheerSpoorBeheerSpoorNummer.Text), Convert.ToInt32(tbxRemiseBeheerSpoorBeheerSectorNummer.Text), false);
+                        break;
                     }
                 }
 
-                tbxRemiseBeheerSpoorBeheerSpoorNummer.Text = "";
-                tbxRemiseBeheerSpoorBeheerSectorNummer.Text = "";
-                tbxRemiseBeheerSpoorBeheerTramNummer.Text = "";
             }
-            else
+            else if (cbxRemiseBeheerSpoorBeheerBewerking.SelectedItem.ToString() == "Reserveer")
             {
-                MessageBox.Show("Voer eerst alle velden in.");
+                try
+                {
+                    int spoornummer;
+                    if (!int.TryParse(tbxRemiseBeheerSpoorBeheerSpoorNummer.Text, out spoornummer))
+                    {
+                        MessageBox.Show("Het spoornummer is niet correct ingevuld!");
+                        return;
+                    }
+                    int spoorsector;
+                    if (!int.TryParse(tbxRemiseBeheerSpoorBeheerSectorNummer.Text, out spoorsector))
+                    {
+                        MessageBox.Show("De spoorsector in niet correct ingevuld!");
+                        return;
+                    }
+                    int tramnummer;
+                    if (!int.TryParse(tbxRemiseBeheerSpoorBeheerTramNummer.Text, out tramnummer))
+                    {
+                        MessageBox.Show("Het tramnummer is niet correct ingevuld!");
+                        return;
+                    }
+                    DateTime date = new DateTime(dtp_datum_reservering.Value.Year, dtp_datum_reservering.Value.Month, dtp_datum_reservering.Value.Day);
+                    administratie.SpoorReserveren(spoornummer, spoorsector, tramnummer, date);
+                    MessageBox.Show("De reservering is succesvol toegevoegd.");
+                }
+                catch (Exception en)
+                {
+                    MessageBox.Show(en.Message);
+                }
+
             }
+
+            tbxRemiseBeheerSpoorBeheerSpoorNummer.Text = "";
+            tbxRemiseBeheerSpoorBeheerSectorNummer.Text = "";
+            tbxRemiseBeheerSpoorBeheerTramNummer.Text = "";
+
 
             VerversLijsten();
-        }
 
+        }
         //AccountBeheer
 
         private void VerversLijsten()
@@ -691,7 +690,7 @@ namespace ICT4Rails
                 }
             }
 
-            
+
             lB_Onderhoud_Trams.Items.Clear();
             foreach (Tram tram in administratie.Trams)
             {
@@ -727,7 +726,7 @@ namespace ICT4Rails
             {
                 foreach (Onderhoud onderhoud in administratie.Onderhoudslijst)
                 {
-                    if(onderhoud.Soort == "SCHOONMAAK")
+                    if (onderhoud.Soort == "SCHOONMAAK")
                     {
                         if (onderhoud.Medewerker != null)
                         {
@@ -999,7 +998,7 @@ namespace ICT4Rails
                     l.Text = "";
                     Spoor spoor = null;
                     DateTime aankomst = DateTime.Now;
-                    int id =0;
+                    int id = 0;
 
                     foreach (Trampositie tramp in administratie.GetTramPositie())
                     {
@@ -1011,13 +1010,13 @@ namespace ICT4Rails
                                 {
                                     spoor = s;
                                     aankomst = tramp.Aankomstijd;
-                                    id=tramp.Id;
+                                    id = tramp.Id;
                                 }
                             }
                         }
                     }
 
-                    administratie.UpdateTramPositie(id ,spoor, tram, aankomst, DateTime.Now);
+                    administratie.UpdateTramPositie(id, spoor, tram, aankomst, DateTime.Now);
                     administratie.UpdateSpoor(spoor.Spoorid, spoor.Sectornummer, true);
                     return;
                 }
@@ -1196,7 +1195,7 @@ namespace ICT4Rails
         private void btnOnderhoudBevestiging_Click(object sender, EventArgs e)
         {
             try
-            {                
+            {
                 string opmerking = tB_Statusbeheer_Opmerking.Text;
                 foreach (Tram t in administratie.Trams)
                 {
