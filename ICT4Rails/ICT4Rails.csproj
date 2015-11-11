@@ -70,8 +70,8 @@
     <Compile Include="Database\InsertScripts.cs" />
     <Compile Include="Database\RemoveScripts.cs" />
     <Compile Include="Database\UpdateScripts.cs" />
-    <Compile Include="Gebruiker.cs" />
-    <Compile Include="InputBox.cs" />
+    <Compile Include="Models\Gebruiker.cs" />
+    <Compile Include="Models\InputBox.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,8 +79,8 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Medewerker.cs" />
-    <Compile Include="Onderhoud.cs" />
+    <Compile Include="Models\Medewerker.cs" />
+    <Compile Include="Models\Onderhoud.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MainForm.cs">
@@ -89,12 +89,12 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reservering.cs" />
-    <Compile Include="Spoor.cs" />
-    <Compile Include="Status.cs" />
-    <Compile Include="Tram.cs" />
-    <Compile Include="Trampositie.cs" />
-    <Compile Include="TramType.cs" />
+    <Compile Include="Models\Reservering.cs" />
+    <Compile Include="Models\Spoor.cs" />
+    <Compile Include="Models\Status.cs" />
+    <Compile Include="Models\Tram.cs" />
+    <Compile Include="Models\Trampositie.cs" />
+    <Compile Include="Models\TramType.cs" />
     <EmbeddedResource Include="ConducteurForm.resx">
       <DependentUpon>ConducteurForm.cs</DependentUpon>
     </EmbeddedResource>
