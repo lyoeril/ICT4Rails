@@ -283,10 +283,30 @@ namespace ICT4Rails
             RefreshClass();
         }
 
-        public void SpoorStatusVeranderen(int id, int spoornr, int sectornr, bool beschikbaar)
+        public void SpoorStatusVeranderen(int spoornummer, int spoorsector)
         {
-            Spoor spoor = new Spoor(id, spoornr, sectornr, beschikbaar);
-            data.UpdateSpoor(spoor);
+            Spoor t_spoor = null;
+            foreach (Spoor spoor in Sporen)
+            {
+                if (spoornummer == spoor.Spoornummer && spoorsector == spoor.Sectornummer)
+                {
+                    t_spoor = spoor;
+                    if (t_spoor.Beschikbaar)
+                    {
+                        t_spoor.Beschikbaar = false;
+                    }
+                    else
+                    {
+                        t_spoor.Beschikbaar = true;
+                    }
+                    break;
+                }
+            }
+            if (t_spoor == null)
+            {
+                throw new Exception("Het spoor is niet gevonden!");
+            }
+            data.UpdateSpoor(t_spoor);
             RefreshClass();
         }
 
