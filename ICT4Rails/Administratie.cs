@@ -19,6 +19,9 @@ namespace ICT4Rails
         private List<Tram> trams;
         private List<Status> statuslijst;
         private List<TramType> tramtypes;
+        private List<Trampositie> posities;
+        private Database data;
+
         public List<Gebruiker> Gebruikers { get { return gebruikers; } }
         public List<Medewerker> Medewerkers { get { return medewerkers; } }
         public List<Onderhoud> Onderhoudslijst { get { return onderhoudslijst; } }
@@ -26,11 +29,11 @@ namespace ICT4Rails
         public List<Tram> Trams { get { return trams; } }
         public List<Status> Statuslijst { get { return statuslijst; } }
         public List<TramType> Tramtypes { get { return tramtypes; } }
-        Database data;
+        public List<Trampositie> Posities { get { return posities; } }
 
         public Administratie()
         {
-            data = new Database();
+            this.data = new Database();
             this.gebruikers = data.GetAllGebruikers();
             this.gebruikers.Add(new Gebruiker("", 0, ""));
             this.medewerkers = data.GetAllMedewerkers();
@@ -39,6 +42,7 @@ namespace ICT4Rails
             this.trams = data.GetAllTrams();
             this.statuslijst = data.GetAllStatus();
             this.tramtypes = data.GetAllTramtypes();
+            this.posities = data.GetAllTramposities();
         }
 
         private void RefreshClass()
@@ -50,6 +54,7 @@ namespace ICT4Rails
             this.medewerkers = data.GetAllMedewerkers();
             this.statuslijst = data.GetAllStatus();
             this.tramtypes = data.GetAllTramtypes();
+            this.posities = data.GetAllTramposities();
         }
         /* alles voor de beheerder */
         public bool AddMedewerker(Medewerker medewerker)
@@ -296,10 +301,8 @@ namespace ICT4Rails
                             RefreshClass();
                         }
                     }
-                    
                 }
             }
-
         }
 
         public void TramBewerken(int tramNummer, string typeNaam, string statusNaam, string lijn)
@@ -420,6 +423,11 @@ namespace ICT4Rails
         {
             List<Spoor> spoor = data.GetAllSporen();
             return spoor;
+        }
+
+        public void UpdateTram(Tram tram)
+        {
+            data.UpdateTram(tram);
         }
     }
 }
