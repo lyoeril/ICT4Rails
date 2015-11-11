@@ -1035,16 +1035,7 @@ namespace ICT4Rails
             {
                 if (Sporen[spr] != null)
                 {
-<<<<<<< HEAD
-                    l.Text = "";
-                    Spoor spoor = null;
-                    DateTime aankomst = DateTime.Now;
-                    int id = 0;
-
-                    foreach (Trampositie tramp in administratie.GetTramPositie())
-=======
                     foreach (Label l in Sporen[spr])
->>>>>>> 5bfdb87531fd29bbeb8fe710c34874cfc3ce68f6
                     {
                         if (l != null)
                         {
@@ -1057,11 +1048,6 @@ namespace ICT4Rails
 
                                 foreach (Trampositie tramp in administratie.Posities)
                                 {
-<<<<<<< HEAD
-                                    spoor = s;
-                                    aankomst = tramp.Aankomstijd;
-                                    id = tramp.Id;
-=======
                                     if (tramp.Tram.Id == tram.Id)
                                     {
                                         foreach (Spoor s in administratie.Sporen)
@@ -1090,18 +1076,11 @@ namespace ICT4Rails
                                     administratie.UpdateTram(tram);
                                     
                                     return;
->>>>>>> 5bfdb87531fd29bbeb8fe710c34874cfc3ce68f6
+
                                 }
                             }
                         }
                     }
-<<<<<<< HEAD
-
-                    administratie.UpdateTramPositie(id, spoor, tram, aankomst, DateTime.Now);
-                    administratie.UpdateSpoor(spoor.Spoorid, spoor.Sectornummer, true);
-                    return;
-=======
->>>>>>> 5bfdb87531fd29bbeb8fe710c34874cfc3ce68f6
                 }
             }
 

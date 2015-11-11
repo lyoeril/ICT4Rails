@@ -33,16 +33,6 @@ namespace ICT4Rails
 
         public Administratie()
         {
-            this.data = new Database();
-            this.gebruikers = data.GetAllGebruikers();
-            this.gebruikers.Add(new Gebruiker("", 0, ""));
-            this.medewerkers = data.GetAllMedewerkers();
-            this.onderhoudslijst = data.GetAllOnderhoud();
-            this.sporen = data.GetAllSporen();
-            this.trams = data.GetAllTrams();
-            this.statuslijst = data.GetAllStatus();
-            this.tramtypes = data.GetAllTramtypes();
-            this.posities = data.GetAllTramposities();
             data = new Database(); 
             RefreshClass();
             this.gebruikers.Add(new Gebruiker("", 0, ""));
