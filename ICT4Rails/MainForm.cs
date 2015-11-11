@@ -38,7 +38,7 @@ namespace ICT4Rails
             Sporen = SporenArray();
             Lijnen = LijnenArray();
             VulLijnnummers();
-            
+
             OpenAccountUI();
 
             // lijsten en comboboxes
@@ -158,7 +158,7 @@ namespace ICT4Rails
                         tabcontrolRemise.TabPages.Remove(tabpageOnderhoud);
                         tabpageOnderhoud.Text = "Reparatie";
                     }
-                    else if (medewerker.Functie == "SCHOONMAAK")
+                    else if (medewerker.Functie == "SCHOONMAKER")
                     {
                         tabcontrolRemise.TabPages.Remove(tabpageRemiseOverzicht);
                         tabcontrolRemise.TabPages.Remove(tabpageRemiseBeheer);
@@ -545,7 +545,7 @@ namespace ICT4Rails
             tbxRemiseBeheerTramNummer.Text = "";
             cbxRemisebeheerTrambeheerLijn.Text = "";
             cbxRemiseBeheerTramType.SelectedItem = null;
-            
+
 
             VerversLijsten();
         }
@@ -644,7 +644,7 @@ namespace ICT4Rails
             {
                 MessageBox.Show("Voer eerst alle velden in.");
             }
-            
+
             VerversLijsten();
         }
 
@@ -678,26 +678,98 @@ namespace ICT4Rails
             }
 
             // gemaakt door Yoeri
-            lB_Onderhoudslijst_historie.Items.Clear();
-            lB_Onderhoudslijst_TODO.Items.Clear();
+
             foreach (Onderhoud onderhoud in administratie.Onderhoudslijst)
             {
-                if(onderhoud.Medewerker != null)
+                if (onderhoud.Medewerker != null)
                 {
                     lB_Onderhoudslijst_historie.Items.Add(onderhoud);
                 }
                 else
                 {
                     lB_Onderhoudslijst_TODO.Items.Add(onderhoud);
-                }               
+                }
             }
 
+            
             lB_Onderhoud_Trams.Items.Clear();
             foreach (Tram tram in administratie.Trams)
             {
                 if (tram.Status.Naam == "SCHOONMAAK" || tram.Status.Naam == "DEFECT")
                 {
                     lB_Onderhoud_Trams.Items.Add(tram);
+                }
+            }
+
+            lB_Onderhoudslijst_historie.Items.Clear();
+            lB_Onderhoudslijst_TODO.Items.Clear();
+            cbxOnderhoudMedewerker.Items.Clear();
+            if (tabpageOnderhoud.Text == "Onderhoud")
+            {
+                foreach (Onderhoud onderhoud in administratie.Onderhoudslijst)
+                {
+                    if (onderhoud.Medewerker != null)
+                    {
+                        lB_Onderhoudslijst_historie.Items.Add(onderhoud);
+                    }
+                    else
+                    {
+                        lB_Onderhoudslijst_TODO.Items.Add(onderhoud);
+                    }
+                }
+                foreach (Medewerker m in administratie.Medewerkers)
+                {
+                    cbxOnderhoudMedewerker.Items.Add(m.Naam);
+                }
+            }
+
+            if (tabpageOnderhoud.Text == "Schoonmaak")
+            {
+                foreach (Onderhoud onderhoud in administratie.Onderhoudslijst)
+                {
+                    if(onderhoud.Soort == "SCHOONMAAK")
+                    {
+                        if (onderhoud.Medewerker != null)
+                        {
+                            lB_Onderhoudslijst_historie.Items.Add(onderhoud);
+                        }
+                        else
+                        {
+                            lB_Onderhoudslijst_TODO.Items.Add(onderhoud);
+                        }
+                    }
+                }
+                foreach (Medewerker m in administratie.Medewerkers)
+                {
+                    if (m.Functie == "SCHOONMAKER")
+                    {
+                        cbxOnderhoudMedewerker.Items.Add(m.Naam);
+                    }
+                }
+            }
+
+            if (tabpageOnderhoud.Text == "Reparatie")
+            {
+                foreach (Onderhoud onderhoud in administratie.Onderhoudslijst)
+                {
+                    if (onderhoud.Soort == "DEFECT")
+                    {
+                        if (onderhoud.Medewerker != null)
+                        {
+                            lB_Onderhoudslijst_historie.Items.Add(onderhoud);
+                        }
+                        else
+                        {
+                            lB_Onderhoudslijst_TODO.Items.Add(onderhoud);
+                        }
+                    }
+                }
+                foreach (Medewerker m in administratie.Medewerkers)
+                {
+                    if (m.Functie == "REPARATEUR")
+                    {
+                        cbxOnderhoudMedewerker.Items.Add(m.Naam);
+                    }
                 }
             }
         }
@@ -721,7 +793,7 @@ namespace ICT4Rails
                             medewerker = new Medewerker(0, tbxAccountNaam.Text, tbxAccountEmail.Text, Cbkeuze, tbxAccountStrtNR.Text, tbxAccountPostcode.Text);
                             administratie.AddMedewerker(medewerker);
                         }
-                        
+
                         VerversLijsten();
                         clearTextboxes();
                     }
@@ -878,11 +950,7 @@ namespace ICT4Rails
 
         private void loadComboboxes()
         {
-            cbxOnderhoudMedewerker.Items.Clear();
-            foreach (Medewerker m in administratie.Medewerkers)
-            {
-                cbxOnderhoudMedewerker.Items.Add(m.Naam);
-            }
+
 
             cbxRemiseBeheerTramType.Items.Clear();
             foreach (TramType t in administratie.Tramtypes)
@@ -1036,6 +1104,7 @@ namespace ICT4Rails
                 {
                     administratie.TramStatusVeranderen(Convert.ToInt32(tbxStatusbeheerTramNummer.Text), cbxStatusbeheerTramStatus.Text);
                     MessageBox.Show("De status van tram " + tbxStatusbeheerTramNummer.Text + " is veranderd in '" + cbxStatusbeheerTramStatus.Text + "'");
+                    VerversLijsten();
                     btnStatusbeheerTramStatus.Enabled = false;
                     tbxStatusbeheerTramNummer.Text = null;
                     tbxStatusbeheerHuidigeStatus.Text = null;
@@ -1060,9 +1129,9 @@ namespace ICT4Rails
                 string medewerker = cbxOnderhoudMedewerker.SelectedItem.ToString();
                 Medewerker m = null;
                 //geen schoonmaak voor tram 2x toevoegen, net als reparatie;
-                foreach(Medewerker mede in administratie.Medewerkers)
+                foreach (Medewerker mede in administratie.Medewerkers)
                 {
-                    if(medewerker == mede.Naam)
+                    if (medewerker == mede.Naam)
                     {
                         m = mede;
                         break;
@@ -1072,11 +1141,11 @@ namespace ICT4Rails
                 {
                     if (o.ID == onderhoudsid)
                     {
-                        if (o.Tram.Status.Naam == "SCHOONMAAK")
+                        if (o.Soort == "SCHOONMAAK")
                         {
                             administratie.UpdateOnderhoudsbeurt(new Onderhoud(onderhoudsid, m, o.Tram, starttijd, eindtijd, "", "SCHOONMAAK"));
                         }
-                        if (o.Tram.Status.Naam == "DEFECT")
+                        if (o.Soort == "DEFECT")
                         {
                             administratie.UpdateOnderhoudsbeurt(new Onderhoud(onderhoudsid, m, o.Tram, starttijd, eindtijd, "", "DEFECT"));
                         }
@@ -1106,13 +1175,13 @@ namespace ICT4Rails
         private void btnOnderhoudBevestiging_Click(object sender, EventArgs e)
         {
             try
-            {
+            {                
                 string opmerking = tB_Statusbeheer_Opmerking.Text;
                 foreach (Tram t in administratie.Trams)
                 {
                     if (t.Id == Convert.ToInt32(nUd_StatusbeheerTramnummer.Value))
                     {
-                        if(opmerking =="" || opmerking == null)
+                        if (opmerking == "" || opmerking == null)
                         {
                             MessageBox.Show("Vul een opmerking in!");
                         }
