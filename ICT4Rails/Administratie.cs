@@ -205,7 +205,7 @@ namespace ICT4Rails
             // bij deze methode wordt er een nieuwe onderhoudsbeurt toegevoegd
             foreach (Onderhoud Selected_Onderhoudsbeurt in onderhoudslijst)
             {
-                if (onderhoudsbeurt.Tram.Id == Selected_Onderhoudsbeurt.Tram.Id)
+                if (onderhoudsbeurt.Tram.Id == Selected_Onderhoudsbeurt.Tram.Id && Selected_Onderhoudsbeurt.Medewerker == null)
                 {
                     throw new Exception("De tram is al ingevoerd!");
                 }
