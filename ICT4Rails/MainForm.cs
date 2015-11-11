@@ -891,7 +891,6 @@ namespace ICT4Rails
         {
             if (lbAccountMedewerkers.SelectedItem != null)
             {
-                Medewerker medewerker = lbAccountMedewerkers.SelectedItem as Medewerker;
                 medewerker = lbAccountMedewerkers.SelectedItem as Medewerker;
                 MedID = medewerker.ID;
                 enableButtons();
@@ -982,7 +981,7 @@ namespace ICT4Rails
 
         private void btnAccountGebrkerverw_Click(object sender, EventArgs e)
         {
-            if (administratie.FindGebruiker(gebruiker.Medewerker_ID) == null)
+            if (administratie.FindGebruiker(gebruiker.Medewerker_ID) != null)
             {
                 administratie.RemoveGebruiker(gebruiker);
                 VerversLijsten();
