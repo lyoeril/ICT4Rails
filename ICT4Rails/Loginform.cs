@@ -33,6 +33,7 @@ namespace ICT4Rails
                     if (g.LogIn(tbxPassword.Text))
                     {
                         Program.loggedIn = g;
+                        administratie.RefreshClass();
                         MainForm remise = new MainForm(administratie);
                         remise.FormClosing += MainForm_FormClosing;
                         remise.Show();
