@@ -43,9 +43,12 @@ namespace ICT4Rails
             this.statuslijst = data.GetAllStatus();
             this.tramtypes = data.GetAllTramtypes();
             this.posities = data.GetAllTramposities();
+            data = new Database(); 
+            RefreshClass();
+            this.gebruikers.Add(new Gebruiker("", 0, ""));
         }
 
-        private void RefreshClass()
+        public void RefreshClass()
         {
             this.onderhoudslijst = data.GetAllOnderhoud();
             this.sporen = data.GetAllSporen();
@@ -210,9 +213,9 @@ namespace ICT4Rails
             // bij deze methode wordt er een nieuwe onderhoudsbeurt toegevoegd
             foreach (Onderhoud Selected_Onderhoudsbeurt in onderhoudslijst)
             {
-                if (onderhoudsbeurt == Selected_Onderhoudsbeurt)
+                if (onderhoudsbeurt.Tram.Id == Selected_Onderhoudsbeurt.Tram.Id && Selected_Onderhoudsbeurt.Medewerker == null)
                 {
-                    throw new Exception("De onderhoudsbeurt bestaat al!");
+                    throw new Exception("De tram is al ingevoerd!");
                 }
             }
             data.InsertOnderhoud(onderhoudsbeurt);
@@ -227,7 +230,7 @@ namespace ICT4Rails
             {
                 if (onderhoudsbeurt == Selected_Onderhoudsbeurt)
                 {
-                    throw new Exception("De onderhoudsbeurt bestaat al!");
+                    throw new Exception("Er is niet veranderd!");
                 }
             }
             data.UpdateOnderhoud(onderhoudsbeurt);
