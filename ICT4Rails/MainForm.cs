@@ -997,10 +997,32 @@ namespace ICT4Rails
                 if (l.Text == Convert.ToString(tram.Id))
                 {
                     l.Text = "";
+                    Spoor spoor = null;
+                    DateTime aankomst = DateTime.Now;
+                    int id =0;
+
+                    foreach (Trampositie tramp in administratie.GetTramPositie())
+                    {
+                        if (tramp.Tram.Id == tram.Id)
+                        {
+                            foreach (Spoor s in administratie.GetSporen())
+                            {
+                                if (s.Spoorid == tramp.Spoor.Spoorid)
+                                {
+                                    spoor = s;
+                                    aankomst = tramp.Aankomstijd;
+                                    id=tramp.Id;
+                                }
+                            }
+                        }
+                    }
+
+                    administratie.UpdateTramPositie(id ,spoor, tram, aankomst, DateTime.Now);
+                    administratie.UpdateSpoor(spoor.Spoorid, spoor.Sectornummer, true);
                     return;
-                    //schrijven naar db
                 }
             }
+
             for (int lijn = 0; lijn < Lijnen.Length; lijn++)
             {
                 if (tram.Lijn == Lijnen[lijn][0])
@@ -1052,10 +1074,9 @@ namespace ICT4Rails
                     if (Convert.ToString(tramp.Tram.Id) == l.Text)
                     {
                         l.Text = "";
-                        administratie.TramStatusVeranderen(tramp.Tram.Id, ""); //beschikbaar = n ?????
-                        //vertrektijd datetime.now
-                        //beschikbaar van sector = y
-                        //tramstatus naar dienst
+                        administratie.TramStatusVeranderen(tramp.Tram.Id, "DIENST");
+                        administratie.UpdateTramPositie(tramp.Id, tramp.Spoor, tramp.Tram, tramp.Aankomstijd, DateTime.Now);
+                        administratie.UpdateSpoor(tramp.Spoor.Spoorid, tramp.Spoor.Sectornummer, true);
                         return;
                     }
                 }

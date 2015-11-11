@@ -36,7 +36,7 @@ namespace Unittests_ICT4Rails
             spoor = new Spoor(1, 1, 1, true);
             tramType = new TramType("testtypenaam", "testbeschrijving", 1);
             status = new Status("teststatusnaam", "testbijzonderheden");
-            tram = new Tram(1, tramType, status, "1", true);
+            tram = new Tram(1, tramType, status, "1");
             reservering = new Reservering(1, tram, spoor, reserveringDatum, true);
             onderhoud = new Onderhoud(1, medewerker, tram, starttijd, eindtijd, "testopmerking", "testsoort");
             administratie = new Administratie();
@@ -125,18 +125,17 @@ namespace Unittests_ICT4Rails
         [TestMethod]
         public void TramTest()
         {
-            tram = new Tram(1, tramType, status, "1", true);
+            tram = new Tram(1, tramType, status, "1");
             Assert.AreEqual(tramType, tram.Type);
             Assert.AreEqual(status, tram.Status);
             Assert.AreEqual(1, tram.Lijn);
             Assert.AreEqual(1, tram.Id);
-            Assert.AreEqual(true, tram.Beschikbaar);
             //Assert.AreEqual(uitrijdtijd, tram.Uitrijdtijd);
 
             //ToString
             Assert.AreEqual("Nummer: 1 - Lijn: 1 - Type: testtypenaam - Status: teststatusnaam - Beschikbaar: Ja - Uitrijdatum: 15-10-2015 00:00:00 - Uitrijtijd: 20:00:00", tram.ToString());
              
-            tram = new Tram(0, null, null, null, false);
+            tram = new Tram(0, null, null, null);
             Assert.AreEqual("Nummer: Onbekend - Lijn: Onbekend - Type: Onbekend - Status: Onbekend - Beschikbaar: Nee - Uitrijdatum: 15-10-2015 00:00:00 - Uitrijtijd: 20:00:00", tram.ToString()); 
         }
 

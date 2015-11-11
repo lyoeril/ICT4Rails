@@ -384,5 +384,42 @@ namespace ICT4Rails
             List<Trampositie> positie = data.GetAllTramposities();
             return positie;
         }
+
+        public void UpdateTramPositie(int id, Spoor spoor, Tram tram, DateTime aankomstTijd, DateTime vertrekTijd)
+        {
+            foreach (Trampositie p in GetTramPositie())
+            {
+                if (p.Id == id)
+                {
+                    p.Spoor = spoor;
+                    p.Tram = tram;
+                    p.Vertrektijd = vertrekTijd;
+                    data.UpdateTrampositie(p);
+                    break;
+                }
+            }
+            RefreshClass();
+        }
+
+        public void UpdateSpoor(int spoorID, int sectorNummer, bool beschikbaar)
+        {
+            foreach (Spoor s in GetSporen())
+            {
+                if (s.Spoorid == spoorID)
+                {
+                    s.Beschikbaar = beschikbaar;
+                    data.UpdateSpoor(s);
+                    break;
+                }
+            }
+
+            RefreshClass();
+        }
+
+        public List<Spoor> GetSporen()
+        {
+            List<Spoor> spoor = data.GetAllSporen();
+            return spoor;
+        }
     }
 }
