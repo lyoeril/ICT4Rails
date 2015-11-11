@@ -178,8 +178,9 @@ namespace ICT4Rails
                 {
                     throw new Exception("De tram bestaat al!");
                 }
-            }
+            }            
             data.InsertTram(tram);
+            RefreshClass();
             return true;
         }
 
@@ -191,6 +192,7 @@ namespace ICT4Rails
                 if (tram == Selected_Tram)
                 {
                     trams.Remove(Selected_Tram);
+                    RefreshClass();
                     return true;
                 }
             }
@@ -291,6 +293,7 @@ namespace ICT4Rails
                         {
                             tram.Status = status;
                             data.UpdateTram(tram);
+                            RefreshClass();
                         }
                     }
                     data.UpdateTram(tram);
@@ -338,7 +341,6 @@ namespace ICT4Rails
                     t = tram;
                 }
             }
-
             data.RemoveTram(t);
             RefreshClass();
         }
