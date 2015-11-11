@@ -65,9 +65,12 @@ namespace ICT4Rails
 
                 if (!string.IsNullOrWhiteSpace(Gebruikersnaamtxt.Text) && !string.IsNullOrWhiteSpace(Wachtwoordtxt.Text))
                 {
-                    Gebruiker UpdateGebruiker = new Gebruiker(Gebruikersnaamtxt.Text, g.Medewerker_ID, Wachtwoordtxt.Text);
-                    administratie.ChangeGebruiker(UpdateGebruiker);
-                    
+                    if (administratie.FindGebruikerByName(Gebruikersnaamtxt.Text) == null)
+                    {
+                        Gebruiker UpdateGebruiker = new Gebruiker(Gebruikersnaamtxt.Text, g.Medewerker_ID, Wachtwoordtxt.Text);
+                        administratie.ChangeGebruiker(UpdateGebruiker);
+                    }
+                    else MessageBox.Show("Gebruikersnaam bestaat al.");
                 }
                 else
                 {
