@@ -28,7 +28,7 @@ namespace ICT4Rails
         private Gebruiker gebruiker;
         private bool heeftaccount = false;
         private RFID rfid;
-        private string labelText;
+        private Tram sleepTram;
 
         public MainForm(Administratie administratie)
         {
@@ -82,24 +82,24 @@ namespace ICT4Rails
         {
             rfid.LED = true;
 
-            if (e.Tag == "2200c77481") // Gele cirkel
-            {
-                foreach (Spoor s in administratie.Sporen)
-                {
-                    if (s.Spoornummer == 52 && s.Sectornummer == 4)
-                    {
-                        if (s.Beschikbaar)
-                        {
-                            s.Beschikbaar = false;
-                        }
-                        else
-                        {
-                            s.Beschikbaar = true;
-                        }
-                        tableLayoutPanel1.Refresh();
-                    }
-                }
-            }
+            //if (e.Tag == "2200c77481") // Gele cirkel
+            //{
+            //    foreach (Spoor s in administratie.Sporen)
+            //    {
+            //        if (s.Spoornummer == 52 && s.Sectornummer == 4)
+            //        {
+            //            if (s.Beschikbaar)
+            //            {
+            //                s.Beschikbaar = false;
+            //            }
+            //            else
+            //            {
+            //                s.Beschikbaar = true;
+            //            }
+            //            tableLayoutPanel1.Refresh();
+            //        }
+            //    }
+            //}
             int id = 0;
             if (e.Tag == "2300fb7939") { id = 2201; } // TAG
             else if (e.Tag == "2800a79650") { id = 2202; } // TAG
@@ -289,33 +289,127 @@ namespace ICT4Rails
 
         private void label_MouseDown(object sender, MouseEventArgs e)
         {
-            if (labelText == "" || labelText == null)
+            Label startLabel = (Label)sender;
+            foreach (Tram t in administratie.Trams)
             {
-                Label startLabel = (Label)sender;
-                labelText = startLabel.Text;
+                if (Convert.ToString(t.Id) == startLabel.Text)
+                {
+                    sleepTram = t;
+                }
             }
+            //if (labelText == "" || labelText == null)
+            //{
+            //    Label startLabel = (Label)sender;
+            //    labelText = startLabel.Text;
+            //}
         }
 
         private void label_MouseUp(object sender, MouseEventArgs e)
         {
             Point tlpMousePos = tableLayoutPanel1.PointToClient(MousePosition);
             Point? cr = administratie.GetRowColIndex(tableLayoutPanel1, tlpMousePos);
-            if (labelText != "" && labelText != " " && cr != null)
+            Trampositie oldPos = null;
+            bool beschikbaar = true;
+            if (cr != null)
             {
+                Label endLabel = GetLabel(cr.Value.X, cr.Value.Y);
                 for (int spoor = 0; spoor < Sporen.Length; spoor++)
                 {
-                    foreach (Label l in Sporen[spoor])
+                    if (Sporen[spoor] != null)
                     {
-                        if (l.Text == labelText)
+                        for (int sector = 0; sector < Sporen[spoor].Length; sector++)
                         {
-                            l.Text = "";
+                            if (Sporen[spoor][sector] != null)
+                            {
+                                if (Sporen[spoor][sector] == endLabel)
+                                {
+                                    foreach (Spoor s in administratie.Sporen)
+                                    {
+                                        if (s.Spoorid == spoor)
+                                        {
+                                            if (s.Sectornummer == sector)
+                                            {
+                                                foreach (Trampositie t in administratie.Posities)
+                                                {
+                                                    if (t.Vertrektijd == null)
+                                                    {
+                                                        if (t.Spoor == s)
+                                                        {
+                                                            beschikbaar = false;
+                                                            break;
+                                                        }
+                                                        else if (t.Tram == sleepTram)
+                                                        {
+                                                            oldPos = t;
+                                                        }
+                                                    }
+                                                }
+                                                if (beschikbaar)
+                                                {
+                                                    administratie.UpdateSpoor(spoor, sector, false);
+                                                    administratie.UpdateTramPositie(oldPos.Id, oldPos.Spoor, oldPos.Tram, oldPos.Aankomstijd, DateTime.Now);
+                                                    administratie.AddTramPositie(administratie.Posities.Count + 1, s, sleepTram, DateTime.Now);
+                                                }
+                                                else
+                                                {
+                                                    MessageBox.Show("Sector is al bezet");
+                                                }
+                                                return;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
-                    Label endLabel = GetLabel(cr.Value.X, cr.Value.Y);
-                    endLabel.Text = labelText;
-                    labelText = "";
                 }
             }
+
+            //if (labelText != "" && labelText != " " && cr != null)
+            //{
+            //    Label endLabel = GetLabel(cr.Value.X, cr.Value.Y);
+            //    for (int spoor = 0; spoor < Sporen.Length; spoor++)
+            //    {
+            //        if (Sporen[spoor] != null)
+            //        {
+            //            for (int sector = 1; sector < Sporen[spoor].Length; sector++)
+            //            {
+            //                if (Sporen[spoor][sector] != null)
+            //                {
+            //                    if (endLabel == Sporen[spoor][sector])
+            //                    {
+            //                        Trampositie tp = null;
+            //                        foreach (Trampositie t in administratie.Posities)
+            //                        {
+            //                            if (t.Vertrektijd == null)
+            //                            {
+            //                                if (t.Tram.Id == Convert.ToInt32(labelText))
+            //                                {
+            //                                    tp = t;
+            //                                    break;
+            //                                }
+            //                            }
+            //                        }
+            //                        Spoor positieSpoor = null;
+            //                        foreach (Spoor s in administratie.Sporen)
+            //                        {
+            //                            if (s.Spoornummer == spoor)
+            //                            {
+            //                                if (s.Sectornummer == sector)
+            //                                {
+            //                                    positieSpoor = s;
+            //                                    break;
+            //                                }
+            //                            }
+            //                        }
+            //                        administratie.UpdateTramPositie(tp.Id, tp.Spoor, tp.Tram, tp.Aankomstijd, DateTime.Now);
+            //                        administratie.AddTramPositie(administratie.Posities.Count + 1, positieSpoor, tp.Tram, DateTime.Now);
+            //                    }
+            //                }
+            //            }
+            //        }
+            //    }
+            //}
         }
 
         private void VulLijnnummers()
@@ -481,21 +575,37 @@ namespace ICT4Rails
                                 else
                                 {
                                     g.FillRectangle(Brushes.LightGray, r);
+
                                     foreach (Spoor s in administratie.Sporen)
                                     {
-                                        if (s.Spoornummer == spoor && s.Sectornummer == sector && s.Beschikbaar == false)
+                                        if (s.Spoorid == spoor)
                                         {
-                                            l.Text = " ";
-                                            g.DrawLine(Pens.Black, new Point(e.CellBounds.X, e.CellBounds.Y), new Point(e.CellBounds.X + e.CellBounds.Width, e.CellBounds.Y + e.CellBounds.Height));
-                                            g.DrawLine(Pens.Black, new Point(e.CellBounds.X, e.CellBounds.Y + e.CellBounds.Height), new Point(e.CellBounds.X + e.CellBounds.Width, e.CellBounds.Y));
-                                            break;
-                                        }
-                                        else if (s.Spoornummer == spoor && s.Sectornummer == sector && s.Beschikbaar == true && l.Text == " ")
-                                        {
-                                            l.Text = "";
-                                            break;
+                                            if (s.Sectornummer == sector)
+                                            {
+                                                if (s.Beschikbaar == false)
+                                                {
+                                                    g.DrawLine(Pens.Black, new Point(e.CellBounds.X, e.CellBounds.Y), new Point(e.CellBounds.X + e.CellBounds.Width, e.CellBounds.Y + e.CellBounds.Height));
+                                                    g.DrawLine(Pens.Black, new Point(e.CellBounds.X, e.CellBounds.Y + e.CellBounds.Height), new Point(e.CellBounds.X + e.CellBounds.Width, e.CellBounds.Y));
+                                                    break;
+                                                }
+                                            }
                                         }
                                     }
+                                    //foreach (Spoor s in administratie.Sporen)
+                                    //{
+                                    //    if (s.Spoornummer == spoor && s.Sectornummer == sector && s.Beschikbaar == false)
+                                    //    {
+                                    //        l.Text = " ";
+                                    //        g.DrawLine(Pens.Black, new Point(e.CellBounds.X, e.CellBounds.Y), new Point(e.CellBounds.X + e.CellBounds.Width, e.CellBounds.Y + e.CellBounds.Height));
+                                    //        g.DrawLine(Pens.Black, new Point(e.CellBounds.X, e.CellBounds.Y + e.CellBounds.Height), new Point(e.CellBounds.X + e.CellBounds.Width, e.CellBounds.Y));
+                                    //        break;
+                                    //    }
+                                    //    else if (s.Spoornummer == spoor && s.Sectornummer == sector && s.Beschikbaar == true && l.Text == " ")
+                                    //    {
+                                    //        l.Text = "";
+                                    //        break;
+                                    //    }
+                                    //}
                                 }
                             }
                         }
@@ -1031,55 +1141,33 @@ namespace ICT4Rails
 
         public void SorteerTram(Tram tram)
         {
-            for (int spr = 0; spr < Sporen.Length; spr++)
+            foreach (Trampositie t in administratie.Posities)
             {
-                if (Sporen[spr] != null)
+                if (t.Vertrektijd == null)
                 {
-                    foreach (Label l in Sporen[spr])
+                    if (t.Tram == tram)
                     {
-                        if (l != null)
+                        foreach (Status s in administratie.Statuslijst)
                         {
-                            if (l.Text == Convert.ToString(tram.Id))
+                            if (s.Naam == "DIENST")
                             {
-                                l.Text = "";
-                                Spoor spoor = null;
-                                DateTime aankomst = new DateTime();
-                                int id = 0;
-
-                                foreach (Trampositie tramp in administratie.Posities)
-                                {
-                                    if (tramp.Tram.Id == tram.Id)
-                                    {
-                                        foreach (Spoor s in administratie.Sporen)
-                                        {
-                                            if (s.Spoorid == tramp.Spoor.Spoorid)
-                                            {
-                                                spoor = s;
-                                                aankomst = tramp.Aankomstijd;
-                                                id = tramp.Id;
-                                            }
-                                        }
-                                    }
-                                }
-
-                                if (spoor != null && aankomst != new DateTime() && id != 0)
-                                {
-                                    administratie.UpdateTramPositie(id, spoor, tram, aankomst, DateTime.Now);
-                                    administratie.UpdateSpoor(spoor.Spoorid, spoor.Sectornummer, true);
-                                    foreach (Status s in administratie.Statuslijst)
-                                    {
-                                        if (s.Naam == "DIENST")
-                                        {
-                                            tram.Status = s;
-                                        }
-                                    }
-                                    administratie.UpdateTram(tram);
-                                    
-                                    return;
-
-                                }
+                                tram.Status = s;
+                                break;
                             }
                         }
+                        administratie.UpdateTram(tram);
+
+                        foreach (Spoor s in administratie.Sporen)
+                        {
+                            if (s == t.Spoor)
+                            {
+                                administratie.UpdateSpoor(s.Spoorid, s.Sectornummer, true);
+                                break;
+                            }
+                        }
+
+                        administratie.UpdateTramPositie(t.Id, t.Spoor, t.Tram, t.Aankomstijd, DateTime.Now);
+                        return;
                     }
                 }
             }
@@ -1108,20 +1196,45 @@ namespace ICT4Rails
                         {
                             for (int sector = 1; sector < Sporen[spoornummer].Length; sector++)
                             {
-                                Label l = null;
-                                l = Sporen[spoornummer][sector];
-
-                                if (l.Text == "")
+                                foreach (Spoor sp in administratie.Sporen)
                                 {
-                                    l.Text = Convert.ToString(tram.Id);
-                                    return;
+                                    if (sp.Spoorid == spoornummer)
+                                    {
+                                        if (sp.Sectornummer == sector)
+                                        {
+                                            if (sp.Beschikbaar)
+                                            {
+                                                if (tram.Status.Naam == "DIENST")
+                                                {
+                                                    foreach (Status st in administratie.Statuslijst)
+                                                    {
+                                                        if (st.Naam == "REMISE")
+                                                        {
+                                                            tram.Status = st;
+                                                            break;
+                                                        }
+                                                    }
+                                                }
+                                                administratie.UpdateTram(tram);
+                                                administratie.UpdateSpoor(sp.Spoorid, sp.Sectornummer, false);
+                                                administratie.AddTramPositie(administratie.Posities.Count + 1, sp, tram, DateTime.Now);
+                                                return;
+                                            }
+                                        }
+                                    }
                                 }
-                                else if (sector == Sporen[spoornummer].Length && Convert.ToString(spoornummer) == Lijnen[lijn][Lijnen[lijn].Length] && lijn != 9)
+                                if (lijn != 9)
                                 {
-                                    lijn = 9;
-                                    spoor = 1;
-                                    sector = 0;
-                                    spoornummer = Convert.ToInt32(Lijnen[lijn][spoor]);
+                                    if (Convert.ToString(spoornummer) == Lijnen[lijn][Lijnen[lijn].Length - 1])
+                                    {
+                                        if (sector == Sporen[spoornummer].Length - 1)
+                                        {
+                                            lijn = 9;
+                                            spoor = 1;
+                                            sector = 0;
+                                            spoornummer = Convert.ToInt32(Lijnen[lijn][spoor]);
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -1134,17 +1247,23 @@ namespace ICT4Rails
         {
             for (int spoor = 0; spoor < Sporen.Length; spoor++)
             {
-                foreach (Label l in Sporen[spoor])
+                if (Sporen[spoor] != null)
                 {
-                    l.Text = "";
+                    for (int sector = 1; sector < Sporen[spoor].Length; sector++)
+                    {
+                        if (Sporen[spoor][sector] != null)
+                        {
+                            Sporen[spoor][sector].Text = "";
+                        }
+                    }
                 }
             }
 
-            foreach (Trampositie tramp in administratie.Posities)
+            foreach (Trampositie tp in administratie.Posities)
             {
-                if (tramp.Vertrektijd == null)
+                if (tp.Vertrektijd == null)
                 {
-                    Sporen[tramp.Spoor.Spoorid][tramp.Spoor.Sectornummer].Text = Convert.ToString(tramp.Tram.Id);
+                    Sporen[tp.Spoor.Spoorid][tp.Spoor.Sectornummer].Text = Convert.ToString(tp.Tram.Id);
                 }
             }
         }
@@ -1340,6 +1459,18 @@ namespace ICT4Rails
         {
             Spoor spoor = lB_RemisebeheerSpoorlijst.SelectedItem as Spoor;
             tbxRemiseBeheerSpoorBeheerSpoorNummer.Text = spoor.Spoorid.ToString();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            foreach (Tram t in administratie.Trams)
+            {
+                if (t.Lijn == "OCV")
+                {
+                    SorteerTram(t);
+                }
+            }
+            CheckTrampositieDB();
         }
     }
 }

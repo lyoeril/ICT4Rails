@@ -32,6 +32,7 @@ namespace ICT4Rails
         public List<TramType> Tramtypes { get { return tramtypes; } }
         public List<Trampositie> Posities { get { return posities; } }
         public List<Reservering> Reserveringen { get { return reserveringen; } }
+
         public Administratie()
         {
             data = new Database(); 

@@ -146,6 +146,7 @@ namespace ICT4Rails
             }
             return new Trampositie(id, Spoor, Tram, aankomstijd, vertrektijd);
         }
+
         private Gebruiker CreateGebruikerFromReader(OracleDataReader reader)
         {
             return new Gebruiker(

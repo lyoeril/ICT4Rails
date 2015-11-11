@@ -12,15 +12,15 @@ namespace ICT4Rails
         private Spoor spoor;
         private Tram tram;
         DateTime aankomstijd;
-        DateTime vertrektijd;
+        DateTime? vertrektijd;
 
         public int Id { get { return id; } }
         public Spoor Spoor { get { return spoor; } set { value = spoor; } }
         public Tram Tram { get { return tram; } set { value = tram; } }
         public DateTime Aankomstijd { get { return aankomstijd; } }
-        public DateTime Vertrektijd { get { return vertrektijd; } set { vertrektijd = value; } }
+        public DateTime? Vertrektijd { get { return vertrektijd; } set { vertrektijd = value; } }
 
-        public Trampositie(int id, Spoor spoor, Tram tram, DateTime aankomstijd, DateTime vertrektijd)
+        public Trampositie(int id, Spoor spoor, Tram tram, DateTime aankomstijd, DateTime? vertrektijd)
         {
             this.id = id;
             this.spoor = spoor;
