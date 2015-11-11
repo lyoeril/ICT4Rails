@@ -575,6 +575,7 @@ namespace ICT4Rails
                         if (t.Id == Convert.ToInt32(tbxRemiseBeheerTramNummer.Text))
                         {
                             administratie.TramBewerken(Convert.ToInt32(tbxRemiseBeheerTramNummer.Text), type.Naam, "REMISE", cbxRemisebeheerTrambeheerLijn.SelectedItem.ToString());
+                            MessageBox.Show("De informatie van de tram is bewerkt");
                         }
                     }
                 }
