@@ -13,24 +13,19 @@ namespace ICT4Rails
         private Status status;
         private string lijn;
 
-        private bool beschikbaar;
-
 
         public TramType Type { get { return type; } }
         public Status Status { get { return status; } set { status = value; } }
         public string Lijn { get { return lijn; } }
         public int Id { get { return id; } }
-        public bool Beschikbaar { get { return beschikbaar; } }
 
 
-        public Tram(int id, TramType type, Status status, string lijn, bool beschikbaar)
+        public Tram(int id, TramType type, Status status, string lijn)
         {
             this.id = id;
             this.type = type;
             this.status = status;
             this.lijn = lijn;
-            this.beschikbaar = beschikbaar;
-
         }
 
         public override string ToString()
@@ -76,23 +71,10 @@ namespace ICT4Rails
                 statusstr = status.Naam.ToString();
             }
 
-            string beschikbaarstr;
-            if (beschikbaar)
-            {
-                beschikbaarstr = "Ja";
-            }
-            else
-            {
-                beschikbaarstr = "Nee";
-            }
-
-
             string info = "Nummer: " + nummerstr +
                 " - Lijn: " + lijnstr +
                 " - Type: " + typestr +
-                " - Status: " + statusstr +
-                " - Beschikbaar: " + beschikbaarstr;
-
+                " - Status: " + statusstr;
 
             return info;
         }

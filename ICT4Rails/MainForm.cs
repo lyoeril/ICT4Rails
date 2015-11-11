@@ -492,7 +492,7 @@ namespace ICT4Rails
                             break;
                         }
                     }
-                    administratie.AddTram(new Tram(Convert.ToInt32(tbxRemiseBeheerTramNummer.Text), type, status, cbxRemisebeheerTrambeheerLijn.SelectedItem.ToString(), true));
+                    administratie.AddTram(new Tram(Convert.ToInt32(tbxRemiseBeheerTramNummer.Text), type, status, cbxRemisebeheerTrambeheerLijn.SelectedItem.ToString()));
                     MessageBox.Show("Tram is toegevoegd!");
                 }
                 catch (Exception)
@@ -530,7 +530,7 @@ namespace ICT4Rails
                     {
                         if (t.Id == Convert.ToInt32(tbxRemiseBeheerTramNummer.Text))
                         {
-                            administratie.TramBewerken(Convert.ToInt32(tbxRemiseBeheerTramNummer.Text), type.Naam, "REMISE", cbxRemisebeheerTrambeheerLijn.SelectedItem.ToString(), true);
+                            administratie.TramBewerken(Convert.ToInt32(tbxRemiseBeheerTramNummer.Text), type.Naam, "REMISE", cbxRemisebeheerTrambeheerLijn.SelectedItem.ToString());
                         }
                     }
                 }
@@ -927,6 +927,7 @@ namespace ICT4Rails
                 {
                     l.Text = "";
                     return;
+                    //schrijven naar db
                 }
             }
             for (int lijn = 0; lijn < Lijnen.Length; lijn++)
@@ -965,6 +966,33 @@ namespace ICT4Rails
                         }
                     }
                 }
+            }
+        }
+
+        public void CheckTrampositieDB()
+        {
+            List<Trampositie> positie = new List<Trampositie>();
+            positie = administratie.GetTramPositie();
+
+            foreach (Label l in tableLayoutPanel1.Controls)
+            {
+                foreach (Trampositie tramp in positie)
+                {
+                    if (Convert.ToString(tramp.Tram.Id) == l.Text)
+                    {
+                        l.Text = "";
+                        administratie.TramStatusVeranderen(tramp.Tram.Id, ""); //beschikbaar = n ?????
+                        //vertrektijd datetime.now
+                        //beschikbaar van sector = y
+                        //tramstatus naar dienst
+                        return;
+                    }
+                }
+            }
+
+            foreach (Trampositie tramp in positie)
+            {
+                Sporen[tramp.Spoor.Spoorid][tramp.Spoor.Sectornummer].Text = Convert.ToString(tramp.Tram.Id);
             }
         }
 

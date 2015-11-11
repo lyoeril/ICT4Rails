@@ -74,10 +74,8 @@ namespace ICT4Rails
             string typenaam = Convert.ToString(reader["TYPENAAM"]);
             string statusnaam = Convert.ToString(reader["STATUSNAAM"]);
             string lijn = Convert.ToString(reader["LIJN"]);
-            string beschikbaar = Convert.ToString(reader["BESCHIKBAAR"]);
             TramType Type = null;
             Status Status = null;
-            bool trueorfalse;
             // eerst zal status en tramtype uitgewerkt moeten worden
             foreach (TramType type in tramtypes)
             {
@@ -95,15 +93,7 @@ namespace ICT4Rails
                     break;
                 }
             }
-            if (beschikbaar == "Y")
-            {
-                trueorfalse = true;
-            }
-            else
-            {
-                trueorfalse = false;
-            }
-            return new Tram(id, Type, Status, lijn, trueorfalse);
+            return new Tram(id, Type, Status, lijn);
         }
 
         private Status CreateStatusFromReader(OracleDataReader reader)
