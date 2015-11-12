@@ -34,6 +34,7 @@ namespace ICT4Rails
         {
             InitializeComponent();
             this.administratie = administratie;
+            administratie.RefreshClass();
             LogIn();
             VulSporen();
             Sporen = SporenArray();
@@ -1380,6 +1381,7 @@ namespace ICT4Rails
 
         private void btn_RefreshLists_Click(object sender, EventArgs e)
         {
+            administratie.RefreshClass();
             VerversLijsten();
         }
 
@@ -1475,7 +1477,7 @@ namespace ICT4Rails
             Spoor spoor = lB_RemisebeheerSpoorlijst.SelectedItem as Spoor;
             tbxRemiseBeheerSpoorBeheerSpoorNummer.Text = spoor.Spoornummer.ToString();
         }
-
+        /*
         private void button1_Click_1(object sender, EventArgs e)
         {
             foreach (Tram t in administratie.Trams)
@@ -1486,6 +1488,6 @@ namespace ICT4Rails
                 }
             }
             CheckTrampositieDB();
-        }
+        }*/
     }
 }

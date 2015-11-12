@@ -125,7 +125,6 @@
             this.lblOnderhoudStarttijd = new System.Windows.Forms.Label();
             this.lblOnderhoudMedewerker = new System.Windows.Forms.Label();
             this.cbxOnderhoudMedewerker = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.tabcontrolRemise.SuspendLayout();
             this.tabpageRemiseOverzicht.SuspendLayout();
             this.tabpageRemiseBeheer.SuspendLayout();
@@ -154,21 +153,21 @@
             this.tabcontrolRemise.Controls.Add(this.tabpageStatusBeheer);
             this.tabcontrolRemise.Controls.Add(this.tabpageAccountBeheer);
             this.tabcontrolRemise.Controls.Add(this.tabpageOnderhoud);
-            this.tabcontrolRemise.Location = new System.Drawing.Point(16, 15);
-            this.tabcontrolRemise.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tabcontrolRemise.Location = new System.Drawing.Point(12, 12);
+            this.tabcontrolRemise.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabcontrolRemise.Name = "tabcontrolRemise";
             this.tabcontrolRemise.SelectedIndex = 0;
-            this.tabcontrolRemise.Size = new System.Drawing.Size(1892, 971);
+            this.tabcontrolRemise.Size = new System.Drawing.Size(1419, 789);
             this.tabcontrolRemise.TabIndex = 0;
             // 
             // tabpageRemiseOverzicht
             // 
             this.tabpageRemiseOverzicht.Controls.Add(this.tableLayoutPanel1);
-            this.tabpageRemiseOverzicht.Location = new System.Drawing.Point(4, 25);
-            this.tabpageRemiseOverzicht.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tabpageRemiseOverzicht.Location = new System.Drawing.Point(4, 22);
+            this.tabpageRemiseOverzicht.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabpageRemiseOverzicht.Name = "tabpageRemiseOverzicht";
-            this.tabpageRemiseOverzicht.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabpageRemiseOverzicht.Size = new System.Drawing.Size(1884, 942);
+            this.tabpageRemiseOverzicht.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabpageRemiseOverzicht.Size = new System.Drawing.Size(1411, 763);
             this.tabpageRemiseOverzicht.TabIndex = 0;
             this.tabpageRemiseOverzicht.Text = "Remise Overzicht";
             this.tabpageRemiseOverzicht.UseVisualStyleBackColor = true;
@@ -195,8 +194,8 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.263158F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.263158F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.263158F));
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(8, 7);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 6);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 23;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.347826F));
@@ -222,7 +221,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.347826F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.347826F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.347826F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1867, 927);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1400, 753);
             this.tableLayoutPanel1.TabIndex = 0;
             this.tableLayoutPanel1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tableLayoutPanel1_MouseClick);
             // 
@@ -233,11 +232,11 @@
             this.tabpageRemiseBeheer.Controls.Add(this.grbRemiseBeheerSpoorBeheer);
             this.tabpageRemiseBeheer.Controls.Add(this.grbRemiseBeheerNieuwType);
             this.tabpageRemiseBeheer.Controls.Add(this.grbRemiseBeheerTramBeheer);
-            this.tabpageRemiseBeheer.Location = new System.Drawing.Point(4, 25);
-            this.tabpageRemiseBeheer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabpageRemiseBeheer.Location = new System.Drawing.Point(4, 22);
+            this.tabpageRemiseBeheer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabpageRemiseBeheer.Name = "tabpageRemiseBeheer";
-            this.tabpageRemiseBeheer.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabpageRemiseBeheer.Size = new System.Drawing.Size(1884, 942);
+            this.tabpageRemiseBeheer.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabpageRemiseBeheer.Size = new System.Drawing.Size(1411, 763);
             this.tabpageRemiseBeheer.TabIndex = 2;
             this.tabpageRemiseBeheer.Text = "Remisebeheer";
             this.tabpageRemiseBeheer.UseVisualStyleBackColor = true;
@@ -245,21 +244,17 @@
             // lB_RemisebeheerSpoorlijst
             // 
             this.lB_RemisebeheerSpoorlijst.FormattingEnabled = true;
-            this.lB_RemisebeheerSpoorlijst.ItemHeight = 16;
-            this.lB_RemisebeheerSpoorlijst.Location = new System.Drawing.Point(1192, 6);
-            this.lB_RemisebeheerSpoorlijst.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lB_RemisebeheerSpoorlijst.Location = new System.Drawing.Point(894, 5);
             this.lB_RemisebeheerSpoorlijst.Name = "lB_RemisebeheerSpoorlijst";
-            this.lB_RemisebeheerSpoorlijst.Size = new System.Drawing.Size(681, 916);
+            this.lB_RemisebeheerSpoorlijst.Size = new System.Drawing.Size(512, 745);
             this.lB_RemisebeheerSpoorlijst.TabIndex = 9;
             // 
             // lB_RemisebeheerTramlijst
             // 
             this.lB_RemisebeheerTramlijst.FormattingEnabled = true;
-            this.lB_RemisebeheerTramlijst.ItemHeight = 16;
-            this.lB_RemisebeheerTramlijst.Location = new System.Drawing.Point(548, 6);
-            this.lB_RemisebeheerTramlijst.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lB_RemisebeheerTramlijst.Location = new System.Drawing.Point(411, 5);
             this.lB_RemisebeheerTramlijst.Name = "lB_RemisebeheerTramlijst";
-            this.lB_RemisebeheerTramlijst.Size = new System.Drawing.Size(635, 916);
+            this.lB_RemisebeheerTramlijst.Size = new System.Drawing.Size(477, 745);
             this.lB_RemisebeheerTramlijst.TabIndex = 8;
             // 
             // grbRemiseBeheerSpoorBeheer
@@ -275,11 +270,11 @@
             this.grbRemiseBeheerSpoorBeheer.Controls.Add(this.lblRemiseBeheerSpoorBeheerBewerking);
             this.grbRemiseBeheerSpoorBeheer.Controls.Add(this.lblRemiseBeheerSpoorBeheerSectorNummer);
             this.grbRemiseBeheerSpoorBeheer.Controls.Add(this.lblRemiseBeheerSpoorBeheerSpoorNummer);
-            this.grbRemiseBeheerSpoorBeheer.Location = new System.Drawing.Point(5, 194);
-            this.grbRemiseBeheerSpoorBeheer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grbRemiseBeheerSpoorBeheer.Location = new System.Drawing.Point(4, 158);
+            this.grbRemiseBeheerSpoorBeheer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grbRemiseBeheerSpoorBeheer.Name = "grbRemiseBeheerSpoorBeheer";
-            this.grbRemiseBeheerSpoorBeheer.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grbRemiseBeheerSpoorBeheer.Size = new System.Drawing.Size(536, 214);
+            this.grbRemiseBeheerSpoorBeheer.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grbRemiseBeheerSpoorBeheer.Size = new System.Drawing.Size(402, 174);
             this.grbRemiseBeheerSpoorBeheer.TabIndex = 7;
             this.grbRemiseBeheerSpoorBeheer.TabStop = false;
             this.grbRemiseBeheerSpoorBeheer.Text = "Spoorbeheer";
@@ -287,46 +282,45 @@
             // lbl_datum_reservering
             // 
             this.lbl_datum_reservering.AutoSize = true;
-            this.lbl_datum_reservering.Location = new System.Drawing.Point(5, 154);
-            this.lbl_datum_reservering.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_datum_reservering.Location = new System.Drawing.Point(4, 125);
             this.lbl_datum_reservering.Name = "lbl_datum_reservering";
-            this.lbl_datum_reservering.Size = new System.Drawing.Size(53, 17);
+            this.lbl_datum_reservering.Size = new System.Drawing.Size(41, 13);
             this.lbl_datum_reservering.TabIndex = 15;
             this.lbl_datum_reservering.Text = "Datum:";
             // 
             // dtp_datum_reservering
             // 
-            this.dtp_datum_reservering.Location = new System.Drawing.Point(160, 146);
-            this.dtp_datum_reservering.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtp_datum_reservering.Location = new System.Drawing.Point(120, 119);
             this.dtp_datum_reservering.Name = "dtp_datum_reservering";
-            this.dtp_datum_reservering.Size = new System.Drawing.Size(368, 22);
+            this.dtp_datum_reservering.Size = new System.Drawing.Size(277, 20);
             this.dtp_datum_reservering.TabIndex = 14;
             // 
             // tbxRemiseBeheerSpoorBeheerTramNummer
             // 
             this.tbxRemiseBeheerSpoorBeheerTramNummer.Enabled = false;
-            this.tbxRemiseBeheerSpoorBeheerTramNummer.Location = new System.Drawing.Point(160, 116);
-            this.tbxRemiseBeheerSpoorBeheerTramNummer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbxRemiseBeheerSpoorBeheerTramNummer.Location = new System.Drawing.Point(120, 94);
+            this.tbxRemiseBeheerSpoorBeheerTramNummer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbxRemiseBeheerSpoorBeheerTramNummer.Name = "tbxRemiseBeheerSpoorBeheerTramNummer";
-            this.tbxRemiseBeheerSpoorBeheerTramNummer.Size = new System.Drawing.Size(369, 22);
+            this.tbxRemiseBeheerSpoorBeheerTramNummer.Size = new System.Drawing.Size(278, 20);
             this.tbxRemiseBeheerSpoorBeheerTramNummer.TabIndex = 13;
             // 
             // lblRemiseBeheerSpoorBeheerTramNummer
             // 
             this.lblRemiseBeheerSpoorBeheerTramNummer.AutoSize = true;
-            this.lblRemiseBeheerSpoorBeheerTramNummer.Location = new System.Drawing.Point(5, 119);
+            this.lblRemiseBeheerSpoorBeheerTramNummer.Location = new System.Drawing.Point(4, 97);
+            this.lblRemiseBeheerSpoorBeheerTramNummer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRemiseBeheerSpoorBeheerTramNummer.Name = "lblRemiseBeheerSpoorBeheerTramNummer";
-            this.lblRemiseBeheerSpoorBeheerTramNummer.Size = new System.Drawing.Size(96, 17);
+            this.lblRemiseBeheerSpoorBeheerTramNummer.Size = new System.Drawing.Size(71, 13);
             this.lblRemiseBeheerSpoorBeheerTramNummer.TabIndex = 12;
             this.lblRemiseBeheerSpoorBeheerTramNummer.Text = "Tramnummer:";
             // 
             // btnRemiseBeheerSpoorBeheerBevestig
             // 
             this.btnRemiseBeheerSpoorBeheerBevestig.Enabled = false;
-            this.btnRemiseBeheerSpoorBeheerBevestig.Location = new System.Drawing.Point(447, 177);
-            this.btnRemiseBeheerSpoorBeheerBevestig.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRemiseBeheerSpoorBeheerBevestig.Location = new System.Drawing.Point(335, 144);
+            this.btnRemiseBeheerSpoorBeheerBevestig.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRemiseBeheerSpoorBeheerBevestig.Name = "btnRemiseBeheerSpoorBeheerBevestig";
-            this.btnRemiseBeheerSpoorBeheerBevestig.Size = new System.Drawing.Size(83, 27);
+            this.btnRemiseBeheerSpoorBeheerBevestig.Size = new System.Drawing.Size(62, 22);
             this.btnRemiseBeheerSpoorBeheerBevestig.TabIndex = 11;
             this.btnRemiseBeheerSpoorBeheerBevestig.Text = "Bevestig";
             this.btnRemiseBeheerSpoorBeheerBevestig.UseVisualStyleBackColor = true;
@@ -335,19 +329,19 @@
             // tbxRemiseBeheerSpoorBeheerSectorNummer
             // 
             this.tbxRemiseBeheerSpoorBeheerSectorNummer.Enabled = false;
-            this.tbxRemiseBeheerSpoorBeheerSectorNummer.Location = new System.Drawing.Point(160, 89);
-            this.tbxRemiseBeheerSpoorBeheerSectorNummer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbxRemiseBeheerSpoorBeheerSectorNummer.Location = new System.Drawing.Point(120, 72);
+            this.tbxRemiseBeheerSpoorBeheerSectorNummer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbxRemiseBeheerSpoorBeheerSectorNummer.Name = "tbxRemiseBeheerSpoorBeheerSectorNummer";
-            this.tbxRemiseBeheerSpoorBeheerSectorNummer.Size = new System.Drawing.Size(369, 22);
+            this.tbxRemiseBeheerSpoorBeheerSectorNummer.Size = new System.Drawing.Size(278, 20);
             this.tbxRemiseBeheerSpoorBeheerSectorNummer.TabIndex = 10;
             // 
             // tbxRemiseBeheerSpoorBeheerSpoorNummer
             // 
             this.tbxRemiseBeheerSpoorBeheerSpoorNummer.Enabled = false;
-            this.tbxRemiseBeheerSpoorBeheerSpoorNummer.Location = new System.Drawing.Point(160, 60);
-            this.tbxRemiseBeheerSpoorBeheerSpoorNummer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbxRemiseBeheerSpoorBeheerSpoorNummer.Location = new System.Drawing.Point(120, 49);
+            this.tbxRemiseBeheerSpoorBeheerSpoorNummer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbxRemiseBeheerSpoorBeheerSpoorNummer.Name = "tbxRemiseBeheerSpoorBeheerSpoorNummer";
-            this.tbxRemiseBeheerSpoorBeheerSpoorNummer.Size = new System.Drawing.Size(369, 22);
+            this.tbxRemiseBeheerSpoorBeheerSpoorNummer.Size = new System.Drawing.Size(278, 20);
             this.tbxRemiseBeheerSpoorBeheerSpoorNummer.TabIndex = 9;
             // 
             // cbxRemiseBeheerSpoorBeheerBewerking
@@ -357,37 +351,40 @@
             this.cbxRemiseBeheerSpoorBeheerBewerking.Items.AddRange(new object[] {
             "Blokkeer",
             "Reserveer"});
-            this.cbxRemiseBeheerSpoorBeheerBewerking.Location = new System.Drawing.Point(160, 30);
-            this.cbxRemiseBeheerSpoorBeheerBewerking.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbxRemiseBeheerSpoorBeheerBewerking.Location = new System.Drawing.Point(120, 24);
+            this.cbxRemiseBeheerSpoorBeheerBewerking.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbxRemiseBeheerSpoorBeheerBewerking.Name = "cbxRemiseBeheerSpoorBeheerBewerking";
-            this.cbxRemiseBeheerSpoorBeheerBewerking.Size = new System.Drawing.Size(369, 24);
+            this.cbxRemiseBeheerSpoorBeheerBewerking.Size = new System.Drawing.Size(278, 21);
             this.cbxRemiseBeheerSpoorBeheerBewerking.TabIndex = 9;
             this.cbxRemiseBeheerSpoorBeheerBewerking.SelectedIndexChanged += new System.EventHandler(this.cbxRemiseBeheerSpoorBeheerBewerking_SelectedIndexChanged);
             // 
             // lblRemiseBeheerSpoorBeheerBewerking
             // 
             this.lblRemiseBeheerSpoorBeheerBewerking.AutoSize = true;
-            this.lblRemiseBeheerSpoorBeheerBewerking.Location = new System.Drawing.Point(5, 33);
+            this.lblRemiseBeheerSpoorBeheerBewerking.Location = new System.Drawing.Point(4, 27);
+            this.lblRemiseBeheerSpoorBeheerBewerking.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRemiseBeheerSpoorBeheerBewerking.Name = "lblRemiseBeheerSpoorBeheerBewerking";
-            this.lblRemiseBeheerSpoorBeheerBewerking.Size = new System.Drawing.Size(77, 17);
+            this.lblRemiseBeheerSpoorBeheerBewerking.Size = new System.Drawing.Size(60, 13);
             this.lblRemiseBeheerSpoorBeheerBewerking.TabIndex = 2;
             this.lblRemiseBeheerSpoorBeheerBewerking.Text = "Bewerking:";
             // 
             // lblRemiseBeheerSpoorBeheerSectorNummer
             // 
             this.lblRemiseBeheerSpoorBeheerSectorNummer.AutoSize = true;
-            this.lblRemiseBeheerSpoorBeheerSectorNummer.Location = new System.Drawing.Point(5, 92);
+            this.lblRemiseBeheerSpoorBeheerSectorNummer.Location = new System.Drawing.Point(4, 75);
+            this.lblRemiseBeheerSpoorBeheerSectorNummer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRemiseBeheerSpoorBeheerSectorNummer.Name = "lblRemiseBeheerSpoorBeheerSectorNummer";
-            this.lblRemiseBeheerSpoorBeheerSectorNummer.Size = new System.Drawing.Size(104, 17);
+            this.lblRemiseBeheerSpoorBeheerSectorNummer.Size = new System.Drawing.Size(78, 13);
             this.lblRemiseBeheerSpoorBeheerSectorNummer.TabIndex = 1;
             this.lblRemiseBeheerSpoorBeheerSectorNummer.Text = "Sectornummer:";
             // 
             // lblRemiseBeheerSpoorBeheerSpoorNummer
             // 
             this.lblRemiseBeheerSpoorBeheerSpoorNummer.AutoSize = true;
-            this.lblRemiseBeheerSpoorBeheerSpoorNummer.Location = new System.Drawing.Point(5, 64);
+            this.lblRemiseBeheerSpoorBeheerSpoorNummer.Location = new System.Drawing.Point(4, 52);
+            this.lblRemiseBeheerSpoorBeheerSpoorNummer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRemiseBeheerSpoorBeheerSpoorNummer.Name = "lblRemiseBeheerSpoorBeheerSpoorNummer";
-            this.lblRemiseBeheerSpoorBeheerSpoorNummer.Size = new System.Drawing.Size(101, 17);
+            this.lblRemiseBeheerSpoorBeheerSpoorNummer.Size = new System.Drawing.Size(75, 13);
             this.lblRemiseBeheerSpoorBeheerSpoorNummer.TabIndex = 0;
             this.lblRemiseBeheerSpoorBeheerSpoorNummer.Text = "Spoornummer:";
             // 
@@ -400,74 +397,77 @@
             this.grbRemiseBeheerNieuwType.Controls.Add(this.lblRemiseBeheerNieuwTypeBeschrijving);
             this.grbRemiseBeheerNieuwType.Controls.Add(this.tbxRemiseBeheerNieuwTypeNaam);
             this.grbRemiseBeheerNieuwType.Controls.Add(this.lblRemiseBeheerNieuwTypeNaam);
-            this.grbRemiseBeheerNieuwType.Location = new System.Drawing.Point(5, 414);
-            this.grbRemiseBeheerNieuwType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grbRemiseBeheerNieuwType.Location = new System.Drawing.Point(4, 336);
+            this.grbRemiseBeheerNieuwType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grbRemiseBeheerNieuwType.Name = "grbRemiseBeheerNieuwType";
-            this.grbRemiseBeheerNieuwType.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grbRemiseBeheerNieuwType.Size = new System.Drawing.Size(536, 256);
+            this.grbRemiseBeheerNieuwType.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grbRemiseBeheerNieuwType.Size = new System.Drawing.Size(402, 208);
             this.grbRemiseBeheerNieuwType.TabIndex = 6;
             this.grbRemiseBeheerNieuwType.TabStop = false;
             this.grbRemiseBeheerNieuwType.Text = "Nieuw Tram Type";
             // 
             // btnRemiseBeheerNieuwTypeVoegToe
             // 
-            this.btnRemiseBeheerNieuwTypeVoegToe.Location = new System.Drawing.Point(448, 224);
-            this.btnRemiseBeheerNieuwTypeVoegToe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRemiseBeheerNieuwTypeVoegToe.Location = new System.Drawing.Point(336, 182);
+            this.btnRemiseBeheerNieuwTypeVoegToe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRemiseBeheerNieuwTypeVoegToe.Name = "btnRemiseBeheerNieuwTypeVoegToe";
-            this.btnRemiseBeheerNieuwTypeVoegToe.Size = new System.Drawing.Size(83, 27);
+            this.btnRemiseBeheerNieuwTypeVoegToe.Size = new System.Drawing.Size(62, 22);
             this.btnRemiseBeheerNieuwTypeVoegToe.TabIndex = 9;
             this.btnRemiseBeheerNieuwTypeVoegToe.Text = "Voeg Toe";
             this.btnRemiseBeheerNieuwTypeVoegToe.UseVisualStyleBackColor = true;
             // 
             // tbxRemiseBeheerNieuwTypeLengte
             // 
-            this.tbxRemiseBeheerNieuwTypeLengte.Location = new System.Drawing.Point(160, 194);
-            this.tbxRemiseBeheerNieuwTypeLengte.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbxRemiseBeheerNieuwTypeLengte.Location = new System.Drawing.Point(120, 158);
+            this.tbxRemiseBeheerNieuwTypeLengte.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbxRemiseBeheerNieuwTypeLengte.Name = "tbxRemiseBeheerNieuwTypeLengte";
-            this.tbxRemiseBeheerNieuwTypeLengte.Size = new System.Drawing.Size(369, 22);
+            this.tbxRemiseBeheerNieuwTypeLengte.Size = new System.Drawing.Size(278, 20);
             this.tbxRemiseBeheerNieuwTypeLengte.TabIndex = 5;
             // 
             // lblRemiseBeheerNieuwTypeLengte
             // 
             this.lblRemiseBeheerNieuwTypeLengte.AutoSize = true;
-            this.lblRemiseBeheerNieuwTypeLengte.Location = new System.Drawing.Point(5, 197);
+            this.lblRemiseBeheerNieuwTypeLengte.Location = new System.Drawing.Point(4, 160);
+            this.lblRemiseBeheerNieuwTypeLengte.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRemiseBeheerNieuwTypeLengte.Name = "lblRemiseBeheerNieuwTypeLengte";
-            this.lblRemiseBeheerNieuwTypeLengte.Size = new System.Drawing.Size(56, 17);
+            this.lblRemiseBeheerNieuwTypeLengte.Size = new System.Drawing.Size(43, 13);
             this.lblRemiseBeheerNieuwTypeLengte.TabIndex = 4;
             this.lblRemiseBeheerNieuwTypeLengte.Text = "Lengte:";
             // 
             // tbxRemiseBeheerNieuwTypeBeschrijving
             // 
-            this.tbxRemiseBeheerNieuwTypeBeschrijving.Location = new System.Drawing.Point(160, 64);
-            this.tbxRemiseBeheerNieuwTypeBeschrijving.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbxRemiseBeheerNieuwTypeBeschrijving.Location = new System.Drawing.Point(120, 52);
+            this.tbxRemiseBeheerNieuwTypeBeschrijving.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbxRemiseBeheerNieuwTypeBeschrijving.Multiline = true;
             this.tbxRemiseBeheerNieuwTypeBeschrijving.Name = "tbxRemiseBeheerNieuwTypeBeschrijving";
-            this.tbxRemiseBeheerNieuwTypeBeschrijving.Size = new System.Drawing.Size(369, 125);
+            this.tbxRemiseBeheerNieuwTypeBeschrijving.Size = new System.Drawing.Size(278, 102);
             this.tbxRemiseBeheerNieuwTypeBeschrijving.TabIndex = 3;
             // 
             // lblRemiseBeheerNieuwTypeBeschrijving
             // 
             this.lblRemiseBeheerNieuwTypeBeschrijving.AutoSize = true;
-            this.lblRemiseBeheerNieuwTypeBeschrijving.Location = new System.Drawing.Point(5, 66);
+            this.lblRemiseBeheerNieuwTypeBeschrijving.Location = new System.Drawing.Point(4, 54);
+            this.lblRemiseBeheerNieuwTypeBeschrijving.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRemiseBeheerNieuwTypeBeschrijving.Name = "lblRemiseBeheerNieuwTypeBeschrijving";
-            this.lblRemiseBeheerNieuwTypeBeschrijving.Size = new System.Drawing.Size(88, 17);
+            this.lblRemiseBeheerNieuwTypeBeschrijving.Size = new System.Drawing.Size(67, 13);
             this.lblRemiseBeheerNieuwTypeBeschrijving.TabIndex = 2;
             this.lblRemiseBeheerNieuwTypeBeschrijving.Text = "Beschrijving:";
             // 
             // tbxRemiseBeheerNieuwTypeNaam
             // 
-            this.tbxRemiseBeheerNieuwTypeNaam.Location = new System.Drawing.Point(160, 36);
-            this.tbxRemiseBeheerNieuwTypeNaam.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbxRemiseBeheerNieuwTypeNaam.Location = new System.Drawing.Point(120, 29);
+            this.tbxRemiseBeheerNieuwTypeNaam.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbxRemiseBeheerNieuwTypeNaam.Name = "tbxRemiseBeheerNieuwTypeNaam";
-            this.tbxRemiseBeheerNieuwTypeNaam.Size = new System.Drawing.Size(369, 22);
+            this.tbxRemiseBeheerNieuwTypeNaam.Size = new System.Drawing.Size(278, 20);
             this.tbxRemiseBeheerNieuwTypeNaam.TabIndex = 1;
             // 
             // lblRemiseBeheerNieuwTypeNaam
             // 
             this.lblRemiseBeheerNieuwTypeNaam.AutoSize = true;
-            this.lblRemiseBeheerNieuwTypeNaam.Location = new System.Drawing.Point(5, 39);
+            this.lblRemiseBeheerNieuwTypeNaam.Location = new System.Drawing.Point(4, 32);
+            this.lblRemiseBeheerNieuwTypeNaam.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRemiseBeheerNieuwTypeNaam.Name = "lblRemiseBeheerNieuwTypeNaam";
-            this.lblRemiseBeheerNieuwTypeNaam.Size = new System.Drawing.Size(83, 17);
+            this.lblRemiseBeheerNieuwTypeNaam.Size = new System.Drawing.Size(63, 13);
             this.lblRemiseBeheerNieuwTypeNaam.TabIndex = 0;
             this.lblRemiseBeheerNieuwTypeNaam.Text = "Type naam:";
             // 
@@ -482,11 +482,11 @@
             this.grbRemiseBeheerTramBeheer.Controls.Add(this.lblRemiseBeheerLijn);
             this.grbRemiseBeheerTramBeheer.Controls.Add(this.tbxRemiseBeheerTramNummer);
             this.grbRemiseBeheerTramBeheer.Controls.Add(this.lblRemiseBeheerTramNummer);
-            this.grbRemiseBeheerTramBeheer.Location = new System.Drawing.Point(5, 6);
-            this.grbRemiseBeheerTramBeheer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grbRemiseBeheerTramBeheer.Location = new System.Drawing.Point(4, 5);
+            this.grbRemiseBeheerTramBeheer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grbRemiseBeheerTramBeheer.Name = "grbRemiseBeheerTramBeheer";
-            this.grbRemiseBeheerTramBeheer.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grbRemiseBeheerTramBeheer.Size = new System.Drawing.Size(536, 183);
+            this.grbRemiseBeheerTramBeheer.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grbRemiseBeheerTramBeheer.Size = new System.Drawing.Size(402, 149);
             this.grbRemiseBeheerTramBeheer.TabIndex = 0;
             this.grbRemiseBeheerTramBeheer.TabStop = false;
             this.grbRemiseBeheerTramBeheer.Text = "Trambeheer";
@@ -506,19 +506,19 @@
             "5",
             "OCV",
             "2"});
-            this.cbxRemisebeheerTrambeheerLijn.Location = new System.Drawing.Point(160, 87);
-            this.cbxRemisebeheerTrambeheerLijn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbxRemisebeheerTrambeheerLijn.Location = new System.Drawing.Point(120, 71);
+            this.cbxRemisebeheerTrambeheerLijn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbxRemisebeheerTrambeheerLijn.Name = "cbxRemisebeheerTrambeheerLijn";
-            this.cbxRemisebeheerTrambeheerLijn.Size = new System.Drawing.Size(369, 24);
+            this.cbxRemisebeheerTrambeheerLijn.Size = new System.Drawing.Size(278, 21);
             this.cbxRemisebeheerTrambeheerLijn.TabIndex = 9;
             // 
             // btnRemiseBeheerTramBeheerBevestig
             // 
             this.btnRemiseBeheerTramBeheerBevestig.Enabled = false;
-            this.btnRemiseBeheerTramBeheerBevestig.Location = new System.Drawing.Point(448, 146);
-            this.btnRemiseBeheerTramBeheerBevestig.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRemiseBeheerTramBeheerBevestig.Location = new System.Drawing.Point(336, 119);
+            this.btnRemiseBeheerTramBeheerBevestig.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRemiseBeheerTramBeheerBevestig.Name = "btnRemiseBeheerTramBeheerBevestig";
-            this.btnRemiseBeheerTramBeheerBevestig.Size = new System.Drawing.Size(83, 27);
+            this.btnRemiseBeheerTramBeheerBevestig.Size = new System.Drawing.Size(62, 22);
             this.btnRemiseBeheerTramBeheerBevestig.TabIndex = 8;
             this.btnRemiseBeheerTramBeheerBevestig.Text = "Bevestig";
             this.btnRemiseBeheerTramBeheerBevestig.UseVisualStyleBackColor = true;
@@ -532,19 +532,20 @@
             "Voeg toe",
             "Verwijder",
             "Bewerk"});
-            this.cbxRemiseBeheerTramBewerking.Location = new System.Drawing.Point(160, 30);
-            this.cbxRemiseBeheerTramBewerking.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbxRemiseBeheerTramBewerking.Location = new System.Drawing.Point(120, 24);
+            this.cbxRemiseBeheerTramBewerking.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbxRemiseBeheerTramBewerking.Name = "cbxRemiseBeheerTramBewerking";
-            this.cbxRemiseBeheerTramBewerking.Size = new System.Drawing.Size(369, 24);
+            this.cbxRemiseBeheerTramBewerking.Size = new System.Drawing.Size(278, 21);
             this.cbxRemiseBeheerTramBewerking.TabIndex = 7;
             this.cbxRemiseBeheerTramBewerking.SelectedIndexChanged += new System.EventHandler(this.cbxRemiseBeheerTramBewerking_SelectedIndexChanged);
             // 
             // lblRemiseBeheerTramBewerking
             // 
             this.lblRemiseBeheerTramBewerking.AutoSize = true;
-            this.lblRemiseBeheerTramBewerking.Location = new System.Drawing.Point(5, 33);
+            this.lblRemiseBeheerTramBewerking.Location = new System.Drawing.Point(4, 27);
+            this.lblRemiseBeheerTramBewerking.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRemiseBeheerTramBewerking.Name = "lblRemiseBeheerTramBewerking";
-            this.lblRemiseBeheerTramBewerking.Size = new System.Drawing.Size(77, 17);
+            this.lblRemiseBeheerTramBewerking.Size = new System.Drawing.Size(60, 13);
             this.lblRemiseBeheerTramBewerking.TabIndex = 6;
             this.lblRemiseBeheerTramBewerking.Text = "Bewerking:";
             // 
@@ -553,45 +554,48 @@
             this.cbxRemiseBeheerTramType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxRemiseBeheerTramType.Enabled = false;
             this.cbxRemiseBeheerTramType.FormattingEnabled = true;
-            this.cbxRemiseBeheerTramType.Location = new System.Drawing.Point(160, 116);
-            this.cbxRemiseBeheerTramType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbxRemiseBeheerTramType.Location = new System.Drawing.Point(120, 94);
+            this.cbxRemiseBeheerTramType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbxRemiseBeheerTramType.Name = "cbxRemiseBeheerTramType";
-            this.cbxRemiseBeheerTramType.Size = new System.Drawing.Size(369, 24);
+            this.cbxRemiseBeheerTramType.Size = new System.Drawing.Size(278, 21);
             this.cbxRemiseBeheerTramType.TabIndex = 5;
             // 
             // lblRemiseBeheerType
             // 
             this.lblRemiseBeheerType.AutoSize = true;
-            this.lblRemiseBeheerType.Location = new System.Drawing.Point(5, 119);
+            this.lblRemiseBeheerType.Location = new System.Drawing.Point(4, 97);
+            this.lblRemiseBeheerType.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRemiseBeheerType.Name = "lblRemiseBeheerType";
-            this.lblRemiseBeheerType.Size = new System.Drawing.Size(44, 17);
+            this.lblRemiseBeheerType.Size = new System.Drawing.Size(34, 13);
             this.lblRemiseBeheerType.TabIndex = 4;
             this.lblRemiseBeheerType.Text = "Type:";
             // 
             // lblRemiseBeheerLijn
             // 
             this.lblRemiseBeheerLijn.AutoSize = true;
-            this.lblRemiseBeheerLijn.Location = new System.Drawing.Point(5, 91);
+            this.lblRemiseBeheerLijn.Location = new System.Drawing.Point(4, 74);
+            this.lblRemiseBeheerLijn.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRemiseBeheerLijn.Name = "lblRemiseBeheerLijn";
-            this.lblRemiseBeheerLijn.Size = new System.Drawing.Size(34, 17);
+            this.lblRemiseBeheerLijn.Size = new System.Drawing.Size(26, 13);
             this.lblRemiseBeheerLijn.TabIndex = 2;
             this.lblRemiseBeheerLijn.Text = "Lijn:";
             // 
             // tbxRemiseBeheerTramNummer
             // 
             this.tbxRemiseBeheerTramNummer.Enabled = false;
-            this.tbxRemiseBeheerTramNummer.Location = new System.Drawing.Point(160, 60);
-            this.tbxRemiseBeheerTramNummer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbxRemiseBeheerTramNummer.Location = new System.Drawing.Point(120, 49);
+            this.tbxRemiseBeheerTramNummer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbxRemiseBeheerTramNummer.Name = "tbxRemiseBeheerTramNummer";
-            this.tbxRemiseBeheerTramNummer.Size = new System.Drawing.Size(369, 22);
+            this.tbxRemiseBeheerTramNummer.Size = new System.Drawing.Size(278, 20);
             this.tbxRemiseBeheerTramNummer.TabIndex = 1;
             // 
             // lblRemiseBeheerTramNummer
             // 
             this.lblRemiseBeheerTramNummer.AutoSize = true;
-            this.lblRemiseBeheerTramNummer.Location = new System.Drawing.Point(5, 63);
+            this.lblRemiseBeheerTramNummer.Location = new System.Drawing.Point(4, 51);
+            this.lblRemiseBeheerTramNummer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRemiseBeheerTramNummer.Name = "lblRemiseBeheerTramNummer";
-            this.lblRemiseBeheerTramNummer.Size = new System.Drawing.Size(96, 17);
+            this.lblRemiseBeheerTramNummer.Size = new System.Drawing.Size(71, 13);
             this.lblRemiseBeheerTramNummer.TabIndex = 0;
             this.lblRemiseBeheerTramNummer.Text = "Tramnummer:";
             // 
@@ -599,11 +603,11 @@
             // 
             this.tabpageStatusBeheer.Controls.Add(this.gB_OnderhoudInvoeren);
             this.tabpageStatusBeheer.Controls.Add(this.grbTramStatus);
-            this.tabpageStatusBeheer.Location = new System.Drawing.Point(4, 25);
-            this.tabpageStatusBeheer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabpageStatusBeheer.Location = new System.Drawing.Point(4, 22);
+            this.tabpageStatusBeheer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabpageStatusBeheer.Name = "tabpageStatusBeheer";
-            this.tabpageStatusBeheer.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabpageStatusBeheer.Size = new System.Drawing.Size(1884, 942);
+            this.tabpageStatusBeheer.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabpageStatusBeheer.Size = new System.Drawing.Size(1411, 763);
             this.tabpageStatusBeheer.TabIndex = 1;
             this.tabpageStatusBeheer.Text = "Statusbeheer";
             this.tabpageStatusBeheer.UseVisualStyleBackColor = true;
@@ -617,11 +621,11 @@
             this.gB_OnderhoudInvoeren.Controls.Add(this.label6);
             this.gB_OnderhoudInvoeren.Controls.Add(this.btnOnderhoudBevestiging);
             this.gB_OnderhoudInvoeren.Controls.Add(this.label10);
-            this.gB_OnderhoudInvoeren.Location = new System.Drawing.Point(520, 5);
-            this.gB_OnderhoudInvoeren.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gB_OnderhoudInvoeren.Location = new System.Drawing.Point(390, 4);
+            this.gB_OnderhoudInvoeren.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gB_OnderhoudInvoeren.Name = "gB_OnderhoudInvoeren";
-            this.gB_OnderhoudInvoeren.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gB_OnderhoudInvoeren.Size = new System.Drawing.Size(717, 379);
+            this.gB_OnderhoudInvoeren.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gB_OnderhoudInvoeren.Size = new System.Drawing.Size(538, 308);
             this.gB_OnderhoudInvoeren.TabIndex = 10;
             this.gB_OnderhoudInvoeren.TabStop = false;
             this.gB_OnderhoudInvoeren.Text = "Onderhoud Invoeren";
@@ -629,32 +633,28 @@
             // lB_Onderhoud_Trams
             // 
             this.lB_Onderhoud_Trams.FormattingEnabled = true;
-            this.lB_Onderhoud_Trams.ItemHeight = 16;
-            this.lB_Onderhoud_Trams.Location = new System.Drawing.Point(15, 132);
-            this.lB_Onderhoud_Trams.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lB_Onderhoud_Trams.Location = new System.Drawing.Point(11, 107);
             this.lB_Onderhoud_Trams.Name = "lB_Onderhoud_Trams";
-            this.lB_Onderhoud_Trams.Size = new System.Drawing.Size(684, 228);
+            this.lB_Onderhoud_Trams.Size = new System.Drawing.Size(514, 186);
             this.lB_Onderhoud_Trams.TabIndex = 11;
             // 
             // nUd_StatusbeheerTramnummer
             // 
-            this.nUd_StatusbeheerTramnummer.Location = new System.Drawing.Point(167, 36);
-            this.nUd_StatusbeheerTramnummer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nUd_StatusbeheerTramnummer.Location = new System.Drawing.Point(125, 29);
             this.nUd_StatusbeheerTramnummer.Maximum = new decimal(new int[] {
             10000,
             0,
             0,
             0});
             this.nUd_StatusbeheerTramnummer.Name = "nUd_StatusbeheerTramnummer";
-            this.nUd_StatusbeheerTramnummer.Size = new System.Drawing.Size(155, 22);
+            this.nUd_StatusbeheerTramnummer.Size = new System.Drawing.Size(116, 20);
             this.nUd_StatusbeheerTramnummer.TabIndex = 19;
             // 
             // btn_RefreshList2
             // 
-            this.btn_RefreshList2.Location = new System.Drawing.Point(525, 97);
-            this.btn_RefreshList2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_RefreshList2.Location = new System.Drawing.Point(394, 79);
             this.btn_RefreshList2.Name = "btn_RefreshList2";
-            this.btn_RefreshList2.Size = new System.Drawing.Size(85, 27);
+            this.btn_RefreshList2.Size = new System.Drawing.Size(64, 22);
             this.btn_RefreshList2.TabIndex = 18;
             this.btn_RefreshList2.Text = "Ververs lijst";
             this.btn_RefreshList2.UseVisualStyleBackColor = true;
@@ -662,28 +662,29 @@
             // 
             // tB_Statusbeheer_Opmerking
             // 
-            this.tB_Statusbeheer_Opmerking.Location = new System.Drawing.Point(423, 36);
-            this.tB_Statusbeheer_Opmerking.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tB_Statusbeheer_Opmerking.Location = new System.Drawing.Point(317, 29);
+            this.tB_Statusbeheer_Opmerking.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tB_Statusbeheer_Opmerking.Multiline = true;
             this.tB_Statusbeheer_Opmerking.Name = "tB_Statusbeheer_Opmerking";
-            this.tB_Statusbeheer_Opmerking.Size = new System.Drawing.Size(276, 56);
+            this.tB_Statusbeheer_Opmerking.Size = new System.Drawing.Size(208, 46);
             this.tB_Statusbeheer_Opmerking.TabIndex = 16;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(336, 39);
+            this.label6.Location = new System.Drawing.Point(252, 32);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(81, 17);
+            this.label6.Size = new System.Drawing.Size(61, 13);
             this.label6.TabIndex = 15;
             this.label6.Text = "Opmerking:";
             // 
             // btnOnderhoudBevestiging
             // 
-            this.btnOnderhoudBevestiging.Location = new System.Drawing.Point(617, 97);
-            this.btnOnderhoudBevestiging.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnOnderhoudBevestiging.Location = new System.Drawing.Point(463, 79);
+            this.btnOnderhoudBevestiging.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnOnderhoudBevestiging.Name = "btnOnderhoudBevestiging";
-            this.btnOnderhoudBevestiging.Size = new System.Drawing.Size(83, 27);
+            this.btnOnderhoudBevestiging.Size = new System.Drawing.Size(62, 22);
             this.btnOnderhoudBevestiging.TabIndex = 2;
             this.btnOnderhoudBevestiging.Text = "Bevestig";
             this.btnOnderhoudBevestiging.UseVisualStyleBackColor = true;
@@ -692,9 +693,10 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(11, 39);
+            this.label10.Location = new System.Drawing.Point(8, 32);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(96, 17);
+            this.label10.Size = new System.Drawing.Size(71, 13);
             this.label10.TabIndex = 3;
             this.label10.Text = "Tramnummer:";
             // 
@@ -708,11 +710,11 @@
             this.grbTramStatus.Controls.Add(this.lblStatusbeheerTramStatus);
             this.grbTramStatus.Controls.Add(this.lblStatusbeheerTramNummer);
             this.grbTramStatus.Controls.Add(this.tbxStatusbeheerTramNummer);
-            this.grbTramStatus.Location = new System.Drawing.Point(5, 5);
-            this.grbTramStatus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grbTramStatus.Location = new System.Drawing.Point(4, 4);
+            this.grbTramStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grbTramStatus.Name = "grbTramStatus";
-            this.grbTramStatus.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grbTramStatus.Size = new System.Drawing.Size(509, 191);
+            this.grbTramStatus.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grbTramStatus.Size = new System.Drawing.Size(382, 155);
             this.grbTramStatus.TabIndex = 9;
             this.grbTramStatus.TabStop = false;
             this.grbTramStatus.Text = "Tramstatus";
@@ -720,28 +722,29 @@
             // tbxStatusbeheerHuidigeStatus
             // 
             this.tbxStatusbeheerHuidigeStatus.Enabled = false;
-            this.tbxStatusbeheerHuidigeStatus.Location = new System.Drawing.Point(160, 70);
-            this.tbxStatusbeheerHuidigeStatus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbxStatusbeheerHuidigeStatus.Location = new System.Drawing.Point(120, 57);
+            this.tbxStatusbeheerHuidigeStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbxStatusbeheerHuidigeStatus.Name = "tbxStatusbeheerHuidigeStatus";
-            this.tbxStatusbeheerHuidigeStatus.Size = new System.Drawing.Size(152, 22);
+            this.tbxStatusbeheerHuidigeStatus.Size = new System.Drawing.Size(115, 20);
             this.tbxStatusbeheerHuidigeStatus.TabIndex = 8;
             this.tbxStatusbeheerHuidigeStatus.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(5, 108);
+            this.label5.Location = new System.Drawing.Point(4, 88);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(98, 17);
+            this.label5.Size = new System.Drawing.Size(76, 13);
             this.label5.TabIndex = 7;
             this.label5.Text = "Nieuwe Status";
             // 
             // Check
             // 
-            this.Check.Location = new System.Drawing.Point(140, 148);
-            this.Check.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Check.Location = new System.Drawing.Point(105, 120);
+            this.Check.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Check.Name = "Check";
-            this.Check.Size = new System.Drawing.Size(85, 27);
+            this.Check.Size = new System.Drawing.Size(64, 22);
             this.Check.TabIndex = 6;
             this.Check.Text = "Check";
             this.Check.UseVisualStyleBackColor = true;
@@ -750,10 +753,10 @@
             // btnStatusbeheerTramStatus
             // 
             this.btnStatusbeheerTramStatus.Enabled = false;
-            this.btnStatusbeheerTramStatus.Location = new System.Drawing.Point(232, 148);
-            this.btnStatusbeheerTramStatus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnStatusbeheerTramStatus.Location = new System.Drawing.Point(174, 120);
+            this.btnStatusbeheerTramStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnStatusbeheerTramStatus.Name = "btnStatusbeheerTramStatus";
-            this.btnStatusbeheerTramStatus.Size = new System.Drawing.Size(83, 27);
+            this.btnStatusbeheerTramStatus.Size = new System.Drawing.Size(62, 22);
             this.btnStatusbeheerTramStatus.TabIndex = 5;
             this.btnStatusbeheerTramStatus.Text = "Bevestig";
             this.btnStatusbeheerTramStatus.UseVisualStyleBackColor = true;
@@ -769,36 +772,38 @@
             "Dienst",
             "Schoonmaak",
             "Defect"});
-            this.cbxStatusbeheerTramStatus.Location = new System.Drawing.Point(160, 106);
-            this.cbxStatusbeheerTramStatus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbxStatusbeheerTramStatus.Location = new System.Drawing.Point(120, 86);
+            this.cbxStatusbeheerTramStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbxStatusbeheerTramStatus.Name = "cbxStatusbeheerTramStatus";
-            this.cbxStatusbeheerTramStatus.Size = new System.Drawing.Size(153, 24);
+            this.cbxStatusbeheerTramStatus.Size = new System.Drawing.Size(116, 21);
             this.cbxStatusbeheerTramStatus.TabIndex = 4;
             // 
             // lblStatusbeheerTramStatus
             // 
             this.lblStatusbeheerTramStatus.AutoSize = true;
-            this.lblStatusbeheerTramStatus.Location = new System.Drawing.Point(5, 74);
+            this.lblStatusbeheerTramStatus.Location = new System.Drawing.Point(4, 60);
+            this.lblStatusbeheerTramStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblStatusbeheerTramStatus.Name = "lblStatusbeheerTramStatus";
-            this.lblStatusbeheerTramStatus.Size = new System.Drawing.Size(100, 17);
+            this.lblStatusbeheerTramStatus.Size = new System.Drawing.Size(76, 13);
             this.lblStatusbeheerTramStatus.TabIndex = 3;
             this.lblStatusbeheerTramStatus.Text = "Huidige Status";
             // 
             // lblStatusbeheerTramNummer
             // 
             this.lblStatusbeheerTramNummer.AutoSize = true;
-            this.lblStatusbeheerTramNummer.Location = new System.Drawing.Point(5, 39);
+            this.lblStatusbeheerTramNummer.Location = new System.Drawing.Point(4, 32);
+            this.lblStatusbeheerTramNummer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblStatusbeheerTramNummer.Name = "lblStatusbeheerTramNummer";
-            this.lblStatusbeheerTramNummer.Size = new System.Drawing.Size(96, 17);
+            this.lblStatusbeheerTramNummer.Size = new System.Drawing.Size(71, 13);
             this.lblStatusbeheerTramNummer.TabIndex = 1;
             this.lblStatusbeheerTramNummer.Text = "Tramnummer:";
             // 
             // tbxStatusbeheerTramNummer
             // 
-            this.tbxStatusbeheerTramNummer.Location = new System.Drawing.Point(160, 36);
-            this.tbxStatusbeheerTramNummer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbxStatusbeheerTramNummer.Location = new System.Drawing.Point(120, 29);
+            this.tbxStatusbeheerTramNummer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbxStatusbeheerTramNummer.Name = "tbxStatusbeheerTramNummer";
-            this.tbxStatusbeheerTramNummer.Size = new System.Drawing.Size(153, 22);
+            this.tbxStatusbeheerTramNummer.Size = new System.Drawing.Size(116, 20);
             this.tbxStatusbeheerTramNummer.TabIndex = 0;
             // 
             // tabpageAccountBeheer
@@ -808,11 +813,11 @@
             this.tabpageAccountBeheer.Controls.Add(this.lbAccountMedewerkers);
             this.tabpageAccountBeheer.Controls.Add(this.grbAccountNMedewerker);
             this.tabpageAccountBeheer.Controls.Add(this.grbAccountBeheerNieuwAccount);
-            this.tabpageAccountBeheer.Location = new System.Drawing.Point(4, 25);
-            this.tabpageAccountBeheer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabpageAccountBeheer.Location = new System.Drawing.Point(4, 22);
+            this.tabpageAccountBeheer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabpageAccountBeheer.Name = "tabpageAccountBeheer";
-            this.tabpageAccountBeheer.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabpageAccountBeheer.Size = new System.Drawing.Size(1884, 942);
+            this.tabpageAccountBeheer.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabpageAccountBeheer.Size = new System.Drawing.Size(1411, 763);
             this.tabpageAccountBeheer.TabIndex = 3;
             this.tabpageAccountBeheer.Text = "Accountbeheer";
             this.tabpageAccountBeheer.UseVisualStyleBackColor = true;
@@ -820,11 +825,10 @@
             // lbAccountGebruiker
             // 
             this.lbAccountGebruiker.FormattingEnabled = true;
-            this.lbAccountGebruiker.ItemHeight = 16;
-            this.lbAccountGebruiker.Location = new System.Drawing.Point(1501, 239);
-            this.lbAccountGebruiker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lbAccountGebruiker.Location = new System.Drawing.Point(1126, 194);
+            this.lbAccountGebruiker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lbAccountGebruiker.Name = "lbAccountGebruiker";
-            this.lbAccountGebruiker.Size = new System.Drawing.Size(239, 420);
+            this.lbAccountGebruiker.Size = new System.Drawing.Size(180, 342);
             this.lbAccountGebruiker.TabIndex = 20;
             this.lbAccountGebruiker.SelectedIndexChanged += new System.EventHandler(this.lbAccountGebruiker_SelectedIndexChanged_1);
             this.lbAccountGebruiker.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lbAccountGebruiker_MouseDoubleClick);
@@ -835,11 +839,11 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.BttnAccountRemoveMedewerker);
-            this.groupBox1.Location = new System.Drawing.Point(1501, 17);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Location = new System.Drawing.Point(1126, 14);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(239, 207);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(179, 168);
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tools:";
@@ -847,10 +851,10 @@
             // btnAccountGebrkerverw
             // 
             this.btnAccountGebrkerverw.Enabled = false;
-            this.btnAccountGebrkerverw.Location = new System.Drawing.Point(11, 140);
-            this.btnAccountGebrkerverw.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAccountGebrkerverw.Location = new System.Drawing.Point(8, 114);
+            this.btnAccountGebrkerverw.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAccountGebrkerverw.Name = "btnAccountGebrkerverw";
-            this.btnAccountGebrkerverw.Size = new System.Drawing.Size(103, 27);
+            this.btnAccountGebrkerverw.Size = new System.Drawing.Size(77, 22);
             this.btnAccountGebrkerverw.TabIndex = 21;
             this.btnAccountGebrkerverw.Text = "Verwijderen";
             this.btnAccountGebrkerverw.UseVisualStyleBackColor = true;
@@ -859,28 +863,30 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(7, 114);
+            this.label4.Location = new System.Drawing.Point(5, 93);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(139, 17);
+            this.label4.Size = new System.Drawing.Size(107, 13);
             this.label4.TabIndex = 20;
             this.label4.Text = "Account verwijderen:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 50);
+            this.label3.Location = new System.Drawing.Point(5, 41);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(165, 17);
+            this.label3.Size = new System.Drawing.Size(126, 13);
             this.label3.TabIndex = 19;
             this.label3.Text = "Medewerker verwijderen:";
             // 
             // BttnAccountRemoveMedewerker
             // 
             this.BttnAccountRemoveMedewerker.Enabled = false;
-            this.BttnAccountRemoveMedewerker.Location = new System.Drawing.Point(11, 78);
-            this.BttnAccountRemoveMedewerker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BttnAccountRemoveMedewerker.Location = new System.Drawing.Point(8, 63);
+            this.BttnAccountRemoveMedewerker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BttnAccountRemoveMedewerker.Name = "BttnAccountRemoveMedewerker";
-            this.BttnAccountRemoveMedewerker.Size = new System.Drawing.Size(103, 27);
+            this.BttnAccountRemoveMedewerker.Size = new System.Drawing.Size(77, 22);
             this.BttnAccountRemoveMedewerker.TabIndex = 18;
             this.BttnAccountRemoveMedewerker.Text = "Verwijderen";
             this.BttnAccountRemoveMedewerker.UseVisualStyleBackColor = true;
@@ -889,11 +895,10 @@
             // lbAccountMedewerkers
             // 
             this.lbAccountMedewerkers.FormattingEnabled = true;
-            this.lbAccountMedewerkers.ItemHeight = 16;
-            this.lbAccountMedewerkers.Location = new System.Drawing.Point(347, 17);
-            this.lbAccountMedewerkers.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lbAccountMedewerkers.Location = new System.Drawing.Point(260, 14);
+            this.lbAccountMedewerkers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lbAccountMedewerkers.Name = "lbAccountMedewerkers";
-            this.lbAccountMedewerkers.Size = new System.Drawing.Size(1140, 548);
+            this.lbAccountMedewerkers.Size = new System.Drawing.Size(856, 446);
             this.lbAccountMedewerkers.TabIndex = 2;
             this.lbAccountMedewerkers.SelectedIndexChanged += new System.EventHandler(this.lbAccountMedewerkers_SelectedIndexChanged);
             this.lbAccountMedewerkers.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lbAccountMedewerkers_MouseDoubleClick);
@@ -912,11 +917,11 @@
             this.grbAccountNMedewerker.Controls.Add(this.lblAccountEmail);
             this.grbAccountNMedewerker.Controls.Add(this.tbxAccountNaam);
             this.grbAccountNMedewerker.Controls.Add(this.label239);
-            this.grbAccountNMedewerker.Location = new System.Drawing.Point(5, 6);
-            this.grbAccountNMedewerker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grbAccountNMedewerker.Location = new System.Drawing.Point(4, 5);
+            this.grbAccountNMedewerker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grbAccountNMedewerker.Name = "grbAccountNMedewerker";
-            this.grbAccountNMedewerker.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grbAccountNMedewerker.Size = new System.Drawing.Size(325, 241);
+            this.grbAccountNMedewerker.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grbAccountNMedewerker.Size = new System.Drawing.Size(244, 196);
             this.grbAccountNMedewerker.TabIndex = 1;
             this.grbAccountNMedewerker.TabStop = false;
             this.grbAccountNMedewerker.Text = "Nieuwe Medewerker";
@@ -924,56 +929,59 @@
             // lblAccontPostcode
             // 
             this.lblAccontPostcode.AutoSize = true;
-            this.lblAccontPostcode.Location = new System.Drawing.Point(9, 151);
+            this.lblAccontPostcode.Location = new System.Drawing.Point(7, 123);
+            this.lblAccontPostcode.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAccontPostcode.Name = "lblAccontPostcode";
-            this.lblAccontPostcode.Size = new System.Drawing.Size(71, 17);
+            this.lblAccontPostcode.Size = new System.Drawing.Size(55, 13);
             this.lblAccontPostcode.TabIndex = 14;
             this.lblAccontPostcode.Text = "Postcode:";
             // 
             // tbxAccountPostcode
             // 
             this.tbxAccountPostcode.Enabled = false;
-            this.tbxAccountPostcode.Location = new System.Drawing.Point(160, 148);
-            this.tbxAccountPostcode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbxAccountPostcode.Location = new System.Drawing.Point(120, 120);
+            this.tbxAccountPostcode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbxAccountPostcode.MaxLength = 6;
             this.tbxAccountPostcode.Name = "tbxAccountPostcode";
-            this.tbxAccountPostcode.Size = new System.Drawing.Size(153, 22);
+            this.tbxAccountPostcode.Size = new System.Drawing.Size(116, 20);
             this.tbxAccountPostcode.TabIndex = 13;
             // 
             // tbxAccountStrtNR
             // 
             this.tbxAccountStrtNR.Enabled = false;
-            this.tbxAccountStrtNR.Location = new System.Drawing.Point(160, 121);
-            this.tbxAccountStrtNR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbxAccountStrtNR.Location = new System.Drawing.Point(120, 98);
+            this.tbxAccountStrtNR.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbxAccountStrtNR.Name = "tbxAccountStrtNR";
-            this.tbxAccountStrtNR.Size = new System.Drawing.Size(153, 22);
+            this.tbxAccountStrtNR.Size = new System.Drawing.Size(116, 20);
             this.tbxAccountStrtNR.TabIndex = 11;
             // 
             // lblAccountStrtNR
             // 
             this.lblAccountStrtNR.AutoSize = true;
-            this.lblAccountStrtNR.Location = new System.Drawing.Point(9, 123);
+            this.lblAccountStrtNR.Location = new System.Drawing.Point(7, 100);
+            this.lblAccountStrtNR.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAccountStrtNR.Name = "lblAccountStrtNR";
-            this.lblAccountStrtNR.Size = new System.Drawing.Size(121, 17);
+            this.lblAccountStrtNR.Size = new System.Drawing.Size(92, 13);
             this.lblAccountStrtNR.TabIndex = 10;
             this.lblAccountStrtNR.Text = "Straatnaam + NR:";
             // 
             // lblAccountNaam
             // 
             this.lblAccountNaam.AutoSize = true;
-            this.lblAccountNaam.Location = new System.Drawing.Point(9, 36);
+            this.lblAccountNaam.Location = new System.Drawing.Point(7, 29);
+            this.lblAccountNaam.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAccountNaam.Name = "lblAccountNaam";
-            this.lblAccountNaam.Size = new System.Drawing.Size(49, 17);
+            this.lblAccountNaam.Size = new System.Drawing.Size(38, 13);
             this.lblAccountNaam.TabIndex = 9;
             this.lblAccountNaam.Text = "Naam:";
             // 
             // btnAccountToevoegen
             // 
             this.btnAccountToevoegen.Enabled = false;
-            this.btnAccountToevoegen.Location = new System.Drawing.Point(211, 191);
-            this.btnAccountToevoegen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAccountToevoegen.Location = new System.Drawing.Point(158, 155);
+            this.btnAccountToevoegen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAccountToevoegen.Name = "btnAccountToevoegen";
-            this.btnAccountToevoegen.Size = new System.Drawing.Size(103, 27);
+            this.btnAccountToevoegen.Size = new System.Drawing.Size(77, 22);
             this.btnAccountToevoegen.TabIndex = 8;
             this.btnAccountToevoegen.Text = "Toevoegen";
             this.btnAccountToevoegen.UseVisualStyleBackColor = true;
@@ -989,54 +997,57 @@
             "REPARATEUR",
             "BEHEERDER",
             "WAGENPARKBEHEERDER"});
-            this.cbAccountFunctie.Location = new System.Drawing.Point(160, 90);
-            this.cbAccountFunctie.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbAccountFunctie.Location = new System.Drawing.Point(120, 73);
+            this.cbAccountFunctie.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbAccountFunctie.Name = "cbAccountFunctie";
-            this.cbAccountFunctie.Size = new System.Drawing.Size(153, 24);
+            this.cbAccountFunctie.Size = new System.Drawing.Size(116, 21);
             this.cbAccountFunctie.TabIndex = 5;
             // 
             // lblAccountFunctie
             // 
             this.lblAccountFunctie.AutoSize = true;
-            this.lblAccountFunctie.Location = new System.Drawing.Point(9, 94);
+            this.lblAccountFunctie.Location = new System.Drawing.Point(7, 76);
+            this.lblAccountFunctie.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAccountFunctie.Name = "lblAccountFunctie";
-            this.lblAccountFunctie.Size = new System.Drawing.Size(58, 17);
+            this.lblAccountFunctie.Size = new System.Drawing.Size(45, 13);
             this.lblAccountFunctie.TabIndex = 4;
             this.lblAccountFunctie.Text = "Functie:";
             // 
             // tbxAccountEmail
             // 
             this.tbxAccountEmail.Enabled = false;
-            this.tbxAccountEmail.Location = new System.Drawing.Point(160, 62);
-            this.tbxAccountEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbxAccountEmail.Location = new System.Drawing.Point(120, 50);
+            this.tbxAccountEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbxAccountEmail.Name = "tbxAccountEmail";
-            this.tbxAccountEmail.Size = new System.Drawing.Size(153, 22);
+            this.tbxAccountEmail.Size = new System.Drawing.Size(116, 20);
             this.tbxAccountEmail.TabIndex = 3;
             // 
             // lblAccountEmail
             // 
             this.lblAccountEmail.AutoSize = true;
-            this.lblAccountEmail.Location = new System.Drawing.Point(9, 64);
+            this.lblAccountEmail.Location = new System.Drawing.Point(7, 52);
+            this.lblAccountEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAccountEmail.Name = "lblAccountEmail";
-            this.lblAccountEmail.Size = new System.Drawing.Size(46, 17);
+            this.lblAccountEmail.Size = new System.Drawing.Size(35, 13);
             this.lblAccountEmail.TabIndex = 2;
             this.lblAccountEmail.Text = "Email:";
             // 
             // tbxAccountNaam
             // 
             this.tbxAccountNaam.Enabled = false;
-            this.tbxAccountNaam.Location = new System.Drawing.Point(160, 33);
-            this.tbxAccountNaam.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbxAccountNaam.Location = new System.Drawing.Point(120, 27);
+            this.tbxAccountNaam.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbxAccountNaam.Name = "tbxAccountNaam";
-            this.tbxAccountNaam.Size = new System.Drawing.Size(153, 22);
+            this.tbxAccountNaam.Size = new System.Drawing.Size(116, 20);
             this.tbxAccountNaam.TabIndex = 1;
             // 
             // label239
             // 
             this.label239.AutoSize = true;
-            this.label239.Location = new System.Drawing.Point(5, 36);
+            this.label239.Location = new System.Drawing.Point(4, 29);
+            this.label239.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label239.Name = "label239";
-            this.label239.Size = new System.Drawing.Size(0, 17);
+            this.label239.Size = new System.Drawing.Size(0, 13);
             this.label239.TabIndex = 0;
             // 
             // grbAccountBeheerNieuwAccount
@@ -1046,11 +1057,11 @@
             this.grbAccountBeheerNieuwAccount.Controls.Add(this.tbxAccountWachtwoord);
             this.grbAccountBeheerNieuwAccount.Controls.Add(this.BtnAccountInlogToevoegen);
             this.grbAccountBeheerNieuwAccount.Controls.Add(this.tbxAccountUsername);
-            this.grbAccountBeheerNieuwAccount.Location = new System.Drawing.Point(5, 254);
-            this.grbAccountBeheerNieuwAccount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grbAccountBeheerNieuwAccount.Location = new System.Drawing.Point(4, 206);
+            this.grbAccountBeheerNieuwAccount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grbAccountBeheerNieuwAccount.Name = "grbAccountBeheerNieuwAccount";
-            this.grbAccountBeheerNieuwAccount.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grbAccountBeheerNieuwAccount.Size = new System.Drawing.Size(325, 327);
+            this.grbAccountBeheerNieuwAccount.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grbAccountBeheerNieuwAccount.Size = new System.Drawing.Size(244, 266);
             this.grbAccountBeheerNieuwAccount.TabIndex = 0;
             this.grbAccountBeheerNieuwAccount.TabStop = false;
             this.grbAccountBeheerNieuwAccount.Text = "Nieuw Account";
@@ -1058,38 +1069,40 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 112);
+            this.label2.Location = new System.Drawing.Point(7, 91);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 17);
+            this.label2.Size = new System.Drawing.Size(71, 13);
             this.label2.TabIndex = 17;
             this.label2.Text = "Wachtwoord:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 86);
+            this.label1.Location = new System.Drawing.Point(7, 70);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(117, 17);
+            this.label1.Size = new System.Drawing.Size(87, 13);
             this.label1.TabIndex = 16;
             this.label1.Text = "Gebruikersnaam:";
             // 
             // tbxAccountWachtwoord
             // 
             this.tbxAccountWachtwoord.Enabled = false;
-            this.tbxAccountWachtwoord.Location = new System.Drawing.Point(160, 111);
-            this.tbxAccountWachtwoord.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbxAccountWachtwoord.Location = new System.Drawing.Point(120, 90);
+            this.tbxAccountWachtwoord.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbxAccountWachtwoord.MaxLength = 25;
             this.tbxAccountWachtwoord.Name = "tbxAccountWachtwoord";
             this.tbxAccountWachtwoord.PasswordChar = '*';
-            this.tbxAccountWachtwoord.Size = new System.Drawing.Size(153, 22);
+            this.tbxAccountWachtwoord.Size = new System.Drawing.Size(116, 20);
             this.tbxAccountWachtwoord.TabIndex = 15;
             // 
             // BtnAccountInlogToevoegen
             // 
-            this.BtnAccountInlogToevoegen.Location = new System.Drawing.Point(211, 151);
-            this.BtnAccountInlogToevoegen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnAccountInlogToevoegen.Location = new System.Drawing.Point(158, 123);
+            this.BtnAccountInlogToevoegen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnAccountInlogToevoegen.Name = "BtnAccountInlogToevoegen";
-            this.BtnAccountInlogToevoegen.Size = new System.Drawing.Size(103, 27);
+            this.BtnAccountInlogToevoegen.Size = new System.Drawing.Size(77, 22);
             this.BtnAccountInlogToevoegen.TabIndex = 3;
             this.BtnAccountInlogToevoegen.Text = "Toevoegen";
             this.BtnAccountInlogToevoegen.UseVisualStyleBackColor = true;
@@ -1098,10 +1111,10 @@
             // tbxAccountUsername
             // 
             this.tbxAccountUsername.Enabled = false;
-            this.tbxAccountUsername.Location = new System.Drawing.Point(160, 82);
-            this.tbxAccountUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbxAccountUsername.Location = new System.Drawing.Point(120, 67);
+            this.tbxAccountUsername.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbxAccountUsername.Name = "tbxAccountUsername";
-            this.tbxAccountUsername.Size = new System.Drawing.Size(153, 22);
+            this.tbxAccountUsername.Size = new System.Drawing.Size(116, 20);
             this.tbxAccountUsername.TabIndex = 2;
             // 
             // tabpageOnderhoud
@@ -1109,11 +1122,11 @@
             this.tabpageOnderhoud.Controls.Add(this.gB_Onderhoudslijst_TODO);
             this.tabpageOnderhoud.Controls.Add(this.gB_Onderhoudslijsthistorie);
             this.tabpageOnderhoud.Controls.Add(this.grbTramOnderhoud);
-            this.tabpageOnderhoud.Location = new System.Drawing.Point(4, 25);
-            this.tabpageOnderhoud.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabpageOnderhoud.Location = new System.Drawing.Point(4, 22);
+            this.tabpageOnderhoud.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabpageOnderhoud.Name = "tabpageOnderhoud";
-            this.tabpageOnderhoud.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabpageOnderhoud.Size = new System.Drawing.Size(1884, 942);
+            this.tabpageOnderhoud.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabpageOnderhoud.Size = new System.Drawing.Size(1411, 763);
             this.tabpageOnderhoud.TabIndex = 4;
             this.tabpageOnderhoud.Text = "Onderhoud";
             this.tabpageOnderhoud.UseVisualStyleBackColor = true;
@@ -1121,11 +1134,9 @@
             // gB_Onderhoudslijst_TODO
             // 
             this.gB_Onderhoudslijst_TODO.Controls.Add(this.lB_Onderhoudslijst_TODO);
-            this.gB_Onderhoudslijst_TODO.Location = new System.Drawing.Point(5, 113);
-            this.gB_Onderhoudslijst_TODO.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gB_Onderhoudslijst_TODO.Location = new System.Drawing.Point(4, 92);
             this.gB_Onderhoudslijst_TODO.Name = "gB_Onderhoudslijst_TODO";
-            this.gB_Onderhoudslijst_TODO.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gB_Onderhoudslijst_TODO.Size = new System.Drawing.Size(787, 820);
+            this.gB_Onderhoudslijst_TODO.Size = new System.Drawing.Size(590, 666);
             this.gB_Onderhoudslijst_TODO.TabIndex = 6;
             this.gB_Onderhoudslijst_TODO.TabStop = false;
             this.gB_Onderhoudslijst_TODO.Text = "Onderhoudslijst";
@@ -1133,21 +1144,17 @@
             // lB_Onderhoudslijst_TODO
             // 
             this.lB_Onderhoudslijst_TODO.FormattingEnabled = true;
-            this.lB_Onderhoudslijst_TODO.ItemHeight = 16;
-            this.lB_Onderhoudslijst_TODO.Location = new System.Drawing.Point(8, 18);
-            this.lB_Onderhoudslijst_TODO.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lB_Onderhoudslijst_TODO.Location = new System.Drawing.Point(6, 15);
             this.lB_Onderhoudslijst_TODO.Name = "lB_Onderhoudslijst_TODO";
-            this.lB_Onderhoudslijst_TODO.Size = new System.Drawing.Size(769, 788);
+            this.lB_Onderhoudslijst_TODO.Size = new System.Drawing.Size(578, 641);
             this.lB_Onderhoudslijst_TODO.TabIndex = 4;
             // 
             // gB_Onderhoudslijsthistorie
             // 
             this.gB_Onderhoudslijsthistorie.Controls.Add(this.lB_Onderhoudslijst_historie);
-            this.gB_Onderhoudslijsthistorie.Location = new System.Drawing.Point(800, 4);
-            this.gB_Onderhoudslijsthistorie.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gB_Onderhoudslijsthistorie.Location = new System.Drawing.Point(600, 3);
             this.gB_Onderhoudslijsthistorie.Name = "gB_Onderhoudslijsthistorie";
-            this.gB_Onderhoudslijsthistorie.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gB_Onderhoudslijsthistorie.Size = new System.Drawing.Size(1075, 929);
+            this.gB_Onderhoudslijsthistorie.Size = new System.Drawing.Size(806, 755);
             this.gB_Onderhoudslijsthistorie.TabIndex = 5;
             this.gB_Onderhoudslijsthistorie.TabStop = false;
             this.gB_Onderhoudslijsthistorie.Text = "Geschiedenis Onderhoudslijst";
@@ -1155,11 +1162,9 @@
             // lB_Onderhoudslijst_historie
             // 
             this.lB_Onderhoudslijst_historie.FormattingEnabled = true;
-            this.lB_Onderhoudslijst_historie.ItemHeight = 16;
-            this.lB_Onderhoudslijst_historie.Location = new System.Drawing.Point(8, 23);
-            this.lB_Onderhoudslijst_historie.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lB_Onderhoudslijst_historie.Location = new System.Drawing.Point(6, 19);
             this.lB_Onderhoudslijst_historie.Name = "lB_Onderhoudslijst_historie";
-            this.lB_Onderhoudslijst_historie.Size = new System.Drawing.Size(1057, 900);
+            this.lB_Onderhoudslijst_historie.Size = new System.Drawing.Size(794, 732);
             this.lB_Onderhoudslijst_historie.TabIndex = 3;
             // 
             // grbTramOnderhoud
@@ -1174,11 +1179,11 @@
             this.grbTramOnderhoud.Controls.Add(this.lblOnderhoudStarttijd);
             this.grbTramOnderhoud.Controls.Add(this.lblOnderhoudMedewerker);
             this.grbTramOnderhoud.Controls.Add(this.cbxOnderhoudMedewerker);
-            this.grbTramOnderhoud.Location = new System.Drawing.Point(5, 5);
-            this.grbTramOnderhoud.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grbTramOnderhoud.Location = new System.Drawing.Point(4, 4);
+            this.grbTramOnderhoud.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grbTramOnderhoud.Name = "grbTramOnderhoud";
-            this.grbTramOnderhoud.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grbTramOnderhoud.Size = new System.Drawing.Size(787, 102);
+            this.grbTramOnderhoud.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grbTramOnderhoud.Size = new System.Drawing.Size(590, 83);
             this.grbTramOnderhoud.TabIndex = 2;
             this.grbTramOnderhoud.TabStop = false;
             this.grbTramOnderhoud.Text = "Onderhoud";
@@ -1186,32 +1191,29 @@
             // lbl_Onderhoud_onderhoudsidlable
             // 
             this.lbl_Onderhoud_onderhoudsidlable.AutoSize = true;
-            this.lbl_Onderhoud_onderhoudsidlable.Location = new System.Drawing.Point(7, 31);
-            this.lbl_Onderhoud_onderhoudsidlable.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Onderhoud_onderhoudsidlable.Location = new System.Drawing.Point(5, 25);
             this.lbl_Onderhoud_onderhoudsidlable.Name = "lbl_Onderhoud_onderhoudsidlable";
-            this.lbl_Onderhoud_onderhoudsidlable.Size = new System.Drawing.Size(104, 17);
+            this.lbl_Onderhoud_onderhoudsidlable.Size = new System.Drawing.Size(79, 13);
             this.lbl_Onderhoud_onderhoudsidlable.TabIndex = 19;
             this.lbl_Onderhoud_onderhoudsidlable.Text = "OnderhoudsID:";
             // 
             // nUd_Onderhoud_Onderhoudsid
             // 
-            this.nUd_Onderhoud_Onderhoudsid.Location = new System.Drawing.Point(120, 28);
-            this.nUd_Onderhoud_Onderhoudsid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nUd_Onderhoud_Onderhoudsid.Location = new System.Drawing.Point(90, 23);
             this.nUd_Onderhoud_Onderhoudsid.Maximum = new decimal(new int[] {
             10000,
             0,
             0,
             0});
             this.nUd_Onderhoud_Onderhoudsid.Name = "nUd_Onderhoud_Onderhoudsid";
-            this.nUd_Onderhoud_Onderhoudsid.Size = new System.Drawing.Size(160, 22);
+            this.nUd_Onderhoud_Onderhoudsid.Size = new System.Drawing.Size(120, 20);
             this.nUd_Onderhoud_Onderhoudsid.TabIndex = 18;
             // 
             // btn_RefreshLists
             // 
-            this.btn_RefreshLists.Location = new System.Drawing.Point(669, 28);
-            this.btn_RefreshLists.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_RefreshLists.Location = new System.Drawing.Point(502, 23);
             this.btn_RefreshLists.Name = "btn_RefreshLists";
-            this.btn_RefreshLists.Size = new System.Drawing.Size(100, 27);
+            this.btn_RefreshLists.Size = new System.Drawing.Size(75, 22);
             this.btn_RefreshLists.TabIndex = 17;
             this.btn_RefreshLists.Text = "Ververs lijst";
             this.btn_RefreshLists.UseVisualStyleBackColor = true;
@@ -1219,10 +1221,10 @@
             // 
             // btnOnderhoudBevestig
             // 
-            this.btnOnderhoudBevestig.Location = new System.Drawing.Point(669, 62);
-            this.btnOnderhoudBevestig.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnOnderhoudBevestig.Location = new System.Drawing.Point(502, 50);
+            this.btnOnderhoudBevestig.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnOnderhoudBevestig.Name = "btnOnderhoudBevestig";
-            this.btnOnderhoudBevestig.Size = new System.Drawing.Size(100, 27);
+            this.btnOnderhoudBevestig.Size = new System.Drawing.Size(75, 22);
             this.btnOnderhoudBevestig.TabIndex = 2;
             this.btnOnderhoudBevestig.Text = "Bevestig";
             this.btnOnderhoudBevestig.UseVisualStyleBackColor = true;
@@ -1232,18 +1234,19 @@
             // 
             this.dtpOnderhoudEindtijd.CustomFormat = "dd-MM-yyyy HH:mm";
             this.dtpOnderhoudEindtijd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpOnderhoudEindtijd.Location = new System.Drawing.Point(440, 62);
-            this.dtpOnderhoudEindtijd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtpOnderhoudEindtijd.Location = new System.Drawing.Point(330, 50);
+            this.dtpOnderhoudEindtijd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpOnderhoudEindtijd.Name = "dtpOnderhoudEindtijd";
-            this.dtpOnderhoudEindtijd.Size = new System.Drawing.Size(173, 22);
+            this.dtpOnderhoudEindtijd.Size = new System.Drawing.Size(131, 20);
             this.dtpOnderhoudEindtijd.TabIndex = 12;
             // 
             // lblOnderhoudEindtijd
             // 
             this.lblOnderhoudEindtijd.AutoSize = true;
-            this.lblOnderhoudEindtijd.Location = new System.Drawing.Point(299, 65);
+            this.lblOnderhoudEindtijd.Location = new System.Drawing.Point(224, 53);
+            this.lblOnderhoudEindtijd.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblOnderhoudEindtijd.Name = "lblOnderhoudEindtijd";
-            this.lblOnderhoudEindtijd.Size = new System.Drawing.Size(133, 17);
+            this.lblOnderhoudEindtijd.Size = new System.Drawing.Size(102, 13);
             this.lblOnderhoudEindtijd.TabIndex = 11;
             this.lblOnderhoudEindtijd.Text = "Verwachte EindTijd:";
             // 
@@ -1251,27 +1254,29 @@
             // 
             this.dtpOnderhoudStarttijd.CustomFormat = "dd-MM-yyyy HH:mm";
             this.dtpOnderhoudStarttijd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpOnderhoudStarttijd.Location = new System.Drawing.Point(440, 28);
-            this.dtpOnderhoudStarttijd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtpOnderhoudStarttijd.Location = new System.Drawing.Point(330, 23);
+            this.dtpOnderhoudStarttijd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpOnderhoudStarttijd.Name = "dtpOnderhoudStarttijd";
-            this.dtpOnderhoudStarttijd.Size = new System.Drawing.Size(173, 22);
+            this.dtpOnderhoudStarttijd.Size = new System.Drawing.Size(131, 20);
             this.dtpOnderhoudStarttijd.TabIndex = 10;
             // 
             // lblOnderhoudStarttijd
             // 
             this.lblOnderhoudStarttijd.AutoSize = true;
-            this.lblOnderhoudStarttijd.Location = new System.Drawing.Point(369, 31);
+            this.lblOnderhoudStarttijd.Location = new System.Drawing.Point(277, 25);
+            this.lblOnderhoudStarttijd.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblOnderhoudStarttijd.Name = "lblOnderhoudStarttijd";
-            this.lblOnderhoudStarttijd.Size = new System.Drawing.Size(65, 17);
+            this.lblOnderhoudStarttijd.Size = new System.Drawing.Size(49, 13);
             this.lblOnderhoudStarttijd.TabIndex = 9;
             this.lblOnderhoudStarttijd.Text = "StartTijd:";
             // 
             // lblOnderhoudMedewerker
             // 
             this.lblOnderhoudMedewerker.AutoSize = true;
-            this.lblOnderhoudMedewerker.Location = new System.Drawing.Point(20, 65);
+            this.lblOnderhoudMedewerker.Location = new System.Drawing.Point(15, 53);
+            this.lblOnderhoudMedewerker.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblOnderhoudMedewerker.Name = "lblOnderhoudMedewerker";
-            this.lblOnderhoudMedewerker.Size = new System.Drawing.Size(89, 17);
+            this.lblOnderhoudMedewerker.Size = new System.Drawing.Size(69, 13);
             this.lblOnderhoudMedewerker.TabIndex = 6;
             this.lblOnderhoudMedewerker.Text = "Medewerker:";
             // 
@@ -1279,30 +1284,19 @@
             // 
             this.cbxOnderhoudMedewerker.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxOnderhoudMedewerker.FormattingEnabled = true;
-            this.cbxOnderhoudMedewerker.Location = new System.Drawing.Point(117, 62);
-            this.cbxOnderhoudMedewerker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbxOnderhoudMedewerker.Location = new System.Drawing.Point(88, 50);
+            this.cbxOnderhoudMedewerker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbxOnderhoudMedewerker.Name = "cbxOnderhoudMedewerker";
-            this.cbxOnderhoudMedewerker.Size = new System.Drawing.Size(159, 24);
+            this.cbxOnderhoudMedewerker.Size = new System.Drawing.Size(120, 21);
             this.cbxOnderhoudMedewerker.TabIndex = 5;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(542, -2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1914, 990);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1436, 804);
             this.Controls.Add(this.tabcontrolRemise);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MainForm";
             this.Text = "Remisesysteem";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -1437,6 +1431,5 @@
         private System.Windows.Forms.GroupBox gB_Onderhoudslijsthistorie;
         private System.Windows.Forms.Label lbl_datum_reservering;
         private System.Windows.Forms.DateTimePicker dtp_datum_reservering;
-        private System.Windows.Forms.Button button1;
     }
 }
