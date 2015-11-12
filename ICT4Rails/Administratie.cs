@@ -441,18 +441,17 @@ namespace ICT4Rails
             RefreshClass();
         }
 
-        public void UpdateSpoor(int spoorID, int sectorNummer, bool beschikbaar)
+        public void UpdateSpoor(int spoorId, bool beschikbaar)
         {
             foreach (Spoor s in GetSporen())
             {
-                if (s.Spoorid == spoorID)
+                if (s.Spoorid == spoorId)
                 {
                     s.Beschikbaar = beschikbaar;
                     data.UpdateSpoor(s);
                     break;
                 }
             }
-
             RefreshClass();
         }
 
@@ -497,6 +496,7 @@ namespace ICT4Rails
                 throw new Exception("De tram is niet gevonden!");
             }
             data.InsertTramPositie(new Trampositie(0, t_spoor, t_tram, aankomstijd));
+            RefreshClass();
         }
     }
 }

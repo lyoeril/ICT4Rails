@@ -79,7 +79,7 @@ namespace ICT4Rails
             {
                 //ID IN DE STRING MOET NOG TOEGEVOEGD WORDEN MAAR IDK OF DIT MET SEQUENCE KAN
                 string date = trampositie.Aankomstijd.Day.ToString("00") + trampositie.Aankomstijd.Month.ToString("00") + trampositie.Aankomstijd.Year.ToString("0000") + " " + trampositie.Aankomstijd.Hour.ToString("00") + ":" + trampositie.Aankomstijd.Minute.ToString("00") + ":" + trampositie.Aankomstijd.Second.ToString("00");
-                string insert = "insert into trampositie (ID, SpoorID, TramID, AankomstTijd) values(seq_Trampositie_ID.nextval, :SPOORID, :TRAMID, TO_TIMESTAMP('" + date + "','DDMMYYYY HH24:MI:SS'))";
+                string insert = "insert into trampositie (ID, SpoorID, TramID, AankomsTijd) values (seq_Trampositie_ID.nextval, :SPOORID, :TRAMID, TO_TIMESTAMP('" + date + "','DDMMYYYY HH24:MI:SS'))";
                 using (OracleCommand command = new OracleCommand(insert, connection))
                 {
                     command.Parameters.Add(new OracleParameter("SPOORID", trampositie.Spoor.Spoorid));

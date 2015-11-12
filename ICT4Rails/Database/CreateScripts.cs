@@ -138,7 +138,7 @@ namespace ICT4Rails
 
             foreach (Spoor spoor in sporenlijst)
             {
-                if (spoor.Spoornummer == spoorid)
+                if (spoor.Spoorid == spoorid)
                 {
                     Spoor = spoor;
                     break;

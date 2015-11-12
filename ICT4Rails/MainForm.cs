@@ -60,6 +60,7 @@ namespace ICT4Rails
             {
                 rfid.Antenna = true;
             }
+            CheckTrampositieDB();
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -100,18 +101,18 @@ namespace ICT4Rails
             //        }
             //    }
             //}
-            int id = 0;
-            if (e.Tag == "2300fb7939") { id = 2201; } // TAG
-            else if (e.Tag == "2800a79650") { id = 2202; } // TAG
+            //int id = 0;
+            //if (e.Tag == "2300fb7939") { id = 2201; } // TAG
+            //else if (e.Tag == "2800a79650") { id = 2202; } // TAG
             //else if (e.Tag == "") { id = 0; } // TAG
             //else if (e.Tag == "") { id = 0; } // TAG
-            foreach (Tram t in administratie.Trams)
-            {
-                if (t.Id == id)
-                {
-                    SorteerTram(t);
-                }
-            }
+            //foreach (Tram t in administratie.Trams)
+            //{
+            //    if (t.Id == id)
+            //    {
+            //        SorteerTram(t);
+            //    }
+            //}
         }
 
         private void rfid_TagLost(object sender, TagEventArgs e)
@@ -309,7 +310,6 @@ namespace ICT4Rails
             Point tlpMousePos = tableLayoutPanel1.PointToClient(MousePosition);
             Point? cr = administratie.GetRowColIndex(tableLayoutPanel1, tlpMousePos);
             Trampositie oldPos = null;
-            bool beschikbaar = true;
             if (cr != null)
             {
                 Label endLabel = GetLabel(cr.Value.X, cr.Value.Y);
@@ -317,7 +317,7 @@ namespace ICT4Rails
                 {
                     if (Sporen[spoor] != null)
                     {
-                        for (int sector = 0; sector < Sporen[spoor].Length; sector++)
+                        for (int sector = 1; sector < Sporen[spoor].Length; sector++)
                         {
                             if (Sporen[spoor][sector] != null)
                             {
@@ -329,16 +329,17 @@ namespace ICT4Rails
                                         {
                                             if (s.Sectornummer == sector)
                                             {
+                                                bool beschikbaar = true;
                                                 foreach (Trampositie t in administratie.Posities)
                                                 {
                                                     if (t.Vertrektijd == null)
                                                     {
-                                                        if (t.Spoor == s)
+                                                        if (t.Spoor.Spoorid == s.Spoorid)
                                                         {
                                                             beschikbaar = false;
                                                             break;
                                                         }
-                                                        else if (t.Tram == sleepTram)
+                                                        else if (t.Tram.Id == sleepTram.Id)
                                                         {
                                                             oldPos = t;
                                                         }
@@ -346,9 +347,9 @@ namespace ICT4Rails
                                                 }
                                                 if (beschikbaar)
                                                 {
-                                                    administratie.UpdateSpoor(spoor, sector, false);
                                                     administratie.UpdateTramPositie(oldPos.Id, oldPos.Spoor, oldPos.Tram, oldPos.Aankomstijd, DateTime.Now);
                                                     administratie.AddTramPositie(s.Spoorid, sleepTram.Id, DateTime.Now);
+                                                    CheckTrampositieDB();
                                                 }
                                                 else
                                                 {
@@ -540,7 +541,7 @@ namespace ICT4Rails
             lijnenArray[6] = new string[3] { "17", "52", "45" };
             lijnenArray[7] = new string[5] { "16/24", "30", "35", "33", "57" };
             lijnenArray[8] = new string[2] { "OCV", "61" };
-            lijnenArray[9] = new string[17] { "RES", "64", "62", "74", "75", "76", "77", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21" };
+            lijnenArray[9] = new string[19] { "RES", "31", "40", "58", "64", "74", "75", "76", "77", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21" };
 
             return lijnenArray;
         }
@@ -1152,7 +1153,7 @@ namespace ICT4Rails
             {
                 if (t.Vertrektijd == null)
                 {
-                    if (t.Tram == tram)
+                    if (t.Tram.Id == tram.Id)
                     {
                         foreach (Status s in administratie.Statuslijst)
                         {
@@ -1163,16 +1164,6 @@ namespace ICT4Rails
                             }
                         }
                         administratie.UpdateTram(tram);
-
-                        foreach (Spoor s in administratie.Sporen)
-                        {
-                            if (s == t.Spoor)
-                            {
-                                administratie.UpdateSpoor(s.Spoornummer, s.Sectornummer, true);
-                                break;
-                            }
-                        }
-
                         administratie.UpdateTramPositie(t.Id, t.Spoor, t.Tram, t.Aankomstijd, DateTime.Now);
                         return;
                     }
@@ -1211,21 +1202,36 @@ namespace ICT4Rails
                                         {
                                             if (sp.Beschikbaar)
                                             {
-                                                if (tram.Status.Naam == "DIENST")
+                                                bool beschikbaar = true;
+                                                foreach (Trampositie t in administratie.Posities)
                                                 {
-                                                    foreach (Status st in administratie.Statuslijst)
+                                                    if (t.Vertrektijd == null)
                                                     {
-                                                        if (st.Naam == "REMISE")
+                                                        if (t.Spoor.Spoorid == sp.Spoorid)
                                                         {
-                                                            tram.Status = st;
+                                                            beschikbaar = false;
                                                             break;
                                                         }
                                                     }
                                                 }
-                                                administratie.UpdateTram(tram);
-                                                administratie.UpdateSpoor(sp.Spoornummer, sp.Sectornummer, false);
-                                                administratie.AddTramPositie(sp.Spoorid, tram.Id, DateTime.Now);
-                                                return;
+                                                if (beschikbaar)
+                                                {
+                                                    if (tram.Status.Naam == "DIENST")
+                                                    {
+                                                        foreach (Status st in administratie.Statuslijst)
+                                                        {
+                                                            if (st.Naam == "REMISE")
+                                                            {
+                                                                tram.Status = st;
+                                                                break;
+                                                            }
+                                                        }
+                                                    }
+                                                    administratie.UpdateTram(tram);
+                                                    administratie.AddTramPositie(sp.Spoorid, tram.Id, DateTime.Now);
+                                                    return;
+                                                }
+                                                break;
                                             }
                                         }
                                     }
@@ -1266,11 +1272,14 @@ namespace ICT4Rails
                 }
             }
 
-            foreach (Trampositie tp in administratie.Posities)
+            if (administratie.Posities != null)
             {
-                if (tp.Vertrektijd == null)
+                foreach (Trampositie tp in administratie.Posities)
                 {
-                    Sporen[tp.Spoor.Spoornummer][tp.Spoor.Sectornummer].Text = Convert.ToString(tp.Tram.Id);
+                    if (tp.Vertrektijd == null)
+                    {
+                        Sporen[tp.Spoor.Spoornummer][tp.Spoor.Sectornummer].Text = Convert.ToString(tp.Tram.Id);
+                    }
                 }
             }
         }
@@ -1442,14 +1451,13 @@ namespace ICT4Rails
                                 {
                                     if (s.Spoornummer == spoor && s.Sectornummer == sector)
                                     {
-                                        // TODO Schrijf naar DB
                                         if (s.Beschikbaar)
                                         {
-                                            s.Beschikbaar = false;
+                                            administratie.UpdateSpoor(s.Spoorid, false);
                                         }
                                         else
                                         {
-                                            s.Beschikbaar = true;
+                                            administratie.UpdateSpoor(s.Spoorid, true);
                                         }
                                         tableLayoutPanel1.Refresh();
                                         return;
@@ -1472,7 +1480,7 @@ namespace ICT4Rails
         {
             foreach (Tram t in administratie.Trams)
             {
-                if (t.Lijn == "OCV")
+                if (t.Lijn == "5")
                 {
                     SorteerTram(t);
                 }
